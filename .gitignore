@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Riot API key + cached match/timeline JSON (aggregate-builds.mjs)
+.env
+.cache
+
 # Claude Code machine-local settings (permissions, etc.)
 .claude/settings.local.json
 

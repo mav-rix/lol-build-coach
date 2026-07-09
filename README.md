@@ -220,6 +220,40 @@ for any champion with `?mock=1&champ=<Name>` on `/live` (e.g.
 `/live?mock=1&champ=Nocturne`). This is heuristic itemization; real
 challenger-aggregated builds are the Phase 3 layer.
 
+## Aggregated builds (`scripts/aggregate-builds.mjs`)
+
+The "pro build" base layer (Phase 3, in progress). An **offline** script turns
+high-elo Match-V5 data into per-(champion, role) `BuildPath` rows — the same
+shape the seeds use — so the adaptive engine adjusts them case-by-case just like
+a seed. No standing backend: it runs locally with a Riot **dev key** and writes
+`src/data/aggregatedBuilds.json`, which is bundled and consulted by `findBuild`
+**after** the hand-authored seeds and **before** the scoring engine.
+
+```bash
+cp .env.example .env          # then paste your key from developer.riotgames.com
+npm run aggregate -- --region na1 --matches 300
+```
+
+It pulls Challenger/GM/Master ladders → their ranked matches → each match +
+timeline (timeline gives purchase *order* and skill order), then takes the modal
+starters/core/boots/runes/skills per champion+role. Requests are serialized and
+rate-limited for a dev key (100 req / 2 min); matches are cached under `.cache/`
+so reruns are cheap. Flags: `--tiers`, `--per-player`, `--min-sample`, `--out`.
+Add `--dry-run` to preview sample builds from already-cached matches (instant,
+no key, no Riot calls) — or a small live pull if the cache is empty — without
+writing the file. A good first look: `npm run aggregate -- --dry-run`.
+
+**Comp-conditioned situationals (Phase 2):** for each build it also computes
+which items high-elo players buy *notably more often* against a given enemy-comp
+attribute — e.g. Void Staff at 83% vs tank comps against a 46% baseline — and
+emits them as `situationalItems` tagged with the same `SituationalCondition` the
+live threat engine produces. So the adaptive engine promotes them in-game with
+no extra wiring: it's the data-driven version of the hand-authored seed
+situationals. Thresholds are conservative, so thin ingests emit few and degrade
+to seed behaviour. `findBuild` prefers an aggregated build over a seed once it
+clears a confidence bar (`PREFER_AGGREGATED_SAMPLE`); below it, the seed wins.
+Re-run each patch.
+
 ## Roadmap status (per spec)
 
 - ✅ Phase 1 — Pre-game build advisor (champion search, role, enemy comp
@@ -227,9 +261,11 @@ challenger-aggregated builds are the Phase 3 layer.
 - ✅ Phase 2 — Live economic tracker (polling hook, dashboard, build progress,
   purchase recommendation, recall alert)
 - 🟡 Phase 3 — Post-game review: analysis engine + UI done; Express/PostgreSQL
-  backend and Riot Match-V5 import still to build (requires a Riot developer
-  API key from https://developer.riotgames.com). This backend is also what would
-  power challenger-aggregated builds to feed the scoring engine as a data prior.
+  backend and Riot Match-V5 import for *automatic match import* still to build
+  (requires a Riot developer API key from https://developer.riotgames.com).
+  Challenger-aggregated builds — the other thing this phase would power — now
+  have a first cut via the **offline** `scripts/aggregate-builds.mjs` (above),
+  which feeds `findBuild` directly without a standing backend.
 
 ## Compliance notes
 
