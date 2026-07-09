@@ -30,26 +30,26 @@ const PRIORITY_LABEL: Record<RecPriority, string> = {
 export function BuildNext({ recommendations, patch, items, compact = false }: Props) {
   if (recommendations.length === 0) return null
 
-  // Overlay: a glanceable horizontal strip of item icons + cost, priority shown
-  // by border color — many fit per row in the narrow overlay window.
+  // Overlay (u.gg style): flat inline strip of item icon + gold. Urgent picks
+  // get an orange ring, affordable gold turns green — no card chrome.
   if (compact) {
     return (
-      <ul className="flex flex-wrap gap-1.5">
+      <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
         {recommendations.map((rec) => (
           <li
             key={rec.itemId}
             title={`${PRIORITY_LABEL[rec.priority]} · ${rec.name} · ${rec.cost}g`}
-            className={`flex flex-col items-center gap-0.5 rounded-md border px-1.5 py-1 ${
-              PRIORITY_STYLE[rec.priority]
-            }`}
+            className="flex items-center gap-1.5"
           >
-            <ItemIcon itemId={rec.itemId} patch={patch} items={items} size={30} />
+            <div className={`rounded ${rec.priority === 'urgent' ? 'ring-1 ring-orange-500' : ''}`}>
+              <ItemIcon itemId={rec.itemId} patch={patch} items={items} size={26} />
+            </div>
             <span
-              className={`text-[10px] font-semibold leading-none ${
+              className={`font-mono text-[11px] tabular-nums leading-none ${
                 rec.affordable ? 'text-emerald-400' : 'text-zinc-400'
               }`}
             >
-              {rec.cost}g
+              {rec.cost}
             </span>
           </li>
         ))}
