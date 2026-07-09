@@ -119,7 +119,7 @@ export function useLiveBuildState() {
   const usingScoredBuild = !build && champion !== null
   const recommendations = useMemo(() => {
     if (build) {
-      return recommendPurchases(build, ownedIds, gold, threats, self, items, modeConfig)
+      return recommendPurchases(build, ownedIds, gold, threats, self, items, modeConfig, champion)
     }
     if (champion) {
       return recommendByScore({

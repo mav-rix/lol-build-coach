@@ -1,6 +1,11 @@
 import type { BuildRec } from '@/lib/builder'
 import { unavailableItems } from '@/lib/itemAvailability'
 import { ownsJunglePet, pickJunglePet } from '@/lib/jungle'
+import {
+  SUPPORT_QUEST_COMPLETE_ID,
+  ownsFinalSupportItem,
+  pickSupportItem,
+} from '@/lib/support'
 import type { LiveThreatAnalysis } from '@/lib/threats'
 import type { Role } from '@/types/app'
 import type { DDragonChampion, DDragonItem } from '@/types/ddragon'
@@ -334,6 +339,30 @@ export function recommendByScore({
         reason: pet.reason,
         affordable: gold >= petItem.gold.total,
         goldNeeded: Math.max(0, Math.ceil(petItem.gold.total - gold)),
+        source: 'core',
+      })
+    }
+  }
+
+  // Support quest final (SR only) — once the quest is complete and no final is
+  // chosen, recommend the class/comp-appropriate upgrade.
+  if (
+    role === 'SUPPORT' &&
+    mapId === SR_MAP_ID &&
+    ownedIds.has(SUPPORT_QUEST_COMPLETE_ID) &&
+    !ownsFinalSupportItem(ownedIds)
+  ) {
+    const pick = pickSupportItem(champion, cond)
+    const supItem = items[String(pick.itemId)]
+    if (supItem && !blocked.has(pick.itemId)) {
+      recs.unshift({
+        itemId: pick.itemId,
+        name: supItem.name,
+        cost: supItem.gold.total,
+        priority: 'recommended',
+        reason: pick.reason,
+        affordable: gold >= supItem.gold.total,
+        goldNeeded: Math.max(0, Math.ceil(supItem.gold.total - gold)),
         source: 'core',
       })
     }

@@ -3,9 +3,10 @@ import { RunePage } from '@/components/RunePage'
 import { SkillOrder } from '@/components/SkillOrder'
 import { CONDITION_LABELS } from '@/lib/situational'
 import { JUNGLE_PET_IDS, pickJunglePet } from '@/lib/jungle'
+import { pickSupportItem } from '@/lib/support'
 import { MODE_CONFIG } from '@/lib/modes'
 import type { BuildPath, SituationalCondition } from '@/types/app'
-import type { DDragonItem, DDragonRunePath } from '@/types/ddragon'
+import type { DDragonChampion, DDragonItem, DDragonRunePath } from '@/types/ddragon'
 
 interface Props {
   build: BuildPath
@@ -13,6 +14,7 @@ interface Props {
   runes: DDragonRunePath[]
   patch: string
   activeConditions?: Set<SituationalCondition>
+  champion?: DDragonChampion | null
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -26,7 +28,14 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   )
 }
 
-export function BuildPathDisplay({ build, items, runes, patch, activeConditions }: Props) {
+export function BuildPathDisplay({
+  build,
+  items,
+  runes,
+  patch,
+  activeConditions,
+  champion,
+}: Props) {
   // Data Dragon flags which items exist per map — hide ones invalid in this mode.
   const mapKey = String(MODE_CONFIG[build.mode].mapId)
   const validOnMap = (itemId: number) => items[String(itemId)]?.maps[mapKey] !== false
@@ -42,6 +51,13 @@ export function BuildPathDisplay({ build, items, runes, patch, activeConditions 
     ? [jungle.itemId, ...build.starterItems.filter((id) => !JUNGLE_PET_IDS.has(id))]
     : build.starterItems
 
+  // Support: the starter is fixed (World Atlas); the comp/class-picked *final*
+  // upgrade is surfaced as a target the quest builds toward.
+  const support =
+    build.role === 'SUPPORT' && build.mode === 'SR' && champion
+      ? pickSupportItem(champion, activeConditions ?? new Set(['general']))
+      : null
+
   return (
     <div className="space-y-8">
       <Section title="Starter Items">
@@ -52,6 +68,14 @@ export function BuildPathDisplay({ build, items, runes, patch, activeConditions 
         </div>
         {jungle && (
           <p className="mt-2 text-xs text-amber-300/90">▸ {jungle.reason}</p>
+        )}
+        {support && (
+          <div className="mt-3 flex items-center gap-2 rounded-lg border border-amber-500/40 bg-amber-500/5 px-3 py-2">
+            <ItemIcon itemId={support.itemId} patch={patch} items={items} size={32} />
+            <p className="text-xs text-amber-300/90">
+              Support quest target — {support.reason}
+            </p>
+          </div>
         )}
       </Section>
 

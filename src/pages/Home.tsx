@@ -305,6 +305,7 @@ export default function Home() {
             runes={data.runes}
             patch={data.patch}
             activeConditions={comp.activeConditions}
+            champion={selectedChampion}
           />
         </>
       )}

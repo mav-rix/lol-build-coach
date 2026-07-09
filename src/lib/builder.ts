@@ -1,10 +1,15 @@
 import { CONDITION_LABELS } from '@/lib/situational'
 import { unavailableItems } from '@/lib/itemAvailability'
 import { ownsJunglePet, pickJunglePet } from '@/lib/jungle'
+import {
+  SUPPORT_QUEST_COMPLETE_ID,
+  ownsFinalSupportItem,
+  pickSupportItem,
+} from '@/lib/support'
 import type { LiveThreatAnalysis } from '@/lib/threats'
 import type { ModeConfig } from '@/lib/modes'
 import type { BuildPath } from '@/types/app'
-import type { DDragonItem } from '@/types/ddragon'
+import type { DDragonChampion, DDragonItem } from '@/types/ddragon'
 import type { LivePlayer } from '@/types/live'
 
 // The adaptive item builder decides what to buy NEXT given: the champion's
@@ -44,6 +49,7 @@ export function recommendPurchases(
   self: LivePlayer | null,
   items: Record<string, DDragonItem>,
   modeConfig: ModeConfig,
+  champion: DDragonChampion | null = null,
 ): BuildRec[] {
   const recs: BuildRec[] = []
   const seen = new Set<number>()
@@ -81,6 +87,18 @@ export function recommendPurchases(
   if (build.role === 'JUNGLE' && !ownsJunglePet(ownedIds)) {
     const pet = pickJunglePet(activeConditions)
     push(pet.itemId, 'recommended', pet.reason, 'core')
+  }
+
+  // 0b) Support quest final — once the quest is complete (Bounty of Worlds) and
+  //     no final chosen yet, recommend the class/comp-appropriate upgrade.
+  if (
+    build.role === 'SUPPORT' &&
+    champion &&
+    ownedIds.has(SUPPORT_QUEST_COMPLETE_ID) &&
+    !ownsFinalSupportItem(ownedIds)
+  ) {
+    const pick = pickSupportItem(champion, activeConditions)
+    push(pick.itemId, 'recommended', pick.reason, 'core')
   }
 
   // 1) Boots first if not yet bought and past the mode's boots deadline window.
