@@ -30,43 +30,62 @@ const PRIORITY_LABEL: Record<RecPriority, string> = {
 export function BuildNext({ recommendations, patch, items, compact = false }: Props) {
   if (recommendations.length === 0) return null
 
+  // Overlay: a glanceable horizontal strip of item icons + cost, priority shown
+  // by border color — many fit per row in the narrow overlay window.
+  if (compact) {
+    return (
+      <ul className="flex flex-wrap gap-1.5">
+        {recommendations.map((rec) => (
+          <li
+            key={rec.itemId}
+            title={`${PRIORITY_LABEL[rec.priority]} · ${rec.name} · ${rec.cost}g`}
+            className={`flex flex-col items-center gap-0.5 rounded-md border px-1.5 py-1 ${
+              PRIORITY_STYLE[rec.priority]
+            }`}
+          >
+            <ItemIcon itemId={rec.itemId} patch={patch} items={items} size={30} />
+            <span
+              className={`text-[10px] font-semibold leading-none ${
+                rec.affordable ? 'text-emerald-400' : 'text-zinc-400'
+              }`}
+            >
+              {rec.cost}g
+            </span>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  // Live page: detailed cards laid out inline (wrapping) rather than stacked.
   return (
-    <ul className={compact ? 'space-y-1.5' : 'space-y-2'}>
+    <ul className="flex flex-wrap gap-2">
       {recommendations.map((rec) => (
         <li
           key={rec.itemId}
-          className={`flex items-center gap-3 rounded-lg border px-3 ${
-            compact ? 'py-1.5' : 'py-2'
-          } ${PRIORITY_STYLE[rec.priority]}`}
+          className={`flex flex-1 basis-56 items-center gap-2 rounded-lg border px-3 py-2 ${
+            PRIORITY_STYLE[rec.priority]
+          }`}
         >
-          <ItemIcon
-            itemId={rec.itemId}
-            patch={patch}
-            items={items}
-            size={compact ? 28 : 40}
-          />
+          <ItemIcon itemId={rec.itemId} patch={patch} items={items} size={40} />
           <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5">
               <span
-                className={`rounded px-1.5 py-0.5 text-[10px] font-bold uppercase ${
+                className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-bold uppercase ${
                   PRIORITY_BADGE[rec.priority]
                 }`}
               >
                 {PRIORITY_LABEL[rec.priority]}
               </span>
-              <span
-                className={`truncate font-medium text-zinc-100 ${compact ? 'text-xs' : 'text-sm'}`}
-              >
+              <span className="truncate text-sm font-medium text-zinc-100">
                 {rec.name}
               </span>
             </div>
-            {!compact && (
-              <p className="mt-0.5 truncate text-xs text-zinc-400">{rec.reason}</p>
-            )}
+            <p className="mt-0.5 truncate text-xs text-zinc-400">{rec.reason}</p>
           </div>
-          <div className="text-right">
+          <div className="shrink-0 text-right">
             <div
-              className={`font-semibold ${compact ? 'text-xs' : 'text-sm'} ${
+              className={`text-sm font-semibold ${
                 rec.affordable ? 'text-emerald-400' : 'text-zinc-400'
               }`}
             >

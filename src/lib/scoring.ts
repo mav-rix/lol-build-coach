@@ -1,4 +1,5 @@
 import type { BuildRec } from '@/lib/builder'
+import { unavailableItems } from '@/lib/itemAvailability'
 import type { LiveThreatAnalysis } from '@/lib/threats'
 import type { DDragonChampion, DDragonItem } from '@/types/ddragon'
 import type { LivePlayer } from '@/types/live'
@@ -135,6 +136,9 @@ export function recommendByScore({
   mapId,
 }: ScoreParams): BuildRec[] {
   const p = profile(champion)
+  // Items consumed into what you own, or made unbuildable by a one-per-inventory
+  // conflict (e.g. a second Tear item) — excluded from every suggestion below.
+  const blocked = unavailableItems(ownedIds, items)
   const cond = threats?.activeConditions ?? new Set<string>()
   const mapKey = String(mapId)
   const deaths = self?.scores.deaths ?? 0
@@ -159,7 +163,7 @@ export function recommendByScore({
 
   for (const [idStr, item] of Object.entries(items)) {
     const id = Number(idStr)
-    if (ownedIds.has(id)) continue
+    if (ownedIds.has(id) || blocked.has(id)) continue
     // Special-mode variants (Arena/Swarm) carry inflated ids; real items are low.
     if (id >= 40000) continue
     if (!item.gold.purchasable || item.gold.total < 1800) continue
@@ -258,7 +262,7 @@ export function recommendByScore({
     const topGrievousAffordable = dedupedScored.some(
       (s) => s.reasons.includes('anti-heal') && gold >= s.item.gold.total,
     )
-    if (cheap && !ownedIds.has(cheapId) && !topGrievousAffordable) {
+    if (cheap && !ownedIds.has(cheapId) && !blocked.has(cheapId) && !topGrievousAffordable) {
       recs.push({
         itemId: cheapId,
         name: cheap.name,
@@ -296,7 +300,7 @@ export function recommendByScore({
       reason = 'Ionian — ability haste'
     }
     const boot = items[String(bootId)]
-    if (boot && !ownedIds.has(bootId)) {
+    if (boot && !ownedIds.has(bootId) && !blocked.has(bootId)) {
       recs.unshift({
         itemId: bootId,
         name: boot.name,

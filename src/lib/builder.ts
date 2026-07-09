@@ -1,4 +1,5 @@
 import { CONDITION_LABELS } from '@/lib/situational'
+import { unavailableItems } from '@/lib/itemAvailability'
 import type { LiveThreatAnalysis } from '@/lib/threats'
 import type { ModeConfig } from '@/lib/modes'
 import type { BuildPath } from '@/types/app'
@@ -45,6 +46,9 @@ export function recommendPurchases(
 ): BuildRec[] {
   const recs: BuildRec[] = []
   const seen = new Set<number>()
+  // Items already consumed into what you own, or made unbuildable by a
+  // one-per-inventory conflict (e.g. a second Tear item) — never worth showing.
+  const blocked = unavailableItems(ownedIds, items)
 
   const nameOf = (id: number) => items[String(id)]?.name ?? `Item ${id}`
   const costOf = (id: number) => items[String(id)]?.gold.total ?? 0
@@ -54,7 +58,7 @@ export function recommendPurchases(
     reason: string,
     source: BuildRec['source'],
   ) => {
-    if (seen.has(itemId) || ownedIds.has(itemId)) return
+    if (seen.has(itemId) || ownedIds.has(itemId) || blocked.has(itemId)) return
     seen.add(itemId)
     const cost = costOf(itemId)
     recs.push({

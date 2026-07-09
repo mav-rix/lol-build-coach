@@ -43,6 +43,7 @@ export interface DDragonItem {
   plaintext: string
   into?: string[]
   from?: string[]
+  specialRecipe?: number // base item id this transforms from (e.g. Muramana←Manamune)
   image: DDragonImage
   gold: {
     base: number
