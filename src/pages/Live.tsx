@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Fragment, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { BuildNext } from '@/components/BuildNext'
 import { EnemyThreats } from '@/components/EnemyThreats'
@@ -151,49 +151,72 @@ export default function Live() {
             Build Progress — {build.championId}{' '}
             {build.mode === 'ARAM' ? '(ARAM)' : build.role}
           </h3>
-          <ul className="space-y-2">
-            {plan.map((p) => {
+          <div className="flex flex-wrap items-stretch gap-1">
+            {plan.map((p, i) => {
               const item = items[String(p.itemId)]
               const owned = ownedIds.has(p.itemId)
               const isNext = nextPlanItem?.itemId === p.itemId
               const boughtAt = purchaseTimes.get(p.itemId)
+              const title =
+                (item?.name ?? `Item ${p.itemId}`) +
+                ` · ${p.label}` +
+                (owned && boughtAt !== undefined ? ` · bought @ ${formatClock(boughtAt)}` : '')
               return (
-                <li
-                  key={`${p.label}-${p.itemId}`}
-                  className={`flex items-center gap-3 rounded-lg border px-3 py-2 ${
-                    owned
-                      ? 'border-emerald-800/60 bg-emerald-900/20'
-                      : isNext
-                        ? 'border-sky-600 bg-sky-900/20'
-                        : 'border-zinc-800 bg-zinc-900/40 opacity-60'
-                  }`}
-                >
-                  <span className="w-5 text-center">
-                    {owned ? '✓' : isNext ? '⧖' : '·'}
-                  </span>
-                  <ItemIcon itemId={p.itemId} patch={patch} items={items} size={32} />
-                  <span className="flex-1 text-sm text-zinc-200">
-                    {item?.name ?? `Item ${p.itemId}`}
-                    <span className="ml-2 text-xs uppercase text-zinc-500">{p.label}</span>
-                  </span>
-                  {owned && boughtAt !== undefined && (
-                    <span className="text-xs text-zinc-500">@ {formatClock(boughtAt)}</span>
-                  )}
-                  {isNext && item && (
-                    <span
-                      className={`text-sm font-semibold ${
-                        affordable ? 'text-emerald-400' : 'text-zinc-400'
-                      }`}
-                    >
-                      {affordable
-                        ? `AFFORDABLE (${item.gold.total}g)`
-                        : `need ${Math.ceil(item.gold.total - gold).toLocaleString()}g more`}
+                <Fragment key={`${p.label}-${p.itemId}`}>
+                  {i > 0 && (
+                    <span className="self-center px-0.5 text-zinc-600" aria-hidden>
+                      →
                     </span>
                   )}
-                </li>
+                  <div
+                    title={title}
+                    className={`flex w-[4.5rem] flex-col items-center gap-1 rounded-lg border px-1.5 py-1.5 ${
+                      owned
+                        ? 'border-emerald-800/60 bg-emerald-900/20'
+                        : isNext
+                          ? 'border-sky-600 bg-sky-900/20'
+                          : 'border-zinc-800 bg-zinc-900/40 opacity-60'
+                    }`}
+                  >
+                    <div className="relative">
+                      <ItemIcon itemId={p.itemId} patch={patch} items={items} size={36} />
+                      <span
+                        className={`absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full text-[10px] leading-none ${
+                          owned
+                            ? 'bg-emerald-600 text-white'
+                            : isNext
+                              ? 'bg-sky-500 text-white'
+                              : 'bg-zinc-700 text-zinc-300'
+                        }`}
+                      >
+                        {owned ? '✓' : isNext ? '⧖' : '·'}
+                      </span>
+                    </div>
+                    <span className="text-[10px] uppercase leading-none text-zinc-500">
+                      {p.label}
+                    </span>
+                    {owned && boughtAt !== undefined ? (
+                      <span className="text-[10px] leading-none text-zinc-500">
+                        {formatClock(boughtAt)}
+                      </span>
+                    ) : isNext && item ? (
+                      <span
+                        className={`text-[10px] font-semibold leading-none ${
+                          affordable ? 'text-emerald-400' : 'text-zinc-400'
+                        }`}
+                      >
+                        {affordable
+                          ? 'ready'
+                          : `${Math.ceil(item.gold.total - gold).toLocaleString()}g`}
+                      </span>
+                    ) : (
+                      <span className="text-[10px] leading-none text-transparent">·</span>
+                    )}
+                  </div>
+                </Fragment>
               )
             })}
-          </ul>
+          </div>
           {!affordable && affordableComponents.length > 0 && (
             <div className="mt-3 flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-900/60 p-3">
               <span className="text-sm text-zinc-400">Components you can afford now:</span>
