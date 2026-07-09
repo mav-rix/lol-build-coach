@@ -1,0 +1,85 @@
+import { ItemIcon } from '@/components/ItemIcon'
+import type { BuildRec, RecPriority } from '@/lib/builder'
+import type { DDragonItem } from '@/types/ddragon'
+
+interface Props {
+  recommendations: BuildRec[]
+  patch: string
+  items: Record<string, DDragonItem>
+  compact?: boolean
+}
+
+const PRIORITY_STYLE: Record<RecPriority, string> = {
+  urgent: 'border-amber-500/70 bg-amber-500/10',
+  recommended: 'border-sky-600/60 bg-sky-900/20',
+  planned: 'border-zinc-800 bg-zinc-900/50',
+}
+
+const PRIORITY_BADGE: Record<RecPriority, string> = {
+  urgent: 'bg-amber-500 text-zinc-900',
+  recommended: 'bg-sky-600 text-white',
+  planned: 'bg-zinc-700 text-zinc-300',
+}
+
+const PRIORITY_LABEL: Record<RecPriority, string> = {
+  urgent: 'Buy now',
+  recommended: 'Recommended',
+  planned: 'Planned',
+}
+
+export function BuildNext({ recommendations, patch, items, compact = false }: Props) {
+  if (recommendations.length === 0) return null
+
+  return (
+    <ul className={compact ? 'space-y-1.5' : 'space-y-2'}>
+      {recommendations.map((rec) => (
+        <li
+          key={rec.itemId}
+          className={`flex items-center gap-3 rounded-lg border px-3 ${
+            compact ? 'py-1.5' : 'py-2'
+          } ${PRIORITY_STYLE[rec.priority]}`}
+        >
+          <ItemIcon
+            itemId={rec.itemId}
+            patch={patch}
+            items={items}
+            size={compact ? 28 : 40}
+          />
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-2">
+              <span
+                className={`rounded px-1.5 py-0.5 text-[10px] font-bold uppercase ${
+                  PRIORITY_BADGE[rec.priority]
+                }`}
+              >
+                {PRIORITY_LABEL[rec.priority]}
+              </span>
+              <span
+                className={`truncate font-medium text-zinc-100 ${compact ? 'text-xs' : 'text-sm'}`}
+              >
+                {rec.name}
+              </span>
+            </div>
+            {!compact && (
+              <p className="mt-0.5 truncate text-xs text-zinc-400">{rec.reason}</p>
+            )}
+          </div>
+          <div className="text-right">
+            <div
+              className={`font-semibold ${compact ? 'text-xs' : 'text-sm'} ${
+                rec.affordable ? 'text-emerald-400' : 'text-zinc-400'
+              }`}
+            >
+              {rec.affordable ? `${rec.cost}g ✓` : `${rec.cost}g`}
+            </div>
+            {!rec.affordable && (
+              <div className="text-[10px] text-zinc-500">
+                need {rec.goldNeeded.toLocaleString()}g
+              </div>
+            )}
+          </div>
+        </li>
+      ))}
+    </ul>
+  )
+}

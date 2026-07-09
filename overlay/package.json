@@ -1,0 +1,10 @@
+{
+  "name": "lol-build-coach-overlay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transparent always-on-top in-game overlay window for LoL Build Coach. Draws over the game as a separate window — no injection.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  }
+}
