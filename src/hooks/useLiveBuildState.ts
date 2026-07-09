@@ -130,10 +130,11 @@ export function useLiveBuildState() {
         threats,
         self,
         mapId: modeConfig.mapId,
+        role: selectedRole,
       })
     }
     return []
-  }, [build, champion, ownedIds, gold, threats, self, items, modeConfig])
+  }, [build, champion, ownedIds, gold, threats, self, items, modeConfig, selectedRole])
   const topRec = recommendations[0] ?? null
 
   return {

@@ -1,6 +1,8 @@
 import type { BuildRec } from '@/lib/builder'
 import { unavailableItems } from '@/lib/itemAvailability'
+import { ownsJunglePet, pickJunglePet } from '@/lib/jungle'
 import type { LiveThreatAnalysis } from '@/lib/threats'
+import type { Role } from '@/types/app'
 import type { DDragonChampion, DDragonItem } from '@/types/ddragon'
 import type { LivePlayer } from '@/types/live'
 
@@ -123,7 +125,10 @@ export interface ScoreParams {
   threats: LiveThreatAnalysis | null
   self: LivePlayer | null
   mapId: number
+  role?: Role | null
 }
+
+const SR_MAP_ID = 11
 
 /** Rank the best next purchases for a champion from live state. */
 export function recommendByScore({
@@ -134,6 +139,7 @@ export function recommendByScore({
   threats,
   self,
   mapId,
+  role,
 }: ScoreParams): BuildRec[] {
   const p = profile(champion)
   // Items consumed into what you own, or made unbuildable by a one-per-inventory
@@ -309,6 +315,25 @@ export function recommendByScore({
         reason,
         affordable: gold >= boot.gold.total,
         goldNeeded: Math.max(0, Math.ceil(boot.gold.total - gold)),
+        source: 'core',
+      })
+    }
+  }
+
+  // Jungle companion (SR only) — a comp-picked start item for junglers who
+  // haven't bought a pet yet. Cheap + affordable, so it surfaces near the top.
+  if (role === 'JUNGLE' && mapId === SR_MAP_ID && !ownsJunglePet(ownedIds)) {
+    const pet = pickJunglePet(cond)
+    const petItem = items[String(pet.itemId)]
+    if (petItem && !blocked.has(pet.itemId)) {
+      recs.unshift({
+        itemId: pet.itemId,
+        name: petItem.name,
+        cost: petItem.gold.total,
+        priority: 'recommended',
+        reason: pet.reason,
+        affordable: gold >= petItem.gold.total,
+        goldNeeded: Math.max(0, Math.ceil(petItem.gold.total - gold)),
         source: 'core',
       })
     }

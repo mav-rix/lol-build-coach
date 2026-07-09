@@ -1,5 +1,6 @@
 import { CONDITION_LABELS } from '@/lib/situational'
 import { unavailableItems } from '@/lib/itemAvailability'
+import { ownsJunglePet, pickJunglePet } from '@/lib/jungle'
 import type { LiveThreatAnalysis } from '@/lib/threats'
 import type { ModeConfig } from '@/lib/modes'
 import type { BuildPath } from '@/types/app'
@@ -74,6 +75,13 @@ export function recommendPurchases(
   }
 
   const activeConditions = threats?.activeConditions ?? new Set(['general'])
+
+  // 0) Jungle companion (SR only) — a start item whose choice adapts to the
+  //    enemy comp. Suggest it first while the jungler hasn't bought a pet.
+  if (build.role === 'JUNGLE' && !ownsJunglePet(ownedIds)) {
+    const pet = pickJunglePet(activeConditions)
+    push(pet.itemId, 'recommended', pet.reason, 'core')
+  }
 
   // 1) Boots first if not yet bought and past the mode's boots deadline window.
   const firstBoots = build.bootsOptions[0]

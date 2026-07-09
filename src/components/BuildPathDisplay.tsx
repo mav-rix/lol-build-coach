@@ -2,6 +2,7 @@ import { ItemIcon } from '@/components/ItemIcon'
 import { RunePage } from '@/components/RunePage'
 import { SkillOrder } from '@/components/SkillOrder'
 import { CONDITION_LABELS } from '@/lib/situational'
+import { JUNGLE_PET_IDS, pickJunglePet } from '@/lib/jungle'
 import { MODE_CONFIG } from '@/lib/modes'
 import type { BuildPath, SituationalCondition } from '@/types/app'
 import type { DDragonItem, DDragonRunePath } from '@/types/ddragon'
@@ -31,14 +32,27 @@ export function BuildPathDisplay({ build, items, runes, patch, activeConditions 
   const validOnMap = (itemId: number) => items[String(itemId)]?.maps[mapKey] !== false
   const situational = build.situationalItems.filter((s) => validOnMap(s.itemId))
 
+  // Jungle companion is chosen by enemy comp, not baked into the seed — swap the
+  // seed's pet for the comp-appropriate one and explain the pick.
+  const jungle =
+    build.role === 'JUNGLE' && build.mode === 'SR'
+      ? pickJunglePet(activeConditions ?? new Set(['general']))
+      : null
+  const starterItems = jungle
+    ? [jungle.itemId, ...build.starterItems.filter((id) => !JUNGLE_PET_IDS.has(id))]
+    : build.starterItems
+
   return (
     <div className="space-y-8">
       <Section title="Starter Items">
         <div className="flex gap-4">
-          {build.starterItems.map((id) => (
+          {starterItems.map((id) => (
             <ItemIcon key={id} itemId={id} patch={patch} items={items} showCost />
           ))}
         </div>
+        {jungle && (
+          <p className="mt-2 text-xs text-amber-300/90">▸ {jungle.reason}</p>
+        )}
       </Section>
 
       <Section title="Core Build">
