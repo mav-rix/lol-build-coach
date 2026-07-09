@@ -95,24 +95,25 @@ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=23999 conn
 New-NetFirewallRule -DisplayName "LoL Live Client from WSL" -Direction Inbound -LocalPort 23999 -Protocol TCP -Action Allow
 ```
 
-then start the dev server pointed at the Windows host and forward port:
+then just start the dev server:
 
 ```bash
-LIVE_CLIENT_HOST=$(ip route show default | awk '{print $3}') LIVE_CLIENT_PORT=23999 npm run dev
+npm run dev
 ```
+
+`npm run dev` runs `scripts/dev.mjs`, which detects WSL and automatically points
+both the live-game and champ-select proxies at the Windows host gateway on the
+forward ports (`23999`/`23998`) and binds Vite with `--host` so the Windows-side
+overlay can reach it. It prints the targets on startup. Any of `LIVE_CLIENT_HOST`,
+`LIVE_CLIENT_PORT`, `LCU_HOST`, `LCU_PORT` you set yourself are respected; use
+`npm run dev:plain` for a bare `vite` with no auto-config. (Option A / mirrored
+networking needs none of this — the auto-detected gateway still works, or use
+`dev:plain`.)
 
 If the forward was created while a game was already running, start a new game —
 the API only binds its port at game launch.
 
 Easiest test path: Practice Tool — the API is live the moment you load in.
-
-On this machine the dev server is normally started with both the live-game and
-champ-select proxies pointed at the Windows host:
-
-```bash
-GW=$(ip route show default | awk '{print $3}')
-LIVE_CLIENT_HOST=$GW LIVE_CLIENT_PORT=23999 LCU_HOST=$GW LCU_PORT=23998 npm run dev
-```
 
 ## Champ-select auto-fill (LCU)
 
