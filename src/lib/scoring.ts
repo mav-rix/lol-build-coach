@@ -3,8 +3,11 @@ import { unavailableItems } from '@/lib/itemAvailability'
 import { ownsJunglePet, pickJunglePet } from '@/lib/jungle'
 import {
   SUPPORT_QUEST_COMPLETE_ID,
+  type SupportArchetype,
   ownsFinalSupportItem,
   pickSupportItem,
+  recommendSupportBuild,
+  supportArchetype,
 } from '@/lib/support'
 import type { LiveThreatAnalysis } from '@/lib/threats'
 import type { Role } from '@/types/app'
@@ -134,6 +137,88 @@ export interface ScoreParams {
 }
 
 const SR_MAP_ID = 11
+const SR_MAP_KEY = String(SR_MAP_ID)
+
+// Support boots: Mercury's vs AP/CC, otherwise Ionian for ability haste.
+const SUPPORT_BOOTS = { apCc: 3111, default: 3158 }
+
+/**
+ * Assemble an enchanter/warden support build. The stat scorer can't rank these
+ * champions' items (their value is haste/heal-shield/actives DDragon doesn't
+ * expose), so we use the curated support model, plus a threat-matched boot and
+ * the support-quest final, guarded by the same owned/blocked/map rules.
+ */
+function recommendSupportByScore(
+  champion: DDragonChampion,
+  archetype: SupportArchetype,
+  ownedIds: Set<number>,
+  gold: number,
+  items: Record<string, DDragonItem>,
+  cond: ReadonlySet<string>,
+): BuildRec[] {
+  const blocked = unavailableItems(ownedIds, items)
+  const recs: BuildRec[] = []
+  const seen = new Set<number>()
+
+  const pushItem = (
+    itemId: number,
+    priority: BuildRec['priority'],
+    reason: string,
+    source: BuildRec['source'],
+  ) => {
+    if (seen.has(itemId) || ownedIds.has(itemId) || blocked.has(itemId)) return
+    const item = items[String(itemId)]
+    if (!item || item.maps[SR_MAP_KEY] === false || !item.gold.purchasable) return
+    seen.add(itemId)
+    const cost = item.gold.total
+    recs.push({
+      itemId,
+      name: item.name,
+      cost,
+      priority,
+      reason,
+      affordable: gold >= cost,
+      goldNeeded: Math.max(0, Math.ceil(cost - gold)),
+      source,
+    })
+  }
+
+  // Support-quest final once the quest is complete and none is chosen yet.
+  if (ownedIds.has(SUPPORT_QUEST_COMPLETE_ID) && !ownsFinalSupportItem(ownedIds)) {
+    const pick = pickSupportItem(champion, cond)
+    pushItem(pick.itemId, 'recommended', pick.reason, 'core')
+  }
+
+  // Boots if none owned yet.
+  const hasBoots = [...ownedIds].some((id) => items[String(id)]?.tags.includes('Boots'))
+  if (!hasBoots) {
+    const apCc = cond.has('enemy_heavy_ap') || cond.has('enemy_heavy_cc')
+    pushItem(
+      apCc ? SUPPORT_BOOTS.apCc : SUPPORT_BOOTS.default,
+      'recommended',
+      apCc ? "Mercury's Treads — tenacity vs their AP/CC" : 'Ionian Boots — ability haste for your utility',
+      'core',
+    )
+  }
+
+  // Curated support legendaries, comp-nudged.
+  for (const b of recommendSupportBuild(archetype, cond)) {
+    pushItem(
+      b.itemId,
+      b.urgent ? 'urgent' : recs.length === 0 ? 'recommended' : 'planned',
+      b.reason,
+      b.urgent ? 'situational' : 'core',
+    )
+  }
+
+  const rank = { urgent: 0, recommended: 1, planned: 2 } as const
+  recs.sort((a, b) => {
+    if (rank[a.priority] !== rank[b.priority]) return rank[a.priority] - rank[b.priority]
+    if (a.affordable !== b.affordable) return a.affordable ? -1 : 1
+    return a.cost - b.cost
+  })
+  return recs.slice(0, 6)
+}
 
 /** Rank the best next purchases for a champion from live state. */
 export function recommendByScore({
@@ -152,6 +237,14 @@ export function recommendByScore({
   const blocked = unavailableItems(ownedIds, items)
   const cond = threats?.activeConditions ?? new Set<string>()
   const mapKey = String(mapId)
+
+  // Enchanter/warden supports build utility items the stat scorer can't rank —
+  // hand them off to the curated support build (SR only; ARAM has no support).
+  const supArch = supportArchetype(champion, role)
+  if (mapId === SR_MAP_ID && (supArch === 'enchanter' || supArch === 'warden')) {
+    return recommendSupportByScore(champion, supArch, ownedIds, gold, items, cond)
+  }
+
   const deaths = self?.scores.deaths ?? 0
   const kills = self?.scores.kills ?? 0
   const behind = deaths >= 5 && deaths > kills + 2
