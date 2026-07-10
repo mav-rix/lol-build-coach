@@ -8,6 +8,8 @@
     "dev": "node scripts/dev.mjs",
     "dev:plain": "vite",
     "aggregate": "node scripts/aggregate-builds.mjs",
+    "augments:meta": "node scripts/fetch-augments.mjs",
+    "aggregate:augments": "node scripts/aggregate-augments.mjs",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"

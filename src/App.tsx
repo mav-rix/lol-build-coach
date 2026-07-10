@@ -1,5 +1,6 @@
 import { BrowserRouter, NavLink, Outlet, Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Augments from '@/pages/Augments'
 import Home from '@/pages/Home'
 import Live from '@/pages/Live'
 import Overlay from '@/pages/Overlay'
@@ -11,6 +12,7 @@ const NAV = [
   { to: '/', label: 'Build' },
   { to: '/live', label: 'Live' },
   { to: '/review', label: 'Review' },
+  { to: '/augments', label: 'Augments' },
 ]
 
 function Layout() {
@@ -61,6 +63,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/live" element={<Live />} />
             <Route path="/review" element={<Review />} />
+            <Route path="/augments" element={<Augments />} />
           </Route>
         </Routes>
       </BrowserRouter>
