@@ -29,13 +29,17 @@ recommendations, lightweight live economic tracking, and post-game build analysi
   the mode from the running game. Shows your gold, KDA, CS/min, inventory, and
   build-path progress with purchase timestamps. When you can complete your next
   item it shows a recall banner on SR, or "buy on your next respawn" in ARAM.
-  - **Build Next** — an adaptive item builder that ranks your next purchases and
-    reacts to what enemies *actually bought*: anti-heal jumps to "Buy now" the
-    moment an enemy completes healing, armor pen promotes against armor stackers,
-    and a defensive item is suggested if you're dying repeatedly. For champions
-    with a seeded build it promotes situational items into that path; for any
-    other champion it falls back to the **scoring engine** (below), so *every*
-    champion gets live itemization.
+  - **Game plan — two build categories, decided at the loading screen.** The
+    moment the enemy comp is known (the first poll), the plan engine
+    (`src/lib/gameplan.ts`) fixes both categories for the whole game:
+    ① the **highest win-rate build** (the aggregated/seed path, untouched) and
+    ② the **vs-comp build** — the same path with up to two comp-driven swaps
+    (anti-heal vs healers, pen/%-health vs tanks, one defensive slot vs a
+    damage-skewed comp) plus a boots swap vs AP/CC or AD, each with its reason.
+    **Build Next** simply walks the active path (vs-comp when any signal fired) —
+    the build doesn't churn mid-game; knowing *when* to deviate is decided up
+    front from the comp. Champions with no build data at all fall back to the
+    **scoring engine** (below).
   - **Enemy Threats** — each enemy's champion, level, items, and a one-line
     counter note. Uses only scoreboard-visible data (what TAB shows) from Riot's
     documented local API — no fog-of-war info. Strictly read-only.
@@ -159,8 +163,15 @@ a separate OS window drawn above the game, never injected into it.
   remembered across launches. The grip is grabbable any time; only that tiny grip
   is solid, so the rest of the overlay stays click-through and never blocks the
   game or the Tab scoreboard.
+- **Tab-summoned:** by default the overlay only appears while **Tab is held** —
+  the same gesture as the scoreboard, so both show together and the overlay
+  takes no screen space the rest of the time. This uses a *passive* key listener
+  (`uiohook-napi`, installed in the deploy dir) that observes Tab without
+  consuming it — the game's own scoreboard still works. `OVERLAY_TAB=toggle`
+  makes Tab flip it on/off instead; `OVERLAY_TAB=off` (or the listener missing)
+  reverts to always-visible.
 - Hotkeys: `Ctrl+Shift+O` pin the whole overlay interactive (click/scroll it),
-  `Ctrl+Shift+H` hide/show, `Ctrl+Shift+Q` quit.
+  `Ctrl+Shift+H` pin visible / unpin back to Tab mode, `Ctrl+Shift+Q` quit.
 - League must be in **Borderless** or Windowed mode (Settings → Video) —
   exclusive Fullscreen draws over everything.
 - Preview it without a game: `npm run overlay:shot -- --champ Ahri` renders

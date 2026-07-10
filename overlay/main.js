@@ -9,9 +9,16 @@
 // grabbable any time; the rest of the overlay stays click-through so it never
 // blocks the game (or the Tab scoreboard).
 //
+// Visibility: by default the overlay only appears while Tab is held — the same
+// gesture as the scoreboard, so both show together. This uses a PASSIVE global
+// key listener (uiohook-napi) that observes Tab without consuming it; the game
+// still gets the key. OVERLAY_TAB=toggle makes Tab flip it on/off instead;
+// OVERLAY_TAB=off reverts to always-visible (also the automatic fallback if the
+// native listener isn't installed).
+//
 // Hotkeys:
 //   Ctrl+Shift+O — pin interactive mode (click/scroll the whole overlay)
-//   Ctrl+Shift+H — hide/show
+//   Ctrl+Shift+H — pin visible (overrides Tab mode); press again to unpin
 //   Ctrl+Shift+Q — quit
 
 const { app, BrowserWindow, globalShortcut, screen, ipcMain } = require('electron')
@@ -26,6 +33,52 @@ let pinned = false // Ctrl+Shift+O — whole overlay interactive
 let hover = false // pointer is over the drag grip
 let dragOrigin = null // window [x,y] captured at drag start
 let reloadTimer = null
+
+// --- Tab-summoned visibility -------------------------------------------------
+const TAB_MODE = (process.env.OVERLAY_TAB ?? 'hold').toLowerCase() // hold | toggle | off
+let tabVisible = false // Tab currently held (hold) or toggled on (toggle)
+let pinnedVisible = false // Ctrl+Shift+H — force-visible regardless of Tab
+let tabModeActive = false // true once the key listener is actually running
+
+function applyVisibility() {
+  if (!win || win.isDestroyed()) return
+  const visible = !tabModeActive || pinnedVisible || tabVisible
+  if (visible && !win.isVisible()) win.showInactive() // never steal game focus
+  else if (!visible && win.isVisible()) win.hide()
+}
+
+// Passive global key listener — observes Tab without consuming it (a normal
+// globalShortcut would steal Tab from the game's scoreboard). Optional native
+// dep; when missing, the overlay just stays always-visible.
+function startTabListener() {
+  if (TAB_MODE === 'off') return
+  let uio
+  try {
+    uio = require('uiohook-napi')
+  } catch {
+    console.warn('[overlay] uiohook-napi not installed — Tab mode off, overlay stays visible.')
+    console.warn('[overlay] install it next to main.js:  npm install uiohook-napi')
+    return
+  }
+  const { uIOhook, UiohookKey } = uio
+  uIOhook.on('keydown', (e) => {
+    if (e.keycode !== UiohookKey.Tab) return
+    if (TAB_MODE === 'toggle') tabVisible = !tabVisible
+    else tabVisible = true
+    applyVisibility()
+  })
+  if (TAB_MODE === 'hold') {
+    uIOhook.on('keyup', (e) => {
+      if (e.keycode !== UiohookKey.Tab) return
+      tabVisible = false
+      applyVisibility()
+    })
+  }
+  uIOhook.start()
+  tabModeActive = true
+  applyVisibility() // start hidden until Tab
+  app.on('will-quit', () => uIOhook.stop())
+}
 
 const posFile = () => path.join(app.getPath('userData'), 'overlay-position.json')
 function loadPos() {
@@ -113,6 +166,7 @@ function createWindow() {
 
 app.whenReady().then(() => {
   createWindow()
+  startTabListener()
 
   // Drag bridge (see overlay/preload.js).
   ipcMain.on('overlay:hover', (_e, h) => {
@@ -138,7 +192,11 @@ app.whenReady().then(() => {
     if (pinned && win) win.focus()
   })
   globalShortcut.register('Control+Shift+H', () => {
-    if (win.isVisible()) win.hide()
+    if (tabModeActive) {
+      // Pin visible (ignore Tab) / unpin back to Tab-summoned.
+      pinnedVisible = !pinnedVisible
+      applyVisibility()
+    } else if (win.isVisible()) win.hide()
     else win.show()
   })
   globalShortcut.register('Control+Shift+Q', () => app.quit())
