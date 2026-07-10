@@ -56,7 +56,8 @@ export function gameModeFromLive(liveGameMode: string, mapNumber?: number): Game
  * ARAM, distinguished only by the event's gameMode string — plain ARAM reads
  * exactly "ARAM", so any other string on map 12 is an event variant. Augment
  * events are the ones that deviate; if a non-augment Abyss event ever appears,
- * tighten this to match its string.
+ * tighten this to match its string. Confirmed live: ARAM Mayhem reports
+ * gameMode "KIWI" (patch 16.13).
  */
 export function isAugmentedAbyss(liveGameMode: string, mapNumber?: number): boolean {
   if (gameModeFromLive(liveGameMode, mapNumber) !== 'ARAM') return false

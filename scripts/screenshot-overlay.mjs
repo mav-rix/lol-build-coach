@@ -34,7 +34,8 @@ const width = Number(args.width ?? 480) // wide enough that the right-aligned ca
 const height = Number(args.height ?? 560)
 const port = process.env.PORT ?? '5173'
 const mayhem = args.mayhem ? '&mayhem=1' : '' // show the ARAM Mayhem augment panel
-const url = `http://localhost:${port}/overlay?mock=1&champ=${champ}${mayhem}`
+const bg = args.bg ? '&bg=1' : '' // paint a game-like backdrop to judge transparency
+const url = `http://localhost:${port}/overlay?mock=1&champ=${champ}${mayhem}${bg}`
 
 // The browser is a Windows process, so its file args must be Windows paths.
 const outWsl = args.out ?? `/mnt/c/Users/${process.env.WIN_USER ?? 'Eric'}/lol-overlay-shot.png`

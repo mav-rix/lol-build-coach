@@ -132,7 +132,7 @@ function AugmentGoals({ goals }: { goals: AugmentGoal[] }) {
           >
             {g.meta.name}
           </span>
-          <span className="shrink-0 font-mono text-[10px] tabular-nums text-zinc-500">
+          <span className="shrink-0 font-mono text-[10px] tabular-nums text-zinc-300">
             {g.avgPlacement.toFixed(1)} avg · {g.firstRate}%
           </span>
         </div>
@@ -146,8 +146,8 @@ function AugmentGoals({ goals }: { goals: AugmentGoal[] }) {
 
 function Section({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div className="border-t border-zinc-800/70 px-2.5 py-2">
-      <div className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
+    <div className="border-t border-zinc-700/30 px-2.5 py-2">
+      <div className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-400">
         {label}
       </div>
       {children}
@@ -165,6 +165,7 @@ export default function Overlay() {
     self,
     championId,
     plan,
+    gamePlan,
     ownedIds,
     nextPlanItem,
     recommendations,
@@ -182,7 +183,12 @@ export default function Overlay() {
   useOverlayDrag()
 
   useEffect(() => {
-    document.documentElement.style.background = 'transparent'
+    // ?bg=1 (mock/dev only): stand-in for game terrain, to preview how
+    // transparent the card really is. In the real overlay both stay transparent.
+    const demoBg = new URLSearchParams(window.location.search).has('bg')
+      ? 'linear-gradient(135deg,#3b6b35 0%,#7ba05b 35%,#c8b35a 65%,#4a7ec2 100%)'
+      : 'transparent'
+    document.documentElement.style.background = demoBg
     document.body.style.background = 'transparent'
     return () => {
       document.documentElement.style.background = ''
@@ -209,7 +215,10 @@ export default function Overlay() {
   const pathItems = plan.filter((p) => p.label !== 'starter')
 
   return (
-    <div className="ml-auto w-[22rem] overflow-hidden rounded-md border border-zinc-800/80 bg-zinc-950/92 text-zinc-100 shadow-xl backdrop-blur-sm">
+    // Mostly-transparent chrome: the game should read through the card. Text
+    // stays legible over bright terrain via an inherited text-shadow; icons and
+    // the key numbers (gold, costs) carry the contrast.
+    <div className="ml-auto w-[22rem] overflow-hidden rounded-md border border-zinc-700/40 bg-zinc-950/45 text-zinc-100 backdrop-blur-[2px] [text-shadow:0_1px_2px_rgb(0_0_0/0.9)]">
       {/* Grip — press-and-hold left mouse to drag the overlay */}
       <DragGrip className="py-1" />
       {/* Header — identity + live stat line, all tabular */}
@@ -243,7 +252,9 @@ export default function Overlay() {
       )}
 
       {pathItems.length > 0 && (
-        <Section label="Build Path">
+        <Section
+          label={`Build Path · ${gamePlan?.active === 'comp' ? 'vs comp' : 'highest WR'}`}
+        >
           <div className="flex flex-wrap items-center gap-1">
             {pathItems.map((p, i) => {
               const owned = ownedIds.has(p.itemId)
@@ -251,13 +262,19 @@ export default function Overlay() {
               return (
                 <div key={`${p.label}-${p.itemId}`} className="flex items-center gap-1">
                   <div
-                    title={items[String(p.itemId)]?.name}
+                    title={
+                      p.swapReason
+                        ? `${items[String(p.itemId)]?.name} · ${p.swapReason}`
+                        : items[String(p.itemId)]?.name
+                    }
                     className={`rounded ${
                       owned
                         ? 'ring-1 ring-emerald-600/70'
                         : isNext
                           ? 'ring-1 ring-orange-500'
-                          : 'opacity-40'
+                          : p.swapReason
+                            ? 'ring-1 ring-sky-500/70 opacity-70'
+                            : 'opacity-40'
                     }`}
                   >
                     <ItemIcon itemId={p.itemId} patch={patch} items={items} size={26} />
