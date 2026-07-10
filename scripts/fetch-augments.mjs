@@ -26,7 +26,9 @@ const clean = (html) =>
 
 const data = await (await fetch(`${CDRAGON}/cdragon/arena/en_us.json`)).json()
 const augments = data.augments
-  .filter((a) => a.id && a.name && a.iconLarge && a.name !== 'Null Augment')
+  // Only the three pickable tiers — rarity 4 ("other") is utility pseudo-augments
+  // (Replace Augment, stat anvils, extra-slot) that aren't real picks.
+  .filter((a) => a.id && a.name && a.iconLarge && a.name !== 'Null Augment' && a.rarity in RARITY)
   .map((a) => ({
     id: a.id,
     name: a.name,

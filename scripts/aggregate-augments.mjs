@@ -27,6 +27,8 @@ const PLATFORM = (args.region ?? 'na1').toLowerCase()
 const MATCH_LIMIT = Number(args.matches ?? 500)
 const PER_PLAYER = Number(args['per-player'] ?? 20)
 const MIN_GAMES = Number(args['min-games'] ?? 50)
+const CHAMP_MIN_GAMES = Number(args['champ-min-games'] ?? 8) // per (champion, augment) pair
+const TOP_PER_CHAMP = Number(args['top-per-champ'] ?? 8)
 const OUT = args.out ? resolve(args.out) : join(ROOT, 'src/data/augmentStats.json')
 
 // Only keep augments we have metadata for (run `npm run augments:meta` first) —
@@ -116,10 +118,21 @@ async function main() {
   }
   console.log(`  ${ids.size} Arena matches\n`)
 
+  // Champion-name normalizer (Match-V5 championName → DDragon id, e.g. FiddleSticks quirks).
+  const versions = await (await fetch('https://ddragon.leagueoflegends.com/api/versions.json')).json()
+  const champList = (
+    await (
+      await fetch(`https://ddragon.leagueoflegends.com/cdn/${versions[0]}/data/en_US/champion.json`)
+    ).json()
+  ).data
+  const champByLower = {}
+  for (const cid of Object.keys(champList)) champByLower[cid.toLowerCase()] = cid
+
   console.log('Fetching + tallying augments…')
-  // Per augment: games it appeared in, sum of team placement (1-4, lower better),
-  // and first-place count.
+  // Global tally per augment, plus a per-(champion, augment) tally for the
+  // overlay's champion-specific goal list. Placement is 1-8 (8 duo teams).
   const tally = new Map()
+  const champTally = new Map() // "champ|augId" -> {games, placementSum, firsts}
   let done = 0
   let usedMatches = 0
   for (const id of ids) {
@@ -127,8 +140,9 @@ async function main() {
     if (match?.info?.queueId !== QUEUE) continue
     usedMatches++
     for (const p of match.info.participants) {
-      const placement = p.subteamPlacement || p.placement // 1-4 for the 2v2v2v2 teams
+      const placement = p.subteamPlacement || p.placement
       if (!placement) continue
+      const champ = champByLower[p.championName?.toLowerCase()] ?? p.championName
       const augs = [p.playerAugment1, p.playerAugment2, p.playerAugment3, p.playerAugment4, p.playerAugment5, p.playerAugment6]
       for (const a of augs) {
         if (!a) continue
@@ -137,6 +151,12 @@ async function main() {
         t.placementSum += placement
         if (placement === 1) t.firsts++
         tally.set(a, t)
+        const ck = `${champ}|${a}`
+        const ct = champTally.get(ck) ?? { games: 0, placementSum: 0, firsts: 0 }
+        ct.games++
+        ct.placementSum += placement
+        if (placement === 1) ct.firsts++
+        champTally.set(ck, ct)
       }
     }
     if (++done % 50 === 0) console.log(`  ${done}/${ids.size} (${tally.size} augments seen)`)
@@ -155,6 +175,29 @@ async function main() {
   writeFileSync(OUT, JSON.stringify(stats, null, 2) + '\n')
   console.log(`\n✓ Wrote ${stats.length} augments (${usedMatches} Arena matches) → ${args.out ?? 'src/data/augmentStats.json'}`)
   if (stats[0]) console.log(`  best avg placement: aug ${stats[0].id} @ ${stats[0].avgPlacement} (${stats[0].firstRate}% firsts)`)
+
+  // Per-champion top augments: only pairs with a real sample survive; the app
+  // blends these with the global list, so thin champions degrade gracefully.
+  const byChamp = {}
+  for (const [key, t] of champTally) {
+    const [champ, augIdStr] = key.split('|')
+    const augId = Number(augIdStr)
+    if (t.games < CHAMP_MIN_GAMES || (metaIds && !metaIds.has(augId))) continue
+    ;(byChamp[champ] ??= []).push({
+      id: augId,
+      games: t.games,
+      avgPlacement: Math.round((t.placementSum / t.games) * 100) / 100,
+      firstRate: Math.round((1000 * t.firsts) / t.games) / 10,
+    })
+  }
+  for (const champ of Object.keys(byChamp)) {
+    byChamp[champ] = byChamp[champ].sort((a, b) => a.avgPlacement - b.avgPlacement).slice(0, TOP_PER_CHAMP)
+  }
+  const champOut = join(ROOT, 'src/data/augmentChampStats.json')
+  writeFileSync(champOut, JSON.stringify(byChamp, null, 1) + '\n')
+  const covered = Object.keys(byChamp).length
+  const pairs = Object.values(byChamp).reduce((n, l) => n + l.length, 0)
+  console.log(`✓ Wrote per-champion stats: ${covered} champions, ${pairs} champ-augment pairs (min ${CHAMP_MIN_GAMES} games) → src/data/augmentChampStats.json`)
 }
 
 function parseArgs(argv) {

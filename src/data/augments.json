@@ -1344,27 +1344,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/hive_mind_large.png"
   },
   {
-    "id": 340,
-    "name": "Gain a Prismatic Stat Anvil",
-    "rarity": "other",
-    "desc": "Gain a %i:StatAnvil% Prismatic Stat Anvil.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/crafting_prisstatanvil.png"
-  },
-  {
-    "id": 341,
-    "name": "Gain an Augment slot",
-    "rarity": "other",
-    "desc": "Unlock your …th %i:Augment% Augment Slot. In … rounds gain a %i:Augment% Silver Augment.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/crafting_slot.png"
-  },
-  {
-    "id": 342,
-    "name": "Level Augments",
-    "rarity": "other",
-    "desc": "Remove an %i:Augment% Augment. Gain … random %i:AugmentLevel% Augment Levels.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/crafting_sellaug.png"
-  },
-  {
     "id": 343,
     "name": "Righteous Fury",
     "rarity": "prismatic",
@@ -1393,55 +1372,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bread_sandwhich.png"
   },
   {
-    "id": 347,
-    "name": "Chemtech Putrifier",
-    "rarity": "other",
-    "desc": "All damage you do applies Grevious Wounds.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png"
-  },
-  {
-    "id": 348,
-    "name": "Bloodrazor",
-    "rarity": "other",
-    "desc": "Dealing damage deals an additional …% max health physical damage.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png"
-  },
-  {
-    "id": 349,
-    "name": "Dematerializer",
-    "rarity": "other",
-    "desc": "Your damage executes champions that are below …% Health.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png"
-  },
-  {
-    "id": 350,
-    "name": "Enchanted Flask",
-    "rarity": "other",
-    "desc": "Gain a Spell Shield every … seconds.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png"
-  },
-  {
-    "id": 351,
-    "name": "Frozen Mallet",
-    "rarity": "other",
-    "desc": "Dealing damage Slows enemies.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png"
-  },
-  {
-    "id": 354,
-    "name": "Remnant of the Watchers",
-    "rarity": "other",
-    "desc": "Reduce the Attack Speed of nearby champions.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png"
-  },
-  {
-    "id": 355,
-    "name": "Gain Stat Anvil",
-    "rarity": "other",
-    "desc": "Gain a random %i:StatAnvil% Stat Anvil.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/gain_stat_anvil.png"
-  },
-  {
     "id": 356,
     "name": "Silver Spoon",
     "rarity": "silver",
@@ -1454,111 +1384,6 @@
     "rarity": "gold",
     "desc": "When you deal damage with an Attack, your next Ability deals …% increased damage. When you deal damage with an Ability, your next Attack deals …% increased damage.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/hybrid_large.png"
-  },
-  {
-    "id": 358,
-    "name": "Wolf's Frenzy",
-    "rarity": "other",
-    "desc": "Lose your innate revive. Increase your Health by …%. If you deal damage that would leave a champion below below …% maximum health, execute them.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/wolf_large.arena_2026_s2.png"
-  },
-  {
-    "id": 359,
-    "name": "Lamb's Respite",
-    "rarity": "other",
-    "desc": "Gain … additional revive, and cuts the time needed to revive in half.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/lamb_large.arena_2026_s2.png"
-  },
-  {
-    "id": 361,
-    "name": "Ally Demon",
-    "rarity": "other",
-    "desc": "Vote for your team to ally with the Demons. Allying with Demons grants an %i:AugmentLevel% Augment Level when a Hunter team is eliminated.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png"
-  },
-  {
-    "id": 362,
-    "name": "Ally Hunter",
-    "rarity": "other",
-    "desc": "Vote for your team to ally with the Demon Hunters. Allying with Demon Hunters grants you +%i:goldCoins%… bonus gold when you beat a Demon team.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png"
-  },
-  {
-    "id": 364,
-    "name": "Replace Augment",
-    "rarity": "other",
-    "desc": "Replace one of your %i:Augment% Augments with an Augment …%i:AugmentLevel% tier higher.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/replace_augment.png"
-  },
-  {
-    "id": 365,
-    "name": "Abstain From Wealth",
-    "rarity": "other",
-    "desc": "Restore …% of of the health you've sacrificed to Tahm Kench. Gain +%i:goldCoins% … gold.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/wealth_large.arena_2026_s2.png"
-  },
-  {
-    "id": 366,
-    "name": "Abstain From Power",
-    "rarity": "other",
-    "desc": "Restore …% of of the health you've sacrificed to Tahm Kench. Gain … Silver Stat Anvil.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/power_large.arena_2026_s2.png"
-  },
-  {
-    "id": 367,
-    "name": "Abstain From Risk",
-    "rarity": "other",
-    "desc": "Restore …% of of the health you've sacrificed to Tahm Kench. Instantly gain a %i:Augment% Silver Augment.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/risk_large.arena_2026_s2.png"
-  },
-  {
-    "id": 368,
-    "name": "Craving For Wealth",
-    "rarity": "other",
-    "desc": "Sacrifice …% of your max health to Tahm Kench. Your total sacrifice will increase to -…% max health. Gain +%i:goldCoins% … gold.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/wealth_large.arena_2026_s2.png"
-  },
-  {
-    "id": 369,
-    "name": "Craving For Power",
-    "rarity": "other",
-    "desc": "Sacrifice …% of your max health to Tahm Kench. Your total sacrifice will increase to -…% max health. Gain … Gold Stat Anvil.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/power_large.arena_2026_s2.png"
-  },
-  {
-    "id": 370,
-    "name": "Craving For Risk",
-    "rarity": "other",
-    "desc": "Sacrifice …% of your max health to Tahm Kench. Your total sacrifice will increase to -…% max health. Gain a %i:Augment% Gold Augment.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/risk_large.arena_2026_s2.png"
-  },
-  {
-    "id": 371,
-    "name": "Compulsion For Wealth",
-    "rarity": "other",
-    "desc": "Sacrifice …% of your max health to Tahm Kench. Your total sacrifice will increase to -…% max health. Gain +%i:goldCoins% … gold.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/wealth_large.arena_2026_s2.png"
-  },
-  {
-    "id": 372,
-    "name": "Compulsion For Power",
-    "rarity": "other",
-    "desc": "Sacrifice …% of your max health to Tahm Kench. Your total sacrifice will increase to -…% max health. Gain … Prismatic Stat Anvils.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/power_large.arena_2026_s2.png"
-  },
-  {
-    "id": 373,
-    "name": "Compulsion For Risk",
-    "rarity": "other",
-    "desc": "Sacrifice …% of your max health to Tahm Kench. Your total sacrifice will increase to -…% max health. Gain a %i:Augment% Prismatic Augment.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/risk_large.arena_2026_s2.png"
-  },
-  {
-    "id": 392,
-    "name": "Swindler's Orb",
-    "rarity": "other",
-    "desc": "Dealing damage to an enemy champion reduces their shields.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/swindlers_orb_item_large.png"
   },
   {
     "id": 404,
