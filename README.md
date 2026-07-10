@@ -243,6 +243,15 @@ Add `--dry-run` to preview sample builds from already-cached matches (instant,
 no key, no Riot calls) — or a small live pull if the cache is empty — without
 writing the file. A good first look: `npm run aggregate -- --dry-run`.
 
+**Refreshing per patch.** The data is patch-specific, so re-run the aggregator
+when a new patch ships. `--if-stale` makes that cheap: it no-ops if the output
+was already built for the current patch, otherwise runs — so
+`npm run aggregate -- --if-stale` is safe to run any time. `npm run dev` also
+checks on startup and prints a one-line heads-up when a new patch is out and the
+data is stale (non-blocking; a full refresh is a ~10–80 min job depending on
+`--matches`, so it nudges rather than auto-runs — and your dev key needs to be
+current in `.env`).
+
 **Comp-conditioned situationals (Phase 2):** for each build it also computes
 which items high-elo players buy *notably more often* against a given enemy-comp
 attribute — e.g. Void Staff at 83% vs tank comps against a 46% baseline — and

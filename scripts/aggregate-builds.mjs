@@ -15,6 +15,8 @@
 //   --out <path>          output json (default src/data/aggregatedBuilds.json)
 //   --dry-run             preview builds from cached (or a small live) sample
 //                         without writing the file — great for a first look
+//   --if-stale            no-op if the output was already built for the current
+//                         patch; otherwise run — for a per-patch scheduled job
 
 import { writeFileSync, readFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
@@ -37,6 +39,7 @@ const TIERS = (args.tiers ?? 'challenger,grandmaster,master').split(',')
 const MATCH_LIMIT = Number(args.matches ?? 300)
 const PER_PLAYER = Number(args['per-player'] ?? 15)
 const MIN_SAMPLE = Number(args['min-sample'] ?? 3)
+const IF_STALE = Boolean(args['if-stale'])
 const DRY_RUN = Boolean(args['dry-run'])
 const DRY_LIMIT = Number(args.matches ?? 50)
 const OUT = join(ROOT, args.out ?? 'src/data/aggregatedBuilds.json')
@@ -438,6 +441,18 @@ function cachedMatchIds() {
     .filter((id) => timelines.has(id))
 }
 
+// Modal patch of the already-written builds, or null if the file is missing/empty.
+function currentBuildsPatch() {
+  if (!existsSync(OUT)) return null
+  try {
+    const arr = JSON.parse(readFileSync(OUT, 'utf8'))
+    if (!Array.isArray(arr) || arr.length === 0) return null
+    return modal(arr.map((b) => b.patch))
+  } catch {
+    return null
+  }
+}
+
 function printSampleBuilds(builds, items) {
   const name = (id) => items[String(id)]?.name ?? `Item ${id}`
   const sample = [...builds].sort((a, b) => (b.sampleSize ?? 0) - (a.sampleSize ?? 0)).slice(0, 8)
@@ -478,6 +493,18 @@ async function main() {
   console.log('Loading Data Dragon…')
   const statik = await loadStatic()
   console.log(`  patch ${statik.patch}\n`)
+
+  // Per-patch gate: skip the whole run if the output was already built for the
+  // current patch, so a scheduled job is a cheap no-op until a new patch drops.
+  if (IF_STALE) {
+    const current = statik.patch.split('.').slice(0, 2).join('.')
+    const have = currentBuildsPatch()
+    if (have === current) {
+      console.log(`Already aggregated for patch ${current} — up to date, nothing to do.`)
+      return
+    }
+    console.log(`Patch ${current} (builds on ${have ?? 'none'}) — regenerating.\n`)
+  }
 
   // Choose match ids. A dry run prefers already-cached matches so it's instant
   // and needs no key; only if the cache is empty does it pull a small sample.

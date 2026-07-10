@@ -75,3 +75,38 @@ const child = spawn(process.execPath, [viteBin, ...viteArgs], {
   stdio: 'inherit',
 })
 child.on('exit', (code) => process.exit(code ?? 0))
+
+// Per-patch nudge: if a new patch has shipped since the aggregated builds were
+// generated, print a one-line heads-up so you can refresh them. Non-blocking and
+// best-effort — never delays or fails the dev server (offline just skips it).
+async function warnIfBuildsStale() {
+  try {
+    const versions = await (
+      await fetch('https://ddragon.leagueoflegends.com/api/versions.json')
+    ).json()
+    const current = versions[0].split('.').slice(0, 2).join('.')
+    const builds = JSON.parse(
+      readFileSync(resolve(process.cwd(), 'src/data/aggregatedBuilds.json'), 'utf8'),
+    )
+    if (!Array.isArray(builds) || builds.length === 0) return
+    const counts = new Map()
+    for (const b of builds) counts.set(b.patch, (counts.get(b.patch) ?? 0) + 1)
+    let have
+    let max = -1
+    for (const [patch, n] of counts) {
+      if (n > max) {
+        max = n
+        have = patch
+      }
+    }
+    if (have !== current) {
+      console.log(
+        `\n[dev] ⚠ New patch ${current} is out — aggregated builds are on ${have}.\n` +
+          `[dev]   Refresh with:  npm run aggregate -- --if-stale\n`,
+      )
+    }
+  } catch {
+    // offline, missing file, or unparseable — skip silently
+  }
+}
+warnIfBuildsStale()
