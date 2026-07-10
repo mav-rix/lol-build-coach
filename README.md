@@ -294,13 +294,23 @@ npm run aggregate:augments -- --region na1 --matches 500 # win-rates (dev key)
 - `augments:meta` pulls augment names/icons/rarity from Community Dragon (augments
   aren't in Data Dragon) → `src/data/augments.json`.
 - `aggregate:augments` tallies augment strength from Arena (queue 1700) matches by
-  **average team placement** (lower is better) and first-place rate →
-  `src/data/augmentStats.json`. It ranks by placement, not `win` — Arena sets
-  `win` unreliably for non-1st teams.
+  **average team placement** (1–8, lower is better) and first-place rate →
+  `src/data/augmentStats.json` (global) and `src/data/augmentChampStats.json`
+  (per-champion pairs that clear `--champ-min-games`, default 8). It ranks by
+  placement, not `win` — Arena sets `win` unreliably for non-1st teams.
 
 It's a **static** reference by design: the Live Client API doesn't expose which
 augments you're being offered, so this can't be a live "pick this now" helper.
-Both files lazy-load, so they stay out of the initial bundle. Re-run each patch.
+All files lazy-load, so they stay out of the initial bundle. Re-run each patch.
+
+**Overlay augment goals (ARAM Mayhem):** in augmented Abyss games the overlay
+adds an **Augment Goals** section — the highest win-rate augments *for your
+champion* (champion-specific rows bright, global fills dim), so when the pick
+screen appears you take one of these or reroll. Detected as map 12 with a
+`gameMode` other than plain `ARAM`; regular ARAM stays uncluttered. Preview it
+with `npm run overlay:shot -- --champ Nasus --mayhem` (or `?mock=1&mayhem=1` on
+`/overlay`). Win-rates come from Arena — the only mode whose Match-V5 data
+carries augments — as a proxy for Mayhem's shared augment pool.
 
 ## Roadmap status (per spec)
 

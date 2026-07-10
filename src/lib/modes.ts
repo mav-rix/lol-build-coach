@@ -50,3 +50,15 @@ export function gameModeFromLive(liveGameMode: string, mapNumber?: number): Game
   if (mapNumber === HOWLING_ABYSS_MAP) return 'ARAM'
   return liveGameMode.toUpperCase().includes('ARAM') ? 'ARAM' : 'SR'
 }
+
+/**
+ * Augmented Abyss variant (ARAM Mayhem and future augment events). Same map as
+ * ARAM, distinguished only by the event's gameMode string — plain ARAM reads
+ * exactly "ARAM", so any other string on map 12 is an event variant. Augment
+ * events are the ones that deviate; if a non-augment Abyss event ever appears,
+ * tighten this to match its string.
+ */
+export function isAugmentedAbyss(liveGameMode: string, mapNumber?: number): boolean {
+  if (gameModeFromLive(liveGameMode, mapNumber) !== 'ARAM') return false
+  return liveGameMode.toUpperCase() !== 'ARAM'
+}

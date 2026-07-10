@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { BuildNext } from '@/components/BuildNext'
 import { EnemyThreats } from '@/components/EnemyThreats'
 import { ItemIcon } from '@/components/ItemIcon'
 import { useLiveBuildState } from '@/hooks/useLiveBuildState'
 import { formatClock } from '@/lib/analysis'
+import { loadAugmentData, topAugmentsFor, type AugmentGoal } from '@/lib/augments'
 
 // Compact in-game overlay, rendered inside a transparent always-on-top Electron
 // window. u.gg-style: one flat, near-opaque dark panel, hairline-divided
@@ -92,6 +93,57 @@ function DragGrip({ className = '' }: { className?: string }) {
   )
 }
 
+// Highest win-rate augments for this champion (ARAM Mayhem). The API doesn't
+// expose the live augment offer, so these are GOALS: when the pick screen
+// appears, take one of these — otherwise reroll. Lazy-loads the augment data
+// only in augmented modes.
+function useAugmentGoals(championId: string | null, enabled: boolean): AugmentGoal[] {
+  const [goals, setGoals] = useState<AugmentGoal[]>([])
+  useEffect(() => {
+    if (!enabled || !championId) return
+    let active = true
+    loadAugmentData().then(() => {
+      if (active) setGoals(topAugmentsFor(championId, 5))
+    })
+    return () => {
+      active = false
+    }
+  }, [championId, enabled])
+  return enabled ? goals : []
+}
+
+const RARITY_DOT: Record<string, string> = {
+  prismatic: 'bg-violet-400',
+  gold: 'bg-amber-400',
+  silver: 'bg-zinc-400',
+}
+
+function AugmentGoals({ goals }: { goals: AugmentGoal[] }) {
+  return (
+    <div className="space-y-1">
+      {goals.map((g) => (
+        <div key={g.id} className="flex items-center gap-2" title={g.meta.desc}>
+          <img src={g.meta.icon} alt="" className="h-6 w-6 shrink-0 rounded bg-zinc-900" />
+          <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${RARITY_DOT[g.meta.rarity] ?? 'bg-zinc-500'}`} />
+          <span
+            className={`min-w-0 flex-1 truncate text-xs font-medium ${
+              g.source === 'champion' ? 'text-zinc-100' : 'text-zinc-400'
+            }`}
+          >
+            {g.meta.name}
+          </span>
+          <span className="shrink-0 font-mono text-[10px] tabular-nums text-zinc-500">
+            {g.avgPlacement.toFixed(1)} avg · {g.firstRate}%
+          </span>
+        </div>
+      ))}
+      <p className="pt-0.5 text-[10px] leading-tight text-zinc-600">
+        Pick these when offered — none in the offer? Reroll.
+      </p>
+    </div>
+  )
+}
+
 function Section({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div className="border-t border-zinc-800/70 px-2.5 py-2">
@@ -122,7 +174,10 @@ export default function Overlay() {
     scores,
     gameTime,
     csPerMin,
+    augmentMode,
   } = useLiveBuildState()
+
+  const augmentGoals = useAugmentGoals(championId, augmentMode)
 
   useOverlayDrag()
 
@@ -178,6 +233,12 @@ export default function Overlay() {
       {recommendations.length > 0 && (
         <Section label="Build Next">
           <BuildNext compact recommendations={recommendations} patch={patch} items={items} />
+        </Section>
+      )}
+
+      {augmentMode && augmentGoals.length > 0 && (
+        <Section label="Augment Goals">
+          <AugmentGoals goals={augmentGoals} />
         </Section>
       )}
 

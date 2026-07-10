@@ -5,7 +5,7 @@ import { useStaticData } from '@/hooks/useStaticData'
 import { useAppStore } from '@/store/useAppStore'
 import { findBuild } from '@/data/builds'
 import { MOCK_LIVE, mockLiveFor } from '@/data/mockLive'
-import { MODE_CONFIG, gameModeFromLive } from '@/lib/modes'
+import { MODE_CONFIG, gameModeFromLive, isAugmentedAbyss } from '@/lib/modes'
 import { analyzeThreats, championIdFromRaw } from '@/lib/threats'
 import { recommendPurchases } from '@/lib/builder'
 import { recommendByScore } from '@/lib/scoring'
@@ -68,6 +68,13 @@ export function useLiveBuildState() {
     ? gameModeFromLive(live.gameData.gameMode, live.gameData.mapNumber)
     : selectedMode
   const modeConfig = MODE_CONFIG[mode]
+  // Augmented Abyss (ARAM Mayhem): drives the overlay's augment goal panel.
+  // ?mayhem=1 forces it in mock mode for previews/screenshots.
+  const augmentMode = mock
+    ? (params?.has('mayhem') ?? false)
+    : live
+      ? isAugmentedAbyss(live.gameData.gameMode, live.gameData.mapNumber)
+      : false
   const build = championId ? findBuild(championId, selectedRole, mode) : null
   const items = staticData?.items ?? EMPTY_ITEMS
   const patch = staticData?.patch ?? ''
@@ -154,6 +161,7 @@ export function useLiveBuildState() {
     championId,
     mode,
     modeConfig,
+    augmentMode,
     build,
     plan,
     ownedIds,
