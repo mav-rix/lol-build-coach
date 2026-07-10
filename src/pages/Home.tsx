@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ChampionSelect } from '@/components/ChampionSelect'
 import { BuildPathDisplay } from '@/components/BuildPathDisplay'
 import { CounterPicks } from '@/components/CounterPicks'
+import { useAggregatedBuilds } from '@/hooks/useAggregatedBuilds'
 import { useStaticData } from '@/hooks/useStaticData'
 import { useChampSelect } from '@/hooks/useChampSelect'
 import { useAppStore } from '@/store/useAppStore'
@@ -31,6 +32,8 @@ function defaultRole(champion: DDragonChampion): Role {
 
 export default function Home() {
   const { data, isLoading, error, retry } = useStaticData()
+  // Load the lazy aggregated-builds chunk; re-renders when ready so findBuild picks it up.
+  useAggregatedBuilds()
   const {
     selectedChampionId,
     selectedRole,

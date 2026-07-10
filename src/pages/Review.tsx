@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ItemIcon } from '@/components/ItemIcon'
 import { useStaticData } from '@/hooks/useStaticData'
 import { findBuild } from '@/data/builds'
+import { loadAggregatedBuilds } from '@/data/aggregatedBuilds'
 import { DEMO_MATCH, DEMO_MATCH_ARAM } from '@/data/demoMatch'
 import { analyzeMatch, formatClock, formatDeviation } from '@/lib/analysis'
 import { MODE_CONFIG } from '@/lib/modes'
@@ -26,8 +27,11 @@ export default function Review() {
   const [match, setMatch] = useState<MatchInput | null>(null)
   const [analysis, setAnalysis] = useState<MatchAnalysis | null>(null)
 
-  const runAnalysis = (input: MatchInput) => {
+  const runAnalysis = async (input: MatchInput) => {
     if (!data) return
+    // findBuild reads aggregated builds from a lazily-loaded chunk; ensure it's
+    // in before we look up (memoized, so this is instant after the first call).
+    await loadAggregatedBuilds()
     const mode = input.mode ?? 'SR'
     const build = findBuild(input.championId, input.role ?? null, mode)
     if (!build) {

@@ -1,4 +1,5 @@
 import { useMemo, useRef } from 'react'
+import { useAggregatedBuilds } from '@/hooks/useAggregatedBuilds'
 import { useLiveGameData } from '@/hooks/useLiveGameData'
 import { useStaticData } from '@/hooks/useStaticData'
 import { useAppStore } from '@/store/useAppStore'
@@ -48,6 +49,9 @@ export function useLiveBuildState() {
   const mock = params?.has('mock') ?? false
   const mockChamp = params?.get('champ') ?? null
   const { data: staticData } = useStaticData()
+  // Ensures the lazy aggregated-builds chunk loads and re-renders when ready, so
+  // findBuild below can return an aggregated build once it's available.
+  useAggregatedBuilds()
   const poll = useLiveGameData()
   const { selectedChampionId, selectedRole, selectedMode } = useAppStore()
   const purchaseTimes = useRef(new Map<number, number>())
