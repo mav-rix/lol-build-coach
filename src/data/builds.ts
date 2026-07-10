@@ -1,4 +1,5 @@
-import type { BuildPath, GameMode } from '@/types/app'
+import { PREFER_AGGREGATED_SAMPLE, findAggregatedBuild } from '@/data/aggregatedBuilds'
+import type { BuildPath, GameMode, Role } from '@/types/app'
 
 // MVP seed data — the Week 1 champions from the spec. Item/rune IDs resolve
 // against live Data Dragon; unknown IDs (removed in a future patch) are
@@ -317,12 +318,25 @@ export const BUILD_PATHS: BuildPath[] = [
 
 export function findBuild(
   championId: string,
-  role: string | null | undefined,
+  role: Role | null | undefined,
   mode: GameMode = 'SR',
 ) {
+  // Priority: high-confidence aggregated build → hand-authored seed →
+  // low-confidence aggregated build → (caller falls back to the scoring engine
+  // when this returns null). A confident aggregated build (Phase 2: real
+  // current-patch data + comp-conditioned situationals) supersedes a seed;
+  // below the confidence bar the seed's hand-tuned situationals win.
+  const aggregated = findAggregatedBuild(championId, role, mode)
+  if (aggregated && (aggregated.sampleSize ?? 0) >= PREFER_AGGREGATED_SAMPLE) return aggregated
+
   const inMode = BUILD_PATHS.filter(
     (b) => b.championId === championId && b.mode === mode,
   )
-  if (mode === 'ARAM') return inMode[0] ?? null
-  return inMode.find((b) => b.role === role) ?? inMode[0] ?? null
+  const seed =
+    mode === 'ARAM'
+      ? (inMode[0] ?? null)
+      : (inMode.find((b) => b.role === role) ?? inMode[0] ?? null)
+  if (seed) return seed
+
+  return aggregated
 }
