@@ -23,15 +23,16 @@ import type { LivePlayer } from '@/types/live'
 // --- Curated effect sets (things Data Dragon tags don't capture) ---
 
 // Grievous Wounds (anti-heal). No shared tag, so listed explicitly.
-const GRIEVOUS_AD = new Set([3033, 6609, 3123]) // Mortal Reminder, Chempunk, Executioner's
-const GRIEVOUS_AP = new Set([3165, 3011, 3916]) // Morellonomicon, Chemtech, Oblivion Orb
+// (Exported for the game-plan engine's comp-swap rules.)
+export const GRIEVOUS_AD = new Set([3033, 6609, 3123]) // Mortal Reminder, Chempunk, Executioner's
+export const GRIEVOUS_AP = new Set([3165, 3011, 3916]) // Morellonomicon, Chemtech, Oblivion Orb
 const GRIEVOUS_TANK = new Set([3075, 6664]) // Thornmail, Hollow Radiance
 // Cheapest anti-heal component to rush when healing is urgent and gold is tight.
 const CHEAP_GRIEVOUS_AD = 3123 // Executioner's Calling (800g)
 const CHEAP_GRIEVOUS_AP = 3916 // Oblivion Orb (800g)
 
 // % max-health damage — excellent into stacked health/armor regardless of pen.
-const PERCENT_HP = new Set([3153, 3124, 6672, 3748, 3115]) // BotRK, Guinsoo, Kraken, Titanic, Nashor's
+export const PERCENT_HP = new Set([3153, 3124, 6672, 3748, 3115]) // BotRK, Guinsoo, Kraken, Titanic, Nashor's
 
 // Cleanse / heavy-CC relief actives (beyond the Tenacity tag).
 const CLEANSE = new Set([3140, 3139, 6035]) // QSS, Mercurial, Silvermere

@@ -7,15 +7,19 @@ import { findBuild } from '@/data/builds'
 import { MOCK_LIVE, mockLiveFor } from '@/data/mockLive'
 import { MODE_CONFIG, gameModeFromLive, isAugmentedAbyss } from '@/lib/modes'
 import { analyzeThreats, championIdFromRaw } from '@/lib/threats'
-import { recommendPurchases } from '@/lib/builder'
+import { buildGamePlan, type GamePlan } from '@/lib/gameplan'
+import type { BuildRec } from '@/lib/builder'
 import { recommendByScore } from '@/lib/scoring'
-import type { BuildPath } from '@/types/app'
+import type { BuildPath, Role } from '@/types/app'
+import type { DDragonChampion } from '@/types/ddragon'
 import type { DDragonItem } from '@/types/ddragon'
 import type { LiveAllGameData, LivePlayer } from '@/types/live'
 
 export interface PlanItem {
   itemId: number
   label: 'starter' | 'boots' | 'core'
+  /** Present when this slot was comp-swapped in by the game plan. */
+  swapReason?: string
 }
 
 // Stable empty fallback so memo deps don't churn before static data loads.
@@ -38,6 +42,36 @@ function buildPlan(build: BuildPath): PlanItem[] {
       : []),
     ...build.coreItems.map((id): PlanItem => ({ itemId: id, label: 'core' })),
   ]
+}
+
+// Build Next now simply walks the active plan: the next unowned items, with
+// affordability — no mid-game path churn. Swapped slots carry their comp reason.
+function recommendationsFromPlan(
+  plan: GamePlan,
+  ownedIds: Set<number>,
+  gold: number,
+  items: Parameters<typeof buildGamePlan>[3],
+): BuildRec[] {
+  const path = plan.active === 'comp' ? plan.compItems : plan.wrItems
+  const recs: BuildRec[] = []
+  for (const p of path) {
+    if (p.label === 'starter' || ownedIds.has(p.itemId)) continue
+    const item = items[String(p.itemId)]
+    if (!item) continue
+    const cost = item.gold.total
+    recs.push({
+      itemId: p.itemId,
+      name: item.name,
+      cost,
+      priority: recs.length === 0 ? 'recommended' : 'planned',
+      reason: p.swapReason ?? 'Next in your build path',
+      affordable: gold >= cost,
+      goldNeeded: Math.max(0, Math.ceil(cost - gold)),
+      source: p.swapReason ? 'situational' : 'core',
+    })
+    if (recs.length >= 4) break
+  }
+  return recs
 }
 
 const mockParams = () =>
@@ -68,6 +102,18 @@ export function useLiveBuildState() {
     ? gameModeFromLive(live.gameData.gameMode, live.gameData.mapNumber)
     : selectedMode
   const modeConfig = MODE_CONFIG[mode]
+  // In a live SR game, the player's ACTUAL position beats whatever role the
+  // Build page last had selected (which may be stale or never set). ARAM
+  // reports "NONE" and is roleless anyway.
+  const LIVE_POSITION_ROLE: Record<string, Role> = {
+    TOP: 'TOP',
+    JUNGLE: 'JUNGLE',
+    MIDDLE: 'MID',
+    BOTTOM: 'ADC',
+    UTILITY: 'SUPPORT',
+  }
+  const role: Role | null =
+    (self && LIVE_POSITION_ROLE[self.position]) ?? selectedRole
   // Augmented Abyss (ARAM Mayhem): drives the overlay's augment goal panel.
   // ?mayhem=1 forces it in mock mode for previews/screenshots.
   const augmentMode = mock
@@ -75,7 +121,7 @@ export function useLiveBuildState() {
     : live
       ? isAugmentedAbyss(live.gameData.gameMode, live.gameData.mapNumber)
       : false
-  const build = championId ? findBuild(championId, selectedRole, mode) : null
+  const build = championId ? findBuild(championId, role, mode) : null
   const items = staticData?.items ?? EMPTY_ITEMS
   const patch = staticData?.patch ?? ''
 
@@ -102,7 +148,41 @@ export function useLiveBuildState() {
   )
 
   const gold = live?.activePlayer.currentGold ?? 0
-  const plan = build ? buildPlan(build) : []
+  const champion =
+    championId && staticData ? (staticData.championsById[championId] ?? null) : null
+
+  // Enemy comp, stable per game: champions only (never live purchases), so the
+  // plan below is decided once — effectively at the loading screen. The memo is
+  // keyed on the comp signature, not the live object, so polls don't churn it.
+  const enemySignature =
+    live && self
+      ? live.allPlayers
+          .filter((p) => p.team !== self.team)
+          .map((p) => p.rawChampionName)
+          .sort()
+          .join(',')
+      : ''
+  const enemies = useMemo((): DDragonChampion[] => {
+    if (!live || !self || !staticData) return []
+    return live.allPlayers
+      .filter((p) => p.team !== self.team)
+      .map((p) => staticData.championsById[championIdFromRaw(p.rawChampionName)])
+      .filter((c): c is DDragonChampion => Boolean(c))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enemySignature, staticData])
+
+  // The two build categories — WR build and vs-comp build — computed once per
+  // (build, comp) and stable for the whole game.
+  const gamePlan = useMemo(
+    () => (build && staticData ? buildGamePlan(build, champion, enemies, staticData.items) : null),
+    [build, champion, enemies, staticData],
+  )
+
+  const plan: PlanItem[] = gamePlan
+    ? (gamePlan.active === 'comp' ? gamePlan.compItems : gamePlan.wrItems)
+    : build
+      ? buildPlan(build)
+      : []
   const nextPlanItem = plan.find(
     (p) => p.label !== 'starter' && !ownedIds.has(p.itemId),
   )
@@ -122,16 +202,12 @@ export function useLiveBuildState() {
   const minutes = gameTime / 60
   const csPerMin = scores && minutes > 0 ? scores.creepScore / minutes : 0
 
-  // Adaptive "build next" ranking driven by live enemy purchases. A seeded
-  // build path takes priority; otherwise the scoring engine computes one for
-  // any champion from item stats + live enemy state.
-  const champion =
-    championId && staticData ? (staticData.championsById[championId] ?? null) : null
+  // Build Next: walk the active game-plan path (comp-adjusted when the comp
+  // fired any signal, WR otherwise). Champions with no build at all fall back
+  // to the scoring engine.
   const usingScoredBuild = !build && champion !== null
   const recommendations = useMemo(() => {
-    if (build) {
-      return recommendPurchases(build, ownedIds, gold, threats, self, items, modeConfig, champion)
-    }
+    if (gamePlan) return recommendationsFromPlan(gamePlan, ownedIds, gold, items)
     if (champion) {
       return recommendByScore({
         champion,
@@ -141,17 +217,18 @@ export function useLiveBuildState() {
         threats,
         self,
         mapId: modeConfig.mapId,
-        role: selectedRole,
+        role,
       })
     }
     return []
-  }, [build, champion, ownedIds, gold, threats, self, items, modeConfig, selectedRole])
+  }, [gamePlan, champion, ownedIds, gold, threats, self, items, modeConfig, role])
   const topRec = recommendations[0] ?? null
 
   return {
     recommendations,
     topRec,
     usingScoredBuild,
+    gamePlan,
     live,
     isInGame,
     staticData,
