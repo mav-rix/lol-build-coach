@@ -7,8 +7,10 @@
 //
 //   RIOT_API_KEY=... node scripts/aggregate-augments.mjs --region na1 --matches 500
 //
-// Flags: --region, --matches, --per-player, --min-games, --out. Match cache is
-// shared with aggregate-builds.mjs under .cache/riot.
+// Flags: --region, --matches, --per-player, --min-games, --champ-min-games,
+// --top-per-champ, --out, --cached-only (re-tally the disk cache, zero API
+// calls — for threshold/ranking changes). Match cache is shared with
+// aggregate-builds.mjs under .cache/riot.
 
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'node:fs'
 import { join, dirname, resolve } from 'node:path'
@@ -23,6 +25,7 @@ try {
 const API_KEY = process.env.RIOT_API_KEY
 
 const args = parseArgs(process.argv.slice(2))
+const CACHED_ONLY = Boolean(args['cached-only']) // re-tally from disk, zero API calls
 const PLATFORM = (args.region ?? 'na1').toLowerCase()
 const MATCH_LIMIT = Number(args.matches ?? 500)
 const PER_PLAYER = Number(args['per-player'] ?? 20)
@@ -85,38 +88,51 @@ async function cachedMatch(id) {
 }
 
 async function main() {
-  if (!API_KEY) {
-    console.error('Missing RIOT_API_KEY (see .env.example).')
-    process.exit(1)
-  }
-  console.log(`Arena augments · ${PLATFORM} · up to ${MATCH_LIMIT} matches\n`)
-
-  console.log('Gathering players…')
-  const puuids = new Set()
-  for (const ep of [
-    '/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5',
-    '/lol/league/v4/grandmasterleagues/by-queue/RANKED_SOLO_5x5',
-    '/lol/league/v4/masterleagues/by-queue/RANKED_SOLO_5x5',
-  ]) {
-    const list = await riotGet(platformHost, ep)
-    for (const e of list?.entries ?? []) if (e.puuid) puuids.add(e.puuid)
-  }
-  console.log(`  ${puuids.size} players`)
-
-  console.log('Gathering Arena match ids…')
-  const ids = new Set()
-  for (const puuid of [...puuids].sort(() => Math.random() - 0.5)) {
-    if (ids.size >= MATCH_LIMIT) break
-    const list = await riotGet(
-      regionHost,
-      `/lol/match/v5/matches/by-puuid/${puuid}/ids?queue=${QUEUE}&count=${PER_PLAYER}`,
+  let ids
+  if (CACHED_ONLY) {
+    // Re-tally what's on disk — no key, no API calls. Useful after changing
+    // thresholds/ranking without re-fetching anything.
+    const { readdirSync } = await import('node:fs')
+    ids = new Set(
+      readdirSync(CACHE)
+        .filter((f) => f.endsWith('.match.json'))
+        .map((f) => f.slice(0, -'.match.json'.length)),
     )
-    for (const id of list ?? []) {
-      ids.add(id)
-      if (ids.size >= MATCH_LIMIT) break
+    console.log(`Arena augments · re-tallying ${ids.size} cached matches (no Riot calls)\n`)
+  } else {
+    if (!API_KEY) {
+      console.error('Missing RIOT_API_KEY (see .env.example).')
+      process.exit(1)
     }
+    console.log(`Arena augments · ${PLATFORM} · up to ${MATCH_LIMIT} matches\n`)
+
+    console.log('Gathering players…')
+    const puuids = new Set()
+    for (const ep of [
+      '/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5',
+      '/lol/league/v4/grandmasterleagues/by-queue/RANKED_SOLO_5x5',
+      '/lol/league/v4/masterleagues/by-queue/RANKED_SOLO_5x5',
+    ]) {
+      const list = await riotGet(platformHost, ep)
+      for (const e of list?.entries ?? []) if (e.puuid) puuids.add(e.puuid)
+    }
+    console.log(`  ${puuids.size} players`)
+
+    console.log('Gathering Arena match ids…')
+    ids = new Set()
+    for (const puuid of [...puuids].sort(() => Math.random() - 0.5)) {
+      if (ids.size >= MATCH_LIMIT) break
+      const list = await riotGet(
+        regionHost,
+        `/lol/match/v5/matches/by-puuid/${puuid}/ids?queue=${QUEUE}&count=${PER_PLAYER}`,
+      )
+      for (const id of list ?? []) {
+        ids.add(id)
+        if (ids.size >= MATCH_LIMIT) break
+      }
+    }
+    console.log(`  ${ids.size} Arena matches\n`)
   }
-  console.log(`  ${ids.size} Arena matches\n`)
 
   // Champion-name normalizer (Match-V5 championName → DDragon id, e.g. FiddleSticks quirks).
   const versions = await (await fetch('https://ddragon.leagueoflegends.com/api/versions.json')).json()
@@ -178,6 +194,11 @@ async function main() {
 
   // Per-champion top augments: only pairs with a real sample survive; the app
   // blends these with the global list, so thin champions degrade gracefully.
+  // Ranked by a SHRUNK placement — thin samples are pulled toward the 4.5 mean
+  // (8 teams) so an 8-game fluke can't outrank a solid 40-game row; the raw
+  // avgPlacement is still what's stored and displayed.
+  const MEAN_PLACEMENT = 4.5
+  const SHRINK_K = 15 // pseudo-games of prior
   const byChamp = {}
   for (const [key, t] of champTally) {
     const [champ, augIdStr] = key.split('|')
@@ -188,10 +209,14 @@ async function main() {
       games: t.games,
       avgPlacement: Math.round((t.placementSum / t.games) * 100) / 100,
       firstRate: Math.round((1000 * t.firsts) / t.games) / 10,
+      _shrunk: (t.placementSum + SHRINK_K * MEAN_PLACEMENT) / (t.games + SHRINK_K),
     })
   }
   for (const champ of Object.keys(byChamp)) {
-    byChamp[champ] = byChamp[champ].sort((a, b) => a.avgPlacement - b.avgPlacement).slice(0, TOP_PER_CHAMP)
+    byChamp[champ] = byChamp[champ]
+      .sort((a, b) => a._shrunk - b._shrunk)
+      .slice(0, TOP_PER_CHAMP)
+      .map(({ _shrunk, ...row }) => row)
   }
   const champOut = join(ROOT, 'src/data/augmentChampStats.json')
   writeFileSync(champOut, JSON.stringify(byChamp, null, 1) + '\n')
