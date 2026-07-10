@@ -163,6 +163,9 @@ a separate OS window drawn above the game, never injected into it.
   `Ctrl+Shift+H` hide/show, `Ctrl+Shift+Q` quit.
 - League must be in **Borderless** or Windowed mode (Settings → Video) —
   exclusive Fullscreen draws over everything.
+- Preview it without a game: `npm run overlay:shot -- --champ Ahri` renders
+  `/overlay?mock=1` with the running dev server and writes a PNG (uses the
+  Windows-side Edge/Chrome headless; WSL + Windows only).
 
 The overlay (and the `/live` page) shows **enemy items and counter-itemization
 reads** driven by what enemies actually bought — armor stacking lights up % pen,
