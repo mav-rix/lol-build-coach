@@ -29,3 +29,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated augment preview (scripts/build-augments-preview.mjs)
+augments-preview.html

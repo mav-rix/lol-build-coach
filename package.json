@@ -12,7 +12,8 @@
     "aggregate:augments": "node scripts/aggregate-augments.mjs",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "augments:preview": "node scripts/build-augments-preview.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
