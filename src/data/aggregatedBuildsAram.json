@@ -1,0 +1,8985 @@
+[
+  {
+    "id": 20145,
+    "championId": "Aatrox",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3133
+    ],
+    "coreItems": [
+      6610,
+      6692,
+      6333
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8473,
+      8453
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 65 challenger/grandmaster/master games on patch 15.20 · 32% win rate."
+    ],
+    "winRate": 32.3,
+    "sampleSize": 65
+  },
+  {
+    "id": 20069,
+    "championId": "Ahri",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      3118,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (43% pick vs 22% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 114 challenger/grandmaster/master games on patch 14.24 · 54% win rate."
+    ],
+    "winRate": 53.5,
+    "sampleSize": 114
+  },
+  {
+    "id": 20009,
+    "championId": "Akali",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.13",
+    "starterItems": [
+      3145
+    ],
+    "coreItems": [
+      3152,
+      4645,
+      3100
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (38% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (30% pick vs 17% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8112,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 54 challenger/grandmaster/master games on patch 15.13 · 39% win rate."
+    ],
+    "winRate": 38.9,
+    "sampleSize": 54
+  },
+  {
+    "id": 20085,
+    "championId": "Akshan",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3144,
+      6690
+    ],
+    "coreItems": [
+      6676,
+      3153,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3087,
+        "condition": "enemy_has_healing",
+        "description": "Statikk Shiv — vs healing (80% pick vs 54% baseline)"
+      },
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (46% pick vs 24% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8005,
+    "primaryRuneIds": [
+      8009,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 46 challenger/grandmaster/master games on patch 15.20 · 48% win rate."
+    ],
+    "winRate": 47.8,
+    "sampleSize": 46
+  },
+  {
+    "id": 20134,
+    "championId": "Alistar",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3065,
+        "condition": "enemy_has_healing",
+        "description": "Spirit Visage — vs healing (33% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 3143,
+        "condition": "enemy_heavy_ad",
+        "description": "Randuin's Omen — vs AD (25% pick vs 9% baseline)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (33% pick vs 19% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8473,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 54 challenger/grandmaster/master games on patch 15.19 · 44% win rate."
+    ],
+    "winRate": 44.4,
+    "sampleSize": 54
+  },
+  {
+    "id": 20004,
+    "championId": "Ambessa",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      1036,
+      3133
+    ],
+    "coreItems": [
+      6692,
+      3161,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6610,
+        "condition": "enemy_heavy_ap",
+        "description": "Sundered Sky — vs AP (47% pick vs 33% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3047,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8143,
+      8135
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 42 challenger/grandmaster/master games on patch 14.24 · 57% win rate."
+    ],
+    "winRate": 57.1,
+    "sampleSize": 42
+  },
+  {
+    "id": 20153,
+    "championId": "Amumu",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3070,
+      6660
+    ],
+    "coreItems": [
+      3068,
+      3119,
+      2502
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3118,
+        "condition": "enemy_heavy_ad",
+        "description": "Malignance — vs AD (29% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 6664,
+        "condition": "enemy_heavy_ap",
+        "description": "Hollow Radiance — vs AP (32% pick vs 16% baseline)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "enemy_has_healing",
+        "description": "Thornmail — vs healing (42% pick vs 29% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8126,
+      8106
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 51 challenger/grandmaster/master games on patch 15.20 · 61% win rate."
+    ],
+    "winRate": 60.8,
+    "sampleSize": 51
+  },
+  {
+    "id": 20077,
+    "championId": "Anivia",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1026,
+      3070
+    ],
+    "coreItems": [
+      6657,
+      3003,
+      6653
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 72 challenger/grandmaster/master games on patch 16.13 · 58% win rate."
+    ],
+    "winRate": 58.3,
+    "sampleSize": 72
+  },
+  {
+    "id": 20143,
+    "championId": "Annie",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      6653,
+      4645
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8236,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 57 challenger/grandmaster/master games on patch 15.19 · 54% win rate."
+    ],
+    "winRate": 54.4,
+    "sampleSize": 57
+  },
+  {
+    "id": 20093,
+    "championId": "Aphelios",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      6676,
+      3031,
+      3085
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3006,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 58 challenger/grandmaster/master games on patch 15.19 · 41% win rate."
+    ],
+    "winRate": 41.4,
+    "sampleSize": 58
+  },
+  {
+    "id": 20010,
+    "championId": "Ashe",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      3032,
+      3153,
+      3085
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6672,
+        "condition": "enemy_has_tanks",
+        "description": "Kraken Slayer — vs tanks (33% pick vs 19% baseline)"
+      },
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (33% pick vs 20% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3158
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8300,
+    "secondaryRuneIds": [
+      8410,
+      8345
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 97 challenger/grandmaster/master games on patch 15.19 · 51% win rate."
+    ],
+    "winRate": 50.5,
+    "sampleSize": 97
+  },
+  {
+    "id": 20055,
+    "championId": "AurelionSol",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2503,
+      3116,
+      6653
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3089,
+        "condition": "enemy_has_tanks",
+        "description": "Rabadon's Deathcap — vs tanks (33% pick vs 21% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8233,
+      8236
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 71 challenger/grandmaster/master games on patch 14.24 · 52% win rate."
+    ],
+    "winRate": 52.1,
+    "sampleSize": 71
+  },
+  {
+    "id": 20032,
+    "championId": "Aurora",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (45% pick vs 23% baseline)"
+      },
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (37% pick vs 23% baseline)"
+      },
+      {
+        "itemId": 3118,
+        "condition": "enemy_has_tanks",
+        "description": "Malignance — vs tanks (45% pick vs 32% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (27% pick vs 15% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8112,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 53 challenger/grandmaster/master games on patch 15.20 · 58% win rate."
+    ],
+    "winRate": 58.5,
+    "sampleSize": 53
+  },
+  {
+    "id": 20038,
+    "championId": "Azir",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1043,
+      1052
+    ],
+    "coreItems": [
+      3115,
+      6653,
+      3116
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3006
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "W",
+    "notes": [
+      "Aggregated from 55 challenger/grandmaster/master games on patch 15.20 · 44% win rate."
+    ],
+    "winRate": 43.6,
+    "sampleSize": 55
+  },
+  {
+    "id": 20133,
+    "championId": "Bard",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      3100,
+      3094
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3124,
+        "condition": "enemy_has_tanks",
+        "description": "Guinsoo's Rageblade — vs tanks (33% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (33% pick vs 18% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3006
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8112,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 51 challenger/grandmaster/master games on patch 15.19 · 45% win rate."
+    ],
+    "winRate": 45.1,
+    "sampleSize": 51
+  },
+  {
+    "id": 20155,
+    "championId": "Belveth",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.18",
+    "starterItems": [
+      3051
+    ],
+    "coreItems": [
+      6672,
+      3153,
+      3091
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3065,
+        "condition": "enemy_heavy_ad",
+        "description": "Spirit Visage — vs AD (33% pick vs 15% baseline)"
+      },
+      {
+        "itemId": 3084,
+        "condition": "enemy_heavy_ad",
+        "description": "Heartsteel — vs AD (33% pick vs 15% baseline)"
+      },
+      {
+        "itemId": 6333,
+        "condition": "enemy_has_healing",
+        "description": "Death's Dance — vs healing (63% pick vs 46% baseline)"
+      },
+      {
+        "itemId": 6631,
+        "condition": "enemy_has_healing",
+        "description": "Stridebreaker — vs healing (25% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 3748,
+        "condition": "enemy_has_healing",
+        "description": "Titanic Hydra — vs healing (25% pick vs 12% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3006
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 26 challenger/grandmaster/master games on patch 15.18 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 26
+  },
+  {
+    "id": 20111,
+    "championId": "Blitzcrank",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      3083
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (39% pick vs 25% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3158
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      8009
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 103 challenger/grandmaster/master games on patch 15.19 · 47% win rate."
+    ],
+    "winRate": 46.6,
+    "sampleSize": 103
+  },
+  {
+    "id": 20044,
+    "championId": "Brand",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2503,
+      6653,
+      3116
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 98 challenger/grandmaster/master games on patch 16.13 · 46% win rate."
+    ],
+    "winRate": 45.9,
+    "sampleSize": 98
+  },
+  {
+    "id": 20008,
+    "championId": "Braum",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.16",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3083,
+        "condition": "enemy_has_tanks",
+        "description": "Warmog's Armor — vs tanks (44% pick vs 30% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8465,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 44 challenger/grandmaster/master games on patch 15.16 · 57% win rate."
+    ],
+    "winRate": 56.8,
+    "sampleSize": 44
+  },
+  {
+    "id": 20071,
+    "championId": "Briar",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      6692,
+      6333
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8453,
+      8444
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 22 challenger/grandmaster/master games on patch 15.19 · 59% win rate."
+    ],
+    "winRate": 59.1,
+    "sampleSize": 22
+  },
+  {
+    "id": 20052,
+    "championId": "Caitlyn",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      6676,
+      3031,
+      3094
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3032,
+        "condition": "enemy_heavy_ad",
+        "description": "Yun Tal Wildarrows — vs AD (48% pick vs 36% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3158
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8005,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 122 challenger/grandmaster/master games on patch 15.20 · 48% win rate."
+    ],
+    "winRate": 48.4,
+    "sampleSize": 122
+  },
+  {
+    "id": 20108,
+    "championId": "Camille",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1036,
+      3057
+    ],
+    "coreItems": [
+      3078,
+      6610,
+      3074
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6333,
+        "condition": "enemy_has_healing",
+        "description": "Death's Dance — vs healing (55% pick vs 29% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8401,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 28 challenger/grandmaster/master games on patch 16.13 · 68% win rate."
+    ],
+    "winRate": 67.9,
+    "sampleSize": 28
+  },
+  {
+    "id": 20110,
+    "championId": "Cassiopeia",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1026,
+      3070
+    ],
+    "coreItems": [
+      6657,
+      3003,
+      6653
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3165,
+        "condition": "enemy_heavy_ad",
+        "description": "Morellonomicon — vs AD (29% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_heavy_ad",
+        "description": "Void Staff — vs AD (29% pick vs 16% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3008
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      8009,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 43 challenger/grandmaster/master games on patch 16.13 · 49% win rate."
+    ],
+    "winRate": 48.8,
+    "sampleSize": 43
+  },
+  {
+    "id": 20020,
+    "championId": "Chogath",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1028,
+      3801
+    ],
+    "coreItems": [
+      3084,
+      3083,
+      2502
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8126,
+      8106
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 103 challenger/grandmaster/master games on patch 15.19 · 44% win rate."
+    ],
+    "winRate": 43.7,
+    "sampleSize": 103
+  },
+  {
+    "id": 20089,
+    "championId": "Corki",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.24",
+    "starterItems": [
+      3057,
+      3070
+    ],
+    "coreItems": [
+      3078,
+      3004,
+      6676
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3031,
+        "condition": "enemy_heavy_ad",
+        "description": "Infinity Edge — vs AD (62% pick vs 44% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3006
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 63 challenger/grandmaster/master games on patch 15.24 · 48% win rate."
+    ],
+    "winRate": 47.6,
+    "sampleSize": 63
+  },
+  {
+    "id": 20047,
+    "championId": "Darius",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      3044
+    ],
+    "coreItems": [
+      6631,
+      6610,
+      3053
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3078,
+        "condition": "enemy_heavy_ad",
+        "description": "Trinity Force — vs AD (38% pick vs 25% baseline)"
+      },
+      {
+        "itemId": 6333,
+        "condition": "enemy_heavy_ad",
+        "description": "Death's Dance — vs AD (38% pick vs 25% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 44 challenger/grandmaster/master games on patch 14.24 · 61% win rate."
+    ],
+    "winRate": 61.4,
+    "sampleSize": 44
+  },
+  {
+    "id": 20019,
+    "championId": "Diana",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      4645,
+      3157
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_heavy_ad",
+        "description": "Liandry's Torment — vs AD (25% pick vs 11% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8143,
+      8135
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 56 challenger/grandmaster/master games on patch 15.19 · 41% win rate."
+    ],
+    "winRate": 41.1,
+    "sampleSize": 56
+  },
+  {
+    "id": 20092,
+    "championId": "Draven",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.24",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      6676,
+      3031,
+      3072
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3094,
+        "condition": "enemy_has_tanks",
+        "description": "Rapid Firecannon — vs tanks (50% pick vs 27% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 49 challenger/grandmaster/master games on patch 15.24 · 47% win rate."
+    ],
+    "winRate": 46.9,
+    "sampleSize": 49
+  },
+  {
+    "id": 20119,
+    "championId": "DrMundo",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      3083,
+      3065
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8446,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 42 challenger/grandmaster/master games on patch 15.20 · 45% win rate."
+    ],
+    "winRate": 45.2,
+    "sampleSize": 42
+  },
+  {
+    "id": 20138,
+    "championId": "Ekko",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      3145
+    ],
+    "coreItems": [
+      3152,
+      3100,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 2510,
+        "condition": "enemy_heavy_ap",
+        "description": "Dusk and Dawn — vs AP (42% pick vs 18% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (37% pick vs 20% baseline)"
+      },
+      {
+        "itemId": 6655,
+        "condition": "enemy_heavy_ad",
+        "description": "Luden's Echo — vs AD (37% pick vs 20% baseline)"
+      },
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_cc",
+        "description": "Zhonya's Hourglass — vs CC (33% pick vs 21% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8236,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 61 challenger/grandmaster/master games on patch 14.24 · 43% win rate."
+    ],
+    "winRate": 42.6,
+    "sampleSize": 61
+  },
+  {
+    "id": 20135,
+    "championId": "Elise",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.10",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_healing",
+        "description": "Liandry's Torment — vs healing (38% pick vs 21% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 19 challenger/grandmaster/master games on patch 15.10 · 42% win rate."
+    ],
+    "winRate": 42.1,
+    "sampleSize": 19
+  },
+  {
+    "id": 20013,
+    "championId": "Evelynn",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.21",
+    "starterItems": [
+      3145
+    ],
+    "coreItems": [
+      3100,
+      3089,
+      4645
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 12 challenger/grandmaster/master games on patch 14.21 · 67% win rate."
+    ],
+    "winRate": 66.7,
+    "sampleSize": 12
+  },
+  {
+    "id": 20051,
+    "championId": "Ezreal",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3057,
+      3070
+    ],
+    "coreItems": [
+      3078,
+      3004,
+      3161
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (32% pick vs 19% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 132 challenger/grandmaster/master games on patch 15.20 · 51% win rate."
+    ],
+    "winRate": 50.8,
+    "sampleSize": 132
+  },
+  {
+    "id": 20087,
+    "championId": "Fiddlesticks",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      6653,
+      3157
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8236,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 55 challenger/grandmaster/master games on patch 15.19 · 53% win rate."
+    ],
+    "winRate": 52.7,
+    "sampleSize": 55
+  },
+  {
+    "id": 20139,
+    "championId": "Fiora",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      3077
+    ],
+    "coreItems": [
+      3074,
+      3078,
+      6333
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 25 challenger/grandmaster/master games on patch 14.24 · 40% win rate."
+    ],
+    "winRate": 40,
+    "sampleSize": 25
+  },
+  {
+    "id": 20094,
+    "championId": "Fizz",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      3100,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3084,
+        "condition": "enemy_heavy_ad",
+        "description": "Heartsteel — vs AD (46% pick vs 23% baseline)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "enemy_heavy_ad",
+        "description": "Rabadon's Deathcap — vs AD (38% pick vs 20% baseline)"
+      },
+      {
+        "itemId": 2502,
+        "condition": "enemy_has_tanks",
+        "description": "Unending Despair — vs tanks (33% pick vs 15% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_healing",
+        "description": "Void Staff — vs healing (29% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8112,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 40 challenger/grandmaster/master games on patch 15.19 · 40% win rate."
+    ],
+    "winRate": 40,
+    "sampleSize": 40
+  },
+  {
+    "id": 20144,
+    "championId": "Galio",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      6664,
+      3119,
+      3075
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 56 challenger/grandmaster/master games on patch 15.20 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 56
+  },
+  {
+    "id": 20067,
+    "championId": "Gangplank",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1036,
+      3057
+    ],
+    "coreItems": [
+      3078,
+      6676,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3118,
+        "condition": "enemy_heavy_ad",
+        "description": "Malignance — vs AD (33% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 6653,
+        "condition": "enemy_heavy_ad",
+        "description": "Liandry's Torment — vs AD (29% pick vs 11% baseline)"
+      },
+      {
+        "itemId": 3033,
+        "condition": "enemy_has_tanks",
+        "description": "Mortal Reminder — vs tanks (29% pick vs 14% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 71 challenger/grandmaster/master games on patch 15.19 · 61% win rate."
+    ],
+    "winRate": 60.6,
+    "sampleSize": 71
+  },
+  {
+    "id": 20168,
+    "championId": "Garen",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3044
+    ],
+    "coreItems": [
+      6631,
+      3046,
+      3071
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8451
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 50 challenger/grandmaster/master games on patch 15.20 · 58% win rate."
+    ],
+    "winRate": 58,
+    "sampleSize": 50
+  },
+  {
+    "id": 20045,
+    "championId": "Gnar",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.13",
+    "starterItems": [
+      3044
+    ],
+    "coreItems": [
+      3084,
+      3078,
+      3071
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3053,
+        "condition": "enemy_heavy_ad",
+        "description": "Sterak's Gage — vs AD (38% pick vs 23% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 44 challenger/grandmaster/master games on patch 15.13 · 59% win rate."
+    ],
+    "winRate": 59.1,
+    "sampleSize": 44
+  },
+  {
+    "id": 20018,
+    "championId": "Gragas",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6657,
+      6655,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3119,
+        "condition": "enemy_has_tanks",
+        "description": "Winter's Approach — vs tanks (50% pick vs 28% baseline)"
+      },
+      {
+        "itemId": 4629,
+        "condition": "enemy_has_tanks",
+        "description": "Cosmic Drive — vs tanks (36% pick vs 22% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 60 challenger/grandmaster/master games on patch 15.20 · 53% win rate."
+    ],
+    "winRate": 53.3,
+    "sampleSize": 60
+  },
+  {
+    "id": 20091,
+    "championId": "Graves",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      6676,
+      3031,
+      3072
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_heavy_ad",
+        "description": "Lord Dominik's Regards — vs AD (48% pick vs 35% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3006
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 74 challenger/grandmaster/master games on patch 16.13 · 42% win rate."
+    ],
+    "winRate": 41.9,
+    "sampleSize": 74
+  },
+  {
+    "id": 20147,
+    "championId": "Gwen",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3147
+    ],
+    "coreItems": [
+      4633,
+      3115,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3065,
+        "condition": "enemy_has_tanks",
+        "description": "Spirit Visage — vs tanks (43% pick vs 19% baseline)"
+      },
+      {
+        "itemId": 3157,
+        "condition": "enemy_has_healing",
+        "description": "Zhonya's Hourglass — vs healing (33% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3020
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      8009,
+      9104,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8473,
+      8242
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 31 challenger/grandmaster/master games on patch 16.13 · 61% win rate."
+    ],
+    "winRate": 61.3,
+    "sampleSize": 31
+  },
+  {
+    "id": 20170,
+    "championId": "Hecarim",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.7",
+    "starterItems": [
+      1036,
+      1036,
+      3070
+    ],
+    "coreItems": [
+      6610,
+      3004,
+      3161
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8234,
+      8275
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 14 challenger/grandmaster/master games on patch 16.7 · 79% win rate."
+    ],
+    "winRate": 78.6,
+    "sampleSize": 14
+  },
+  {
+    "id": 20164,
+    "championId": "Heimerdinger",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2503,
+      6653,
+      3116
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3118,
+        "condition": "enemy_has_tanks",
+        "description": "Malignance — vs tanks (40% pick vs 21% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (40% pick vs 22% baseline)"
+      },
+      {
+        "itemId": 3003,
+        "condition": "enemy_has_healing",
+        "description": "Archangel's Staff — vs healing (32% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "enemy_heavy_ad",
+        "description": "Rabadon's Deathcap — vs AD (30% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 4645,
+        "condition": "enemy_heavy_ad",
+        "description": "Shadowflame — vs AD (30% pick vs 17% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8229,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 58 challenger/grandmaster/master games on patch 15.19 · 55% win rate."
+    ],
+    "winRate": 55.2,
+    "sampleSize": 58
+  },
+  {
+    "id": 20068,
+    "championId": "Hwei",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2503,
+      6653,
+      3089
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 70 challenger/grandmaster/master games on patch 15.20 · 67% win rate."
+    ],
+    "winRate": 67.1,
+    "sampleSize": 70
+  },
+  {
+    "id": 20140,
+    "championId": "Illaoi",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      3065,
+      3053
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6333,
+        "condition": "enemy_has_tanks",
+        "description": "Death's Dance — vs tanks (56% pick vs 28% baseline)"
+      },
+      {
+        "itemId": 6662,
+        "condition": "enemy_heavy_ad",
+        "description": "Iceborn Gauntlet — vs AD (64% pick vs 45% baseline)"
+      },
+      {
+        "itemId": 3071,
+        "condition": "enemy_has_tanks",
+        "description": "Black Cleaver — vs tanks (33% pick vs 17% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8446,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 29 challenger/grandmaster/master games on patch 15.19 · 31% win rate."
+    ],
+    "winRate": 31,
+    "sampleSize": 29
+  },
+  {
+    "id": 20156,
+    "championId": "Irelia",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      1053
+    ],
+    "coreItems": [
+      3153,
+      6610,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3053,
+        "condition": "enemy_heavy_ad",
+        "description": "Sterak's Gage — vs AD (31% pick vs 18% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9103,
+      8299
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8143,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 40 challenger/grandmaster/master games on patch 14.24 · 63% win rate."
+    ],
+    "winRate": 62.5,
+    "sampleSize": 40
+  },
+  {
+    "id": 20088,
+    "championId": "Ivern",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.3",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      6617,
+      3107,
+      6621
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6616,
+        "condition": "enemy_heavy_ap",
+        "description": "Staff of Flowing Water — vs AP (50% pick vs 30% baseline)"
+      },
+      {
+        "itemId": 3118,
+        "condition": "enemy_heavy_ap",
+        "description": "Malignance — vs AP (40% pick vs 25% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3020
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8236
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8463,
+      8453
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 20 challenger/grandmaster/master games on patch 16.3 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 20
+  },
+  {
+    "id": 20023,
+    "championId": "Janna",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      6617,
+      4005,
+      3107
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3020
+    ],
+    "primaryPathId": 8300,
+    "keystoneId": 8351,
+    "primaryRuneIds": [
+      8304,
+      8345,
+      8347
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8463,
+      8453
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 63 challenger/grandmaster/master games on patch 14.24 · 54% win rate."
+    ],
+    "winRate": 54,
+    "sampleSize": 63
+  },
+  {
+    "id": 20120,
+    "championId": "JarvanIV",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      6692,
+      3053
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3161,
+        "condition": "enemy_heavy_ad",
+        "description": "Spear of Shojin — vs AD (31% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 6696,
+        "condition": "enemy_has_healing",
+        "description": "Axiom Arc — vs healing (32% pick vs 16% baseline)"
+      },
+      {
+        "itemId": 126697,
+        "condition": "enemy_has_healing",
+        "description": "Hubris — vs healing (37% pick vs 21% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8143,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 57 challenger/grandmaster/master games on patch 15.20 · 53% win rate."
+    ],
+    "winRate": 52.6,
+    "sampleSize": 57
+  },
+  {
+    "id": 20011,
+    "championId": "Jax",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.13",
+    "starterItems": [
+      3044
+    ],
+    "coreItems": [
+      3078,
+      6610,
+      6333
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8242
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 52 challenger/grandmaster/master games on patch 15.13 · 42% win rate."
+    ],
+    "winRate": 42.3,
+    "sampleSize": 52
+  },
+  {
+    "id": 20132,
+    "championId": "Jayce",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3070,
+      3134
+    ],
+    "coreItems": [
+      126697,
+      3004,
+      6694
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 69 challenger/grandmaster/master games on patch 15.20 · 46% win rate."
+    ],
+    "winRate": 46.4,
+    "sampleSize": 69
+  },
+  {
+    "id": 20065,
+    "championId": "Jhin",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      6676,
+      3031,
+      3094
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3033,
+        "condition": "enemy_has_tanks",
+        "description": "Mortal Reminder — vs tanks (36% pick vs 20% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3009,
+      3006
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9103,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 119 challenger/grandmaster/master games on patch 16.13 · 50% win rate."
+    ],
+    "winRate": 50.4,
+    "sampleSize": 119
+  },
+  {
+    "id": 20017,
+    "championId": "Jinx",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      3032,
+      3085,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3033,
+        "condition": "enemy_has_healing",
+        "description": "Mortal Reminder — vs healing (35% pick vs 16% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3158
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 111 challenger/grandmaster/master games on patch 16.13 · 41% win rate."
+    ],
+    "winRate": 41.4,
+    "sampleSize": 111
+  },
+  {
+    "id": 20036,
+    "championId": "Kaisa",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      3124,
+      3115
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (36% pick vs 22% baseline)"
+      },
+      {
+        "itemId": 3004,
+        "condition": "enemy_has_healing",
+        "description": "Manamune — vs healing (39% pick vs 27% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3020
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 113 challenger/grandmaster/master games on patch 15.20 · 49% win rate."
+    ],
+    "winRate": 48.7,
+    "sampleSize": 113
+  },
+  {
+    "id": 20072,
+    "championId": "Kalista",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1042
+    ],
+    "coreItems": [
+      3153,
+      3124,
+      3085
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 52 challenger/grandmaster/master games on patch 15.19 · 46% win rate."
+    ],
+    "winRate": 46.2,
+    "sampleSize": 52
+  },
+  {
+    "id": 20002,
+    "championId": "Karma",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      6655,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (35% pick vs 20% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 92 challenger/grandmaster/master games on patch 16.13 · 41% win rate."
+    ],
+    "winRate": 41.3,
+    "sampleSize": 92
+  },
+  {
+    "id": 20040,
+    "championId": "Karthus",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      6653,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3116,
+        "condition": "enemy_heavy_ad",
+        "description": "Rylai's Crystal Scepter — vs AD (40% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "enemy_heavy_ad",
+        "description": "Rabadon's Deathcap — vs AD (60% pick vs 46% baseline)"
+      },
+      {
+        "itemId": 2503,
+        "condition": "enemy_has_tanks",
+        "description": "Blackfire Torch — vs tanks (58% pick vs 46% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8236,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 37 challenger/grandmaster/master games on patch 15.20 · 65% win rate."
+    ],
+    "winRate": 64.9,
+    "sampleSize": 37
+  },
+  {
+    "id": 20113,
+    "championId": "Kassadin",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.2",
+    "starterItems": [
+      1026,
+      3070
+    ],
+    "coreItems": [
+      6657,
+      3003,
+      3118
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3100,
+        "condition": "enemy_heavy_ap",
+        "description": "Lich Bane — vs AP (55% pick vs 30% baseline)"
+      },
+      {
+        "itemId": 3110,
+        "condition": "enemy_heavy_ad",
+        "description": "Frozen Heart — vs AD (57% pick vs 35% baseline)"
+      },
+      {
+        "itemId": 3119,
+        "condition": "enemy_heavy_ad",
+        "description": "Winter's Approach — vs AD (43% pick vs 26% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_healing",
+        "description": "Void Staff — vs healing (29% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 23 challenger/grandmaster/master games on patch 16.2 · 48% win rate."
+    ],
+    "winRate": 47.8,
+    "sampleSize": 23
+  },
+  {
+    "id": 20157,
+    "championId": "Katarina",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3145
+    ],
+    "coreItems": [
+      3084,
+      4645,
+      3153
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6672,
+        "condition": "enemy_has_tanks",
+        "description": "Kraken Slayer — vs tanks (45% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 3157,
+        "condition": "enemy_has_tanks",
+        "description": "Zhonya's Hourglass — vs tanks (27% pick vs 13% baseline)"
+      },
+      {
+        "itemId": 3302,
+        "condition": "enemy_has_tanks",
+        "description": "Terminus — vs tanks (27% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8143,
+      8135
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 45 challenger/grandmaster/master games on patch 16.13 · 49% win rate."
+    ],
+    "winRate": 48.9,
+    "sampleSize": 45
+  },
+  {
+    "id": 20082,
+    "championId": "Kayle",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1042
+    ],
+    "coreItems": [
+      3115,
+      3153,
+      3124
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3302,
+        "condition": "enemy_has_healing",
+        "description": "Terminus — vs healing (48% pick vs 36% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 67 challenger/grandmaster/master games on patch 16.13 · 51% win rate."
+    ],
+    "winRate": 50.7,
+    "sampleSize": 67
+  },
+  {
+    "id": 20115,
+    "championId": "Kayn",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.13",
+    "starterItems": [
+      1036,
+      3133
+    ],
+    "coreItems": [
+      126697,
+      6692,
+      3071
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6676,
+        "condition": "enemy_heavy_ad",
+        "description": "The Collector — vs AD (30% pick vs 15% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3158
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8453
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 39 challenger/grandmaster/master games on patch 15.13 · 54% win rate."
+    ],
+    "winRate": 53.8,
+    "sampleSize": 39
+  },
+  {
+    "id": 20158,
+    "championId": "Kennen",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3145
+    ],
+    "coreItems": [
+      3152,
+      4645,
+      3157
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3118,
+        "condition": "enemy_has_tanks",
+        "description": "Malignance — vs tanks (31% pick vs 17% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 48 challenger/grandmaster/master games on patch 16.13 · 48% win rate."
+    ],
+    "winRate": 47.9,
+    "sampleSize": 48
+  },
+  {
+    "id": 20022,
+    "championId": "Khazix",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3070,
+      3134
+    ],
+    "coreItems": [
+      126697,
+      3004,
+      6694
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 58 challenger/grandmaster/master games on patch 16.13 · 52% win rate."
+    ],
+    "winRate": 51.7,
+    "sampleSize": 58
+  },
+  {
+    "id": 20102,
+    "championId": "Kindred",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      6676,
+      3153,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3087,
+        "condition": "enemy_has_tanks",
+        "description": "Statikk Shiv — vs tanks (56% pick vs 26% baseline)"
+      },
+      {
+        "itemId": 3033,
+        "condition": "enemy_has_healing",
+        "description": "Mortal Reminder — vs healing (29% pick vs 9% baseline)"
+      },
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_healing",
+        "description": "Lord Dominik's Regards — vs healing (43% pick vs 30% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8143,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 43 challenger/grandmaster/master games on patch 15.20 · 49% win rate."
+    ],
+    "winRate": 48.8,
+    "sampleSize": 43
+  },
+  {
+    "id": 20167,
+    "championId": "Kled",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.24",
+    "starterItems": [
+      3077
+    ],
+    "coreItems": [
+      3084,
+      3748,
+      6610
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8451
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 13 challenger/grandmaster/master games on patch 15.24 · 46% win rate."
+    ],
+    "winRate": 46.2,
+    "sampleSize": 13
+  },
+  {
+    "id": 20128,
+    "championId": "KogMaw",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1042
+    ],
+    "coreItems": [
+      3153,
+      3124,
+      3085
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_healing",
+        "description": "Liandry's Torment — vs healing (42% pick vs 29% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3020
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 58 challenger/grandmaster/master games on patch 15.20 · 59% win rate."
+    ],
+    "winRate": 58.6,
+    "sampleSize": 58
+  },
+  {
+    "id": 20112,
+    "championId": "KSante",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1028,
+      3057
+    ],
+    "coreItems": [
+      2502,
+      6662,
+      6665
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (67% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 2504,
+        "condition": "enemy_heavy_ap",
+        "description": "Kaenic Rookern — vs AP (36% pick vs 24% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8401,
+      8444,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 25 challenger/grandmaster/master games on patch 15.20 · 64% win rate."
+    ],
+    "winRate": 64,
+    "sampleSize": 25
+  },
+  {
+    "id": 20146,
+    "championId": "Leblanc",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 85 challenger/grandmaster/master games on patch 15.20 · 40% win rate."
+    ],
+    "winRate": 40,
+    "sampleSize": 85
+  },
+  {
+    "id": 20001,
+    "championId": "LeeSin",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1036,
+      3133
+    ],
+    "coreItems": [
+      6692,
+      6610,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6676,
+        "condition": "enemy_has_tanks",
+        "description": "The Collector — vs tanks (27% pick vs 11% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 79 challenger/grandmaster/master games on patch 16.13 · 51% win rate."
+    ],
+    "winRate": 50.6,
+    "sampleSize": 79
+  },
+  {
+    "id": 20141,
+    "championId": "Leona",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8473,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 42 challenger/grandmaster/master games on patch 15.20 · 57% win rate."
+    ],
+    "winRate": 57.1,
+    "sampleSize": 42
+  },
+  {
+    "id": 20101,
+    "championId": "Lillia",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2503,
+      6653,
+      3116
+    ],
+    "situationalItems": [
+      {
+        "itemId": 4633,
+        "condition": "enemy_has_tanks",
+        "description": "Riftmaker — vs tanks (78% pick vs 40% baseline)"
+      },
+      {
+        "itemId": 4629,
+        "condition": "enemy_heavy_ad",
+        "description": "Cosmic Drive — vs AD (41% pick vs 28% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8234,
+      8275
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 50 challenger/grandmaster/master games on patch 15.20 · 48% win rate."
+    ],
+    "winRate": 48,
+    "sampleSize": 50
+  },
+  {
+    "id": 20116,
+    "championId": "Lissandra",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.14",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      3157,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3137,
+        "condition": "enemy_heavy_ad",
+        "description": "Cryptbloom — vs AD (31% pick vs 16% baseline)"
+      },
+      {
+        "itemId": 6657,
+        "condition": "enemy_heavy_ad",
+        "description": "Rod of Ages — vs AD (38% pick vs 22% baseline)"
+      },
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (47% pick vs 34% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 58 challenger/grandmaster/master games on patch 15.14 · 55% win rate."
+    ],
+    "winRate": 55.2,
+    "sampleSize": 58
+  },
+  {
+    "id": 20172,
+    "championId": "Locke",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2510,
+      6655,
+      4645
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3020
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 9923,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8473,
+      8453
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 4 challenger/grandmaster/master games on patch 16.13 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 4
+  },
+  {
+    "id": 20080,
+    "championId": "Lucian",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1036,
+      1037
+    ],
+    "coreItems": [
+      3508,
+      6675,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (30% pick vs 16% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3158
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8005,
+    "primaryRuneIds": [
+      8009,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 96 challenger/grandmaster/master games on patch 15.19 · 45% win rate."
+    ],
+    "winRate": 44.8,
+    "sampleSize": 96
+  },
+  {
+    "id": 20083,
+    "championId": "Lulu",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      6617,
+      3504,
+      3107
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8463,
+      8453
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 71 challenger/grandmaster/master games on patch 15.19 · 54% win rate."
+    ],
+    "winRate": 53.5,
+    "sampleSize": 71
+  },
+  {
+    "id": 20031,
+    "championId": "Lux",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      3118,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (25% pick vs 10% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8229,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8126,
+      8106
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 107 challenger/grandmaster/master games on patch 14.24 · 51% win rate."
+    ],
+    "winRate": 51.4,
+    "sampleSize": 107
+  },
+  {
+    "id": 20030,
+    "championId": "Malphite",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3084,
+      3118,
+      4645
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8236,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 73 challenger/grandmaster/master games on patch 15.19 · 47% win rate."
+    ],
+    "winRate": 46.6,
+    "sampleSize": 73
+  },
+  {
+    "id": 20099,
+    "championId": "Malzahar",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2503,
+      6653,
+      3116
+    ],
+    "situationalItems": [
+      {
+        "itemId": 8010,
+        "condition": "enemy_has_tanks",
+        "description": "Bloodletter's Curse — vs tanks (38% pick vs 23% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 75 challenger/grandmaster/master games on patch 15.19 · 48% win rate."
+    ],
+    "winRate": 48,
+    "sampleSize": 75
+  },
+  {
+    "id": 20007,
+    "championId": "Maokai",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 68 challenger/grandmaster/master games on patch 15.19 · 59% win rate."
+    ],
+    "winRate": 58.8,
+    "sampleSize": 68
+  },
+  {
+    "id": 20129,
+    "championId": "MasterYi",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      6676,
+      3153,
+      3091
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6333,
+        "condition": "enemy_heavy_ad",
+        "description": "Death's Dance — vs AD (50% pick vs 34% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 9923,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9104,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 41 challenger/grandmaster/master games on patch 16.13 · 56% win rate."
+    ],
+    "winRate": 56.1,
+    "sampleSize": 41
+  },
+  {
+    "id": 20081,
+    "championId": "Mel",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      6653,
+      4645
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 76 challenger/grandmaster/master games on patch 15.20 · 47% win rate."
+    ],
+    "winRate": 47.4,
+    "sampleSize": 76
+  },
+  {
+    "id": 20043,
+    "championId": "Milio",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      6617,
+      3504,
+      3107
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3003,
+        "condition": "enemy_heavy_ad",
+        "description": "Archangel's Staff — vs AD (64% pick vs 21% baseline)"
+      },
+      {
+        "itemId": 6616,
+        "condition": "enemy_heavy_ad",
+        "description": "Staff of Flowing Water — vs AD (45% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3020
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8236
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8463,
+      8453
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 47 challenger/grandmaster/master games on patch 15.19 · 43% win rate."
+    ],
+    "winRate": 42.6,
+    "sampleSize": 47
+  },
+  {
+    "id": 20015,
+    "championId": "MissFortune",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      6676,
+      6696,
+      3031
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3006,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 135 challenger/grandmaster/master games on patch 15.19 · 50% win rate."
+    ],
+    "winRate": 50.4,
+    "sampleSize": 135
+  },
+  {
+    "id": 20130,
+    "championId": "MonkeyKing",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      3078,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3071,
+        "condition": "enemy_heavy_ad",
+        "description": "Black Cleaver — vs AD (50% pick vs 31% baseline)"
+      },
+      {
+        "itemId": 3053,
+        "condition": "enemy_heavy_ad",
+        "description": "Sterak's Gage — vs AD (29% pick vs 11% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8143,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 54 challenger/grandmaster/master games on patch 15.20 · 57% win rate."
+    ],
+    "winRate": 57.4,
+    "sampleSize": 54
+  },
+  {
+    "id": 20042,
+    "championId": "Mordekaiser",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3147
+    ],
+    "coreItems": [
+      4633,
+      3116,
+      3065
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_has_tanks",
+        "description": "Thornmail — vs tanks (53% pick vs 35% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8453
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 66 challenger/grandmaster/master games on patch 16.13 · 45% win rate."
+    ],
+    "winRate": 45.5,
+    "sampleSize": 66
+  },
+  {
+    "id": 20059,
+    "championId": "Morgana",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2503,
+      6653,
+      3157
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8229,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 101 challenger/grandmaster/master games on patch 16.13 · 58% win rate."
+    ],
+    "winRate": 58.4,
+    "sampleSize": 101
+  },
+  {
+    "id": 20131,
+    "championId": "Naafiri",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1036,
+      3134
+    ],
+    "coreItems": [
+      126697,
+      6676,
+      6692
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6333,
+        "condition": "enemy_heavy_ad",
+        "description": "Death's Dance — vs AD (54% pick vs 34% baseline)"
+      },
+      {
+        "itemId": 3814,
+        "condition": "enemy_heavy_ap",
+        "description": "Edge of Night — vs AP (35% pick vs 23% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8112,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 35 challenger/grandmaster/master games on patch 15.19 · 51% win rate."
+    ],
+    "winRate": 51.4,
+    "sampleSize": 35
+  },
+  {
+    "id": 20075,
+    "championId": "Nami",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      4005,
+      6617,
+      3504
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3107,
+        "condition": "enemy_heavy_ad",
+        "description": "Redemption — vs AD (50% pick vs 26% baseline)"
+      },
+      {
+        "itemId": 3118,
+        "condition": "enemy_has_tanks",
+        "description": "Malignance — vs tanks (36% pick vs 12% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3020
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8463,
+      8453
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 50 challenger/grandmaster/master games on patch 15.20 · 58% win rate."
+    ],
+    "winRate": 58,
+    "sampleSize": 50
+  },
+  {
+    "id": 20109,
+    "championId": "Nasus",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1028,
+      3057
+    ],
+    "coreItems": [
+      3078,
+      3110,
+      3065
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (44% pick vs 27% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 37 challenger/grandmaster/master games on patch 15.19 · 51% win rate."
+    ],
+    "winRate": 51.4,
+    "sampleSize": 37
+  },
+  {
+    "id": 20037,
+    "championId": "Nautilus",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_has_healing",
+        "description": "Thornmail — vs healing (52% pick vs 37% baseline)"
+      },
+      {
+        "itemId": 3110,
+        "condition": "enemy_heavy_ad",
+        "description": "Frozen Heart — vs AD (26% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8401,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 76 challenger/grandmaster/master games on patch 16.13 · 46% win rate."
+    ],
+    "winRate": 46.1,
+    "sampleSize": 76
+  },
+  {
+    "id": 20035,
+    "championId": "Neeko",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      6655,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3157,
+        "condition": "enemy_has_tanks",
+        "description": "Zhonya's Hourglass — vs tanks (53% pick vs 36% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 64 challenger/grandmaster/master games on patch 15.20 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 64
+  },
+  {
+    "id": 20056,
+    "championId": "Nidalee",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 90 challenger/grandmaster/master games on patch 15.19 · 44% win rate."
+    ],
+    "winRate": 44.4,
+    "sampleSize": 90
+  },
+  {
+    "id": 20121,
+    "championId": "Nilah",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      6676,
+      3031,
+      6675
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_heavy_ad",
+        "description": "Lord Dominik's Regards — vs AD (57% pick vs 43% baseline)"
+      },
+      {
+        "itemId": 3072,
+        "condition": "enemy_heavy_ad",
+        "description": "Bloodthirster — vs AD (43% pick vs 30% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 23 challenger/grandmaster/master games on patch 15.19 · 35% win rate."
+    ],
+    "winRate": 34.8,
+    "sampleSize": 23
+  },
+  {
+    "id": 20064,
+    "championId": "Nocturne",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3070,
+      3134
+    ],
+    "coreItems": [
+      6676,
+      6696,
+      3073
+    ],
+    "situationalItems": [
+      {
+        "itemId": 126697,
+        "condition": "enemy_heavy_ad",
+        "description": "Hubris — vs AD (50% pick vs 38% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 9923,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 32 challenger/grandmaster/master games on patch 15.20 · 53% win rate."
+    ],
+    "winRate": 53.1,
+    "sampleSize": 32
+  },
+  {
+    "id": 20163,
+    "championId": "Nunu",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3145
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3065
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (38% pick vs 16% baseline)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "enemy_has_tanks",
+        "description": "Rabadon's Deathcap — vs tanks (50% pick vs 30% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8105
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8234,
+      8237
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 37 challenger/grandmaster/master games on patch 16.13 · 51% win rate."
+    ],
+    "winRate": 51.4,
+    "sampleSize": 37
+  },
+  {
+    "id": 20090,
+    "championId": "Olaf",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3077
+    ],
+    "coreItems": [
+      6631,
+      3073,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6610,
+        "condition": "enemy_heavy_ap",
+        "description": "Sundered Sky — vs AP (55% pick vs 33% baseline)"
+      },
+      {
+        "itemId": 3053,
+        "condition": "enemy_has_tanks",
+        "description": "Sterak's Gage — vs tanks (43% pick vs 25% baseline)"
+      },
+      {
+        "itemId": 3156,
+        "condition": "enemy_heavy_ap",
+        "description": "Maw of Malmortius — vs AP (27% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8299
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 24 challenger/grandmaster/master games on patch 16.13 · 46% win rate."
+    ],
+    "winRate": 45.8,
+    "sampleSize": 24
+  },
+  {
+    "id": 20104,
+    "championId": "Orianna",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (29% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 90 challenger/grandmaster/master games on patch 15.19 · 43% win rate."
+    ],
+    "winRate": 43.3,
+    "sampleSize": 90
+  },
+  {
+    "id": 20026,
+    "championId": "Ornn",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.13",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2502,
+      3083
+    ],
+    "situationalItems": [
+      {
+        "itemId": 2504,
+        "condition": "enemy_has_tanks",
+        "description": "Kaenic Rookern — vs tanks (40% pick vs 21% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 48 challenger/grandmaster/master games on patch 15.13 · 44% win rate."
+    ],
+    "winRate": 43.8,
+    "sampleSize": 48
+  },
+  {
+    "id": 20166,
+    "championId": "Pantheon",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      1036,
+      3133
+    ],
+    "coreItems": [
+      6692,
+      6610,
+      6333
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 71 challenger/grandmaster/master games on patch 14.24 · 49% win rate."
+    ],
+    "winRate": 49.3,
+    "sampleSize": 71
+  },
+  {
+    "id": 20142,
+    "championId": "Poppy",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      3075
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8401,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 33 challenger/grandmaster/master games on patch 16.13 · 61% win rate."
+    ],
+    "winRate": 60.6,
+    "sampleSize": 33
+  },
+  {
+    "id": 20054,
+    "championId": "Pyke",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      126697,
+      6696,
+      3814
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 75 challenger/grandmaster/master games on patch 15.19 · 49% win rate."
+    ],
+    "winRate": 49.3,
+    "sampleSize": 75
+  },
+  {
+    "id": 20123,
+    "championId": "Qiyana",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1036,
+      3134
+    ],
+    "coreItems": [
+      126697,
+      6696,
+      6694
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3004,
+        "condition": "enemy_heavy_ad",
+        "description": "Manamune — vs AD (45% pick vs 18% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 33 challenger/grandmaster/master games on patch 15.19 · 45% win rate."
+    ],
+    "winRate": 45.5,
+    "sampleSize": 33
+  },
+  {
+    "id": 20070,
+    "championId": "Quinn",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      3087,
+      6676,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3033,
+        "condition": "enemy_heavy_ad",
+        "description": "Mortal Reminder — vs AD (33% pick vs 13% baseline)"
+      },
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (38% pick vs 19% baseline)"
+      },
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (54% pick vs 35% baseline)"
+      },
+      {
+        "itemId": 6699,
+        "condition": "enemy_heavy_ad",
+        "description": "Voltaic Cyclosword — vs AD (33% pick vs 19% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8005,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 52 challenger/grandmaster/master games on patch 15.19 · 42% win rate."
+    ],
+    "winRate": 42.3,
+    "sampleSize": 52
+  },
+  {
+    "id": 20034,
+    "championId": "Rakan",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3190,
+      3119,
+      2502
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3107,
+        "condition": "enemy_has_tanks",
+        "description": "Redemption — vs tanks (44% pick vs 30% baseline)"
+      },
+      {
+        "itemId": 3084,
+        "condition": "enemy_has_tanks",
+        "description": "Heartsteel — vs tanks (44% pick vs 30% baseline)"
+      },
+      {
+        "itemId": 3050,
+        "condition": "enemy_has_tanks",
+        "description": "Zeke's Convergence — vs tanks (33% pick vs 20% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3158
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8465,
+    "primaryRuneIds": [
+      8463,
+      8473,
+      8453
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 40 challenger/grandmaster/master games on patch 16.13 · 55% win rate."
+    ],
+    "winRate": 55,
+    "sampleSize": 40
+  },
+  {
+    "id": 20161,
+    "championId": "Rammus",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1028,
+      3076
+    ],
+    "coreItems": [
+      3075,
+      6665,
+      2502
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8242
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9104,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 11 challenger/grandmaster/master games on patch 16.13 · 45% win rate."
+    ],
+    "winRate": 45.5,
+    "sampleSize": 11
+  },
+  {
+    "id": 20150,
+    "championId": "RekSai",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2502,
+      6610
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 9923,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 12 challenger/grandmaster/master games on patch 15.19 · 42% win rate."
+    ],
+    "winRate": 41.7,
+    "sampleSize": 12
+  },
+  {
+    "id": 20159,
+    "championId": "Rell",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 44 challenger/grandmaster/master games on patch 15.20 · 59% win rate."
+    ],
+    "winRate": 59.1,
+    "sampleSize": 44
+  },
+  {
+    "id": 20078,
+    "championId": "Renata",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      4005,
+      3118,
+      3107
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3003,
+        "condition": "enemy_heavy_ad",
+        "description": "Archangel's Staff — vs AD (53% pick vs 29% baseline)"
+      },
+      {
+        "itemId": 3119,
+        "condition": "enemy_has_tanks",
+        "description": "Winter's Approach — vs tanks (29% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8236
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8126,
+      8106
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 68 challenger/grandmaster/master games on patch 15.19 · 53% win rate."
+    ],
+    "winRate": 52.9,
+    "sampleSize": 68
+  },
+  {
+    "id": 20062,
+    "championId": "Renekton",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      6692,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3065,
+        "condition": "enemy_heavy_ap",
+        "description": "Spirit Visage — vs AP (48% pick vs 33% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8453,
+      8444
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 46 challenger/grandmaster/master games on patch 16.13 · 59% win rate."
+    ],
+    "winRate": 58.7,
+    "sampleSize": 46
+  },
+  {
+    "id": 20171,
+    "championId": "Rengar",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.24",
+    "starterItems": [
+      1036,
+      3134
+    ],
+    "coreItems": [
+      126697,
+      6676,
+      6610
+    ],
+    "situationalItems": [
+      {
+        "itemId": 2502,
+        "condition": "enemy_heavy_ad",
+        "description": "Unending Despair — vs AD (33% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 3031,
+        "condition": "enemy_heavy_ap",
+        "description": "Infinity Edge — vs AP (36% pick vs 19% baseline)"
+      },
+      {
+        "itemId": 3084,
+        "condition": "enemy_heavy_ad",
+        "description": "Heartsteel — vs AD (33% pick vs 19% baseline)"
+      },
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_healing",
+        "description": "Lord Dominik's Regards — vs healing (27% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 6698,
+        "condition": "enemy_heavy_ap",
+        "description": "Profane Hydra — vs AP (36% pick vs 24% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 21 challenger/grandmaster/master games on patch 15.24 · 29% win rate."
+    ],
+    "winRate": 28.6,
+    "sampleSize": 21
+  },
+  {
+    "id": 20096,
+    "championId": "Riven",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.16",
+    "starterItems": [
+      1036,
+      3133
+    ],
+    "coreItems": [
+      6692,
+      6610,
+      6333
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3158
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 41 challenger/grandmaster/master games on patch 15.16 · 49% win rate."
+    ],
+    "winRate": 48.8,
+    "sampleSize": 41
+  },
+  {
+    "id": 20057,
+    "championId": "Rumble",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3147
+    ],
+    "coreItems": [
+      6653,
+      3118,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 4633,
+        "condition": "enemy_has_tanks",
+        "description": "Riftmaker — vs tanks (50% pick vs 33% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (25% pick vs 10% baseline)"
+      },
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (31% pick vs 19% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 48 challenger/grandmaster/master games on patch 15.19 · 48% win rate."
+    ],
+    "winRate": 47.9,
+    "sampleSize": 48
+  },
+  {
+    "id": 20148,
+    "championId": "Ryze",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1026,
+      3070
+    ],
+    "coreItems": [
+      6657,
+      3003,
+      3110
+    ],
+    "situationalItems": [
+      {
+        "itemId": 2522,
+        "condition": "enemy_has_tanks",
+        "description": "Actualizer — vs tanks (47% pick vs 22% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8230,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8236
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 63 challenger/grandmaster/master games on patch 16.13 · 40% win rate."
+    ],
+    "winRate": 39.7,
+    "sampleSize": 63
+  },
+  {
+    "id": 20039,
+    "championId": "Samira",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3134
+    ],
+    "coreItems": [
+      6676,
+      3031,
+      6673
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (60% pick vs 45% baseline)"
+      },
+      {
+        "itemId": 126697,
+        "condition": "enemy_has_tanks",
+        "description": "Hubris — vs tanks (30% pick vs 17% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 69 challenger/grandmaster/master games on patch 15.19 · 52% win rate."
+    ],
+    "winRate": 52.2,
+    "sampleSize": 69
+  },
+  {
+    "id": 20086,
+    "championId": "Sejuani",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2502,
+      3083
+    ],
+    "situationalItems": [
+      {
+        "itemId": 2504,
+        "condition": "enemy_heavy_ap",
+        "description": "Kaenic Rookern — vs AP (36% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (56% pick vs 37% baseline)"
+      },
+      {
+        "itemId": 3065,
+        "condition": "enemy_has_healing",
+        "description": "Spirit Visage — vs healing (25% pick vs 10% baseline)"
+      },
+      {
+        "itemId": 6664,
+        "condition": "enemy_heavy_ap",
+        "description": "Hollow Radiance — vs AP (27% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 30 challenger/grandmaster/master games on patch 15.20 · 53% win rate."
+    ],
+    "winRate": 53.3,
+    "sampleSize": 30
+  },
+  {
+    "id": 20021,
+    "championId": "Senna",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3144,
+      6690
+    ],
+    "coreItems": [
+      3087,
+      3094,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (25% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3009,
+      3006
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8021,
+    "primaryRuneIds": [
+      8009,
+      9104,
+      8017
+    ],
+    "secondaryPathId": 8300,
+    "secondaryRuneIds": [
+      8410,
+      8345
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 101 challenger/grandmaster/master games on patch 15.19 · 54% win rate."
+    ],
+    "winRate": 54.5,
+    "sampleSize": 101
+  },
+  {
+    "id": 20028,
+    "championId": "Seraphine",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      3116,
+      6653
+    ],
+    "situationalItems": [
+      {
+        "itemId": 2503,
+        "condition": "enemy_heavy_ad",
+        "description": "Blackfire Torch — vs AD (41% pick vs 25% baseline)"
+      },
+      {
+        "itemId": 3165,
+        "condition": "enemy_has_healing",
+        "description": "Morellonomicon — vs healing (26% pick vs 11% baseline)"
+      },
+      {
+        "itemId": 3137,
+        "condition": "enemy_has_tanks",
+        "description": "Cryptbloom — vs tanks (26% pick vs 13% baseline)"
+      },
+      {
+        "itemId": 6655,
+        "condition": "enemy_has_healing",
+        "description": "Luden's Echo — vs healing (33% pick vs 20% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 83 challenger/grandmaster/master games on patch 16.13 · 42% win rate."
+    ],
+    "winRate": 42.2,
+    "sampleSize": 83
+  },
+  {
+    "id": 20122,
+    "championId": "Sett",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2501,
+      3083
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6631,
+        "condition": "enemy_heavy_ad",
+        "description": "Stridebreaker — vs AD (60% pick vs 33% baseline)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (27% pick vs 9% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8453,
+      8444
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 64 challenger/grandmaster/master games on patch 15.19 · 45% win rate."
+    ],
+    "winRate": 45.3,
+    "sampleSize": 64
+  },
+  {
+    "id": 20058,
+    "championId": "Shaco",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      6653,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6676,
+        "condition": "enemy_has_tanks",
+        "description": "The Collector — vs tanks (41% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 6699,
+        "condition": "enemy_has_tanks",
+        "description": "Voltaic Cyclosword — vs tanks (41% pick vs 27% baseline)"
+      },
+      {
+        "itemId": 2503,
+        "condition": "enemy_heavy_ad",
+        "description": "Blackfire Torch — vs AD (41% pick vs 28% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 71 challenger/grandmaster/master games on patch 15.20 · 52% win rate."
+    ],
+    "winRate": 52.1,
+    "sampleSize": 71
+  },
+  {
+    "id": 20061,
+    "championId": "Shen",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2502,
+      3075
+    ],
+    "situationalItems": [
+      {
+        "itemId": 2504,
+        "condition": "enemy_has_tanks",
+        "description": "Kaenic Rookern — vs tanks (33% pick vs 18% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8401,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 51 challenger/grandmaster/master games on patch 15.19 · 51% win rate."
+    ],
+    "winRate": 51,
+    "sampleSize": 51
+  },
+  {
+    "id": 20079,
+    "championId": "Shyvana",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3145
+    ],
+    "coreItems": [
+      2510,
+      4645,
+      6653
+    ],
+    "situationalItems": [
+      {
+        "itemId": 4633,
+        "condition": "enemy_heavy_ad",
+        "description": "Riftmaker — vs AD (43% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 3748,
+        "condition": "enemy_heavy_ap",
+        "description": "Titanic Hydra — vs AP (30% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 3084,
+        "condition": "enemy_heavy_ap",
+        "description": "Heartsteel — vs AP (30% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 3161,
+        "condition": "enemy_heavy_ad",
+        "description": "Spear of Shojin — vs AD (29% pick vs 14% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 21 challenger/grandmaster/master games on patch 15.19 · 52% win rate."
+    ],
+    "winRate": 52.4,
+    "sampleSize": 21
+  },
+  {
+    "id": 20014,
+    "championId": "Singed",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.16",
+    "starterItems": [
+      3803
+    ],
+    "coreItems": [
+      6657,
+      6653,
+      3116
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3742,
+        "condition": "enemy_has_tanks",
+        "description": "Dead Man's Plate — vs tanks (50% pick vs 24% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3009,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8234,
+      8275
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 42 challenger/grandmaster/master games on patch 15.16 · 52% win rate."
+    ],
+    "winRate": 52.4,
+    "sampleSize": 42
+  },
+  {
+    "id": 20152,
+    "championId": "Sion",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2502,
+      3075
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3748,
+        "condition": "enemy_has_tanks",
+        "description": "Titanic Hydra — vs tanks (45% pick vs 23% baseline)"
+      },
+      {
+        "itemId": 2501,
+        "condition": "enemy_has_tanks",
+        "description": "Overlord's Bloodmail — vs tanks (27% pick vs 14% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8446,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 56 challenger/grandmaster/master games on patch 15.20 · 52% win rate."
+    ],
+    "winRate": 51.8,
+    "sampleSize": 56
+  },
+  {
+    "id": 20106,
+    "championId": "Sivir",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      3032,
+      6675,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (48% pick vs 32% baseline)"
+      },
+      {
+        "itemId": 3087,
+        "condition": "enemy_heavy_ad",
+        "description": "Statikk Shiv — vs AD (39% pick vs 27% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 90 challenger/grandmaster/master games on patch 15.19 · 60% win rate."
+    ],
+    "winRate": 60,
+    "sampleSize": 90
+  },
+  {
+    "id": 20137,
+    "championId": "Skarner",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_has_healing",
+        "description": "Thornmail — vs healing (75% pick vs 47% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8401,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 19 challenger/grandmaster/master games on patch 15.19 · 53% win rate."
+    ],
+    "winRate": 52.6,
+    "sampleSize": 19
+  },
+  {
+    "id": 20074,
+    "championId": "Smolder",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3057,
+      3070
+    ],
+    "coreItems": [
+      3508,
+      3004,
+      3161
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_heavy_cc",
+        "description": "Lord Dominik's Regards — vs CC (44% pick vs 14% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3009
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 107 challenger/grandmaster/master games on patch 15.20 · 54% win rate."
+    ],
+    "winRate": 54.2,
+    "sampleSize": 107
+  },
+  {
+    "id": 20006,
+    "championId": "Sona",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      6617,
+      3003,
+      3504
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3165,
+        "condition": "enemy_has_tanks",
+        "description": "Morellonomicon — vs tanks (31% pick vs 8% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3020
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8236
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8453
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 61 challenger/grandmaster/master games on patch 15.19 · 52% win rate."
+    ],
+    "winRate": 52.5,
+    "sampleSize": 61
+  },
+  {
+    "id": 20126,
+    "championId": "Soraka",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      6617,
+      3083,
+      3107
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3020
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8473,
+      8453
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 61 challenger/grandmaster/master games on patch 15.20 · 43% win rate."
+    ],
+    "winRate": 42.6,
+    "sampleSize": 61
+  },
+  {
+    "id": 20046,
+    "championId": "Swain",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3803
+    ],
+    "coreItems": [
+      6657,
+      3116,
+      6653
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      8009,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8451
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 74 challenger/grandmaster/master games on patch 16.13 · 55% win rate."
+    ],
+    "winRate": 55.4,
+    "sampleSize": 74
+  },
+  {
+    "id": 20063,
+    "championId": "Sylas",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3803
+    ],
+    "coreItems": [
+      6657,
+      4633,
+      4629
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3020
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      8009,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8444,
+      8242
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 62 challenger/grandmaster/master games on patch 15.19 · 58% win rate."
+    ],
+    "winRate": 58.1,
+    "sampleSize": 62
+  },
+  {
+    "id": 20105,
+    "championId": "Syndra",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (33% pick vs 10% baseline)"
+      },
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (27% pick vs 14% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8236,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 69 challenger/grandmaster/master games on patch 15.19 · 65% win rate."
+    ],
+    "winRate": 65.2,
+    "sampleSize": 69
+  },
+  {
+    "id": 20016,
+    "championId": "TahmKench",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.12",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2502,
+      3075
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8401,
+      8444,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 41 challenger/grandmaster/master games on patch 16.12 · 54% win rate."
+    ],
+    "winRate": 53.7,
+    "sampleSize": 41
+  },
+  {
+    "id": 20073,
+    "championId": "Taliyah",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      6653,
+      4645
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 52 challenger/grandmaster/master games on patch 16.13 · 56% win rate."
+    ],
+    "winRate": 55.8,
+    "sampleSize": 52
+  },
+  {
+    "id": 20095,
+    "championId": "Talon",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.23",
+    "starterItems": [
+      1036,
+      3134
+    ],
+    "coreItems": [
+      126697,
+      6696,
+      6694
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6699,
+        "condition": "enemy_heavy_ap",
+        "description": "Voltaic Cyclosword — vs AP (27% pick vs 9% baseline)"
+      },
+      {
+        "itemId": 3142,
+        "condition": "enemy_heavy_ap",
+        "description": "Youmuu's Ghostblade — vs AP (45% pick vs 28% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8112,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 32 challenger/grandmaster/master games on patch 15.23 · 63% win rate."
+    ],
+    "winRate": 62.5,
+    "sampleSize": 32
+  },
+  {
+    "id": 20076,
+    "championId": "Taric",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.24",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      8009
+    ],
+    "statRuneIds": [
+      5005,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 16 challenger/grandmaster/master games on patch 15.24 · 56% win rate."
+    ],
+    "winRate": 56.3,
+    "sampleSize": 16
+  },
+  {
+    "id": 20029,
+    "championId": "Teemo",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      3118,
+      6653,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3115,
+        "condition": "enemy_heavy_cc",
+        "description": "Nashor's Tooth — vs CC (33% pick vs 14% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8237,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 81 challenger/grandmaster/master games on patch 15.19 · 42% win rate."
+    ],
+    "winRate": 42,
+    "sampleSize": 81
+  },
+  {
+    "id": 20050,
+    "championId": "Thresh",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1011,
+      3070
+    ],
+    "coreItems": [
+      3084,
+      3119,
+      2502
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3190,
+        "condition": "enemy_heavy_ad",
+        "description": "Locket of the Iron Solari — vs AD (29% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (33% pick vs 20% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8473,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      8009
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 84 challenger/grandmaster/master games on patch 15.20 · 46% win rate."
+    ],
+    "winRate": 46.4,
+    "sampleSize": 84
+  },
+  {
+    "id": 20027,
+    "championId": "Tristana",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      3032,
+      6675,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6676,
+        "condition": "enemy_has_tanks",
+        "description": "The Collector — vs tanks (46% pick vs 33% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 80 challenger/grandmaster/master games on patch 15.19 · 45% win rate."
+    ],
+    "winRate": 45,
+    "sampleSize": 80
+  },
+  {
+    "id": 20127,
+    "championId": "Trundle",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.24",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      3078,
+      3065
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (38% pick vs 18% baseline)"
+      },
+      {
+        "itemId": 3119,
+        "condition": "enemy_heavy_ap",
+        "description": "Winter's Approach — vs AP (43% pick vs 27% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 22 challenger/grandmaster/master games on patch 15.24 · 73% win rate."
+    ],
+    "winRate": 72.7,
+    "sampleSize": 22
+  },
+  {
+    "id": 20097,
+    "championId": "Tryndamere",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      3153,
+      6675
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3006
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 21 challenger/grandmaster/master games on patch 15.19 · 43% win rate."
+    ],
+    "winRate": 42.9,
+    "sampleSize": 21
+  },
+  {
+    "id": 20041,
+    "championId": "TwistedFate",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      3094,
+      3100
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8229,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 70 challenger/grandmaster/master games on patch 16.13 · 49% win rate."
+    ],
+    "winRate": 48.6,
+    "sampleSize": 70
+  },
+  {
+    "id": 20103,
+    "championId": "Twitch",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1042
+    ],
+    "coreItems": [
+      3153,
+      3085,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3115,
+        "condition": "enemy_heavy_cc",
+        "description": "Nashor's Tooth — vs CC (50% pick vs 11% baseline)"
+      },
+      {
+        "itemId": 4645,
+        "condition": "enemy_heavy_cc",
+        "description": "Shadowflame — vs CC (33% pick vs 9% baseline)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "enemy_heavy_cc",
+        "description": "Rabadon's Deathcap — vs CC (33% pick vs 10% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3020
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 113 challenger/grandmaster/master games on patch 15.19 · 50% win rate."
+    ],
+    "winRate": 49.6,
+    "sampleSize": 113
+  },
+  {
+    "id": 20136,
+    "championId": "Udyr",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.13",
+    "starterItems": [
+      2051,
+      3070
+    ],
+    "coreItems": [
+      6653,
+      3118,
+      3119
+    ],
+    "situationalItems": [
+      {
+        "itemId": 4645,
+        "condition": "enemy_has_tanks",
+        "description": "Shadowflame — vs tanks (50% pick vs 29% baseline)"
+      },
+      {
+        "itemId": 3084,
+        "condition": "enemy_heavy_ad",
+        "description": "Heartsteel — vs AD (33% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 3116,
+        "condition": "enemy_has_tanks",
+        "description": "Rylai's Crystal Scepter — vs tanks (40% pick vs 25% baseline)"
+      },
+      {
+        "itemId": 3065,
+        "condition": "enemy_has_healing",
+        "description": "Spirit Visage — vs healing (36% pick vs 21% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8242
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 28 challenger/grandmaster/master games on patch 15.13 · 64% win rate."
+    ],
+    "winRate": 64.3,
+    "sampleSize": 28
+  },
+  {
+    "id": 20151,
+    "championId": "Urgot",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      3748,
+      3071
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (38% pick vs 15% baseline)"
+      },
+      {
+        "itemId": 2501,
+        "condition": "enemy_heavy_ap",
+        "description": "Overlord's Bloodmail — vs AP (47% pick vs 33% baseline)"
+      },
+      {
+        "itemId": 2502,
+        "condition": "enemy_heavy_ad",
+        "description": "Unending Despair — vs AD (25% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 3053,
+        "condition": "enemy_heavy_ad",
+        "description": "Sterak's Gage — vs AD (25% pick vs 12% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8451
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 33 challenger/grandmaster/master games on patch 14.24 · 61% win rate."
+    ],
+    "winRate": 60.6,
+    "sampleSize": 33
+  },
+  {
+    "id": 20025,
+    "championId": "Varus",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3070,
+      3134
+    ],
+    "coreItems": [
+      126697,
+      6676,
+      3004
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3006
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 108 challenger/grandmaster/master games on patch 15.19 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 108
+  },
+  {
+    "id": 20003,
+    "championId": "Vayne",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1042
+    ],
+    "coreItems": [
+      3153,
+      3124,
+      3091
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3072,
+        "condition": "enemy_heavy_cc",
+        "description": "Bloodthirster — vs CC (33% pick vs 9% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 98 challenger/grandmaster/master games on patch 15.20 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 98
+  },
+  {
+    "id": 20165,
+    "championId": "Veigar",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6657,
+      6655,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (36% pick vs 21% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 97 challenger/grandmaster/master games on patch 15.19 · 45% win rate."
+    ],
+    "winRate": 45.4,
+    "sampleSize": 97
+  },
+  {
+    "id": 20024,
+    "championId": "Velkoz",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      6653,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 2503,
+        "condition": "enemy_has_tanks",
+        "description": "Blackfire Torch — vs tanks (42% pick vs 26% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 88 challenger/grandmaster/master games on patch 15.19 · 51% win rate."
+    ],
+    "winRate": 51.1,
+    "sampleSize": 88
+  },
+  {
+    "id": 20066,
+    "championId": "Vex",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (33% pick vs 13% baseline)"
+      },
+      {
+        "itemId": 3157,
+        "condition": "enemy_has_healing",
+        "description": "Zhonya's Hourglass — vs healing (44% pick vs 29% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (33% pick vs 19% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 52 challenger/grandmaster/master games on patch 15.19 · 56% win rate."
+    ],
+    "winRate": 55.8,
+    "sampleSize": 52
+  },
+  {
+    "id": 20118,
+    "championId": "Vi",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      6692,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6695,
+        "condition": "enemy_has_tanks",
+        "description": "Serpent's Fang — vs tanks (30% pick vs 7% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 9923,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 43 challenger/grandmaster/master games on patch 14.24 · 47% win rate."
+    ],
+    "winRate": 46.5,
+    "sampleSize": 43
+  },
+  {
+    "id": 20117,
+    "championId": "Viego",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.24",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      6676,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (55% pick vs 38% baseline)"
+      },
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (27% pick vs 13% baseline)"
+      },
+      {
+        "itemId": 6673,
+        "condition": "enemy_has_tanks",
+        "description": "Immortal Shieldbow — vs tanks (27% pick vs 15% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 53 challenger/grandmaster/master games on patch 15.24 · 53% win rate."
+    ],
+    "winRate": 52.8,
+    "sampleSize": 53
+  },
+  {
+    "id": 20053,
+    "championId": "Viktor",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6653,
+      4645,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3100,
+        "condition": "enemy_has_healing",
+        "description": "Lich Bane — vs healing (48% pick vs 29% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 82 challenger/grandmaster/master games on patch 15.19 · 51% win rate."
+    ],
+    "winRate": 51.2,
+    "sampleSize": 82
+  },
+  {
+    "id": 20124,
+    "championId": "Vladimir",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1052,
+      3108
+    ],
+    "coreItems": [
+      4633,
+      4629,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3065,
+        "condition": "enemy_has_healing",
+        "description": "Spirit Visage — vs healing (50% pick vs 28% baseline)"
+      },
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (45% pick vs 25% baseline)"
+      },
+      {
+        "itemId": 4645,
+        "condition": "enemy_heavy_ap",
+        "description": "Shadowflame — vs AP (40% pick vs 25% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8236,
+      8210
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 53 challenger/grandmaster/master games on patch 15.19 · 49% win rate."
+    ],
+    "winRate": 49.1,
+    "sampleSize": 53
+  },
+  {
+    "id": 20160,
+    "championId": "Volibear",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2502,
+      3065
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3119,
+        "condition": "enemy_heavy_ad",
+        "description": "Winter's Approach — vs AD (33% pick vs 13% baseline)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "enemy_heavy_ad",
+        "description": "Thornmail — vs AD (56% pick vs 38% baseline)"
+      },
+      {
+        "itemId": 3083,
+        "condition": "enemy_heavy_ad",
+        "description": "Warmog's Armor — vs AD (33% pick vs 16% baseline)"
+      },
+      {
+        "itemId": 6657,
+        "condition": "enemy_has_tanks",
+        "description": "Rod of Ages — vs tanks (25% pick vs 13% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8401,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "W > Q > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 32 challenger/grandmaster/master games on patch 16.13 · 28% win rate."
+    ],
+    "winRate": 28.1,
+    "sampleSize": 32
+  },
+  {
+    "id": 20162,
+    "championId": "Warwick",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.23",
+    "starterItems": [
+      3077
+    ],
+    "coreItems": [
+      6610,
+      3153,
+      3065
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3084,
+        "condition": "enemy_heavy_ap",
+        "description": "Heartsteel — vs AP (42% pick vs 26% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 23 challenger/grandmaster/master games on patch 14.23 · 48% win rate."
+    ],
+    "winRate": 47.8,
+    "sampleSize": 23
+  },
+  {
+    "id": 20033,
+    "championId": "Xayah",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      3032,
+      6675,
+      3031
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 84 challenger/grandmaster/master games on patch 15.19 · 49% win rate."
+    ],
+    "winRate": 48.8,
+    "sampleSize": 84
+  },
+  {
+    "id": 20125,
+    "championId": "Xerath",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "16.13",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (46% pick vs 27% baseline)"
+      },
+      {
+        "itemId": 2503,
+        "condition": "enemy_has_tanks",
+        "description": "Blackfire Torch — vs tanks (31% pick vs 17% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3009
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 95 challenger/grandmaster/master games on patch 16.13 · 42% win rate."
+    ],
+    "winRate": 42.1,
+    "sampleSize": 95
+  },
+  {
+    "id": 20114,
+    "championId": "XinZhao",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      6692,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3053,
+        "condition": "enemy_has_tanks",
+        "description": "Sterak's Gage — vs tanks (57% pick vs 31% baseline)"
+      },
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_healing",
+        "description": "Blade of The Ruined King — vs healing (33% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 3084,
+        "condition": "enemy_has_tanks",
+        "description": "Heartsteel — vs tanks (29% pick vs 11% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8143,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 35 challenger/grandmaster/master games on patch 15.20 · 40% win rate."
+    ],
+    "winRate": 40,
+    "sampleSize": 35
+  },
+  {
+    "id": 20098,
+    "championId": "Yasuo",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "14.24",
+    "starterItems": [
+      1042
+    ],
+    "coreItems": [
+      3153,
+      6673,
+      3031
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 79 challenger/grandmaster/master games on patch 14.24 · 52% win rate."
+    ],
+    "winRate": 51.9,
+    "sampleSize": 79
+  },
+  {
+    "id": 20107,
+    "championId": "Yone",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1042
+    ],
+    "coreItems": [
+      3153,
+      6673,
+      3031
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 69 challenger/grandmaster/master games on patch 15.19 · 48% win rate."
+    ],
+    "winRate": 47.8,
+    "sampleSize": 69
+  },
+  {
+    "id": 20169,
+    "championId": "Yorick",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      6692,
+      3065
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9103,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8473,
+      8446
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 14 challenger/grandmaster/master games on patch 15.20 · 36% win rate."
+    ],
+    "winRate": 35.7,
+    "sampleSize": 14
+  },
+  {
+    "id": 20060,
+    "championId": "Yunara",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      3032,
+      3085,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (40% pick vs 19% baseline)"
+      },
+      {
+        "itemId": 2512,
+        "condition": "enemy_has_tanks",
+        "description": "Fiendhunter Bolts — vs tanks (30% pick vs 13% baseline)"
+      },
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (40% pick vs 28% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8106
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 54 challenger/grandmaster/master games on patch 15.19 · 52% win rate."
+    ],
+    "winRate": 51.9,
+    "sampleSize": 54
+  },
+  {
+    "id": 20100,
+    "championId": "Yuumi",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.16",
+    "starterItems": [
+      3070,
+      4642
+    ],
+    "coreItems": [
+      6617,
+      3504,
+      3107
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3006
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8017,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 51 challenger/grandmaster/master games on patch 15.16 · 55% win rate."
+    ],
+    "winRate": 54.9,
+    "sampleSize": 51
+  },
+  {
+    "id": 20084,
+    "championId": "Zaahen",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.24",
+    "starterItems": [
+      3133
+    ],
+    "coreItems": [
+      6610,
+      3078,
+      6333
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3161,
+        "condition": "enemy_has_tanks",
+        "description": "Spear of Shojin — vs tanks (50% pick vs 32% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8014
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8473,
+      8453
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5011
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 31 challenger/grandmaster/master games on patch 15.24 · 68% win rate."
+    ],
+    "winRate": 67.7,
+    "sampleSize": 31
+  },
+  {
+    "id": 20154,
+    "championId": "Zac",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1011,
+      1028
+    ],
+    "coreItems": [
+      3084,
+      2502,
+      3065
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3068,
+        "condition": "enemy_heavy_ad",
+        "description": "Sunfire Aegis — vs AD (43% pick vs 11% baseline)"
+      },
+      {
+        "itemId": 2504,
+        "condition": "enemy_heavy_ad",
+        "description": "Kaenic Rookern — vs AD (29% pick vs 9% baseline)"
+      },
+      {
+        "itemId": 6664,
+        "condition": "enemy_heavy_ad",
+        "description": "Hollow Radiance — vs AD (29% pick vs 9% baseline)"
+      },
+      {
+        "itemId": 3083,
+        "condition": "enemy_has_tanks",
+        "description": "Warmog's Armor — vs tanks (62% pick vs 43% baseline)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "enemy_has_healing",
+        "description": "Thornmail — vs healing (33% pick vs 20% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8439,
+    "primaryRuneIds": [
+      8463,
+      8429,
+      8453
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5007,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 35 challenger/grandmaster/master games on patch 15.20 · 40% win rate."
+    ],
+    "winRate": 40,
+    "sampleSize": 35
+  },
+  {
+    "id": 20005,
+    "championId": "Zed",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1036,
+      3134
+    ],
+    "coreItems": [
+      126697,
+      6696,
+      6692
+    ],
+    "situationalItems": [
+      {
+        "itemId": 6694,
+        "condition": "enemy_has_tanks",
+        "description": "Serylda's Grudge — vs tanks (69% pick vs 50% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 76 challenger/grandmaster/master games on patch 15.20 · 46% win rate."
+    ],
+    "winRate": 46.1,
+    "sampleSize": 76
+  },
+  {
+    "id": 20000,
+    "championId": "Zeri",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      1038
+    ],
+    "coreItems": [
+      3032,
+      3085,
+      3031
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (36% pick vs 22% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3006,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
+    "primaryRuneIds": [
+      8009,
+      9103,
+      8014
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
+      8135
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "W",
+    "notes": [
+      "Aggregated from 54 challenger/grandmaster/master games on patch 15.20 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 54
+  },
+  {
+    "id": 20012,
+    "championId": "Ziggs",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      6653,
+      4645
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3165,
+        "condition": "enemy_has_tanks",
+        "description": "Morellonomicon — vs tanks (32% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 2503,
+        "condition": "enemy_heavy_ad",
+        "description": "Blackfire Torch — vs AD (41% pick vs 27% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8229,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 82 challenger/grandmaster/master games on patch 15.19 · 50% win rate."
+    ],
+    "winRate": 50,
+    "sampleSize": 82
+  },
+  {
+    "id": 20048,
+    "championId": "Zilean",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      3003,
+      4629
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3020
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 53 challenger/grandmaster/master games on patch 15.19 · 40% win rate."
+    ],
+    "winRate": 39.6,
+    "sampleSize": 53
+  },
+  {
+    "id": 20049,
+    "championId": "Zoe",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.20",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      6655,
+      4645,
+      3089
+    ],
+    "situationalItems": [
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (38% pick vs 23% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8139,
+      8140,
+      8135
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      8014,
+      8009
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 62 challenger/grandmaster/master games on patch 15.20 · 45% win rate."
+    ],
+    "winRate": 45.2,
+    "sampleSize": 62
+  },
+  {
+    "id": 20149,
+    "championId": "Zyra",
+    "mode": "ARAM",
+    "role": null,
+    "patch": "15.19",
+    "starterItems": [
+      3802
+    ],
+    "coreItems": [
+      2503,
+      6653,
+      3116
+    ],
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3158
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8128,
+    "primaryRuneIds": [
+      8126,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8226,
+      8210
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 73 challenger/grandmaster/master games on patch 15.19 · 56% win rate."
+    ],
+    "winRate": 56.2,
+    "sampleSize": 73
+  }
+]

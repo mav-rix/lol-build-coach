@@ -154,8 +154,13 @@ a separate OS window drawn above the game, never injected into it.
 - Launch: run `C:\Users\Eric\lol-overlay\launch-overlay.bat` on Windows (the WSL
   dev server must be running). Set `OVERLAY_URL` to override the page URL;
   append `?mock=1` for fixture data without a game.
-- Hotkeys: `Ctrl+Shift+O` toggle click-through/interactive, `Ctrl+Shift+H`
-  hide/show, `Ctrl+Shift+Q` quit.
+- Move it: press and hold the **left mouse button on the grip** (the dotted tab
+  at the top of the card) and drag — the window follows and its position is
+  remembered across launches. The grip is grabbable any time; only that tiny grip
+  is solid, so the rest of the overlay stays click-through and never blocks the
+  game or the Tab scoreboard.
+- Hotkeys: `Ctrl+Shift+O` pin the whole overlay interactive (click/scroll it),
+  `Ctrl+Shift+H` hide/show, `Ctrl+Shift+Q` quit.
 - League must be in **Borderless** or Windowed mode (Settings → Video) —
   exclusive Fullscreen draws over everything.
 
@@ -243,6 +248,15 @@ Add `--dry-run` to preview sample builds from already-cached matches (instant,
 no key, no Riot calls) — or a small live pull if the cache is empty — without
 writing the file. A good first look: `npm run aggregate -- --dry-run`.
 
+**Multiple regions + ARAM.** `--region` takes a comma list (`--region na1,kr,euw1`);
+matches from every region are pooled into one merged dataset (each match is
+routed to its correct regional cluster, so mixed-region pools just work), with
+`--matches` applied per region. `--include-cached` folds already-cached matches
+(e.g. a prior region's run) into the pool without re-fetching. `--mode aram`
+ingests queue 450 into a separate per-champion `aggregatedBuildsAram.json` (ARAM
+has no roles); the loader merges SR + ARAM and `findBuild` serves each by mode,
+so ARAM/Mayhem get real win-rate builds instead of pure heuristics.
+
 **Refreshing per patch.** The data is patch-specific, so re-run the aggregator
 when a new patch ships. `--if-stale` makes that cheap: it no-ops if the output
 was already built for the current patch, otherwise runs — so
@@ -262,6 +276,28 @@ situationals. Thresholds are conservative, so thin ingests emit few and degrade
 to seed behaviour. `findBuild` prefers an aggregated build over a seed once it
 clears a confidence bar (`PREFER_AGGREGATED_SAMPLE`); below it, the seed wins.
 Re-run each patch.
+
+## Augment tier list (`/augments`)
+
+Arena / ARAM Mayhem augment win-rates, shown as a ranked reference grouped by
+rarity. Two offline steps, both keyed off the numeric augment id that Match-V5's
+`playerAugmentN` fields use:
+
+```bash
+npm run augments:meta                                   # metadata (no key)
+npm run aggregate:augments -- --region na1 --matches 500 # win-rates (dev key)
+```
+
+- `augments:meta` pulls augment names/icons/rarity from Community Dragon (augments
+  aren't in Data Dragon) → `src/data/augments.json`.
+- `aggregate:augments` tallies augment strength from Arena (queue 1700) matches by
+  **average team placement** (lower is better) and first-place rate →
+  `src/data/augmentStats.json`. It ranks by placement, not `win` — Arena sets
+  `win` unreliably for non-1st teams.
+
+It's a **static** reference by design: the Live Client API doesn't expose which
+augments you're being offered, so this can't be a live "pick this now" helper.
+Both files lazy-load, so they stay out of the initial bundle. Re-run each patch.
 
 ## Roadmap status (per spec)
 

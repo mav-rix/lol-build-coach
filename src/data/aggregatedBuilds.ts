@@ -27,11 +27,21 @@ export const PREFER_AGGREGATED_SAMPLE = 40
 let cache: BuildPath[] = []
 let pending: Promise<BuildPath[]> | null = null
 
-/** Lazily fetch the aggregated-builds chunk (memoized). Resolves the dataset. */
+/**
+ * Lazily fetch the aggregated-builds chunks (memoized). The SR and ARAM datasets
+ * are separate files (ARAM is per-champion, roleless) merged into one cache;
+ * findAggregatedBuild filters by mode.
+ */
 export function loadAggregatedBuilds(): Promise<BuildPath[]> {
   if (!pending) {
-    pending = import('./aggregatedBuilds.json').then((mod) => {
-      cache = mod.default as unknown as BuildPath[]
+    pending = Promise.all([
+      import('./aggregatedBuilds.json'),
+      import('./aggregatedBuildsAram.json'),
+    ]).then(([sr, aram]) => {
+      cache = [
+        ...(sr.default as unknown as BuildPath[]),
+        ...(aram.default as unknown as BuildPath[]),
+      ]
       return cache
     })
   }
@@ -39,23 +49,25 @@ export function loadAggregatedBuilds(): Promise<BuildPath[]> {
 }
 
 /**
- * The aggregated build for a champion+role, or null if none clears the sample
- * floor (or the dataset hasn't loaded yet). SR only (ARAM isn't ingested). When
- * no role is given, returns the champion's most-played aggregated build.
+ * The aggregated build for a champion in a mode, or null if none clears the
+ * sample floor (or the dataset hasn't loaded yet). ARAM is roleless — one build
+ * per champion. For SR, a role selects; with no role, the most-played build.
  */
 export function findAggregatedBuild(
   championId: string,
   role: Role | null | undefined,
   mode: GameMode,
 ): BuildPath | null {
-  if (mode !== 'SR') return null
   const candidates = cache.filter(
     (b) =>
       b.championId === championId &&
-      b.mode === 'SR' &&
+      b.mode === mode &&
       (b.sampleSize ?? 0) >= MIN_AGGREGATED_SAMPLE,
   )
   if (candidates.length === 0) return null
+  const mostPlayed = () =>
+    [...candidates].sort((a, b) => (b.sampleSize ?? 0) - (a.sampleSize ?? 0))[0]
+  if (mode === 'ARAM') return mostPlayed()
   if (role) return candidates.find((b) => b.role === role) ?? null
-  return candidates.sort((a, b) => (b.sampleSize ?? 0) - (a.sampleSize ?? 0))[0]
+  return mostPlayed()
 }

@@ -17,9 +17,13 @@
 //                         without writing the file — great for a first look
 //   --if-stale            no-op if the output was already built for the current
 //                         patch; otherwise run — for a per-patch scheduled job
+//   --include-cached      fold every already-cached match into the merged pool,
+//                         so prior regions/runs join without being re-fetched
+//   --mode <sr|aram>      which mode to aggregate (default sr); aram ingests
+//                         queue 450 into a separate per-champion builds file
 
 import { writeFileSync, readFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs'
-import { join, dirname } from 'node:path'
+import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -33,23 +37,43 @@ const API_KEY = process.env.RIOT_API_KEY
 
 // ---- config ---------------------------------------------------------------
 const args = parseArgs(process.argv.slice(2))
-const PLATFORM = (args.region ?? 'na1').toLowerCase()
-const REGION = regionalCluster(PLATFORM)
+// One or more platforms (comma-separated), e.g. na1,kr,euw1. Matches from all of
+// them are pooled and aggregated into a single dataset. --matches is per region.
+const REGIONS = (args.region ?? 'na1')
+  .split(',')
+  .map((s) => s.trim().toLowerCase())
+  .filter(Boolean)
 const TIERS = (args.tiers ?? 'challenger,grandmaster,master').split(',')
 const MATCH_LIMIT = Number(args.matches ?? 300)
 const PER_PLAYER = Number(args['per-player'] ?? 15)
 const MIN_SAMPLE = Number(args['min-sample'] ?? 3)
 const IF_STALE = Boolean(args['if-stale'])
+const INCLUDE_CACHED = Boolean(args['include-cached'])
 const DRY_RUN = Boolean(args['dry-run'])
 const DRY_LIMIT = Number(args.matches ?? 50)
-const OUT = join(ROOT, args.out ?? 'src/data/aggregatedBuilds.json')
-const QUEUE = 420 // ranked solo/duo
-const SR_MAP = 11
+// --mode sr (ranked Summoner's Rift) or aram (ARAM). ARAM has no roles, so its
+// builds are per-champion and written to a separate file the loader merges.
+const MODE = (args.mode ?? 'sr').toLowerCase()
+const MODE_CFG = {
+  sr: { queue: 420, map: 11, roleless: false, buildMode: 'SR', file: 'src/data/aggregatedBuilds.json' },
+  aram: { queue: 450, map: 12, roleless: true, buildMode: 'ARAM', file: 'src/data/aggregatedBuildsAram.json' },
+}[MODE]
+if (!MODE_CFG) {
+  console.error(`Unknown --mode "${MODE}" (expected sr or aram)`)
+  process.exit(1)
+}
+const OUT = args.out ? resolve(args.out) : join(ROOT, MODE_CFG.file)
+const QUEUE = MODE_CFG.queue
 // Dev key allows 100 req / 2 min ≈ one per 1.2s; hold a floor so we never 429.
 const MIN_INTERVAL = Number(process.env.RIOT_MIN_INTERVAL_MS ?? 1300)
 
-const HOST_PLATFORM = `${PLATFORM}.api.riotgames.com`
-const HOST_REGION = `${REGION}.api.riotgames.com`
+// Platform host serves LEAGUE-V4 (ladders); regional-cluster host serves
+// MATCH-V5. A match id is prefixed with its platform (e.g. NA1_, KR_, EUW1_), so
+// we route each match fetch to the right cluster — essential when the pool mixes
+// regions.
+const platformHost = (p) => `${p}.api.riotgames.com`
+const regionHost = (p) => `${regionalCluster(p)}.api.riotgames.com`
+const regionalHostForMatch = (matchId) => regionHost(matchId.split('_')[0].toLowerCase())
 const ROLE_MAP = { TOP: 'TOP', JUNGLE: 'JUNGLE', MIDDLE: 'MID', BOTTOM: 'ADC', UTILITY: 'SUPPORT' }
 const SUPPORT_STARTER_ID = 3865 // World Atlas — auto-granted, so injected as the support starter
 
@@ -73,6 +97,11 @@ async function riotGet(host, path) {
       continue
     }
     if (res.status === 404) return null
+    if (res.status === 401 || res.status === 403) {
+      console.error(`\n  ✗ ${res.status} from Riot — the dev key is invalid or expired (they last 24h).`)
+      console.error('    Regenerate at developer.riotgames.com, update .env, and re-run — cached matches are kept.')
+      process.exit(1)
+    }
     if (res.status >= 500) {
       console.warn(`  · ${res.status} from Riot, retrying in 3s`)
       await sleep(3000)
@@ -91,7 +120,7 @@ async function cachedMatch(kind, id) {
     kind === 'match'
       ? `/lol/match/v5/matches/${id}`
       : `/lol/match/v5/matches/${id}/timeline`
-  const data = await riotGet(HOST_REGION, path)
+  const data = await riotGet(regionalHostForMatch(id), path)
   if (data) writeFileSync(file, JSON.stringify(data))
   return data
 }
@@ -234,7 +263,7 @@ function skillOrder(timeline, pid) {
 
 export function observeMatch(match, timeline, statik) {
   const info = match.info
-  if (info.queueId !== QUEUE || info.mapId !== SR_MAP) return []
+  if (info.queueId !== QUEUE || info.mapId !== MODE_CFG.map) return []
   const patch = info.gameVersion.split('.').slice(0, 2).join('.')
   const idOf = (name) => statik.champByLower[name.toLowerCase()] ?? name
   const teams = { 100: [], 200: [] }
@@ -242,8 +271,9 @@ export function observeMatch(match, timeline, statik) {
 
   const out = []
   for (const p of info.participants) {
-    const role = ROLE_MAP[p.teamPosition]
-    if (!role) continue
+    // ARAM has no lane assignments — every participant is a per-champion sample.
+    const role = MODE_CFG.roleless ? null : ROLE_MAP[p.teamPosition]
+    if (!MODE_CFG.roleless && !role) continue
     const enemies = teams[p.teamId === 100 ? 200 : 100]
     const buys = purchasesFor(timeline, p.participantId)
     const starters = []
@@ -390,7 +420,7 @@ export function toBuildPath(group, items) {
   return {
     id: idSeq++,
     championId: group[0].championId,
-    mode: 'SR',
+    mode: MODE_CFG.buildMode,
     role: group[0].role,
     patch: modal(group.map((o) => o.patch)),
     starterItems: aggregateStarters(group),
@@ -411,7 +441,7 @@ export function toBuildPath(group, items) {
 }
 
 // ---- pipeline -------------------------------------------------------------
-async function gatherPuuids() {
+async function gatherPuuids(platform) {
   const eps = {
     challenger: '/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5',
     grandmaster: '/lol/league/v4/grandmasterleagues/by-queue/RANKED_SOLO_5x5',
@@ -420,7 +450,7 @@ async function gatherPuuids() {
   const puuids = new Set()
   for (const tier of TIERS) {
     if (!eps[tier]) continue
-    const list = await riotGet(HOST_PLATFORM, eps[tier])
+    const list = await riotGet(platformHost(platform), eps[tier])
     for (const e of list?.entries ?? []) if (e.puuid) puuids.add(e.puuid)
     console.log(`  ${tier}: ${list?.entries?.length ?? 0} entries`)
   }
@@ -467,13 +497,13 @@ function printSampleBuilds(builds, items) {
   }
 }
 
-async function gatherMatchIds(puuids) {
+async function gatherMatchIds(puuids, platform) {
   const ids = new Set()
   const shuffled = puuids.sort(() => Math.random() - 0.5)
   for (const puuid of shuffled) {
     if (ids.size >= MATCH_LIMIT) break
     const list = await riotGet(
-      HOST_REGION,
+      regionHost(platform),
       `/lol/match/v5/matches/by-puuid/${puuid}/ids?queue=${QUEUE}&count=${PER_PLAYER}`,
     )
     for (const id of list ?? []) {
@@ -487,8 +517,8 @@ async function gatherMatchIds(puuids) {
 async function main() {
   console.log(
     DRY_RUN
-      ? `Dry run · region ${PLATFORM} (${REGION}) · up to ${DRY_LIMIT} matches\n`
-      : `Region ${PLATFORM} (${REGION}) · tiers ${TIERS.join('/')} · up to ${MATCH_LIMIT} matches\n`,
+      ? `Dry run · ${REGIONS.join('/')} · up to ${DRY_LIMIT} matches\n`
+      : `Regions ${REGIONS.join('/')} · tiers ${TIERS.join('/')} · up to ${MATCH_LIMIT} matches each\n`,
   )
   console.log('Loading Data Dragon…')
   const statik = await loadStatic()
@@ -520,8 +550,8 @@ async function main() {
         process.exit(1)
       }
       console.log('No cache yet — pulling a small live sample…')
-      const puuids = await gatherPuuids()
-      matchIds = (await gatherMatchIds(puuids)).slice(0, DRY_LIMIT)
+      const puuids = await gatherPuuids(REGIONS[0])
+      matchIds = (await gatherMatchIds(puuids, REGIONS[0])).slice(0, DRY_LIMIT)
       console.log(`  ${matchIds.length} matches\n`)
     }
   } else {
@@ -529,12 +559,26 @@ async function main() {
       console.error('Missing RIOT_API_KEY. Put it in .env (see .env.example) or export it.')
       process.exit(1)
     }
-    console.log('Gathering high-elo players…')
-    const puuids = await gatherPuuids()
-    console.log(`  ${puuids.length} unique players\n`)
-    console.log('Gathering match ids…')
-    matchIds = await gatherMatchIds(puuids)
-    console.log(`  ${matchIds.length} matches\n`)
+    // Gather + pool match ids from every region; the union is aggregated into
+    // one dataset. Already-cached matches (e.g. a prior region) are reused below.
+    const pooled = new Set()
+    for (const platform of REGIONS) {
+      console.log(`Gathering ${platform.toUpperCase()} players…`)
+      const puuids = await gatherPuuids(platform)
+      console.log(`  ${puuids.length} unique players`)
+      console.log(`Gathering ${platform.toUpperCase()} match ids…`)
+      const ids = await gatherMatchIds(puuids, platform)
+      for (const id of ids) pooled.add(id)
+      console.log(`  ${ids.length} matches (${pooled.size} pooled)\n`)
+    }
+    // Fold in every already-cached match (e.g. a prior region's run) so it joins
+    // the merged dataset without re-fetching.
+    if (INCLUDE_CACHED) {
+      const cached = cachedMatchIds()
+      for (const id of cached) pooled.add(id)
+      console.log(`Including ${cached.length} cached matches → ${pooled.size} total\n`)
+    }
+    matchIds = [...pooled]
   }
 
   console.log('Fetching matches + timelines…')
@@ -562,7 +606,9 @@ async function main() {
   const builds = []
   for (const group of groups.values())
     if (group.length >= minSample) builds.push(toBuildPath(group, statik.items))
-  builds.sort((a, b) => a.championId.localeCompare(b.championId) || a.role.localeCompare(b.role))
+  builds.sort(
+    (a, b) => a.championId.localeCompare(b.championId) || (a.role ?? '').localeCompare(b.role ?? ''),
+  )
 
   if (DRY_RUN) {
     printSampleBuilds(builds, statik.items)
