@@ -332,7 +332,8 @@ function aggregateCore(group) {
       freq.set(id, (freq.get(id) ?? 0) + 1)
       idxSum.set(id, (idxSum.get(id) ?? 0) + i)
     })
-  const top = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([id]) => id)
+  // Five legendaries + boots = the full six-slot build.
+  const top = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([id]) => id)
   // Order the popular items by their average purchase position.
   top.sort((a, b) => idxSum.get(a) / freq.get(a) - idxSum.get(b) / freq.get(b))
   return top
