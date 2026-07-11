@@ -6,6 +6,18 @@ recommendations, lightweight live economic tracking, and post-game build analysi
 > LoL Build Coach isn't endorsed by Riot Games. League of Legends and Riot Games
 > are trademarks or registered trademarks of Riot Games, Inc.
 
+## Download
+
+Grab the Windows installer (`LoL-Build-Coach-Setup-<version>.exe`) from the
+[latest release](https://github.com/mav-rix/lol-build-coach/releases/latest)
+and run it — no other setup needed. The app updates itself automatically when
+new versions are released.
+
+The installer is unsigned, so Windows SmartScreen will warn on first run:
+click **More info → Run anyway**. In game, set League to **Borderless** or
+Windowed mode so the overlay can draw over it, and hold **Tab** to show the
+overlay alongside the scoreboard.
+
 ## Features
 
 - **Build** (`/`) — pick your game mode (Summoner's Rift or ARAM), champion, and
