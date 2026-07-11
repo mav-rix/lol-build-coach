@@ -75,7 +75,7 @@ function recommendationsFromPlan(
       goldNeeded: Math.max(0, Math.ceil(cost - gold)),
       source: p.swapReason ? 'situational' : 'core',
     })
-    if (recs.length >= 4) break
+    if (recs.length >= 6) break
   }
   return recs
 }
@@ -247,7 +247,7 @@ export function useLiveBuildState() {
           if (petId) lead(petId, 'Highest win-rate jungle companion for your champion')
         }
       }
-      return recs.slice(0, 5)
+      return recs.slice(0, 6)
     }
     if (champion) {
       return recommendByScore({
