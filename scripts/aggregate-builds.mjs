@@ -324,19 +324,63 @@ function topN(values, n) {
 }
 const modal = (values) => topN(values, 1)[0]
 
+// Greedy CONDITIONAL path: each next core slot is the most frequent item among
+// the observations consistent with the route chosen so far. Flat top-N mixed
+// alternative routes into one path (e.g. Lord Dominik's AND Mortal Reminder —
+// players build one or the other, never both), which made the build ambiguous.
+// Conditioning suppresses low-co-occurrence alternatives organically while
+// keeping legitimate combos (multiple items sharing a component type survive
+// because they genuinely co-occur). The unpicked alternative still surfaces via
+// the comp-conditioned situational swaps, which is where "which route" belongs.
 function aggregateCore(group) {
-  const freq = new Map()
+  const MIN_POOL = 8 // below this, stop narrowing (avoid overfitting a tiny tail)
+  const EXCLUSIVE_COOC = 0.2 // co-occurrence below this = alternative route
+  const chosen = []
+  const banned = new Set()
+  let pool = group
+  while (chosen.length < 5) {
+    const freq = new Map()
+    for (const o of pool)
+      for (const id of o.core) if (!chosen.includes(id) && !banned.has(id)) freq.set(id, (freq.get(id) ?? 0) + 1)
+    let best = null
+    let bestN = 0
+    for (const [id, n] of freq)
+      if (n > bestN) {
+        bestN = n
+        best = id
+      }
+    // A real slot must be common within the consistent pool, not a stray buy —
+    // but stay permissive so small samples still get a build.
+    if (best === null || bestN < Math.max(2, pool.length * 0.15)) break
+    chosen.push(best)
+    // Ban alternatives to the pick: items popular in the group overall but
+    // rarely built ALONGSIDE it (e.g. Mortal Reminder once Lord Dominik's is
+    // chosen — same slot, different route). Measured on the full group so a
+    // shrunken pool can't leak them back in later slots.
+    const withBest = group.filter((o) => o.core.includes(best))
+    if (withBest.length >= 5) {
+      const candidates = new Set()
+      for (const o of group) for (const id of o.core) candidates.add(id)
+      for (const id of candidates) {
+        if (chosen.includes(id) || banned.has(id)) continue
+        const base = group.filter((o) => o.core.includes(id)).length / group.length
+        const cooc = withBest.filter((o) => o.core.includes(id)).length / withBest.length
+        if (base >= 0.15 && cooc < EXCLUSIVE_COOC) banned.add(id)
+      }
+    }
+    const filtered = pool.filter((o) => o.core.includes(best))
+    if (filtered.length >= MIN_POOL) pool = filtered
+  }
+  // Order the route by average purchase position across the whole group.
   const idxSum = new Map()
+  const cnt = new Map()
   for (const o of group)
     o.core.forEach((id, i) => {
-      freq.set(id, (freq.get(id) ?? 0) + 1)
+      if (!chosen.includes(id)) return
       idxSum.set(id, (idxSum.get(id) ?? 0) + i)
+      cnt.set(id, (cnt.get(id) ?? 0) + 1)
     })
-  // Five legendaries + boots = the full six-slot build.
-  const top = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([id]) => id)
-  // Order the popular items by their average purchase position.
-  top.sort((a, b) => idxSum.get(a) / freq.get(a) - idxSum.get(b) / freq.get(b))
-  return top
+  return chosen.sort((a, b) => idxSum.get(a) / cnt.get(a) - idxSum.get(b) / cnt.get(b))
 }
 
 const JUNGLE_PETS = [1101, 1102, 1103] // Scorchclaw / Gustwalker / Mosstomper

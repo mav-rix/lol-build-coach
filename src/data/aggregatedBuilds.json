@@ -10,10 +10,9 @@
     ],
     "coreItems": [
       6697,
-      6699,
       6610,
-      3161,
-      6333
+      6333,
+      3156
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -55,11 +54,8 @@
       1054
     ],
     "coreItems": [
-      6697,
       6699,
-      6695,
-      6610,
-      6698
+      6610
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -101,10 +97,7 @@
       3865
     ],
     "coreItems": [
-      6610,
-      3053,
-      6333,
-      3065
+      6610
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -146,10 +139,8 @@
       1055
     ],
     "coreItems": [
-      6692,
       3161,
       6610,
-      6699,
       6333
     ],
     "situationalItems": [
@@ -199,10 +190,10 @@
     ],
     "coreItems": [
       3118,
-      2503,
       3100,
       3157,
-      3089
+      3089,
+      3102
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -244,11 +235,11 @@
       1056
     ],
     "coreItems": [
-      2503,
       3118,
-      3100,
       4645,
-      3089
+      3157,
+      3089,
+      3102
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -291,10 +282,7 @@
     ],
     "coreItems": [
       3118,
-      4005,
-      3152,
-      3116,
-      4629
+      4005
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -337,12 +325,16 @@
     ],
     "coreItems": [
       2503,
-      3118,
       3100,
       4629,
       3089
     ],
     "situationalItems": [
+      {
+        "itemId": 3118,
+        "condition": "enemy_heavy_ap",
+        "description": "Malignance — vs AP (57% pick vs 40% baseline)"
+      },
       {
         "itemId": 4645,
         "condition": "enemy_heavy_ap",
@@ -389,7 +381,6 @@
     ],
     "coreItems": [
       3146,
-      3152,
       4645,
       3157,
       3089
@@ -436,9 +427,7 @@
     "coreItems": [
       3146,
       4645,
-      3157,
-      3089,
-      3135
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -527,7 +516,6 @@
     ],
     "coreItems": [
       6672,
-      6676,
       2523,
       3031,
       3036
@@ -573,10 +561,7 @@
     ],
     "coreItems": [
       3179,
-      6676,
-      6672,
-      6699,
-      2523
+      6699
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -619,15 +604,20 @@
     "coreItems": [
       6672,
       6676,
-      2523,
       3031,
-      3033
+      3036,
+      3094
     ],
     "situationalItems": [
       {
-        "itemId": 3036,
+        "itemId": 2523,
         "condition": "enemy_heavy_ad",
-        "description": "Lord Dominik's Regards — vs AD (57% pick vs 31% baseline)"
+        "description": "Hexoptics C44 — vs AD (71% pick vs 34% baseline)"
+      },
+      {
+        "itemId": 3033,
+        "condition": "enemy_has_healing",
+        "description": "Mortal Reminder — vs healing (67% pick vs 34% baseline)"
       }
     ],
     "bootsOptions": [
@@ -671,9 +661,7 @@
     "coreItems": [
       3050,
       3190,
-      2525,
-      3109,
-      8020
+      3109
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -761,13 +749,17 @@
       1055
     ],
     "coreItems": [
-      6692,
       6698,
       6699,
-      6333,
-      2517
+      6333
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6692,
+        "condition": "enemy_has_healing",
+        "description": "Eclipse — vs healing (56% pick vs 42% baseline)"
+      }
+    ],
     "bootsOptions": [
       3008,
       3111
@@ -808,10 +800,9 @@
     ],
     "coreItems": [
       6692,
-      6699,
       3161,
       6333,
-      2517
+      3156
     ],
     "situationalItems": [
       {
@@ -862,10 +853,15 @@
       6653,
       3068,
       8020,
-      3075,
-      6665
+      3075
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6665,
+        "condition": "enemy_heavy_ap",
+        "description": "Jak'Sho, The Protean — vs AP (44% pick vs 23% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3047
@@ -906,12 +902,20 @@
     ],
     "coreItems": [
       3050,
-      4005,
-      3190,
-      8020,
-      3109
+      3190
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 8020,
+        "condition": "enemy_has_healing",
+        "description": "Abyssal Mask — vs healing (44% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 4005,
+        "condition": "enemy_heavy_ap",
+        "description": "Imperial Mandate — vs AP (29% pick vs 14% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3047
@@ -953,11 +957,16 @@
     "coreItems": [
       6657,
       3118,
-      3003,
-      6653,
+      3152,
       3157
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3003,
+        "condition": "enemy_heavy_ap",
+        "description": "Archangel's Staff — vs AP (57% pick vs 25% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3009
@@ -999,11 +1008,16 @@
     "coreItems": [
       6657,
       3118,
-      3003,
-      6653,
-      3157
+      3157,
+      3089
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3003,
+        "condition": "enemy_has_tanks",
+        "description": "Archangel's Staff — vs tanks (53% pick vs 33% baseline)"
+      }
+    ],
     "bootsOptions": [
       3009,
       3020
@@ -1043,11 +1057,7 @@
       3865
     ],
     "coreItems": [
-      6657,
-      2524,
-      3110,
-      8010,
-      4005
+      6657
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -1091,7 +1101,6 @@
     "coreItems": [
       6657,
       3118,
-      3003,
       6653,
       3157
     ],
@@ -1137,9 +1146,7 @@
     "coreItems": [
       3118,
       3152,
-      4645,
-      3157,
-      3089
+      4645
     ],
     "situationalItems": [
       {
@@ -1232,11 +1239,8 @@
       1056
     ],
     "coreItems": [
-      2503,
-      6655,
       3118,
-      3152,
-      6653
+      3152
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -1278,17 +1282,22 @@
       1086
     ],
     "coreItems": [
-      6676,
       2523,
       3031,
       3046,
-      3036
+      3036,
+      3026
     ],
     "situationalItems": [
       {
         "itemId": 3097,
         "condition": "enemy_heavy_cc",
         "description": "Stormrazor — vs CC (44% pick vs 20% baseline)"
+      },
+      {
+        "itemId": 6676,
+        "condition": "enemy_heavy_cc",
+        "description": "The Collector — vs CC (56% pick vs 32% baseline)"
       }
     ],
     "bootsOptions": [
@@ -1334,7 +1343,7 @@
       3046,
       3031,
       3033,
-      3036
+      3072
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -1376,11 +1385,8 @@
       1083
     ],
     "coreItems": [
-      6672,
       6696,
-      3004,
-      3118,
-      6676
+      3004
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -1471,7 +1477,6 @@
       2503,
       3116,
       6653,
-      8010,
       3157
     ],
     "situationalItems": [],
@@ -1514,11 +1519,9 @@
       1103
     ],
     "coreItems": [
-      2503,
       3116,
       6653,
-      3157,
-      8010
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -1563,7 +1566,7 @@
       3116,
       6653,
       3157,
-      8010
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -1608,7 +1611,6 @@
       3116,
       2503,
       6653,
-      3165,
       8010
     ],
     "situationalItems": [],
@@ -1697,11 +1699,11 @@
       1056
     ],
     "coreItems": [
-      6655,
       3152,
       4645,
       3089,
-      3135
+      3135,
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -1743,13 +1745,17 @@
       1056
     ],
     "coreItems": [
-      6655,
       3152,
       4645,
-      3089,
       3135
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6655,
+        "condition": "enemy_has_tanks",
+        "description": "Luden's Echo — vs tanks (36% pick vs 18% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3158
@@ -1790,10 +1796,8 @@
     ],
     "coreItems": [
       3115,
-      3152,
       4645,
-      3089,
-      3116
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -1838,10 +1842,15 @@
       3115,
       4645,
       3089,
-      3157,
-      3135
+      3157
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (39% pick vs 23% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3111
@@ -1882,9 +1891,7 @@
     ],
     "coreItems": [
       3115,
-      3116,
       4645,
-      3157,
       3089
     ],
     "situationalItems": [],
@@ -1929,9 +1936,8 @@
     "coreItems": [
       3742,
       3190,
-      3222,
-      3109,
-      2524
+      2524,
+      3107
     ],
     "situationalItems": [
       {
@@ -1981,9 +1987,7 @@
     "coreItems": [
       6672,
       6631,
-      3153,
-      6333,
-      3091
+      6333
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2024,13 +2028,7 @@
     "starterItems": [
       1055
     ],
-    "coreItems": [
-      6631,
-      6672,
-      3153,
-      3071,
-      6673
-    ],
+    "coreItems": [],
     "situationalItems": [],
     "bootsOptions": [
       3047
@@ -2072,8 +2070,6 @@
     "coreItems": [
       3190,
       3050,
-      3110,
-      3109,
       2524
     ],
     "situationalItems": [],
@@ -2118,9 +2114,7 @@
     "coreItems": [
       2503,
       3116,
-      6653,
-      3157,
-      8010
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2165,7 +2159,6 @@
       6653,
       2503,
       3116,
-      4645,
       3157
     ],
     "situationalItems": [],
@@ -2210,9 +2203,7 @@
     "coreItems": [
       2503,
       3116,
-      4645,
-      6653,
-      3157
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2255,10 +2246,7 @@
     ],
     "coreItems": [
       3116,
-      2503,
-      6653,
-      3165,
-      8010
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2302,9 +2290,7 @@
     "coreItems": [
       2503,
       3116,
-      6653,
-      4645,
-      3157
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2347,12 +2333,15 @@
     ],
     "coreItems": [
       3190,
-      3109,
-      2524,
-      2525,
-      3110
+      3109
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 2525,
+        "condition": "enemy_heavy_cc",
+        "description": "Protoplasm Harness — vs CC (29% pick vs 11% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -2392,13 +2381,18 @@
       1101
     ],
     "coreItems": [
-      6676,
       3748,
-      3153,
       3071,
+      2517,
       6333
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (32% pick vs 18% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -2485,7 +2479,6 @@
     ],
     "coreItems": [
       6610,
-      3748,
       6676,
       3071,
       3036
@@ -2530,13 +2523,18 @@
       1055
     ],
     "coreItems": [
-      6676,
       3071,
       3748,
       6333,
-      3031
+      2517
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3031,
+        "condition": "enemy_has_healing",
+        "description": "Infinity Edge — vs healing (38% pick vs 20% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -2577,10 +2575,10 @@
     ],
     "coreItems": [
       2523,
-      6676,
       3031,
       3036,
-      3094
+      3094,
+      3026
     ],
     "situationalItems": [
       {
@@ -2629,10 +2627,8 @@
     ],
     "coreItems": [
       6676,
-      6697,
       2523,
-      3031,
-      2512
+      3031
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2677,8 +2673,7 @@
       2523,
       3031,
       6676,
-      3033,
-      3036
+      3033
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2721,9 +2716,7 @@
     ],
     "coreItems": [
       3078,
-      6697,
       3074,
-      3053,
       6333
     ],
     "situationalItems": [],
@@ -2768,8 +2761,7 @@
     "coreItems": [
       3078,
       3074,
-      3053,
-      6333
+      3053
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2812,10 +2804,7 @@
     ],
     "coreItems": [
       6610,
-      6692,
-      3053,
-      6695,
-      3050
+      3053
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2860,8 +2849,7 @@
       3078,
       3074,
       3161,
-      6333,
-      3053
+      6333
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -2903,22 +2891,16 @@
       1056
     ],
     "coreItems": [
-      2503,
-      6657,
       3003,
       3116,
-      6653
+      6653,
+      3157
     ],
     "situationalItems": [
       {
         "itemId": 3152,
         "condition": "enemy_has_tanks",
         "description": "Hextech Rocketbelt — vs tanks (29% pick vs 14% baseline)"
-      },
-      {
-        "itemId": 3157,
-        "condition": "enemy_has_tanks",
-        "description": "Zhonya's Hourglass — vs tanks (29% pick vs 14% baseline)"
       }
     ],
     "bootsOptions": [
@@ -2962,9 +2944,7 @@
     "coreItems": [
       6657,
       3003,
-      3116,
-      3152,
-      6653
+      3116
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -3008,9 +2988,7 @@
     "coreItems": [
       6657,
       3003,
-      3116,
-      6653,
-      3157
+      3116
     ],
     "situationalItems": [
       {
@@ -3060,9 +3038,7 @@
     "coreItems": [
       3152,
       4633,
-      4005,
-      3742,
-      4401
+      3742
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -3105,10 +3081,8 @@
     ],
     "coreItems": [
       3152,
-      3084,
       3742,
-      4633,
-      3100
+      4633
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -3150,13 +3124,18 @@
       1056
     ],
     "coreItems": [
-      6657,
       3152,
       4633,
-      3742,
-      4401
+      3075,
+      3742
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 4401,
+        "condition": "enemy_heavy_ap",
+        "description": "Force of Nature — vs AP (33% pick vs 11% baseline)"
+      }
+    ],
     "bootsOptions": [
       3009,
       3111
@@ -3195,13 +3174,7 @@
     "starterItems": [
       3865
     ],
-    "coreItems": [
-      3152,
-      3084,
-      3190,
-      3742,
-      2504
-    ],
+    "coreItems": [],
     "situationalItems": [],
     "bootsOptions": [
       3047,
@@ -3243,10 +3216,10 @@
     ],
     "coreItems": [
       3084,
-      3742,
+      3068,
       2502,
-      4633,
-      2504
+      2504,
+      6665
     ],
     "situationalItems": [
       {
@@ -3298,9 +3271,15 @@
       3004,
       6676,
       3031,
-      3036
+      3033
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (48% pick vs 25% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3008
@@ -3341,16 +3320,19 @@
     ],
     "coreItems": [
       3078,
-      6676,
       3004,
-      3031,
-      3033
+      3031
     ],
     "situationalItems": [
       {
         "itemId": 3508,
         "condition": "enemy_has_tanks",
         "description": "Essence Reaver — vs tanks (50% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 6676,
+        "condition": "enemy_heavy_ad",
+        "description": "The Collector — vs AD (44% pick vs 28% baseline)"
       }
     ],
     "bootsOptions": [
@@ -3497,9 +3479,7 @@
     "coreItems": [
       3142,
       6631,
-      3742,
-      3053,
-      6333
+      3742
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -3542,7 +3522,6 @@
     ],
     "coreItems": [
       3142,
-      6631,
       3742,
       3053,
       6333
@@ -3593,10 +3572,7 @@
       1056
     ],
     "coreItems": [
-      3100,
-      3157,
-      4645,
-      3135
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -3637,10 +3613,8 @@
       1101
     ],
     "coreItems": [
-      3152,
       2510,
       4633,
-      6653,
       3157
     ],
     "situationalItems": [],
@@ -3683,11 +3657,10 @@
       1056
     ],
     "coreItems": [
-      3152,
-      3100,
       4645,
       3157,
-      3089
+      3089,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -3730,10 +3703,8 @@
     ],
     "coreItems": [
       4633,
-      3115,
       3100,
-      3157,
-      2510
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -3776,16 +3747,16 @@
     ],
     "coreItems": [
       6697,
-      3072,
       2523,
       3031,
-      3036
+      3036,
+      6673
     ],
     "situationalItems": [
       {
-        "itemId": 6673,
+        "itemId": 3072,
         "condition": "enemy_heavy_cc",
-        "description": "Immortal Shieldbow — vs CC (33% pick vs 12% baseline)"
+        "description": "Bloodthirster — vs CC (58% pick vs 36% baseline)"
       }
     ],
     "bootsOptions": [
@@ -3829,9 +3800,7 @@
     "coreItems": [
       3142,
       6676,
-      6673,
-      3031,
-      3072
+      3031
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -3876,8 +3845,7 @@
       6697,
       2523,
       3031,
-      3072,
-      3033
+      3072
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4009,9 +3977,7 @@
     "coreItems": [
       3084,
       3742,
-      3065,
-      3143,
-      3748
+      3065
     ],
     "situationalItems": [
       {
@@ -4061,7 +4027,6 @@
     "coreItems": [
       3083,
       3084,
-      3748,
       3742,
       3065
     ],
@@ -4154,8 +4119,7 @@
       2510,
       3152,
       4645,
-      3089,
-      3135
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4197,11 +4161,11 @@
       1103
     ],
     "coreItems": [
-      3115,
       2510,
-      3100,
       4645,
-      3089
+      3089,
+      3157,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4244,10 +4208,8 @@
     ],
     "coreItems": [
       2510,
-      3100,
       4645,
-      3089,
-      3135
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4333,9 +4295,7 @@
       1056
     ],
     "coreItems": [
-      3100,
       2510,
-      3115,
       4645,
       3089
     ],
@@ -4381,11 +4341,16 @@
     "coreItems": [
       3100,
       4645,
-      3157,
       3089,
       3135
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (48% pick vs 33% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3008
@@ -4425,11 +4390,9 @@
       1056
     ],
     "coreItems": [
-      3146,
       3100,
       4645,
-      3135,
-      3089
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4472,10 +4435,7 @@
     ],
     "coreItems": [
       3152,
-      4645,
-      4005,
-      3157,
-      3135
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4565,7 +4525,6 @@
     "coreItems": [
       3100,
       3089,
-      4645,
       3135,
       3102
     ],
@@ -4655,11 +4614,7 @@
       1101
     ],
     "coreItems": [
-      3078,
-      6697,
-      3161,
-      2517,
-      3157
+      3078
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4702,7 +4657,6 @@
     "coreItems": [
       3078,
       3004,
-      3146,
       6694,
       2517
     ],
@@ -4753,10 +4707,10 @@
     ],
     "coreItems": [
       3152,
-      6653,
       4645,
       3157,
-      3135
+      3135,
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4799,10 +4753,7 @@
     ],
     "coreItems": [
       3152,
-      6653,
-      2503,
-      3102,
-      4645
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4844,11 +4795,7 @@
       3865
     ],
     "coreItems": [
-      3152,
-      3118,
-      3157,
-      4005,
-      3116
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -4890,9 +4837,7 @@
       1056
     ],
     "coreItems": [
-      4005,
       6653,
-      3118,
       3157,
       4645
     ],
@@ -4938,11 +4883,17 @@
     "coreItems": [
       3074,
       6697,
+      6699,
       6333,
-      3156,
       2517
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3156,
+        "condition": "enemy_has_healing",
+        "description": "Maw of Malmortius — vs healing (25% pick vs 12% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -4983,10 +4934,7 @@
     ],
     "coreItems": [
       3074,
-      6697,
-      6333,
-      3143,
-      3026
+      6697
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -5029,12 +4977,15 @@
     ],
     "coreItems": [
       6697,
-      6699,
-      3153,
       3074,
       6333
     ],
     "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (43% pick vs 25% baseline)"
+      },
       {
         "itemId": 6695,
         "condition": "enemy_has_tanks",
@@ -5082,8 +5033,8 @@
     "coreItems": [
       3074,
       3078,
+      3181,
       6333,
-      3156,
       2517
     ],
     "situationalItems": [],
@@ -5128,9 +5079,7 @@
     "coreItems": [
       2503,
       3100,
-      8010,
-      3157,
-      3089
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -5174,8 +5123,6 @@
     "coreItems": [
       2510,
       3115,
-      4645,
-      4633,
       3157
     ],
     "situationalItems": [
@@ -5188,6 +5135,11 @@
         "itemId": 3152,
         "condition": "enemy_heavy_ap",
         "description": "Hextech Rocketbelt — vs AP (44% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 4645,
+        "condition": "enemy_has_healing",
+        "description": "Shadowflame — vs healing (50% pick vs 33% baseline)"
       }
     ],
     "bootsOptions": [
@@ -5229,7 +5181,6 @@
       1056
     ],
     "coreItems": [
-      2503,
       3100,
       3157,
       4645,
@@ -5282,8 +5233,6 @@
     ],
     "coreItems": [
       3152,
-      3100,
-      8010,
       3157,
       4645
     ],
@@ -5330,7 +5279,6 @@
       2510,
       3100,
       3157,
-      4645,
       3089
     ],
     "situationalItems": [],
@@ -5373,13 +5321,17 @@
       1056
     ],
     "coreItems": [
-      6664,
       3152,
       4005,
-      4633,
       3157
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6664,
+        "condition": "enemy_heavy_cc",
+        "description": "Hollow Radiance — vs CC (43% pick vs 25% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3020
@@ -5420,10 +5372,10 @@
     ],
     "coreItems": [
       3190,
-      8020,
       4005,
       3109,
-      3050
+      3050,
+      2524
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -5466,9 +5418,9 @@
     ],
     "coreItems": [
       6664,
+      6657,
       3152,
       4005,
-      4633,
       3157
     ],
     "situationalItems": [],
@@ -5513,11 +5465,14 @@
     "coreItems": [
       3508,
       6699,
-      6673,
-      3031,
-      3036
+      3031
     ],
     "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (50% pick vs 29% baseline)"
+      },
       {
         "itemId": 3033,
         "condition": "enemy_has_healing",
@@ -5565,11 +5520,16 @@
     "coreItems": [
       3508,
       6676,
-      3036,
-      6673,
+      3033,
       3031
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (52% pick vs 39% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3158
@@ -5611,9 +5571,7 @@
     "coreItems": [
       6631,
       3046,
-      3142,
-      3033,
-      6695
+      3142
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -5657,9 +5615,8 @@
     "coreItems": [
       6631,
       3046,
-      3142,
       3033,
-      3742
+      3031
     ],
     "situationalItems": [
       {
@@ -5709,9 +5666,7 @@
     "coreItems": [
       3078,
       3071,
-      3053,
-      3091,
-      3143
+      3053
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -5754,12 +5709,17 @@
     ],
     "coreItems": [
       3100,
-      3152,
       4645,
       3157,
       3089
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3152,
+        "condition": "enemy_heavy_ad",
+        "description": "Hextech Rocketbelt — vs AD (60% pick vs 34% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3158
@@ -5802,8 +5762,7 @@
       3152,
       3100,
       4645,
-      3089,
-      3157
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -5846,10 +5805,9 @@
     ],
     "coreItems": [
       3152,
-      3100,
+      3119,
       4005,
-      4629,
-      3157
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -5891,11 +5849,11 @@
       1056
     ],
     "coreItems": [
-      6657,
       3152,
-      3003,
       3100,
-      4645
+      4645,
+      3135,
+      3089
     ],
     "situationalItems": [
       {
@@ -5995,10 +5953,7 @@
     ],
     "coreItems": [
       3142,
-      3508,
-      3033,
-      6676,
-      6610
+      6676
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6043,8 +5998,7 @@
       3508,
       3072,
       6676,
-      6673,
-      3031
+      6673
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6086,17 +6040,16 @@
       1101
     ],
     "coreItems": [
-      3115,
       2510,
       4645,
-      4633,
-      3089
+      3089,
+      3157
     ],
     "situationalItems": [
       {
-        "itemId": 3157,
-        "condition": "enemy_has_healing",
-        "description": "Zhonya's Hourglass — vs healing (40% pick vs 17% baseline)"
+        "itemId": 4633,
+        "condition": "enemy_heavy_ad",
+        "description": "Riftmaker — vs AD (47% pick vs 29% baseline)"
       },
       {
         "itemId": 3100,
@@ -6144,7 +6097,6 @@
     ],
     "coreItems": [
       3100,
-      2510,
       4645,
       3089,
       3135
@@ -6192,8 +6144,7 @@
       2510,
       4633,
       3115,
-      4645,
-      3089
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6238,8 +6189,7 @@
       3161,
       3071,
       6333,
-      2517,
-      3156
+      2517
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6285,7 +6235,7 @@
       3089,
       4645,
       3157,
-      3135
+      3102
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6328,16 +6278,20 @@
     ],
     "coreItems": [
       2503,
-      6653,
       4645,
       3089,
-      3157
+      3135
     ],
     "situationalItems": [
       {
-        "itemId": 3135,
+        "itemId": 3157,
         "condition": "enemy_heavy_ad",
-        "description": "Void Staff — vs AD (50% pick vs 11% baseline)"
+        "description": "Zhonya's Hourglass — vs AD (50% pick vs 33% baseline)"
+      },
+      {
+        "itemId": 6653,
+        "condition": "enemy_heavy_ad",
+        "description": "Liandry's Torment — vs AD (33% pick vs 19% baseline)"
       }
     ],
     "bootsOptions": [
@@ -6379,10 +6333,8 @@
       3865
     ],
     "coreItems": [
-      6655,
       3116,
       2503,
-      3157,
       6653
     ],
     "situationalItems": [],
@@ -6426,12 +6378,15 @@
     ],
     "coreItems": [
       2503,
-      3089,
-      6653,
       4645,
       3157
     ],
     "situationalItems": [
+      {
+        "itemId": 3089,
+        "condition": "enemy_has_tanks",
+        "description": "Rabadon's Deathcap — vs tanks (48% pick vs 33% baseline)"
+      },
       {
         "itemId": 3135,
         "condition": "enemy_has_tanks",
@@ -6478,9 +6433,8 @@
     ],
     "coreItems": [
       2503,
-      6653,
-      3152,
       4645,
+      3157,
       3089
     ],
     "situationalItems": [],
@@ -6524,10 +6478,7 @@
     ],
     "coreItems": [
       2503,
-      3152,
-      6653,
-      4645,
-      3089
+      3152
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6569,17 +6520,15 @@
       3865
     ],
     "coreItems": [
-      6655,
       2503,
       6653,
-      4628,
-      3157
+      4645
     ],
     "situationalItems": [
       {
-        "itemId": 4645,
-        "condition": "enemy_has_tanks",
-        "description": "Shadowflame — vs tanks (30% pick vs 15% baseline)"
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (50% pick vs 22% baseline)"
       }
     ],
     "bootsOptions": [
@@ -6622,8 +6571,6 @@
     ],
     "coreItems": [
       2503,
-      6653,
-      3152,
       4645,
       3157
     ],
@@ -6632,6 +6579,11 @@
         "itemId": 3135,
         "condition": "enemy_heavy_ap",
         "description": "Void Staff — vs AP (38% pick vs 16% baseline)"
+      },
+      {
+        "itemId": 3152,
+        "condition": "enemy_heavy_ad",
+        "description": "Hextech Rocketbelt — vs AD (43% pick vs 26% baseline)"
       },
       {
         "itemId": 8010,
@@ -6678,7 +6630,6 @@
       1055
     ],
     "coreItems": [
-      6610,
       3161,
       3071,
       3053,
@@ -6725,10 +6676,9 @@
     ],
     "coreItems": [
       3071,
-      6610,
       6662,
       3053,
-      6333
+      2501
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6771,7 +6721,6 @@
     ],
     "coreItems": [
       3153,
-      6672,
       3091,
       3181,
       6333
@@ -6818,9 +6767,9 @@
     "coreItems": [
       3153,
       6672,
-      3181,
       3091,
-      6333
+      6333,
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6864,7 +6813,6 @@
     "coreItems": [
       3153,
       3181,
-      6672,
       3091,
       6333
     ],
@@ -6911,7 +6859,6 @@
       6620,
       3107,
       6617,
-      3504,
       6621
     ],
     "situationalItems": [],
@@ -6955,10 +6902,8 @@
     ],
     "coreItems": [
       6620,
-      6616,
       3107,
-      6617,
-      4005
+      6617
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -6999,11 +6944,7 @@
       1056
     ],
     "coreItems": [
-      3118,
-      3152,
-      4005,
-      2510,
-      3157
+      3118
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -7045,9 +6986,7 @@
     ],
     "coreItems": [
       6617,
-      2065,
       3107,
-      3222,
       6621
     ],
     "situationalItems": [],
@@ -7090,11 +7029,8 @@
       1103
     ],
     "coreItems": [
-      6698,
       6610,
-      6696,
-      3071,
-      6333
+      3071
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -7137,10 +7073,7 @@
     ],
     "coreItems": [
       3179,
-      6699,
-      6610,
-      6695,
-      3071
+      6610
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -7182,11 +7115,7 @@
       1120
     ],
     "coreItems": [
-      6664,
-      3084,
-      6692,
-      3119,
-      3065
+      3119
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -7231,7 +7160,6 @@
       3078,
       6610,
       3157,
-      6333,
       3091
     ],
     "situationalItems": [
@@ -7283,8 +7211,8 @@
       6631,
       3078,
       3146,
-      6610,
-      3157
+      3157,
+      2504
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -7327,8 +7255,6 @@
     ],
     "coreItems": [
       6610,
-      4005,
-      3053,
       3050,
       3157
     ],
@@ -7373,10 +7299,9 @@
     ],
     "coreItems": [
       3078,
-      2510,
-      3153,
       6610,
-      3157
+      3157,
+      6333
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -7420,11 +7345,20 @@
     "coreItems": [
       3142,
       6699,
-      3004,
-      3814,
-      6695
+      3004
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6695,
+        "condition": "enemy_heavy_ad",
+        "description": "Serpent's Fang — vs AD (33% pick vs 19% baseline)"
+      },
+      {
+        "itemId": 3814,
+        "condition": "enemy_heavy_ad",
+        "description": "Edge of Night — vs AD (33% pick vs 19% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3008
@@ -7466,9 +7400,9 @@
     "coreItems": [
       3142,
       6699,
-      2520,
       3814,
-      6694
+      6694,
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -7513,7 +7447,7 @@
       3142,
       6699,
       3004,
-      6695,
+      3814,
       6694
     ],
     "situationalItems": [],
@@ -7556,11 +7490,7 @@
       3865
     ],
     "coreItems": [
-      3179,
-      3142,
-      3814,
-      6699,
-      3033
+      3142
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -7605,10 +7535,15 @@
       3142,
       3004,
       6699,
-      6695,
-      6694
+      6694,
+      3814
     ],
     "situationalItems": [
+      {
+        "itemId": 6695,
+        "condition": "enemy_heavy_cc",
+        "description": "Serpent's Fang — vs CC (75% pick vs 22% baseline)"
+      },
       {
         "itemId": 6692,
         "condition": "enemy_heavy_cc",
@@ -7757,10 +7692,8 @@
       1055
     ],
     "coreItems": [
-      3097,
       6676,
       6697,
-      3094,
       3031
     ],
     "situationalItems": [],
@@ -7805,7 +7738,6 @@
     "coreItems": [
       2523,
       3046,
-      3085,
       3031,
       3036
     ],
@@ -7850,9 +7782,7 @@
     ],
     "coreItems": [
       6672,
-      3087,
       3124,
-      3046,
       3115
     ],
     "situationalItems": [
@@ -7949,9 +7879,7 @@
     "coreItems": [
       3087,
       3004,
-      6655,
-      3115,
-      3157
+      6655
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8041,7 +7969,6 @@
     "coreItems": [
       3087,
       3124,
-      3091,
       3302,
       6665
     ],
@@ -8093,9 +8020,7 @@
     "coreItems": [
       3087,
       3124,
-      3046,
-      3302,
-      6665
+      3302
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8140,7 +8065,6 @@
       3087,
       3124,
       3302,
-      3143,
       6665
     ],
     "situationalItems": [],
@@ -8185,9 +8109,7 @@
     "coreItems": [
       3118,
       4628,
-      3089,
-      4645,
-      3107
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8231,8 +8153,6 @@
     "coreItems": [
       6620,
       6617,
-      2065,
-      3222,
       3107
     ],
     "situationalItems": [],
@@ -8275,7 +8195,6 @@
       1056
     ],
     "coreItems": [
-      6657,
       3118,
       4628,
       4629,
@@ -8373,8 +8292,8 @@
     ],
     "coreItems": [
       2503,
-      6653,
       4645,
+      3157,
       3089,
       3135
     ],
@@ -8421,7 +8340,6 @@
       2503,
       4645,
       6653,
-      3157,
       3135
     ],
     "situationalItems": [],
@@ -8465,9 +8383,7 @@
     ],
     "coreItems": [
       2503,
-      6653,
-      4645,
-      3157
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8510,7 +8426,6 @@
     "coreItems": [
       2503,
       6653,
-      3157,
       4645,
       3089
     ],
@@ -8554,10 +8469,7 @@
       1056
     ],
     "coreItems": [
-      6657,
-      3100,
-      3118,
-      3003
+      6657
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8600,7 +8512,6 @@
     ],
     "coreItems": [
       6657,
-      3004,
       3118,
       3003,
       3157
@@ -8646,10 +8557,8 @@
     ],
     "coreItems": [
       6657,
-      3004,
       3003,
-      3118,
-      3157
+      3118
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8695,7 +8604,7 @@
       3153,
       3302,
       6333,
-      3073
+      6665
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8738,7 +8647,6 @@
     ],
     "coreItems": [
       3100,
-      3146,
       4645,
       3157,
       3089
@@ -8784,10 +8692,7 @@
     ],
     "coreItems": [
       6672,
-      3073,
-      3302,
-      6631,
-      3143
+      3073
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8876,7 +8781,6 @@
     "coreItems": [
       3115,
       2510,
-      3100,
       3089,
       4645
     ],
@@ -8924,7 +8828,7 @@
       2510,
       3089,
       4645,
-      3135
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -8969,7 +8873,7 @@
       6697,
       6699,
       6696,
-      6695,
+      3814,
       6694
     ],
     "situationalItems": [
@@ -9023,11 +8927,10 @@
       1055
     ],
     "coreItems": [
+      6697,
       6699,
-      3161,
       3071,
-      6694,
-      6333
+      6696
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9070,9 +8973,7 @@
     ],
     "coreItems": [
       3152,
-      4645,
-      3157,
-      3089
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9116,9 +9017,7 @@
     "coreItems": [
       3152,
       4645,
-      3135,
-      3157,
-      3089
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9163,7 +9062,6 @@
       3152,
       4645,
       3157,
-      3135,
       3089
     ],
     "situationalItems": [],
@@ -9208,9 +9106,9 @@
     "coreItems": [
       3179,
       6699,
-      6695,
       3814,
-      6694
+      6694,
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9253,7 +9151,6 @@
     ],
     "coreItems": [
       6672,
-      3078,
       6676,
       2523,
       3036
@@ -9299,10 +9196,7 @@
     ],
     "coreItems": [
       6672,
-      3508,
-      3036,
-      3031,
-      6676
+      3508
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9346,8 +9240,6 @@
     "coreItems": [
       3748,
       6698,
-      3181,
-      3071,
       3031
     ],
     "situationalItems": [],
@@ -9389,11 +9281,10 @@
       1055
     ],
     "coreItems": [
-      3748,
       6698,
       6699,
-      3071,
-      6695
+      6695,
+      3033
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9435,11 +9326,7 @@
       3865
     ],
     "coreItems": [
-      3156,
-      3153,
-      3748,
-      3071,
-      3033
+      3748
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9482,10 +9369,7 @@
     ],
     "coreItems": [
       3748,
-      6698,
-      3071,
-      3181,
-      2501
+      3181
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9528,18 +9412,12 @@
     ],
     "coreItems": [
       3124,
-      3153,
       6675,
+      3091,
       3085,
       3302
     ],
-    "situationalItems": [
-      {
-        "itemId": 3091,
-        "condition": "enemy_heavy_ap",
-        "description": "Wit's End — vs AP (43% pick vs 26% baseline)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       3006,
       3008
@@ -9579,7 +9457,6 @@
       1056
     ],
     "coreItems": [
-      6655,
       2510,
       4645,
       3089,
@@ -9625,7 +9502,6 @@
       1086
     ],
     "coreItems": [
-      2510,
       6675,
       3091,
       3124,
@@ -9766,8 +9642,7 @@
       3050,
       3190,
       3109,
-      6665,
-      3110
+      6665
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9812,8 +9687,8 @@
       6662,
       2504,
       2502,
-      3075,
-      6665
+      6665,
+      2525
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9858,7 +9733,6 @@
       6655,
       4645,
       3089,
-      3135,
       3157
     ],
     "situationalItems": [],
@@ -9902,10 +9776,7 @@
     ],
     "coreItems": [
       6655,
-      4005,
-      4645,
-      3157,
-      3089
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -9950,7 +9821,6 @@
       6655,
       4645,
       3089,
-      3137,
       3135
     ],
     "situationalItems": [],
@@ -9995,11 +9865,17 @@
     "coreItems": [
       6692,
       6610,
-      3071,
       6333,
-      3156
+      3156,
+      3026
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3071,
+        "condition": "enemy_heavy_cc",
+        "description": "Black Cleaver — vs CC (53% pick vs 31% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3047
@@ -10041,7 +9917,6 @@
     "coreItems": [
       3074,
       6692,
-      6699,
       6610,
       6333
     ],
@@ -10055,6 +9930,11 @@
         "itemId": 6698,
         "condition": "enemy_has_tanks",
         "description": "Profane Hydra — vs tanks (33% pick vs 16% baseline)"
+      },
+      {
+        "itemId": 6699,
+        "condition": "enemy_has_healing",
+        "description": "Voltaic Cyclosword — vs healing (43% pick vs 26% baseline)"
       }
     ],
     "bootsOptions": [
@@ -10096,7 +9976,6 @@
       3865
     ],
     "coreItems": [
-      6610,
       6697,
       3179,
       6699,
@@ -10142,10 +10021,8 @@
       1055
     ],
     "coreItems": [
-      3074,
       6692,
       6610,
-      3071,
       6333
     ],
     "situationalItems": [],
@@ -10189,12 +10066,16 @@
     ],
     "coreItems": [
       3190,
-      3050,
       2525,
-      3109,
-      3075
+      3109
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3050,
+        "condition": "enemy_heavy_cc",
+        "description": "Zeke's Convergence — vs CC (25% pick vs 13% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -10236,9 +10117,9 @@
     "coreItems": [
       6653,
       4633,
-      3116,
       3157,
-      3089
+      8010,
+      3165
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -10281,10 +10162,8 @@
     ],
     "coreItems": [
       2503,
-      3118,
-      4645,
-      3089,
-      3135
+      6653,
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -10327,8 +10206,6 @@
     ],
     "coreItems": [
       3118,
-      2503,
-      3152,
       4645,
       3157
     ],
@@ -10373,8 +10250,6 @@
     ],
     "coreItems": [
       4005,
-      3157,
-      3190,
       3152
     ],
     "situationalItems": [],
@@ -10417,9 +10292,8 @@
     ],
     "coreItems": [
       2503,
-      3118,
-      4005,
       3152,
+      4005,
       3157
     ],
     "situationalItems": [],
@@ -10465,10 +10339,15 @@
       3100,
       4645,
       3089,
-      3157,
-      3135
+      3157
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (33% pick vs 18% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3111
@@ -10511,8 +10390,7 @@
       3100,
       4645,
       3157,
-      3089,
-      3135
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -10555,7 +10433,6 @@
     ],
     "coreItems": [
       3100,
-      3152,
       4645,
       3157,
       3089
@@ -10601,10 +10478,7 @@
     ],
     "coreItems": [
       3100,
-      3152,
-      3157,
-      4645,
-      3089
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -10647,10 +10521,10 @@
     ],
     "coreItems": [
       3100,
-      3152,
       4645,
       3157,
-      3089
+      3089,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -10695,8 +10569,8 @@
       3508,
       6675,
       3031,
-      3033,
-      3036
+      3036,
+      3072
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -10740,11 +10614,15 @@
     "coreItems": [
       3508,
       6675,
-      3071,
-      3031,
-      3036
+      3031
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3071,
+        "condition": "enemy_heavy_ap",
+        "description": "Black Cleaver — vs AP (33% pick vs 19% baseline)"
+      }
+    ],
     "bootsOptions": [
       3008,
       3047
@@ -10785,7 +10663,6 @@
     ],
     "coreItems": [
       3508,
-      6672,
       6675,
       3031,
       3071
@@ -10832,11 +10709,15 @@
     "coreItems": [
       3504,
       6617,
-      3107,
-      3222,
-      2065
+      3107
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3222,
+        "condition": "enemy_heavy_cc",
+        "description": "Mikael's Blessing — vs CC (44% pick vs 26% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3009
@@ -10876,7 +10757,6 @@
       1056
     ],
     "coreItems": [
-      6655,
       3118,
       4645,
       3089,
@@ -10923,8 +10803,6 @@
     ],
     "coreItems": [
       6655,
-      3118,
-      3152,
       4645,
       3089
     ],
@@ -10974,11 +10852,7 @@
       3865
     ],
     "coreItems": [
-      6655,
-      2065,
-      3118,
-      4005,
-      4645
+      6655
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -11021,8 +10895,6 @@
     ],
     "coreItems": [
       6655,
-      3118,
-      3157,
       4645,
       3135
     ],
@@ -11066,11 +10938,7 @@
       1056
     ],
     "coreItems": [
-      3050,
-      3110,
-      3075,
-      3109,
-      3143
+      3050
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -11158,17 +11026,21 @@
       1056
     ],
     "coreItems": [
-      6664,
-      3050,
+      3118,
       3068,
       3110,
       3075
     ],
     "situationalItems": [
       {
-        "itemId": 3118,
-        "condition": "enemy_heavy_ad",
-        "description": "Malignance — vs AD (50% pick vs 24% baseline)"
+        "itemId": 3050,
+        "condition": "enemy_heavy_ap",
+        "description": "Zeke's Convergence — vs AP (57% pick vs 29% baseline)"
+      },
+      {
+        "itemId": 6664,
+        "condition": "enemy_heavy_ap",
+        "description": "Hollow Radiance — vs AP (57% pick vs 29% baseline)"
       }
     ],
     "bootsOptions": [
@@ -11211,7 +11083,6 @@
     ],
     "coreItems": [
       3050,
-      3075,
       3143,
       3110,
       2525
@@ -11257,16 +11128,16 @@
     ],
     "coreItems": [
       3068,
-      6664,
       3110,
       3075,
-      2504
+      2504,
+      6665
     ],
     "situationalItems": [
       {
-        "itemId": 6665,
+        "itemId": 6664,
         "condition": "enemy_heavy_cc",
-        "description": "Jak'Sho, The Protean — vs CC (33% pick vs 14% baseline)"
+        "description": "Hollow Radiance — vs CC (33% pick vs 20% baseline)"
       }
     ],
     "bootsOptions": [
@@ -11311,8 +11182,8 @@
       2503,
       3116,
       6653,
-      3137,
-      3135
+      8010,
+      3137
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -11355,10 +11226,8 @@
     ],
     "coreItems": [
       2503,
-      3118,
       6653,
-      3116,
-      3157
+      3116
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -11401,10 +11270,8 @@
     ],
     "coreItems": [
       2503,
-      3118,
       3116,
-      6653,
-      3003
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -11500,11 +11367,15 @@
     "coreItems": [
       3190,
       2524,
-      2525,
-      3109,
-      3075
+      2525
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3075,
+        "condition": "enemy_has_tanks",
+        "description": "Thornmail — vs tanks (38% pick vs 16% baseline)"
+      }
+    ],
     "bootsOptions": [
       3009,
       3111
@@ -11544,13 +11415,17 @@
       1120
     ],
     "coreItems": [
-      6664,
       2502,
-      3065,
       3119,
-      3110
+      3110,
+      3109
     ],
     "situationalItems": [
+      {
+        "itemId": 6664,
+        "condition": "enemy_heavy_ad",
+        "description": "Hollow Radiance — vs AD (50% pick vs 21% baseline)"
+      },
       {
         "itemId": 4005,
         "condition": "enemy_has_tanks",
@@ -11598,7 +11473,6 @@
     "coreItems": [
       6672,
       6676,
-      3124,
       3036,
       3031
     ],
@@ -11644,7 +11518,6 @@
     "coreItems": [
       6672,
       3124,
-      3153,
       3073,
       6333
     ],
@@ -11838,12 +11711,17 @@
     ],
     "coreItems": [
       6655,
-      2503,
       3152,
       4645,
-      3089
+      3089,
+      3135
     ],
     "situationalItems": [
+      {
+        "itemId": 2503,
+        "condition": "enemy_has_tanks",
+        "description": "Blackfire Torch — vs tanks (56% pick vs 34% baseline)"
+      },
       {
         "itemId": 3157,
         "condition": "enemy_heavy_ad",
@@ -11890,12 +11768,20 @@
     ],
     "coreItems": [
       6655,
-      2503,
-      3152,
-      4645,
-      3157
+      4645
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 2503,
+        "condition": "enemy_heavy_ad",
+        "description": "Blackfire Torch — vs AD (46% pick vs 25% baseline)"
+      },
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (31% pick vs 18% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3158
@@ -11934,13 +11820,7 @@
     "starterItems": [
       1056
     ],
-    "coreItems": [
-      2510,
-      6617,
-      2065,
-      3107,
-      6620
-    ],
+    "coreItems": [],
     "situationalItems": [],
     "bootsOptions": [
       3158,
@@ -11983,9 +11863,7 @@
     "coreItems": [
       6620,
       6617,
-      3504,
-      3107,
-      2065
+      3504
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12028,10 +11906,7 @@
     ],
     "coreItems": [
       6655,
-      4628,
-      6616,
-      3089,
-      3137
+      4628
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12072,11 +11947,11 @@
       1086
     ],
     "coreItems": [
-      6697,
       3072,
       6676,
       3036,
-      3031
+      3031,
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12119,10 +11994,7 @@
     ],
     "coreItems": [
       3072,
-      6696,
-      6676,
-      3153,
-      3031
+      6676
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12167,8 +12039,7 @@
       3078,
       6610,
       3071,
-      6333,
-      3156
+      6333
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12211,10 +12082,8 @@
     ],
     "coreItems": [
       6698,
-      6692,
       6699,
-      6333,
-      3071
+      6333
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12257,7 +12126,6 @@
     ],
     "coreItems": [
       3078,
-      6698,
       3071,
       6610,
       6333
@@ -12407,9 +12275,8 @@
     "coreItems": [
       3116,
       4633,
-      3152,
       6653,
-      3157
+      3065
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12452,7 +12319,6 @@
     ],
     "coreItems": [
       2503,
-      8010,
       6653,
       3157,
       4005
@@ -12498,10 +12364,7 @@
     ],
     "coreItems": [
       2503,
-      6653,
-      3157,
-      3116,
-      4005
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12544,8 +12407,6 @@
     ],
     "coreItems": [
       2503,
-      3152,
-      4645,
       6653,
       3157
     ],
@@ -12589,8 +12450,6 @@
       3865
     ],
     "coreItems": [
-      2503,
-      6653,
       4005,
       3157,
       3116
@@ -12635,7 +12494,6 @@
       1056
     ],
     "coreItems": [
-      6653,
       2503
     ],
     "situationalItems": [],
@@ -12679,7 +12537,6 @@
     ],
     "coreItems": [
       6699,
-      6696,
       3814,
       6694,
       2517
@@ -12726,9 +12583,9 @@
     "coreItems": [
       6699,
       6696,
-      3071,
+      3814,
       6694,
-      6333
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12772,11 +12629,17 @@
     "coreItems": [
       6699,
       6696,
-      6695,
       3814,
-      6694
+      6694,
+      6333
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6695,
+        "condition": "enemy_has_tanks",
+        "description": "Serpent's Fang — vs tanks (35% pick vs 21% baseline)"
+      }
+    ],
     "bootsOptions": [
       3008,
       3111
@@ -12816,10 +12679,8 @@
       3865
     ],
     "coreItems": [
-      6697,
       6699,
       6695,
-      6696,
       3814
     ],
     "situationalItems": [],
@@ -12864,7 +12725,6 @@
     "coreItems": [
       6699,
       6696,
-      3071,
       3814,
       6694
     ],
@@ -12878,6 +12738,11 @@
         "itemId": 2517,
         "condition": "enemy_has_tanks",
         "description": "Endless Hunger — vs tanks (25% pick vs 8% baseline)"
+      },
+      {
+        "itemId": 3071,
+        "condition": "enemy_has_tanks",
+        "description": "Black Cleaver — vs tanks (38% pick vs 21% baseline)"
       },
       {
         "itemId": 6333,
@@ -12925,10 +12790,7 @@
     ],
     "coreItems": [
       6620,
-      4005,
-      6616,
-      6617,
-      3107
+      6617
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -12970,7 +12832,6 @@
       1102
     ],
     "coreItems": [
-      3078,
       2525,
       6662,
       3065,
@@ -13019,10 +12880,15 @@
       3078,
       2524,
       3110,
-      4401,
-      3053
+      4401
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3053,
+        "condition": "enemy_heavy_ad",
+        "description": "Sterak's Gage — vs AD (33% pick vs 10% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3111
@@ -13062,11 +12928,8 @@
       1054
     ],
     "coreItems": [
-      3508,
       3078,
-      3110,
-      3065,
-      2512
+      3110
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -13110,9 +12973,7 @@
     "coreItems": [
       3190,
       2525,
-      3109,
-      2524,
-      3075
+      3109
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -13200,7 +13061,6 @@
       3152,
       4645,
       4005,
-      3146,
       3157
     ],
     "situationalItems": [],
@@ -13287,13 +13147,16 @@
       1056
     ],
     "coreItems": [
-      6655,
-      3118,
       3152,
-      4645,
-      3157
+      4645
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (50% pick vs 22% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3158
@@ -13334,10 +13197,7 @@
     ],
     "coreItems": [
       3152,
-      4005,
-      8020,
-      3157,
-      3110
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -13379,10 +13239,7 @@
       1056
     ],
     "coreItems": [
-      6655,
-      2503,
       3152,
-      3135,
       3157
     ],
     "situationalItems": [],
@@ -13427,11 +13284,21 @@
     "coreItems": [
       3100,
       3152,
-      4645,
       3157,
-      3089
+      3135
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 4645,
+        "condition": "enemy_heavy_cc",
+        "description": "Shadowflame — vs CC (50% pick vs 19% baseline)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "enemy_heavy_cc",
+        "description": "Rabadon's Deathcap — vs CC (33% pick vs 16% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3158
@@ -13472,9 +13339,7 @@
     ],
     "coreItems": [
       6620,
-      4645,
       6617,
-      3222,
       3107
     ],
     "situationalItems": [],
@@ -13565,9 +13430,9 @@
     "coreItems": [
       6676,
       3031,
-      3033,
       3036,
-      6673
+      6673,
+      3072
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -13610,9 +13475,8 @@
     ],
     "coreItems": [
       3073,
-      6698,
       6631,
-      6696,
+      3071,
       6333
     ],
     "situationalItems": [],
@@ -13657,9 +13521,7 @@
     ],
     "coreItems": [
       6698,
-      6631,
       6696,
-      6692,
       6694
     ],
     "situationalItems": [],
@@ -13750,9 +13612,7 @@
     "coreItems": [
       6653,
       3152,
-      3742,
-      3157,
-      2504
+      3742
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -13795,10 +13655,7 @@
     ],
     "coreItems": [
       3152,
-      6653,
-      4645,
-      3157,
-      3135
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -13884,10 +13741,7 @@
     ],
     "coreItems": [
       3152,
-      3119,
-      4633,
-      3109,
-      8010
+      3109
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -13931,7 +13785,7 @@
     "coreItems": [
       6697,
       3074,
-      6631,
+      3156,
       6333,
       2512
     ],
@@ -13977,7 +13831,6 @@
     "coreItems": [
       6631,
       3073,
-      6610,
       6333,
       3156
     ],
@@ -14022,10 +13875,9 @@
     ],
     "coreItems": [
       3074,
-      6631,
-      3156,
-      3073,
-      6333
+      2512,
+      6333,
+      3036
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -14067,11 +13919,10 @@
       1055
     ],
     "coreItems": [
-      3074,
       6631,
       3073,
       6333,
-      2512
+      3156
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -14114,10 +13965,7 @@
     ],
     "coreItems": [
       6655,
-      4645,
-      3152,
-      3157,
-      3135
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -14160,10 +14008,7 @@
     ],
     "coreItems": [
       6655,
-      2503,
-      3152,
-      4645,
-      3089
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -14206,7 +14051,6 @@
     ],
     "coreItems": [
       6655,
-      6657,
       3003,
       3157,
       3089
@@ -14297,11 +14141,8 @@
       3865
     ],
     "coreItems": [
-      3050,
       3109,
-      3190,
-      3075,
-      2525
+      3190
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -14343,11 +14184,8 @@
       1054
     ],
     "coreItems": [
-      3068,
-      3110,
       2502,
-      2504,
-      3075
+      2504
     ],
     "situationalItems": [
       {
@@ -14364,6 +14202,11 @@
         "itemId": 3143,
         "condition": "enemy_heavy_cc",
         "description": "Randuin's Omen — vs CC (29% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 3110,
+        "condition": "enemy_heavy_ad",
+        "description": "Frozen Heart — vs AD (34% pick vs 20% baseline)"
       }
     ],
     "bootsOptions": [
@@ -14405,10 +14248,8 @@
       1055
     ],
     "coreItems": [
-      6692,
       6610,
       6699,
-      3071,
       3814
     ],
     "situationalItems": [],
@@ -14451,13 +14292,17 @@
       1102
     ],
     "coreItems": [
-      6699,
       6610,
       3071,
-      6333,
-      3026
+      6333
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3026,
+        "condition": "enemy_heavy_ad",
+        "description": "Guardian Angel — vs AD (31% pick vs 15% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3047
@@ -14498,12 +14343,20 @@
     ],
     "coreItems": [
       3142,
-      6699,
-      6610,
-      3071,
-      3814
+      6699
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3814,
+        "condition": "enemy_heavy_ap",
+        "description": "Edge of Night — vs AP (29% pick vs 14% baseline)"
+      },
+      {
+        "itemId": 3071,
+        "condition": "enemy_has_tanks",
+        "description": "Black Cleaver — vs tanks (39% pick vs 27% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3047
@@ -14544,12 +14397,15 @@
     ],
     "coreItems": [
       6610,
-      3179,
-      3142,
-      6692,
       3071
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3142,
+        "condition": "enemy_heavy_ap",
+        "description": "Youmuu's Ghostblade — vs AP (25% pick vs 13% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -14592,7 +14448,7 @@
       6692,
       6610,
       3071,
-      6699,
+      6695,
       6333
     ],
     "situationalItems": [],
@@ -14636,12 +14492,16 @@
     ],
     "coreItems": [
       6610,
-      6692,
-      3179,
       6699,
-      3742
+      3742,
+      3026
     ],
     "situationalItems": [
+      {
+        "itemId": 6692,
+        "condition": "enemy_heavy_ap",
+        "description": "Eclipse — vs AP (36% pick vs 10% baseline)"
+      },
       {
         "itemId": 2524,
         "condition": "enemy_has_tanks",
@@ -14689,9 +14549,8 @@
     "coreItems": [
       3742,
       3190,
-      4401,
-      2525,
-      3109
+      3109,
+      2524
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -14734,9 +14593,7 @@
     ],
     "coreItems": [
       6610,
-      6662,
       3119,
-      2502,
       3065
     ],
     "situationalItems": [
@@ -14786,7 +14643,6 @@
     ],
     "coreItems": [
       6698,
-      6699,
       3142,
       3814,
       6333
@@ -14833,9 +14689,7 @@
     "coreItems": [
       3179,
       3142,
-      6695,
-      3814,
-      6699
+      3814
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -14925,7 +14779,7 @@
     "coreItems": [
       6698,
       6699,
-      6696,
+      6695,
       6694,
       3814
     ],
@@ -14969,13 +14823,18 @@
       1055
     ],
     "coreItems": [
-      6697,
       6698,
       6699,
       6695,
       6694
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6697,
+        "condition": "enemy_heavy_ad",
+        "description": "Hubris — vs AD (46% pick vs 32% baseline)"
+      }
+    ],
     "bootsOptions": [
       3008,
       3158
@@ -15061,22 +14920,16 @@
       1055
     ],
     "coreItems": [
-      6697,
       6699,
       6698,
-      6695,
-      6694
+      6694,
+      3814
     ],
     "situationalItems": [
       {
         "itemId": 3156,
         "condition": "enemy_heavy_ap",
         "description": "Maw of Malmortius — vs AP (33% pick vs 10% baseline)"
-      },
-      {
-        "itemId": 3814,
-        "condition": "enemy_heavy_ad",
-        "description": "Edge of Night — vs AD (45% pick vs 24% baseline)"
       },
       {
         "itemId": 3004,
@@ -15124,7 +14977,6 @@
     ],
     "coreItems": [
       6698,
-      6697,
       6676,
       3814,
       3036
@@ -15221,11 +15073,7 @@
       3865
     ],
     "coreItems": [
-      3142,
-      6697,
-      6698,
-      3814,
-      3036
+      3142
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -15321,8 +15169,6 @@
     "coreItems": [
       3050,
       3190,
-      3222,
-      2065,
       3109
     ],
     "situationalItems": [],
@@ -15366,10 +15212,10 @@
     ],
     "coreItems": [
       3075,
-      3068,
       6664,
       6665,
-      2525
+      2525,
+      2504
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -15412,10 +15258,7 @@
     ],
     "coreItems": [
       3075,
-      3742,
-      2525,
-      2504,
-      6665
+      2525
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -15457,11 +15300,10 @@
       1102
     ],
     "coreItems": [
-      6631,
       3748,
       3161,
-      3053,
-      6333
+      6333,
+      3026
     ],
     "situationalItems": [
       {
@@ -15510,10 +15352,8 @@
     ],
     "coreItems": [
       3748,
-      3031,
       3161,
-      3053,
-      3036
+      3053
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -15556,12 +15396,17 @@
     ],
     "coreItems": [
       3748,
-      6631,
       3161,
-      2501,
-      3181
+      3053,
+      3065
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6631,
+        "condition": "enemy_heavy_ap",
+        "description": "Stridebreaker — vs AP (30% pick vs 12% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3047
@@ -15603,8 +15448,6 @@
     "coreItems": [
       3050,
       3190,
-      8020,
-      2525,
       3109
     ],
     "situationalItems": [],
@@ -15650,8 +15493,7 @@
       3190,
       3222,
       3109,
-      2524,
-      3107
+      2524
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -15694,10 +15536,9 @@
     ],
     "coreItems": [
       6692,
-      6631,
-      3161,
       3071,
-      6333
+      6333,
+      3053
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -15787,17 +15628,11 @@
     "coreItems": [
       3179,
       6698,
-      6695,
       3814,
-      3036
+      3036,
+      3031
     ],
-    "situationalItems": [
-      {
-        "itemId": 3031,
-        "condition": "enemy_heavy_cc",
-        "description": "Infinity Edge — vs CC (33% pick vs 9% baseline)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       3158,
       3008
@@ -15839,8 +15674,6 @@
     "coreItems": [
       3179,
       6699,
-      3142,
-      6698,
       3814
     ],
     "situationalItems": [],
@@ -15884,16 +15717,24 @@
     ],
     "coreItems": [
       3074,
-      6698,
-      3508,
       3814,
       3036
     ],
     "situationalItems": [
       {
+        "itemId": 6698,
+        "condition": "enemy_has_healing",
+        "description": "Profane Hydra — vs healing (83% pick vs 45% baseline)"
+      },
+      {
         "itemId": 3033,
         "condition": "enemy_heavy_ad",
         "description": "Mortal Reminder — vs AD (50% pick vs 20% baseline)"
+      },
+      {
+        "itemId": 3508,
+        "condition": "enemy_has_healing",
+        "description": "Essence Reaver — vs healing (50% pick vs 25% baseline)"
       },
       {
         "itemId": 3031,
@@ -15941,7 +15782,6 @@
     ],
     "coreItems": [
       6696,
-      3179,
       2517,
       6333,
       3156
@@ -15986,13 +15826,19 @@
       1102
     ],
     "coreItems": [
-      3179,
       6696,
       2517,
       6333,
-      3156
+      3156,
+      3033
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3179,
+        "condition": "enemy_heavy_ap",
+        "description": "Umbral Glaive — vs AP (43% pick vs 24% baseline)"
+      }
+    ],
     "bootsOptions": [
       3008,
       3158
@@ -16032,7 +15878,6 @@
       1055
     ],
     "coreItems": [
-      3179,
       6696,
       2517,
       3156,
@@ -16079,7 +15924,6 @@
     ],
     "coreItems": [
       6696,
-      6692,
       2517,
       6333,
       3156
@@ -16170,7 +16014,6 @@
       1056
     ],
     "coreItems": [
-      3152,
       6653,
       4645,
       3157,
@@ -16217,9 +16060,7 @@
     ],
     "coreItems": [
       3152,
-      6653,
-      8010,
-      4645
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16262,9 +16103,7 @@
     ],
     "coreItems": [
       6653,
-      3152,
       8010,
-      4645,
       3157
     ],
     "situationalItems": [],
@@ -16310,8 +16149,8 @@
       6657,
       3003,
       2522,
-      3157,
-      3089
+      3089,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16355,9 +16194,7 @@
     "coreItems": [
       6657,
       3003,
-      2522,
-      3157,
-      3089
+      2522
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16402,8 +16239,8 @@
       6676,
       3031,
       3036,
-      3072,
-      6673
+      6673,
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16446,10 +16283,10 @@
     ],
     "coreItems": [
       3084,
-      3050,
-      2525,
       2502,
-      3075
+      3075,
+      2504,
+      6665
     ],
     "situationalItems": [
       {
@@ -16461,11 +16298,6 @@
         "itemId": 3110,
         "condition": "enemy_heavy_ad",
         "description": "Frozen Heart — vs AD (27% pick vs 10% baseline)"
-      },
-      {
-        "itemId": 2504,
-        "condition": "enemy_heavy_ap",
-        "description": "Kaenic Rookern — vs AP (36% pick vs 20% baseline)"
       }
     ],
     "bootsOptions": [
@@ -16508,10 +16340,7 @@
     ],
     "coreItems": [
       2525,
-      3050,
-      8020,
-      3190,
-      3110
+      3190
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16553,13 +16382,23 @@
       1120
     ],
     "coreItems": [
-      3084,
-      6664,
-      2502,
+      3116,
+      6662,
       2525,
-      3050
+      3050,
+      3075
     ],
     "situationalItems": [
+      {
+        "itemId": 3084,
+        "condition": "enemy_heavy_ad",
+        "description": "Heartsteel — vs AD (50% pick vs 29% baseline)"
+      },
+      {
+        "itemId": 2502,
+        "condition": "enemy_has_tanks",
+        "description": "Unending Despair — vs tanks (50% pick vs 29% baseline)"
+      },
       {
         "itemId": 3119,
         "condition": "enemy_heavy_ad",
@@ -16608,8 +16447,7 @@
       3087,
       3071,
       3004,
-      2523,
-      3031
+      2523
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16653,9 +16491,7 @@
     "coreItems": [
       3071,
       3087,
-      3094,
-      2523,
-      3031
+      3094
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16698,10 +16534,7 @@
     ],
     "coreItems": [
       3087,
-      3071,
-      6672,
-      3046,
-      6695
+      6672
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16743,10 +16576,10 @@
       1056
     ],
     "coreItems": [
-      2503,
       3003,
       4005,
       3116,
+      3157,
       3137
     ],
     "situationalItems": [
@@ -16795,13 +16628,17 @@
       1056
     ],
     "coreItems": [
-      6655,
-      2503,
       4005,
       3003,
-      4628
+      3116
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 2503,
+        "condition": "enemy_has_healing",
+        "description": "Blackfire Torch — vs healing (50% pick vs 36% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3020
@@ -16842,10 +16679,7 @@
     ],
     "coreItems": [
       6620,
-      4005,
-      3116,
-      6617,
-      3107
+      6617
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16888,9 +16722,6 @@
     ],
     "coreItems": [
       6631,
-      3071,
-      3161,
-      6333,
       2501
     ],
     "situationalItems": [],
@@ -16934,8 +16765,7 @@
     ],
     "coreItems": [
       3742,
-      2525,
-      4401
+      2525
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -16978,9 +16808,7 @@
     "coreItems": [
       6631,
       3071,
-      3181,
-      2501,
-      3053
+      2501
     ],
     "situationalItems": [
       {
@@ -17031,7 +16859,6 @@
       3179,
       6699,
       3142,
-      6676,
       3036
     ],
     "situationalItems": [],
@@ -17074,7 +16901,6 @@
       3865
     ],
     "coreItems": [
-      6655,
       2503,
       4005,
       6653,
@@ -17122,8 +16948,7 @@
     "coreItems": [
       2503,
       4005,
-      8010,
-      6653
+      8010
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17165,10 +16990,7 @@
     ],
     "coreItems": [
       2525,
-      3050,
-      2502,
-      8020,
-      3109
+      2502
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17211,9 +17033,7 @@
     ],
     "coreItems": [
       3748,
-      6664,
       2504,
-      3143,
       2510
     ],
     "situationalItems": [],
@@ -17256,11 +17076,8 @@
       3865
     ],
     "coreItems": [
-      3084,
       2525,
-      3050,
-      3190,
-      3109
+      3190
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17304,8 +17121,6 @@
     "coreItems": [
       3748,
       2510,
-      2504,
-      3075,
       2524
     ],
     "situationalItems": [],
@@ -17349,9 +17164,7 @@
     ],
     "coreItems": [
       3078,
-      6672,
       3161,
-      2510,
       6333
     ],
     "situationalItems": [],
@@ -17394,10 +17207,8 @@
       1120
     ],
     "coreItems": [
-      2510,
       3078,
       3161,
-      3053,
       3073
     ],
     "situationalItems": [],
@@ -17442,9 +17253,7 @@
     "coreItems": [
       6653,
       3152,
-      4633,
-      3135,
-      8010
+      4633
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17488,9 +17297,7 @@
     "coreItems": [
       6653,
       3116,
-      3190,
-      2525,
-      3742
+      2525
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17533,12 +17340,16 @@
     ],
     "coreItems": [
       6653,
-      3152,
       3116,
-      4633,
-      2525
+      2525,
+      6665
     ],
     "situationalItems": [
+      {
+        "itemId": 3152,
+        "condition": "enemy_heavy_ad",
+        "description": "Hextech Rocketbelt — vs AD (53% pick vs 36% baseline)"
+      },
       {
         "itemId": 3742,
         "condition": "enemy_has_tanks",
@@ -17585,10 +17396,7 @@
     ],
     "coreItems": [
       3116,
-      6653,
-      3742,
-      8010,
-      2525
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17632,7 +17440,6 @@
     "coreItems": [
       6653,
       3116,
-      4633,
       3742,
       2525
     ],
@@ -17683,10 +17490,7 @@
     ],
     "coreItems": [
       2502,
-      3110,
-      3065,
-      3109,
-      2504
+      3110
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17773,11 +17577,10 @@
       1054
     ],
     "coreItems": [
-      3068,
       6664,
-      2504,
       2502,
-      3748
+      3748,
+      3075
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17819,11 +17622,7 @@
       3865
     ],
     "coreItems": [
-      3084,
-      3742,
-      2524,
-      3190,
-      4401
+      3190
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -17865,13 +17664,16 @@
       1120
     ],
     "coreItems": [
-      3084,
       6664,
-      2502,
-      3065,
-      3075
+      2502
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3084,
+        "condition": "enemy_has_tanks",
+        "description": "Heartsteel — vs tanks (33% pick vs 20% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -17911,11 +17713,11 @@
       1086
     ],
     "coreItems": [
-      3032,
       3508,
       6675,
       3031,
-      3033
+      3033,
+      3026
     ],
     "situationalItems": [
       {
@@ -17964,10 +17766,9 @@
     ],
     "coreItems": [
       3084,
-      2525,
-      2524,
       2502,
-      3065
+      3065,
+      3109
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18011,11 +17812,20 @@
     "coreItems": [
       3748,
       3190,
-      2525,
-      3742,
-      3050
+      2525
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3742,
+        "condition": "enemy_has_healing",
+        "description": "Dead Man's Plate — vs healing (30% pick vs 15% baseline)"
+      },
+      {
+        "itemId": 3050,
+        "condition": "enemy_heavy_ap",
+        "description": "Zeke's Convergence — vs AP (33% pick vs 20% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3047
@@ -18057,11 +17867,15 @@
     "coreItems": [
       3084,
       3119,
-      3748,
-      3065,
       2502
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3748,
+        "condition": "enemy_heavy_ap",
+        "description": "Titanic Hydra — vs AP (29% pick vs 16% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -18104,8 +17918,8 @@
       3508,
       3071,
       3161,
-      3031,
-      3094
+      3094,
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18150,10 +17964,14 @@
       3508,
       3071,
       3161,
-      3094,
       3031
     ],
     "situationalItems": [
+      {
+        "itemId": 3094,
+        "condition": "enemy_has_healing",
+        "description": "Rapid Firecannon — vs healing (47% pick vs 31% baseline)"
+      },
       {
         "itemId": 6697,
         "condition": "enemy_has_healing",
@@ -18200,7 +18018,6 @@
     ],
     "coreItems": [
       3508,
-      3094,
       3071,
       3161,
       3031
@@ -18245,10 +18062,8 @@
       3865
     ],
     "coreItems": [
-      3119,
       6620,
       3003,
-      6616,
       6617
     ],
     "situationalItems": [],
@@ -18292,12 +18107,20 @@
     ],
     "coreItems": [
       6617,
-      3107,
-      3222,
-      6621,
-      3190
+      3107
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6621,
+        "condition": "enemy_heavy_cc",
+        "description": "Dawncore — vs CC (43% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 3222,
+        "condition": "enemy_heavy_cc",
+        "description": "Mikael's Blessing — vs CC (29% pick vs 11% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3009
@@ -18337,10 +18160,8 @@
       1056
     ],
     "coreItems": [
-      6657,
       6617,
       3107,
-      6616,
       6621
     ],
     "situationalItems": [],
@@ -18383,11 +18204,11 @@
       1056
     ],
     "coreItems": [
-      2503,
       3118,
       3116,
       6653,
-      3157
+      3157,
+      3065
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18430,12 +18251,16 @@
     ],
     "coreItems": [
       2503,
-      3118,
       3116,
-      3157,
-      6653
+      3157
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_healing",
+        "description": "Liandry's Torment — vs healing (35% pick vs 21% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3111
@@ -18476,10 +18301,7 @@
     ],
     "coreItems": [
       3116,
-      3118,
-      6653,
-      3157,
-      6665
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18521,13 +18343,17 @@
       1056
     ],
     "coreItems": [
-      6657,
       3110,
       3116,
-      6653,
-      3157
+      6653
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3157,
+        "condition": "enemy_has_healing",
+        "description": "Zhonya's Hourglass — vs healing (50% pick vs 27% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3009
@@ -18568,8 +18394,8 @@
     ],
     "coreItems": [
       3152,
-      3100,
       4633,
+      4645,
       3157,
       8020
     ],
@@ -18615,11 +18441,16 @@
     "coreItems": [
       3152,
       4633,
-      4645,
       3157,
       3089
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 4645,
+        "condition": "enemy_heavy_cc",
+        "description": "Shadowflame — vs CC (27% pick vs 14% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3020
@@ -18660,8 +18491,6 @@
     ],
     "coreItems": [
       3152,
-      3100,
-      4645,
       4633,
       3157
     ],
@@ -18707,9 +18536,7 @@
     "coreItems": [
       3152,
       3157,
-      4633,
-      4645,
-      4629
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18752,10 +18579,9 @@
     ],
     "coreItems": [
       3152,
-      6657,
       4633,
-      4645,
-      3157
+      3157,
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18797,11 +18623,11 @@
       1056
     ],
     "coreItems": [
-      6655,
       2503,
-      3152,
+      4629,
       4645,
-      3089
+      3089,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18843,11 +18669,10 @@
       1056
     ],
     "coreItems": [
-      6655,
       2503,
       4629,
-      4645,
-      3089
+      3089,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18889,10 +18714,7 @@
       3865
     ],
     "coreItems": [
-      6655,
       4005,
-      4629,
-      3135,
       4645
     ],
     "situationalItems": [],
@@ -18936,10 +18758,9 @@
     ],
     "coreItems": [
       2503,
-      6655,
       4629,
-      4645,
-      3089
+      3089,
+      3137
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -18982,9 +18803,7 @@
     ],
     "coreItems": [
       3084,
-      2525,
       2510,
-      2502,
       3065
     ],
     "situationalItems": [
@@ -18992,6 +18811,11 @@
         "itemId": 3143,
         "condition": "enemy_heavy_ap",
         "description": "Randuin's Omen — vs AP (43% pick vs 16% baseline)"
+      },
+      {
+        "itemId": 2525,
+        "condition": "enemy_heavy_ap",
+        "description": "Protoplasm Harness — vs AP (71% pick vs 47% baseline)"
       }
     ],
     "bootsOptions": [
@@ -19033,9 +18857,7 @@
       1054
     ],
     "coreItems": [
-      3084,
-      2510,
-      3065
+      3084
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19078,12 +18900,21 @@
     ],
     "coreItems": [
       3084,
-      3190,
-      2525,
       3075,
-      3109
+      3065
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 2525,
+        "condition": "enemy_heavy_ap",
+        "description": "Protoplasm Harness — vs AP (47% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 3190,
+        "condition": "enemy_heavy_ap",
+        "description": "Locket of the Iron Solari — vs AP (40% pick vs 26% baseline)"
+      }
+    ],
     "bootsOptions": [
       3111,
       3047
@@ -19124,18 +18955,12 @@
     ],
     "coreItems": [
       3084,
-      2525,
       2510,
-      3068,
-      3075
+      3075,
+      3143,
+      3065
     ],
-    "situationalItems": [
-      {
-        "itemId": 3065,
-        "condition": "enemy_has_tanks",
-        "description": "Spirit Visage — vs tanks (29% pick vs 10% baseline)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       3047,
       3009
@@ -19179,7 +19004,7 @@
       3152,
       4645,
       3116,
-      3137
+      3089
     ],
     "situationalItems": [
       {
@@ -19188,14 +19013,14 @@
         "description": "Cosmic Drive — vs tanks (45% pick vs 16% baseline)"
       },
       {
+        "itemId": 3137,
+        "condition": "enemy_has_tanks",
+        "description": "Cryptbloom — vs tanks (55% pick vs 29% baseline)"
+      },
+      {
         "itemId": 3157,
         "condition": "enemy_heavy_ap",
         "description": "Zhonya's Hourglass — vs AP (44% pick vs 23% baseline)"
-      },
-      {
-        "itemId": 3089,
-        "condition": "enemy_heavy_ap",
-        "description": "Rabadon's Deathcap — vs AP (33% pick vs 13% baseline)"
       },
       {
         "itemId": 6655,
@@ -19244,15 +19069,18 @@
     "coreItems": [
       2503,
       4645,
-      3157,
-      3089,
-      3135
+      3157
     ],
     "situationalItems": [
       {
         "itemId": 6653,
         "condition": "enemy_has_tanks",
         "description": "Liandry's Torment — vs tanks (32% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 3135,
+        "condition": "enemy_has_tanks",
+        "description": "Void Staff — vs tanks (32% pick vs 19% baseline)"
       }
     ],
     "bootsOptions": [
@@ -19295,12 +19123,22 @@
     ],
     "coreItems": [
       2503,
-      3003,
       3152,
-      3116,
-      3157
+      3157,
+      3137
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3003,
+        "condition": "enemy_has_tanks",
+        "description": "Archangel's Staff — vs tanks (50% pick vs 37% baseline)"
+      },
+      {
+        "itemId": 3116,
+        "condition": "enemy_has_tanks",
+        "description": "Rylai's Crystal Scepter — vs tanks (40% pick vs 28% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3020
@@ -19340,11 +19178,9 @@
       3865
     ],
     "coreItems": [
-      2065,
       3116,
       4005,
-      3137,
-      3157
+      3137
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19434,7 +19270,7 @@
     "coreItems": [
       3179,
       6699,
-      3142,
+      6696,
       3814,
       6694
     ],
@@ -19537,10 +19373,8 @@
     ],
     "coreItems": [
       6692,
-      3142,
       6699,
-      3071,
-      3814
+      3071
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19583,8 +19417,6 @@
     ],
     "coreItems": [
       3190,
-      3050,
-      3110,
       3109,
       3119
     ],
@@ -19677,8 +19509,7 @@
       3115,
       6653,
       3118,
-      4645,
-      3135
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19721,8 +19552,7 @@
     ],
     "coreItems": [
       3118,
-      6653,
-      8010
+      6653
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19764,18 +19594,11 @@
     ],
     "coreItems": [
       3087,
-      3115,
       6653,
       3118,
-      4645
+      3089
     ],
-    "situationalItems": [
-      {
-        "itemId": 3089,
-        "condition": "enemy_heavy_ap",
-        "description": "Rabadon's Deathcap — vs AP (29% pick vs 13% baseline)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       3009,
       3020
@@ -19815,9 +19638,7 @@
       1054
     ],
     "coreItems": [
-      6664,
-      4005,
-      3109
+      6664
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19859,10 +19680,7 @@
     ],
     "coreItems": [
       3190,
-      3222,
-      3109,
-      3050,
-      3110
+      3109
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19904,11 +19722,11 @@
       1086
     ],
     "coreItems": [
-      6676,
       2523,
       3031,
       6675,
-      3036
+      3036,
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19950,11 +19768,11 @@
       1086
     ],
     "coreItems": [
-      3032,
       2523,
       6675,
       3031,
-      3036
+      3036,
+      3072
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -19997,8 +19815,6 @@
     ],
     "coreItems": [
       6672,
-      3032,
-      2523,
       6675,
       3033
     ],
@@ -20045,7 +19861,6 @@
       3078,
       3065,
       3742,
-      2524,
       3748
     ],
     "situationalItems": [],
@@ -20132,12 +19947,16 @@
     ],
     "coreItems": [
       3074,
-      3153,
       3078,
-      3181,
-      6333
+      3181
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_heavy_ad",
+        "description": "Blade of The Ruined King — vs AD (56% pick vs 44% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -20224,17 +20043,11 @@
     "coreItems": [
       3074,
       3508,
-      3046,
-      3036,
-      3031
+      3032,
+      3031,
+      2517
     ],
-    "situationalItems": [
-      {
-        "itemId": 2517,
-        "condition": "enemy_heavy_ap",
-        "description": "Endless Hunger — vs AP (33% pick vs 17% baseline)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       3006,
       3008
@@ -20275,10 +20088,9 @@
     ],
     "coreItems": [
       3074,
-      3508,
       3046,
-      3036,
-      3031
+      3031,
+      6694
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20367,10 +20179,8 @@
     ],
     "coreItems": [
       6657,
-      3152,
       3100,
-      3094,
-      3157
+      3094
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20413,12 +20223,20 @@
     ],
     "coreItems": [
       3094,
-      4005,
-      2065,
-      3742,
-      3100
+      4005
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3742,
+        "condition": "enemy_heavy_ad",
+        "description": "Dead Man's Plate — vs AD (50% pick vs 26% baseline)"
+      },
+      {
+        "itemId": 2065,
+        "condition": "enemy_heavy_ad",
+        "description": "Shurelya's Battlesong — vs AD (50% pick vs 30% baseline)"
+      }
+    ],
     "bootsOptions": [
       3009,
       3158
@@ -20507,8 +20325,8 @@
       6676,
       2512,
       3031,
-      3085,
-      3036
+      3036,
+      3072
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20550,9 +20368,7 @@
       1103
     ],
     "coreItems": [
-      6676,
-      3115,
-      2512
+      6676
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20595,7 +20411,6 @@
     ],
     "coreItems": [
       3115,
-      4629,
       3102,
       3089,
       3157
@@ -20641,8 +20456,7 @@
     ],
     "coreItems": [
       3115,
-      3089,
-      4645
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20686,9 +20500,7 @@
     "coreItems": [
       3161,
       3073,
-      3078,
-      6333,
-      3065
+      6333
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20734,7 +20546,7 @@
       3119,
       3065,
       2502,
-      6665
+      2501
     ],
     "situationalItems": [
       {
@@ -20784,9 +20596,7 @@
     "coreItems": [
       3142,
       3071,
-      3814,
-      3053,
-      6695
+      3814
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20829,10 +20639,7 @@
     ],
     "coreItems": [
       3071,
-      3142,
-      3053,
-      3742,
-      6665
+      3053
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20874,19 +20681,12 @@
       1086
     ],
     "coreItems": [
-      3142,
       3087,
       3124,
-      3004,
-      3302
+      3302,
+      6665
     ],
-    "situationalItems": [
-      {
-        "itemId": 6665,
-        "condition": "enemy_heavy_cc",
-        "description": "Jak'Sho, The Protean — vs CC (29% pick vs 15% baseline)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       3008,
       3006
@@ -20926,11 +20726,9 @@
       1086
     ],
     "coreItems": [
-      3091,
       2510,
       3087,
-      3124,
-      3073
+      3124
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -20973,10 +20771,8 @@
     ],
     "coreItems": [
       3073,
-      3087,
       2510,
-      3124,
-      3157
+      4633
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21019,10 +20815,10 @@
     ],
     "coreItems": [
       3508,
-      3153,
       3097,
-      3124,
-      2512
+      2512,
+      3031,
+      3036
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21067,15 +20863,10 @@
       6672,
       3073,
       2512,
-      3078,
-      3124
+      3124,
+      3091
     ],
     "situationalItems": [
-      {
-        "itemId": 3091,
-        "condition": "enemy_heavy_ap",
-        "description": "Wit's End — vs AP (83% pick vs 26% baseline)"
-      },
       {
         "itemId": 6665,
         "condition": "enemy_has_healing",
@@ -21122,16 +20913,28 @@
     ],
     "coreItems": [
       3078,
-      3508,
-      3073,
-      3097,
-      3124
+      3097
     ],
     "situationalItems": [
+      {
+        "itemId": 3124,
+        "condition": "enemy_heavy_ad",
+        "description": "Guinsoo's Rageblade — vs AD (57% pick vs 27% baseline)"
+      },
+      {
+        "itemId": 3073,
+        "condition": "enemy_has_tanks",
+        "description": "Experimental Hexplate — vs tanks (63% pick vs 38% baseline)"
+      },
       {
         "itemId": 3302,
         "condition": "enemy_has_tanks",
         "description": "Terminus — vs tanks (25% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 3508,
+        "condition": "enemy_heavy_ad",
+        "description": "Essence Reaver — vs AD (43% pick vs 31% baseline)"
       }
     ],
     "bootsOptions": [
@@ -21174,10 +20977,10 @@
     ],
     "coreItems": [
       3073,
-      3078,
       3508,
-      3124,
-      3097
+      3097,
+      2512,
+      3031
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21220,10 +21023,10 @@
     ],
     "coreItems": [
       6655,
-      3152,
       3089,
-      3137,
-      3157
+      4645,
+      3157,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21266,10 +21069,10 @@
     ],
     "coreItems": [
       6657,
-      6655,
       3003,
       3089,
-      3137
+      3137,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21313,9 +21116,7 @@
     "coreItems": [
       6655,
       4645,
-      3089,
-      3152,
-      3165
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21358,10 +21159,10 @@
     ],
     "coreItems": [
       6655,
-      3152,
       3003,
       3137,
-      3089
+      3089,
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21404,10 +21205,10 @@
     ],
     "coreItems": [
       2503,
-      6655,
       4645,
       4628,
-      3157
+      3157,
+      3089
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21450,8 +21251,6 @@
     ],
     "coreItems": [
       6655,
-      2503,
-      4628,
       4645,
       3157
     ],
@@ -21460,6 +21259,11 @@
         "itemId": 3089,
         "condition": "enemy_has_tanks",
         "description": "Rabadon's Deathcap — vs tanks (35% pick vs 21% baseline)"
+      },
+      {
+        "itemId": 2503,
+        "condition": "enemy_has_tanks",
+        "description": "Blackfire Torch — vs tanks (50% pick vs 38% baseline)"
       }
     ],
     "bootsOptions": [
@@ -21502,12 +21306,15 @@
     ],
     "coreItems": [
       6655,
-      2503,
-      2065,
-      4628,
-      4645
+      4628
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 4645,
+        "condition": "enemy_heavy_ap",
+        "description": "Shadowflame — vs AP (33% pick vs 19% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3009
@@ -21548,12 +21355,21 @@
     ],
     "coreItems": [
       2503,
-      6655,
-      4628,
-      4645,
-      3089
+      6653,
+      4645
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6655,
+        "condition": "enemy_heavy_ap",
+        "description": "Luden's Echo — vs AP (33% pick vs 20% baseline)"
+      },
+      {
+        "itemId": 4628,
+        "condition": "enemy_heavy_ap",
+        "description": "Horizon Focus — vs AP (33% pick vs 20% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3020
@@ -21638,10 +21454,10 @@
     ],
     "coreItems": [
       6655,
-      2503,
       4645,
       3157,
-      3089
+      3089,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21684,9 +21500,7 @@
     ],
     "coreItems": [
       6655,
-      4005,
       4645,
-      3152,
       3157
     ],
     "situationalItems": [],
@@ -21729,9 +21543,7 @@
       1103
     ],
     "coreItems": [
-      3078,
       6610,
-      6676,
       3071,
       3026
     ],
@@ -21776,8 +21588,7 @@
     ],
     "coreItems": [
       6676,
-      3508,
-      3036
+      3508
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21819,10 +21630,7 @@
       3865
     ],
     "coreItems": [
-      6695,
       6610,
-      3071,
-      3050,
       3053
     ],
     "situationalItems": [],
@@ -21865,10 +21673,7 @@
       1055
     ],
     "coreItems": [
-      3142,
-      6695,
       3508,
-      6676,
       3036
     ],
     "situationalItems": [],
@@ -21915,7 +21720,7 @@
       6676,
       6673,
       3036,
-      3031
+      3026
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -21958,10 +21763,9 @@
     ],
     "coreItems": [
       6672,
-      3153,
       6676,
       6673,
-      3036
+      3031
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -22051,9 +21855,9 @@
     "coreItems": [
       2503,
       3152,
-      4645,
       3157,
-      3089
+      3089,
+      3137
     ],
     "situationalItems": [
       {
@@ -22103,15 +21907,23 @@
     "coreItems": [
       2503,
       3152,
-      6653,
-      3157,
-      3089
+      3157
     ],
     "situationalItems": [
+      {
+        "itemId": 3089,
+        "condition": "enemy_heavy_cc",
+        "description": "Rabadon's Deathcap — vs CC (44% pick vs 17% baseline)"
+      },
       {
         "itemId": 3135,
         "condition": "enemy_heavy_cc",
         "description": "Void Staff — vs CC (33% pick vs 10% baseline)"
+      },
+      {
+        "itemId": 6653,
+        "condition": "enemy_heavy_cc",
+        "description": "Liandry's Torment — vs CC (33% pick vs 18% baseline)"
       }
     ],
     "bootsOptions": [
@@ -22155,15 +21967,14 @@
     "coreItems": [
       2503,
       3152,
-      3100,
-      6653,
+      3135,
       3157
     ],
     "situationalItems": [
       {
-        "itemId": 3135,
-        "condition": "enemy_heavy_ad",
-        "description": "Void Staff — vs AD (44% pick vs 22% baseline)"
+        "itemId": 6653,
+        "condition": "enemy_has_tanks",
+        "description": "Liandry's Torment — vs tanks (55% pick vs 33% baseline)"
       },
       {
         "itemId": 3089,
@@ -22218,8 +22029,7 @@
       3152,
       3089,
       4633,
-      3135,
-      3157
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -22264,7 +22074,6 @@
       3152,
       4633,
       3089,
-      3135,
       3157
     ],
     "situationalItems": [],
@@ -22308,12 +22117,17 @@
     ],
     "coreItems": [
       3152,
-      4629,
       4633,
       3089,
-      3135
+      3157
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3135,
+        "condition": "enemy_heavy_cc",
+        "description": "Void Staff — vs CC (33% pick vs 16% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3020
@@ -22354,9 +22168,7 @@
     ],
     "coreItems": [
       2510,
-      3078,
       6675,
-      3143,
       3065
     ],
     "situationalItems": [],
@@ -22400,10 +22212,10 @@
     ],
     "coreItems": [
       2510,
-      3181,
       6675,
       3065,
-      4633
+      3157,
+      2502
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -22445,11 +22257,9 @@
       1102
     ],
     "coreItems": [
-      6631,
       3153,
-      6672,
       6333,
-      3073
+      3050
     ],
     "situationalItems": [
       {
@@ -22499,9 +22309,7 @@
     "coreItems": [
       3153,
       3302,
-      6672,
-      6333,
-      4401
+      6333
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -22544,12 +22352,17 @@
     ],
     "coreItems": [
       3153,
-      6672,
       6631,
-      3073,
-      6333
+      6333,
+      3065
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3073,
+        "condition": "enemy_has_tanks",
+        "description": "Experimental Hexplate — vs tanks (33% pick vs 14% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3009
@@ -22590,10 +22403,10 @@
     ],
     "coreItems": [
       3508,
-      3032,
       6675,
       3031,
-      3036
+      3036,
+      3072
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -22682,10 +22495,10 @@
     ],
     "coreItems": [
       6655,
-      3118,
       4645,
-      4628,
-      3089
+      3157,
+      3089,
+      3135
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -22728,9 +22541,6 @@
     ],
     "coreItems": [
       6655,
-      2503,
-      3157,
-      4628,
       4645
     ],
     "situationalItems": [],
@@ -22819,10 +22629,8 @@
     ],
     "coreItems": [
       6610,
-      3748,
       3071,
-      6333,
-      3026
+      6333
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -22865,10 +22673,7 @@
     ],
     "coreItems": [
       3087,
-      3115,
-      2510,
-      3748,
-      6333
+      2510
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -22910,9 +22715,7 @@
       1056
     ],
     "coreItems": [
-      6692,
       3087,
-      3071,
       2510,
       6333
     ],
@@ -22968,10 +22771,8 @@
     ],
     "coreItems": [
       6672,
-      3153,
       6673,
-      3031,
-      6333
+      3031
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -23014,10 +22815,8 @@
     ],
     "coreItems": [
       6672,
-      3153,
       6673,
-      3031,
-      6333
+      3031
     ],
     "situationalItems": [
       {
@@ -23065,13 +22864,17 @@
       1086
     ],
     "coreItems": [
-      6672,
       3153,
       6673,
-      3036,
       3031
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (30% pick vs 17% baseline)"
+      }
+    ],
     "bootsOptions": [
       3006,
       3047
@@ -23112,10 +22915,7 @@
     ],
     "coreItems": [
       3153,
-      3046,
-      6673,
-      3031,
-      6333
+      6673
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -23201,9 +23001,7 @@
     "coreItems": [
       3153,
       6673,
-      3031,
-      3036,
-      6333
+      3031
     ],
     "situationalItems": [
       {
@@ -23253,7 +23051,6 @@
     "coreItems": [
       3153,
       6673,
-      3036,
       3031,
       6333
     ],
@@ -23298,10 +23095,8 @@
     ],
     "coreItems": [
       3078,
-      3071,
       3161,
-      6694,
-      3053
+      6694
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -23346,10 +23141,15 @@
       6672,
       2512,
       2523,
-      3031,
-      3036
+      3031
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3036,
+        "condition": "enemy_has_tanks",
+        "description": "Lord Dominik's Regards — vs tanks (32% pick vs 19% baseline)"
+      }
+    ],
     "bootsOptions": [
       3006,
       3008
@@ -23391,9 +23191,7 @@
     "coreItems": [
       3222,
       6617,
-      6620,
-      3504,
-      3109
+      3504
     ],
     "situationalItems": [],
     "bootsOptions": [],
@@ -23433,10 +23231,10 @@
     ],
     "coreItems": [
       3078,
-      6631,
       6610,
       6333,
-      2517
+      2517,
+      3156
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -23478,11 +23276,8 @@
       1055
     ],
     "coreItems": [
-      3748,
       3078,
-      6631,
-      6333,
-      3156
+      6631
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -23526,11 +23321,16 @@
     "coreItems": [
       3078,
       6631,
-      6610,
-      3156,
-      6333
+      6333,
+      2517
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 6610,
+        "condition": "enemy_heavy_cc",
+        "description": "Sundered Sky — vs CC (40% pick vs 26% baseline)"
+      }
+    ],
     "bootsOptions": [
       3047,
       3111
@@ -23572,9 +23372,7 @@
     "coreItems": [
       3152,
       3068,
-      3065,
-      3075,
-      3143
+      3065
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -23617,10 +23415,8 @@
     ],
     "coreItems": [
       6664,
-      3068,
       3065,
-      3050,
-      4633
+      3050
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -23663,10 +23459,8 @@
     ],
     "coreItems": [
       3050,
-      3068,
       3190,
-      2525,
-      3109
+      2525
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -23709,7 +23503,6 @@
     ],
     "coreItems": [
       3068,
-      6664,
       3065,
       2502,
       4633
@@ -23808,7 +23601,7 @@
     "coreItems": [
       6699,
       6696,
-      2520,
+      6695,
       6694,
       3814
     ],
@@ -23858,10 +23651,8 @@
       3865
     ],
     "coreItems": [
-      2520,
       3179,
       6699,
-      6694,
       3814
     ],
     "situationalItems": [],
@@ -23904,10 +23695,9 @@
     ],
     "coreItems": [
       6699,
-      2520,
       6696,
-      6695,
-      6694
+      6694,
+      3814
     ],
     "situationalItems": [
       {
@@ -23957,17 +23747,11 @@
     "coreItems": [
       3097,
       3085,
-      2512,
       3031,
-      3036
+      3036,
+      3072
     ],
-    "situationalItems": [
-      {
-        "itemId": 3072,
-        "condition": "enemy_heavy_cc",
-        "description": "Bloodthirster — vs CC (25% pick vs 12% baseline)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       3008,
       3006
@@ -24007,7 +23791,6 @@
       1086
     ],
     "coreItems": [
-      2523,
       3087,
       3097,
       2512,
@@ -24055,9 +23838,7 @@
     "coreItems": [
       3097,
       3032,
-      2512,
-      3046,
-      3031
+      2512
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -24162,12 +23943,17 @@
     ],
     "coreItems": [
       6655,
-      2503,
       4645,
       3089,
-      3157
+      3135
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 2503,
+        "condition": "enemy_heavy_ap",
+        "description": "Blackfire Torch — vs AP (30% pick vs 17% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3158
@@ -24209,9 +23995,7 @@
     "coreItems": [
       3003,
       4628,
-      4629,
-      6655,
-      3089
+      4629
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -24255,8 +24039,7 @@
       3003,
       2065,
       4629,
-      4628,
-      4005
+      4628
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -24300,9 +24083,7 @@
     "coreItems": [
       2065,
       4005,
-      3190,
-      2524,
-      3107
+      2524
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -24345,12 +24126,15 @@
     ],
     "coreItems": [
       3003,
-      4629,
-      4005,
-      2065,
-      3102
+      4629
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 2065,
+        "condition": "enemy_heavy_ap",
+        "description": "Shurelya's Battlesong — vs AP (38% pick vs 19% baseline)"
+      }
+    ],
     "bootsOptions": [
       3158,
       3009
@@ -24392,9 +24176,7 @@
     "coreItems": [
       6655,
       3100,
-      4645,
-      3157,
-      3089
+      4645
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -24438,9 +24220,7 @@
     "coreItems": [
       6655,
       3100,
-      3152,
-      4645,
-      3089
+      3157
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -24482,11 +24262,9 @@
       3865
     ],
     "coreItems": [
-      6655,
       4005,
-      3152,
       4628,
-      3157
+      2065
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -24529,21 +24307,33 @@
     ],
     "coreItems": [
       2503,
-      6655,
-      4629,
-      4628,
-      4005
+      4629
     ],
     "situationalItems": [
+      {
+        "itemId": 4628,
+        "condition": "enemy_heavy_ap",
+        "description": "Horizon Focus — vs AP (45% pick vs 22% baseline)"
+      },
       {
         "itemId": 3157,
         "condition": "enemy_heavy_ap",
         "description": "Zhonya's Hourglass — vs AP (27% pick vs 11% baseline)"
       },
       {
+        "itemId": 4005,
+        "condition": "enemy_has_tanks",
+        "description": "Imperial Mandate — vs tanks (36% pick vs 22% baseline)"
+      },
+      {
         "itemId": 3089,
         "condition": "enemy_heavy_ad",
         "description": "Rabadon's Deathcap — vs AD (25% pick vs 11% baseline)"
+      },
+      {
+        "itemId": 6655,
+        "condition": "enemy_heavy_ap",
+        "description": "Luden's Echo — vs AP (45% pick vs 33% baseline)"
       }
     ],
     "bootsOptions": [
@@ -24587,11 +24377,15 @@
     "coreItems": [
       6653,
       2503,
-      3157,
-      4645,
       3135
     ],
-    "situationalItems": [],
+    "situationalItems": [
+      {
+        "itemId": 3157,
+        "condition": "enemy_heavy_ad",
+        "description": "Zhonya's Hourglass — vs AD (29% pick vs 11% baseline)"
+      }
+    ],
     "bootsOptions": [
       3020,
       3158
@@ -24633,7 +24427,6 @@
     "coreItems": [
       6653,
       4645,
-      3116,
       3157,
       3137
     ],
@@ -24679,8 +24472,6 @@
     "coreItems": [
       6653,
       2503,
-      4005,
-      3116,
       4645
     ],
     "situationalItems": [],
@@ -24724,10 +24515,7 @@
     ],
     "coreItems": [
       6653,
-      2503,
-      3116,
-      4005,
-      3165
+      3116
     ],
     "situationalItems": [],
     "bootsOptions": [
@@ -24770,9 +24558,7 @@
     ],
     "coreItems": [
       6653,
-      2503,
-      3116,
-      3135
+      2503
     ],
     "situationalItems": [],
     "bootsOptions": [

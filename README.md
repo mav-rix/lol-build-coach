@@ -220,6 +220,26 @@ first run. For public distribution (beyond friends): register the product on
 developer.riotgames.com (Personal key), and expect Riot's naming policy to
 require dropping "LoL" from the product name.
 
+### Troubleshooting (desktop app)
+
+- **Updates**: releases download in the background; a popup (and a tray entry)
+  offers "Restart now", which runs the downloaded installer directly and
+  relaunches. Everything the updater does is logged to
+  `%APPDATA%\LoL Build Coach\updater.log` — check it first if an update seems
+  stuck.
+- **Update seems downloaded but never applies**: the verified installer sits in
+  `%LOCALAPPDATA%\lol-build-coach-app-updater\pending\` — running it by hand
+  (silently: `<Setup.exe> /S`) installs that version. Historical causes, both
+  fixed in 0.1.7: the overlay's key listener could block the app from quitting,
+  and electron-updater's own installer launch could fail with a
+  "Windows cannot find '\\'" dialog — the app now stops the listener before
+  quitting and spawns the installer itself.
+- **Quit hangs**: quitting stops the global key listener first and force-exits
+  after 3 s as a fallback — if an old version ever refuses to die, end
+  "LoL Build Coach.exe" in Task Manager; nothing is lost.
+- **SmartScreen warning on first run**: expected for an unsigned binary — More
+  info → Run anyway.
+
 ## Game modes
 
 Ranked and normal Summoner's Rift share the same builds — queue type doesn't
