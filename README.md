@@ -50,6 +50,10 @@ recommendations, lightweight live economic tracking, and post-game build analysi
   timings against projected targets, and generates coaching tips. Automatic match
   import needs the Phase 3 backend + Riot API key; until then use the SR or ARAM
   demo match, or paste match JSON.
+- **Augments** (`/augments`) — Arena / ARAM Mayhem augment win-rates as a ranked
+  tier list grouped by rarity, from real high-elo Arena games (see the augment
+  section below). The overlay also shows your champion's best augments as goals
+  during Mayhem.
 
 ## Stack
 
@@ -238,19 +242,19 @@ matter. ARAM is a first-class mode:
   and API surface. Their mutators make builds approximations, but the economy,
   item filtering, and threat reads are correct
 
-## Seeded builds (MVP)
+## Seeded builds (curated fallback)
 
-SR: Vayne (ADC), Malphite (TOP), Lulu (SUPPORT), Lee Sin (JUNGLE), Ahri (MID) —
-plus ARAM builds for the same five champions — in `src/data/builds.ts`. All item
-and rune IDs are validated against the live patch; unknown IDs degrade gracefully
-in the UI. Add more builds by appending to `BUILD_PATHS`.
+Hand-authored builds for Vayne (ADC), Malphite (TOP), Lulu (SUPPORT), Lee Sin
+(JUNGLE), Ahri (MID) — plus ARAM builds for the same five — in
+`src/data/builds.ts`. Originally the MVP data source; today the **aggregated
+builds** (below) are primary and these serve as the curated fallback when an
+aggregated build hasn't cleared the confidence bar. All item and rune IDs are
+validated against the live patch; unknown IDs degrade gracefully in the UI.
 
 ## Scoring engine (`src/lib/scoring.ts`)
 
-Riot doesn't publish "the meta build" anywhere machine-readable, so the seeded
-builds are hand-authored — but you can't hand-author all ~170 champions. The
-scoring engine fills the gap: it computes a live build for **any** champion from
-data we already have.
+The tail fallback for champions with neither an aggregated build nor a seed: it
+computes a live build for **any** champion from data we already have.
 
 Each poll it scores every valid legendary from Data Dragon:
 
@@ -268,12 +272,12 @@ Each poll it scores every valid legendary from Data Dragon:
 Effects that tags don't capture (anti-heal, %-max-health, cleanse, defensive
 actives) are small curated ID sets, validated against the live patch. Preview it
 for any champion with `?mock=1&champ=<Name>` on `/live` (e.g.
-`/live?mock=1&champ=Nocturne`). This is heuristic itemization; real
-challenger-aggregated builds are the Phase 3 layer.
+`/live?mock=1&champ=Nocturne`). This is heuristic itemization — the aggregated
+builds below are the real data layer and cover nearly every champion.
 
 ## Aggregated builds (`scripts/aggregate-builds.mjs`)
 
-The "pro build" base layer (Phase 3, in progress). An **offline** script turns
+The "pro build" base layer. An **offline** script turns
 high-elo Match-V5 data into per-(champion, role) `BuildPath` rows — the same
 shape the seeds use — so the adaptive engine adjusts them case-by-case just like
 a seed. No standing backend: it runs locally with a Riot **dev key** and writes
