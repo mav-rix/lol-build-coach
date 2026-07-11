@@ -1,5 +1,7 @@
 import { analyzeEnemyComp } from '@/lib/situational'
 import { GRIEVOUS_AD, GRIEVOUS_AP, PERCENT_HP } from '@/lib/scoring'
+import { JUNGLE_PET_IDS } from '@/lib/jungle'
+import { SUPPORT_QUEST_IDS } from '@/lib/support'
 import type { BuildPath, SituationalCondition } from '@/types/app'
 import type { DDragonChampion, DDragonItem } from '@/types/ddragon'
 
@@ -42,6 +44,20 @@ export interface GamePlan {
   active: 'wr' | 'comp'
   /** One-line comp reads shown alongside the plan. */
   compSummary: string[]
+  /** The comp conditions that fired — reused for role-start picks (pet, quest final). */
+  activeConditions: ReadonlySet<SituationalCondition>
+}
+
+/**
+ * Starter-slot ownership that survives transformations: jungle pets evolve into
+ * different item ids, and the support World Atlas upgrades through its quest —
+ * owning ANY stage counts as owning the starter.
+ */
+export function starterOwned(itemId: number, ownedIds: ReadonlySet<number>): boolean {
+  if (ownedIds.has(itemId)) return true
+  if (JUNGLE_PET_IDS.has(itemId)) return [...ownedIds].some((id) => JUNGLE_PET_IDS.has(id))
+  if (SUPPORT_QUEST_IDS.has(itemId)) return [...ownedIds].some((id) => SUPPORT_QUEST_IDS.has(id))
+  return false
 }
 
 const BOOTS_VS = { apCc: 3111, ad: 3047 } // Mercury's Treads / Plated Steelcaps
@@ -155,5 +171,6 @@ export function buildGamePlan(
     swaps,
     active: swaps.length > 0 ? 'comp' : 'wr',
     compSummary: comp.summary,
+    activeConditions: cond,
   }
 }

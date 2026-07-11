@@ -338,9 +338,36 @@ function aggregateCore(group) {
   return top
 }
 
+const JUNGLE_PETS = [1101, 1102, 1103] // Scorchclaw / Gustwalker / Mosstomper
+
 function aggregateStarters(group) {
   const key = modal(group.map((o) => [...o.starters].sort((a, b) => a - b).join(',')))
-  return key ? key.split(',').filter(Boolean).map(Number) : []
+  const starters = key ? key.split(',').filter(Boolean).map(Number) : []
+
+  // Jungle: the pet is a mandatory start with a real choice — pick it by WIN
+  // RATE across the cluster (min sample), not popularity, and put it first.
+  if (group[0]?.role === 'JUNGLE') {
+    const stats = new Map(JUNGLE_PETS.map((id) => [id, { games: 0, wins: 0 }]))
+    for (const o of group)
+      for (const id of o.starters)
+        if (stats.has(id)) {
+          const s = stats.get(id)
+          s.games++
+          if (o.win) s.wins++
+        }
+    const MIN = 15
+    let best = null
+    for (const [id, s] of stats) {
+      if (s.games < MIN) continue
+      const wr = s.wins / s.games
+      if (!best || wr > best.wr) best = { id, wr }
+    }
+    if (best) {
+      const rest = starters.filter((id) => !JUNGLE_PETS.includes(id))
+      return [best.id, ...rest]
+    }
+  }
+  return starters
 }
 
 // --- Archetype clustering -----------------------------------------------
