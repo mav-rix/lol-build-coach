@@ -21,6 +21,7 @@ let baseUrl = null
 let mainWin = null
 let overlayWin = null
 let tray = null
+let pendingUpdate = null // { version } once an update has downloaded
 
 // Overlay state (mirrors the dev shell).
 let interactivePin = false
@@ -42,7 +43,7 @@ function createMainWindow() {
     width: 1100,
     height: 800,
     autoHideMenuBar: true,
-    webPreferences: { ...HARDENED },
+    webPreferences: { ...HARDENED, preload: path.join(__dirname, 'app-preload.js') },
   })
   mainWin.loadURL(baseUrl + '/')
   // External links (Data Dragon docs etc.) go to the system browser.
@@ -144,6 +145,37 @@ function startTabListener() {
 }
 
 // ---- tray ---------------------------------------------------------------------
+function refreshTrayMenu() {
+  if (!tray) return
+  const items = []
+  // The update entry leads the menu when one is ready.
+  if (pendingUpdate) {
+    items.push(
+      {
+        label: `Restart to update (v${pendingUpdate.version})`,
+        click: () => installPendingUpdate(),
+      },
+      { type: 'separator' },
+    )
+  }
+  items.push(
+    { label: 'Open Build Coach', click: () => (mainWin ? mainWin.focus() : createMainWindow()) },
+    {
+      label: 'Toggle overlay',
+      click: () => {
+        if (overlayWin) {
+          overlayWin.destroy()
+          overlayWin = null
+        } else createOverlayWindow()
+      },
+    },
+    { type: 'separator' },
+    { label: 'Quit', click: () => app.quit() },
+  )
+  tray.setContextMenu(Menu.buildFromTemplate(items))
+  tray.setToolTip(pendingUpdate ? `LoL Build Coach — update v${pendingUpdate.version} ready` : 'LoL Build Coach')
+}
+
 function createTray() {
   // Windows needs an .ico; fall back silently if missing in dev.
   try {
@@ -151,24 +183,38 @@ function createTray() {
   } catch {
     return
   }
-  tray.setToolTip('LoL Build Coach')
-  tray.setContextMenu(
-    Menu.buildFromTemplate([
-      { label: 'Open Build Coach', click: () => (mainWin ? mainWin.focus() : createMainWindow()) },
-      {
-        label: 'Toggle overlay',
-        click: () => {
-          if (overlayWin) {
-            overlayWin.destroy()
-            overlayWin = null
-          } else createOverlayWindow()
-        },
-      },
-      { type: 'separator' },
-      { label: 'Quit', click: () => app.quit() },
-    ]),
-  )
+  refreshTrayMenu()
   tray.on('double-click', () => (mainWin ? mainWin.focus() : createMainWindow()))
+}
+
+// ---- updates -------------------------------------------------------------------
+function installPendingUpdate() {
+  try {
+    const { autoUpdater } = require('electron-updater')
+    autoUpdater.quitAndInstall()
+  } catch {
+    // updater unavailable (dev) — nothing to do
+  }
+}
+
+function startUpdater() {
+  let autoUpdater
+  try {
+    ;({ autoUpdater } = require('electron-updater'))
+  } catch {
+    return // dev — updater not installed
+  }
+  autoUpdater.on('update-downloaded', (info) => {
+    pendingUpdate = { version: info?.version ?? 'new' }
+    refreshTrayMenu()
+    // Centered popup in the app window (see UpdateModal in the web app).
+    if (mainWin && !mainWin.isDestroyed()) {
+      mainWin.webContents.send('app:update-ready', pendingUpdate)
+    }
+  })
+  autoUpdater.checkForUpdatesAndNotify().catch(() => {})
+  // Long sessions: re-check every 4 hours so an open app still learns of updates.
+  setInterval(() => autoUpdater.checkForUpdates().catch(() => {}), 4 * 60 * 60 * 1000)
 }
 
 // ---- app lifecycle --------------------------------------------------------------
@@ -224,13 +270,12 @@ app.whenReady().then(async () => {
   })
   globalShortcut.register('Control+Shift+Q', () => app.quit())
 
+  // Update-UX bridge for the main window (see electron/app-preload.js).
+  ipcMain.handle('app:get-pending-update', () => pendingUpdate)
+  ipcMain.on('app:install-update', () => installPendingUpdate())
+
   // Auto-update from GitHub Releases when packaged (no-op in dev, never fatal).
-  try {
-    const { autoUpdater } = require('electron-updater')
-    autoUpdater.checkForUpdatesAndNotify().catch(() => {})
-  } catch {
-    // updater not installed in dev — fine
-  }
+  startUpdater()
 })
 
 app.on('will-quit', () => globalShortcut.unregisterAll())
