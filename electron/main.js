@@ -217,14 +217,47 @@ function createTray() {
 }
 
 // ---- updates -------------------------------------------------------------------
+// Append-only log next to userData so update failures are diagnosable instead
+// of a vanishing error dialog.
+function updaterLog(line) {
+  try {
+    require('node:fs').appendFileSync(
+      path.join(app.getPath('userData'), 'updater.log'),
+      `${new Date().toISOString()} ${line}\n`,
+    )
+  } catch {
+    // best effort
+  }
+}
+
 function installPendingUpdate() {
+  // Preferred path: run the ALREADY-DOWNLOADED, checksum-verified installer
+  // ourselves and exit — electron-updater's quitAndInstall threw async errors
+  // on this setup, stranding updates. /S --force-run = silent + relaunch, the
+  // same invocation electron-updater itself uses.
+  const file = pendingUpdate?.file
+  if (file && require('node:fs').existsSync(file)) {
+    updaterLog(`installing ${file}`)
+    stopTabListener()
+    try {
+      const child = require('node:child_process').spawn(file, ['/S', '--force-run'], {
+        detached: true,
+        stdio: 'ignore',
+      })
+      child.unref()
+      // Give the spawn a beat, then get out of the installer's way.
+      setTimeout(() => app.exit(0), 700)
+      return
+    } catch (e) {
+      updaterLog(`spawn failed: ${e}`)
+    }
+  }
+  // Fallback: electron-updater's own path.
   try {
     const { autoUpdater } = require('electron-updater')
-    // Silent install, relaunch when done; safeQuit guards against a blocked
-    // quit sequence keeping the old version alive.
     safeQuit(() => autoUpdater.quitAndInstall(true, true))
-  } catch {
-    // updater unavailable (dev) — nothing to do
+  } catch (e) {
+    updaterLog(`quitAndInstall failed: ${e}`)
   }
 }
 
@@ -235,8 +268,10 @@ function startUpdater() {
   } catch {
     return // dev — updater not installed
   }
+  autoUpdater.on('error', (e) => updaterLog(`updater error: ${e?.stack ?? e}`))
   autoUpdater.on('update-downloaded', (info) => {
-    pendingUpdate = { version: info?.version ?? 'new' }
+    pendingUpdate = { version: info?.version ?? 'new', file: info?.downloadedFile ?? null }
+    updaterLog(`downloaded v${pendingUpdate.version} → ${pendingUpdate.file}`)
     refreshTrayMenu()
     // Centered popup in the app window (see UpdateModal in the web app).
     if (mainWin && !mainWin.isDestroyed()) {
