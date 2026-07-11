@@ -6,6 +6,7 @@ import { ItemIcon } from '@/components/ItemIcon'
 import { useLiveBuildState } from '@/hooks/useLiveBuildState'
 import { formatClock } from '@/lib/analysis'
 import { loadAugmentData, topAugmentsFor, type AugmentGoal } from '@/lib/augments'
+import { starterOwned } from '@/lib/gameplan'
 
 // Compact in-game overlay, rendered inside a transparent always-on-top Electron
 // window. u.gg-style: one flat, near-opaque dark panel, hairline-divided
@@ -212,7 +213,13 @@ export default function Overlay() {
 
   const name = self?.championName ?? championId ?? 'In Game'
   const kda = scores ? `${scores.kills}/${scores.deaths}/${scores.assists}` : '—'
-  const pathItems = plan.filter((p) => p.label !== 'starter')
+  // Show substantive starters (jungle pet, World Atlas, Doran's) in the path —
+  // they're the mandatory first buy — but not consumables like potions.
+  const pathItems = plan.filter(
+    (p) =>
+      p.label !== 'starter' ||
+      !(items[String(p.itemId)]?.tags.includes('Consumable') ?? true),
+  )
 
   return (
     // Mostly-transparent chrome: the game should read through the card. Text
@@ -257,7 +264,8 @@ export default function Overlay() {
         >
           <div className="flex flex-wrap items-center gap-1">
             {pathItems.map((p, i) => {
-              const owned = ownedIds.has(p.itemId)
+              // Transformation-aware: pets evolve, the support item upgrades.
+              const owned = starterOwned(p.itemId, ownedIds)
               const isNext = nextPlanItem?.itemId === p.itemId
               return (
                 <div key={`${p.label}-${p.itemId}`} className="flex items-center gap-1">

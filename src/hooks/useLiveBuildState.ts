@@ -8,6 +8,12 @@ import { MOCK_LIVE, mockLiveFor } from '@/data/mockLive'
 import { MODE_CONFIG, gameModeFromLive, isAugmentedAbyss } from '@/lib/modes'
 import { analyzeThreats, championIdFromRaw } from '@/lib/threats'
 import { buildGamePlan, type GamePlan } from '@/lib/gameplan'
+import { JUNGLE_PET_IDS, ownsJunglePet, pickJunglePet } from '@/lib/jungle'
+import {
+  SUPPORT_QUEST_COMPLETE_ID,
+  ownsFinalSupportItem,
+  pickSupportItem,
+} from '@/lib/support'
 import type { BuildRec } from '@/lib/builder'
 import { recommendByScore } from '@/lib/scoring'
 import type { BuildPath, Role } from '@/types/app'
@@ -207,7 +213,42 @@ export function useLiveBuildState() {
   // to the scoring engine.
   const usingScoredBuild = !build && champion !== null
   const recommendations = useMemo(() => {
-    if (gamePlan) return recommendationsFromPlan(gamePlan, ownedIds, gold, items)
+    if (gamePlan) {
+      const recs = recommendationsFromPlan(gamePlan, ownedIds, gold, items)
+      // Mandatory role starts (ranked SR) lead the list until bought:
+      // the jungle companion — highest win-rate pick from the data on the WR
+      // plan, comp-driven on the vs-comp plan — and the support quest final
+      // once Bounty of Worlds completes.
+      const lead = (itemId: number, reason: string) => {
+        const item = items[String(itemId)]
+        if (!item) return
+        recs.unshift({
+          itemId,
+          name: item.name,
+          cost: item.gold.total,
+          priority: 'recommended',
+          reason,
+          affordable: gold >= item.gold.total,
+          goldNeeded: Math.max(0, Math.ceil(item.gold.total - gold)),
+          source: 'core',
+        })
+      }
+      if (mode === 'SR' && role === 'SUPPORT' && champion &&
+          ownedIds.has(SUPPORT_QUEST_COMPLETE_ID) && !ownsFinalSupportItem(ownedIds)) {
+        const pick = pickSupportItem(champion, gamePlan.activeConditions)
+        lead(pick.itemId, pick.reason)
+      }
+      if (mode === 'SR' && role === 'JUNGLE' && !ownsJunglePet(ownedIds)) {
+        if (gamePlan.active === 'comp') {
+          const pet = pickJunglePet(gamePlan.activeConditions)
+          lead(pet.itemId, pet.reason)
+        } else {
+          const petId = build?.starterItems.find((id) => JUNGLE_PET_IDS.has(id))
+          if (petId) lead(petId, 'Highest win-rate jungle companion for your champion')
+        }
+      }
+      return recs.slice(0, 5)
+    }
     if (champion) {
       return recommendByScore({
         champion,
@@ -221,7 +262,7 @@ export function useLiveBuildState() {
       })
     }
     return []
-  }, [gamePlan, champion, ownedIds, gold, threats, self, items, modeConfig, role])
+  }, [gamePlan, champion, ownedIds, gold, threats, self, items, modeConfig, role, mode, build])
   const topRec = recommendations[0] ?? null
 
   return {
