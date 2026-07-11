@@ -1,7 +1,7 @@
 {
   "name": "lol-build-coach-app",
   "productName": "LoL Build Coach",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "description": "Build recommendations, live game overlay, and augment tier lists for League of Legends. Read-only companion — never touches the game process.",
   "author": "Eric Tameilau",
