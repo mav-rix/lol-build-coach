@@ -49,6 +49,7 @@ const PER_PLAYER = Number(args['per-player'] ?? 15)
 const MIN_SAMPLE = Number(args['min-sample'] ?? 3)
 const IF_STALE = Boolean(args['if-stale'])
 const INCLUDE_CACHED = Boolean(args['include-cached'])
+const CACHED_ONLY = Boolean(args['cached-only']) // re-aggregate the disk cache, zero API calls
 const DRY_RUN = Boolean(args['dry-run'])
 const DRY_LIMIT = Number(args.matches ?? 50)
 // --mode sr (ranked Summoner's Rift) or aram (ARAM). ARAM has no roles, so its
@@ -342,6 +343,46 @@ function aggregateStarters(group) {
   return key ? key.split(',').filter(Boolean).map(Number) : []
 }
 
+// --- Archetype clustering -----------------------------------------------
+// Flex champions (AP poke vs tank Malphite, etc.) split into distinct builds;
+// naive modal aggregation stitches the most popular items from DIFFERENT
+// archetypes into a chimera no one actually builds (Heartsteel → Malignance).
+// Classify each observation by its core items' tags and aggregate only the
+// dominant cluster, so the emitted build is one coherent archetype.
+
+function observationArchetype(o, items) {
+  let ap = 0
+  let ad = 0
+  let tank = 0
+  for (const id of o.core) {
+    const it = items[String(id)]
+    if (!it) continue
+    const t = it.tags ?? []
+    const isAp = t.includes('SpellDamage') || (it.stats?.FlatMagicDamageMod ?? 0) > 0
+    const isAd = t.includes('Damage') || t.includes('AttackSpeed') || t.includes('CriticalStrike')
+    const isTank =
+      !isAp && !isAd && (t.includes('Armor') || t.includes('SpellBlock') || t.includes('Health'))
+    if (isAp) ap++
+    if (isAd) ad++
+    if (isTank) tank++
+  }
+  if (tank > ap && tank > ad) return 'tank'
+  if (ap > ad) return 'ap'
+  if (ad > 0) return 'ad'
+  return 'other'
+}
+
+/** The dominant archetype's observations (ties/empties stay in the pool). */
+function dominantCluster(group, items) {
+  const clusters = {}
+  for (const o of group) {
+    const k = observationArchetype(o, items)
+    ;(clusters[k] ??= []).push(o)
+  }
+  const ranked = Object.entries(clusters).sort((a, b) => b[1].length - a[1].length)
+  return ranked[0][1]
+}
+
 // Comp-conditioned situational items: an item is "situational vs condition C"
 // when it's bought materially more often in games where C is active than
 // overall. Thresholds are deliberately conservative — small ingests emit few or
@@ -554,6 +595,11 @@ async function main() {
       matchIds = (await gatherMatchIds(puuids, REGIONS[0])).slice(0, DRY_LIMIT)
       console.log(`  ${matchIds.length} matches\n`)
     }
+  } else if (CACHED_ONLY) {
+    // Re-aggregate what's on disk (e.g. after a logic change) — no key, no API.
+    // The per-mode queue/map filter in observeMatch picks the right matches.
+    matchIds = cachedMatchIds()
+    console.log(`Re-aggregating ${matchIds.length} cached matches (no Riot calls).\n`)
   } else {
     if (!API_KEY) {
       console.error('Missing RIOT_API_KEY. Put it in .env (see .env.example) or export it.')
@@ -604,8 +650,12 @@ async function main() {
   // just to preview the build shapes.
   const minSample = DRY_RUN ? 1 : MIN_SAMPLE
   const builds = []
-  for (const group of groups.values())
-    if (group.length >= minSample) builds.push(toBuildPath(group, statik.items))
+  for (const group of groups.values()) {
+    // Aggregate only the dominant archetype cluster so flex champions don't
+    // produce tank/AP chimera builds (see observationArchetype).
+    const cluster = dominantCluster(group, statik.items)
+    if (cluster.length >= minSample) builds.push(toBuildPath(cluster, statik.items))
+  }
   builds.sort(
     (a, b) => a.championId.localeCompare(b.championId) || (a.role ?? '').localeCompare(b.role ?? ''),
   )
@@ -617,7 +667,7 @@ async function main() {
   }
 
   writeFileSync(OUT, JSON.stringify(builds, null, 2) + '\n')
-  console.log(`\n✓ Wrote ${builds.length} builds (${groups.size} champ/role groups seen) → ${args.out ?? 'src/data/aggregatedBuilds.json'}`)
+  console.log(`\n✓ Wrote ${builds.length} builds (${groups.size} champ/role groups seen) → ${OUT}`)
   const covered = new Set(builds.map((b) => b.championId)).size
   console.log(`  covering ${covered} champions across ${new Set(builds.map((b) => b.role)).size} roles`)
 }
