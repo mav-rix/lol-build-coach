@@ -116,6 +116,19 @@ function createOverlayWindow() {
 
 // Passive global Tab listener (see overlay/main.js for rationale — a normal
 // globalShortcut would steal Tab from the game's scoreboard).
+// The hook's NATIVE THREAD can block Electron's quit sequence if it's still
+// running (or stopped from inside will-quit), which held the whole app open on
+// quit — and with it, pending updates. It's stopped explicitly in safeQuit
+// BEFORE quitting, with a hard-exit fallback.
+let activeHook = null
+function stopTabListener() {
+  try {
+    activeHook?.stop()
+  } catch {
+    // best effort
+  }
+  activeHook = null
+}
 function startTabListener() {
   if (TAB_MODE === 'off') return
   let uio
@@ -139,9 +152,25 @@ function startTabListener() {
     })
   }
   uIOhook.start()
+  activeHook = uIOhook
   tabModeActive = true
   applyOverlayVisibility()
-  app.on('will-quit', () => uIOhook.stop())
+}
+
+/**
+ * Quit that can't hang: stop the global hook first, then quit — and if the
+ * process is still alive shortly after (something blocked the quit sequence),
+ * hard-exit. A pending update's installer is spawned before exit either way
+ * (autoInstallOnAppQuit / quitAndInstall), so updates still apply.
+ */
+function safeQuit(fn) {
+  stopTabListener()
+  try {
+    ;(fn ?? (() => app.quit()))()
+  } catch {
+    app.quit()
+  }
+  setTimeout(() => app.exit(0), 3000).unref?.()
 }
 
 // ---- tray ---------------------------------------------------------------------
@@ -170,7 +199,7 @@ function refreshTrayMenu() {
       },
     },
     { type: 'separator' },
-    { label: 'Quit', click: () => app.quit() },
+    { label: 'Quit', click: () => safeQuit() },
   )
   tray.setContextMenu(Menu.buildFromTemplate(items))
   tray.setToolTip(pendingUpdate ? `LoL Build Coach — update v${pendingUpdate.version} ready` : 'LoL Build Coach')
@@ -191,7 +220,9 @@ function createTray() {
 function installPendingUpdate() {
   try {
     const { autoUpdater } = require('electron-updater')
-    autoUpdater.quitAndInstall()
+    // Silent install, relaunch when done; safeQuit guards against a blocked
+    // quit sequence keeping the old version alive.
+    safeQuit(() => autoUpdater.quitAndInstall(true, true))
   } catch {
     // updater unavailable (dev) — nothing to do
   }
@@ -268,7 +299,7 @@ app.whenReady().then(async () => {
       overlayWin = null
     } else createOverlayWindow()
   })
-  globalShortcut.register('Control+Shift+Q', () => app.quit())
+  globalShortcut.register('Control+Shift+Q', () => safeQuit())
 
   // Update-UX bridge for the main window (see electron/app-preload.js).
   ipcMain.handle('app:get-pending-update', () => pendingUpdate)
