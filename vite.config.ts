@@ -1,4 +1,5 @@
 import path from 'node:path'
+import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -14,8 +15,17 @@ import tailwindcss from '@tailwindcss/vite'
 // so /lcu proxies over http. LCU_HOST/LCU_PORT mirror the same WSL setup.
 const winHost = process.env.LIVE_CLIENT_HOST ?? '127.0.0.1'
 
+// The app version lives in electron/package.json (the shipped artifact's
+// version) — injected at build time so the UI can display it everywhere.
+const appVersion = JSON.parse(
+  readFileSync(path.resolve(import.meta.dirname, 'electron/package.json'), 'utf8'),
+).version
+
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  define: {
+    __APP_VERSION__: JSON.stringify(appVersion),
+  },
   resolve: {
     alias: { '@': path.resolve(import.meta.dirname, 'src') },
   },

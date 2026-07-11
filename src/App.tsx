@@ -20,7 +20,10 @@ function Layout() {
     <div className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100">
       <nav className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center gap-6 px-4 py-3">
-          <span className="font-bold tracking-tight text-sky-400">LoL Build Coach</span>
+          <span className="font-bold tracking-tight text-sky-400">
+            LoL Build Coach{' '}
+            <span className="text-[10px] font-medium text-zinc-500">v{__APP_VERSION__}</span>
+          </span>
           {NAV.map((item) => (
             <NavLink
               key={item.to}
@@ -43,7 +46,7 @@ function Layout() {
       </main>
 
       <footer className="border-t border-zinc-800 px-4 py-4 text-center text-xs text-zinc-600">
-        LoL Build Coach isn’t endorsed by Riot Games and doesn’t reflect the views
+        LoL Build Coach v{__APP_VERSION__} · isn’t endorsed by Riot Games and doesn’t reflect the views
         or opinions of Riot Games or anyone officially involved in producing or
         managing League of Legends. League of Legends and Riot Games are
         trademarks or registered trademarks of Riot Games, Inc.
