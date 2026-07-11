@@ -32,3 +32,6 @@ dist-ssr
 
 # Generated augment preview (scripts/build-augments-preview.mjs)
 augments-preview.html
+electron/dist
+electron/node_modules
+electron/release
