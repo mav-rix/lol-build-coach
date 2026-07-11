@@ -14,7 +14,8 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "augments:preview": "node scripts/build-augments-preview.mjs",
-    "overlay:shot": "node scripts/screenshot-overlay.mjs"
+    "overlay:shot": "node scripts/screenshot-overlay.mjs",
+    "package:win": "node scripts/package-win.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",

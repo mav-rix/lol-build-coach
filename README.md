@@ -184,6 +184,38 @@ lifesteal purchases light up anti-heal, and so on. This uses only
 scoreboard-visible data (what TAB already shows) from Riot's documented local
 API — no fog-of-war information.
 
+## Desktop app (packaged)
+
+`electron/` consolidates everything into one installable Windows app: the main
+window (Build/Live/Review/Augments), the in-game overlay, and an embedded
+loopback server that serves the built bundle and proxies the Live Client +
+LCU APIs in-process — running natively on Windows, so **none of the WSL
+portproxy/bridge setup applies** to the packaged app. Tray icon, single
+instance; hotkeys as in the overlay plus `Ctrl+Shift+L` to toggle the overlay
+window itself.
+
+```bash
+npm run package:win     # → C:\Users\<you>\lol-build-coach-pkg\release\
+```
+
+The web bundle is built, staged to the Windows side, and electron-builder
+produces an NSIS installer + zip there (Electron/NSIS binaries need to run
+natively; `npmRebuild` is off — uiohook-napi uses its shipped prebuilds).
+
+**Updates via GitHub Releases:** the builder config publishes to this repo's
+Releases, and the app checks them on launch (electron-updater). Cut a release
+with `node scripts/package-win.mjs --publish` (needs a `GH_TOKEN` with repo
+scope on the Windows-side environment). Data-only refreshes per patch can ship
+as release assets later — the app currently bundles its data.
+
+**Distribution notes:** the shipped app contains no Riot API key and makes no
+Riot API calls (local Live Client + bundled data only). The overlay uses a
+passive global keyboard listener solely to show/hide on Tab — it never sends
+input to the game. The binary is unsigned, so Windows SmartScreen will warn on
+first run. For public distribution (beyond friends): register the product on
+developer.riotgames.com (Personal key), and expect Riot's naming policy to
+require dropping "LoL" from the product name.
+
 ## Game modes
 
 Ranked and normal Summoner's Rift share the same builds — queue type doesn't

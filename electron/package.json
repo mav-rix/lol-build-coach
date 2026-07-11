@@ -1,0 +1,54 @@
+{
+  "name": "lol-build-coach-app",
+  "productName": "LoL Build Coach",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Build recommendations, live game overlay, and augment tier lists for League of Legends. Read-only companion — never touches the game process.",
+  "author": "Eric Tameilau",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.erictameilau.lolbuildcoach",
+    "npmRebuild": false,
+    "productName": "LoL Build Coach",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "server.js",
+      "preload.js",
+      "icon.ico",
+      "dist/**",
+      "node_modules/**"
+    ],
+    "asarUnpack": [
+      "node_modules/uiohook-napi/**"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "deleteAppDataOnUninstall": false
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "mav-rix",
+      "repo": "lol-build-coach"
+    },
+    "electronVersion": "43.1.0"
+  },
+  "dependencies": {
+    "uiohook-napi": "^1.5.4",
+    "electron-updater": "^6.3.9"
+  }
+}
