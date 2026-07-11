@@ -30,6 +30,7 @@
       "node_modules/uiohook-napi/**"
     ],
     "win": {
+      "icon": "icon.ico",
       "target": [
         "nsis",
         "zip"
