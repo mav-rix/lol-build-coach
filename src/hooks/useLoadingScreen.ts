@@ -43,10 +43,12 @@ async function fetchLoadingScreen(): Promise<LoadingScreenState> {
 
 /**
  * Polls the LCU bridge for the loading-screen scouting report (both teams,
- * rank, hot/cold streaks). Polling stops once the game itself is reachable —
- * the overlay switches to the live card then. ?mockload=1 serves a fixture.
+ * rank, hot/cold streaks). Polling stops once the match has actually started
+ * (the game clock is running — the Live Client API responds while the loading
+ * screen is still up, so reachability alone isn't enough); the overlay
+ * switches to the live card then. ?mockload=1 serves a fixture.
  */
-export function useLoadingScreen(isInGame: boolean): LoadingScreenState {
+export function useLoadingScreen(gameStarted: boolean): LoadingScreenState {
   const mock = useMockLoad()
   const query = useQuery({
     queryKey: ['lcu-loading-screen'],
@@ -55,7 +57,7 @@ export function useLoadingScreen(isInGame: boolean): LoadingScreenState {
     refetchIntervalInBackground: true,
     retry: false,
     gcTime: 0,
-    enabled: !mock && !isInGame,
+    enabled: !mock && !gameStarted,
   })
   if (mock) return MOCK_LOADING_SCREEN
   return query.data ?? EMPTY
