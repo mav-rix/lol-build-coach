@@ -40,11 +40,44 @@ let tabVisible = false // Tab currently held (hold) or toggled on (toggle)
 let pinnedVisible = false // Ctrl+Shift+H — force-visible regardless of Tab
 let tabModeActive = false // true once the key listener is actually running
 
+let loadingLayout = false // renderer-reported: League loading screen is up
+let preLoadingBounds = null // bounds to restore after the loading screen
+
 function applyVisibility() {
   if (!win || win.isDestroyed()) return
-  const visible = !tabModeActive || pinnedVisible || tabVisible
-  if (visible && !win.isVisible()) win.showInactive() // never steal game focus
-  else if (!visible && win.isVisible()) win.hide()
+  // The loading-screen panel is always shown — Tab only governs the in-game card.
+  const visible = !tabModeActive || pinnedVisible || tabVisible || loadingLayout
+  if (visible && !win.isVisible()) {
+    win.showInactive() // never steal game focus
+    // Re-assert topmost on every show — the periodic re-assert only runs
+    // while visible, so a game may have re-grabbed z-order in between.
+    win.setAlwaysOnTop(true, 'screen-saver', 1)
+    win.moveTop()
+  } else if (!visible && win.isVisible()) win.hide()
+}
+
+// Loading screen: swap the overlay from its side-card bounds to a large
+// centered panel, and back (mirrors electron/main.js).
+function applyLoadingLayout(active) {
+  loadingLayout = Boolean(active)
+  if (win && !win.isDestroyed()) {
+    if (loadingLayout && !preLoadingBounds) {
+      preLoadingBounds = win.getBounds()
+      const wa = screen.getPrimaryDisplay().workArea
+      const w = Math.min(1000, wa.width - 80)
+      const h = Math.min(640, wa.height - 120)
+      win.setBounds({
+        x: wa.x + Math.round((wa.width - w) / 2),
+        y: wa.y + Math.round((wa.height - h) / 2),
+        width: w,
+        height: h,
+      })
+    } else if (!loadingLayout && preLoadingBounds) {
+      win.setBounds(preLoadingBounds)
+      preLoadingBounds = null
+    }
+  }
+  applyVisibility()
 }
 
 // Passive global key listener — observes Tab without consuming it (a normal
@@ -185,6 +218,7 @@ app.whenReady().then(() => {
     dragOrigin = null
     savePos()
   })
+  ipcMain.on('overlay:loading-layout', (_e, active) => applyLoadingLayout(active))
 
   globalShortcut.register('Control+Shift+O', () => {
     pinned = !pinned

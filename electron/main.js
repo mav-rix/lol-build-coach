@@ -21,7 +21,12 @@ let baseUrl = null
 let mainWin = null
 let overlayWin = null
 let tray = null
-let pendingUpdate = null // { version } once an update has downloaded
+// Update lifecycle (manual flow — nothing downloads without a click):
+//   { version, state: 'available' } → tray/modal offer the download
+//   { version, state: 'downloading', percent } → progress
+//   { version, state: 'ready', file } → tray/modal offer the restart
+let pendingUpdate = null
+let updaterRef = null // electron-updater's autoUpdater once loaded
 
 // Overlay state (mirrors the dev shell).
 let interactivePin = false
@@ -30,6 +35,8 @@ let dragOrigin = null
 let tabVisible = false
 let pinnedVisible = false
 let tabModeActive = false
+let loadingLayout = false // renderer-reported: League loading screen is up
+let preLoadingBounds = null // overlay bounds to restore after the loading screen
 
 const HARDENED = {
   contextIsolation: true,
@@ -78,9 +85,42 @@ function applyOverlayIgnore() {
 
 function applyOverlayVisibility() {
   if (!overlayWin || overlayWin.isDestroyed()) return
-  const visible = !tabModeActive || pinnedVisible || tabVisible
-  if (visible && !overlayWin.isVisible()) overlayWin.showInactive()
-  else if (!visible && overlayWin.isVisible()) overlayWin.hide()
+  // The loading-screen panel is always shown (like other companion apps) —
+  // Tab-summoning only governs the in-game card.
+  const visible = !tabModeActive || pinnedVisible || tabVisible || loadingLayout
+  if (visible && !overlayWin.isVisible()) {
+    overlayWin.showInactive()
+    // Re-assert topmost on every show — borderless games re-grab z-order on
+    // focus changes, and the periodic re-assert below only runs while visible.
+    overlayWin.setAlwaysOnTop(true, 'screen-saver', 1)
+    overlayWin.moveTop()
+  } else if (!visible && overlayWin.isVisible()) overlayWin.hide()
+}
+
+// Loading screen: swap the overlay from its side-card bounds to a large
+// centered panel, and back. The renderer drives this (it knows the gameflow
+// phase); position is never persisted from the centered layout (savePos only
+// runs on drag-end, and the loading panel has no drag grip).
+function applyLoadingLayout(active) {
+  loadingLayout = Boolean(active)
+  if (overlayWin && !overlayWin.isDestroyed()) {
+    if (loadingLayout && !preLoadingBounds) {
+      preLoadingBounds = overlayWin.getBounds()
+      const wa = screen.getPrimaryDisplay().workArea
+      const w = Math.min(1000, wa.width - 80)
+      const h = Math.min(640, wa.height - 120)
+      overlayWin.setBounds({
+        x: wa.x + Math.round((wa.width - w) / 2),
+        y: wa.y + Math.round((wa.height - h) / 2),
+        width: w,
+        height: h,
+      })
+    } else if (!loadingLayout && preLoadingBounds) {
+      overlayWin.setBounds(preLoadingBounds)
+      preLoadingBounds = null
+    }
+  }
+  applyOverlayVisibility()
 }
 
 function createOverlayWindow() {
@@ -177,15 +217,16 @@ function safeQuit(fn) {
 function refreshTrayMenu() {
   if (!tray) return
   const items = []
-  // The update entry leads the menu when one is ready.
+  // The update entry leads the menu whenever one is known about.
   if (pendingUpdate) {
-    items.push(
-      {
-        label: `Restart to update (v${pendingUpdate.version})`,
-        click: () => installPendingUpdate(),
-      },
-      { type: 'separator' },
-    )
+    const v = pendingUpdate.version
+    const entry =
+      pendingUpdate.state === 'available'
+        ? { label: `Download update v${v}`, click: () => startUpdateDownload() }
+        : pendingUpdate.state === 'downloading'
+          ? { label: `Downloading v${v} — ${pendingUpdate.percent ?? 0}%`, enabled: false }
+          : { label: `Restart to update (v${v})`, click: () => installPendingUpdate() }
+    items.push(entry, { type: 'separator' })
   }
   items.push(
     { label: 'Open Build Coach', click: () => (mainWin ? mainWin.focus() : createMainWindow()) },
@@ -202,7 +243,7 @@ function refreshTrayMenu() {
     { label: 'Quit', click: () => safeQuit() },
   )
   tray.setContextMenu(Menu.buildFromTemplate(items))
-  tray.setToolTip(pendingUpdate ? `LoL Build Coach — update v${pendingUpdate.version} ready` : 'LoL Build Coach')
+  tray.setToolTip(pendingUpdate ? `LoL Build Coach — update v${pendingUpdate.version} available` : 'LoL Build Coach')
 }
 
 function createTray() {
@@ -231,6 +272,7 @@ function updaterLog(line) {
 }
 
 function installPendingUpdate() {
+  if (pendingUpdate?.state !== 'ready') return // nothing downloaded yet
   // Preferred path: run the ALREADY-DOWNLOADED, checksum-verified installer
   // ourselves and exit — electron-updater's quitAndInstall threw async errors
   // on this setup, stranding updates. /S --force-run = silent + relaunch, the
@@ -261,6 +303,29 @@ function installPendingUpdate() {
   }
 }
 
+// Mirror every update-state change to the app window (see UpdateModal).
+function pushUpdateState() {
+  if (mainWin && !mainWin.isDestroyed()) {
+    mainWin.webContents.send('app:update-ready', pendingUpdate)
+  }
+}
+
+function startUpdateDownload() {
+  if (!updaterRef || !pendingUpdate || pendingUpdate.state !== 'available') return
+  pendingUpdate = { ...pendingUpdate, state: 'downloading', percent: 0 }
+  updaterLog(`downloading v${pendingUpdate.version}`)
+  refreshTrayMenu()
+  pushUpdateState()
+  updaterRef.downloadUpdate().catch((e) => {
+    updaterLog(`download failed: ${e}`)
+    if (pendingUpdate?.state === 'downloading') {
+      pendingUpdate = { version: pendingUpdate.version, state: 'available' }
+      refreshTrayMenu()
+      pushUpdateState()
+    }
+  })
+}
+
 function startUpdater() {
   let autoUpdater
   try {
@@ -268,19 +333,53 @@ function startUpdater() {
   } catch {
     return // dev — updater not installed
   }
+  updaterRef = autoUpdater
+  // MANUAL update flow: the check runs in the background, but the ~100 MB
+  // download only starts when the user clicks. The big win: the tray entry and
+  // the in-app popup appear seconds after a check finds a release, instead of
+  // only after a silent full download.
+  autoUpdater.autoDownload = false
   autoUpdater.on('error', (e) => updaterLog(`updater error: ${e?.stack ?? e}`))
+  autoUpdater.on('update-available', (info) => {
+    const version = info?.version ?? 'new'
+    // A restart-ready or in-flight download shouldn't regress to 'available'.
+    if (pendingUpdate && pendingUpdate.version === version && pendingUpdate.state !== 'available')
+      return
+    pendingUpdate = { version, state: 'available' }
+    updaterLog(`update available: v${version}`)
+    refreshTrayMenu()
+    pushUpdateState()
+  })
+  autoUpdater.on('update-not-available', (info) =>
+    updaterLog(`up to date (latest: v${info?.version ?? '?'})`),
+  )
+  autoUpdater.on('download-progress', (p) => {
+    if (!pendingUpdate || pendingUpdate.state !== 'downloading') return
+    const percent = Math.floor(p?.percent ?? 0)
+    if (percent === pendingUpdate.percent) return
+    pendingUpdate.percent = percent
+    // The tray menu is rebuilt sparingly (rebuilds close an open menu on
+    // Windows); the modal gets every integer step.
+    if (percent % 10 === 0) refreshTrayMenu()
+    pushUpdateState()
+  })
   autoUpdater.on('update-downloaded', (info) => {
-    pendingUpdate = { version: info?.version ?? 'new', file: info?.downloadedFile ?? null }
+    pendingUpdate = {
+      version: info?.version ?? pendingUpdate?.version ?? 'new',
+      state: 'ready',
+      file: info?.downloadedFile ?? null,
+    }
     updaterLog(`downloaded v${pendingUpdate.version} → ${pendingUpdate.file}`)
     refreshTrayMenu()
-    // Centered popup in the app window (see UpdateModal in the web app).
-    if (mainWin && !mainWin.isDestroyed()) {
-      mainWin.webContents.send('app:update-ready', pendingUpdate)
-    }
+    pushUpdateState()
   })
-  autoUpdater.checkForUpdatesAndNotify().catch(() => {})
-  // Long sessions: re-check every 4 hours so an open app still learns of updates.
-  setInterval(() => autoUpdater.checkForUpdates().catch(() => {}), 4 * 60 * 60 * 1000)
+  const check = () => {
+    updaterLog('checking for updates')
+    autoUpdater.checkForUpdates().catch((e) => updaterLog(`check failed: ${e}`))
+  }
+  check()
+  // Long sessions: re-check hourly so an open app learns of updates quickly.
+  setInterval(check, 60 * 60 * 1000)
 }
 
 // ---- app lifecycle --------------------------------------------------------------
@@ -315,6 +414,7 @@ app.whenReady().then(async () => {
     dragOrigin = null
     savePos()
   })
+  ipcMain.on('overlay:loading-layout', (_e, active) => applyLoadingLayout(active))
 
   globalShortcut.register('Control+Shift+O', () => {
     interactivePin = !interactivePin
@@ -338,6 +438,7 @@ app.whenReady().then(async () => {
 
   // Update-UX bridge for the main window (see electron/app-preload.js).
   ipcMain.handle('app:get-pending-update', () => pendingUpdate)
+  ipcMain.on('app:download-update', () => startUpdateDownload())
   ipcMain.on('app:install-update', () => installPendingUpdate())
 
   // Auto-update from GitHub Releases when packaged (no-op in dev, never fatal).

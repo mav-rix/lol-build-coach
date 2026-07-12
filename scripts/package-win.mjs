@@ -30,7 +30,7 @@ rmSync(join(ROOT, 'electron/dist'), { recursive: true, force: true })
 cpSync(join(ROOT, 'dist'), join(ROOT, 'electron/dist'), { recursive: true })
 if (existsSync(PKG)) rmSync(PKG, { recursive: true, force: true })
 mkdirSync(PKG, { recursive: true })
-for (const f of ['main.js', 'server.js', 'preload.js', 'package.json']) {
+for (const f of ['main.js', 'server.js', 'preload.js', 'app-preload.js', 'package.json']) {
   cpSync(join(ROOT, 'electron', f), join(PKG, f))
 }
 if (existsSync(join(ROOT, 'electron/icon.ico'))) cpSync(join(ROOT, 'electron/icon.ico'), join(PKG, 'icon.ico'))

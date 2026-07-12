@@ -24,8 +24,6 @@ import type { LiveAllGameData, LivePlayer } from '@/types/live'
 export interface PlanItem {
   itemId: number
   label: 'starter' | 'boots' | 'core'
-  /** Present when this slot was comp-swapped in by the game plan. */
-  swapReason?: string
 }
 
 // Stable empty fallback so memo deps don't churn before static data loads.
@@ -50,17 +48,16 @@ function buildPlan(build: BuildPath): PlanItem[] {
   ]
 }
 
-// Build Next now simply walks the active plan: the next unowned items, with
-// affordability — no mid-game path churn. Swapped slots carry their comp reason.
+// Build Next simply walks the plan: the next unowned items, with
+// affordability — no mid-game path churn.
 function recommendationsFromPlan(
   plan: GamePlan,
   ownedIds: Set<number>,
   gold: number,
-  items: Parameters<typeof buildGamePlan>[3],
+  items: Record<string, DDragonItem>,
 ): BuildRec[] {
-  const path = plan.active === 'comp' ? plan.compItems : plan.wrItems
   const recs: BuildRec[] = []
-  for (const p of path) {
+  for (const p of plan.items) {
     if (p.label === 'starter' || ownedIds.has(p.itemId)) continue
     const item = items[String(p.itemId)]
     if (!item) continue
@@ -70,10 +67,10 @@ function recommendationsFromPlan(
       name: item.name,
       cost,
       priority: recs.length === 0 ? 'recommended' : 'planned',
-      reason: p.swapReason ?? 'Next in your build path',
+      reason: 'Next in your build path',
       affordable: gold >= cost,
       goldNeeded: Math.max(0, Math.ceil(cost - gold)),
-      source: p.swapReason ? 'situational' : 'core',
+      source: 'core',
     })
     if (recs.length >= 6) break
   }
@@ -177,15 +174,15 @@ export function useLiveBuildState() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [enemySignature, staticData])
 
-  // The two build categories — WR build and vs-comp build — computed once per
-  // (build, comp) and stable for the whole game.
+  // The single build path — highest WR, same as the Build page — computed once
+  // per (build, comp) and stable for the whole game.
   const gamePlan = useMemo(
-    () => (build && staticData ? buildGamePlan(build, champion, enemies, staticData.items) : null),
-    [build, champion, enemies, staticData],
+    () => (build ? buildGamePlan(build, enemies) : null),
+    [build, enemies],
   )
 
   const plan: PlanItem[] = gamePlan
-    ? (gamePlan.active === 'comp' ? gamePlan.compItems : gamePlan.wrItems)
+    ? gamePlan.items
     : build
       ? buildPlan(build)
       : []
@@ -208,9 +205,8 @@ export function useLiveBuildState() {
   const minutes = gameTime / 60
   const csPerMin = scores && minutes > 0 ? scores.creepScore / minutes : 0
 
-  // Build Next: walk the active game-plan path (comp-adjusted when the comp
-  // fired any signal, WR otherwise). Champions with no build at all fall back
-  // to the scoring engine.
+  // Build Next: walk the game-plan path. Champions with no build at all fall
+  // back to the scoring engine.
   const usingScoredBuild = !build && champion !== null
   const recommendations = useMemo(() => {
     if (gamePlan) {
@@ -239,12 +235,12 @@ export function useLiveBuildState() {
         lead(pick.itemId, pick.reason)
       }
       if (mode === 'SR' && role === 'JUNGLE' && !ownsJunglePet(ownedIds)) {
-        if (gamePlan.active === 'comp') {
+        const petId = build?.starterItems.find((id) => JUNGLE_PET_IDS.has(id))
+        if (petId) lead(petId, 'Highest win-rate jungle companion for your champion')
+        else {
+          // Build data carries no pet — fall back to the comp-driven pick.
           const pet = pickJunglePet(gamePlan.activeConditions)
           lead(pet.itemId, pet.reason)
-        } else {
-          const petId = build?.starterItems.find((id) => JUNGLE_PET_IDS.has(id))
-          if (petId) lead(petId, 'Highest win-rate jungle companion for your champion')
         }
       }
       return recs.slice(0, 6)

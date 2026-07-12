@@ -13,4 +13,7 @@ contextBridge.exposeInMainWorld('overlay', {
   beginDrag: () => ipcRenderer.send('overlay:begin-drag'),
   dragTo: (dx, dy) => ipcRenderer.send('overlay:drag-to', dx, dy),
   endDrag: () => ipcRenderer.send('overlay:end-drag'),
+  // League loading screen up/down: main swaps the window between the side-card
+  // bounds and a large centered panel, and forces it visible while loading.
+  setLoadingLayout: (active) => ipcRenderer.send('overlay:loading-layout', Boolean(active)),
 })

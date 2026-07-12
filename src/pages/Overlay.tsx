@@ -3,7 +3,9 @@ import type { ReactNode } from 'react'
 import { BuildNext } from '@/components/BuildNext'
 import { EnemyThreats } from '@/components/EnemyThreats'
 import { ItemIcon } from '@/components/ItemIcon'
+import { LoadingScreenPanel } from '@/components/LoadingScreenPanel'
 import { useLiveBuildState } from '@/hooks/useLiveBuildState'
+import { useLoadingScreen } from '@/hooks/useLoadingScreen'
 import { formatClock } from '@/lib/analysis'
 import { loadAugmentData, topAugmentsFor, type AugmentGoal } from '@/lib/augments'
 import { starterOwned } from '@/lib/gameplan'
@@ -21,6 +23,7 @@ declare global {
       beginDrag: () => void
       dragTo: (dx: number, dy: number) => void
       endDrag: () => void
+      setLoadingLayout: (active: boolean) => void
     }
   }
 }
@@ -113,34 +116,29 @@ function useAugmentGoals(championId: string | null, enabled: boolean): AugmentGo
   return enabled ? goals : []
 }
 
-const RARITY_DOT: Record<string, string> = {
-  prismatic: 'bg-violet-400',
-  gold: 'bg-amber-400',
-  silver: 'bg-zinc-400',
+// Rarity as a ring around the icon (the old list's dot), since inline icons
+// have no room for a separate marker.
+const RARITY_RING: Record<string, string> = {
+  prismatic: 'ring-violet-400/80',
+  gold: 'ring-amber-400/80',
+  silver: 'ring-zinc-400/70',
 }
 
+// Inline icon strip, like the Build Path — details live in the tooltip.
 function AugmentGoals({ goals }: { goals: AugmentGoal[] }) {
   return (
-    <div className="space-y-1">
+    <div className="flex flex-wrap items-center gap-1">
       {goals.map((g) => (
-        <div key={g.id} className="flex items-center gap-2" title={g.meta.desc}>
-          <img src={g.meta.icon} alt="" className="h-6 w-6 shrink-0 rounded bg-zinc-900" />
-          <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${RARITY_DOT[g.meta.rarity] ?? 'bg-zinc-500'}`} />
-          <span
-            className={`min-w-0 flex-1 truncate text-xs font-medium ${
-              g.source === 'champion' ? 'text-zinc-100' : 'text-zinc-400'
-            }`}
-          >
-            {g.meta.name}
-          </span>
-          <span className="shrink-0 font-mono text-[10px] tabular-nums text-zinc-300">
-            {g.avgPlacement.toFixed(1)} avg · {g.firstRate}%
-          </span>
+        <div
+          key={g.id}
+          title={`${g.meta.name} · ${g.avgPlacement.toFixed(1)} avg · ${g.firstRate}% first — ${g.meta.desc}`}
+          className={`rounded ring-1 ${RARITY_RING[g.meta.rarity] ?? 'ring-zinc-600'} ${
+            g.source === 'champion' ? '' : 'opacity-60'
+          }`}
+        >
+          <img src={g.meta.icon} alt={g.meta.name} className="h-[26px] w-[26px] rounded bg-zinc-900" />
         </div>
       ))}
-      <p className="pt-0.5 text-[10px] leading-tight text-zinc-600">
-        Pick these when offered — none in the offer? Reroll.
-      </p>
     </div>
   )
 }
@@ -166,7 +164,6 @@ export default function Overlay() {
     self,
     championId,
     plan,
-    gamePlan,
     ownedIds,
     nextPlanItem,
     recommendations,
@@ -180,6 +177,18 @@ export default function Overlay() {
   } = useLiveBuildState()
 
   const augmentGoals = useAugmentGoals(championId, augmentMode)
+
+  // Loading screen: centered scouting report instead of the transparent side
+  // card. Main resizes/centers the window (and forces it visible) while active.
+  const loading = useLoadingScreen(isInGame)
+  const showLoading =
+    loading.show &&
+    !isInGame &&
+    ((loading.myTeam?.length ?? 0) > 0 || (loading.enemyTeam?.length ?? 0) > 0)
+  useEffect(() => {
+    window.overlay?.setLoadingLayout(showLoading)
+  }, [showLoading])
+  useEffect(() => () => window.overlay?.setLoadingLayout(false), [])
 
   useOverlayDrag()
 
@@ -197,9 +206,19 @@ export default function Overlay() {
     }
   }, [])
 
+  if (showLoading) {
+    return (
+      <LoadingScreenPanel
+        data={loading}
+        patch={patch}
+        champions={staticData?.champions ?? []}
+      />
+    )
+  }
+
   if (!isInGame || !live) {
     return (
-      <div className="flex justify-end p-2">
+      <div className="flex flex-col items-end gap-1 p-2">
         <span
           data-drag-handle
           title="Drag to move — press and hold the left mouse button"
@@ -207,6 +226,12 @@ export default function Overlay() {
         >
           LoL Build Coach — waiting for game…
         </span>
+        {loading.windowMode === 0 && (
+          <span className="max-w-[20rem] rounded border border-amber-700/60 bg-zinc-950/90 px-2.5 py-1 text-[11px] leading-snug text-amber-300">
+            League is set to Fullscreen — the overlay can&apos;t appear in-game. Switch Window
+            Mode to Borderless (in-game Settings → Video).
+          </span>
+        )}
       </div>
     )
   }
@@ -253,15 +278,13 @@ export default function Overlay() {
       )}
 
       {augmentMode && augmentGoals.length > 0 && (
-        <Section label="Augment Goals">
+        <Section label="Augment Goals · pick or reroll">
           <AugmentGoals goals={augmentGoals} />
         </Section>
       )}
 
       {pathItems.length > 0 && (
-        <Section
-          label={`Build Path · ${gamePlan?.active === 'comp' ? 'vs comp' : 'highest WR'}`}
-        >
+        <Section label="Build Path · highest WR">
           <div className="flex flex-wrap items-center gap-1">
             {pathItems.map((p, i) => {
               // Transformation-aware: pets evolve, the support item upgrades.
@@ -270,19 +293,13 @@ export default function Overlay() {
               return (
                 <div key={`${p.label}-${p.itemId}`} className="flex items-center gap-1">
                   <div
-                    title={
-                      p.swapReason
-                        ? `${items[String(p.itemId)]?.name} · ${p.swapReason}`
-                        : items[String(p.itemId)]?.name
-                    }
+                    title={items[String(p.itemId)]?.name}
                     className={`rounded ${
                       owned
                         ? 'ring-1 ring-emerald-600/70'
                         : isNext
                           ? 'ring-1 ring-orange-500'
-                          : p.swapReason
-                            ? 'ring-1 ring-sky-500/70 opacity-70'
-                            : 'opacity-40'
+                          : 'opacity-40'
                     }`}
                   >
                     <ItemIcon itemId={p.itemId} patch={patch} items={items} size={26} />
