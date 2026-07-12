@@ -1,12 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Accelerating Sorcery",
-    "rarity": "prismatic",
-    "desc": "Using Abilities grant you stacking Ability Haste. This resets each round.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/acceleratingsorcery_large.png"
-  },
-  {
     "id": 2,
     "name": "Apex Inventor",
     "rarity": "gold",
@@ -19,13 +12,6 @@
     "rarity": "prismatic",
     "desc": "Gain increased Ability Damage, Healing, Shielding, and Ability Haste, but you cannot use your Ultimate Ability.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/backtobasics_large.png"
-  },
-  {
-    "id": 5,
-    "name": "Banner of Command",
-    "rarity": "gold",
-    "desc": "Gain the Banner of Command Summoner Spell. Banner of Command empowers your ally for a brief duration.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bannerofcommand_large.png"
   },
   {
     "id": 6,
@@ -42,32 +28,11 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bluntforce_large.png"
   },
   {
-    "id": 9,
-    "name": "Buff Buddies",
-    "rarity": "silver",
-    "desc": "You gain Crest of Cinders and Crest of Insight. Granting yourself Ability Haste and resource regeneration and causing your Attacks to Burn and Slow enemy champions.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/buffbuddies_large.png"
-  },
-  {
-    "id": 10,
-    "name": "Cannon Fodder",
-    "rarity": "silver",
-    "desc": "You enter combat launching from a cannon.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/cannonfodder_large.png"
-  },
-  {
     "id": 11,
     "name": "Can't Touch This",
     "rarity": "prismatic",
     "desc": "Casting your Ultimate makes you Invulnerable for a short duration.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/canttouchthis_large.png"
-  },
-  {
-    "id": 12,
-    "name": "Castle",
-    "rarity": "silver",
-    "desc": "Gain the Castle Summoner Spell. Castle: Swap places with your ally, gaining Move Speed and a Shield.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/castle_large.png"
   },
   {
     "id": 13,
@@ -77,32 +42,11 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/celestialbody_large.png"
   },
   {
-    "id": 14,
-    "name": "Chauffeur",
-    "rarity": "prismatic",
-    "desc": "You are attached to your ally and can't move on your own. Your bonus Move Speed is also granted to your ally, and you gain Ability Haste and Attack Speed.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/chauffeur_large.png"
-  },
-  {
     "id": 15,
     "name": "Circle of Death",
     "rarity": "prismatic",
     "desc": "Healing and Health Regen you do deals a portion of the value as magic damage to the nearest enemy champion.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/circleofdeath_large.png"
-  },
-  {
-    "id": 16,
-    "name": "Combo Master",
-    "rarity": "gold",
-    "desc": "Gain the Electrocute and Phase Rush Keystone Runes.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/combomaster_large.png"
-  },
-  {
-    "id": 17,
-    "name": "Contract Killer",
-    "rarity": "silver",
-    "desc": "Each round, mark an opposing champion. That champion takes …% extra damage and grants an +%i:goldCoins%… gold when killed.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/contractkiller_large.png"
   },
   {
     "id": 18,
@@ -126,32 +70,11 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dawnbringersresolve_large.png"
   },
   {
-    "id": 21,
-    "name": "Defensive Maneuvers",
-    "rarity": "gold",
-    "desc": "Gain the Defensive Maneuvers Summoner Spell. Defensive Maneuvers Casts both Summoner Barrier and Heal on your team.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/defensivemaneuvers_large.png"
-  },
-  {
     "id": 22,
     "name": "Deft",
     "rarity": "silver",
     "desc": "Gain %i:scaleAS% …% Attack Speed.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/deft_large.png"
-  },
-  {
-    "id": 23,
-    "name": "Demon's Dance",
-    "rarity": "gold",
-    "desc": "Gain the Fleet Footwork and Grasp of the Undying Keystone Runes.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/demonsdance_large.png"
-  },
-  {
-    "id": 24,
-    "name": "Die Another Day",
-    "rarity": "gold",
-    "desc": "Gain the Die Another Day Summoner Spell. Die Another Day creates a zone where no unit can die for 4 seconds.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dieanotherday_large.png"
   },
   {
     "id": 25,
@@ -185,7 +108,7 @@
     "id": 29,
     "name": "Ethereal Weapon",
     "rarity": "gold",
-    "desc": "Your Abilities apply {{ Item_Keyword_OnHit }} effects.",
+    "desc": "Your Abilities apply On-Hit effects.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/etherealweapon_large.png"
   },
   {
@@ -196,38 +119,10 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/eureka_large.png"
   },
   {
-    "id": 32,
-    "name": "Executioner",
-    "rarity": "silver",
-    "desc": "Deal …% more damage to enemies below …% health. Reset your basic abilities on takedown.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/executioner_large.png"
-  },
-  {
-    "id": 33,
-    "name": "Extendo-Arm",
-    "rarity": "gold",
-    "desc": "Autocast fire a Blitzcrank hook every 12 seconds at a nearby enemy champion.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/extendoarm_large.png"
-  },
-  {
-    "id": 34,
-    "name": "Fallen Aegis",
-    "rarity": "silver",
-    "desc": "Start combat with a Black Shield for …s. Black Shield blocks Magic Damage and Immobilizing effects.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/fallenaegis_large.png"
-  },
-  {
-    "id": 35,
-    "name": "Feel the Burn",
-    "rarity": "prismatic",
-    "desc": "Gain the Feel the Burn Summoner Spell. Feel the Burn casts Ignite and Exhaust on all nearby enemy champions.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/feeltheburn_large.png"
-  },
-  {
     "id": 36,
     "name": "Firebrand",
     "rarity": "gold",
-    "desc": "Your Attacks apply an infinitely stacking Burn {{ Item_Keyword_OnHit }}, dealing damage over time.",
+    "desc": "Your Attacks apply an infinitely stacking Burn On-Hit, dealing damage over time.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/firebrand_large.png"
   },
   {
@@ -245,13 +140,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/frombeginningtoend_large.png"
   },
   {
-    "id": 39,
-    "name": "Frost Wraith",
-    "rarity": "silver",
-    "desc": "Autocast Root nearby enemies for … seconds every … seconds.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/frostwraith_large.png"
-  },
-  {
     "id": 41,
     "name": "Goliath",
     "rarity": "prismatic",
@@ -264,13 +152,6 @@
     "rarity": "silver",
     "desc": "Immobilizing or Grounding enemy champions heals you.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/guiltypleasure_large.png"
-  },
-  {
-    "id": 43,
-    "name": "Now You See Me",
-    "rarity": "silver",
-    "desc": "Gain the Now You See Me Summoner Spell. Now You See Me teleports you back to the starting position of your last Movement Ability.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/nowyouseeme_large.png"
   },
   {
     "id": 44,
@@ -308,32 +189,11 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/jeweledgauntlet_large.png"
   },
   {
-    "id": 49,
-    "name": "Juice Box",
-    "rarity": "silver",
-    "desc": "Each round, everyone on your team gains … Juice.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/juicebox_large.png"
-  },
-  {
-    "id": 50,
-    "name": "Keystone Conjurer",
-    "rarity": "gold",
-    "desc": "Gain the Summon Aery and Arcane Comet Keystone Runes.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/keystoneconjurer_large.png"
-  },
-  {
     "id": 51,
     "name": "Light 'em Up!",
     "rarity": "silver",
-    "desc": "Every 4th Attack deals additional magic damage {{ Item_Keyword_OnHit }}.",
+    "desc": "Every 4th Attack deals additional magic damage On-Hit.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/lightemup_large.png"
-  },
-  {
-    "id": 52,
-    "name": "Lightning Strikes",
-    "rarity": "gold",
-    "desc": "Gain …% total Attack Speed. At … Attacks per second, deal additional magic damage {{ Item_Keyword_OnHit }}.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/lightningstrikes_large.png"
   },
   {
     "id": 53,
@@ -346,7 +206,7 @@
     "id": 54,
     "name": "Master of Duality",
     "rarity": "prismatic",
-    "desc": "Your Attacks grant you Ability Power {{ Item_Keyword_OnHit }} and your Abilities grant you Attack Damage, until the end of the round.",
+    "desc": "Your Attacks grant you Ability Power On-Hit and your Abilities grant you Attack Damage, until the end of the round.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/masterofduality_large.png"
   },
   {
@@ -367,7 +227,7 @@
     "id": 58,
     "name": "Mystic Punch",
     "rarity": "prismatic",
-    "desc": "{{ Item_Keyword_OnHit }} reduce the cooldown of your abilities by … seconds %i:scaleCooldown%.",
+    "desc": "On-Hit reduce the cooldown of your abilities by … seconds %i:scaleCooldown%.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mysticpunch_large.png"
   },
   {
@@ -399,13 +259,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/outlawsgrit_large.png"
   },
   {
-    "id": 64,
-    "name": "Perseverance",
-    "rarity": "gold",
-    "desc": "Gain hugely increased Health Regen, further increased at low Health.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/perseverance_large.png"
-  },
-  {
     "id": 65,
     "name": "Phenomenal Evil",
     "rarity": "gold",
@@ -413,39 +266,11 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/phenomenalevil_large.png"
   },
   {
-    "id": 66,
-    "name": "Quantum Computing",
-    "rarity": "prismatic",
-    "desc": "Periodically Autocast a massive slash around you, dealing physical damage. Enemies hit by the outer edge are Slowed, take additional damage, and heal you.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quantumcomputing_large.png"
-  },
-  {
-    "id": 67,
-    "name": "Rabble Rousing",
-    "rarity": "gold",
-    "desc": "Using an Ability restores … Health.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/rabblerousing_large.png"
-  },
-  {
     "id": 68,
     "name": "Recursion",
     "rarity": "gold",
     "desc": "Gain … Ability Haste.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/recursion_large.png"
-  },
-  {
-    "id": 69,
-    "name": "Repulsor",
-    "rarity": "silver",
-    "desc": "On dropping below …% or …% Health, nearby enemies are Knocked Back.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/repulsor_large.png"
-  },
-  {
-    "id": 70,
-    "name": "Restless Restoration",
-    "rarity": "gold",
-    "desc": "You constantly heal while moving.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/restlessrestoration_large.png"
   },
   {
     "id": 72,
@@ -465,15 +290,8 @@
     "id": 74,
     "name": "Shrink Ray",
     "rarity": "gold",
-    "desc": "Your Attacks reduce the target's damage and size by …% {{ Item_Keyword_OnHit }}.",
+    "desc": "Your Attacks reduce the target's damage and size by …% On-Hit.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/shrinkray_large.png"
-  },
-  {
-    "id": 75,
-    "name": "Slow Cooker",
-    "rarity": "prismatic",
-    "desc": "Every second, apply an infinitely stacking Burn to nearby enemy champions, scaling with your max Health.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slowcooker_large.png"
   },
   {
     "id": 76,
@@ -488,13 +306,6 @@
     "rarity": "gold",
     "desc": "Heal for …% of damage done by Critical Strikes. Gain %i:scaleCrit% …% Crit chance.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/soulsiphon_large.png"
-  },
-  {
-    "id": 78,
-    "name": "Spirit Link",
-    "rarity": "prismatic",
-    "desc": "{{Cherry_SpiritLink…_Summary}}",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/spiritlink_large.png"
   },
   {
     "id": 79,
@@ -514,15 +325,8 @@
     "id": 81,
     "name": "Tap Dancer",
     "rarity": "prismatic",
-    "desc": "Your Attacks grant you … Move Speed {{ Item_Keyword_OnHit }}. Gain Attack Speed equal to …% of your Move Speed.",
+    "desc": "Your Attacks grant you … Move Speed On-Hit. Gain Attack Speed equal to …% of your Move Speed.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tapdancer_large.png"
-  },
-  {
-    "id": 82,
-    "name": "The Brutalizer",
-    "rarity": "silver",
-    "desc": "Gain … Attack Damage, … Ability Haste, and … Lethality.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/thebrutalizer_large.png"
   },
   {
     "id": 84,
@@ -532,24 +336,10 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/threadtheneedle_large.png"
   },
   {
-    "id": 85,
-    "name": "Tormentor",
-    "rarity": "silver",
-    "desc": "Immobilizing or Grounding enemy champions applies a Burn that deals damage over time, stacking infinitely.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tormentor_large.png"
-  },
-  {
-    "id": 86,
-    "name": "Trueshot Prodigy",
-    "rarity": "prismatic",
-    "desc": "When you damage a champion from far away, fire a Trueshot Barrage at them.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/trueshotprodigy_large.png"
-  },
-  {
     "id": 87,
     "name": "Typhoon",
     "rarity": "silver",
-    "desc": "Your Attacks fire a bolt at an additional target dealing reduced damage and applying {{ Item_Keyword_OnHit }} effects.",
+    "desc": "Your Attacks fire a bolt at an additional target dealing reduced damage and applying On-Hit effects.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/typhoon_large.png"
   },
   {
@@ -560,46 +350,11 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/ultimaterevolution_large.png"
   },
   {
-    "id": 89,
-    "name": "Vanish",
-    "rarity": "gold",
-    "desc": "Gain the Vanish Summoner Spell. Vanish turns you Invisible.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/vanish_large.png"
-  },
-  {
-    "id": 90,
-    "name": "Vengeance",
-    "rarity": "gold",
-    "desc": "{{ Cherry_Vengeance…_Summary }}",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/vengeance_large.png"
-  },
-  {
     "id": 92,
     "name": "Vulnerability",
     "rarity": "gold",
     "desc": "Your Item and damage over time effects can Critically Strike. Gain %i:scaleCrit% …% Crit chance.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/vulnerability_large.png"
-  },
-  {
-    "id": 93,
-    "name": "Warmup Routine",
-    "rarity": "silver",
-    "desc": "Gain the Warmup Routine Summoner Spell. Channel your inner dancer to increase your damage by 2% per second, up to …% max.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/warmuproutine_large.png"
-  },
-  {
-    "id": 94,
-    "name": "Willing Sacrifice",
-    "rarity": "gold",
-    "desc": "When an allied champion drops below …% Health, trade some of your health to Shield them.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/willingsacrifice_large.png"
-  },
-  {
-    "id": 96,
-    "name": "Wisdom of Ages",
-    "rarity": "prismatic",
-    "desc": "Gain 1 level now, and 1 bonus level every other round. Your level cap is removed. If taken after round …, gain … additional levels.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/wisdomofages_large.png"
   },
   {
     "id": 97,
@@ -614,13 +369,6 @@
     "rarity": "gold",
     "desc": "Gain Move Speed equal to …% of your Ability Haste.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/withhaste_large.png"
-  },
-  {
-    "id": 102,
-    "name": "Don't Chase",
-    "rarity": "silver",
-    "desc": "You become Ghosted and leave a trail of poisonous gas behind you, dealing magic damage to enemies inside.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dontchase_large.png"
   },
   {
     "id": 103,
@@ -642,34 +390,6 @@
     "rarity": "silver",
     "desc": "Gain …% Move Speed, disabled for … seconds after taking damage.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/homeguard_large.png"
-  },
-  {
-    "id": 107,
-    "name": "Twice Thrice",
-    "rarity": "gold",
-    "desc": "Every … attacks, your {{ Item_Keyword_OnHit }} effects trigger a second time.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/twicethrice_large.png"
-  },
-  {
-    "id": 108,
-    "name": "Self Destruct",
-    "rarity": "silver",
-    "desc": "Every … seconds Autocast, attach a bomb to yourself, it explodes, dealing massive true damage and Knocking Up nearby enemies.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/selfdestruct_large.png"
-  },
-  {
-    "id": 109,
-    "name": "Oathsworn",
-    "rarity": "gold",
-    "desc": "Replace Flee with Fate's Call. Fate's Call making your ally Untargetable for up to 4 seconds. your ally can launch themself out, Knocking Back enemies.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/oathsworn_large.png"
-  },
-  {
-    "id": 110,
-    "name": "Clothesline",
-    "rarity": "silver",
-    "desc": "There is a tether connecting your team, deals constant magic damage to enemies it touches.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/clothesline_large.png"
   },
   {
     "id": 112,
@@ -707,27 +427,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/criticalhealing_large.png"
   },
   {
-    "id": 120,
-    "name": "Serve Beyond Death",
-    "rarity": "silver",
-    "desc": "The first time you would die each round, instead return to full Health, decaying over time. Taking down an enemy champion while your Health is decaying stops the decay.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/servebeyonddeath_large.png"
-  },
-  {
-    "id": 123,
-    "name": "Summoner's Roulette",
-    "rarity": "prismatic",
-    "desc": "Replace your Summoner Spells with random ones. When you use a Summoner Spell, replace it with another random one on a … second Cooldown.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/summonersroulette_large.png"
-  },
-  {
-    "id": 125,
-    "name": "Raid Boss",
-    "rarity": "prismatic",
-    "desc": "You start each round imprisoned. While imprisoned, you have massive damage reduction and accumulate size, and power over time. When you escape, Knock Back enemies and gaining Shield.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/raidboss_large.png"
-  },
-  {
     "id": 129,
     "name": "Marksmage",
     "rarity": "gold",
@@ -747,13 +446,6 @@
     "rarity": "prismatic",
     "desc": "You are now melee. Gain Attack Damage, Health, Attack Speed, Lifesteal, and Move Speed based on how much Attack Range you lost.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/drawyoursword_large.png"
-  },
-  {
-    "id": 135,
-    "name": "Spellwake",
-    "rarity": "prismatic",
-    "desc": "Hitting enemies with Abilities creates a blast that deals magic damage from you to the location you hit them.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/spellwake_large.png"
   },
   {
     "id": 136,
@@ -807,7 +499,7 @@
   {
     "id": 154,
     "name": "Quest: Urf's Champion",
-    "rarity": "gold",
+    "rarity": "prismatic",
     "desc": "Requirement: Score … takedowns. Reward: Golden Spatula",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_urfschampion_large.png"
   },
@@ -817,48 +509,6 @@
     "rarity": "prismatic",
     "desc": "Immediate: Gain Needlessly Large Rod. Requirement: Possess Rabadon's Deathcap and Zhonya's Hourglass. Reward: Gain Wooglet's Witchcap.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png"
-  },
-  {
-    "id": 165,
-    "name": "Restart",
-    "rarity": "gold",
-    "desc": "Your non-Ultimate Abilities Automatically refresh every … seconds.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/restart_large.png"
-  },
-  {
-    "id": 171,
-    "name": "Dematerialize",
-    "rarity": "silver",
-    "desc": "Gain %i:miniAdaptiveForce% … Adaptive Force on takedown, once per champion per round. Gaining this augment after round …, gain %i:miniAdaptiveForce% … Adaptive Force.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dematerialize_large.png"
-  },
-  {
-    "id": 172,
-    "name": "Mirror Image",
-    "rarity": "silver",
-    "desc": "When you drop below …% Health, briefly become Invisible and create 4 clones of yourself.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mirrorimage_large.png"
-  },
-  {
-    "id": 174,
-    "name": "Laser Eyes",
-    "rarity": "prismatic",
-    "desc": "There is a laser in the direction you are facing that deals continuous magic damage.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/lasereyes_large.png"
-  },
-  {
-    "id": 175,
-    "name": "Parasitic Relationship",
-    "rarity": "gold",
-    "desc": "{{ Cherry_ParasiticRelationship…_Summary }}",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/parasiticrelationship_large.png"
-  },
-  {
-    "id": 177,
-    "name": "Nesting Doll",
-    "rarity": "prismatic",
-    "desc": "Gain … additional Revives, and begin reviving yourself after you die. When you Revive Knockback enemies around you, and come back smaller with reduced max Health.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/nesting_doll.png"
   },
   {
     "id": 180,
@@ -875,20 +525,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/heavyhitter_large.png"
   },
   {
-    "id": 192,
-    "name": "Quest: Angel of Retribution",
-    "rarity": "gold",
-    "desc": "Requirement: Heal or prevent … damage to allies. Reward: Gain …% Attack Speed, and your Attacks deal additional magic damage equal to …% Heal/Shield Power.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_angelofretribution_large.png"
-  },
-  {
-    "id": 193,
-    "name": "Center of the Universe",
-    "rarity": "prismatic",
-    "desc": "Stars orbit you, dealing magic damage to enemies they pass through.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/centeroftheuniverse_large.png"
-  },
-  {
     "id": 194,
     "name": "Fey Magic",
     "rarity": "prismatic",
@@ -901,20 +537,6 @@
     "rarity": "prismatic",
     "desc": "Become tiny, gain Move Speed, and bonus damage to champions based on how much larger they are than you.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/giantslayer_large.png"
-  },
-  {
-    "id": 198,
-    "name": "Holy Fire",
-    "rarity": "gold",
-    "desc": "Healing or Shielding applies an infinitely stacking Burn to a nearby enemy, dealing percent max Health magic damage over a few seconds.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/holyfire_large.png"
-  },
-  {
-    "id": 200,
-    "name": "Blood Brother",
-    "rarity": "gold",
-    "desc": "Gain Darius's Passive Hemorrhage. Attacks and damaging Abilities cause the target to Hemorrhage, dealing … physical damage over … seconds, stacking up to … times. Draven gains … Attack Damage at … Hemorrhage stacks.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bloodbrother_large.png"
   },
   {
     "id": 204,
@@ -938,20 +560,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/escapade_large.png"
   },
   {
-    "id": 207,
-    "name": "Hold Very Still",
-    "rarity": "silver",
-    "desc": "Gain Guerrilla Warfare. Not moving causes you to turn Invisibile until you move. Exiting this Invisibility, causes your next attack to deal bonus magic damage.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/holdverystill_large.png"
-  },
-  {
-    "id": 208,
-    "name": "Orbital Laser",
-    "rarity": "prismatic",
-    "desc": "Replace Summoner Flee with Orbital Laser. After a delay, call down an orbital laser that deals …% max Health true damage plus … magic damage over … seconds.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/orbitallaser_large.png"
-  },
-  {
     "id": 211,
     "name": "It's Killing Time",
     "rarity": "gold",
@@ -966,80 +574,17 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/spintowin_large.png"
   },
   {
-    "id": 215,
-    "name": "Dark Blessing",
-    "rarity": "gold",
-    "desc": "Healing or Shielding an ally grants you permanent Cursed Power. Gain Ability Haste based on your Cursed Power.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/darkblessing_large.png"
-  },
-  {
-    "id": 216,
-    "name": "Dreadbringer",
-    "rarity": "prismatic",
-    "desc": "Gain an aura that continuously harvests permanent Cursed Power per enemy champion inside. Gain max Health based on your Cursed Power.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/plaguebearer_large.png"
-  },
-  {
-    "id": 217,
-    "name": "Deathtouch",
-    "rarity": "gold",
-    "desc": "Attacking enemy champions grants permanent Cursed Power and deal additional magic damage based on your Cursed Power.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/deathtouch_large.png"
-  },
-  {
-    "id": 218,
-    "name": "Desecrator",
-    "rarity": "silver",
-    "desc": "Immobilizing enemy champions grants you permanent Cursed Power. Gain Armor and Magic Resistance based on your Cursed Power.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/desecrator_large.png"
-  },
-  {
-    "id": 219,
-    "name": "Doomsayer",
-    "rarity": "prismatic",
-    "desc": "Hitting an enemy champion with an ability hits grant you permanent Cursed Power. Gain Adaptive Force based on your Cursed Power.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/doomsayer_large.png"
-  },
-  {
     "id": 220,
     "name": "Fan the Hammer",
     "rarity": "prismatic",
-    "desc": "When you Attack, fire … bolts that each deal physical damage and applies your {{ Item_Keyword_OnHit }}.",
+    "desc": "When you Attack, fire … bolts that each deal physical damage and applies your On-Hit.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/fanthehammer_large.png"
-  },
-  {
-    "id": 221,
-    "name": "Trailblazer",
-    "rarity": "silver",
-    "desc": "Dashing or Blinking applies a Burn to a nearby enemy that deals damage over time, stacking infinitely.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/trailblazer_large.png"
-  },
-  {
-    "id": 222,
-    "name": "Fruits of Your Labor",
-    "rarity": "silver",
-    "desc": "Power Flowers are …% more effective on you and are shared with your ally.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/fruitarian_large.png"
-  },
-  {
-    "id": 223,
-    "name": "Summoner Revolution",
-    "rarity": "gold",
-    "desc": "Your Summoner Spells gain … additional charge(s). Flash resets every round.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/summonerrevolution_large.png"
-  },
-  {
-    "id": 224,
-    "name": "Prismatic Egg",
-    "rarity": "prismatic",
-    "desc": "Gain … stack on takedown, once per champion per round. After … stacks, this hatches into a Prismatic Item Anvil, %i:Augment% Prismatic Augment, and a %i:StatAnvil% Prismatic Stat Anvil.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_prismaticegg_large.png"
   },
   {
     "id": 225,
     "name": "Dual Wield",
     "rarity": "prismatic",
-    "desc": "When you Attack, fire a bolt that deals …% damage and applies your {{ Item_Keyword_OnHit }} effects at …% effectiveness. Gain …% total Attack Speed.",
+    "desc": "When you Attack, fire a bolt that deals …% damage and applies your On-Hit effects at …% effectiveness. Gain …% total Attack Speed.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dualwield_large.png"
   },
   {
@@ -1064,48 +609,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/statsonstatsonstats_large.png"
   },
   {
-    "id": 229,
-    "name": "Fire Sale",
-    "rarity": "silver",
-    "desc": "Instantly sell all your non-quest items for …% of their direct buy price. Great for all those discounted anvils.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/firesale_large.png"
-  },
-  {
-    "id": 231,
-    "name": "Light Warden",
-    "rarity": "gold",
-    "desc": "Every few seconds, Autocast a warding light, Shielding yourself and allies it passes through before returning, repeating the effect.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/lightwarden_large.png"
-  },
-  {
-    "id": 232,
-    "name": "Slime Time",
-    "rarity": "silver",
-    "desc": "Every few seconds Autocast a burst slime from your body, dealing magic damage to nearby enemies. If you hit a champion, secrete a blob that heals you when walked over.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slimetime_large.png"
-  },
-  {
-    "id": 233,
-    "name": "Ultimate Roulette",
-    "rarity": "prismatic",
-    "desc": "Replace Flee with a random Ultimate. After casting the Ultimate, replace it with new random Ultimate.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/ultimaterevolution_large.png"
-  },
-  {
-    "id": 234,
-    "name": "Gamba Anvil",
-    "rarity": "prismatic",
-    "desc": "Gain +%i:goldCoins%… gold and reduce the price of all anvils. Prismatic Anvils: -%i:goldCoins%… gold Legendary Anvils: -%i:goldCoins%… gold Stat Anvils: -%i:goldCoins%… gold Items acquired from anvils resell for -%i:goldCoins%500 gold less.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/thiefsgloves_large.png"
-  },
-  {
-    "id": 236,
-    "name": "Trickster Demon",
-    "rarity": "gold",
-    "desc": "When you exit stealth explode for … Magic Damage, your clones and traps will do the same on death.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tricksterdemon_large.png"
-  },
-  {
     "id": 237,
     "name": "Transmute: Gold",
     "rarity": "silver",
@@ -1120,27 +623,6 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/transmuteprismatic_large.png"
   },
   {
-    "id": 239,
-    "name": "Symbiotic Mutation",
-    "rarity": "gold",
-    "desc": "Every round this mutates into one of your ally's augments. Only mutates into augments you could roll.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/symbioticmutation_large.png"
-  },
-  {
-    "id": 240,
-    "name": "Parasitic Mutation",
-    "rarity": "silver",
-    "desc": "Every round this mutates into one of your opponent's augments. Only mutates into augments you could roll.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/parasiticmutation_large.png"
-  },
-  {
-    "id": 241,
-    "name": "Hat Trick",
-    "rarity": "gold",
-    "desc": "Instantly gain … hats, and reduce the price of Cappa Juice by …. When your health drops below …% gain Move Speed and a shield, but lose one hat.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/hattrick_large.png"
-  },
-  {
     "id": 243,
     "name": "Transmute: Chaos",
     "rarity": "prismatic",
@@ -1148,46 +630,11 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/transmutechaos_large.png"
   },
   {
-    "id": 250,
-    "name": "Slow and Steady",
-    "rarity": "gold",
-    "desc": "Your Attack Speed can not go above …. All Bonus Attack Speed is converted to Attack Damage.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slowandsteady_large.png"
-  },
-  {
-    "id": 251,
-    "name": "Numb to Pain",
-    "rarity": "silver",
-    "desc": "…% of damage you take instead happens over … seconds (…% for ranged champions).",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/numbtopain_large.png"
-  },
-  {
     "id": 301,
     "name": "Divine Intervention",
     "rarity": "gold",
     "desc": "Shortly after combat starts, call a protective star. Upon its landing, you and nearby allies become Invulnerable for a few seconds. Then Autocast this every … seconds.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/slowactingpainkillers_large.png"
-  },
-  {
-    "id": 302,
-    "name": "Sacrifice: For Silver",
-    "rarity": "silver",
-    "desc": "After … rounds, gain a bonus Silver Augment.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/gohsacrificefor_large.png"
-  },
-  {
-    "id": 303,
-    "name": "Sacrifice: For Gold",
-    "rarity": "gold",
-    "desc": "Sacrifice …% of your current health. After … rounds, gain a bonus Gold Augment and restore your health.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/gohsacrificeforgold_large.png"
-  },
-  {
-    "id": 304,
-    "name": "Sacrifice: For Prismatic",
-    "rarity": "prismatic",
-    "desc": "Sacrifice …% of your current health. After … rounds, gain a bonus Prismatic Augment and restore your health.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/gohsacrificeforprismatic_large.png"
   },
   {
     "id": 305,
@@ -1204,32 +651,11 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/firfox_large.png"
   },
   {
-    "id": 309,
-    "name": "And My Axe!",
-    "rarity": "gold",
-    "desc": "Autocast: Periodically throws an axe at the nearest opponent, dealing physical damage, slowing, and shredding their armor and magic resist. Picking up the axe reduces its Cooldown.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/andmyaxe_large.png"
-  },
-  {
-    "id": 310,
-    "name": "Clown College",
-    "rarity": "prismatic",
-    "desc": "Gain Deceive Summoner Spell. Deceive: You teleport and become Invisible. Your next Attack while Invisible deals an additional physical damage. When you die, spawn an exploding box that deals a large amount of magic damage and Fear nearby enemies.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/clowncollege_large.png"
-  },
-  {
     "id": 311,
     "name": "Overflow",
     "rarity": "gold",
     "desc": "Your Mana costs are doubled. Your Ability Heals, Shields, and damage are increased based on your max Mana.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/overflow_large.png"
-  },
-  {
-    "id": 312,
-    "name": "We'll Be Right Back",
-    "rarity": "gold",
-    "desc": "Gain Time Stop Summoner Spell. Time Stop: ALL nearby champions are put in Stasis. The Stasis is shorter on you, and during it you Heal based on missing Health.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/wellberightback_large.png"
   },
   {
     "id": 313,
@@ -1239,164 +665,10 @@
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/tank_engine_large.png"
   },
   {
-    "id": 314,
-    "name": "Unshackled",
-    "rarity": "gold",
-    "desc": "You can now Hijack your ally's ultimate. On takedown, reduce Hijack's lockout and cooldown by …%. Gain … Ultimate Haste.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/unshackled_large.png"
-  },
-  {
-    "id": 316,
-    "name": "Grievous Venom",
-    "rarity": "silver",
-    "desc": "Dealing damage to an enemy champion reduces any shields they gain, and applies Grievous Wounds, reducing any healing they receive.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/grevious_venmon.png"
-  },
-  {
     "id": 317,
     "name": "Pandora's Box",
     "rarity": "prismatic",
     "desc": "Transmute all of your augments into random Prismatic%i:Augment% Augments.",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/pandoras_box_large.png"
-  },
-  {
-    "id": 318,
-    "name": "Quest: Mad Hatter",
-    "rarity": "gold",
-    "desc": "Requirement: Wear … hats at the end of combat. Reward: Gain Adaptive Force, Armor, Magic Resist, Tenacity, and Movement Speed per hat.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/mad_hatter_large.png"
-  },
-  {
-    "id": 319,
-    "name": "Quest: Three Sacred Treasures",
-    "rarity": "gold",
-    "desc": "Requirement: Possess Infinity Edge, Perplexity, and Hextech Gunblade. Reward: Yunara's Attacks are replaced with lasers that deal mixed damage.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/threesacredtreasures_large.png"
-  },
-  {
-    "id": 321,
-    "name": "Bodyguard",
-    "rarity": "gold",
-    "desc": "Using a dash, blink, or teleport grants yourself, and any allied champions you pass through, a shield.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bodyguard_large.png"
-  },
-  {
-    "id": 322,
-    "name": "Augmented Power",
-    "rarity": "silver",
-    "desc": "Increase the damage done by your augments and items by ….",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/augmented_power_large.png"
-  },
-  {
-    "id": 323,
-    "name": "Cerberus",
-    "rarity": "prismatic",
-    "desc": "Gain the Hail of Blades and Press the Attack Keystone Runes.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/cerberus_large.png"
-  },
-  {
-    "id": 324,
-    "name": "Bravest of the Brave",
-    "rarity": "silver",
-    "desc": "Increase future augment offerings by … tier. If the augments were already Prismatic tier, gain a bonus … gold.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bravestofthebrave_large.png"
-  },
-  {
-    "id": 327,
-    "name": "Undying Guard",
-    "rarity": "gold",
-    "desc": "Upon reviving with Cultivation of War, Zaahen deals damage to nearby enemies based on their current Health and knocks all targets back, becoming impervious to damage dealt by champions outside of the circle created and gains a brief burst of movement speed.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/dawnbringersresolve_large.png"
-  },
-  {
-    "id": 330,
-    "name": "Despoil",
-    "rarity": "silver",
-    "desc": "Dashing or Teleporting grants you Cursed Power if there is an enemy nearby. Gain Move Speed scaling with your Cursed Power.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/desecrator_large.png"
-  },
-  {
-    "id": 333,
-    "name": "Quest: Rite Of The Forge God",
-    "rarity": "prismatic",
-    "desc": "Requirement: Purchase … Item Anvils. Reward: All of your items become Masterwork, increasing their stats by …%.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png"
-  },
-  {
-    "id": 335,
-    "name": "Panic Room",
-    "rarity": "silver",
-    "desc": "Once per combat, when you would die, instead turn into a wisp, set yourself to …% Health, and travel to a random spot in the arena.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/panic_room_large.png"
-  },
-  {
-    "id": 336,
-    "name": "Aim for the Head",
-    "rarity": "gold",
-    "desc": "Your Critical Strike Chance is capped at …%. Convert …% of Critical Strike Chance above …% into Critical Strike Damage. Gain …% Critical Strike Chance and …% Critical Strike Damage.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/aim_for_the_head_large.png"
-  },
-  {
-    "id": 338,
-    "name": "Hive Mind",
-    "rarity": "prismatic",
-    "desc": "Start each round with … Bee, gain additonal Bees by harvesting flowers. Damaging an enemy champion sends a Bee dealing … magic damage over … seconds on arrival, before returning to you.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/hive_mind_large.png"
-  },
-  {
-    "id": 343,
-    "name": "Righteous Fury",
-    "rarity": "prismatic",
-    "desc": "Healing or Shielding increases your Ability damage by …%, stacking infinitely for the round.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/righteous_fury_large.png"
-  },
-  {
-    "id": 344,
-    "name": "Energetic",
-    "rarity": "silver",
-    "desc": "Gain Energized …% quicker. Triggering Energized fires a Magic Missile, dealing up to …% max Health true damage based on distance traveled.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/energetic_large.png"
-  },
-  {
-    "id": 345,
-    "name": "Magical Girl",
-    "rarity": "prismatic",
-    "desc": "Each round a star falls, picking it up transforms you into a powerful Magical Girl. As a Magical Girl, stars rain down around you and your enemies, dealing magic damage.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/magic_girl.png"
-  },
-  {
-    "id": 346,
-    "name": "Bread Sandwich",
-    "rarity": "prismatic",
-    "desc": "Gain … Ability Haste. Casting an ability gants …% for … seconds.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/bread_sandwhich.png"
-  },
-  {
-    "id": 356,
-    "name": "Silver Spoon",
-    "rarity": "silver",
-    "desc": "Deal increased damage per %i:Augment% Silver Augment you have.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/silver_spoon.png"
-  },
-  {
-    "id": 357,
-    "name": "Hybrid",
-    "rarity": "gold",
-    "desc": "When you deal damage with an Attack, your next Ability deals …% increased damage. When you deal damage with an Ability, your next Attack deals …% increased damage.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/hybrid_large.png"
-  },
-  {
-    "id": 404,
-    "name": "404 Augment Not Found",
-    "rarity": "silver",
-    "desc": "How did you find this?!?!? Gain … hats.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/augment404_large.png"
-  },
-  {
-    "id": 405,
-    "name": "Augment 405",
-    "rarity": "prismatic",
-    "desc": "Gain …% damage per hat you're wearing.",
-    "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/augment405_large.png"
   }
 ]

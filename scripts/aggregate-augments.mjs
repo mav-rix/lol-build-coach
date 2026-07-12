@@ -2,8 +2,10 @@
 // Aggregate Arena augment win-rates from Match-V5 (queue 1700) into
 // src/data/augmentStats.json — a global tier list the app shows as reference.
 // The Live Client API doesn't expose which augments are being offered, so this
-// is a static "strongest augments" list, not a live pick helper. Mayhem uses the
-// same augment system, so the list applies there too.
+// is a static "strongest augments" list, not a live pick helper. Arena is the
+// only queue whose Match-V5 payload carries augments; the metadata file
+// (augments.json, see fetch-augments.mjs) is pre-filtered to the official ARAM
+// Mayhem pool, so the metaIds guard below also scopes these stats to Mayhem.
 //
 //   RIOT_API_KEY=... node scripts/aggregate-augments.mjs --region na1 --matches 500
 //
