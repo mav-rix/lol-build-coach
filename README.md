@@ -41,17 +41,15 @@ overlay alongside the scoreboard.
   the mode from the running game. Shows your gold, KDA, CS/min, inventory, and
   build-path progress with purchase timestamps. When you can complete your next
   item it shows a recall banner on SR, or "buy on your next respawn" in ARAM.
-  - **Game plan — two build categories, decided at the loading screen.** The
-    moment the enemy comp is known (the first poll), the plan engine
-    (`src/lib/gameplan.ts`) fixes both categories for the whole game:
-    ① the **highest win-rate build** (the aggregated/seed path, untouched) and
-    ② the **vs-comp build** — the same path with up to two comp-driven swaps
-    (anti-heal vs healers, pen/%-health vs tanks, one defensive slot vs a
-    damage-skewed comp) plus a boots swap vs AP/CC or AD, each with its reason.
-    **Build Next** simply walks the active path (vs-comp when any signal fired) —
-    the build doesn't churn mid-game; knowing *when* to deviate is decided up
-    front from the comp. Champions with no build data at all fall back to the
-    **scoring engine** (below).
+  - **Game plan — one build path, fixed at the loading screen.** The plan
+    engine (`src/lib/gameplan.ts`) locks in the **highest win-rate build** (the
+    aggregated/seed path — the same one the Build page recommends) for the
+    whole game, and **Build Next** simply walks it — no mid-game churn. There
+    used to be a second, comp-adjusted path with automatic anti-heal/pen/
+    defensive swaps; in practice it almost never beat the straight WR build, so
+    it was removed (the comp analysis survives only in the support quest-final
+    pick and the Enemy Threats notes). Champions with no build data at all fall
+    back to the **scoring engine** (below).
   - **Enemy Threats** — each enemy's champion, level, items, and a one-line
     counter note. Uses only scoreboard-visible data (what TAB shows) from Riot's
     documented local API — no fog-of-war info. Strictly read-only.
@@ -189,7 +187,14 @@ a separate OS window drawn above the game, never injected into it.
 - Hotkeys: `Ctrl+Shift+O` pin the whole overlay interactive (click/scroll it),
   `Ctrl+Shift+H` pin visible / unpin back to Tab mode, `Ctrl+Shift+Q` quit.
 - League must be in **Borderless** or Windowed mode (Settings → Video) —
-  exclusive Fullscreen draws over everything.
+  exclusive Fullscreen draws over everything. The overlay reads League's
+  `game.cfg` and warns when Fullscreen is set.
+- **Loading screen:** while the match loads, the overlay becomes a centered,
+  dark scouting panel (always visible, no Tab needed) showing both teams —
+  champion, name, rank, and recent form (3+ game hot/cold streaks, last-10
+  record) from the LCU's read-only ranked-stats and match-history endpoints.
+  It swaps back to the transparent side card the moment the game is reachable.
+  Preview with `/overlay?mockload=1`.
 - Preview it without a game: `npm run overlay:shot -- --champ Ahri` renders
   `/overlay?mock=1` with the running dev server and writes a PNG (uses the
   Windows-side Edge/Chrome headless; WSL + Windows only).
@@ -234,9 +239,11 @@ require dropping "LoL" from the product name.
 
 ### Troubleshooting (desktop app)
 
-- **Updates**: releases download in the background; a popup (and a tray entry)
-  offers "Restart now", which runs the downloaded installer directly and
-  relaunches. Everything the updater does is logged to
+- **Updates (manual flow)**: the app only *checks* for releases (on launch and
+  hourly) — nothing downloads on its own. When one is found, a popup and a tray
+  entry offer "Download update vX" within seconds of the check; once downloaded,
+  they switch to "Restart now"/"Restart to update", which runs the verified
+  installer and relaunches. Every check, download, and error is logged to
   `%APPDATA%\LoL Build Coach\updater.log` — check it first if an update seems
   stuck.
 - **Update seems downloaded but never applies**: the verified installer sits in
@@ -249,6 +256,12 @@ require dropping "LoL" from the product name.
 - **Quit hangs**: quitting stops the global key listener first and force-exits
   after 3 s as a fallback — if an old version ever refuses to die, end
   "LoL Build Coach.exe" in Task Manager; nothing is lost.
+- **Tab shows the overlay in the loading screen but not in-game**: League is
+  running in exclusive **Fullscreen** — no external window can be drawn over
+  it (the loading screen is borderless, which is why it works there). Switch
+  Window Mode to **Borderless** in the in-game Settings → Video. The app now
+  detects this (reads `Config\game.cfg` next to the lockfile) and shows a
+  warning in the overlay and on the loading-screen panel.
 - **SmartScreen warning on first run**: expected for an unsigned binary — More
   info → Run anyway.
 
