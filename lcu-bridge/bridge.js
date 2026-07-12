@@ -7,8 +7,9 @@
 // Windows side and re-serves a simplified, CORS-open champ-select payload on a
 // fixed port the WSL dev server can proxy to.
 //
-// Read-only: it only GETs champ-select/summoner/gameflow endpoints. It never
-// sends actions to the client (no auto-pick/ban/dodge).
+// Reads champ-select/summoner/gameflow endpoints; the only writes are loadout
+// imports (rune page + item set). It never sends game actions to the client
+// (no auto-pick/ban/dodge).
 
 const fs = require('node:fs')
 const http = require('node:http')
@@ -34,16 +35,21 @@ function readLockfile() {
   }
 }
 
-function lcuGet(lock, path) {
+function lcuRequest(lock, method, apiPath, body) {
   return new Promise((resolve) => {
     const auth = 'Basic ' + Buffer.from('riot:' + lock.password).toString('base64')
+    const payload = body === undefined ? null : JSON.stringify(body)
     const req = https.request(
       {
         host: '127.0.0.1',
         port: lock.port,
-        path,
-        method: 'GET',
-        headers: { Authorization: auth, Accept: 'application/json' },
+        path: apiPath,
+        method,
+        headers: {
+          Authorization: auth,
+          Accept: 'application/json',
+          ...(payload ? { 'Content-Type': 'application/json' } : {}),
+        },
         rejectUnauthorized: false, // Riot's self-signed cert
       },
       (res) => {
@@ -62,9 +68,11 @@ function lcuGet(lock, path) {
     )
     req.on('error', () => resolve({ status: 0, json: null }))
     req.setTimeout(3000, () => req.destroy())
-    req.end()
+    req.end(payload ?? undefined)
   })
 }
+
+const lcuGet = (lock, apiPath) => lcuRequest(lock, 'GET', apiPath)
 
 // LCU position strings → our roles.
 const POSITION_TO_ROLE = {
@@ -229,9 +237,154 @@ async function buildLoadingScreen() {
   return { available: true, phase, show: true, windowMode, ...teams }
 }
 
+// --- build import — the only LCU writes this bridge performs ------------------
+// Mirrors electron/server.js (duplicated rather than shared — same as
+// champ-select). Imports the recommended build into the client: a rune page and
+// a per-champion item set. Loadout configuration only. Pages and sets this app
+// created are replaced on re-import; hand-made ones are never touched.
+const COACH_PREFIX = 'Coach:'
+const ITEM_SET_UID_PREFIX = 'lol-build-coach-'
+// The client caps rune page names at 25 chars and rejects longer ones.
+const RUNE_PAGE_NAME_MAX = 25
+
+function readJsonBody(req) {
+  return new Promise((resolve) => {
+    let data = ''
+    req.on('data', (c) => {
+      data += c
+      if (data.length > 64 * 1024) req.destroy() // no legitimate payload is this big
+    })
+    req.on('end', () => {
+      try {
+        resolve(JSON.parse(data))
+      } catch {
+        resolve(null)
+      }
+    })
+    req.on('error', () => resolve(null))
+  })
+}
+
+async function importRunes(payload) {
+  const lock = readLockfile()
+  if (!lock) return { status: 503, body: { ok: false, error: 'League client is not running.' } }
+  const name = typeof payload?.name === 'string' ? payload.name.slice(0, RUNE_PAGE_NAME_MAX) : ''
+  const primaryStyleId = payload?.primaryStyleId
+  const subStyleId = payload?.subStyleId
+  const perks = Array.isArray(payload?.selectedPerkIds) ? payload.selectedPerkIds : []
+  // A full page is exactly 9 perks: keystone + 3 primary + 2 secondary + 3 shards.
+  if (
+    !name.startsWith(COACH_PREFIX) ||
+    !Number.isFinite(primaryStyleId) ||
+    !Number.isFinite(subStyleId) ||
+    perks.length !== 9 ||
+    !perks.every(Number.isFinite)
+  ) {
+    return { status: 400, body: { ok: false, error: 'Malformed rune page payload.' } }
+  }
+
+  const pages = (await lcuGet(lock, '/lol-perks/v1/pages')).json
+  for (const page of Array.isArray(pages) ? pages : []) {
+    if (page?.isDeletable && typeof page.name === 'string' && page.name.startsWith(COACH_PREFIX)) {
+      await lcuRequest(lock, 'DELETE', `/lol-perks/v1/pages/${page.id}`)
+    }
+  }
+  const created = await lcuRequest(lock, 'POST', '/lol-perks/v1/pages', {
+    name,
+    primaryStyleId,
+    subStyleId,
+    selectedPerkIds: perks,
+    current: true,
+  })
+  if (created.status !== 200 && created.status !== 201) {
+    const detail = created.json?.message
+    return {
+      status: 502,
+      body: {
+        ok: false,
+        error: detail
+          ? `Client rejected the rune page: ${detail}`
+          : 'Client rejected the rune page — if your pages are full, delete one and retry.',
+      },
+    }
+  }
+  return { status: 200, body: { ok: true } }
+}
+
+async function importItemSet(payload) {
+  const lock = readLockfile()
+  if (!lock) return { status: 503, body: { ok: false, error: 'League client is not running.' } }
+  const title = typeof payload?.title === 'string' ? payload.title.slice(0, 75) : ''
+  const champions = Array.isArray(payload?.associatedChampions)
+    ? payload.associatedChampions.filter(Number.isFinite)
+    : []
+  const maps = Array.isArray(payload?.associatedMaps)
+    ? payload.associatedMaps.filter(Number.isFinite)
+    : []
+  const blocks = (Array.isArray(payload?.blocks) ? payload.blocks : [])
+    .filter((b) => typeof b?.type === 'string' && Array.isArray(b?.items))
+    .map((b) => ({
+      type: b.type,
+      items: b.items
+        .filter((it) => typeof it?.id === 'string' && /^\d+$/.test(it.id))
+        .map((it) => ({ id: it.id, count: 1 })),
+    }))
+    .filter((b) => b.items.length > 0)
+  if (!title.startsWith(COACH_PREFIX) || champions.length === 0 || blocks.length === 0) {
+    return { status: 400, body: { ok: false, error: 'Malformed item set payload.' } }
+  }
+
+  const summoner = (await lcuGet(lock, '/lol-summoner/v1/current-summoner')).json
+  if (!summoner?.summonerId) {
+    return { status: 502, body: { ok: false, error: 'Could not resolve the current summoner.' } }
+  }
+  const setsPath = `/lol-item-sets/v1/item-sets/${summoner.summonerId}/sets`
+  const existing = (await lcuGet(lock, setsPath)).json
+  // One set per champion+map, replaced on re-import; other sets pass through.
+  const uid = `${ITEM_SET_UID_PREFIX}${champions[0]}-${maps[0] ?? 'any'}`
+  const kept = (Array.isArray(existing?.itemSets) ? existing.itemSets : []).filter(
+    (s) => s?.uid !== uid,
+  )
+  const put = await lcuRequest(lock, 'PUT', setsPath, {
+    accountId: existing?.accountId ?? summoner.accountId ?? 0,
+    timestamp: Date.now(),
+    itemSets: [
+      ...kept,
+      {
+        uid,
+        title,
+        type: 'custom',
+        map: 'any',
+        mode: 'any',
+        startedFrom: 'blank',
+        priority: false,
+        sortrank: 0,
+        preferredItemSlots: [],
+        associatedChampions: champions,
+        associatedMaps: maps,
+        blocks,
+      },
+    ],
+  })
+  if (put.status < 200 || put.status >= 300) {
+    return { status: 502, body: { ok: false, error: 'Client rejected the item set.' } }
+  }
+  return { status: 200, body: { ok: true } }
+}
+
 const server = http.createServer(async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Content-Type', 'application/json')
+
+  // Preflight for the POST import endpoints (the Vite proxy doesn't need it,
+  // but a page talking to the bridge directly does).
+  if (req.method === 'OPTIONS') {
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+    res.statusCode = 204
+    res.end()
+    return
+  }
 
   if (req.url === '/health') {
     const lock = readLockfile()
@@ -254,6 +407,24 @@ const server = http.createServer(async (req, res) => {
     } catch (e) {
       res.statusCode = 500
       res.end(JSON.stringify({ error: String(e) }))
+    }
+    return
+  }
+  if (req.url === '/import-runes' || req.url === '/import-itemset') {
+    if (req.method !== 'POST') {
+      res.statusCode = 405
+      res.end('{}')
+      return
+    }
+    try {
+      const payload = await readJsonBody(req)
+      const result =
+        req.url === '/import-runes' ? await importRunes(payload) : await importItemSet(payload)
+      res.statusCode = result.status
+      res.end(JSON.stringify(result.body))
+    } catch (e) {
+      res.statusCode = 500
+      res.end(JSON.stringify({ ok: false, error: String(e) }))
     }
     return
   }
