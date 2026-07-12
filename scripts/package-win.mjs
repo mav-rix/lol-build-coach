@@ -10,7 +10,7 @@
 // --publish uploads to a GitHub Release via electron-builder (needs GH_TOKEN).
 
 import { execSync } from 'node:child_process'
-import { cpSync, rmSync, mkdirSync, existsSync } from 'node:fs'
+import { cpSync, rmSync, mkdirSync, existsSync, readFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -45,7 +45,7 @@ const winCmd = (inner) => run(`/mnt/c/Windows/System32/cmd.exe /c "set PATH=${NO
 const TOOLS = `C:\\Users\\${WIN_USER}\\lol-build-tools`
 const PKG_WIN = `C:\\Users\\${WIN_USER}\\lol-build-coach-pkg`
 const electronVersion = JSON.parse(
-  require('node:fs').readFileSync(join(ROOT, 'electron/package.json'), 'utf8'),
+  readFileSync(join(ROOT, 'electron/package.json'), 'utf8'),
 ).build.electronVersion
 winCmd(`mkdir ${TOOLS} 2>nul & cd /d ${TOOLS} && npm install electron-builder electron@${electronVersion} --no-audit --no-fund`)
 winCmd(`cd /d ${PKG_WIN} && npm install --omit=dev --no-audit --no-fund`)
