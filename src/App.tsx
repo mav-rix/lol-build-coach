@@ -1,6 +1,7 @@
 import { BrowserRouter, NavLink, Outlet, Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { UpdateModal } from '@/components/UpdateModal'
+import patch from '@/data/patch.json'
 import Augments from '@/pages/Augments'
 import Home from '@/pages/Home'
 import Live from '@/pages/Live'
@@ -40,6 +41,11 @@ function Layout() {
               {item.label}
             </NavLink>
           ))}
+          {/* League's patch (what the bundled data was generated on) — distinct
+              from the app's own version shown next to the name. */}
+          <span className="ml-auto rounded-full border border-zinc-700/60 bg-zinc-800/60 px-2.5 py-0.5 text-[10px] font-medium text-zinc-400">
+            LoL patch {patch.leaguePatch}
+          </span>
         </div>
       </nav>
 

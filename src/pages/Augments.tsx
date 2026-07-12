@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 
-// Arena / ARAM Mayhem augment tier list. A static win-rate reference — the Live
-// Client API doesn't expose which augments are being offered, so this can't be a
-// live "pick this now" helper. Data: src/data/augments.json (metadata from
-// Community Dragon) joined with src/data/augmentStats.json (win-rates aggregated
-// from Arena Match-V5). Both are lazy-imported so they stay out of the main
-// bundle. Empty until `npm run aggregate:augments` has been run.
+// ARAM Mayhem augment tier list. A static win-rate reference — the Live Client
+// API doesn't expose which augments are being offered, so this can't be a live
+// "pick this now" helper. Data: src/data/augments.json (Community Dragon
+// metadata filtered to the official current Mayhem pool) joined with
+// src/data/augmentStats.json (win-rates aggregated from Arena Match-V5, the
+// only queue where augments appear in the API). Both are lazy-imported so they
+// stay out of the main bundle. Empty until `npm run aggregate:augments` has run.
 
 interface Augment {
   id: number
@@ -93,9 +94,10 @@ export default function Augments() {
       <header className="space-y-1">
         <h1 className="text-xl font-bold tracking-tight">Augment tier list</h1>
         <p className="text-sm text-zinc-400">
-          Strongest Arena augments by average team placement (lower is better), from recent
-          high-elo Arena games. ARAM Mayhem shares the same augments, so it applies there too.
-          This is a static reference — the game doesn’t expose your live augment choices.
+          Augments in the current ARAM Mayhem pool, ranked by average team placement (lower is
+          better) in recent high-elo Arena games — the only queue with augment data in Riot’s
+          API. Mayhem-only augments without Arena data aren’t listed. This is a static
+          reference — the game doesn’t expose your live augment choices.
         </p>
       </header>
 

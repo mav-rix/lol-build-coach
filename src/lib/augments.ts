@@ -72,8 +72,10 @@ export function topAugmentsFor(championId: string | null, count = 6): AugmentGoa
   const seen = new Set<number>()
   const push = (s: AugmentStat, source: AugmentGoal['source']) => {
     const meta = metaById.get(s.id)
-    // Rarity guard: utility pseudo-augments (Replace Augment, stat anvils) can
-    // linger in stats aggregated against older metadata — never goal-worthy.
+    // Meta guard: augments.json is filtered to the official current Mayhem
+    // pool, so stats rows without metadata (Arena-only or retired augments,
+    // utility pseudo-augments, stat anvils) never surface as goals — even when
+    // the stats files were aggregated against older metadata.
     if (!meta || seen.has(s.id) || !(meta.rarity in RARITY_RANK)) return
     seen.add(s.id)
     out.push({ ...s, meta, source })
