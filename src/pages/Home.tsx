@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ChampionSelect } from '@/components/ChampionSelect'
 import { BuildPathDisplay } from '@/components/BuildPathDisplay'
 import { CounterPicks } from '@/components/CounterPicks'
+import { ImportBuildButton } from '@/components/ImportBuildButton'
 import { useAggregatedBuilds } from '@/hooks/useAggregatedBuilds'
 import { useStaticData } from '@/hooks/useStaticData'
 import { useChampSelect } from '@/hooks/useChampSelect'
@@ -295,12 +296,21 @@ export default function Home() {
               Recommended Build — {selectedChampion.name}{' '}
               {build.mode === 'ARAM' ? '(ARAM)' : build.role}
             </h2>
-            <Link
-              to="/live"
-              className="rounded-md bg-emerald-700 px-3 py-1.5 text-sm font-medium text-white hover:bg-emerald-600"
-            >
-              Track in game →
-            </Link>
+            <div className="flex items-center gap-2">
+              <ImportBuildButton
+                build={build}
+                champion={selectedChampion}
+                mapId={modeConfig.mapId}
+                runes={data.runes}
+                clientOpen={champSelect.available}
+              />
+              <Link
+                to="/live"
+                className="rounded-md bg-emerald-700 px-3 py-1.5 text-sm font-medium text-white hover:bg-emerald-600"
+              >
+                Track in game →
+              </Link>
+            </div>
           </div>
           <BuildPathDisplay
             build={build}

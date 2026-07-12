@@ -143,8 +143,10 @@ client on a random local HTTPS port with a password (both in a "lockfile").
 `lcu-bridge/` is a tiny Node service (deployed to `C:\Users\Eric\lol-lcu-bridge`)
 that reads the lockfile, authenticates to the LCU, and re-serves a simplified,
 CORS-open `/champ-select` payload on a fixed port the dev server can proxy to. It
-is **read-only** — it only reads champ-select/summoner/gameflow; it never sends
-picks, bans, or dodges to the client.
+reads champ-select/summoner/gameflow; its only writes are the build imports
+(`/import-runes`, `/import-itemset` — a `Coach:` rune page and per-champion item
+set, replacing only pages/sets the app itself created). It never sends picks,
+bans, or dodges to the client.
 
 One-time WSL networking (Windows 10, same portproxy pattern as the game):
 
@@ -419,7 +421,8 @@ carries augments — as a proxy for Mayhem's shared augment pool.
 
 ## Compliance notes
 
-- Read-only: never sends input to the game client
+- Never sends input to the game client; the only client writes are loadout
+  imports (rune page + item set) the user triggers explicitly
 - Local Live Client data only, polled well under Riot's rate guidance
 - Riot assets are hot-linked from the Data Dragon CDN, never redistributed
 - Attribution/disclaimer shown in the app footer

@@ -38,3 +38,17 @@ export const useAppStore = create<AppState>()(
     { name: 'lol-build-coach' },
   ),
 )
+
+// The main window and the overlay are separate renderers, each with its own
+// store instance; persist only reads localStorage once, at store creation. A
+// selection made in one window (champ-select auto-fill, a role/mode change)
+// would never reach the other, so the two could recommend different builds
+// whenever the live API doesn't decide the value itself (no position in blind
+// pick/practice tool, champion/mode fallbacks out of game). The storage event
+// fires in every OTHER same-origin window on each persisted write — rehydrate
+// there to keep all windows on the same selections.
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'lol-build-coach') void useAppStore.persist.rehydrate()
+  })
+}
