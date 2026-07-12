@@ -116,27 +116,44 @@ function useAugmentGoals(championId: string | null, enabled: boolean): AugmentGo
   return enabled ? goals : []
 }
 
-// Rarity as a ring around the icon (the old list's dot), since inline icons
-// have no room for a separate marker.
+// Rarity as a ring around the icon plus a tinted name, so each goal can be
+// matched against the in-game pick screen by name at a glance.
 const RARITY_RING: Record<string, string> = {
   prismatic: 'ring-violet-400/80',
   gold: 'ring-amber-400/80',
   silver: 'ring-zinc-400/70',
 }
 
-// Inline icon strip, like the Build Path — details live in the tooltip.
+const RARITY_TEXT: Record<string, string> = {
+  prismatic: 'text-violet-300',
+  gold: 'text-amber-300',
+  silver: 'text-zinc-300',
+}
+
+// One row per goal: icon + name + avg placement. The description stays in the
+// tooltip; the name is what you match against the augment offer in game.
 function AugmentGoals({ goals }: { goals: AugmentGoal[] }) {
   return (
-    <div className="flex flex-wrap items-center gap-1">
+    <div className="flex flex-col gap-1">
       {goals.map((g) => (
         <div
           key={g.id}
-          title={`${g.meta.name} · ${g.avgPlacement.toFixed(1)} avg · ${g.firstRate}% first — ${g.meta.desc}`}
-          className={`rounded ring-1 ${RARITY_RING[g.meta.rarity] ?? 'ring-zinc-600'} ${
-            g.source === 'champion' ? '' : 'opacity-60'
-          }`}
+          title={`${g.meta.name} · ${g.avgPlacement.toFixed(1)} avg placement · ${g.firstRate}% picked first — ${g.meta.desc}`}
+          className={`flex items-center gap-1.5 ${g.source === 'champion' ? '' : 'opacity-60'}`}
         >
-          <img src={g.meta.icon} alt={g.meta.name} className="h-[26px] w-[26px] rounded bg-zinc-900" />
+          <div className={`shrink-0 rounded ring-1 ${RARITY_RING[g.meta.rarity] ?? 'ring-zinc-600'}`}>
+            <img src={g.meta.icon} alt="" className="h-[22px] w-[22px] rounded bg-zinc-900" />
+          </div>
+          <span
+            className={`min-w-0 flex-1 truncate text-xs font-medium ${
+              RARITY_TEXT[g.meta.rarity] ?? 'text-zinc-200'
+            }`}
+          >
+            {g.meta.name}
+          </span>
+          <span className="shrink-0 font-mono text-[10px] tabular-nums text-zinc-500">
+            {g.avgPlacement.toFixed(1)} avg
+          </span>
         </div>
       ))}
     </div>
@@ -180,10 +197,14 @@ export default function Overlay() {
 
   // Loading screen: centered scouting report instead of the transparent side
   // card. Main resizes/centers the window (and forces it visible) while active.
-  const loading = useLoadingScreen(isInGame)
+  // The Live Client API already responds while the loading screen is still up,
+  // so "the game started" means the match clock is running — not merely that
+  // the API is reachable. That keeps the report up for the whole load.
+  const gameStarted = isInGame && gameTime > 0
+  const loading = useLoadingScreen(gameStarted)
   const showLoading =
     loading.show &&
-    !isInGame &&
+    !gameStarted &&
     ((loading.myTeam?.length ?? 0) > 0 || (loading.enemyTeam?.length ?? 0) > 0)
   useEffect(() => {
     window.overlay?.setLoadingLayout(showLoading)

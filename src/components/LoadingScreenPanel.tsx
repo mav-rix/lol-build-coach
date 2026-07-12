@@ -5,9 +5,9 @@ import type { DDragonChampion } from '@/types/ddragon'
 
 // Loading-screen scouting report: while League sits on the loading screen the
 // overlay window becomes a centered, near-opaque dark panel (Porofessor-style)
-// showing both teams — champion, name, rank, and recent form (hot/cold
-// streaks) pulled from the LCU. It swaps back to the transparent side card the
-// moment the game itself is reachable.
+// showing both teams stacked — yours on top, enemy below — with champion,
+// name, rank, and recent form (hot/cold streaks) pulled from the LCU. It swaps
+// back to the transparent side card once the match clock starts running.
 
 const TIER_COLOR: Record<string, string> = {
   IRON: 'text-zinc-500',
@@ -52,7 +52,7 @@ function PlayerRow({
   const champId = keyToId.get(player.championId)
   return (
     <div
-      className={`flex items-center gap-2.5 px-3 py-2 ${
+      className={`flex items-center gap-2.5 px-3 py-1.5 ${
         player.isSelf ? 'bg-orange-500/10' : ''
       }`}
     >
@@ -98,7 +98,7 @@ function PlayerRow({
   )
 }
 
-function TeamColumn({
+function TeamSection({
   label,
   labelClass,
   players,
@@ -145,7 +145,7 @@ export function LoadingScreenPanel({
 
   return (
     <div className="flex h-screen w-screen items-center justify-center p-4">
-      <div className="w-full max-w-4xl overflow-hidden rounded-lg border border-zinc-700/60 bg-zinc-950/95 text-zinc-100 shadow-2xl">
+      <div className="max-h-full w-full max-w-lg overflow-y-auto rounded-lg border border-zinc-700/60 bg-zinc-950/95 text-zinc-100 shadow-2xl">
         <div className="flex items-baseline justify-between border-b border-zinc-800 px-3 py-2">
           <span className="text-xs font-bold uppercase tracking-wider text-zinc-300">
             Loading Screen · Scouting Report
@@ -154,15 +154,16 @@ export function LoadingScreenPanel({
             switches to the in-game card when the match starts
           </span>
         </div>
-        <div className="grid grid-cols-2 divide-x divide-zinc-800">
-          <TeamColumn
+        {/* Teams stacked top (yours) and bottom (enemy), full-width rows */}
+        <div className="divide-y divide-zinc-800">
+          <TeamSection
             label="Your Team"
             labelClass="text-sky-400"
             players={data.myTeam ?? []}
             patch={patch}
             keyToId={keyToId}
           />
-          <TeamColumn
+          <TeamSection
             label="Enemy Team"
             labelClass="text-red-400"
             players={data.enemyTeam ?? []}

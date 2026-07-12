@@ -107,8 +107,10 @@ function applyLoadingLayout(active) {
     if (loadingLayout && !preLoadingBounds) {
       preLoadingBounds = overlayWin.getBounds()
       const wa = screen.getPrimaryDisplay().workArea
-      const w = Math.min(1000, wa.width - 80)
-      const h = Math.min(640, wa.height - 120)
+      // Tall and narrow: the panel stacks the teams top/bottom (10 full-width
+      // rows) rather than side by side.
+      const w = Math.min(600, wa.width - 80)
+      const h = Math.min(820, wa.height - 120)
       overlayWin.setBounds({
         x: wa.x + Math.round((wa.width - w) / 2),
         y: wa.y + Math.round((wa.height - h) / 2),
