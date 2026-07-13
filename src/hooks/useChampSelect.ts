@@ -15,18 +15,26 @@ export interface BridgeChampSelect {
   clientOpen: boolean
   phase: string
   inChampSelect: boolean
-  self?: { championId: number; role: Role | null; position: string } | null
+  queueId?: number
+  selfRank?: { tier: string; division: string } | null
+  self?: { cellId?: number; championId: number; role: Role | null; position: string } | null
   myTeam?: BridgeCell[]
   theirTeam?: BridgeCell[]
   enemyChampionKeys?: number[]
   bans?: number[]
 }
 
+// Ranked Solo/Duo + Ranked Flex — the queues the ranked-draft assistant covers.
+const RANKED_QUEUES = new Set([420, 440])
+
 export interface ChampSelectState {
   available: boolean // bridge reachable and client open
   inChampSelect: boolean
   phase: string
+  isRanked: boolean // queue 420/440
+  selfRank: { tier: string; division: string } | null // solo queue, else highest
   self: { championId: string | null; role: Role | null }
+  allyChampionIds: string[] // teammates' hovered/locked picks (self excluded)
   enemyChampionIds: (string | null)[] // Data Dragon ids, length 5, nulls for unrevealed
   banChampionIds: string[]
 }
@@ -77,7 +85,10 @@ export function useChampSelect(): ChampSelectState {
       available: false,
       inChampSelect: false,
       phase: bridge?.phase ?? 'None',
+      isRanked: false,
+      selfRank: null,
       self: { championId: null, role: null },
+      allyChampionIds: [],
       enemyChampionIds: [null, null, null, null, null],
       banChampionIds: [],
     }
@@ -89,14 +100,23 @@ export function useChampSelect(): ChampSelectState {
     const enemies = (bridge.enemyChampionKeys ?? []).map(mapKey)
     while (enemies.length < 5) enemies.push(null)
 
+    const selfCellId = bridge.self?.cellId
+    const allies = (bridge.myTeam ?? [])
+      .filter((p) => p.cellId !== selfCellId)
+      .map((p) => mapKey(p.championId))
+      .filter((id): id is string => id !== null)
+
     return {
       available: true,
       inChampSelect: bridge.inChampSelect,
       phase: bridge.phase,
+      isRanked: RANKED_QUEUES.has(bridge.queueId ?? -1),
+      selfRank: bridge.selfRank ?? null,
       self: {
         championId: bridge.self ? mapKey(bridge.self.championId) : null,
         role: bridge.self?.role ?? null,
       },
+      allyChampionIds: allies,
       enemyChampionIds: enemies.slice(0, 5),
       banChampionIds: (bridge.bans ?? [])
         .map(mapKey)
