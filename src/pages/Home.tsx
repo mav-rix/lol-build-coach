@@ -4,9 +4,11 @@ import { ChampionSelect } from '@/components/ChampionSelect'
 import { BuildPathDisplay } from '@/components/BuildPathDisplay'
 import { CounterPicks } from '@/components/CounterPicks'
 import { ImportBuildButton } from '@/components/ImportBuildButton'
+import { RankedDraft } from '@/components/RankedDraft'
 import { useAggregatedBuilds } from '@/hooks/useAggregatedBuilds'
 import { useStaticData } from '@/hooks/useStaticData'
 import { useChampSelect } from '@/hooks/useChampSelect'
+import { useRankedStats } from '@/hooks/useRankedStats'
 import { useAppStore } from '@/store/useAppStore'
 import { BUILD_PATHS, findBuild } from '@/data/builds'
 import { analyzeEnemyComp } from '@/lib/situational'
@@ -49,6 +51,8 @@ export default function Home() {
 
   // Auto-fill from the League client's champ select (via the LCU bridge).
   const champSelect = useChampSelect()
+  // Per-elo win/pick/ban stats for the ranked-draft panel (lazy chunk).
+  const rankedStats = useRankedStats()
   useEffect(() => {
     if (!champSelect.inChampSelect) return
     // Mirror my locked pick + assigned role.
@@ -120,6 +124,18 @@ export default function Home() {
           Champ Select connected — auto-filling your champion, role, and enemy team
           from the draft as picks lock in.
         </div>
+      )}
+      {champSelect.inChampSelect && champSelect.isRanked && rankedStats && (
+        <RankedDraft
+          champSelect={champSelect}
+          stats={rankedStats}
+          championsById={data.championsById}
+          patch={data.patch}
+          onPick={(championId, role) => {
+            selectChampion(championId)
+            selectRole(role)
+          }}
+        />
       )}
       {champSelect.available && !champSelect.inChampSelect && (
         <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2 text-xs text-zinc-500">

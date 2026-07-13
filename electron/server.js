@@ -133,6 +133,25 @@ const normalizePlayer = (cell) => ({
   role: POSITION_TO_ROLE[cell.assignedPosition] ?? null,
 })
 
+// The player's solo-queue rank, for the ranked-draft panel ("most OP in your
+// elo"). Rank barely moves within a session, so cache it briefly.
+let selfRankCache = { at: 0, rank: null }
+async function getSelfRank(lock) {
+  if (Date.now() - selfRankCache.at < 5 * 60 * 1000) return selfRankCache.rank
+  const res = await lcuGet(lock, '/lol-ranked/v1/current-ranked-stats')
+  const solo = res.json?.queueMap?.RANKED_SOLO_5x5
+  const entry = solo?.tier ? solo : res.json?.highestRankedEntry
+  const rank =
+    entry?.tier && entry.tier !== 'NONE' && entry.tier !== 'UNRANKED'
+      ? {
+          tier: entry.tier,
+          division: entry.division && entry.division !== 'NA' ? entry.division : '',
+        }
+      : null
+  selfRankCache = { at: Date.now(), rank }
+  return rank
+}
+
 async function buildChampSelect() {
   const lock = readLockfile()
   if (!lock) return { clientOpen: false, phase: 'None', inChampSelect: false }
@@ -147,11 +166,21 @@ async function buildChampSelect() {
   for (const action of (session.actions ?? []).flat()) {
     if (action.type === 'ban' && action.completed && action.championId) bans.push(action.championId)
   }
+  // Queue (420/440 = ranked) + own rank, for the ranked-draft assistant.
+  const [gfRes, selfRank] = await Promise.all([
+    lcuGet(lock, '/lol-gameflow/v1/session'),
+    getSelfRank(lock),
+  ])
+  const queueId = gfRes.json?.gameData?.queue?.id ?? -1
   return {
     clientOpen: true,
     phase,
     inChampSelect: true,
-    self: self ? { championId: self.championId, role: self.role, position: self.position } : null,
+    queueId,
+    selfRank,
+    self: self
+      ? { cellId: self.cellId, championId: self.championId, role: self.role, position: self.position }
+      : null,
     myTeam,
     theirTeam,
     enemyChampionKeys: theirTeam.map((p) => p.championId),
