@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useStaticData } from '@/hooks/useStaticData'
 import { MOCK_CHAMP_SELECT } from '@/data/mockChampSelect'
+import { isAugmentedAbyss } from '@/lib/modes'
 import type { Role } from '@/types/app'
 
 // Shape returned by the LCU bridge (/lcu/champ-select).
@@ -16,6 +17,8 @@ export interface BridgeChampSelect {
   phase: string
   inChampSelect: boolean
   queueId?: number
+  gameMode?: string
+  mapId?: number
   selfRank?: { tier: string; division: string } | null
   self?: { cellId?: number; championId: number; role: Role | null; position: string } | null
   myTeam?: BridgeCell[]
@@ -32,6 +35,7 @@ export interface ChampSelectState {
   inChampSelect: boolean
   phase: string
   isRanked: boolean // queue 420/440
+  augmentedAbyss: boolean // ARAM Mayhem & friends — no rune pages, item import only
   selfRank: { tier: string; division: string } | null // solo queue, else highest
   self: { championId: string | null; role: Role | null }
   allyChampionIds: string[] // teammates' hovered/locked picks (self excluded)
@@ -86,6 +90,7 @@ export function useChampSelect(): ChampSelectState {
       inChampSelect: false,
       phase: bridge?.phase ?? 'None',
       isRanked: false,
+      augmentedAbyss: false,
       selfRank: null,
       self: { championId: null, role: null },
       allyChampionIds: [],
@@ -111,6 +116,7 @@ export function useChampSelect(): ChampSelectState {
       inChampSelect: bridge.inChampSelect,
       phase: bridge.phase,
       isRanked: RANKED_QUEUES.has(bridge.queueId ?? -1),
+      augmentedAbyss: isAugmentedAbyss(bridge.gameMode ?? '', bridge.mapId),
       selfRank: bridge.selfRank ?? null,
       self: {
         championId: bridge.self ? mapKey(bridge.self.championId) : null,

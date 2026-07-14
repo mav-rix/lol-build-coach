@@ -10,6 +10,8 @@ interface Props {
   runes: DDragonRunePath[]
   /** LCU bridge reachable and the League client open (champSelect.available). */
   clientOpen: boolean
+  /** ARAM Mayhem & other augmented-Abyss events: no rune pages, import items only. */
+  skipRunes?: boolean
 }
 
 type Phase = 'idle' | 'busy' | 'done' | 'error'
@@ -19,7 +21,14 @@ type Phase = 'idle' | 'busy' | 'done' | 'error'
  * Works any time the client is open — the shop picks the set up at game start,
  * and the rune page applies to the next champ select (or the current one).
  */
-export function ImportBuildButton({ build, champion, mapId, runes, clientOpen }: Props) {
+export function ImportBuildButton({
+  build,
+  champion,
+  mapId,
+  runes,
+  clientOpen,
+  skipRunes = false,
+}: Props) {
   const [phase, setPhase] = useState<Phase>('idle')
   const [message, setMessage] = useState('')
 
@@ -37,7 +46,7 @@ export function ImportBuildButton({ build, champion, mapId, runes, clientOpen }:
 
   const run = async () => {
     setPhase('busy')
-    const result = await importBuildToClient(build, champion, mapId, runes)
+    const result = await importBuildToClient(build, champion, mapId, runes, skipRunes)
     setMessage(result.message)
     setPhase(result.ok ? 'done' : 'error')
   }
@@ -49,7 +58,9 @@ export function ImportBuildButton({ build, champion, mapId, runes, clientOpen }:
         ? 'Imported ✓'
         : phase === 'error'
           ? 'Retry import'
-          : 'Import to League client'
+          : skipRunes
+            ? 'Import items to League client'
+            : 'Import to League client'
 
   return (
     <div className="flex items-center gap-2">
@@ -67,7 +78,9 @@ export function ImportBuildButton({ build, champion, mapId, runes, clientOpen }:
         disabled={!clientOpen || phase === 'busy'}
         title={
           clientOpen
-            ? 'Create the rune page and item set in your League client'
+            ? skipRunes
+              ? 'Create the item set in your League client (this mode has no rune pages)'
+              : 'Create the rune page and item set in your League client'
             : 'Open the League client (and the bridge, in dev) to enable importing'
         }
         className={`rounded-md px-3 py-1.5 text-sm font-medium text-white transition-colors ${

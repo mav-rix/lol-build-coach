@@ -90,13 +90,23 @@ async function post(pathname: string, body: unknown): Promise<{ ok: boolean; err
 /**
  * Push the build into the client: item set always, rune page when its ids are
  * valid on the live patch. Partial success reports what happened to each half.
+ *
+ * `skipRunes` forces item-only import for augmented-Abyss events (ARAM Mayhem),
+ * which have no rune pages — attempting a rune write there is pointless.
  */
 export async function importBuildToClient(
   build: BuildPath,
   champion: DDragonChampion,
   mapId: number,
   runes: DDragonRunePath[],
+  skipRunes = false,
 ): Promise<ImportOutcome> {
+  if (skipRunes) {
+    const itemsResult = await post('/lcu/import-itemset', itemSetPayload(build, champion, mapId))
+    return itemsResult.ok
+      ? { ok: true, message: 'Item set imported (no runes — this mode has no rune pages)' }
+      : { ok: false, message: `Import failed: ${itemsResult.error}` }
+  }
   const runePage = runePagePayload(build, champion, runes)
   const [itemsResult, runesResult] = await Promise.all([
     post('/lcu/import-itemset', itemSetPayload(build, champion, mapId)),
