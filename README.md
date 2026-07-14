@@ -243,6 +243,29 @@ The web bundle is built, staged to the Windows side, and electron-builder
 produces an NSIS installer + zip there (Electron/NSIS binaries need to run
 natively; `npmRebuild` is off — uiohook-napi uses its shipped prebuilds).
 
+**Iterating on the Electron shell:** the app serves the *built* bundle from
+`electron/dist` via its in-process server — it never talks to the Vite dev
+server — so seeing a UI change in the real app means rebuilding and re-staging.
+
+```bash
+npm run electron:dev    # build + stage the bundle into electron/dist
+```
+
+If the app has already been packaged, this also refreshes the bundle inside
+`lol-build-coach-pkg`, so you can relaunch without reinstalling deps or
+rebuilding the installer:
+
+```bat
+cd C:\Users\<you>\lol-build-coach-pkg
+..\lol-build-tools\node_modules\.bin\electron .
+```
+
+(`WIN_USER` overrides `<you>` in the printed paths.) It doesn't launch Electron
+itself — that's a Windows app (native Tab hook, `C:\Riot Games` lockfile) and
+can't run from WSL. For fast UI iteration prefer `npm run dev` in a browser;
+reach for `electron:dev` only to verify Electron-shell behavior (overlay window,
+Tab summon, live client).
+
 **Updates via GitHub Releases:** the builder config publishes to this repo's
 Releases, and the app checks them on launch (electron-updater). Cut a release
 with `node scripts/package-win.mjs --publish` (needs a `GH_TOKEN` with repo

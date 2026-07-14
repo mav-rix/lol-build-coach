@@ -103,6 +103,11 @@ export const championIconUrl = (patch: string, championId: string) =>
 export const championSplashUrl = (championId: string) =>
   `${DDRAGON}/cdn/img/champion/splash/${championId}_0.jpg`
 
+// Portrait loading art (the tall crop League itself uses on the loading
+// screen). Version-independent, like the splash.
+export const championLoadingUrl = (championId: string) =>
+  `${DDRAGON}/cdn/img/champion/loading/${championId}_0.jpg`
+
 export const itemIconUrl = (patch: string, itemId: number) =>
   `${DDRAGON}/cdn/${patch}/img/item/${itemId}.png`
 
