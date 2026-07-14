@@ -172,11 +172,17 @@ async function buildChampSelect() {
     getSelfRank(lock),
   ])
   const queueId = gfRes.json?.gameData?.queue?.id ?? -1
+  // Queue gameMode + map, so the client can flag augmented-Abyss events (ARAM
+  // Mayhem), which have no rune pages — item import only. See isAugmentedAbyss.
+  const gameMode = gfRes.json?.gameData?.queue?.gameMode ?? ''
+  const mapId = gfRes.json?.gameData?.queue?.mapId ?? -1
   return {
     clientOpen: true,
     phase,
     inChampSelect: true,
     queueId,
+    gameMode,
+    mapId,
     selfRank,
     self: self
       ? { cellId: self.cellId, championId: self.championId, role: self.role, position: self.position }

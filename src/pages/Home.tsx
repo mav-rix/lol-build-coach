@@ -319,6 +319,7 @@ export default function Home() {
                 mapId={modeConfig.mapId}
                 runes={data.runes}
                 clientOpen={champSelect.available}
+                skipRunes={champSelect.augmentedAbyss}
               />
               <Link
                 to="/live"
