@@ -105,6 +105,10 @@ function applyLoadingLayout(active) {
   loadingLayout = Boolean(active)
   if (overlayWin && !overlayWin.isDestroyed()) {
     if (loadingLayout && !preLoadingBounds) {
+      // New game starting (loading screen just appeared) — re-register the Tab
+      // hook now so it's fresh for the in-game overlay a few seconds later,
+      // even if it went stale earlier in the session.
+      refreshTabListener()
       preLoadingBounds = overlayWin.getBounds()
       const wa = screen.getPrimaryDisplay().workArea
       // Wide and short: each team is a horizontal row of five portraits
@@ -165,6 +169,9 @@ function createOverlayWindow() {
 let activeHook = null
 function stopTabListener() {
   try {
+    // uiohook is a singleton — drop our listeners too so a later re-register
+    // (refreshTabListener) doesn't stack duplicate Tab handlers on it.
+    activeHook?.removeAllListeners?.()
     activeHook?.stop()
   } catch {
     // best effort
@@ -197,6 +204,18 @@ function startTabListener() {
   activeHook = uIOhook
   tabModeActive = true
   applyOverlayVisibility()
+}
+
+// The native uiohook thread can silently go stale over a long session (seen
+// after the app ran for hours across an in-place auto-update) and stop
+// delivering Tab events, so the in-game overlay never appears until a manual
+// restart. Re-register it at the start of each game — the moment before Tab is
+// needed — by fully stopping and restarting the hook. No-op if the hook never
+// loaded (uiohook unavailable) or Tab mode is off.
+function refreshTabListener() {
+  if (TAB_MODE === 'off' || !activeHook) return
+  stopTabListener()
+  startTabListener()
 }
 
 /**
