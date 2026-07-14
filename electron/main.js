@@ -107,10 +107,10 @@ function applyLoadingLayout(active) {
     if (loadingLayout && !preLoadingBounds) {
       preLoadingBounds = overlayWin.getBounds()
       const wa = screen.getPrimaryDisplay().workArea
-      // Tall and narrow: the panel stacks the teams top/bottom (10 full-width
-      // rows) rather than side by side.
-      const w = Math.min(600, wa.width - 80)
-      const h = Math.min(820, wa.height - 120)
+      // Wide and short: each team is a horizontal row of five portraits
+      // (max-w-3xl ≈ 768px panel + p-4 padding), one team above the other.
+      const w = Math.min(800, wa.width - 80)
+      const h = Math.min(680, wa.height - 120)
       overlayWin.setBounds({
         x: wa.x + Math.round((wa.width - w) / 2),
         y: wa.y + Math.round((wa.height - h) / 2),
