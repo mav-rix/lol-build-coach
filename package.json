@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "dev:plain": "vite",
+    "electron:dev": "node scripts/electron-dev.mjs",
     "aggregate": "node scripts/aggregate-builds.mjs",
     "aggregate:ranked": "node scripts/aggregate-ranked-stats.mjs",
     "augments:meta": "node scripts/fetch-augments.mjs",
