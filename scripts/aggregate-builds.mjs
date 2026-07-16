@@ -21,6 +21,11 @@
 //                         so prior regions/runs join without being re-fetched
 //   --mode <sr|aram>      which mode to aggregate (default sr); aram ingests
 //                         queue 450 into a separate per-champion builds file
+//   --replace             overwrite the output outright. Default is to MERGE:
+//                         this run's builds refresh the champ/roles it observed
+//                         and any others are carried over from the previous file
+//                         so a small run never silently drops coverage. Use
+//                         --replace for a clean rebuild that prunes stale entries.
 
 import { writeFileSync, readFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs'
 import { join, dirname, resolve } from 'node:path'
@@ -49,6 +54,7 @@ const PER_PLAYER = Number(args['per-player'] ?? 15)
 const MIN_SAMPLE = Number(args['min-sample'] ?? 3)
 const IF_STALE = Boolean(args['if-stale'])
 const INCLUDE_CACHED = Boolean(args['include-cached'])
+const REPLACE = Boolean(args['replace']) // overwrite instead of merging with the previous output
 const CACHED_ONLY = Boolean(args['cached-only']) // re-aggregate the disk cache, zero API calls
 const DRY_RUN = Boolean(args['dry-run'])
 const DRY_LIMIT = Number(args.matches ?? 50)
@@ -738,10 +744,40 @@ async function main() {
     return
   }
 
-  writeFileSync(OUT, JSON.stringify(builds, null, 2) + '\n')
-  console.log(`\n✓ Wrote ${builds.length} builds (${groups.size} champ/role groups seen) → ${OUT}`)
-  const covered = new Set(builds.map((b) => b.championId)).size
-  console.log(`  covering ${covered} champions across ${new Set(builds.map((b) => b.role)).size} roles`)
+  // Safety merge: fold this run's builds over the previous output rather than
+  // replacing it. A run only observes the champ/roles in its match sample, so a
+  // plain overwrite silently drops everything it didn't see this time (a 300-
+  // match run quietly halved the SR set on patch 26.14). Keeping each build's
+  // own `patch` field, un-refreshed entries stay visibly stale for consumers.
+  // --replace opts out for a clean rebuild that prunes anything no longer seen.
+  const key = (b) => `${b.championId}|${b.role ?? ''}`
+  const byKey = new Map(builds.map((b) => [key(b), b]))
+  let retained = 0
+  if (!REPLACE && existsSync(OUT)) {
+    try {
+      const prev = JSON.parse(readFileSync(OUT, 'utf8'))
+      if (Array.isArray(prev)) {
+        for (const b of prev) {
+          if (!byKey.has(key(b))) {
+            byKey.set(key(b), b)
+            retained++
+          }
+        }
+      }
+    } catch {
+      // unreadable/legacy output — just write this run's builds
+    }
+  }
+  const merged = [...byKey.values()].sort(
+    (a, b) => a.championId.localeCompare(b.championId) || (a.role ?? '').localeCompare(b.role ?? ''),
+  )
+  writeFileSync(OUT, JSON.stringify(merged, null, 2) + '\n')
+  console.log(
+    `\n✓ Wrote ${merged.length} builds (${builds.length} refreshed from ${groups.size} groups this run` +
+      `${REPLACE ? ', --replace' : `, ${retained} retained from previous`}) → ${OUT}`,
+  )
+  const covered = new Set(merged.map((b) => b.championId)).size
+  console.log(`  covering ${covered} champions across ${new Set(merged.map((b) => b.role)).size} roles`)
 }
 
 // ---- tiny helpers ---------------------------------------------------------
