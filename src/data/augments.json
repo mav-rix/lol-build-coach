@@ -542,7 +542,7 @@
     "id": 204,
     "name": "Stackosaurus Rex",
     "rarity": "silver",
-    "desc": "When you gain permanent Stacks of an Ability, Augment, or Item gain …% more!",
+    "desc": "When you gain permanent Stacks of an Ability, gain …% more!",
     "icon": "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/stackosaurusrex_large.png"
   },
   {
