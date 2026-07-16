@@ -13,6 +13,11 @@
 // --top-per-champ, --out, --cached-only (re-tally the disk cache, zero API
 // calls — for threshold/ranking changes). Match cache is shared with
 // aggregate-builds.mjs under .cache/riot.
+//   --replace   overwrite the outputs. Default MERGES with the previous files so
+//               a thin run refreshes what it sampled and carries over augments /
+//               champions it didn't see, instead of silently dropping coverage.
+//               Retained rows are still filtered to the current augment metadata,
+//               so retired augments drop out. Use --replace for a clean rebuild.
 
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'node:fs'
 import { join, dirname, resolve } from 'node:path'
@@ -28,6 +33,7 @@ const API_KEY = process.env.RIOT_API_KEY
 
 const args = parseArgs(process.argv.slice(2))
 const CACHED_ONLY = Boolean(args['cached-only']) // re-tally from disk, zero API calls
+const REPLACE = Boolean(args['replace']) // overwrite instead of merging with the previous outputs
 const PLATFORM = (args.region ?? 'na1').toLowerCase()
 const MATCH_LIMIT = Number(args.matches ?? 500)
 const PER_PLAYER = Number(args['per-player'] ?? 20)
@@ -190,9 +196,35 @@ async function main() {
     }))
     .sort((a, b) => a.avgPlacement - b.avgPlacement)
 
-  writeFileSync(OUT, JSON.stringify(stats, null, 2) + '\n')
-  console.log(`\n✓ Wrote ${stats.length} augments (${usedMatches} Arena matches) → ${args.out ?? 'src/data/augmentStats.json'}`)
-  if (stats[0]) console.log(`  best avg placement: aug ${stats[0].id} @ ${stats[0].avgPlacement} (${stats[0].firstRate}% firsts)`)
+  // Safety merge: a run only tallies the augments its match sample surfaced, so
+  // a plain overwrite drops any that fell below MIN_GAMES this time. Fold this
+  // run's rows over the previous file (keyed by augment id) and carry over the
+  // rest, but only ones still in the current metadata so retired augments don't
+  // linger. --replace opts out for a clean rebuild.
+  const statsById = new Map(stats.map((s) => [s.id, s]))
+  let statsRetained = 0
+  if (!REPLACE && existsSync(OUT)) {
+    try {
+      const prev = JSON.parse(readFileSync(OUT, 'utf8'))
+      if (Array.isArray(prev)) {
+        for (const s of prev) {
+          if (!statsById.has(s.id) && (!metaIds || metaIds.has(s.id))) {
+            statsById.set(s.id, s)
+            statsRetained++
+          }
+        }
+      }
+    } catch {
+      // unreadable/legacy output — just write this run's rows
+    }
+  }
+  const mergedStats = [...statsById.values()].sort((a, b) => a.avgPlacement - b.avgPlacement)
+  writeFileSync(OUT, JSON.stringify(mergedStats, null, 2) + '\n')
+  console.log(
+    `\n✓ Wrote ${mergedStats.length} augments (${usedMatches} Arena matches` +
+      `${REPLACE ? ', --replace' : `, ${statsRetained} retained`}) → ${args.out ?? 'src/data/augmentStats.json'}`,
+  )
+  if (mergedStats[0]) console.log(`  best avg placement: aug ${mergedStats[0].id} @ ${mergedStats[0].avgPlacement} (${mergedStats[0].firstRate}% firsts)`)
 
   // Per-champion top augments: only pairs with a real sample survive; the app
   // blends these with the global list, so thin champions degrade gracefully.
@@ -221,10 +253,29 @@ async function main() {
       .map(({ _shrunk, ...row }) => row)
   }
   const champOut = join(ROOT, 'src/data/augmentChampStats.json')
+  // Same safety merge, per champion: retain champions this run's sample missed,
+  // keeping only their still-valid augment rows. --replace opts out.
+  let champRetained = 0
+  if (!REPLACE && existsSync(champOut)) {
+    try {
+      const prev = JSON.parse(readFileSync(champOut, 'utf8'))
+      for (const [champ, rows] of Object.entries(prev)) {
+        if (byChamp[champ] || !Array.isArray(rows)) continue
+        const kept = rows.filter((r) => !metaIds || metaIds.has(r.id))
+        if (kept.length) {
+          byChamp[champ] = kept
+          champRetained++
+        }
+      }
+    } catch {
+      // unreadable/legacy output — just write this run's champions
+    }
+  }
   writeFileSync(champOut, JSON.stringify(byChamp, null, 1) + '\n')
   const covered = Object.keys(byChamp).length
   const pairs = Object.values(byChamp).reduce((n, l) => n + l.length, 0)
-  console.log(`✓ Wrote per-champion stats: ${covered} champions, ${pairs} champ-augment pairs (min ${CHAMP_MIN_GAMES} games) → src/data/augmentChampStats.json`)
+  const retainedNote = REPLACE ? ', --replace' : `, ${champRetained} champions retained`
+  console.log(`✓ Wrote per-champion stats: ${covered} champions, ${pairs} champ-augment pairs (min ${CHAMP_MIN_GAMES} games${retainedNote}) → src/data/augmentChampStats.json`)
 }
 
 function parseArgs(argv) {
