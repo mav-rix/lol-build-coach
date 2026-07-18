@@ -4,6 +4,27 @@ import type { LoadingScreenState } from '@/hooks/useLoadingScreen'
 // Activate with ?mockload=1 on the /overlay route. Numeric keys are Data
 // Dragon champion keys. Includes the interesting cases: hot streak, cold
 // streak, unranked, apex tier (no division), and self-highlight.
+// Practice Tool / custom-lobby shape: just you, no enemies. Activate with
+// ?mockload=solo — regression fixture for the partial-lobby slot layout (a
+// single portrait must stay in its 1-of-5 slot, not stretch across the panel).
+export const MOCK_LOADING_SCREEN_SOLO: LoadingScreenState = {
+  available: true,
+  phase: 'GameStart',
+  show: true,
+  windowMode: 2,
+  myTeam: [
+    {
+      championId: 103, // Ahri
+      name: 'Eric',
+      isSelf: true,
+      rank: { tier: 'GOLD', division: 'I' },
+      streak: null,
+      recent: { wins: 6, losses: 4 },
+    },
+  ],
+  enemyTeam: [],
+}
+
 export const MOCK_LOADING_SCREEN: LoadingScreenState = {
   available: true,
   phase: 'GameStart',
