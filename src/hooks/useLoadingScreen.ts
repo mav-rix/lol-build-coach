@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { MOCK_LOADING_SCREEN } from '@/data/mockLoadingScreen'
+import { MOCK_LOADING_SCREEN, MOCK_LOADING_SCREEN_SOLO } from '@/data/mockLoadingScreen'
 
 // Shape returned by the LCU bridge (/lcu/loading-screen). One enrichment per
 // game happens server-side; polling just picks up the cached result.
@@ -31,9 +31,11 @@ const EMPTY: LoadingScreenState = {
 
 const POLL_MS = 3000
 
-const useMockLoad = () =>
-  typeof window !== 'undefined' &&
-  new URLSearchParams(window.location.search).has('mockload')
+// null = no mock; '1' = full 5v5 fixture; 'solo' = Practice Tool shape.
+const useMockLoad = (): string | null =>
+  typeof window !== 'undefined'
+    ? new URLSearchParams(window.location.search).get('mockload')
+    : null
 
 async function fetchLoadingScreen(): Promise<LoadingScreenState> {
   const res = await fetch('/lcu/loading-screen')
@@ -57,8 +59,8 @@ export function useLoadingScreen(gameStarted: boolean): LoadingScreenState {
     refetchIntervalInBackground: true,
     retry: false,
     gcTime: 0,
-    enabled: !mock && !gameStarted,
+    enabled: mock === null && !gameStarted,
   })
-  if (mock) return MOCK_LOADING_SCREEN
+  if (mock !== null) return mock === 'solo' ? MOCK_LOADING_SCREEN_SOLO : MOCK_LOADING_SCREEN
   return query.data ?? EMPTY
 }

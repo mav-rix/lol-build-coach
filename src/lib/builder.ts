@@ -166,7 +166,7 @@ export function recommendPurchases(
     return a.cost - b.cost
   })
 
-  // Cap the visible list — top 5 is plenty for an in-game glance.
+  // Cap the visible list at a full inventory's worth of purchases.
   void modeConfig
-  return recs.slice(0, 5)
+  return recs.slice(0, 6)
 }

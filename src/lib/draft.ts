@@ -49,7 +49,7 @@ const TIER_TO_BUCKET: Record<string, BucketKey> = {
 }
 // Fallback order when the player's own bucket wasn't aggregated: walk outward,
 // preferring the nearest bucket (higher elo data is the better stand-in).
-const BUCKET_ORDER: BucketKey[] = [
+export const BUCKET_ORDER: BucketKey[] = [
   'IRON_BRONZE',
   'SILVER_GOLD',
   'PLAT_EMERALD',

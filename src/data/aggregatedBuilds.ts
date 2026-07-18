@@ -49,6 +49,18 @@ export function loadAggregatedBuilds(): Promise<BuildPath[]> {
 }
 
 /**
+ * Champions with a usable aggregated build in a mode (empty until the chunk
+ * loads) — drives coverage badges/copy alongside the hand-authored seeds.
+ */
+export function aggregatedChampionIds(mode: GameMode): Set<string> {
+  const ids = new Set<string>()
+  for (const b of cache) {
+    if (b.mode === mode && (b.sampleSize ?? 0) >= MIN_AGGREGATED_SAMPLE) ids.add(b.championId)
+  }
+  return ids
+}
+
+/**
  * The aggregated build for a champion in a mode, or null if none clears the
  * sample floor (or the dataset hasn't loaded yet). ARAM is roleless — one build
  * per champion. For SR, a role selects; with no role, the most-played build.

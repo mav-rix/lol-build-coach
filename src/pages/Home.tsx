@@ -11,6 +11,7 @@ import { useChampSelect } from '@/hooks/useChampSelect'
 import { useRankedStats } from '@/hooks/useRankedStats'
 import { useAppStore } from '@/store/useAppStore'
 import { BUILD_PATHS, findBuild } from '@/data/builds'
+import { aggregatedChampionIds } from '@/data/aggregatedBuilds'
 import { analyzeEnemyComp } from '@/lib/situational'
 import { suggestCounterPicks } from '@/lib/counterpick'
 import { MODE_CONFIG } from '@/lib/modes'
@@ -36,7 +37,7 @@ function defaultRole(champion: DDragonChampion): Role {
 export default function Home() {
   const { data, isLoading, error, retry } = useStaticData()
   // Load the lazy aggregated-builds chunk; re-renders when ready so findBuild picks it up.
-  useAggregatedBuilds()
+  const buildsLoaded = useAggregatedBuilds()
   const {
     selectedChampionId,
     selectedRole,
@@ -78,10 +79,13 @@ export default function Home() {
 
   const comp = useMemo(() => analyzeEnemyComp(enemies), [enemies])
 
-  const seededChampionIds = useMemo(
-    () => new Set(BUILD_PATHS.filter((b) => b.mode === 'SR').map((b) => b.championId)),
-    [],
-  )
+  // Champions with a real build available (hand-authored seed OR aggregated
+  // high-elo data) — drives the counter-pick "Build" badge and coverage copy.
+  const seededChampionIds = useMemo(() => {
+    const ids = new Set(BUILD_PATHS.filter((b) => b.mode === 'SR').map((b) => b.championId))
+    if (buildsLoaded) for (const id of aggregatedChampionIds('SR')) ids.add(id)
+    return ids
+  }, [buildsLoaded])
   const counterPicks = useMemo(
     () =>
       data ? suggestCounterPicks(enemies, data.championsById, seededChampionIds) : null,
@@ -89,6 +93,15 @@ export default function Home() {
   )
   const hasCounterPicks =
     counterPicks !== null && ROLES.some((r) => counterPicks[r].length > 0)
+
+  // How many champions have a build in the selected mode (seed or aggregated).
+  const coverageCount = useMemo(() => {
+    const ids = new Set(
+      BUILD_PATHS.filter((b) => b.mode === selectedMode).map((b) => b.championId),
+    )
+    if (buildsLoaded) for (const id of aggregatedChampionIds(selectedMode)) ids.add(id)
+    return ids.size
+  }, [selectedMode, buildsLoaded])
 
   if (isLoading) {
     return <p className="py-20 text-center text-zinc-400">Loading Data Dragon…</p>
@@ -111,7 +124,6 @@ export default function Home() {
     ? findBuild(selectedChampion.id, selectedRole, selectedMode)
     : null
   const modeConfig = MODE_CONFIG[selectedMode]
-  const seedsForMode = BUILD_PATHS.filter((b) => b.mode === selectedMode)
 
   return (
     <div className="mx-auto max-w-4xl space-y-8">
@@ -282,25 +294,23 @@ export default function Home() {
 
       {!selectedChampion && (
         <div className="py-10 text-center text-zinc-500">
-          <p className="mb-4">Pick your champion to get a build recommendation.</p>
+          <p className="mb-2">Pick your champion to get a build recommendation.</p>
           <p className="text-sm">
-            Seeded {modeConfig.label} builds:{' '}
-            {seedsForMode
-              .map((b) => data.championsById[b.championId]?.name ?? b.championId)
-              .join(', ')}
+            High-elo {modeConfig.label} build data covers {coverageCount} champions.
           </p>
         </div>
       )}
 
       {selectedChampion && !build && (
         <div className="py-10 text-center text-zinc-500">
-          <p>
-            No seeded {modeConfig.label} build for {selectedChampion.name} yet. MVP
-            data covers:{' '}
-            {seedsForMode
-              .map((b) => data.championsById[b.championId]?.name ?? b.championId)
-              .join(', ')}
-            .
+          <p className="mb-2">
+            No {modeConfig.label} build data for {selectedChampion.name}{' '}
+            {modeConfig.hasRoles && selectedRole ? `${selectedRole} ` : ''}yet — too few
+            high-elo games this patch{modeConfig.hasRoles ? ' (try another role)' : ''}.
+          </p>
+          <p className="text-sm">
+            The <Link to="/live" className="text-sky-400 hover:underline">Live tracker</Link>{' '}
+            still adapts in-game using the item-scoring engine.
           </p>
         </div>
       )}

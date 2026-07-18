@@ -1,5 +1,7 @@
 import { useMemo } from 'react'
 import { championLoadingUrl } from '@/services/ddragon'
+import { useRankedStats } from '@/hooks/useRankedStats'
+import { resolveBucket, type RankedStatsData } from '@/lib/draft'
 import type { LoadingPlayer, LoadingScreenState } from '@/hooks/useLoadingScreen'
 import type { DDragonChampion } from '@/types/ddragon'
 
@@ -57,16 +59,38 @@ function StreakChip({ streak }: { streak: NonNullable<LoadingPlayer['streak']> }
   )
 }
 
+// Win rate on THIS champion at the player's own elo (nearest aggregated
+// bucket), from the same dataset the draft assistant uses. Null when the
+// stats chunk is missing or the champ has too few games there to mean much.
+function champWinRate(
+  stats: RankedStatsData | null,
+  champId: string | undefined,
+  tier: string | null,
+): { winRate: number; games: number; bucketLabel: string } | null {
+  if (!stats || !champId) return null
+  const resolved = resolveBucket(stats, tier)
+  const entry = resolved?.bucket.champions[champId]
+  if (!resolved || !entry || entry.g < 10) return null
+  return {
+    winRate: (100 * entry.w) / entry.g,
+    games: entry.g,
+    bucketLabel: resolved.bucket.label,
+  }
+}
+
 function PlayerCard({
   player,
   keyToId,
   accent,
+  stats,
 }: {
   player: LoadingPlayer
   keyToId: Map<number, string>
   accent: string
+  stats: RankedStatsData | null
 }) {
   const champId = keyToId.get(player.championId)
+  const champWr = champWinRate(stats, champId, player.rank?.tier ?? null)
   const ring = player.isSelf
     ? 'ring-orange-400'
     : player.rank
@@ -128,10 +152,41 @@ function PlayerCard({
             </span>
           )}
         </div>
+        {champWr && (
+          <span
+            title={`${champWr.winRate.toFixed(1)}% win rate on this champion in ${champWr.bucketLabel} (${champWr.games} games)`}
+            className={`font-mono text-[10px] leading-none tabular-nums ${
+              champWr.winRate >= 52
+                ? 'text-emerald-400'
+                : champWr.winRate < 48
+                  ? 'text-rose-400'
+                  : 'text-zinc-400'
+            }`}
+          >
+            {Math.round(champWr.winRate)}% champ
+          </span>
+        )}
       </div>
     </div>
   )
 }
+
+// Placeholder frame for an unfilled slot (practice tool, custom games, bots the
+// LCU doesn't report) — keeps the 5-across layout so real players stay in the
+// slot they'd occupy on League's own loading screen.
+function EmptySlot() {
+  return (
+    <div className="flex w-full min-w-0 flex-col items-stretch opacity-40">
+      <div
+        className="w-full rounded-md border border-dashed border-zinc-700 bg-zinc-900/40"
+        style={{ aspectRatio: '3 / 4' }}
+      />
+      <div className="mt-1 text-center text-[10px] leading-none text-zinc-600">—</div>
+    </div>
+  )
+}
+
+const TEAM_SIZE = 5
 
 function TeamRow({
   label,
@@ -139,21 +194,39 @@ function TeamRow({
   accent,
   players,
   keyToId,
+  stats,
 }: {
   label: string
   labelClass: string
   accent: string
   players: LoadingPlayer[]
   keyToId: Map<number, string>
+  stats: RankedStatsData | null
 }) {
+  // Always render a full row of equal-width slots. A partial lobby (Practice
+  // Tool, customs) pads with placeholders instead of letting one portrait
+  // stretch across the whole panel.
+  const slots = Math.max(TEAM_SIZE, players.length)
   return (
     <div className="px-3 py-2.5">
       <div className={`pb-1.5 text-[10px] font-semibold uppercase tracking-wider ${labelClass}`}>
         {label}
       </div>
-      <div className="flex items-start gap-2">
+      <div
+        className="grid items-start gap-2"
+        style={{ gridTemplateColumns: `repeat(${slots}, minmax(0, 1fr))` }}
+      >
         {players.map((p, i) => (
-          <PlayerCard key={`${p.name}-${i}`} player={p} keyToId={keyToId} accent={accent} />
+          <PlayerCard
+            key={`${p.name}-${i}`}
+            player={p}
+            keyToId={keyToId}
+            accent={accent}
+            stats={stats}
+          />
+        ))}
+        {Array.from({ length: slots - players.length }).map((_, i) => (
+          <EmptySlot key={`empty-${i}`} />
         ))}
       </div>
     </div>
@@ -174,6 +247,8 @@ export function LoadingScreenPanel({
     for (const c of champions) map.set(Number(c.key), c.id)
     return map
   }, [champions])
+  // Per-elo champion stats for the "% champ" win-rate line (lazy chunk).
+  const rankedStats = useRankedStats()
 
   return (
     <div className="flex h-screen w-screen items-center justify-center p-4">
@@ -195,6 +270,7 @@ export function LoadingScreenPanel({
             accent="bg-sky-500"
             players={data.myTeam ?? []}
             keyToId={keyToId}
+            stats={rankedStats}
           />
           <TeamRow
             label="Enemy Team"
@@ -202,6 +278,7 @@ export function LoadingScreenPanel({
             accent="bg-red-500"
             players={data.enemyTeam ?? []}
             keyToId={keyToId}
+            stats={rankedStats}
           />
         </div>
         {data.windowMode === 0 && (

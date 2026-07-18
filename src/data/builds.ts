@@ -327,7 +327,15 @@ export function findBuild(
   // current-patch data + comp-conditioned situationals) supersedes a seed;
   // below the confidence bar the seed's hand-tuned situationals win.
   const aggregated = findAggregatedBuild(championId, role, mode)
-  if (aggregated && (aggregated.sampleSize ?? 0) >= PREFER_AGGREGATED_SAMPLE) return aggregated
+  // A high-sample aggregated build supersedes a seed only when it's an actual
+  // build path — an aggregation that fell apart into 1–2 core items reads as
+  // broken next to a hand-tuned six-slot seed, however many games back it.
+  if (
+    aggregated &&
+    (aggregated.sampleSize ?? 0) >= PREFER_AGGREGATED_SAMPLE &&
+    aggregated.coreItems.length >= 3
+  )
+    return aggregated
 
   const inMode = BUILD_PATHS.filter(
     (b) => b.championId === championId && b.mode === mode,

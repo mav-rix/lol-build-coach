@@ -355,9 +355,14 @@ function aggregateCore(group) {
         bestN = n
         best = id
       }
-    // A real slot must be common within the consistent pool, not a stray buy —
-    // but stay permissive so small samples still get a build.
-    if (best === null || bestN < Math.max(2, pool.length * 0.15)) break
+    // Only the first slot demands real consensus (it anchors the route and a
+    // stray buy there would poison the conditioning). Later slots naturally
+    // diversify — games end before 4th/5th items, supports finish two
+    // legendaries — and a percentage floor there starved champions down to 1–2
+    // item "builds". Every remaining slot takes the best signal available
+    // (players expect a full 5-item path + boots), never below 2 observations.
+    const floor = chosen.length === 0 ? Math.max(2, pool.length * 0.15) : 2
+    if (best === null || bestN < floor) break
     chosen.push(best)
     // Ban alternatives to the pick: items popular in the group overall but
     // rarely built ALONGSIDE it (e.g. Mortal Reminder once Lord Dominik's is
@@ -472,9 +477,12 @@ const MIN_COND_SAMPLE = 6 // games with the condition active, for signal
 const SIT_MIN_RATE = 0.25 // conditional pick rate floor
 const SIT_MIN_LIFT = 0.12 // conditional minus baseline pick rate
 
+const GENERAL_MIN_SAMPLE = 10 // group size needed for popular-alternative reads
+const GENERAL_MIN_RATE = 0.1 // baseline pick rate floor for a general alternative
+const MAX_SITUATIONALS = 6
+
 function aggregateSituationals(group, items, coreIds) {
   const n = group.length
-  if (n < MIN_SITUATIONAL_SAMPLE) return []
   const core = new Set(coreIds)
 
   // Candidate items: any legendary someone bought that isn't already core.
@@ -483,30 +491,54 @@ function aggregateSituationals(group, items, coreIds) {
     for (const id of new Set(o.core)) if (!core.has(id)) totals.set(id, (totals.get(id) ?? 0) + 1)
 
   const found = []
-  for (const [itemId, total] of totals) {
-    if (total < MIN_ITEM_COUNT) continue
-    const baseline = total / n
-    let best = null
-    for (const cond of SIT_CONDITIONS) {
-      const withCond = group.filter((o) => o.enemyConditions.includes(cond))
-      if (withCond.length < MIN_COND_SAMPLE) continue
-      const rate = withCond.filter((o) => o.core.includes(itemId)).length / withCond.length
-      const lift = rate - baseline
-      if (rate >= SIT_MIN_RATE && lift >= SIT_MIN_LIFT && (!best || lift > best.lift)) {
-        best = { cond, rate, lift }
+  if (n >= MIN_SITUATIONAL_SAMPLE) {
+    for (const [itemId, total] of totals) {
+      if (total < MIN_ITEM_COUNT) continue
+      const baseline = total / n
+      let best = null
+      for (const cond of SIT_CONDITIONS) {
+        const withCond = group.filter((o) => o.enemyConditions.includes(cond))
+        if (withCond.length < MIN_COND_SAMPLE) continue
+        const rate = withCond.filter((o) => o.core.includes(itemId)).length / withCond.length
+        const lift = rate - baseline
+        if (rate >= SIT_MIN_RATE && lift >= SIT_MIN_LIFT && (!best || lift > best.lift)) {
+          best = { cond, rate, lift }
+        }
       }
+      if (best) found.push({ itemId, ...best, baseline })
     }
-    if (best) found.push({ itemId, ...best, baseline })
+    found.sort((a, b) => b.lift - a.lift)
   }
 
-  found.sort((a, b) => b.lift - a.lift)
-  return found.slice(0, 6).map((f) => ({
+  const name = (id) => items[String(id)]?.name ?? `Item ${id}`
+  const out = found.slice(0, MAX_SITUATIONALS).map((f) => ({
     itemId: f.itemId,
     condition: f.cond,
-    description: `${items[String(f.itemId)]?.name ?? `Item ${f.itemId}`} — ${CONDITION_LABEL[f.cond]} (${Math.round(
+    description: `${name(f.itemId)} — ${CONDITION_LABEL[f.cond]} (${Math.round(
       f.rate * 100,
     )}% pick vs ${Math.round(f.baseline * 100)}% baseline)`,
   }))
+
+  // Pad with popular general-purpose alternatives so the live recommender and
+  // the build page always have flex options beyond the core path (most groups
+  // used to emit zero situationals, which left late-game recs empty).
+  if (n >= GENERAL_MIN_SAMPLE) {
+    const taken = new Set(out.map((s) => s.itemId))
+    const general = [...totals.entries()]
+      .filter(([id, total]) => !taken.has(id) && total / n >= GENERAL_MIN_RATE && total >= 2)
+      .sort((a, b) => b[1] - a[1])
+    for (const [itemId, total] of general) {
+      if (out.length >= MAX_SITUATIONALS) break
+      out.push({
+        itemId,
+        condition: 'general',
+        description: `${name(itemId)} — popular alternative (built in ${Math.round(
+          (100 * total) / n,
+        )}% of games)`,
+      })
+    }
+  }
+  return out
 }
 
 // Pick the single most common full rune page / skill plan that a real player
@@ -536,6 +568,18 @@ export function toBuildPath(group, items) {
   const skillRep = modalBy(group, (o) => `${o.maxOrder}|${o.start}`)
   const wins = group.filter((o) => o.win).length
   const coreItems = aggregateCore(group)
+  // Per-item pick/win rates across the cluster — surfaced in the UI the way
+  // stat sites annotate each slot, and honest about how confident each pick is.
+  const coreItemStats = {}
+  for (const id of coreItems) {
+    const withItem = group.filter((o) => o.core.includes(id))
+    if (withItem.length === 0) continue
+    coreItemStats[id] = {
+      games: withItem.length,
+      pickRate: Math.round((100 * withItem.length) / group.length),
+      winRate: Math.round((100 * withItem.filter((o) => o.win).length) / withItem.length),
+    }
+  }
   return {
     id: idSeq++,
     championId: group[0].championId,
@@ -544,6 +588,7 @@ export function toBuildPath(group, items) {
     patch: modal(group.map((o) => o.patch)),
     starterItems: aggregateStarters(group),
     coreItems,
+    coreItemStats,
     situationalItems: aggregateSituationals(group, items, coreItems),
     bootsOptions: topN(group.map((o) => o.boots), 2),
     ...perkRep.perks,
