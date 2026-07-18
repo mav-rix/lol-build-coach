@@ -79,25 +79,48 @@ export function BuildPathDisplay({
         )}
       </Section>
 
-      <Section title="Core Build">
-        <ol className="relative space-y-4 border-l border-zinc-700 pl-6">
+      <Section title="Core Build Path">
+        <ol className="flex flex-wrap items-stretch gap-y-3">
           {build.coreItems.map((id, i) => {
             const item = items[String(id)]
+            const stats = build.coreItemStats?.[id]
             return (
-              <li key={id} className="relative">
-                <span className="absolute -left-[31px] top-3 flex h-5 w-5 items-center justify-center rounded-full bg-sky-600 text-[10px] font-bold text-white">
-                  {i + 1}
-                </span>
-                <div className="flex items-center gap-3">
-                  <ItemIcon itemId={id} patch={patch} items={items} />
-                  <div>
-                    <div className="font-medium text-zinc-100">
-                      {item?.name ?? `Item ${id}`}
-                    </div>
-                    {item && (
-                      <div className="text-sm text-amber-400">{item.gold.total}g</div>
-                    )}
+              <li key={id} className="flex items-center">
+                {i > 0 && (
+                  <span aria-hidden className="mx-1.5 self-center text-lg text-zinc-600">
+                    →
+                  </span>
+                )}
+                <div className="relative flex w-[92px] flex-col items-center gap-1 rounded-lg border border-zinc-800 bg-zinc-900/60 px-2 pb-2 pt-3 text-center">
+                  <span className="absolute -left-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-sky-600 text-[10px] font-bold text-white">
+                    {i + 1}
+                  </span>
+                  <ItemIcon itemId={id} patch={patch} items={items} size={44} />
+                  <div className="w-full truncate text-xs font-medium text-zinc-200">
+                    {item?.name ?? `Item ${id}`}
                   </div>
+                  <div className="text-[11px] text-amber-400">
+                    {item ? `${item.gold.total}g` : ''}
+                  </div>
+                  {stats && (
+                    <div
+                      className="text-[10px] leading-tight text-zinc-500"
+                      title={`Built in ${stats.pickRate}% of games (${stats.games} games)`}
+                    >
+                      <span
+                        className={
+                          stats.winRate >= 52
+                            ? 'text-emerald-400'
+                            : stats.winRate < 48
+                              ? 'text-rose-400'
+                              : 'text-zinc-400'
+                        }
+                      >
+                        {stats.winRate}% WR
+                      </span>{' '}
+                      · {stats.pickRate}% pick
+                    </div>
+                  )}
                 </div>
               </li>
             )
@@ -167,8 +190,10 @@ export function BuildPathDisplay({
       {build.winRate !== undefined && (
         <p className="text-xs text-zinc-500">
           {build.winRate}% win rate
-          {build.sampleSize && ` · ${build.sampleSize.toLocaleString()} games`} · seeded
-          build data
+          {build.sampleSize && ` · ${build.sampleSize.toLocaleString()} games`} ·{' '}
+          {build.patch === 'seed'
+            ? 'hand-tuned seed build'
+            : `high-elo data from patch ${build.patch}`}
         </p>
       )}
     </div>

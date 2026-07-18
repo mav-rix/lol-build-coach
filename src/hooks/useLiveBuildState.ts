@@ -49,30 +49,61 @@ function buildPlan(build: BuildPath): PlanItem[] {
 }
 
 // Build Next simply walks the plan: the next unowned items, with
-// affordability — no mid-game path churn.
+// affordability — no mid-game path churn. Once the core path runs dry (short
+// aggregated builds, or late game with most slots filled), the remaining slots
+// come from the build's situational pool — comp-active swaps first, then
+// popular alternatives — so the list always offers a full inventory's worth.
 function recommendationsFromPlan(
   plan: GamePlan,
+  build: BuildPath | null,
   ownedIds: Set<number>,
   gold: number,
   items: Record<string, DDragonItem>,
 ): BuildRec[] {
   const recs: BuildRec[] = []
-  for (const p of plan.items) {
-    if (p.label === 'starter' || ownedIds.has(p.itemId)) continue
-    const item = items[String(p.itemId)]
-    if (!item) continue
+  const push = (
+    itemId: number,
+    priority: BuildRec['priority'],
+    reason: string,
+    source: BuildRec['source'],
+  ) => {
+    if (ownedIds.has(itemId) || recs.some((r) => r.itemId === itemId)) return
+    const item = items[String(itemId)]
+    if (!item) return
     const cost = item.gold.total
     recs.push({
-      itemId: p.itemId,
+      itemId,
       name: item.name,
       cost,
-      priority: recs.length === 0 ? 'recommended' : 'planned',
-      reason: 'Next in your build path',
+      priority,
+      reason,
       affordable: gold >= cost,
       goldNeeded: Math.max(0, Math.ceil(cost - gold)),
-      source: 'core',
+      source,
     })
+  }
+
+  for (const p of plan.items) {
+    if (p.label === 'starter') continue
+    push(
+      p.itemId,
+      recs.length === 0 ? 'recommended' : 'planned',
+      'Next in your build path',
+      'core',
+    )
     if (recs.length >= 6) break
+  }
+
+  if (build && recs.length < 6) {
+    const isActive = (s: BuildPath['situationalItems'][number]) =>
+      s.condition !== 'general' && plan.activeConditions.has(s.condition)
+    const sits = [...build.situationalItems].sort(
+      (a, b) => Number(isActive(b)) - Number(isActive(a)),
+    )
+    for (const s of sits) {
+      if (recs.length >= 6) break
+      push(s.itemId, isActive(s) ? 'urgent' : 'planned', s.description, 'situational')
+    }
   }
   return recs
 }
@@ -210,7 +241,7 @@ export function useLiveBuildState() {
   const usingScoredBuild = !build && champion !== null
   const recommendations = useMemo(() => {
     if (gamePlan) {
-      const recs = recommendationsFromPlan(gamePlan, ownedIds, gold, items)
+      const recs = recommendationsFromPlan(gamePlan, build, ownedIds, gold, items)
       // Mandatory role starts (ranked SR) lead the list until bought:
       // the jungle companion — highest win-rate pick from the data on the WR
       // plan, comp-driven on the vs-comp plan — and the support quest final

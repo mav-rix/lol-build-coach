@@ -14,6 +14,8 @@ export interface BuildPath {
   patch: string
   starterItems: number[]
   coreItems: number[] // ordered — buy in sequence
+  // Per-core-item stats from the aggregator (absent on hand-authored seeds).
+  coreItemStats?: Record<number, { games: number; pickRate: number; winRate: number }>
   situationalItems: SituationalItem[]
   bootsOptions: number[]
   primaryPathId: number
