@@ -1,6 +1,7 @@
 import { BrowserRouter, NavLink, Outlet, Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { UpdateModal } from '@/components/UpdateModal'
+import { useAutoOpenBuild } from '@/hooks/useAutoOpenBuild'
 import patch from '@/data/patch.json'
 import Augments from '@/pages/Augments'
 import Home from '@/pages/Home'
@@ -22,6 +23,8 @@ const NAV = [
 ]
 
 function Layout() {
+  // Jump to /build when champ select begins.
+  useAutoOpenBuild()
   return (
     <div className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100">
       <UpdateModal />

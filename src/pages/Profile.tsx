@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { CheckForUpdatesButton } from '@/components/CheckForUpdatesButton'
 import { useProfile, type ProfileGame } from '@/hooks/useProfile'
 import { useStaticData } from '@/hooks/useStaticData'
+import { useAppStore } from '@/store/useAppStore'
 import { championIconUrl, profileIconUrl } from '@/services/ddragon'
 import type { DDragonChampion } from '@/types/ddragon'
 
@@ -31,6 +32,35 @@ const TIER_COLOR: Record<string, string> = {
   MASTER: 'text-fuchsia-300',
   GRANDMASTER: 'text-red-300',
   CHALLENGER: 'text-yellow-200',
+}
+
+function AutoOpenBuildToggle() {
+  const enabled = useAppStore((s) => s.autoOpenBuild)
+  const setEnabled = useAppStore((s) => s.setAutoOpenBuild)
+  return (
+    <label className="mt-3 flex cursor-pointer items-start gap-2.5 rounded-lg border border-zinc-800 bg-zinc-900/40 px-3 py-2.5">
+      <button
+        type="button"
+        role="switch"
+        aria-checked={enabled}
+        onClick={() => setEnabled(!enabled)}
+        className={`relative mt-0.5 h-4 w-7 shrink-0 rounded-full transition-colors ${
+          enabled ? 'bg-sky-600' : 'bg-zinc-700'
+        }`}
+      >
+        <span
+          className={`absolute top-0.5 h-3 w-3 rounded-full bg-white transition-all ${
+            enabled ? 'left-3.5' : 'left-0.5'
+          }`}
+        />
+      </button>
+      <span className="text-xs leading-tight text-zinc-400">
+        <span className="font-medium text-zinc-200">Auto-open build</span>
+        <br />
+        Jump to the build page when champ select starts.
+      </span>
+    </label>
+  )
 }
 
 const titleCase = (s: string) => (s ? s[0] + s.slice(1).toLowerCase() : s)
@@ -151,6 +181,7 @@ export default function Profile() {
   const sidebar = (
     <aside className="shrink-0">
       <CheckForUpdatesButton />
+      <AutoOpenBuildToggle />
     </aside>
   )
 
