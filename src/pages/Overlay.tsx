@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { BuildNext } from '@/components/BuildNext'
 import { EnemyThreats } from '@/components/EnemyThreats'
@@ -10,9 +10,7 @@ import { formatClock } from '@/lib/analysis'
 import {
   augmentBadgeFor,
   loadAugmentData,
-  topAugmentsFor,
   visionManifest,
-  type AugmentGoal,
   type VisionTemplate,
 } from '@/lib/augments'
 import { starterOwned } from '@/lib/gameplan'
@@ -147,38 +145,6 @@ function useHoverExpand(gripHover: boolean, dwellMs = 400, lingerMs = 1200): boo
   return expanded
 }
 
-// ARAM Mayhem augment offers unlock at game start and at champion levels 7, 11
-// and 15 (the pick screen then appears on your next death). The Live Client
-// API exposes neither the offer nor the picks — but it does expose your level,
-// so for a window after each unlock the strip signals "augments ready" (and an
-// expanded card leads with the goals). It only SIGNALS — auto-expanding the
-// card mid-fight proved too distracting; the player hovers when ready,
-// typically while dead with the pick screen up.
-const AUGMENT_OFFER_LEVELS = [7, 11, 15]
-const AUGMENT_OFFER_WINDOW_MS = 75_000
-function useAugmentOffer(enabled: boolean, gameTime: number, level: number): boolean {
-  const [active, setActive] = useState(false)
-  const prevLevel = useRef(0)
-  const timer = useRef<number | null>(null)
-  useEffect(() => {
-    if (!enabled) return
-    const crossed = AUGMENT_OFFER_LEVELS.some((l) => prevLevel.current < l && level >= l)
-    prevLevel.current = Math.max(prevLevel.current, level)
-    if (!crossed) return
-    setActive(true)
-    if (timer.current) window.clearTimeout(timer.current)
-    timer.current = window.setTimeout(() => setActive(false), AUGMENT_OFFER_WINDOW_MS)
-  }, [enabled, level])
-  useEffect(
-    () => () => {
-      if (timer.current) window.clearTimeout(timer.current)
-    },
-    [],
-  )
-  // First offer: right at spawn, before any level-up can trigger.
-  return enabled && (active || (gameTime > 0 && gameTime < 60))
-}
-
 // Grab grip — press-and-hold left mouse here to move the overlay.
 function DragGrip({ className = '' }: { className?: string }) {
   return (
@@ -192,25 +158,6 @@ function DragGrip({ className = '' }: { className?: string }) {
       <span className="h-[3px] w-[3px] rounded-full bg-zinc-600" />
     </div>
   )
-}
-
-// Highest win-rate augments for this champion (ARAM Mayhem). The API doesn't
-// expose the live augment offer, so these are GOALS: when the pick screen
-// appears, take one of these — otherwise reroll. Lazy-loads the augment data
-// only in augmented modes.
-function useAugmentGoals(championId: string | null, enabled: boolean): AugmentGoal[] {
-  const [goals, setGoals] = useState<AugmentGoal[]>([])
-  useEffect(() => {
-    if (!enabled || !championId) return
-    let active = true
-    loadAugmentData().then(() => {
-      if (active) setGoals(topAugmentsFor(championId, 5))
-    })
-    return () => {
-      active = false
-    }
-  }, [championId, enabled])
-  return enabled ? goals : []
 }
 
 // Screen-capture augment identification (packaged app only): while an offer
@@ -346,57 +293,6 @@ function AugmentBadges({ payload, championId }: { payload: VisionPayload; champi
   )
 }
 
-// Rarity as a ring around the icon plus a tinted name, so each goal can be
-// matched against the in-game pick screen by name at a glance.
-const RARITY_RING: Record<string, string> = {
-  prismatic: 'ring-violet-400/80',
-  gold: 'ring-amber-400/80',
-  silver: 'ring-zinc-400/70',
-}
-
-const RARITY_TEXT: Record<string, string> = {
-  prismatic: 'text-violet-300',
-  gold: 'text-amber-300',
-  silver: 'text-zinc-300',
-}
-
-// One row per goal: icon + name + avg placement. The description stays in the
-// tooltip; the name is what you match against the augment offer in game.
-function AugmentGoals({ goals }: { goals: AugmentGoal[] }) {
-  return (
-    <div className="flex flex-col gap-1">
-      {goals.map((g) => (
-        <div
-          key={g.id}
-          title={`${g.meta.name} · ${g.avgPlacement.toFixed(1)} avg placement${
-            g.pickRate != null ? ` · picked by ${g.pickRate}% of players` : ''
-          } · ${g.firstRate}% won lobby — ${g.meta.desc}`}
-          className={`flex items-center gap-1.5 ${g.source === 'champion' ? '' : 'opacity-60'}`}
-        >
-          <div className={`shrink-0 rounded ring-1 ${RARITY_RING[g.meta.rarity] ?? 'ring-zinc-600'}`}>
-            <img src={g.meta.icon} alt="" className="h-[22px] w-[22px] rounded bg-zinc-900" />
-          </div>
-          <span
-            className={`min-w-0 flex-1 truncate text-xs font-medium ${
-              RARITY_TEXT[g.meta.rarity] ?? 'text-zinc-200'
-            }`}
-          >
-            {g.meta.name}
-          </span>
-          {g.pickRate != null && (
-            <span className="shrink-0 font-mono text-[11px] tabular-nums text-zinc-300">
-              {g.pickRate}%
-            </span>
-          )}
-          <span className="shrink-0 font-mono text-[10px] tabular-nums text-zinc-500">
-            {g.avgPlacement.toFixed(1)} avg
-          </span>
-        </div>
-      ))}
-    </div>
-  )
-}
-
 function Section({
   label,
   children,
@@ -443,8 +339,6 @@ export default function Overlay() {
   // the primary overlay window, which knows the offer/death state.
   const badgesOnly = new URLSearchParams(window.location.search).has('badges')
 
-  const augmentGoals = useAugmentGoals(championId, augmentMode)
-
   // Loading screen: centered scouting report instead of the transparent side
   // card. Main resizes/centers the window (and forces it visible) while active.
   // The Live Client API already responds while the loading screen is still up,
@@ -465,7 +359,6 @@ export default function Overlay() {
 
   const gripHover = useOverlayDrag()
   const hoverExpanded = useHoverExpand(gripHover)
-  const augmentOffer = useAugmentOffer(augmentMode, gameTime, live?.activePlayer.level ?? 0)
   // Armed for the entire Mayhem game: the pick screen can appear at ANY death
   // after an unlock (or via the AUGMENTS button whenever a pick is banked), so
   // windowed arming kept missing it. Probes are cheap half-res captures — the
@@ -553,11 +446,6 @@ export default function Overlay() {
           <span className="h-[3px] w-[3px] rounded-full bg-zinc-600" />
           <span className="h-[3px] w-[3px] rounded-full bg-zinc-600" />
         </span>
-        {augmentOffer && (
-          <span className="animate-pulse rounded bg-violet-500/20 px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-violet-300 ring-1 ring-violet-400/40">
-            augments
-          </span>
-        )}
         {upcoming.map((p) => (
           <div
             key={`${p.label}-${p.itemId}`}
@@ -608,26 +496,9 @@ export default function Overlay() {
         </div>
       </div>
 
-      {/* During an offer window the augment goals lead the card and glow —
-          that's the decision the player is about to make. */}
-      {augmentOffer && augmentGoals.length > 0 && (
-        <Section
-          label="Augment offer — pick one of these or reroll"
-          className="bg-violet-500/10 ring-1 ring-inset ring-violet-400/40"
-        >
-          <AugmentGoals goals={augmentGoals} />
-        </Section>
-      )}
-
       {recommendations.length > 0 && (
         <Section label="Build Next">
           <BuildNext compact recommendations={recommendations} patch={patch} items={items} />
-        </Section>
-      )}
-
-      {!augmentOffer && augmentMode && augmentGoals.length > 0 && (
-        <Section label="Augment Goals · pick or reroll">
-          <AugmentGoals goals={augmentGoals} />
         </Section>
       )}
 
