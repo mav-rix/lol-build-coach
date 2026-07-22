@@ -1,7 +1,7 @@
 {
   "name": "lol-build-coach-app",
   "productName": "LoL Build Coach",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "description": "Build recommendations, live game overlay, and augment tier lists for League of Legends. Read-only companion — never touches the game process.",
   "author": "Eric Tameilau",
@@ -23,12 +23,17 @@
       "server.js",
       "preload.js",
       "app-preload.js",
+      "augment-vision.js",
+      "ocr-worker.js",
       "icon.ico",
+      "eng.traineddata.gz",
       "dist/**",
       "node_modules/**"
     ],
     "asarUnpack": [
-      "node_modules/uiohook-napi/**"
+      "node_modules/**",
+      "ocr-worker.js",
+      "eng.traineddata.gz"
     ],
     "win": {
       "icon": "icon.ico",
@@ -50,7 +55,8 @@
     "electronVersion": "43.1.0"
   },
   "dependencies": {
-    "uiohook-napi": "^1.5.4",
-    "electron-updater": "^6.3.9"
+    "electron-updater": "^6.3.9",
+    "pngjs": "^7.0.0",
+    "tesseract.js": "^7.0.0"
   }
 }

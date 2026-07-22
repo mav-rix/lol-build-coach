@@ -12,6 +12,7 @@
     "aggregate:ranked": "node scripts/aggregate-ranked-stats.mjs",
     "augments:meta": "node scripts/fetch-augments.mjs",
     "aggregate:augments": "node scripts/aggregate-augments.mjs",
+    "mayhem:stats": "node scripts/fetch-mayhem-stats.mjs",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
@@ -34,6 +35,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "oxlint": "^1.71.0",
+    "pngjs": "^7.0.0",
     "typescript": "~6.0.2",
     "vite": "^8.1.1"
   }

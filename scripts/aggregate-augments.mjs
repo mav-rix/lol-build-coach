@@ -157,6 +157,10 @@ async function main() {
   // overlay's champion-specific goal list. Placement is 1-8 (8 duo teams).
   const tally = new Map()
   const champTally = new Map() // "champ|augId" -> {games, placementSum, firsts}
+  // Denominators for pick rate ("most used"): total players seen, and per-champ
+  // appearance counts — an augment's games ÷ these = % of players who took it.
+  let totalPlayers = 0
+  const champGames = new Map() // champ -> appearances
   let done = 0
   let usedMatches = 0
   for (const id of ids) {
@@ -167,6 +171,8 @@ async function main() {
       const placement = p.subteamPlacement || p.placement
       if (!placement) continue
       const champ = champByLower[p.championName?.toLowerCase()] ?? p.championName
+      totalPlayers++
+      champGames.set(champ, (champGames.get(champ) ?? 0) + 1)
       const augs = [p.playerAugment1, p.playerAugment2, p.playerAugment3, p.playerAugment4, p.playerAugment5, p.playerAugment6]
       for (const a of augs) {
         if (!a) continue
@@ -193,6 +199,7 @@ async function main() {
       games: t.games,
       avgPlacement: Math.round((t.placementSum / t.games) * 100) / 100,
       firstRate: Math.round((1000 * t.firsts) / t.games) / 10,
+      pickRate: totalPlayers ? Math.round((1000 * t.games) / totalPlayers) / 10 : undefined,
     }))
     .sort((a, b) => a.avgPlacement - b.avgPlacement)
 
@@ -238,11 +245,13 @@ async function main() {
     const [champ, augIdStr] = key.split('|')
     const augId = Number(augIdStr)
     if (t.games < CHAMP_MIN_GAMES || (metaIds && !metaIds.has(augId))) continue
+    const cg = champGames.get(champ) ?? 0
     ;(byChamp[champ] ??= []).push({
       id: augId,
       games: t.games,
       avgPlacement: Math.round((t.placementSum / t.games) * 100) / 100,
       firstRate: Math.round((1000 * t.firsts) / t.games) / 10,
+      pickRate: cg ? Math.round((1000 * t.games) / cg) / 10 : undefined,
       _shrunk: (t.placementSum + SHRINK_K * MEAN_PLACEMENT) / (t.games + SHRINK_K),
     })
   }

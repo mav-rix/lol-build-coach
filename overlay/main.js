@@ -7,18 +7,15 @@
 // Moving it: press-and-hold the left mouse on the grip at the top of the card
 // and drag — the window follows and its position is remembered. The grip is
 // grabbable any time; the rest of the overlay stays click-through so it never
-// blocks the game (or the Tab scoreboard).
+// blocks the game.
 //
-// Visibility: by default the overlay only appears while Tab is held — the same
-// gesture as the scoreboard, so both show together. This uses a PASSIVE global
-// key listener (uiohook-napi) that observes Tab without consuming it; the game
-// still gets the key. OVERLAY_TAB=toggle makes Tab flip it on/off instead;
-// OVERLAY_TAB=off reverts to always-visible (also the automatic fallback if the
-// native listener isn't installed).
+// Visibility: always visible in-game. The renderer collapses the card to a
+// slim strip and expands it on grip hover, so the window itself never needs to
+// hide/show around gameplay.
 //
 // Hotkeys:
 //   Ctrl+Shift+O — pin interactive mode (click/scroll the whole overlay)
-//   Ctrl+Shift+H — pin visible (overrides Tab mode); press again to unpin
+//   Ctrl+Shift+H — hide/show the overlay window
 //   Ctrl+Shift+Q — quit
 
 const { app, BrowserWindow, globalShortcut, screen, ipcMain } = require('electron')
@@ -31,29 +28,24 @@ const RETRY_MS = 2000
 let win = null
 let pinned = false // Ctrl+Shift+O — whole overlay interactive
 let hover = false // pointer is over the drag grip
+let handleRects = [] // renderer-reported [data-drag-handle] rects (window-relative CSS px)
 let dragOrigin = null // window [x,y] captured at drag start
 let reloadTimer = null
-
-// --- Tab-summoned visibility -------------------------------------------------
-const TAB_MODE = (process.env.OVERLAY_TAB ?? 'hold').toLowerCase() // hold | toggle | off
-let tabVisible = false // Tab currently held (hold) or toggled on (toggle)
-let pinnedVisible = false // Ctrl+Shift+H — force-visible regardless of Tab
-let tabModeActive = false // true once the key listener is actually running
 
 let loadingLayout = false // renderer-reported: League loading screen is up
 let preLoadingBounds = null // bounds to restore after the loading screen
 
+// The window is always shown; this re-shows it if something hid it (e.g. the
+// loading screen appearing after a Ctrl+Shift+H hide).
 function applyVisibility() {
   if (!win || win.isDestroyed()) return
-  // The loading-screen panel is always shown — Tab only governs the in-game card.
-  const visible = !tabModeActive || pinnedVisible || tabVisible || loadingLayout
-  if (visible && !win.isVisible()) {
+  if (!win.isVisible()) {
     win.showInactive() // never steal game focus
     // Re-assert topmost on every show — the periodic re-assert only runs
     // while visible, so a game may have re-grabbed z-order in between.
     win.setAlwaysOnTop(true, 'screen-saver', 1)
     win.moveTop()
-  } else if (!visible && win.isVisible()) win.hide()
+  }
 }
 
 // Loading screen: swap the overlay from its side-card bounds to a large
@@ -82,39 +74,6 @@ function applyLoadingLayout(active) {
   applyVisibility()
 }
 
-// Passive global key listener — observes Tab without consuming it (a normal
-// globalShortcut would steal Tab from the game's scoreboard). Optional native
-// dep; when missing, the overlay just stays always-visible.
-function startTabListener() {
-  if (TAB_MODE === 'off') return
-  let uio
-  try {
-    uio = require('uiohook-napi')
-  } catch {
-    console.warn('[overlay] uiohook-napi not installed — Tab mode off, overlay stays visible.')
-    console.warn('[overlay] install it next to main.js:  npm install uiohook-napi')
-    return
-  }
-  const { uIOhook, UiohookKey } = uio
-  uIOhook.on('keydown', (e) => {
-    if (e.keycode !== UiohookKey.Tab) return
-    if (TAB_MODE === 'toggle') tabVisible = !tabVisible
-    else tabVisible = true
-    applyVisibility()
-  })
-  if (TAB_MODE === 'hold') {
-    uIOhook.on('keyup', (e) => {
-      if (e.keycode !== UiohookKey.Tab) return
-      tabVisible = false
-      applyVisibility()
-    })
-  }
-  uIOhook.start()
-  tabModeActive = true
-  applyVisibility() // start hidden until Tab
-  app.on('will-quit', () => uIOhook.stop())
-}
-
 const posFile = () => path.join(app.getPath('userData'), 'overlay-position.json')
 function loadPos() {
   try {
@@ -131,11 +90,33 @@ function savePos() {
   }
 }
 
-// The window is click-through unless it's pinned interactive or the pointer is
-// over the grip. Keeping mouse-move forwarding on lets the renderer detect that
-// hover even while click-through.
+// The window is click-through unless it's pinned interactive, the pointer is
+// over the grip, or a drag is in progress. NEVER pass forward:true here: on
+// Windows it installs a system-wide low-level mouse hook that relays every
+// physical mouse move through this process — in-game it feels like cursor
+// lag/smoothing. Hover is instead detected hook-free: main polls the cursor
+// position against [data-drag-handle] rects the renderer reports.
 function applyIgnore() {
-  if (win && !win.isDestroyed()) win.setIgnoreMouseEvents(!(pinned || hover), { forward: true })
+  if (win && !win.isDestroyed()) win.setIgnoreMouseEvents(!(pinned || hover || dragOrigin))
+}
+
+function setGripHover(h) {
+  if (h === hover) return
+  hover = h
+  applyIgnore()
+  if (win && !win.isDestroyed()) win.webContents.send('overlay:grip-hover', h)
+}
+
+function pollGripHover() {
+  if (!win || win.isDestroyed() || !win.isVisible()) return setGripHover(false)
+  if (dragOrigin) return // stay interactive for the whole drag
+  const p = screen.getCursorScreenPoint()
+  const b = win.getContentBounds()
+  setGripHover(
+    handleRects.some(
+      (r) => p.x >= b.x + r.x && p.x < b.x + r.x + r.w && p.y >= b.y + r.y && p.y < b.y + r.y + r.h,
+    ),
+  )
 }
 
 // Keep retrying the load until the dev server answers. Without this, a load that
@@ -201,13 +182,12 @@ function createWindow() {
 
 app.whenReady().then(() => {
   createWindow()
-  startTabListener()
 
   // Drag bridge (see overlay/preload.js).
-  ipcMain.on('overlay:hover', (_e, h) => {
-    hover = Boolean(h)
-    applyIgnore()
+  ipcMain.on('overlay:handles', (_e, rects) => {
+    handleRects = Array.isArray(rects) ? rects : []
   })
+  setInterval(pollGripHover, 150)
   ipcMain.on('overlay:begin-drag', () => {
     dragOrigin = win && !win.isDestroyed() ? win.getPosition() : null
   })
@@ -228,11 +208,7 @@ app.whenReady().then(() => {
     if (pinned && win) win.focus()
   })
   globalShortcut.register('Control+Shift+H', () => {
-    if (tabModeActive) {
-      // Pin visible (ignore Tab) / unpin back to Tab-summoned.
-      pinnedVisible = !pinnedVisible
-      applyVisibility()
-    } else if (win.isVisible()) win.hide()
+    if (win.isVisible()) win.hide()
     else win.show()
   })
   globalShortcut.register('Control+Shift+Q', () => app.quit())

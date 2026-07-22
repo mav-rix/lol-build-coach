@@ -19,6 +19,19 @@ const https = require('node:https')
 const path = require('node:path')
 
 const LOCKFILE = process.env.LOCKFILE ?? 'C:\\Riot Games\\League of Legends\\lockfile'
+
+// Append-only import log so a failed loadout import is diagnosable from the log
+// instead of the (already gone) on-screen button text. Set by startServer to
+// userData/import.log; a no-op until then. Timestamps are UTC.
+let IMPORT_LOG = null
+function logImport(line) {
+  if (!IMPORT_LOG) return
+  try {
+    fs.appendFileSync(IMPORT_LOG, `${new Date().toISOString()} ${line}\n`)
+  } catch {
+    // logging must never break an import
+  }
+}
 const MIME = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
@@ -93,11 +106,11 @@ function lcuRequest(lock, method, apiPath, body) {
           } catch {
             json = null
           }
-          resolve({ status: res.statusCode, json })
+          resolve({ status: res.statusCode, json, text: data })
         })
       },
     )
-    req.on('error', () => resolve({ status: 0, json: null }))
+    req.on('error', () => resolve({ status: 0, json: null, text: '' }))
     req.setTimeout(3000, () => req.destroy())
     req.end(payload ?? undefined)
   })
@@ -352,6 +365,7 @@ async function importRunes(payload) {
   })
   if (created.status !== 200 && created.status !== 201) {
     const detail = created.json?.message
+    logImport(`runes: client rejected status=${created.status} detail=${detail ?? ''}`)
     return {
       status: 502,
       body: {
@@ -362,12 +376,16 @@ async function importRunes(payload) {
       },
     }
   }
+  logImport(`runes: ok "${name}"`)
   return { status: 200, body: { ok: true } }
 }
 
 async function importItemSet(payload) {
   const lock = readLockfile()
-  if (!lock) return { status: 503, body: { ok: false, error: 'League client is not running.' } }
+  if (!lock) {
+    logImport('itemset: no lockfile — League client not running')
+    return { status: 503, body: { ok: false, error: 'League client is not running.' } }
+  }
   const title = typeof payload?.title === 'string' ? payload.title.slice(0, 75) : ''
   const champions = Array.isArray(payload?.associatedChampions)
     ? payload.associatedChampions.filter(Number.isFinite)
@@ -385,20 +403,30 @@ async function importItemSet(payload) {
     }))
     .filter((b) => b.items.length > 0)
   if (!title.startsWith(COACH_PREFIX) || champions.length === 0 || blocks.length === 0) {
+    logImport(
+      `itemset: malformed payload title="${title}" champions=${champions.length} blocks=${blocks.length}`,
+    )
     return { status: 400, body: { ok: false, error: 'Malformed item set payload.' } }
   }
 
   const summoner = (await lcuGet(lock, '/lol-summoner/v1/current-summoner')).json
   if (!summoner?.summonerId) {
+    logImport('itemset: could not resolve current summoner')
     return { status: 502, body: { ok: false, error: 'Could not resolve the current summoner.' } }
   }
   const setsPath = `/lol-item-sets/v1/item-sets/${summoner.summonerId}/sets`
   const existing = (await lcuGet(lock, setsPath)).json
-  // One set per champion+map, replaced on re-import; other sets pass through.
+  const all = Array.isArray(existing?.itemSets) ? existing.itemSets : []
   const uid = `${ITEM_SET_UID_PREFIX}${champions[0]}-${maps[0] ?? 'any'}`
-  const kept = (Array.isArray(existing?.itemSets) ? existing.itemSets : []).filter(
-    (s) => s?.uid !== uid,
-  )
+  const isCoach = (s) => typeof s?.uid === 'string' && s.uid.startsWith(ITEM_SET_UID_PREFIX)
+  // The LCU PUT replaces the WHOLE collection, so we resend every set we keep.
+  // The player's own sets always pass through untouched. Every coach import
+  // OVERWRITES the last one: we drop all previous coach sets and write just the
+  // current champion's. That keeps a single coach set in the client and bounds
+  // the resend — the old accumulate-one-per-champion behaviour grew the payload
+  // until it tripped the client's request-size limit (observed 413 "Content
+  // length is too large" at ~40 sets).
+  const kept = all.filter((s) => !isCoach(s))
   const put = await lcuRequest(lock, 'PUT', setsPath, {
     accountId: existing?.accountId ?? summoner.accountId ?? 0,
     timestamp: Date.now(),
@@ -421,8 +449,15 @@ async function importItemSet(payload) {
     ],
   })
   if (put.status < 200 || put.status >= 300) {
+    const detail = typeof put.text === 'string' ? put.text.slice(0, 300) : ''
+    logImport(
+      `itemset: client rejected PUT status=${put.status} blocks=${blocks.length} champions=${champions.join(',')} maps=${maps.join(',')} detail=${detail}`,
+    )
     return { status: 502, body: { ok: false, error: 'Client rejected the item set.' } }
   }
+  logImport(
+    `itemset: ok "${title}" blocks=${blocks.length} champions=${champions.join(',')} maps=${maps.join(',')}`,
+  )
   return { status: 200, body: { ok: true } }
 }
 
@@ -491,7 +526,8 @@ function serveStatic(distDir, req, res) {
 }
 
 /** Start the embedded server; resolves the base URL (http://127.0.0.1:PORT). */
-function startServer(distDir) {
+function startServer(distDir, logDir) {
+  if (logDir) IMPORT_LOG = path.join(logDir, 'import.log')
   return new Promise((resolve) => {
     const server = http.createServer((req, res) => {
       if (req.url.startsWith('/liveclientdata/')) return proxyLiveClient(req, res)

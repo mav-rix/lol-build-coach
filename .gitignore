@@ -35,3 +35,8 @@ augments-preview.html
 electron/dist
 electron/node_modules
 electron/release
+
+# OCR language data — fetched on demand by scripts/package-win.mjs, not vendored
+electron/eng.traineddata.gz
+# Unused prototype asset
+electron/cardback.png
