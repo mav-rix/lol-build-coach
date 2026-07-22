@@ -28,6 +28,7 @@ let tray = null
 //   { version, state: 'ready', file } → tray/modal offer the restart
 let pendingUpdate = null
 let updaterRef = null // electron-updater's autoUpdater once loaded
+let manualCheckState = null // null | 'checking' | 'uptodate' — transient tray feedback
 
 // Overlay state (mirrors the dev shell).
 let interactivePin = false
@@ -264,7 +265,9 @@ function safeQuit(fn) {
 function refreshTrayMenu() {
   if (!tray) return
   const items = []
-  // The update entry leads the menu whenever one is known about.
+  // The update entry leads the menu whenever one is known about; otherwise a
+  // manual "Check for updates" (with transient checking / up-to-date feedback),
+  // so a fresh release is reachable without waiting for the hourly re-check.
   if (pendingUpdate) {
     const v = pendingUpdate.version
     const entry =
@@ -274,6 +277,12 @@ function refreshTrayMenu() {
           ? { label: `Downloading v${v} — ${pendingUpdate.percent ?? 0}%`, enabled: false }
           : { label: `Restart to update (v${v})`, click: () => installPendingUpdate() }
     items.push(entry, { type: 'separator' })
+  } else if (manualCheckState === 'checking') {
+    items.push({ label: 'Checking for updates…', enabled: false }, { type: 'separator' })
+  } else if (manualCheckState === 'uptodate') {
+    items.push({ label: "You're up to date", enabled: false }, { type: 'separator' })
+  } else if (updaterRef) {
+    items.push({ label: 'Check for updates', click: () => triggerUpdateCheck() }, { type: 'separator' })
   }
   items.push(
     { label: 'Open Build Coach', click: () => (mainWin ? mainWin.focus() : createMainWindow()) },
@@ -291,6 +300,25 @@ function refreshTrayMenu() {
   )
   tray.setContextMenu(Menu.buildFromTemplate(items))
   tray.setToolTip(pendingUpdate ? `LoL Build Coach — update v${pendingUpdate.version} available` : 'LoL Build Coach')
+}
+
+// User-initiated update check from the tray — the app otherwise only checks on
+// launch and hourly, so a release cut mid-session was unreachable without a
+// restart. Feedback (Checking… / You're up to date / Download vX) flows through
+// refreshTrayMenu via manualCheckState + the update-available handler.
+function triggerUpdateCheck() {
+  if (!updaterRef) return
+  if (manualCheckState === 'checking') return
+  manualCheckState = 'checking'
+  refreshTrayMenu()
+  pushCheckStatus('checking')
+  updaterLog('manual check requested')
+  updaterRef.checkForUpdates().catch((e) => {
+    updaterLog(`check failed: ${e}`)
+    manualCheckState = null
+    refreshTrayMenu()
+    pushCheckStatus('error')
+  })
 }
 
 function createTray() {
@@ -356,6 +384,14 @@ function pushUpdateState() {
   }
 }
 
+// Manual-check feedback for the in-app button: 'checking' | 'uptodate' |
+// 'found' | 'error' (see the Check-for-updates control in the app window).
+function pushCheckStatus(status) {
+  if (mainWin && !mainWin.isDestroyed()) {
+    mainWin.webContents.send('app:check-status', status)
+  }
+}
+
 function startUpdateDownload() {
   if (!updaterRef || !pendingUpdate || pendingUpdate.state !== 'available') return
   pendingUpdate = { ...pendingUpdate, state: 'downloading', percent: 0 }
@@ -380,6 +416,10 @@ function startUpdater() {
     return // dev — updater not installed
   }
   updaterRef = autoUpdater
+  // The tray was first built (createTray) before this ran, when updaterRef was
+  // still null — so the "Check for updates" item was skipped. Rebuild now that
+  // the updater exists.
+  refreshTrayMenu()
   // MANUAL update flow: the check runs in the background, but the ~100 MB
   // download only starts when the user clicks. The big win: the tray entry and
   // the in-app popup appear seconds after a check finds a release, instead of
@@ -391,14 +431,29 @@ function startUpdater() {
     // A restart-ready or in-flight download shouldn't regress to 'available'.
     if (pendingUpdate && pendingUpdate.version === version && pendingUpdate.state !== 'available')
       return
+    const wasManual = manualCheckState === 'checking'
     pendingUpdate = { version, state: 'available' }
+    manualCheckState = null
     updaterLog(`update available: v${version}`)
     refreshTrayMenu()
+    if (wasManual) pushCheckStatus('found')
     pushUpdateState()
   })
-  autoUpdater.on('update-not-available', (info) =>
-    updaterLog(`up to date (latest: v${info?.version ?? '?'})`),
-  )
+  autoUpdater.on('update-not-available', (info) => {
+    updaterLog(`up to date (latest: v${info?.version ?? '?'})`)
+    // Only surface the "up to date" chip for a check the user asked for.
+    if (manualCheckState === 'checking') {
+      manualCheckState = 'uptodate'
+      refreshTrayMenu()
+      pushCheckStatus('uptodate')
+      setTimeout(() => {
+        if (manualCheckState === 'uptodate') {
+          manualCheckState = null
+          refreshTrayMenu()
+        }
+      }, 4000)
+    }
+  })
   autoUpdater.on('download-progress', (p) => {
     if (!pendingUpdate || pendingUpdate.state !== 'downloading') return
     const percent = Math.floor(p?.percent ?? 0)
@@ -500,6 +555,7 @@ app.whenReady().then(async () => {
   ipcMain.handle('app:get-pending-update', () => pendingUpdate)
   ipcMain.on('app:download-update', () => startUpdateDownload())
   ipcMain.on('app:install-update', () => installPendingUpdate())
+  ipcMain.on('app:check-updates', () => triggerUpdateCheck())
 
   // Auto-update from GitHub Releases when packaged (no-op in dev, never fatal).
   startUpdater()

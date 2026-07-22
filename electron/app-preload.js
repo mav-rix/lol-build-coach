@@ -18,4 +18,12 @@ contextBridge.exposeInMainWorld('appUpdates', {
   downloadUpdate: () => ipcRenderer.send('app:download-update'),
   /** Quit and install the downloaded update now. */
   installUpdate: () => ipcRenderer.send('app:install-update'),
+  /** Trigger an on-demand update check (button in the app / tray). */
+  checkForUpdates: () => ipcRenderer.send('app:check-updates'),
+  /** Manual-check feedback: 'checking' | 'uptodate' | 'found' | 'error'. */
+  onCheckStatus: (cb) => {
+    const listener = (_e, status) => cb(status)
+    ipcRenderer.on('app:check-status', listener)
+    return () => ipcRenderer.removeListener('app:check-status', listener)
+  },
 })
