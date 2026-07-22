@@ -1,0 +1,740 @@
+[
+ {
+  "key": "x:2103",
+  "name": "From Downtown",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/questbangbang_small.png"
+ },
+ {
+  "key": "x:1103",
+  "name": "Bread And Butter",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:1151",
+  "name": "Bread and Cheese",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:1150",
+  "name": "Bread And Jam",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:1418",
+  "name": "Crack Open That Egg",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/crackopenthategg_small.png"
+ },
+ {
+  "key": "x:1323",
+  "name": "Cruelty",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/cruelty_small.png"
+ },
+ {
+  "key": "x:2099",
+  "name": "Rite of Ascension",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/glasscannon_small.png"
+ },
+ {
+  "key": "x:2010",
+  "name": "Double Tap",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/doubletap_small.png"
+ },
+ {
+  "key": "x:2006",
+  "name": "Dropkick",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/dropkick_small.png"
+ },
+ {
+  "key": "x:2004",
+  "name": "Empowered By The Faithful",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/empoweredbythefaithful_small.png"
+ },
+ {
+  "key": "x:1032",
+  "name": "Executioner",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/spiritualpurification_small.png"
+ },
+ {
+  "key": "x:1322",
+  "name": "Get Excited!",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/getexcited_small.png"
+ },
+ {
+  "key": "x:2107",
+  "name": "Hellbent",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/hellbent_small.png"
+ },
+ {
+  "key": "x:2095",
+  "name": "High Roller",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/highroller_small.png"
+ },
+ {
+  "key": "x:1001",
+  "name": "Titan's Resolve",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/iamthejuggernaut_small.png"
+ },
+ {
+  "key": "x:2016",
+  "name": "Juiced",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/juiced_small.png"
+ },
+ {
+  "key": "x:2007",
+  "name": "Devil on Your Shoulder",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/littledevil_small.png"
+ },
+ {
+  "key": "x:1133",
+  "name": "Magic Missile",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/maps/particles/kiwi/magicmissile_small.png"
+ },
+ {
+  "key": "x:1424",
+  "name": "???",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/missingping_small.png"
+ },
+ {
+  "key": "x:2055",
+  "name": "Multishot",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png"
+ },
+ {
+  "key": "x:1390",
+  "name": "Phenomenal Evil",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/aram_phenomenalevil_small.png"
+ },
+ {
+  "key": "x:2003",
+  "name": "Bounce of the Poro King",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/poroking_small.png"
+ },
+ {
+  "key": "x:1324",
+  "name": "Protein Shake",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/proteinshake_small.png"
+ },
+ {
+  "key": "x:2018",
+  "name": "Purist - Caster",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/puristcaster_small.png"
+ },
+ {
+  "key": "x:1154",
+  "name": "Urf's Champion",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/quest_urfschampion_small.png"
+ },
+ {
+  "key": "x:1361",
+  "name": "Icathia's Fall",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/quest_voidimmolation_small.png"
+ },
+ {
+  "key": "x:2064",
+  "name": "Quickstep",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:2088",
+  "name": "Snowday",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/snowday_small.png"
+ },
+ {
+  "key": "x:2100",
+  "name": "Pursuit of Haste",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:1405",
+  "name": "Speed Demon",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/speeddemon_small.png"
+ },
+ {
+  "key": "x:2104",
+  "name": "Spirit Bomb",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/spiritbomb_small.png"
+ },
+ {
+  "key": "x:1345",
+  "name": "Spiritual Purification",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/spiritualpurification_small.png"
+ },
+ {
+  "key": "x:1413",
+  "name": "Stuck In Here With Me",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/stuckinherewithme_small.png"
+ },
+ {
+  "key": "x:2073",
+  "name": "Siphon",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png"
+ },
+ {
+  "key": "x:1320",
+  "name": "Upgrade Collector",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradecollector_small.png"
+ },
+ {
+  "key": "x:1338",
+  "name": "Upgrade Hubris",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradehubris_small.png"
+ },
+ {
+  "key": "x:1336",
+  "name": "Upgrade Infinity Edge",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeie_small.png"
+ },
+ {
+  "key": "x:1319",
+  "name": "Upgrade Immolate",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradeimmolate_small.png"
+ },
+ {
+  "key": "x:1996",
+  "name": "Upgrade Sheen",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradesheen_small.png"
+ },
+ {
+  "key": "x:1318",
+  "name": "Upgrade Zhonya's",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradezh_small.png"
+ },
+ {
+  "key": "x:1005",
+  "name": "Wee Woo Wee Woo",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/weewooweewoo_small.png"
+ },
+ {
+  "key": "x:2008",
+  "name": "Weighted Popoffs",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/weightedpopoffs_small.png"
+ },
+ {
+  "key": "x:2089",
+  "name": "Yowch, My Coins!",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/youchmycoins_small.png"
+ },
+ {
+  "key": "x:2009",
+  "name": "Zealot",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/zealot_small.png"
+ },
+ {
+  "key": "x:2062",
+  "name": "Echo Cast",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png"
+ },
+ {
+  "key": "x:1327",
+  "name": "Adamant",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/adamant_small.png"
+ },
+ {
+  "key": "x:1329",
+  "name": "Biggest Snowball Ever",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/biggestsnowballever_small.png"
+ },
+ {
+  "key": "x:2128",
+  "name": "Combusting Interest",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/bloodmoney2_small.png"
+ },
+ {
+  "key": "x:2111",
+  "name": "BONK!",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/bonk_large.png"
+ },
+ {
+  "key": "x:2042",
+  "name": "Hide on Bush",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/brushpower_small.png"
+ },
+ {
+  "key": "x:2083",
+  "name": "Tooth Fairy",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/questburstingteeth_small.png"
+ },
+ {
+  "key": "x:2078",
+  "name": "Chain Reaction",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png"
+ },
+ {
+  "key": "x:2024",
+  "name": "Crit 'n Cast",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/critncast_small.png"
+ },
+ {
+  "key": "x:1356",
+  "name": "Critical Missile",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/criticalmissile_small.png"
+ },
+ {
+  "key": "x:1328",
+  "name": "Critical Rhythm",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/criticalrhythm_small.png"
+ },
+ {
+  "key": "x:2077",
+  "name": "Ravenous Bind",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradehubris_small.png"
+ },
+ {
+  "key": "x:2063",
+  "name": "Dimension Shift",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/whenthedarknesscomes_small.png"
+ },
+ {
+  "key": "x:1384",
+  "name": "Donation",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/donation_small.png"
+ },
+ {
+  "key": "x:2131",
+  "name": "Don't Change the Channel",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/dontchangethechannel_small.png"
+ },
+ {
+  "key": "x:2144",
+  "name": "Bolstered",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png"
+ },
+ {
+  "key": "x:2148",
+  "name": "Double Strike",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/adamant_small.png"
+ },
+ {
+  "key": "x:1331",
+  "name": "Empyrean Promise",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/empyreampromise_small.png"
+ },
+ {
+  "key": "x:2082",
+  "name": "Our Healing",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/equillibrium_small.png"
+ },
+ {
+  "key": "x:1333",
+  "name": "Escape Plan",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/escapeplan_small.png"
+ },
+ {
+  "key": "x:1344",
+  "name": "Final Form",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/finalform_small.png"
+ },
+ {
+  "key": "x:2032",
+  "name": "Shark Bait",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/fishbait_small.png"
+ },
+ {
+  "key": "x:1348",
+  "name": "Flash 2",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/flash2_small.png"
+ },
+ {
+  "key": "x:2127",
+  "name": "Forged By The Master",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/forgedbythemaster_small.png"
+ },
+ {
+  "key": "x:1325",
+  "name": "Glass Cannon",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/glasscannon_small.png"
+ },
+ {
+  "key": "x:1392",
+  "name": "Holy Snowball",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/goldensnowball_small.png"
+ },
+ {
+  "key": "x:1335",
+  "name": "Goldrend",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/goldrend_small.png"
+ },
+ {
+  "key": "x:1401",
+  "name": "Growth Spurt",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/growthspurt_small.png"
+ },
+ {
+  "key": "x:1389",
+  "name": "Hand of Baron",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/handofbaron_small.png"
+ },
+ {
+  "key": "x:1388",
+  "name": "Infinite Recursion",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/infiniterecursion_small.png"
+ },
+ {
+  "key": "x:2125",
+  "name": "It's Go Time",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png"
+ },
+ {
+  "key": "x:2026",
+  "name": "Kill Secured",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/killsecure_small.png"
+ },
+ {
+  "key": "x:1337",
+  "name": "King Me",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/kingme_small.png"
+ },
+ {
+  "key": "x:2096",
+  "name": "Lil' Extra Help",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:2133",
+  "name": "Mercy's Strike",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:1314",
+  "name": "Mighty Shield",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/mightyshield_small.png"
+ },
+ {
+  "key": "x:2072",
+  "name": "Spell Split",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png"
+ },
+ {
+  "key": "x:2043",
+  "name": "Nature is Healing",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/natureishealing_small.png"
+ },
+ {
+  "key": "x:1326",
+  "name": "Nightstalking",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/nightstalking_small.png"
+ },
+ {
+  "key": "x:2119",
+  "name": "Overextender",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/overextender_small.png"
+ },
+ {
+  "key": "x:2123",
+  "name": "Overloaded",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png"
+ },
+ {
+  "key": "x:2137",
+  "name": "Pat On The Back",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/patontheback_small.png"
+ },
+ {
+  "key": "x:2139",
+  "name": "Porcupine",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/pincushion_small.png"
+ },
+ {
+  "key": "x:1358",
+  "name": "Pinball",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/pinballsnowball_small.png"
+ },
+ {
+  "key": "x:1347",
+  "name": "Poltergeist",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/poltergeist_small.png"
+ },
+ {
+  "key": "x:2046",
+  "name": "Poro Stampede",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/questporocharge_small.png"
+ },
+ {
+  "key": "x:2102",
+  "name": "Pressure Cooker",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/questpressurecooker_small.png"
+ },
+ {
+  "key": "x:1421",
+  "name": "Prom Queen",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/promqueen_small.png"
+ },
+ {
+  "key": "x:1343",
+  "name": "Sneakerhead",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/sneakerhead_small.png"
+ },
+ {
+  "key": "x:393",
+  "name": "Icathia's Fall",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/quest_voidimmolation_small.png"
+ },
+ {
+  "key": "x:2034",
+  "name": "Shark Tempest",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/sharktempest_small.png"
+ },
+ {
+  "key": "x:1373",
+  "name": "Shrink Engine",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/shrinkengine_small.png"
+ },
+ {
+  "key": "x:2118",
+  "name": "Ult Bot",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/skipthebasic_small.png"
+ },
+ {
+  "key": "x:2109",
+  "name": "Snap Back",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:1342",
+  "name": "Snowball Roulette",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/snowballupgrade_small.png"
+ },
+ {
+  "key": "x:1334",
+  "name": "Snowball Upgrade",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/snowballupgrade_small.png"
+ },
+ {
+  "key": "x:2080",
+  "name": "Snowblast",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/snowbomb_small.png"
+ },
+ {
+  "key": "x:1420",
+  "name": "Sonata",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/sonata_small.png"
+ },
+ {
+  "key": "x:1375",
+  "name": "Soul Eater",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/souleater_small.png"
+ },
+ {
+  "key": "x:2054",
+  "name": "Tripleshot",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png"
+ },
+ {
+  "key": "x:2115",
+  "name": "Squishy Slappy Grab",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/squishyslappygrab_small.png"
+ },
+ {
+  "key": "x:2108",
+  "name": "Support Main",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/questsupportmain_small.png"
+ },
+ {
+  "key": "x:2134",
+  "name": "Surge Field",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/surgefield_small.png"
+ },
+ {
+  "key": "x:1315",
+  "name": "Swift and Safe",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/swiftandsafe_small.png"
+ },
+ {
+  "key": "x:2076",
+  "name": "Stay Resolute",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png"
+ },
+ {
+  "key": "x:1400",
+  "name": "Final City Transit",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/nightstalking_small.png"
+ },
+ {
+  "key": "x:2136",
+  "name": "Trusty Weapon",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png"
+ },
+ {
+  "key": "x:1415",
+  "name": "Twin Fire",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/twinfire_small.png"
+ },
+ {
+  "key": "x:1349",
+  "name": "Ultimate Awakening",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/zerohour_small.png"
+ },
+ {
+  "key": "x:1340",
+  "name": "Upgrade Mikael's Blessing",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgrademikaelsblessing_small.png"
+ },
+ {
+  "key": "x:1379",
+  "name": "Upgrade Sword of Blossoming Dawn",
+  "rarity": "prismatic",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgrademikaelsblessing_small.png"
+ },
+ {
+  "key": "x:1411",
+  "name": "Upgrade Thornmail",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/upgradecollector_small.png"
+ },
+ {
+  "key": "x:1346",
+  "name": "Vampirism",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/vampired_small.png"
+ },
+ {
+  "key": "x:1034",
+  "name": "Veil of Warding",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/poltergeist_small.png"
+ },
+ {
+  "key": "x:2097",
+  "name": "Void Dash",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+ },
+ {
+  "key": "x:2138",
+  "name": "Adaptive Ward",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png"
+ },
+ {
+  "key": "x:2132",
+  "name": "Warlock Juicebox",
+  "rarity": "gold",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/warlockjuicebox_small.png"
+ },
+ {
+  "key": "x:1316",
+  "name": "Wind Beneath Blade",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/windbeneathblade_small.png"
+ },
+ {
+  "key": "x:1386",
+  "name": "Spin Me Right Round",
+  "rarity": "silver",
+  "icon": "https://raw.communitydragon.org/latest/game/assets/ux/kiwi/augments/icons/youspinmerightround_small.png"
+ }
+]

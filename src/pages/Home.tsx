@@ -328,6 +328,7 @@ export default function Home() {
                 champion={selectedChampion}
                 mapId={modeConfig.mapId}
                 runes={data.runes}
+                items={data.items}
                 clientOpen={champSelect.available}
                 skipRunes={champSelect.augmentedAbyss}
               />

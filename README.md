@@ -15,8 +15,8 @@ new versions are released.
 
 The installer is unsigned, so Windows SmartScreen will warn on first run:
 click **More info → Run anyway**. In game, set League to **Borderless** or
-Windowed mode so the overlay can draw over it, and hold **Tab** to show the
-overlay alongside the scoreboard.
+Windowed mode so the overlay can draw over it. The overlay stays on screen as
+a slim strip and expands to the full card when you hover its grip.
 
 ## Features
 
@@ -196,21 +196,21 @@ a separate OS window drawn above the game, never injected into it.
   at the top of the card) and drag — the window follows and its position is
   remembered across launches. The grip is grabbable any time; only that tiny grip
   is solid, so the rest of the overlay stays click-through and never blocks the
-  game or the Tab scoreboard.
-- **Tab-summoned:** by default the overlay only appears while **Tab is held** —
-  the same gesture as the scoreboard, so both show together and the overlay
-  takes no screen space the rest of the time. This uses a *passive* key listener
-  (`uiohook-napi`, installed in the deploy dir) that observes Tab without
-  consuming it — the game's own scoreboard still works. `OVERLAY_TAB=toggle`
-  makes Tab flip it on/off instead; `OVERLAY_TAB=off` (or the listener missing)
-  reverts to always-visible.
+  game.
+- **Slim strip, hover to expand:** in-game the card collapses to a slim strip
+  (next items + gold + clock) so it takes almost no screen space; resting the
+  pointer on the strip for a beat expands the full card (a quick sweep across
+  it does nothing), and it collapses again shortly after the pointer leaves.
+  During ARAM Mayhem augment offers the strip shows a pulsing violet
+  "augments" chip — hover to see the goals, which lead the card highlighted.
+  No keyboard hooks — the overlay never listens to or sends input.
 - Hotkeys: `Ctrl+Shift+O` pin the whole overlay interactive (click/scroll it),
-  `Ctrl+Shift+H` pin visible / unpin back to Tab mode, `Ctrl+Shift+Q` quit.
+  `Ctrl+Shift+H` hide/show the overlay, `Ctrl+Shift+Q` quit.
 - League must be in **Borderless** or Windowed mode (Settings → Video) —
   exclusive Fullscreen draws over everything. The overlay reads League's
   `game.cfg` and warns when Fullscreen is set.
 - **Loading screen:** while the match loads, the overlay becomes a centered,
-  dark scouting panel (always visible, no Tab needed) showing both teams —
+  dark scouting panel showing both teams —
   champion, name, rank, and recent form (3+ game hot/cold streaks, last-10
   record) from the LCU's read-only ranked-stats and match-history endpoints.
   It swaps back to the transparent side card the moment the game is reachable.
@@ -241,7 +241,7 @@ npm run package:win     # → C:\Users\<you>\lol-build-coach-pkg\release\
 
 The web bundle is built, staged to the Windows side, and electron-builder
 produces an NSIS installer + zip there (Electron/NSIS binaries need to run
-natively; `npmRebuild` is off — uiohook-napi uses its shipped prebuilds).
+natively; `npmRebuild` is off — no native deps need rebuilding).
 
 **Iterating on the Electron shell:** the app serves the *built* bundle from
 `electron/dist` via its in-process server — it never talks to the Vite dev
@@ -261,10 +261,10 @@ cd C:\Users\<you>\lol-build-coach-pkg
 ```
 
 (`WIN_USER` overrides `<you>` in the printed paths.) It doesn't launch Electron
-itself — that's a Windows app (native Tab hook, `C:\Riot Games` lockfile) and
-can't run from WSL. For fast UI iteration prefer `npm run dev` in a browser;
-reach for `electron:dev` only to verify Electron-shell behavior (overlay window,
-Tab summon, live client).
+itself — that's a Windows app (`C:\Riot Games` lockfile) and can't run from
+WSL. For fast UI iteration prefer `npm run dev` in a browser; reach for
+`electron:dev` only to verify Electron-shell behavior (overlay window, live
+client).
 
 **Updates via GitHub Releases:** the builder config publishes to this repo's
 Releases, and the app checks them on launch (electron-updater). Cut a release
@@ -273,9 +273,9 @@ scope on the Windows-side environment). Data-only refreshes per patch can ship
 as release assets later — the app currently bundles its data.
 
 **Distribution notes:** the shipped app contains no Riot API key and makes no
-Riot API calls (local Live Client + bundled data only). The overlay uses a
-passive global keyboard listener solely to show/hide on Tab — it never sends
-input to the game. The binary is unsigned, so Windows SmartScreen will warn on
+Riot API calls (local Live Client + bundled data only). The overlay never
+listens to or sends keyboard/mouse input — it only draws a separate window.
+The binary is unsigned, so Windows SmartScreen will warn on
 first run. For public distribution (beyond friends): register the product on
 developer.riotgames.com (Personal key), and expect Riot's naming policy to
 require dropping "LoL" from the product name.
@@ -296,10 +296,10 @@ require dropping "LoL" from the product name.
   and electron-updater's own installer launch could fail with a
   "Windows cannot find '\\'" dialog — the app now stops the listener before
   quitting and spawns the installer itself.
-- **Quit hangs**: quitting stops the global key listener first and force-exits
-  after 3 s as a fallback — if an old version ever refuses to die, end
-  "LoL Build Coach.exe" in Task Manager; nothing is lost.
-- **Tab shows the overlay in the loading screen but not in-game**: League is
+- **Quit hangs**: quitting force-exits after 3 s as a fallback — if an old
+  version ever refuses to die, end "LoL Build Coach.exe" in Task Manager;
+  nothing is lost.
+- **Overlay shows in the loading screen but not in-game**: League is
   running in exclusive **Fullscreen** — no external window can be drawn over
   it (the loading screen is borderless, which is why it works there). Switch
   Window Mode to **Borderless** in the in-game Settings → Video. The app now

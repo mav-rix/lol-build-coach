@@ -4,10 +4,18 @@
 const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('overlay', {
-  // Tell main whether the pointer is over a drag handle. While it is, main stops
-  // ignoring mouse events so the handle is grabbable; otherwise the window stays
-  // click-through and never blocks the game.
-  setHover: (hover) => ipcRenderer.send('overlay:hover', Boolean(hover)),
+  // Report the drag-handle rects (window-relative CSS px). Main polls the
+  // cursor against them and makes the window interactive while the pointer is
+  // over one — hover can't be detected renderer-side because the window is
+  // click-through WITHOUT mouse-move forwarding (forward:true = a global mouse
+  // hook = in-game cursor lag).
+  reportHandles: (rects) => ipcRenderer.send('overlay:handles', rects),
+  // Main's poll result: is the pointer over a drag handle right now?
+  onGripHover: (cb) => {
+    const listener = (_e, h) => cb(Boolean(h))
+    ipcRenderer.on('overlay:grip-hover', listener)
+    return () => ipcRenderer.removeListener('overlay:grip-hover', listener)
+  },
   // Drag lifecycle: begin captures the window's current position; dragTo moves it
   // by a pointer delta; end persists the new position.
   beginDrag: () => ipcRenderer.send('overlay:begin-drag'),

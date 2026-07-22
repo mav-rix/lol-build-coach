@@ -1,0 +1,8900 @@
+{
+  "1001": {
+    "name": "Titan's Resolve",
+    "canon": "titansresolve",
+    "tier": 2,
+    "pickRate": 1.27,
+    "score": 79.69,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 2.53,
+        "score": 82.28,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 2.78,
+        "score": 88.4,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 2.23,
+        "score": 90.1,
+        "tier": 0
+      },
+      "Shen": {
+        "pickRate": 3.23,
+        "score": 85.34,
+        "tier": 0
+      },
+      "Mordekaiser": {
+        "pickRate": 2.65,
+        "score": 79.56,
+        "tier": 0
+      }
+    }
+  },
+  "1002": {
+    "name": "Apex Inventor",
+    "canon": "apexinventor",
+    "tier": 3,
+    "pickRate": 0.77,
+    "score": 81.02,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.63,
+        "score": 90.28,
+        "tier": 1
+      },
+      "Sion": {
+        "pickRate": 0.6,
+        "score": 98.6,
+        "tier": 1
+      },
+      "Rell": {
+        "pickRate": 0.63,
+        "score": 93.85,
+        "tier": 1
+      },
+      "Nautilus": {
+        "pickRate": 0.43,
+        "score": 85.17,
+        "tier": 1
+      },
+      "TahmKench": {
+        "pickRate": 0.43,
+        "score": 88.4,
+        "tier": 1
+      }
+    }
+  },
+  "1004": {
+    "name": "Back To Basics",
+    "canon": "backtobasics",
+    "tier": 1,
+    "pickRate": 1.62,
+    "score": 90.26,
+    "champions": {
+      "Ryze": {
+        "pickRate": 4.73,
+        "score": 100.81,
+        "tier": 0
+      },
+      "TahmKench": {
+        "pickRate": 1.99,
+        "score": 95.54,
+        "tier": 0
+      },
+      "Gangplank": {
+        "pickRate": 2.8,
+        "score": 96.56,
+        "tier": 0
+      },
+      "TwistedFate": {
+        "pickRate": 1.74,
+        "score": 95.37,
+        "tier": 0
+      },
+      "Taliyah": {
+        "pickRate": 3.85,
+        "score": 92.99,
+        "tier": 0
+      }
+    }
+  },
+  "1005": {
+    "name": "Wee Woo Wee Woo",
+    "canon": "weewooweewoo",
+    "tier": 1,
+    "pickRate": 1.14,
+    "score": 94.14,
+    "champions": {
+      "Soraka": {
+        "pickRate": 7.6,
+        "score": 93.5,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 6.34,
+        "score": 99.45,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 6.79,
+        "score": 94.01,
+        "tier": 0
+      },
+      "Nami": {
+        "pickRate": 6.06,
+        "score": 90.44,
+        "tier": 0
+      },
+      "Milio": {
+        "pickRate": 5.47,
+        "score": 97.58,
+        "tier": 0
+      }
+    }
+  },
+  "1006": {
+    "name": "Blade Waltz",
+    "canon": "bladewaltz",
+    "tier": 2,
+    "pickRate": 1.48,
+    "score": 79.65,
+    "champions": {
+      "Pyke": {
+        "pickRate": 3.03,
+        "score": 79.05,
+        "tier": 0
+      },
+      "Samira": {
+        "pickRate": 2.81,
+        "score": 81.94,
+        "tier": 0
+      },
+      "Udyr": {
+        "pickRate": 3.5,
+        "score": 83.13,
+        "tier": 0
+      },
+      "MasterYi": {
+        "pickRate": 2.03,
+        "score": 91.29,
+        "tier": 0
+      },
+      "Talon": {
+        "pickRate": 2.97,
+        "score": 80.75,
+        "tier": 0
+      }
+    }
+  },
+  "1007": {
+    "name": "Blunt Force",
+    "canon": "bluntforce",
+    "tier": 1,
+    "pickRate": 4.28,
+    "score": 85.49,
+    "champions": {
+      "Jayce": {
+        "pickRate": 5.02,
+        "score": 79.05,
+        "tier": 0
+      },
+      "Pantheon": {
+        "pickRate": 6.8,
+        "score": 81.94,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 4.46,
+        "score": 96.39,
+        "tier": 0
+      },
+      "Jhin": {
+        "pickRate": 2.78,
+        "score": 82.96,
+        "tier": 0
+      },
+      "LeeSin": {
+        "pickRate": 4.94,
+        "score": 73.44,
+        "tier": 0
+      }
+    }
+  },
+  "1009": {
+    "name": "Buff Buddies",
+    "canon": "buffbuddies",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 88.31,
+    "champions": {
+      "Ezreal": {
+        "pickRate": 0.01,
+        "score": 91.45,
+        "tier": 5
+      },
+      "Xerath": {
+        "pickRate": 0.01,
+        "score": 91.73,
+        "tier": 5
+      },
+      "Mel": {
+        "pickRate": 0.01,
+        "score": 88.15,
+        "tier": 5
+      },
+      "Brand": {
+        "pickRate": 0.01,
+        "score": 97.88,
+        "tier": 5
+      },
+      "Lux": {
+        "pickRate": 0.01,
+        "score": 93.85,
+        "tier": 5
+      }
+    }
+  },
+  "1011": {
+    "name": "Can't Touch This",
+    "canon": "canttouchthis",
+    "tier": 2,
+    "pickRate": 1.49,
+    "score": 77.89,
+    "champions": {
+      "Kassadin": {
+        "pickRate": 1.99,
+        "score": 96.39,
+        "tier": 0
+      },
+      "Katarina": {
+        "pickRate": 2.1,
+        "score": 81.94,
+        "tier": 1
+      },
+      "Samira": {
+        "pickRate": 1.73,
+        "score": 84.66,
+        "tier": 1
+      },
+      "Pyke": {
+        "pickRate": 1.47,
+        "score": 76.5,
+        "tier": 1
+      },
+      "Morgana": {
+        "pickRate": 0.95,
+        "score": 81.94,
+        "tier": 1
+      }
+    }
+  },
+  "1013": {
+    "name": "Celestial Body",
+    "canon": "celestialbody",
+    "tier": 1,
+    "pickRate": 4.29,
+    "score": 86.5,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 6.74,
+        "score": 94.52,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 6.28,
+        "score": 85.68,
+        "tier": 0
+      },
+      "TahmKench": {
+        "pickRate": 6.26,
+        "score": 92.48,
+        "tier": 0
+      },
+      "Thresh": {
+        "pickRate": 6.43,
+        "score": 74.29,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 6.65,
+        "score": 96.9,
+        "tier": 0
+      }
+    }
+  },
+  "1015": {
+    "name": "Circle of Death",
+    "canon": "circleofdeath",
+    "tier": 4,
+    "pickRate": 0.21,
+    "score": 84.11,
+    "champions": {
+      "Soraka": {
+        "pickRate": 1.47,
+        "score": 88.91,
+        "tier": 1
+      },
+      "Yuumi": {
+        "pickRate": 1.27,
+        "score": 86.7,
+        "tier": 1
+      },
+      "Sona": {
+        "pickRate": 1.1,
+        "score": 86.88,
+        "tier": 1
+      },
+      "Nami": {
+        "pickRate": 0.91,
+        "score": 81.94,
+        "tier": 1
+      },
+      "Milio": {
+        "pickRate": 0.89,
+        "score": 84.49,
+        "tier": 1
+      }
+    }
+  },
+  "1018": {
+    "name": "Courage of the Colossus",
+    "canon": "courageofthecolossus",
+    "tier": 2,
+    "pickRate": 2.04,
+    "score": 82.48,
+    "champions": {
+      "Nautilus": {
+        "pickRate": 4.38,
+        "score": 88.4,
+        "tier": 0
+      },
+      "Leona": {
+        "pickRate": 4.83,
+        "score": 92.48,
+        "tier": 0
+      },
+      "Thresh": {
+        "pickRate": 4.39,
+        "score": 74.8,
+        "tier": 0
+      },
+      "Maokai": {
+        "pickRate": 3.6,
+        "score": 91.8,
+        "tier": 0
+      },
+      "Alistar": {
+        "pickRate": 4.02,
+        "score": 87.04,
+        "tier": 0
+      }
+    }
+  },
+  "1019": {
+    "name": "Dashing",
+    "canon": "dashing",
+    "tier": 2,
+    "pickRate": 2.15,
+    "score": 79.27,
+    "champions": {
+      "Fizz": {
+        "pickRate": 6.38,
+        "score": 88.06,
+        "tier": 0
+      },
+      "Pyke": {
+        "pickRate": 5.91,
+        "score": 78.2,
+        "tier": 0
+      },
+      "Shaco": {
+        "pickRate": 4.3,
+        "score": 70.89,
+        "tier": 0
+      },
+      "Sylas": {
+        "pickRate": 4.27,
+        "score": 86.7,
+        "tier": 0
+      },
+      "MasterYi": {
+        "pickRate": 3.85,
+        "score": 83.98,
+        "tier": 0
+      }
+    }
+  },
+  "1020": {
+    "name": "Dawnbringer's Resolve",
+    "canon": "dawnbringersresolve",
+    "tier": 1,
+    "pickRate": 2.77,
+    "score": 84.51,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 4.72,
+        "score": 88.91,
+        "tier": 0
+      },
+      "Chogath": {
+        "pickRate": 3.31,
+        "score": 81.77,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 3.38,
+        "score": 96.05,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 3.51,
+        "score": 92.82,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 2.87,
+        "score": 85.34,
+        "tier": 0
+      }
+    }
+  },
+  "1022": {
+    "name": "Deft",
+    "canon": "deft",
+    "tier": 1,
+    "pickRate": 3.9,
+    "score": 88.43,
+    "champions": {
+      "Jinx": {
+        "pickRate": 5.97,
+        "score": 98.94,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 5.16,
+        "score": 92.99,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 4.77,
+        "score": 91.97,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 5.43,
+        "score": 95.71,
+        "tier": 0
+      },
+      "Senna": {
+        "pickRate": 3.94,
+        "score": 84.15,
+        "tier": 0
+      }
+    }
+  },
+  "1023": {
+    "name": "Demon's Dance",
+    "canon": "demonsdance",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 86.4,
+    "champions": {
+      "Sett": {
+        "pickRate": 0.01,
+        "score": 83.44,
+        "tier": 5
+      },
+      "Sion": {
+        "pickRate": 0.01,
+        "score": 97.95,
+        "tier": 5
+      },
+      "Yasuo": {
+        "pickRate": 0.02,
+        "score": 93.56,
+        "tier": 5
+      },
+      "Zaahen": {
+        "pickRate": 0.03,
+        "score": 94.15,
+        "tier": 5
+      },
+      "Jax": {
+        "pickRate": 0.02,
+        "score": 95.97,
+        "tier": 5
+      }
+    }
+  },
+  "1025": {
+    "name": "Dive Bomber",
+    "canon": "divebomber",
+    "tier": 3,
+    "pickRate": 0.77,
+    "score": 80.46,
+    "champions": {
+      "Malphite": {
+        "pickRate": 0.79,
+        "score": 81.94,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 0.68,
+        "score": 90.61,
+        "tier": 1
+      },
+      "Sion": {
+        "pickRate": 0.64,
+        "score": 95.38,
+        "tier": 1
+      },
+      "Maokai": {
+        "pickRate": 0.43,
+        "score": 85.33,
+        "tier": 1
+      },
+      "Leona": {
+        "pickRate": 0.52,
+        "score": 84.65,
+        "tier": 1
+      }
+    }
+  },
+  "1026": {
+    "name": "Don't Blink",
+    "canon": "dontblink",
+    "tier": 4,
+    "pickRate": 0.32,
+    "score": 85.44,
+    "champions": {
+      "Lillia": {
+        "pickRate": 0.46,
+        "score": 98.42,
+        "tier": 1
+      },
+      "Singed": {
+        "pickRate": 0.3,
+        "score": 90.13,
+        "tier": 1
+      },
+      "Zeri": {
+        "pickRate": 0.26,
+        "score": 90.99,
+        "tier": 1
+      },
+      "Pyke": {
+        "pickRate": 0.25,
+        "score": 80.39,
+        "tier": 2
+      },
+      "MasterYi": {
+        "pickRate": 0.24,
+        "score": 89.6,
+        "tier": 2
+      }
+    }
+  },
+  "1027": {
+    "name": "Earthwake",
+    "canon": "earthwake",
+    "tier": 4,
+    "pickRate": 0.48,
+    "score": 78.35,
+    "champions": {
+      "Ambessa": {
+        "pickRate": 3.39,
+        "score": 89.76,
+        "tier": 0
+      },
+      "LeeSin": {
+        "pickRate": 1.99,
+        "score": 70.72,
+        "tier": 1
+      },
+      "Rengar": {
+        "pickRate": 1.4,
+        "score": 76.85,
+        "tier": 1
+      },
+      "Zed": {
+        "pickRate": 0.66,
+        "score": 87.55,
+        "tier": 1
+      },
+      "Kassadin": {
+        "pickRate": 1.08,
+        "score": 84.48,
+        "tier": 1
+      }
+    }
+  },
+  "1028": {
+    "name": "Erosion",
+    "canon": "erosion",
+    "tier": 3,
+    "pickRate": 0.8,
+    "score": 85.7,
+    "champions": {
+      "Brand": {
+        "pickRate": 0.69,
+        "score": 95.54,
+        "tier": 1
+      },
+      "Malzahar": {
+        "pickRate": 0.79,
+        "score": 95.2,
+        "tier": 1
+      },
+      "Morgana": {
+        "pickRate": 0.49,
+        "score": 91.12,
+        "tier": 1
+      },
+      "Zyra": {
+        "pickRate": 0.58,
+        "score": 93.49,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 0.39,
+        "score": 90.44,
+        "tier": 1
+      }
+    }
+  },
+  "1029": {
+    "name": "Ethereal Weapon",
+    "canon": "etherealweapon",
+    "tier": 1,
+    "pickRate": 5.57,
+    "score": 82.98,
+    "champions": {
+      "Kaisa": {
+        "pickRate": 4.86,
+        "score": 88.23,
+        "tier": 0
+      },
+      "Teemo": {
+        "pickRate": 5.61,
+        "score": 97.58,
+        "tier": 0
+      },
+      "Ezreal": {
+        "pickRate": 3.67,
+        "score": 78.54,
+        "tier": 0
+      },
+      "TahmKench": {
+        "pickRate": 4.83,
+        "score": 95.54,
+        "tier": 0
+      },
+      "Aurora": {
+        "pickRate": 5.78,
+        "score": 97.07,
+        "tier": 0
+      }
+    }
+  },
+  "1030": {
+    "name": "Eureka",
+    "canon": "eureka",
+    "tier": 0,
+    "pickRate": 6.79,
+    "score": 87.64,
+    "champions": {
+      "Karthus": {
+        "pickRate": 7.82,
+        "score": 89.93,
+        "tier": 0
+      },
+      "Mel": {
+        "pickRate": 7.47,
+        "score": 84.83,
+        "tier": 0
+      },
+      "Xerath": {
+        "pickRate": 5.71,
+        "score": 85.51,
+        "tier": 0
+      },
+      "Veigar": {
+        "pickRate": 6.87,
+        "score": 92.31,
+        "tier": 0
+      },
+      "Lux": {
+        "pickRate": 5.72,
+        "score": 86.87,
+        "tier": 0
+      }
+    }
+  },
+  "1032": {
+    "name": "Executioner",
+    "canon": "executioner",
+    "tier": 5,
+    "pickRate": 0.07,
+    "score": 84.21,
+    "champions": {
+      "Zed": {
+        "pickRate": 0.06,
+        "score": 90.13,
+        "tier": 4
+      },
+      "Pantheon": {
+        "pickRate": 0.06,
+        "score": 87.53,
+        "tier": 4
+      },
+      "Khazix": {
+        "pickRate": 0.06,
+        "score": 79.3,
+        "tier": 4
+      },
+      "Naafiri": {
+        "pickRate": 0.07,
+        "score": 81.65,
+        "tier": 4
+      },
+      "Zaahen": {
+        "pickRate": 0.05,
+        "score": 98.11,
+        "tier": 4
+      }
+    }
+  },
+  "1034": {
+    "name": "Veil of Warding",
+    "canon": "veilofwarding",
+    "tier": 3,
+    "pickRate": 0.77,
+    "score": 82.09,
+    "champions": {
+      "Thresh": {
+        "pickRate": 1.58,
+        "score": 71.74,
+        "tier": 1
+      },
+      "Braum": {
+        "pickRate": 2.03,
+        "score": 75.82,
+        "tier": 1
+      },
+      "Maokai": {
+        "pickRate": 0.78,
+        "score": 82.62,
+        "tier": 1
+      },
+      "Shen": {
+        "pickRate": 1.14,
+        "score": 87.37,
+        "tier": 1
+      },
+      "Ornn": {
+        "pickRate": 1.04,
+        "score": 79.72,
+        "tier": 1
+      }
+    }
+  },
+  "1035": {
+    "name": "Feel the Burn",
+    "canon": "feeltheburn",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 80.86,
+    "champions": {
+      "Morgana": {
+        "pickRate": 0.01,
+        "score": 70.53,
+        "tier": 5
+      },
+      "Lulu": {
+        "pickRate": 0.01,
+        "score": 86.2,
+        "tier": 5
+      },
+      "Karma": {
+        "pickRate": 0.01,
+        "score": 82.26,
+        "tier": 5
+      },
+      "Seraphine": {
+        "pickRate": 0,
+        "score": 82.07,
+        "tier": 5
+      },
+      "Yuumi": {
+        "pickRate": 0.01,
+        "score": 79.14,
+        "tier": 5
+      }
+    }
+  },
+  "1036": {
+    "name": "Firebrand",
+    "canon": "firebrand",
+    "tier": 4,
+    "pickRate": 0.68,
+    "score": 80.6,
+    "champions": {
+      "Ashe": {
+        "pickRate": 0.41,
+        "score": 91.97,
+        "tier": 1
+      },
+      "Jinx": {
+        "pickRate": 0.35,
+        "score": 92.99,
+        "tier": 1
+      },
+      "Kayle": {
+        "pickRate": 0.67,
+        "score": 95.72,
+        "tier": 1
+      },
+      "KogMaw": {
+        "pickRate": 0.53,
+        "score": 86.02,
+        "tier": 1
+      },
+      "Kalista": {
+        "pickRate": 0.72,
+        "score": 82.81,
+        "tier": 1
+      }
+    }
+  },
+  "1037": {
+    "name": "First-Aid Kit",
+    "canon": "firstaidkit",
+    "tier": 1,
+    "pickRate": 1.71,
+    "score": 87.82,
+    "champions": {
+      "Soraka": {
+        "pickRate": 10.87,
+        "score": 88.91,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 8.26,
+        "score": 94.18,
+        "tier": 0
+      },
+      "Yuumi": {
+        "pickRate": 8.69,
+        "score": 89.59,
+        "tier": 0
+      },
+      "Nami": {
+        "pickRate": 8.99,
+        "score": 86.19,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 8.67,
+        "score": 87.89,
+        "tier": 0
+      }
+    }
+  },
+  "1038": {
+    "name": "From Beginning To End",
+    "canon": "frombeginningtoend",
+    "tier": 2,
+    "pickRate": 0.9,
+    "score": 86.35,
+    "champions": {
+      "Gangplank": {
+        "pickRate": 1.87,
+        "score": 87.38,
+        "tier": 0
+      },
+      "Jayce": {
+        "pickRate": 1.7,
+        "score": 82.45,
+        "tier": 1
+      },
+      "Ezreal": {
+        "pickRate": 0.96,
+        "score": 83.98,
+        "tier": 1
+      },
+      "Xerath": {
+        "pickRate": 1.19,
+        "score": 89.42,
+        "tier": 1
+      },
+      "Morgana": {
+        "pickRate": 0.92,
+        "score": 89.25,
+        "tier": 1
+      }
+    }
+  },
+  "1039": {
+    "name": "Frost Wraith",
+    "canon": "frostwraith",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 79.23,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.02,
+        "score": 83.51,
+        "tier": 5
+      },
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 88.33,
+        "tier": 5
+      },
+      "Thresh": {
+        "pickRate": 0.01,
+        "score": 78.97,
+        "tier": 5
+      },
+      "Nautilus": {
+        "pickRate": 0.01,
+        "score": 83.33,
+        "tier": 5
+      },
+      "Leona": {
+        "pickRate": 0.01,
+        "score": 84.4,
+        "tier": 5
+      }
+    }
+  },
+  "1041": {
+    "name": "Goliath",
+    "canon": "goliath",
+    "tier": 1,
+    "pickRate": 4.13,
+    "score": 88.93,
+    "champions": {
+      "TahmKench": {
+        "pickRate": 9.35,
+        "score": 96.05,
+        "tier": 0
+      },
+      "DrMundo": {
+        "pickRate": 6.85,
+        "score": 101.49,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 6.31,
+        "score": 105.06,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 6.51,
+        "score": 104.21,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 5.3,
+        "score": 87.38,
+        "tier": 0
+      }
+    }
+  },
+  "1042": {
+    "name": "Guilty Pleasure",
+    "canon": "guiltypleasure",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 81.17,
+    "champions": {
+      "Maokai": {
+        "pickRate": 0.02,
+        "score": 82.76,
+        "tier": 5
+      },
+      "Leona": {
+        "pickRate": 0.03,
+        "score": 83.2,
+        "tier": 5
+      },
+      "Nautilus": {
+        "pickRate": 0.02,
+        "score": 91.49,
+        "tier": 5
+      },
+      "Alistar": {
+        "pickRate": 0.02,
+        "score": 87.76,
+        "tier": 5
+      },
+      "Galio": {
+        "pickRate": 0.02,
+        "score": 88.26,
+        "tier": 5
+      }
+    }
+  },
+  "1044": {
+    "name": "Ice Cold",
+    "canon": "icecold",
+    "tier": 1,
+    "pickRate": 2.76,
+    "score": 83.28,
+    "champions": {
+      "AurelionSol": {
+        "pickRate": 8,
+        "score": 90.1,
+        "tier": 0
+      },
+      "Brand": {
+        "pickRate": 4.26,
+        "score": 89.93,
+        "tier": 0
+      },
+      "Swain": {
+        "pickRate": 4.81,
+        "score": 78.03,
+        "tier": 0
+      },
+      "Morgana": {
+        "pickRate": 4.14,
+        "score": 85,
+        "tier": 0
+      },
+      "Anivia": {
+        "pickRate": 6.83,
+        "score": 77.35,
+        "tier": 0
+      }
+    }
+  },
+  "1045": {
+    "name": "Infernal Conduit",
+    "canon": "infernalconduit",
+    "tier": 1,
+    "pickRate": 4.13,
+    "score": 88.15,
+    "champions": {
+      "Brand": {
+        "pickRate": 9.04,
+        "score": 102.51,
+        "tier": 0
+      },
+      "Malzahar": {
+        "pickRate": 9.11,
+        "score": 92.99,
+        "tier": 0
+      },
+      "AurelionSol": {
+        "pickRate": 7.45,
+        "score": 92.31,
+        "tier": 0
+      },
+      "Swain": {
+        "pickRate": 5.81,
+        "score": 82.79,
+        "tier": 0
+      },
+      "Zyra": {
+        "pickRate": 7.05,
+        "score": 91.8,
+        "tier": 0
+      }
+    }
+  },
+  "1046": {
+    "name": "Infernal Soul",
+    "canon": "infernalsoul",
+    "tier": 2,
+    "pickRate": 1.03,
+    "score": 82.56,
+    "champions": {
+      "Brand": {
+        "pickRate": 0.7,
+        "score": 89.25,
+        "tier": 1
+      },
+      "Xerath": {
+        "pickRate": 0.83,
+        "score": 85.17,
+        "tier": 1
+      },
+      "Lux": {
+        "pickRate": 0.64,
+        "score": 83.3,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 0.6,
+        "score": 86.86,
+        "tier": 1
+      },
+      "Morgana": {
+        "pickRate": 0.49,
+        "score": 86.86,
+        "tier": 1
+      }
+    }
+  },
+  "1047": {
+    "name": "It's Critical",
+    "canon": "itscritical",
+    "tier": 2,
+    "pickRate": 1.88,
+    "score": 82.38,
+    "champions": {
+      "KogMaw": {
+        "pickRate": 3.18,
+        "score": 83.64,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 1.89,
+        "score": 95.2,
+        "tier": 0
+      },
+      "Gangplank": {
+        "pickRate": 3.23,
+        "score": 81.6,
+        "tier": 0
+      },
+      "Graves": {
+        "pickRate": 1.98,
+        "score": 90.78,
+        "tier": 0
+      },
+      "Kalista": {
+        "pickRate": 4.27,
+        "score": 83.64,
+        "tier": 0
+      }
+    }
+  },
+  "1048": {
+    "name": "Jeweled Gauntlet",
+    "canon": "jeweledgauntlet",
+    "tier": 1,
+    "pickRate": 3.01,
+    "score": 84.36,
+    "champions": {
+      "Ezreal": {
+        "pickRate": 6.45,
+        "score": 83.3,
+        "tier": 0
+      },
+      "MissFortune": {
+        "pickRate": 5.54,
+        "score": 82.11,
+        "tier": 0
+      },
+      "Lucian": {
+        "pickRate": 6.45,
+        "score": 92.31,
+        "tier": 0
+      },
+      "Smolder": {
+        "pickRate": 6.76,
+        "score": 91.12,
+        "tier": 0
+      },
+      "Kaisa": {
+        "pickRate": 5.13,
+        "score": 80.41,
+        "tier": 0
+      }
+    }
+  },
+  "1050": {
+    "name": "Keystone Conjurer",
+    "canon": "keystoneconjurer",
+    "tier": 5,
+    "pickRate": 0.02,
+    "score": 85.86,
+    "champions": {
+      "Xerath": {
+        "pickRate": 0.03,
+        "score": 86.14,
+        "tier": 5
+      },
+      "Lux": {
+        "pickRate": 0.02,
+        "score": 83.08,
+        "tier": 5
+      },
+      "Brand": {
+        "pickRate": 0.01,
+        "score": 96.23,
+        "tier": 5
+      },
+      "Morgana": {
+        "pickRate": 0.02,
+        "score": 89.27,
+        "tier": 5
+      },
+      "Ziggs": {
+        "pickRate": 0.02,
+        "score": 86.06,
+        "tier": 5
+      }
+    }
+  },
+  "1051": {
+    "name": "Light 'Em Up!",
+    "canon": "lightemup",
+    "tier": 1,
+    "pickRate": 1.51,
+    "score": 88.53,
+    "champions": {
+      "Ashe": {
+        "pickRate": 2.36,
+        "score": 91.63,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 2.45,
+        "score": 97.24,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 2.28,
+        "score": 97.41,
+        "tier": 0
+      },
+      "Yunara": {
+        "pickRate": 1.99,
+        "score": 95.03,
+        "tier": 0
+      },
+      "Tristana": {
+        "pickRate": 2.1,
+        "score": 88.4,
+        "tier": 0
+      }
+    }
+  },
+  "1052": {
+    "name": "Lightning Strikes",
+    "canon": "lightningstrikes",
+    "tier": 5,
+    "pickRate": 0.03,
+    "score": 85.65,
+    "champions": {
+      "Kalista": {
+        "pickRate": 0.08,
+        "score": 90.76,
+        "tier": 4
+      },
+      "Belveth": {
+        "pickRate": 0.07,
+        "score": 86.67,
+        "tier": 4
+      },
+      "Jinx": {
+        "pickRate": 0.04,
+        "score": 90.36,
+        "tier": 5
+      },
+      "Ashe": {
+        "pickRate": 0.04,
+        "score": 98.31,
+        "tier": 5
+      },
+      "Vayne": {
+        "pickRate": 0.04,
+        "score": 93.21,
+        "tier": 5
+      }
+    }
+  },
+  "1053": {
+    "name": "Mad Scientist",
+    "canon": "madscientist",
+    "tier": 4,
+    "pickRate": 0.47,
+    "score": 89.39,
+    "champions": {
+      "TahmKench": {
+        "pickRate": 0.47,
+        "score": 88.39,
+        "tier": 1
+      },
+      "Singed": {
+        "pickRate": 0.26,
+        "score": 93.69,
+        "tier": 1
+      },
+      "Darius": {
+        "pickRate": 0.26,
+        "score": 89.56,
+        "tier": 1
+      },
+      "DrMundo": {
+        "pickRate": 0.21,
+        "score": 98.92,
+        "tier": 2
+      },
+      "Trundle": {
+        "pickRate": 0.23,
+        "score": 87.02,
+        "tier": 2
+      }
+    }
+  },
+  "1054": {
+    "name": "Master of Duality",
+    "canon": "masterofduality",
+    "tier": 3,
+    "pickRate": 0.7,
+    "score": 82.7,
+    "champions": {
+      "Kayle": {
+        "pickRate": 3.74,
+        "score": 104.72,
+        "tier": 0
+      },
+      "Yunara": {
+        "pickRate": 1.52,
+        "score": 101.15,
+        "tier": 0
+      },
+      "XinZhao": {
+        "pickRate": 1.74,
+        "score": 96.39,
+        "tier": 0
+      },
+      "Ezreal": {
+        "pickRate": 1.2,
+        "score": 75.48,
+        "tier": 1
+      },
+      "Kaisa": {
+        "pickRate": 0.97,
+        "score": 83.64,
+        "tier": 1
+      }
+    }
+  },
+  "1056": {
+    "name": "Mind to Matter",
+    "canon": "mindtomatter",
+    "tier": 1,
+    "pickRate": 2.08,
+    "score": 86.56,
+    "champions": {
+      "Ryze": {
+        "pickRate": 8.96,
+        "score": 96.9,
+        "tier": 0
+      },
+      "Blitzcrank": {
+        "pickRate": 3.21,
+        "score": 78.88,
+        "tier": 0
+      },
+      "Swain": {
+        "pickRate": 3.09,
+        "score": 78.88,
+        "tier": 0
+      },
+      "Veigar": {
+        "pickRate": 2.91,
+        "score": 87.21,
+        "tier": 0
+      },
+      "Anivia": {
+        "pickRate": 3.66,
+        "score": 82.45,
+        "tier": 0
+      }
+    }
+  },
+  "1057": {
+    "name": "Mountain Soul",
+    "canon": "mountainsoul",
+    "tier": 4,
+    "pickRate": 0.31,
+    "score": 82.46,
+    "champions": {
+      "Nautilus": {
+        "pickRate": 0.25,
+        "score": 85.03,
+        "tier": 2
+      },
+      "TahmKench": {
+        "pickRate": 0.26,
+        "score": 81.6,
+        "tier": 2
+      },
+      "Ornn": {
+        "pickRate": 0.34,
+        "score": 81.28,
+        "tier": 2
+      },
+      "Sion": {
+        "pickRate": 0.22,
+        "score": 92.5,
+        "tier": 2
+      },
+      "Braum": {
+        "pickRate": 0.4,
+        "score": 76.33,
+        "tier": 2
+      }
+    }
+  },
+  "1058": {
+    "name": "Mystic Punch",
+    "canon": "mysticpunch",
+    "tier": 1,
+    "pickRate": 2.65,
+    "score": 83.72,
+    "champions": {
+      "MasterYi": {
+        "pickRate": 6.67,
+        "score": 92.48,
+        "tier": 0
+      },
+      "Yone": {
+        "pickRate": 6.61,
+        "score": 93.5,
+        "tier": 0
+      },
+      "Yasuo": {
+        "pickRate": 6.7,
+        "score": 95.03,
+        "tier": 0
+      },
+      "Trundle": {
+        "pickRate": 3.86,
+        "score": 84.32,
+        "tier": 0
+      },
+      "Jax": {
+        "pickRate": 5.62,
+        "score": 95.03,
+        "tier": 0
+      }
+    }
+  },
+  "1060": {
+    "name": "Ocean Soul",
+    "canon": "oceansoul",
+    "tier": 2,
+    "pickRate": 0.89,
+    "score": 85.78,
+    "champions": {
+      "Xerath": {
+        "pickRate": 0.62,
+        "score": 84.83,
+        "tier": 1
+      },
+      "TahmKench": {
+        "pickRate": 0.69,
+        "score": 87.03,
+        "tier": 1
+      },
+      "Maokai": {
+        "pickRate": 0.56,
+        "score": 89.25,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.37,
+        "score": 90.95,
+        "tier": 1
+      },
+      "Nautilus": {
+        "pickRate": 0.52,
+        "score": 85.86,
+        "tier": 1
+      }
+    }
+  },
+  "1061": {
+    "name": "Ok Boomerang",
+    "canon": "okboomerang",
+    "tier": 2,
+    "pickRate": 0.93,
+    "score": 85.53,
+    "champions": {
+      "Morgana": {
+        "pickRate": 0.76,
+        "score": 89.25,
+        "tier": 1
+      },
+      "Ziggs": {
+        "pickRate": 0.88,
+        "score": 86.86,
+        "tier": 1
+      },
+      "Jayce": {
+        "pickRate": 0.79,
+        "score": 82.79,
+        "tier": 1
+      },
+      "Yuumi": {
+        "pickRate": 1.34,
+        "score": 88.74,
+        "tier": 1
+      },
+      "Malzahar": {
+        "pickRate": 0.78,
+        "score": 91.63,
+        "tier": 1
+      }
+    }
+  },
+  "1062": {
+    "name": "Omni Soul",
+    "canon": "omnisoul",
+    "tier": 4,
+    "pickRate": 0.47,
+    "score": 87.6,
+    "champions": {
+      "TahmKench": {
+        "pickRate": 0.26,
+        "score": 91.63,
+        "tier": 1
+      },
+      "AurelionSol": {
+        "pickRate": 0.24,
+        "score": 94.2,
+        "tier": 2
+      },
+      "Zoe": {
+        "pickRate": 0.25,
+        "score": 79.86,
+        "tier": 2
+      },
+      "Braum": {
+        "pickRate": 0.23,
+        "score": 87.04,
+        "tier": 2
+      },
+      "Yorick": {
+        "pickRate": 0.25,
+        "score": 84.07,
+        "tier": 2
+      }
+    }
+  },
+  "1063": {
+    "name": "Outlaw's Grit",
+    "canon": "outlawsgrit",
+    "tier": 1,
+    "pickRate": 2,
+    "score": 84.11,
+    "champions": {
+      "Yasuo": {
+        "pickRate": 7.08,
+        "score": 90.78,
+        "tier": 0
+      },
+      "Ambessa": {
+        "pickRate": 9.14,
+        "score": 86.7,
+        "tier": 0
+      },
+      "Sylas": {
+        "pickRate": 3.89,
+        "score": 87.89,
+        "tier": 0
+      },
+      "LeeSin": {
+        "pickRate": 4.6,
+        "score": 74.8,
+        "tier": 0
+      },
+      "Fiora": {
+        "pickRate": 9.31,
+        "score": 95.88,
+        "tier": 0
+      }
+    }
+  },
+  "1064": {
+    "name": "Perseverance",
+    "canon": "perseverance",
+    "tier": 5,
+    "pickRate": 0.03,
+    "score": 84.93,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.05,
+        "score": 81.67,
+        "tier": 5
+      },
+      "Chogath": {
+        "pickRate": 0.03,
+        "score": 91.17,
+        "tier": 5
+      },
+      "TahmKench": {
+        "pickRate": 0.03,
+        "score": 78.78,
+        "tier": 5
+      },
+      "Ornn": {
+        "pickRate": 0.04,
+        "score": 84.74,
+        "tier": 5
+      },
+      "Swain": {
+        "pickRate": 0.02,
+        "score": 82.05,
+        "tier": 5
+      }
+    }
+  },
+  "1066": {
+    "name": "Quantum Computing",
+    "canon": "quantumcomputing",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 79.94,
+    "champions": {
+      "Garen": {
+        "pickRate": 0.01,
+        "score": 83.56,
+        "tier": 5
+      },
+      "Thresh": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.01,
+        "score": 81.73,
+        "tier": 5
+      },
+      "Sett": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      },
+      "Blitzcrank": {
+        "pickRate": 0,
+        "score": 58.98,
+        "tier": 5
+      }
+    }
+  },
+  "1067": {
+    "name": "Rejuvenation",
+    "canon": "rejuvenation",
+    "tier": 4,
+    "pickRate": 0.31,
+    "score": 85.01,
+    "champions": {
+      "Soraka": {
+        "pickRate": 3.24,
+        "score": 95.71,
+        "tier": 0
+      },
+      "LeeSin": {
+        "pickRate": 1.87,
+        "score": 77.86,
+        "tier": 1
+      },
+      "Mordekaiser": {
+        "pickRate": 1.18,
+        "score": 81.08,
+        "tier": 1
+      },
+      "Milio": {
+        "pickRate": 1.23,
+        "score": 88.23,
+        "tier": 1
+      },
+      "Zyra": {
+        "pickRate": 0.75,
+        "score": 88.56,
+        "tier": 1
+      }
+    }
+  },
+  "1068": {
+    "name": "Recursion",
+    "canon": "recursion",
+    "tier": 1,
+    "pickRate": 2.29,
+    "score": 84.16,
+    "champions": {
+      "Fiora": {
+        "pickRate": 1.52,
+        "score": 92.15,
+        "tier": 0
+      },
+      "Blitzcrank": {
+        "pickRate": 1.3,
+        "score": 79.39,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 1.37,
+        "score": 84.66,
+        "tier": 1
+      },
+      "Teemo": {
+        "pickRate": 1.3,
+        "score": 90.1,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.91,
+        "score": 89.25,
+        "tier": 1
+      }
+    }
+  },
+  "1069": {
+    "name": "Repulsor",
+    "canon": "repulsor",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 77.22,
+    "champions": {
+      "Mel": {
+        "pickRate": 0,
+        "score": 76.5,
+        "tier": 5
+      },
+      "Lux": {
+        "pickRate": 0,
+        "score": 51.94,
+        "tier": 5
+      },
+      "Xerath": {
+        "pickRate": 0,
+        "score": 75.56,
+        "tier": 5
+      },
+      "Ziggs": {
+        "pickRate": 0,
+        "score": 75.56,
+        "tier": 5
+      },
+      "Jinx": {
+        "pickRate": 0,
+        "score": 75.56,
+        "tier": 5
+      }
+    }
+  },
+  "1070": {
+    "name": "Restless Restoration",
+    "canon": "restlessrestoration",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 86.6,
+    "champions": {
+      "Singed": {
+        "pickRate": 0.02,
+        "score": 93.23,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.01,
+        "score": 103.89,
+        "tier": 5
+      },
+      "Chogath": {
+        "pickRate": 0.01,
+        "score": 90.56,
+        "tier": 5
+      },
+      "DrMundo": {
+        "pickRate": 0.01,
+        "score": 80.79,
+        "tier": 5
+      },
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 77.92,
+        "tier": 5
+      }
+    }
+  },
+  "1071": {
+    "name": "Scopier Weapons",
+    "canon": "scopierweapons",
+    "tier": 1,
+    "pickRate": 6.47,
+    "score": 87.27,
+    "champions": {
+      "Caitlyn": {
+        "pickRate": 8.4,
+        "score": 91.8,
+        "tier": 0
+      },
+      "Jhin": {
+        "pickRate": 8.37,
+        "score": 82.11,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 7.9,
+        "score": 98.6,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 7.05,
+        "score": 96.39,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 5.99,
+        "score": 94.52,
+        "tier": 0
+      }
+    }
+  },
+  "1072": {
+    "name": "Searing Dawn",
+    "canon": "searingdawn",
+    "tier": 2,
+    "pickRate": 1.11,
+    "score": 81.61,
+    "champions": {
+      "Morgana": {
+        "pickRate": 2.91,
+        "score": 86.19,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 2.07,
+        "score": 90.27,
+        "tier": 0
+      },
+      "Zyra": {
+        "pickRate": 2.91,
+        "score": 85.51,
+        "tier": 0
+      },
+      "Renata": {
+        "pickRate": 2.78,
+        "score": 85.17,
+        "tier": 0
+      },
+      "Blitzcrank": {
+        "pickRate": 1.33,
+        "score": 76.16,
+        "tier": 1
+      }
+    }
+  },
+  "1073": {
+    "name": "Shadow Runner",
+    "canon": "shadowrunner",
+    "tier": 1,
+    "pickRate": 2.5,
+    "score": 81.66,
+    "champions": {
+      "Shaco": {
+        "pickRate": 7.02,
+        "score": 80.75,
+        "tier": 0
+      },
+      "Pyke": {
+        "pickRate": 7.75,
+        "score": 82.45,
+        "tier": 0
+      },
+      "Locke": {
+        "pickRate": 7.14,
+        "score": 63.58,
+        "tier": 0
+      },
+      "Fizz": {
+        "pickRate": 6.52,
+        "score": 86.87,
+        "tier": 0
+      },
+      "Ekko": {
+        "pickRate": 6.74,
+        "score": 92.14,
+        "tier": 0
+      }
+    }
+  },
+  "1074": {
+    "name": "Shrink Ray",
+    "canon": "shrinkray",
+    "tier": 4,
+    "pickRate": 0.56,
+    "score": 78.8,
+    "champions": {
+      "Ashe": {
+        "pickRate": 0.28,
+        "score": 87.54,
+        "tier": 1
+      },
+      "Kayle": {
+        "pickRate": 0.43,
+        "score": 92.16,
+        "tier": 1
+      },
+      "Akshan": {
+        "pickRate": 0.29,
+        "score": 90.14,
+        "tier": 1
+      },
+      "Jinx": {
+        "pickRate": 0.24,
+        "score": 88.39,
+        "tier": 2
+      },
+      "Urgot": {
+        "pickRate": 0.84,
+        "score": 75.48,
+        "tier": 2
+      }
+    }
+  },
+  "1075": {
+    "name": "Slow Cooker",
+    "canon": "slowcooker",
+    "tier": 5,
+    "pickRate": 0.02,
+    "score": 86.26,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.03,
+        "score": 89.79,
+        "tier": 5
+      },
+      "Leona": {
+        "pickRate": 0.03,
+        "score": 93.02,
+        "tier": 5
+      },
+      "Chogath": {
+        "pickRate": 0.02,
+        "score": 79.46,
+        "tier": 5
+      },
+      "Ornn": {
+        "pickRate": 0.03,
+        "score": 95.67,
+        "tier": 5
+      },
+      "Swain": {
+        "pickRate": 0.02,
+        "score": 83.84,
+        "tier": 5
+      }
+    }
+  },
+  "1076": {
+    "name": "Sonic Boom",
+    "canon": "sonicboom",
+    "tier": 1,
+    "pickRate": 1.09,
+    "score": 87.85,
+    "champions": {
+      "Soraka": {
+        "pickRate": 5.42,
+        "score": 88.57,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 2.86,
+        "score": 89.25,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 5.43,
+        "score": 93.16,
+        "tier": 0
+      },
+      "Yuumi": {
+        "pickRate": 5.67,
+        "score": 91.63,
+        "tier": 0
+      },
+      "Nami": {
+        "pickRate": 5.55,
+        "score": 85.68,
+        "tier": 0
+      }
+    }
+  },
+  "1077": {
+    "name": "Soul Siphon",
+    "canon": "soulsiphon",
+    "tier": 1,
+    "pickRate": 3.07,
+    "score": 90.15,
+    "champions": {
+      "Graves": {
+        "pickRate": 8.81,
+        "score": 98.09,
+        "tier": 0
+      },
+      "Samira": {
+        "pickRate": 9.8,
+        "score": 91.46,
+        "tier": 0
+      },
+      "Jhin": {
+        "pickRate": 5.18,
+        "score": 84.15,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 4.38,
+        "score": 95.03,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 4.11,
+        "score": 100.47,
+        "tier": 0
+      }
+    }
+  },
+  "1079": {
+    "name": "Symphony of War",
+    "canon": "symphonyofwar",
+    "tier": 3,
+    "pickRate": 0.81,
+    "score": 81.77,
+    "champions": {
+      "MasterYi": {
+        "pickRate": 1.84,
+        "score": 88.23,
+        "tier": 0
+      },
+      "XinZhao": {
+        "pickRate": 2,
+        "score": 89.42,
+        "tier": 0
+      },
+      "Briar": {
+        "pickRate": 2.35,
+        "score": 88.41,
+        "tier": 0
+      },
+      "Zaahen": {
+        "pickRate": 1.93,
+        "score": 93.34,
+        "tier": 0
+      },
+      "Olaf": {
+        "pickRate": 2.83,
+        "score": 84.66,
+        "tier": 0
+      }
+    }
+  },
+  "1080": {
+    "name": "Tank It Or Leave It",
+    "canon": "tankitorleaveit",
+    "tier": 1,
+    "pickRate": 1.04,
+    "score": 88.85,
+    "champions": {
+      "Graves": {
+        "pickRate": 2.66,
+        "score": 98.77,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 1.56,
+        "score": 99.79,
+        "tier": 0
+      },
+      "Samira": {
+        "pickRate": 2.19,
+        "score": 92.65,
+        "tier": 0
+      },
+      "Akshan": {
+        "pickRate": 1.44,
+        "score": 95.87,
+        "tier": 0
+      },
+      "Aphelios": {
+        "pickRate": 1.47,
+        "score": 95.71,
+        "tier": 0
+      }
+    }
+  },
+  "1081": {
+    "name": "Tap Dancer",
+    "canon": "tapdancer",
+    "tier": 1,
+    "pickRate": 2.36,
+    "score": 88.62,
+    "champions": {
+      "Jinx": {
+        "pickRate": 5.05,
+        "score": 100.13,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 3.42,
+        "score": 96.39,
+        "tier": 0
+      },
+      "Yunara": {
+        "pickRate": 4.34,
+        "score": 98.26,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 2.97,
+        "score": 95.71,
+        "tier": 0
+      },
+      "Zeri": {
+        "pickRate": 7.28,
+        "score": 86.19,
+        "tier": 0
+      }
+    }
+  },
+  "1082": {
+    "name": "The Brutalizer",
+    "canon": "thebrutalizer",
+    "tier": 5,
+    "pickRate": 0.02,
+    "score": 82.83,
+    "champions": {
+      "Jayce": {
+        "pickRate": 0.05,
+        "score": 86.76,
+        "tier": 5
+      },
+      "Jhin": {
+        "pickRate": 0.02,
+        "score": 81.06,
+        "tier": 5
+      },
+      "Gangplank": {
+        "pickRate": 0.05,
+        "score": 83.88,
+        "tier": 5
+      },
+      "Zed": {
+        "pickRate": 0.03,
+        "score": 89.97,
+        "tier": 5
+      },
+      "Varus": {
+        "pickRate": 0.02,
+        "score": 78.25,
+        "tier": 5
+      }
+    }
+  },
+  "1084": {
+    "name": "Thread the Needle",
+    "canon": "threadtheneedle",
+    "tier": 1,
+    "pickRate": 3.52,
+    "score": 78.39,
+    "champions": {
+      "Zed": {
+        "pickRate": 7.11,
+        "score": 79.56,
+        "tier": 0
+      },
+      "LeeSin": {
+        "pickRate": 5.89,
+        "score": 69.53,
+        "tier": 0
+      },
+      "Pantheon": {
+        "pickRate": 6.8,
+        "score": 77.52,
+        "tier": 0
+      },
+      "Kaisa": {
+        "pickRate": 2.85,
+        "score": 79.9,
+        "tier": 0
+      },
+      "Nidalee": {
+        "pickRate": 4.58,
+        "score": 73.78,
+        "tier": 0
+      }
+    }
+  },
+  "1085": {
+    "name": "Tormentor",
+    "canon": "tormentor",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 81.93,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 93.6,
+        "tier": 5
+      },
+      "Leona": {
+        "pickRate": 0.02,
+        "score": 105.44,
+        "tier": 5
+      },
+      "Amumu": {
+        "pickRate": 0.02,
+        "score": 85,
+        "tier": 5
+      },
+      "Maokai": {
+        "pickRate": 0.01,
+        "score": 74.52,
+        "tier": 5
+      },
+      "Malphite": {
+        "pickRate": 0.01,
+        "score": 87.97,
+        "tier": 5
+      }
+    }
+  },
+  "1086": {
+    "name": "Trueshot Prodigy",
+    "canon": "trueshotprodigy",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 78.8,
+    "champions": {
+      "Jayce": {
+        "pickRate": 0.01,
+        "score": 87.4,
+        "tier": 5
+      },
+      "Xerath": {
+        "pickRate": 0.01,
+        "score": 88.86,
+        "tier": 5
+      },
+      "Ezreal": {
+        "pickRate": 0.01,
+        "score": 66.29,
+        "tier": 5
+      },
+      "Varus": {
+        "pickRate": 0.01,
+        "score": 85,
+        "tier": 5
+      },
+      "Nidalee": {
+        "pickRate": 0.01,
+        "score": 84.26,
+        "tier": 5
+      }
+    }
+  },
+  "1087": {
+    "name": "Typhoon",
+    "canon": "typhoon",
+    "tier": 1,
+    "pickRate": 2.8,
+    "score": 84.35,
+    "champions": {
+      "Jinx": {
+        "pickRate": 4.32,
+        "score": 92.31,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 3.68,
+        "score": 88.74,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 4.08,
+        "score": 91.97,
+        "tier": 0
+      },
+      "Yunara": {
+        "pickRate": 3.61,
+        "score": 89.93,
+        "tier": 0
+      },
+      "Twitch": {
+        "pickRate": 3.63,
+        "score": 80.41,
+        "tier": 0
+      }
+    }
+  },
+  "1088": {
+    "name": "Ultimate Revolution",
+    "canon": "ultimaterevolution",
+    "tier": 2,
+    "pickRate": 2.85,
+    "score": 79.36,
+    "champions": {
+      "Karthus": {
+        "pickRate": 5.1,
+        "score": 90.44,
+        "tier": 0
+      },
+      "Malphite": {
+        "pickRate": 3.06,
+        "score": 83.64,
+        "tier": 0
+      },
+      "Rumble": {
+        "pickRate": 3.04,
+        "score": 80.24,
+        "tier": 0
+      },
+      "Orianna": {
+        "pickRate": 2.78,
+        "score": 79.73,
+        "tier": 0
+      },
+      "Amumu": {
+        "pickRate": 2.21,
+        "score": 83.47,
+        "tier": 0
+      }
+    }
+  },
+  "1092": {
+    "name": "Vulnerability",
+    "canon": "vulnerability",
+    "tier": 3,
+    "pickRate": 0.78,
+    "score": 84.93,
+    "champions": {
+      "Lucian": {
+        "pickRate": 0.92,
+        "score": 100.3,
+        "tier": 0
+      },
+      "MissFortune": {
+        "pickRate": 0.69,
+        "score": 91.46,
+        "tier": 1
+      },
+      "Ashe": {
+        "pickRate": 0.62,
+        "score": 87.55,
+        "tier": 1
+      },
+      "Smolder": {
+        "pickRate": 0.68,
+        "score": 88.56,
+        "tier": 1
+      },
+      "Trundle": {
+        "pickRate": 0.81,
+        "score": 81.08,
+        "tier": 1
+      }
+    }
+  },
+  "1095": {
+    "name": "Windspeaker's Blessing",
+    "canon": "windspeakersblessing",
+    "tier": 4,
+    "pickRate": 0.49,
+    "score": 98.21,
+    "champions": {
+      "Soraka": {
+        "pickRate": 2.89,
+        "score": 102.34,
+        "tier": 0
+      },
+      "Yuumi": {
+        "pickRate": 2.95,
+        "score": 105.4,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 2.85,
+        "score": 97.92,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 2.4,
+        "score": 104.38,
+        "tier": 0
+      },
+      "Milio": {
+        "pickRate": 2.39,
+        "score": 107.94,
+        "tier": 0
+      }
+    }
+  },
+  "1097": {
+    "name": "Witchful Thinking",
+    "canon": "witchfulthinking",
+    "tier": 1,
+    "pickRate": 6.11,
+    "score": 84.32,
+    "champions": {
+      "Xerath": {
+        "pickRate": 6.12,
+        "score": 83.81,
+        "tier": 0
+      },
+      "Brand": {
+        "pickRate": 4.68,
+        "score": 88.91,
+        "tier": 0
+      },
+      "Lux": {
+        "pickRate": 5.79,
+        "score": 84.66,
+        "tier": 0
+      },
+      "Karthus": {
+        "pickRate": 5.35,
+        "score": 86.7,
+        "tier": 0
+      },
+      "Mel": {
+        "pickRate": 5.62,
+        "score": 80.41,
+        "tier": 0
+      }
+    }
+  },
+  "1098": {
+    "name": "With Haste",
+    "canon": "withhaste",
+    "tier": 1,
+    "pickRate": 2.96,
+    "score": 85.4,
+    "champions": {
+      "Zilean": {
+        "pickRate": 4.55,
+        "score": 88.74,
+        "tier": 0
+      },
+      "Lillia": {
+        "pickRate": 4.41,
+        "score": 91.46,
+        "tier": 0
+      },
+      "Mel": {
+        "pickRate": 2.53,
+        "score": 83.13,
+        "tier": 0
+      },
+      "Ahri": {
+        "pickRate": 2.68,
+        "score": 87.55,
+        "tier": 0
+      },
+      "Vladimir": {
+        "pickRate": 4.66,
+        "score": 89.59,
+        "tier": 0
+      }
+    }
+  },
+  "1103": {
+    "name": "Bread And Butter",
+    "canon": "breadandbutter",
+    "tier": 2,
+    "pickRate": 1.49,
+    "score": 79.74,
+    "champions": {
+      "Fiora": {
+        "pickRate": 1.56,
+        "score": 92.64,
+        "tier": 0
+      },
+      "MasterYi": {
+        "pickRate": 1.05,
+        "score": 82.79,
+        "tier": 1
+      },
+      "Veigar": {
+        "pickRate": 0.78,
+        "score": 81.77,
+        "tier": 1
+      },
+      "Morgana": {
+        "pickRate": 0.58,
+        "score": 85.01,
+        "tier": 1
+      },
+      "Hecarim": {
+        "pickRate": 1.05,
+        "score": 84.32,
+        "tier": 1
+      }
+    }
+  },
+  "1104": {
+    "name": "Minionmancer",
+    "canon": "minionmancer",
+    "tier": 5,
+    "pickRate": 0.06,
+    "score": 85.19,
+    "champions": {
+      "Malzahar": {
+        "pickRate": 1,
+        "score": 87.38,
+        "tier": 1
+      },
+      "Annie": {
+        "pickRate": 1.66,
+        "score": 82.28,
+        "tier": 1
+      },
+      "Ivern": {
+        "pickRate": 0.86,
+        "score": 79.71,
+        "tier": 1
+      },
+      "Zyra": {
+        "pickRate": 0.02,
+        "score": 99.29,
+        "tier": 5
+      },
+      "Heimerdinger": {
+        "pickRate": 0.03,
+        "score": 102.31,
+        "tier": 5
+      }
+    }
+  },
+  "1105": {
+    "name": "Homeguard",
+    "canon": "homeguard",
+    "tier": 1,
+    "pickRate": 1.08,
+    "score": 87.77,
+    "champions": {
+      "Xerath": {
+        "pickRate": 0.82,
+        "score": 90.28,
+        "tier": 1
+      },
+      "Mel": {
+        "pickRate": 0.81,
+        "score": 86.02,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.53,
+        "score": 98.26,
+        "tier": 1
+      },
+      "Lux": {
+        "pickRate": 0.68,
+        "score": 87.9,
+        "tier": 1
+      },
+      "Zilean": {
+        "pickRate": 0.84,
+        "score": 90.6,
+        "tier": 1
+      }
+    }
+  },
+  "1107": {
+    "name": "Twice Thrice",
+    "canon": "twicethrice",
+    "tier": 5,
+    "pickRate": 0.03,
+    "score": 81.94,
+    "champions": {
+      "Kalista": {
+        "pickRate": 0.05,
+        "score": 88.35,
+        "tier": 4
+      },
+      "Vayne": {
+        "pickRate": 0.04,
+        "score": 96.13,
+        "tier": 5
+      },
+      "Kaisa": {
+        "pickRate": 0.03,
+        "score": 83.08,
+        "tier": 5
+      },
+      "Ashe": {
+        "pickRate": 0.02,
+        "score": 87.36,
+        "tier": 5
+      },
+      "Jinx": {
+        "pickRate": 0.03,
+        "score": 81.95,
+        "tier": 5
+      }
+    }
+  },
+  "1108": {
+    "name": "Self Destruct",
+    "canon": "selfdestruct",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 80.34,
+    "champions": {
+      "Malphite": {
+        "pickRate": 0.01,
+        "score": 83.59,
+        "tier": 5
+      },
+      "DrMundo": {
+        "pickRate": 0.01,
+        "score": 78.66,
+        "tier": 5
+      },
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 73.06,
+        "tier": 5
+      },
+      "Shaco": {
+        "pickRate": 0.01,
+        "score": 63.75,
+        "tier": 5
+      },
+      "Alistar": {
+        "pickRate": 0.01,
+        "score": 84.26,
+        "tier": 5
+      }
+    }
+  },
+  "1112": {
+    "name": "Ultimate Unstoppable",
+    "canon": "ultimateunstoppable",
+    "tier": 2,
+    "pickRate": 1.89,
+    "score": 78.66,
+    "champions": {
+      "Katarina": {
+        "pickRate": 4.1,
+        "score": 79.9,
+        "tier": 0
+      },
+      "Samira": {
+        "pickRate": 2.51,
+        "score": 87.72,
+        "tier": 0
+      },
+      "Fiddlesticks": {
+        "pickRate": 3.02,
+        "score": 83.3,
+        "tier": 0
+      },
+      "Nunu": {
+        "pickRate": 3.43,
+        "score": 73.27,
+        "tier": 0
+      },
+      "Kassadin": {
+        "pickRate": 2.22,
+        "score": 89.75,
+        "tier": 0
+      }
+    }
+  },
+  "1113": {
+    "name": "Skilled Sniper",
+    "canon": "skilledsniper",
+    "tier": 1,
+    "pickRate": 5.07,
+    "score": 81.32,
+    "champions": {
+      "MissFortune": {
+        "pickRate": 6.23,
+        "score": 90.44,
+        "tier": 0
+      },
+      "Xerath": {
+        "pickRate": 7.92,
+        "score": 81.94,
+        "tier": 0
+      },
+      "Morgana": {
+        "pickRate": 6.95,
+        "score": 86.53,
+        "tier": 0
+      },
+      "Jayce": {
+        "pickRate": 8.49,
+        "score": 75.31,
+        "tier": 0
+      },
+      "Lux": {
+        "pickRate": 6.89,
+        "score": 81.6,
+        "tier": 0
+      }
+    }
+  },
+  "1115": {
+    "name": "Scopiest Weapons",
+    "canon": "scopiestweapons",
+    "tier": 1,
+    "pickRate": 4.26,
+    "score": 86.61,
+    "champions": {
+      "Jhin": {
+        "pickRate": 8.1,
+        "score": 80.92,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 7.6,
+        "score": 90.78,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 5.86,
+        "score": 97.75,
+        "tier": 0
+      },
+      "Senna": {
+        "pickRate": 5.26,
+        "score": 84.49,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 4.02,
+        "score": 94.86,
+        "tier": 0
+      }
+    }
+  },
+  "1116": {
+    "name": "Flashy",
+    "canon": "flashy",
+    "tier": 3,
+    "pickRate": 0.79,
+    "score": 82.08,
+    "champions": {
+      "Sett": {
+        "pickRate": 0.48,
+        "score": 95.87,
+        "tier": 1
+      },
+      "Annie": {
+        "pickRate": 0.7,
+        "score": 83.65,
+        "tier": 1
+      },
+      "Yasuo": {
+        "pickRate": 0.44,
+        "score": 85.32,
+        "tier": 1
+      },
+      "Yone": {
+        "pickRate": 0.39,
+        "score": 85.32,
+        "tier": 1
+      },
+      "Fiddlesticks": {
+        "pickRate": 0.48,
+        "score": 85.53,
+        "tier": 1
+      }
+    }
+  },
+  "1118": {
+    "name": "Critical Healing",
+    "canon": "criticalhealing",
+    "tier": 5,
+    "pickRate": 0.1,
+    "score": 80.46,
+    "champions": {
+      "Senna": {
+        "pickRate": 1.11,
+        "score": 86.19,
+        "tier": 1
+      },
+      "LeeSin": {
+        "pickRate": 1.27,
+        "score": 70.39,
+        "tier": 2
+      },
+      "DrMundo": {
+        "pickRate": 0.02,
+        "score": 96.19,
+        "tier": 5
+      },
+      "Soraka": {
+        "pickRate": 0.03,
+        "score": 83.44,
+        "tier": 5
+      },
+      "Swain": {
+        "pickRate": 0.02,
+        "score": 78.02,
+        "tier": 5
+      }
+    }
+  },
+  "1129": {
+    "name": "Marksmage",
+    "canon": "marksmage",
+    "tier": 1,
+    "pickRate": 2.4,
+    "score": 85.42,
+    "champions": {
+      "Sylas": {
+        "pickRate": 7.29,
+        "score": 91.97,
+        "tier": 0
+      },
+      "Kayle": {
+        "pickRate": 8.62,
+        "score": 101.49,
+        "tier": 0
+      },
+      "Kaisa": {
+        "pickRate": 4.32,
+        "score": 82.62,
+        "tier": 0
+      },
+      "Fizz": {
+        "pickRate": 7.19,
+        "score": 85.68,
+        "tier": 0
+      },
+      "Azir": {
+        "pickRate": 9.73,
+        "score": 93.16,
+        "tier": 0
+      }
+    }
+  },
+  "1133": {
+    "name": "Magic Missile",
+    "canon": "magicmissile",
+    "tier": 0,
+    "pickRate": 8.98,
+    "score": 84.38,
+    "champions": {
+      "Brand": {
+        "pickRate": 7.9,
+        "score": 91.97,
+        "tier": 0
+      },
+      "Xerath": {
+        "pickRate": 7.46,
+        "score": 86.19,
+        "tier": 0
+      },
+      "Mel": {
+        "pickRate": 7.38,
+        "score": 79.39,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 6.54,
+        "score": 95.2,
+        "tier": 0
+      },
+      "Karthus": {
+        "pickRate": 6.84,
+        "score": 87.04,
+        "tier": 0
+      }
+    }
+  },
+  "1134": {
+    "name": "Draw Your Sword",
+    "canon": "drawyoursword",
+    "tier": 1,
+    "pickRate": 1.29,
+    "score": 102.39,
+    "champions": {
+      "Graves": {
+        "pickRate": 9.82,
+        "score": 112.37,
+        "tier": 0
+      },
+      "Ezreal": {
+        "pickRate": 3.91,
+        "score": 100.64,
+        "tier": 0
+      },
+      "Samira": {
+        "pickRate": 6.13,
+        "score": 117.47,
+        "tier": 0
+      },
+      "Corki": {
+        "pickRate": 3.04,
+        "score": 103.87,
+        "tier": 0
+      },
+      "Varus": {
+        "pickRate": 1.33,
+        "score": 103.87,
+        "tier": 0
+      }
+    }
+  },
+  "1136": {
+    "name": "Slap Around",
+    "canon": "slaparound",
+    "tier": 1,
+    "pickRate": 3.11,
+    "score": 82.78,
+    "champions": {
+      "Morgana": {
+        "pickRate": 3.73,
+        "score": 86.87,
+        "tier": 0
+      },
+      "Blitzcrank": {
+        "pickRate": 3.61,
+        "score": 76.33,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 3.76,
+        "score": 82.96,
+        "tier": 0
+      },
+      "Alistar": {
+        "pickRate": 4.37,
+        "score": 82.96,
+        "tier": 0
+      },
+      "Maokai": {
+        "pickRate": 3.61,
+        "score": 85.85,
+        "tier": 0
+      }
+    }
+  },
+  "1138": {
+    "name": "Goredrink",
+    "canon": "goredrink",
+    "tier": 1,
+    "pickRate": 5.23,
+    "score": 83.8,
+    "champions": {
+      "Sylas": {
+        "pickRate": 6.01,
+        "score": 83.47,
+        "tier": 0
+      },
+      "Yone": {
+        "pickRate": 6.72,
+        "score": 88.57,
+        "tier": 0
+      },
+      "Yasuo": {
+        "pickRate": 6.72,
+        "score": 90.95,
+        "tier": 0
+      },
+      "Mordekaiser": {
+        "pickRate": 6.69,
+        "score": 85.17,
+        "tier": 0
+      },
+      "Lillia": {
+        "pickRate": 4.96,
+        "score": 96.05,
+        "tier": 0
+      }
+    }
+  },
+  "1141": {
+    "name": "All For You",
+    "canon": "allforyou",
+    "tier": 1,
+    "pickRate": 1.42,
+    "score": 86.78,
+    "champions": {
+      "Soraka": {
+        "pickRate": 9.06,
+        "score": 87.72,
+        "tier": 0
+      },
+      "Yuumi": {
+        "pickRate": 8.61,
+        "score": 88.74,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 7.59,
+        "score": 91.29,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 8.25,
+        "score": 86.02,
+        "tier": 0
+      },
+      "Nami": {
+        "pickRate": 7.51,
+        "score": 85.17,
+        "tier": 0
+      }
+    }
+  },
+  "1149": {
+    "name": "Impassable",
+    "canon": "impassable",
+    "tier": 2,
+    "pickRate": 1.61,
+    "score": 80.74,
+    "champions": {
+      "Galio": {
+        "pickRate": 2.77,
+        "score": 86.02,
+        "tier": 0
+      },
+      "Maokai": {
+        "pickRate": 2.18,
+        "score": 85.17,
+        "tier": 0
+      },
+      "Rammus": {
+        "pickRate": 1.94,
+        "score": 86.19,
+        "tier": 0
+      },
+      "Thresh": {
+        "pickRate": 2.71,
+        "score": 73.78,
+        "tier": 1
+      },
+      "Blitzcrank": {
+        "pickRate": 1.86,
+        "score": 77.69,
+        "tier": 1
+      }
+    }
+  },
+  "1150": {
+    "name": "Bread And Jam",
+    "canon": "breadandjam",
+    "tier": 2,
+    "pickRate": 1.11,
+    "score": 80.49,
+    "champions": {
+      "Sett": {
+        "pickRate": 0.84,
+        "score": 92.82,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.5,
+        "score": 85.16,
+        "tier": 1
+      },
+      "Zilean": {
+        "pickRate": 0.85,
+        "score": 86.52,
+        "tier": 1
+      },
+      "Vladimir": {
+        "pickRate": 1.19,
+        "score": 82.12,
+        "tier": 1
+      },
+      "Morgana": {
+        "pickRate": 0.47,
+        "score": 85.51,
+        "tier": 1
+      }
+    }
+  },
+  "1151": {
+    "name": "Bread and Cheese",
+    "canon": "breadandcheese",
+    "tier": 2,
+    "pickRate": 1.23,
+    "score": 80.96,
+    "champions": {
+      "AurelionSol": {
+        "pickRate": 1.09,
+        "score": 89.25,
+        "tier": 1
+      },
+      "Trundle": {
+        "pickRate": 0.87,
+        "score": 84.14,
+        "tier": 1
+      },
+      "Fizz": {
+        "pickRate": 0.95,
+        "score": 84.32,
+        "tier": 1
+      },
+      "Veigar": {
+        "pickRate": 0.77,
+        "score": 81.61,
+        "tier": 1
+      },
+      "MissFortune": {
+        "pickRate": 0.48,
+        "score": 88.23,
+        "tier": 1
+      }
+    }
+  },
+  "1152": {
+    "name": "Steel Your Heart",
+    "canon": "steelyourheart",
+    "tier": 1,
+    "pickRate": 4.67,
+    "score": 89.71,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 8.41,
+        "score": 99.11,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 7.45,
+        "score": 87.72,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 7.55,
+        "score": 103.7,
+        "tier": 0
+      },
+      "Leona": {
+        "pickRate": 8.35,
+        "score": 91.8,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 7.76,
+        "score": 108.12,
+        "tier": 0
+      }
+    }
+  },
+  "1154": {
+    "name": "Urf's Champion",
+    "canon": "urfschampion",
+    "tier": 4,
+    "pickRate": 0.3,
+    "score": 83.68,
+    "champions": {
+      "Jhin": {
+        "pickRate": 0.15,
+        "score": 89.1,
+        "tier": 4
+      },
+      "Caitlyn": {
+        "pickRate": 0.09,
+        "score": 96.37,
+        "tier": 4
+      },
+      "Ezreal": {
+        "pickRate": 0.09,
+        "score": 83.49,
+        "tier": 4
+      },
+      "Senna": {
+        "pickRate": 0.1,
+        "score": 88.88,
+        "tier": 4
+      },
+      "Pyke": {
+        "pickRate": 0.16,
+        "score": 77.72,
+        "tier": 4
+      }
+    }
+  },
+  "1156": {
+    "name": "Wooglet's Witchcap",
+    "canon": "woogletswitchcap",
+    "tier": 1,
+    "pickRate": 2.3,
+    "score": 87.42,
+    "champions": {
+      "Xerath": {
+        "pickRate": 2.03,
+        "score": 86.53,
+        "tier": 0
+      },
+      "Ahri": {
+        "pickRate": 2.1,
+        "score": 95.88,
+        "tier": 0
+      },
+      "Aurora": {
+        "pickRate": 2.56,
+        "score": 98.43,
+        "tier": 0
+      },
+      "Zoe": {
+        "pickRate": 2.91,
+        "score": 79.39,
+        "tier": 0
+      },
+      "Ryze": {
+        "pickRate": 1.81,
+        "score": 92.48,
+        "tier": 0
+      }
+    }
+  },
+  "1170": {
+    "name": "Scoped Weapons",
+    "canon": "scopedweapons",
+    "tier": 1,
+    "pickRate": 2.96,
+    "score": 84.82,
+    "champions": {
+      "Caitlyn": {
+        "pickRate": 4.44,
+        "score": 89.25,
+        "tier": 0
+      },
+      "Jhin": {
+        "pickRate": 4.14,
+        "score": 80.24,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 3.75,
+        "score": 95.03,
+        "tier": 0
+      },
+      "Senna": {
+        "pickRate": 3.7,
+        "score": 82.79,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 3.54,
+        "score": 92.99,
+        "tier": 0
+      }
+    }
+  },
+  "1180": {
+    "name": "Big Brain",
+    "canon": "bigbrain",
+    "tier": 1,
+    "pickRate": 2.42,
+    "score": 86.51,
+    "champions": {
+      "Veigar": {
+        "pickRate": 4.16,
+        "score": 93.16,
+        "tier": 0
+      },
+      "Ahri": {
+        "pickRate": 2.62,
+        "score": 91.29,
+        "tier": 0
+      },
+      "Brand": {
+        "pickRate": 1.7,
+        "score": 94.18,
+        "tier": 0
+      },
+      "AurelionSol": {
+        "pickRate": 2.78,
+        "score": 90.61,
+        "tier": 0
+      },
+      "Malzahar": {
+        "pickRate": 2.18,
+        "score": 88.57,
+        "tier": 0
+      }
+    }
+  },
+  "1181": {
+    "name": "Heavy Hitter",
+    "canon": "heavyhitter",
+    "tier": 1,
+    "pickRate": 5.52,
+    "score": 89.62,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 9.73,
+        "score": 96.9,
+        "tier": 0
+      },
+      "TahmKench": {
+        "pickRate": 9.11,
+        "score": 90.1,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 7.8,
+        "score": 89.08,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 8.41,
+        "score": 99.62,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 8.92,
+        "score": 102.51,
+        "tier": 0
+      }
+    }
+  },
+  "1187": {
+    "name": "Flashbang",
+    "canon": "flashbang",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 80.32,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 74.95,
+        "tier": 5
+      },
+      "Malphite": {
+        "pickRate": 0.01,
+        "score": 63.98,
+        "tier": 5
+      },
+      "Sett": {
+        "pickRate": 0.01,
+        "score": 97.93,
+        "tier": 5
+      },
+      "LeeSin": {
+        "pickRate": 0.01,
+        "score": 94.44,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.01,
+        "score": 74.38,
+        "tier": 5
+      }
+    }
+  },
+  "1194": {
+    "name": "Fey Magic",
+    "canon": "feymagic",
+    "tier": 2,
+    "pickRate": 2.31,
+    "score": 79.62,
+    "champions": {
+      "Anivia": {
+        "pickRate": 6.81,
+        "score": 82.11,
+        "tier": 0
+      },
+      "Blitzcrank": {
+        "pickRate": 3.22,
+        "score": 77.18,
+        "tier": 0
+      },
+      "Teemo": {
+        "pickRate": 2.98,
+        "score": 84.49,
+        "tier": 0
+      },
+      "Velkoz": {
+        "pickRate": 3.17,
+        "score": 82.62,
+        "tier": 0
+      },
+      "Yuumi": {
+        "pickRate": 3.14,
+        "score": 87.38,
+        "tier": 0
+      }
+    }
+  },
+  "1195": {
+    "name": "Giant Slayer",
+    "canon": "giantslayer",
+    "tier": 1,
+    "pickRate": 4.4,
+    "score": 89.15,
+    "champions": {
+      "Jhin": {
+        "pickRate": 6.61,
+        "score": 86.36,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 4.66,
+        "score": 95.71,
+        "tier": 0
+      },
+      "Senna": {
+        "pickRate": 3.73,
+        "score": 87.04,
+        "tier": 0
+      },
+      "MissFortune": {
+        "pickRate": 2.97,
+        "score": 87.55,
+        "tier": 0
+      },
+      "Ezreal": {
+        "pickRate": 3.13,
+        "score": 85.68,
+        "tier": 0
+      }
+    }
+  },
+  "1198": {
+    "name": "Holy Fire",
+    "canon": "holyfire",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 79.36,
+    "champions": {
+      "Seraphine": {
+        "pickRate": 0.02,
+        "score": 72.1,
+        "tier": 5
+      },
+      "Soraka": {
+        "pickRate": 0.03,
+        "score": 80.45,
+        "tier": 5
+      },
+      "Karma": {
+        "pickRate": 0.02,
+        "score": 83.41,
+        "tier": 5
+      },
+      "Sona": {
+        "pickRate": 0.03,
+        "score": 82.52,
+        "tier": 5
+      },
+      "Yuumi": {
+        "pickRate": 0.03,
+        "score": 73.8,
+        "tier": 5
+      }
+    }
+  },
+  "1204": {
+    "name": "Stackosaurus Rex",
+    "canon": "stackosaurusrex",
+    "tier": 4,
+    "pickRate": 0.27,
+    "score": 84.92,
+    "champions": {
+      "Veigar": {
+        "pickRate": 0.56,
+        "score": 94.51,
+        "tier": 1
+      },
+      "Swain": {
+        "pickRate": 0.4,
+        "score": 85.18,
+        "tier": 1
+      },
+      "AurelionSol": {
+        "pickRate": 0.48,
+        "score": 101.51,
+        "tier": 1
+      },
+      "Smolder": {
+        "pickRate": 0.34,
+        "score": 92.49,
+        "tier": 1
+      },
+      "Sion": {
+        "pickRate": 0.33,
+        "score": 91.97,
+        "tier": 1
+      }
+    }
+  },
+  "1205": {
+    "name": "ADAPt",
+    "canon": "adapt",
+    "tier": 3,
+    "pickRate": 0.84,
+    "score": 83.08,
+    "champions": {
+      "Ryze": {
+        "pickRate": 1.09,
+        "score": 102.85,
+        "tier": 0
+      },
+      "Karthus": {
+        "pickRate": 0.79,
+        "score": 83.8,
+        "tier": 1
+      },
+      "Xerath": {
+        "pickRate": 0.69,
+        "score": 83.46,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.53,
+        "score": 84.32,
+        "tier": 1
+      },
+      "Veigar": {
+        "pickRate": 0.76,
+        "score": 84.14,
+        "tier": 1
+      }
+    }
+  },
+  "1206": {
+    "name": "escAPADe",
+    "canon": "escapade",
+    "tier": 2,
+    "pickRate": 1.29,
+    "score": 83.91,
+    "champions": {
+      "Yasuo": {
+        "pickRate": 1.82,
+        "score": 93.5,
+        "tier": 0
+      },
+      "Graves": {
+        "pickRate": 1.11,
+        "score": 100.31,
+        "tier": 0
+      },
+      "Fiora": {
+        "pickRate": 1.33,
+        "score": 96.38,
+        "tier": 0
+      },
+      "Jayce": {
+        "pickRate": 1.71,
+        "score": 78.88,
+        "tier": 1
+      },
+      "Ezreal": {
+        "pickRate": 1.14,
+        "score": 83.64,
+        "tier": 1
+      }
+    }
+  },
+  "1208": {
+    "name": "Orbital Laser",
+    "canon": "orbitallaser",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 82.52,
+    "champions": {
+      "Xerath": {
+        "pickRate": 0,
+        "score": 98.42,
+        "tier": 5
+      },
+      "AurelionSol": {
+        "pickRate": 0,
+        "score": 103.89,
+        "tier": 5
+      },
+      "Teemo": {
+        "pickRate": 0,
+        "score": 90,
+        "tier": 5
+      },
+      "Lux": {
+        "pickRate": 0,
+        "score": 50,
+        "tier": 5
+      },
+      "Blitzcrank": {
+        "pickRate": 0,
+        "score": 79.33,
+        "tier": 5
+      }
+    }
+  },
+  "1211": {
+    "name": "It's Killing Time",
+    "canon": "itskillingtime",
+    "tier": 1,
+    "pickRate": 4.4,
+    "score": 79.35,
+    "champions": {
+      "Karthus": {
+        "pickRate": 5.81,
+        "score": 85.51,
+        "tier": 0
+      },
+      "Zed": {
+        "pickRate": 6.09,
+        "score": 79.9,
+        "tier": 0
+      },
+      "Brand": {
+        "pickRate": 2.92,
+        "score": 87.55,
+        "tier": 0
+      },
+      "Rumble": {
+        "pickRate": 6.71,
+        "score": 85,
+        "tier": 0
+      },
+      "Locke": {
+        "pickRate": 4.94,
+        "score": 59.5,
+        "tier": 0
+      }
+    }
+  },
+  "1214": {
+    "name": "Spin To Win",
+    "canon": "spintowin",
+    "tier": 2,
+    "pickRate": 1.12,
+    "score": 82.9,
+    "champions": {
+      "Hecarim": {
+        "pickRate": 8.98,
+        "score": 88.23,
+        "tier": 0
+      },
+      "Garen": {
+        "pickRate": 8.5,
+        "score": 77.52,
+        "tier": 0
+      },
+      "Sylas": {
+        "pickRate": 3.38,
+        "score": 81.6,
+        "tier": 0
+      },
+      "Kayn": {
+        "pickRate": 7.94,
+        "score": 92.14,
+        "tier": 0
+      },
+      "Darius": {
+        "pickRate": 7.23,
+        "score": 77.69,
+        "tier": 0
+      }
+    }
+  },
+  "1220": {
+    "name": "Fan The Hammer",
+    "canon": "fanthehammer",
+    "tier": 1,
+    "pickRate": 2.62,
+    "score": 87.31,
+    "champions": {
+      "Vayne": {
+        "pickRate": 5.79,
+        "score": 103.7,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 3.54,
+        "score": 95.54,
+        "tier": 0
+      },
+      "Jhin": {
+        "pickRate": 2.93,
+        "score": 85.51,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 2.72,
+        "score": 90.95,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 2.39,
+        "score": 86.7,
+        "tier": 0
+      }
+    }
+  },
+  "1225": {
+    "name": "Dual Wield",
+    "canon": "dualwield",
+    "tier": 1,
+    "pickRate": 4.38,
+    "score": 91.85,
+    "champions": {
+      "Vayne": {
+        "pickRate": 8.27,
+        "score": 105.06,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 7.42,
+        "score": 101.32,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 5.44,
+        "score": 94.18,
+        "tier": 0
+      },
+      "Yunara": {
+        "pickRate": 7.52,
+        "score": 98.43,
+        "tier": 0
+      },
+      "Twitch": {
+        "pickRate": 6.72,
+        "score": 90.61,
+        "tier": 0
+      }
+    }
+  },
+  "1237": {
+    "name": "Transmute: Gold",
+    "canon": "transmutegold",
+    "tier": 1,
+    "pickRate": 2.64,
+    "score": 83.09,
+    "champions": {
+      "Brand": {
+        "pickRate": 0.99,
+        "score": 88.06,
+        "tier": 1
+      },
+      "Xerath": {
+        "pickRate": 1.05,
+        "score": 82.62,
+        "tier": 1
+      },
+      "Mel": {
+        "pickRate": 1.11,
+        "score": 79.73,
+        "tier": 1
+      },
+      "TahmKench": {
+        "pickRate": 1.22,
+        "score": 85.51,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 0.97,
+        "score": 85.35,
+        "tier": 1
+      }
+    }
+  },
+  "1238": {
+    "name": "Transmute: Prismatic",
+    "canon": "transmuteprismatic",
+    "tier": 1,
+    "pickRate": 4.95,
+    "score": 85.22,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 1.6,
+        "score": 91.12,
+        "tier": 0
+      },
+      "Yasuo": {
+        "pickRate": 2.33,
+        "score": 89.25,
+        "tier": 0
+      },
+      "Graves": {
+        "pickRate": 1.5,
+        "score": 97.58,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 1.09,
+        "score": 98.77,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 1.59,
+        "score": 95.88,
+        "tier": 0
+      }
+    }
+  },
+  "1243": {
+    "name": "Transmute: Chaos",
+    "canon": "transmutechaos",
+    "tier": 2,
+    "pickRate": 1.32,
+    "score": 82.96,
+    "champions": {
+      "TahmKench": {
+        "pickRate": 0.62,
+        "score": 85.52,
+        "tier": 1
+      },
+      "Caitlyn": {
+        "pickRate": 0.34,
+        "score": 89.93,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 0.44,
+        "score": 86.53,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.34,
+        "score": 88.22,
+        "tier": 1
+      },
+      "Ahri": {
+        "pickRate": 0.48,
+        "score": 87.71,
+        "tier": 1
+      }
+    }
+  },
+  "1250": {
+    "name": "Slow And Steady",
+    "canon": "slowandsteady",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 81.79,
+    "champions": {
+      "Zeri": {
+        "pickRate": 0.05,
+        "score": 112.9,
+        "tier": 4
+      },
+      "Graves": {
+        "pickRate": 0.03,
+        "score": 95.92,
+        "tier": 5
+      },
+      "Ezreal": {
+        "pickRate": 0.02,
+        "score": 77.1,
+        "tier": 5
+      },
+      "Garen": {
+        "pickRate": 0.04,
+        "score": 95.38,
+        "tier": 5
+      },
+      "Jayce": {
+        "pickRate": 0.03,
+        "score": 88.52,
+        "tier": 5
+      }
+    }
+  },
+  "1301": {
+    "name": "Divine Intervention",
+    "canon": "divineintervention",
+    "tier": 2,
+    "pickRate": 1.76,
+    "score": 81.15,
+    "champions": {
+      "Yuumi": {
+        "pickRate": 6.04,
+        "score": 89.93,
+        "tier": 0
+      },
+      "Soraka": {
+        "pickRate": 2.78,
+        "score": 83.64,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 3.79,
+        "score": 85,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 2.67,
+        "score": 88.91,
+        "tier": 0
+      },
+      "Renata": {
+        "pickRate": 4.24,
+        "score": 86.87,
+        "tier": 0
+      }
+    }
+  },
+  "1305": {
+    "name": "Leg Day",
+    "canon": "legday",
+    "tier": 2,
+    "pickRate": 1.26,
+    "score": 85.46,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.65,
+        "score": 92.82,
+        "tier": 1
+      },
+      "Singed": {
+        "pickRate": 0.86,
+        "score": 87.72,
+        "tier": 1
+      },
+      "TahmKench": {
+        "pickRate": 0.6,
+        "score": 86.18,
+        "tier": 1
+      },
+      "Xerath": {
+        "pickRate": 0.44,
+        "score": 86.19,
+        "tier": 1
+      },
+      "Sion": {
+        "pickRate": 0.59,
+        "score": 97.58,
+        "tier": 1
+      }
+    }
+  },
+  "1308": {
+    "name": "FireFox",
+    "canon": "firefox",
+    "tier": 4,
+    "pickRate": 0.5,
+    "score": 85.2,
+    "champions": {
+      "Ahri": {
+        "pickRate": 0.77,
+        "score": 90.1,
+        "tier": 1
+      },
+      "Aurora": {
+        "pickRate": 0.34,
+        "score": 91.8,
+        "tier": 1
+      },
+      "Orianna": {
+        "pickRate": 0.42,
+        "score": 86.17,
+        "tier": 1
+      },
+      "Viktor": {
+        "pickRate": 0.34,
+        "score": 95,
+        "tier": 1
+      },
+      "Syndra": {
+        "pickRate": 0.36,
+        "score": 90.93,
+        "tier": 1
+      }
+    }
+  },
+  "1310": {
+    "name": "Clown College",
+    "canon": "clowncollege",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 90.29,
+    "champions": {
+      "Shaco": {
+        "pickRate": 0.02,
+        "score": 86.03,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.03,
+        "score": 93.95,
+        "tier": 5
+      },
+      "Zed": {
+        "pickRate": 0.02,
+        "score": 106,
+        "tier": 5
+      },
+      "LeeSin": {
+        "pickRate": 0.03,
+        "score": 76.68,
+        "tier": 5
+      },
+      "Khazix": {
+        "pickRate": 0.04,
+        "score": 84.01,
+        "tier": 5
+      }
+    }
+  },
+  "1311": {
+    "name": "Overflow",
+    "canon": "overflow",
+    "tier": 2,
+    "pickRate": 1.88,
+    "score": 83.11,
+    "champions": {
+      "Ryze": {
+        "pickRate": 11.51,
+        "score": 95.54,
+        "tier": 0
+      },
+      "Karthus": {
+        "pickRate": 3.38,
+        "score": 83.81,
+        "tier": 0
+      },
+      "Fiddlesticks": {
+        "pickRate": 2.99,
+        "score": 85.68,
+        "tier": 0
+      },
+      "Cassiopeia": {
+        "pickRate": 3.29,
+        "score": 78.71,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 2.15,
+        "score": 89.25,
+        "tier": 0
+      }
+    }
+  },
+  "1313": {
+    "name": "Cheating",
+    "canon": "cheating",
+    "tier": 5,
+    "pickRate": 0.02,
+    "score": 83.96,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 72.68,
+        "tier": 5
+      },
+      "Chogath": {
+        "pickRate": 0.01,
+        "score": 77.41,
+        "tier": 5
+      },
+      "Malphite": {
+        "pickRate": 0.01,
+        "score": 80.36,
+        "tier": 5
+      },
+      "TahmKench": {
+        "pickRate": 0.01,
+        "score": 80.95,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.01,
+        "score": 87.52,
+        "tier": 5
+      }
+    }
+  },
+  "1314": {
+    "name": "Mighty Shield",
+    "canon": "mightyshield",
+    "tier": 4,
+    "pickRate": 0.29,
+    "score": 79.44,
+    "champions": {
+      "Karma": {
+        "pickRate": 1.97,
+        "score": 77.86,
+        "tier": 1
+      },
+      "Seraphine": {
+        "pickRate": 1.09,
+        "score": 89.42,
+        "tier": 1
+      },
+      "KSante": {
+        "pickRate": 2.65,
+        "score": 69.18,
+        "tier": 1
+      },
+      "Sona": {
+        "pickRate": 1.12,
+        "score": 89.94,
+        "tier": 1
+      },
+      "Milio": {
+        "pickRate": 0.79,
+        "score": 80.25,
+        "tier": 1
+      }
+    }
+  },
+  "1315": {
+    "name": "Swift and Safe",
+    "canon": "swiftandsafe",
+    "tier": 4,
+    "pickRate": 0.51,
+    "score": 85.23,
+    "champions": {
+      "Sylas": {
+        "pickRate": 0.52,
+        "score": 91.97,
+        "tier": 1
+      },
+      "Fizz": {
+        "pickRate": 0.59,
+        "score": 89.43,
+        "tier": 1
+      },
+      "Yasuo": {
+        "pickRate": 0.64,
+        "score": 94.17,
+        "tier": 1
+      },
+      "Maokai": {
+        "pickRate": 0.42,
+        "score": 84.84,
+        "tier": 1
+      },
+      "Ahri": {
+        "pickRate": 0.36,
+        "score": 87.03,
+        "tier": 1
+      }
+    }
+  },
+  "1316": {
+    "name": "Wind Beneath Blade",
+    "canon": "windbeneathblade",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 83.73,
+    "champions": {
+      "Jayce": {
+        "pickRate": 0.02,
+        "score": 85.33,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.02,
+        "score": 94.92,
+        "tier": 5
+      },
+      "Zed": {
+        "pickRate": 0.02,
+        "score": 88.32,
+        "tier": 5
+      },
+      "Shaco": {
+        "pickRate": 0.01,
+        "score": 79.43,
+        "tier": 5
+      },
+      "Talon": {
+        "pickRate": 0.02,
+        "score": 79.73,
+        "tier": 5
+      }
+    }
+  },
+  "1317": {
+    "name": "Upgrade Cutlass",
+    "canon": "upgradecutlass",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 74.28,
+    "champions": {
+      "Pyke": {
+        "pickRate": 0,
+        "score": 52.76,
+        "tier": 5
+      },
+      "Pantheon": {
+        "pickRate": 0,
+        "score": 64.76,
+        "tier": 5
+      },
+      "Zed": {
+        "pickRate": 0,
+        "score": 59.5,
+        "tier": 5
+      },
+      "Shaco": {
+        "pickRate": 0,
+        "score": 37.78,
+        "tier": 5
+      },
+      "LeeSin": {
+        "pickRate": 0,
+        "score": 56.67,
+        "tier": 5
+      }
+    }
+  },
+  "1318": {
+    "name": "Upgrade Zhonya's",
+    "canon": "upgradezhonyas",
+    "tier": 1,
+    "pickRate": 2.68,
+    "score": 83.68,
+    "champions": {
+      "Fiddlesticks": {
+        "pickRate": 6.24,
+        "score": 88.91,
+        "tier": 0
+      },
+      "Ahri": {
+        "pickRate": 3.1,
+        "score": 88.06,
+        "tier": 0
+      },
+      "Mel": {
+        "pickRate": 2.77,
+        "score": 78.03,
+        "tier": 0
+      },
+      "Swain": {
+        "pickRate": 2.65,
+        "score": 80.75,
+        "tier": 0
+      },
+      "Rumble": {
+        "pickRate": 4.62,
+        "score": 87.55,
+        "tier": 0
+      }
+    }
+  },
+  "1319": {
+    "name": "Upgrade Immolate",
+    "canon": "upgradeimmolate",
+    "tier": 1,
+    "pickRate": 1.58,
+    "score": 88.17,
+    "champions": {
+      "Galio": {
+        "pickRate": 3.34,
+        "score": 89.93,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 3.01,
+        "score": 86.36,
+        "tier": 0
+      },
+      "Amumu": {
+        "pickRate": 4.34,
+        "score": 86.7,
+        "tier": 0
+      },
+      "Maokai": {
+        "pickRate": 2.96,
+        "score": 90.61,
+        "tier": 0
+      },
+      "DrMundo": {
+        "pickRate": 2.73,
+        "score": 89.42,
+        "tier": 0
+      }
+    }
+  },
+  "1320": {
+    "name": "Upgrade Collector",
+    "canon": "upgradecollector",
+    "tier": 1,
+    "pickRate": 3.51,
+    "score": 81.63,
+    "champions": {
+      "Jhin": {
+        "pickRate": 4.58,
+        "score": 82.96,
+        "tier": 0
+      },
+      "Graves": {
+        "pickRate": 5.44,
+        "score": 95.03,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 3.56,
+        "score": 89.76,
+        "tier": 0
+      },
+      "Zed": {
+        "pickRate": 5.17,
+        "score": 77.86,
+        "tier": 0
+      },
+      "Lucian": {
+        "pickRate": 2.71,
+        "score": 85.85,
+        "tier": 0
+      }
+    }
+  },
+  "1321": {
+    "name": "Gash",
+    "canon": "gash",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 83.33,
+    "champions": {
+      "Rammus": {
+        "pickRate": 0.02,
+        "score": 86.39,
+        "tier": 5
+      },
+      "Thresh": {
+        "pickRate": 0.01,
+        "score": 60.48,
+        "tier": 5
+      },
+      "Garen": {
+        "pickRate": 0.01,
+        "score": 71.67,
+        "tier": 5
+      },
+      "Yone": {
+        "pickRate": 0.01,
+        "score": 82.32,
+        "tier": 5
+      },
+      "MasterYi": {
+        "pickRate": 0.01,
+        "score": 91.07,
+        "tier": 5
+      }
+    }
+  },
+  "1322": {
+    "name": "Get Excited!",
+    "canon": "getexcited",
+    "tier": 1,
+    "pickRate": 2.88,
+    "score": 80.86,
+    "champions": {
+      "MasterYi": {
+        "pickRate": 7.54,
+        "score": 83.64,
+        "tier": 0
+      },
+      "Yone": {
+        "pickRate": 5.98,
+        "score": 82.62,
+        "tier": 0
+      },
+      "Twitch": {
+        "pickRate": 3.66,
+        "score": 81.6,
+        "tier": 0
+      },
+      "Pyke": {
+        "pickRate": 4.13,
+        "score": 77.18,
+        "tier": 0
+      },
+      "Hecarim": {
+        "pickRate": 4.59,
+        "score": 85.34,
+        "tier": 0
+      }
+    }
+  },
+  "1323": {
+    "name": "Cruelty",
+    "canon": "cruelty",
+    "tier": 2,
+    "pickRate": 1.82,
+    "score": 81.96,
+    "champions": {
+      "Trundle": {
+        "pickRate": 4.62,
+        "score": 78.54,
+        "tier": 0
+      },
+      "Morgana": {
+        "pickRate": 2.89,
+        "score": 82.45,
+        "tier": 0
+      },
+      "Neeko": {
+        "pickRate": 4.15,
+        "score": 79.73,
+        "tier": 0
+      },
+      "Galio": {
+        "pickRate": 2.53,
+        "score": 89.08,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 1.52,
+        "score": 93.5,
+        "tier": 0
+      }
+    }
+  },
+  "1324": {
+    "name": "Protein Shake",
+    "canon": "proteinshake",
+    "tier": 4,
+    "pickRate": 0.41,
+    "score": 82.43,
+    "champions": {
+      "Thresh": {
+        "pickRate": 2.91,
+        "score": 75.82,
+        "tier": 0
+      },
+      "KSante": {
+        "pickRate": 4.15,
+        "score": 71.57,
+        "tier": 0
+      },
+      "Taric": {
+        "pickRate": 4.66,
+        "score": 91.12,
+        "tier": 0
+      },
+      "Alistar": {
+        "pickRate": 1.61,
+        "score": 86.19,
+        "tier": 1
+      },
+      "Soraka": {
+        "pickRate": 1.37,
+        "score": 88.57,
+        "tier": 1
+      }
+    }
+  },
+  "1325": {
+    "name": "Glass Cannon",
+    "canon": "glasscannon",
+    "tier": 3,
+    "pickRate": 0.95,
+    "score": 75.16,
+    "champions": {
+      "Xerath": {
+        "pickRate": 1.33,
+        "score": 79.22,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 1.23,
+        "score": 80.58,
+        "tier": 1
+      },
+      "Jayce": {
+        "pickRate": 1.41,
+        "score": 75.14,
+        "tier": 1
+      },
+      "Gangplank": {
+        "pickRate": 1.24,
+        "score": 83.64,
+        "tier": 1
+      },
+      "Evelynn": {
+        "pickRate": 1.33,
+        "score": 79.55,
+        "tier": 1
+      }
+    }
+  },
+  "1326": {
+    "name": "Nightstalking",
+    "canon": "nightstalking",
+    "tier": 2,
+    "pickRate": 2.95,
+    "score": 75.32,
+    "champions": {
+      "Pyke": {
+        "pickRate": 8.99,
+        "score": 76.67,
+        "tier": 0
+      },
+      "Shaco": {
+        "pickRate": 5.98,
+        "score": 70.21,
+        "tier": 0
+      },
+      "Locke": {
+        "pickRate": 7.8,
+        "score": 60.01,
+        "tier": 0
+      },
+      "Zed": {
+        "pickRate": 5.77,
+        "score": 77.86,
+        "tier": 0
+      },
+      "MasterYi": {
+        "pickRate": 5.83,
+        "score": 83.3,
+        "tier": 0
+      }
+    }
+  },
+  "1327": {
+    "name": "Adamant",
+    "canon": "adamant",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 80.49,
+    "champions": {
+      "Leona": {
+        "pickRate": 0.02,
+        "score": 87.96,
+        "tier": 5
+      },
+      "Alistar": {
+        "pickRate": 0.02,
+        "score": 86.96,
+        "tier": 5
+      },
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 82.5,
+        "tier": 5
+      },
+      "Nautilus": {
+        "pickRate": 0.01,
+        "score": 86.81,
+        "tier": 5
+      },
+      "Thresh": {
+        "pickRate": 0.02,
+        "score": 81.18,
+        "tier": 5
+      }
+    }
+  },
+  "1328": {
+    "name": "Critical Rhythm",
+    "canon": "criticalrhythm",
+    "tier": 1,
+    "pickRate": 3.19,
+    "score": 86.31,
+    "champions": {
+      "Jinx": {
+        "pickRate": 5.61,
+        "score": 96.22,
+        "tier": 0
+      },
+      "Twitch": {
+        "pickRate": 6.98,
+        "score": 83.98,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 4.43,
+        "score": 90.44,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 3.89,
+        "score": 92.65,
+        "tier": 0
+      },
+      "Vayne": {
+        "pickRate": 3.73,
+        "score": 94.69,
+        "tier": 0
+      }
+    }
+  },
+  "1329": {
+    "name": "Biggest Snowball Ever",
+    "canon": "biggestsnowballever",
+    "tier": 3,
+    "pickRate": 0.73,
+    "score": 81.92,
+    "champions": {
+      "Zoe": {
+        "pickRate": 0.69,
+        "score": 83.63,
+        "tier": 1
+      },
+      "Ahri": {
+        "pickRate": 0.28,
+        "score": 86.55,
+        "tier": 1
+      },
+      "Singed": {
+        "pickRate": 0.36,
+        "score": 88.08,
+        "tier": 1
+      },
+      "Sion": {
+        "pickRate": 0.28,
+        "score": 91.65,
+        "tier": 1
+      },
+      "Shen": {
+        "pickRate": 0.33,
+        "score": 89.76,
+        "tier": 1
+      }
+    }
+  },
+  "1330": {
+    "name": "ReEnergize",
+    "canon": "reenergize",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 80.45,
+    "champions": {
+      "Jhin": {
+        "pickRate": 0.01,
+        "score": 88.84,
+        "tier": 5
+      },
+      "Caitlyn": {
+        "pickRate": 0.01,
+        "score": 79.75,
+        "tier": 5
+      },
+      "Senna": {
+        "pickRate": 0.01,
+        "score": 84.38,
+        "tier": 5
+      },
+      "Ezreal": {
+        "pickRate": 0.01,
+        "score": 70.96,
+        "tier": 5
+      },
+      "Smolder": {
+        "pickRate": 0.01,
+        "score": 93.95,
+        "tier": 5
+      }
+    }
+  },
+  "1331": {
+    "name": "Empyrean Promise",
+    "canon": "empyreanpromise",
+    "tier": 4,
+    "pickRate": 0.47,
+    "score": 85.95,
+    "champions": {
+      "Soraka": {
+        "pickRate": 3.09,
+        "score": 87.04,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 2.58,
+        "score": 86.87,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 1.95,
+        "score": 92.82,
+        "tier": 0
+      },
+      "Nami": {
+        "pickRate": 2.22,
+        "score": 86.7,
+        "tier": 0
+      },
+      "Milio": {
+        "pickRate": 1.99,
+        "score": 91.28,
+        "tier": 0
+      }
+    }
+  },
+  "1332": {
+    "name": "Ominous Pact",
+    "canon": "ominouspact",
+    "tier": 3,
+    "pickRate": 0.83,
+    "score": 83.87,
+    "champions": {
+      "Singed": {
+        "pickRate": 2.61,
+        "score": 91.8,
+        "tier": 0
+      },
+      "Lillia": {
+        "pickRate": 1.94,
+        "score": 92.31,
+        "tier": 0
+      },
+      "Vladimir": {
+        "pickRate": 2.51,
+        "score": 90.27,
+        "tier": 0
+      },
+      "Gwen": {
+        "pickRate": 2.63,
+        "score": 96.22,
+        "tier": 0
+      },
+      "Swain": {
+        "pickRate": 1.82,
+        "score": 73.27,
+        "tier": 1
+      }
+    }
+  },
+  "1333": {
+    "name": "Escape Plan",
+    "canon": "escapeplan",
+    "tier": 1,
+    "pickRate": 1.31,
+    "score": 88.74,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.67,
+        "score": 94.02,
+        "tier": 1
+      },
+      "TahmKench": {
+        "pickRate": 0.63,
+        "score": 86.35,
+        "tier": 1
+      },
+      "Nautilus": {
+        "pickRate": 0.57,
+        "score": 88.06,
+        "tier": 1
+      },
+      "Swain": {
+        "pickRate": 0.49,
+        "score": 85.52,
+        "tier": 1
+      },
+      "Singed": {
+        "pickRate": 0.66,
+        "score": 88.75,
+        "tier": 1
+      }
+    }
+  },
+  "1334": {
+    "name": "Snowball Upgrade",
+    "canon": "snowballupgrade",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 83.96,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 64.96,
+        "tier": 5
+      },
+      "Morgana": {
+        "pickRate": 0.01,
+        "score": 75.16,
+        "tier": 5
+      },
+      "Malphite": {
+        "pickRate": 0.01,
+        "score": 85,
+        "tier": 5
+      },
+      "Neeko": {
+        "pickRate": 0.01,
+        "score": 89.57,
+        "tier": 5
+      },
+      "Alistar": {
+        "pickRate": 0.01,
+        "score": 80.95,
+        "tier": 5
+      }
+    }
+  },
+  "1335": {
+    "name": "Goldrend",
+    "canon": "goldrend",
+    "tier": 4,
+    "pickRate": 0.28,
+    "score": 85.1,
+    "champions": {
+      "AurelionSol": {
+        "pickRate": 0.17,
+        "score": 92.15,
+        "tier": 3
+      },
+      "Udyr": {
+        "pickRate": 0.18,
+        "score": 86.46,
+        "tier": 3
+      },
+      "Jhin": {
+        "pickRate": 0.15,
+        "score": 85.33,
+        "tier": 4
+      },
+      "MissFortune": {
+        "pickRate": 0.1,
+        "score": 89.9,
+        "tier": 4
+      },
+      "Xerath": {
+        "pickRate": 0.13,
+        "score": 89.07,
+        "tier": 4
+      }
+    }
+  },
+  "1336": {
+    "name": "Upgrade Infinity Edge",
+    "canon": "upgradeinfinityedge",
+    "tier": 0,
+    "pickRate": 6.97,
+    "score": 89.61,
+    "champions": {
+      "Jhin": {
+        "pickRate": 9.27,
+        "score": 86.02,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 7.5,
+        "score": 97.41,
+        "tier": 0
+      },
+      "Graves": {
+        "pickRate": 10.43,
+        "score": 98.43,
+        "tier": 0
+      },
+      "Lucian": {
+        "pickRate": 8.04,
+        "score": 92.82,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 7.24,
+        "score": 101.66,
+        "tier": 0
+      }
+    }
+  },
+  "1337": {
+    "name": "King Me",
+    "canon": "kingme",
+    "tier": 4,
+    "pickRate": 0.37,
+    "score": 84.8,
+    "champions": {
+      "Pyke": {
+        "pickRate": 0.31,
+        "score": 79.57,
+        "tier": 2
+      },
+      "Khazix": {
+        "pickRate": 0.24,
+        "score": 81.82,
+        "tier": 2
+      },
+      "TahmKench": {
+        "pickRate": 0.21,
+        "score": 82.62,
+        "tier": 3
+      },
+      "Sion": {
+        "pickRate": 0.2,
+        "score": 91.8,
+        "tier": 3
+      },
+      "Leblanc": {
+        "pickRate": 0.22,
+        "score": 75.5,
+        "tier": 3
+      }
+    }
+  },
+  "1338": {
+    "name": "Upgrade Hubris",
+    "canon": "upgradehubris",
+    "tier": 5,
+    "pickRate": 0.02,
+    "score": 84.05,
+    "champions": {
+      "Khazix": {
+        "pickRate": 0.05,
+        "score": 81.95,
+        "tier": 4
+      },
+      "Naafiri": {
+        "pickRate": 0.06,
+        "score": 86.4,
+        "tier": 4
+      },
+      "Jayce": {
+        "pickRate": 0.04,
+        "score": 88.51,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.05,
+        "score": 91.38,
+        "tier": 5
+      },
+      "Zed": {
+        "pickRate": 0.04,
+        "score": 87.77,
+        "tier": 5
+      }
+    }
+  },
+  "1339": {
+    "name": "Laser Heal",
+    "canon": "laserheal",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 79.07,
+    "champions": {
+      "Yuumi": {
+        "pickRate": 0.02,
+        "score": 75.71,
+        "tier": 5
+      },
+      "Soraka": {
+        "pickRate": 0.01,
+        "score": 90.17,
+        "tier": 5
+      },
+      "Seraphine": {
+        "pickRate": 0.01,
+        "score": 74.49,
+        "tier": 5
+      },
+      "Lulu": {
+        "pickRate": 0.01,
+        "score": 78.78,
+        "tier": 5
+      },
+      "Thresh": {
+        "pickRate": 0.01,
+        "score": 97.44,
+        "tier": 5
+      }
+    }
+  },
+  "1340": {
+    "name": "Upgrade Mikael's Blessing",
+    "canon": "upgrademikaelsblessing",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 89.02,
+    "champions": {
+      "Yuumi": {
+        "pickRate": 0.02,
+        "score": 93.98,
+        "tier": 5
+      },
+      "Soraka": {
+        "pickRate": 0.01,
+        "score": 97.79,
+        "tier": 5
+      },
+      "Lulu": {
+        "pickRate": 0.02,
+        "score": 85,
+        "tier": 5
+      },
+      "Nami": {
+        "pickRate": 0.02,
+        "score": 99.03,
+        "tier": 5
+      },
+      "Seraphine": {
+        "pickRate": 0.01,
+        "score": 84,
+        "tier": 5
+      }
+    }
+  },
+  "1341": {
+    "name": "Hat on a Hat",
+    "canon": "hatonahat",
+    "tier": 5,
+    "pickRate": 0.02,
+    "score": 84.45,
+    "champions": {
+      "Xerath": {
+        "pickRate": 0.02,
+        "score": 92.59,
+        "tier": 5
+      },
+      "Mel": {
+        "pickRate": 0.02,
+        "score": 90.74,
+        "tier": 5
+      },
+      "Veigar": {
+        "pickRate": 0.03,
+        "score": 81.81,
+        "tier": 5
+      },
+      "Karthus": {
+        "pickRate": 0.02,
+        "score": 86.1,
+        "tier": 5
+      },
+      "Nidalee": {
+        "pickRate": 0.03,
+        "score": 70.78,
+        "tier": 5
+      }
+    }
+  },
+  "1342": {
+    "name": "Snowball Roulette",
+    "canon": "snowballroulette",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 85.12,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0,
+        "score": 80.14,
+        "tier": 5
+      },
+      "Neeko": {
+        "pickRate": 0.01,
+        "score": 72.03,
+        "tier": 5
+      },
+      "Morgana": {
+        "pickRate": 0,
+        "score": 89.47,
+        "tier": 5
+      },
+      "Malphite": {
+        "pickRate": 0,
+        "score": 91.07,
+        "tier": 5
+      },
+      "Zoe": {
+        "pickRate": 0.01,
+        "score": 107.04,
+        "tier": 5
+      }
+    }
+  },
+  "1343": {
+    "name": "Sneakerhead",
+    "canon": "sneakerhead",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 94.32,
+    "champions": {
+      "Caitlyn": {
+        "pickRate": 0,
+        "score": 127.5,
+        "tier": 5
+      },
+      "Varus": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      },
+      "Fiora": {
+        "pickRate": 0,
+        "score": 56.67,
+        "tier": 5
+      },
+      "Gnar": {
+        "pickRate": 0,
+        "score": 56.67,
+        "tier": 5
+      },
+      "Jhin": {
+        "pickRate": 0,
+        "score": 56.67,
+        "tier": 5
+      }
+    }
+  },
+  "1344": {
+    "name": "Final Form",
+    "canon": "finalform",
+    "tier": 1,
+    "pickRate": 3.25,
+    "score": 84.05,
+    "champions": {
+      "Jayce": {
+        "pickRate": 3.79,
+        "score": 85.17,
+        "tier": 0
+      },
+      "Samira": {
+        "pickRate": 4.8,
+        "score": 87.72,
+        "tier": 0
+      },
+      "Locke": {
+        "pickRate": 4.41,
+        "score": 63.75,
+        "tier": 0
+      },
+      "Zed": {
+        "pickRate": 3.75,
+        "score": 88.4,
+        "tier": 0
+      },
+      "Katarina": {
+        "pickRate": 4.71,
+        "score": 84.66,
+        "tier": 0
+      }
+    }
+  },
+  "1345": {
+    "name": "Spiritual Purification",
+    "canon": "spiritualpurification",
+    "tier": 2,
+    "pickRate": 1.44,
+    "score": 78.34,
+    "champions": {
+      "Jayce": {
+        "pickRate": 1.34,
+        "score": 74.97,
+        "tier": 1
+      },
+      "Trundle": {
+        "pickRate": 1.47,
+        "score": 78.71,
+        "tier": 1
+      },
+      "Udyr": {
+        "pickRate": 2.36,
+        "score": 78.54,
+        "tier": 1
+      },
+      "Pantheon": {
+        "pickRate": 1.65,
+        "score": 76.84,
+        "tier": 1
+      },
+      "Darius": {
+        "pickRate": 2.1,
+        "score": 74.12,
+        "tier": 1
+      }
+    }
+  },
+  "1346": {
+    "name": "Vampirism",
+    "canon": "vampirism",
+    "tier": 5,
+    "pickRate": 0.05,
+    "score": 89.5,
+    "champions": {
+      "Aatrox": {
+        "pickRate": 0.07,
+        "score": 83.85,
+        "tier": 4
+      },
+      "Zaahen": {
+        "pickRate": 0.08,
+        "score": 103.42,
+        "tier": 4
+      },
+      "Kayn": {
+        "pickRate": 0.05,
+        "score": 95.93,
+        "tier": 4
+      },
+      "Briar": {
+        "pickRate": 0.05,
+        "score": 99.66,
+        "tier": 4
+      },
+      "Sylas": {
+        "pickRate": 0.03,
+        "score": 89.83,
+        "tier": 5
+      }
+    }
+  },
+  "1347": {
+    "name": "Poltergeist",
+    "canon": "poltergeist",
+    "tier": 4,
+    "pickRate": 0.27,
+    "score": 80.21,
+    "champions": {
+      "Olaf": {
+        "pickRate": 0.27,
+        "score": 79.74,
+        "tier": 2
+      },
+      "Viktor": {
+        "pickRate": 0.2,
+        "score": 89.46,
+        "tier": 3
+      },
+      "Orianna": {
+        "pickRate": 0.2,
+        "score": 82.42,
+        "tier": 3
+      },
+      "Vladimir": {
+        "pickRate": 0.19,
+        "score": 80.21,
+        "tier": 3
+      },
+      "Mel": {
+        "pickRate": 0.16,
+        "score": 74.83,
+        "tier": 4
+      }
+    }
+  },
+  "1348": {
+    "name": "Flash 2",
+    "canon": "flash2",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 80.75,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.01,
+        "score": 81.48,
+        "tier": 5
+      },
+      "LeeSin": {
+        "pickRate": 0.01,
+        "score": 54.64,
+        "tier": 5
+      },
+      "Malphite": {
+        "pickRate": 0.01,
+        "score": 91.89,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.01,
+        "score": 80.68,
+        "tier": 5
+      },
+      "Sett": {
+        "pickRate": 0.01,
+        "score": 89.32,
+        "tier": 5
+      }
+    }
+  },
+  "1349": {
+    "name": "Ultimate Awakening",
+    "canon": "ultimateawakening",
+    "tier": 2,
+    "pickRate": 2.53,
+    "score": 80.02,
+    "champions": {
+      "Hecarim": {
+        "pickRate": 1.61,
+        "score": 103.7,
+        "tier": 0
+      },
+      "Jax": {
+        "pickRate": 1.31,
+        "score": 96.91,
+        "tier": 0
+      },
+      "Karthus": {
+        "pickRate": 1.66,
+        "score": 79.22,
+        "tier": 1
+      },
+      "Teemo": {
+        "pickRate": 1.43,
+        "score": 84.83,
+        "tier": 1
+      },
+      "Lux": {
+        "pickRate": 1.45,
+        "score": 81.26,
+        "tier": 1
+      }
+    }
+  },
+  "1353": {
+    "name": "Tank Engine",
+    "canon": "tankengine",
+    "tier": 0,
+    "pickRate": 6.96,
+    "score": 88.04,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 12.57,
+        "score": 96.05,
+        "tier": 0
+      },
+      "TahmKench": {
+        "pickRate": 10.94,
+        "score": 94.18,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 9.74,
+        "score": 87.38,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 10.72,
+        "score": 99.45,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 10.56,
+        "score": 97.92,
+        "tier": 0
+      }
+    }
+  },
+  "1356": {
+    "name": "Critical Missile",
+    "canon": "criticalmissile",
+    "tier": 0,
+    "pickRate": 6.2,
+    "score": 93.75,
+    "champions": {
+      "Jinx": {
+        "pickRate": 10.75,
+        "score": 106.59,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 8.88,
+        "score": 98.6,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 8.47,
+        "score": 97.92,
+        "tier": 0
+      },
+      "Lucian": {
+        "pickRate": 9.56,
+        "score": 93.33,
+        "tier": 0
+      },
+      "Yunara": {
+        "pickRate": 10.39,
+        "score": 103.87,
+        "tier": 0
+      }
+    }
+  },
+  "1358": {
+    "name": "Pinball",
+    "canon": "pinball",
+    "tier": 4,
+    "pickRate": 0.54,
+    "score": 77.96,
+    "champions": {
+      "Fiora": {
+        "pickRate": 0.28,
+        "score": 86.91,
+        "tier": 1
+      },
+      "Blitzcrank": {
+        "pickRate": 0.43,
+        "score": 75.49,
+        "tier": 2
+      },
+      "Malphite": {
+        "pickRate": 0.35,
+        "score": 80.25,
+        "tier": 2
+      },
+      "Pyke": {
+        "pickRate": 0.41,
+        "score": 77.85,
+        "tier": 2
+      },
+      "Garen": {
+        "pickRate": 0.44,
+        "score": 72.4,
+        "tier": 2
+      }
+    }
+  },
+  "1361": {
+    "name": "Icathia's Fall",
+    "canon": "icathiasfall",
+    "tier": 1,
+    "pickRate": 1.3,
+    "score": 95.39,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 2.01,
+        "score": 97.41,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 2.12,
+        "score": 95.88,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 2.41,
+        "score": 109.48,
+        "tier": 0
+      },
+      "Leona": {
+        "pickRate": 2.47,
+        "score": 98.6,
+        "tier": 0
+      },
+      "Shen": {
+        "pickRate": 2.94,
+        "score": 102,
+        "tier": 0
+      }
+    }
+  },
+  "1372": {
+    "name": "I'm a Baby Kitty Where is Mama",
+    "canon": "imababykittywhereismama",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 81.37,
+    "champions": {
+      "Soraka": {
+        "pickRate": 0.01,
+        "score": 75.98,
+        "tier": 5
+      },
+      "Yuumi": {
+        "pickRate": 0.02,
+        "score": 80.28,
+        "tier": 5
+      },
+      "Lulu": {
+        "pickRate": 0.02,
+        "score": 84.19,
+        "tier": 5
+      },
+      "Sona": {
+        "pickRate": 0.01,
+        "score": 95.37,
+        "tier": 5
+      },
+      "Seraphine": {
+        "pickRate": 0,
+        "score": 79.33,
+        "tier": 5
+      }
+    }
+  },
+  "1373": {
+    "name": "Shrink Engine",
+    "canon": "shrinkengine",
+    "tier": 1,
+    "pickRate": 1.91,
+    "score": 85.53,
+    "champions": {
+      "Lillia": {
+        "pickRate": 1.13,
+        "score": 96.55,
+        "tier": 0
+      },
+      "Teemo": {
+        "pickRate": 1.11,
+        "score": 87.55,
+        "tier": 1
+      },
+      "Pyke": {
+        "pickRate": 1.5,
+        "score": 79.73,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.72,
+        "score": 91.46,
+        "tier": 1
+      },
+      "Blitzcrank": {
+        "pickRate": 0.8,
+        "score": 80.06,
+        "tier": 1
+      }
+    }
+  },
+  "1375": {
+    "name": "Soul Eater",
+    "canon": "souleater",
+    "tier": 1,
+    "pickRate": 3.75,
+    "score": 81.52,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 5.16,
+        "score": 76.5,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 5.84,
+        "score": 85.68,
+        "tier": 0
+      },
+      "Alistar": {
+        "pickRate": 6.31,
+        "score": 85,
+        "tier": 0
+      },
+      "Maokai": {
+        "pickRate": 5.33,
+        "score": 88.91,
+        "tier": 0
+      },
+      "Leona": {
+        "pickRate": 6.33,
+        "score": 87.04,
+        "tier": 0
+      }
+    }
+  },
+  "1379": {
+    "name": "Upgrade Sword of Blossoming Dawn",
+    "canon": "upgradeswordofblossomingdawn",
+    "tier": 4,
+    "pickRate": 0.22,
+    "score": 83.35,
+    "champions": {
+      "Senna": {
+        "pickRate": 1.27,
+        "score": 89.93,
+        "tier": 1
+      },
+      "Bard": {
+        "pickRate": 1.96,
+        "score": 77.01,
+        "tier": 1
+      },
+      "Kayle": {
+        "pickRate": 0.89,
+        "score": 97.59,
+        "tier": 1
+      },
+      "Lulu": {
+        "pickRate": 1.01,
+        "score": 78.38,
+        "tier": 1
+      },
+      "Renata": {
+        "pickRate": 0.81,
+        "score": 89.57,
+        "tier": 1
+      }
+    }
+  },
+  "1384": {
+    "name": "Donation",
+    "canon": "donation",
+    "tier": 2,
+    "pickRate": 1.44,
+    "score": 84.78,
+    "champions": {
+      "Karthus": {
+        "pickRate": 0.65,
+        "score": 85.51,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.41,
+        "score": 87.9,
+        "tier": 1
+      },
+      "Teemo": {
+        "pickRate": 0.48,
+        "score": 84.82,
+        "tier": 1
+      },
+      "Yasuo": {
+        "pickRate": 0.75,
+        "score": 90.45,
+        "tier": 1
+      },
+      "Xerath": {
+        "pickRate": 0.43,
+        "score": 86.18,
+        "tier": 1
+      }
+    }
+  },
+  "1386": {
+    "name": "Spin Me Right Round",
+    "canon": "spinmerightround",
+    "tier": 4,
+    "pickRate": 0.24,
+    "score": 77.32,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.27,
+        "score": 74.44,
+        "tier": 2
+      },
+      "Sion": {
+        "pickRate": 0.18,
+        "score": 91.95,
+        "tier": 3
+      },
+      "Skarner": {
+        "pickRate": 0.24,
+        "score": 76.67,
+        "tier": 3
+      },
+      "TahmKench": {
+        "pickRate": 0.17,
+        "score": 85,
+        "tier": 4
+      },
+      "Alistar": {
+        "pickRate": 0.19,
+        "score": 81.3,
+        "tier": 4
+      }
+    }
+  },
+  "1388": {
+    "name": "Infinite Recursion",
+    "canon": "infiniterecursion",
+    "tier": 1,
+    "pickRate": 4.03,
+    "score": 89.42,
+    "champions": {
+      "Karthus": {
+        "pickRate": 3.42,
+        "score": 89.42,
+        "tier": 0
+      },
+      "Mel": {
+        "pickRate": 2.93,
+        "score": 85.85,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 2.34,
+        "score": 105.74,
+        "tier": 0
+      },
+      "Teemo": {
+        "pickRate": 2.4,
+        "score": 95.88,
+        "tier": 0
+      },
+      "MissFortune": {
+        "pickRate": 1.78,
+        "score": 91.63,
+        "tier": 0
+      }
+    }
+  },
+  "1389": {
+    "name": "Hand of Baron",
+    "canon": "handofbaron",
+    "tier": 5,
+    "pickRate": 0.17,
+    "score": 89.11,
+    "champions": {
+      "Mel": {
+        "pickRate": 0.11,
+        "score": 85.83,
+        "tier": 4
+      },
+      "Xerath": {
+        "pickRate": 0.09,
+        "score": 90.14,
+        "tier": 4
+      },
+      "Veigar": {
+        "pickRate": 0.1,
+        "score": 94.35,
+        "tier": 4
+      },
+      "Malzahar": {
+        "pickRate": 0.1,
+        "score": 92.81,
+        "tier": 4
+      },
+      "Jhin": {
+        "pickRate": 0.07,
+        "score": 89.9,
+        "tier": 4
+      }
+    }
+  },
+  "1390": {
+    "name": "Phenomenal Evil",
+    "canon": "phenomenalevil",
+    "tier": 0,
+    "pickRate": 7.19,
+    "score": 87.66,
+    "champions": {
+      "Brand": {
+        "pickRate": 5.86,
+        "score": 96.05,
+        "tier": 0
+      },
+      "Karthus": {
+        "pickRate": 5.99,
+        "score": 92.14,
+        "tier": 0
+      },
+      "Veigar": {
+        "pickRate": 6.23,
+        "score": 84.15,
+        "tier": 0
+      },
+      "Malzahar": {
+        "pickRate": 5.91,
+        "score": 92.14,
+        "tier": 0
+      },
+      "AurelionSol": {
+        "pickRate": 6.41,
+        "score": 91.29,
+        "tier": 0
+      }
+    }
+  },
+  "1391": {
+    "name": "Red Envelopes",
+    "canon": "redenvelopes",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 93.48,
+    "champions": {
+      "Jhin": {
+        "pickRate": 0,
+        "score": 113.33,
+        "tier": 5
+      },
+      "Ezreal": {
+        "pickRate": 0,
+        "score": 77.8,
+        "tier": 5
+      },
+      "Caitlyn": {
+        "pickRate": 0,
+        "score": 95.82,
+        "tier": 5
+      },
+      "Teemo": {
+        "pickRate": 0,
+        "score": 78.7,
+        "tier": 5
+      },
+      "MissFortune": {
+        "pickRate": 0,
+        "score": 93.02,
+        "tier": 5
+      }
+    }
+  },
+  "1392": {
+    "name": "Holy Snowball",
+    "canon": "holysnowball",
+    "tier": 4,
+    "pickRate": 0.26,
+    "score": 76.1,
+    "champions": {
+      "Udyr": {
+        "pickRate": 0.27,
+        "score": 79.27,
+        "tier": 2
+      },
+      "Pyke": {
+        "pickRate": 0.2,
+        "score": 77.52,
+        "tier": 3
+      },
+      "Garen": {
+        "pickRate": 0.23,
+        "score": 73.09,
+        "tier": 3
+      },
+      "Zoe": {
+        "pickRate": 0.23,
+        "score": 73.56,
+        "tier": 3
+      },
+      "Darius": {
+        "pickRate": 0.23,
+        "score": 72.29,
+        "tier": 3
+      }
+    }
+  },
+  "1397": {
+    "name": "Cerberus",
+    "canon": "cerberus",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 79.86,
+    "champions": {
+      "Vayne": {
+        "pickRate": 0.01,
+        "score": 76.67,
+        "tier": 5
+      },
+      "Twitch": {
+        "pickRate": 0.01,
+        "score": 88.54,
+        "tier": 5
+      },
+      "Caitlyn": {
+        "pickRate": 0.01,
+        "score": 83.23,
+        "tier": 5
+      },
+      "Tristana": {
+        "pickRate": 0.01,
+        "score": 68.37,
+        "tier": 5
+      },
+      "Kaisa": {
+        "pickRate": 0,
+        "score": 83.92,
+        "tier": 5
+      }
+    }
+  },
+  "1400": {
+    "name": "Final City Transit",
+    "canon": "finalcitytransit",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 91.5,
+    "champions": {
+      "Shaco": {
+        "pickRate": 0,
+        "score": 100.85,
+        "tier": 5
+      },
+      "LeeSin": {
+        "pickRate": 0.01,
+        "score": 90.2,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0,
+        "score": 107.8,
+        "tier": 5
+      },
+      "Karthus": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      },
+      "Garen": {
+        "pickRate": 0,
+        "score": 106.25,
+        "tier": 5
+      }
+    }
+  },
+  "1401": {
+    "name": "Growth Spurt",
+    "canon": "growthspurt",
+    "tier": 2,
+    "pickRate": 1.02,
+    "score": 83.84,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.71,
+        "score": 92.14,
+        "tier": 1
+      },
+      "Malphite": {
+        "pickRate": 0.68,
+        "score": 82.78,
+        "tier": 1
+      },
+      "Yasuo": {
+        "pickRate": 1.03,
+        "score": 88.23,
+        "tier": 1
+      },
+      "Nautilus": {
+        "pickRate": 0.54,
+        "score": 85.84,
+        "tier": 1
+      },
+      "Alistar": {
+        "pickRate": 0.61,
+        "score": 84.83,
+        "tier": 1
+      }
+    }
+  },
+  "1402": {
+    "name": "Stats on Stats on Stats!",
+    "canon": "statsonstatsonstats",
+    "tier": 4,
+    "pickRate": 0.38,
+    "score": 82.83,
+    "champions": {
+      "Khazix": {
+        "pickRate": 0.2,
+        "score": 76.8,
+        "tier": 3
+      },
+      "Jhin": {
+        "pickRate": 0.18,
+        "score": 82.28,
+        "tier": 4
+      },
+      "Mel": {
+        "pickRate": 0.16,
+        "score": 79.38,
+        "tier": 4
+      },
+      "TahmKench": {
+        "pickRate": 0.18,
+        "score": 80.95,
+        "tier": 4
+      },
+      "Caitlyn": {
+        "pickRate": 0.11,
+        "score": 90.63,
+        "tier": 4
+      }
+    }
+  },
+  "1403": {
+    "name": "Stats on Stats!",
+    "canon": "statsonstats",
+    "tier": 2,
+    "pickRate": 1.35,
+    "score": 84.67,
+    "champions": {
+      "Karthus": {
+        "pickRate": 0.63,
+        "score": 84.83,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.39,
+        "score": 89.76,
+        "tier": 1
+      },
+      "Teemo": {
+        "pickRate": 0.46,
+        "score": 85.33,
+        "tier": 1
+      },
+      "Trundle": {
+        "pickRate": 0.6,
+        "score": 84.16,
+        "tier": 1
+      },
+      "DrMundo": {
+        "pickRate": 0.47,
+        "score": 90.62,
+        "tier": 1
+      }
+    }
+  },
+  "1404": {
+    "name": "Stats!",
+    "canon": "stats",
+    "tier": 4,
+    "pickRate": 0.56,
+    "score": 81.86,
+    "champions": {
+      "Karthus": {
+        "pickRate": 0.33,
+        "score": 86.37,
+        "tier": 1
+      },
+      "Vladimir": {
+        "pickRate": 0.28,
+        "score": 86.67,
+        "tier": 1
+      },
+      "Blitzcrank": {
+        "pickRate": 0.27,
+        "score": 76.86,
+        "tier": 2
+      },
+      "Xerath": {
+        "pickRate": 0.28,
+        "score": 80.24,
+        "tier": 2
+      },
+      "Malphite": {
+        "pickRate": 0.28,
+        "score": 80.6,
+        "tier": 2
+      }
+    }
+  },
+  "1405": {
+    "name": "Speed Demon",
+    "canon": "speeddemon",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 83.23,
+    "champions": {
+      "Lillia": {
+        "pickRate": 0.02,
+        "score": 105.07,
+        "tier": 5
+      },
+      "Singed": {
+        "pickRate": 0.01,
+        "score": 93.5,
+        "tier": 5
+      },
+      "Brand": {
+        "pickRate": 0,
+        "score": 77.92,
+        "tier": 5
+      },
+      "Mel": {
+        "pickRate": 0.01,
+        "score": 72.86,
+        "tier": 5
+      },
+      "Garen": {
+        "pickRate": 0.01,
+        "score": 63.75,
+        "tier": 5
+      }
+    }
+  },
+  "1406": {
+    "name": "Grandma's Chili Oil",
+    "canon": "grandmaschilioil",
+    "tier": 5,
+    "pickRate": 0.02,
+    "score": 90.37,
+    "champions": {
+      "Brand": {
+        "pickRate": 0.02,
+        "score": 96.21,
+        "tier": 5
+      },
+      "Morgana": {
+        "pickRate": 0.01,
+        "score": 85,
+        "tier": 5
+      },
+      "Malzahar": {
+        "pickRate": 0.02,
+        "score": 103.28,
+        "tier": 5
+      },
+      "Lillia": {
+        "pickRate": 0.02,
+        "score": 107.73,
+        "tier": 5
+      },
+      "AurelionSol": {
+        "pickRate": 0.01,
+        "score": 97.91,
+        "tier": 5
+      }
+    }
+  },
+  "1409": {
+    "name": "Poro Blaster",
+    "canon": "poroblaster",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 88.8,
+    "champions": {
+      "Lux": {
+        "pickRate": 0.01,
+        "score": 84.16,
+        "tier": 5
+      },
+      "Ziggs": {
+        "pickRate": 0.01,
+        "score": 77.92,
+        "tier": 5
+      },
+      "Xerath": {
+        "pickRate": 0.01,
+        "score": 94.84,
+        "tier": 5
+      },
+      "Zyra": {
+        "pickRate": 0.01,
+        "score": 104.77,
+        "tier": 5
+      },
+      "Jayce": {
+        "pickRate": 0.01,
+        "score": 84,
+        "tier": 5
+      }
+    }
+  },
+  "1411": {
+    "name": "Upgrade Thornmail",
+    "canon": "upgradethornmail",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 94.01,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.01,
+        "score": 110.79,
+        "tier": 5
+      },
+      "Ornn": {
+        "pickRate": 0.01,
+        "score": 94.44,
+        "tier": 5
+      },
+      "Thresh": {
+        "pickRate": 0,
+        "score": 106.74,
+        "tier": 5
+      },
+      "TahmKench": {
+        "pickRate": 0,
+        "score": 95.37,
+        "tier": 5
+      },
+      "Sion": {
+        "pickRate": 0,
+        "score": 116.1,
+        "tier": 5
+      }
+    }
+  },
+  "1413": {
+    "name": "Stuck In Here With Me",
+    "canon": "stuckinherewithme",
+    "tier": 3,
+    "pickRate": 0.88,
+    "score": 80.12,
+    "champions": {
+      "Nunu": {
+        "pickRate": 3.02,
+        "score": 71.91,
+        "tier": 1
+      },
+      "Malphite": {
+        "pickRate": 1.15,
+        "score": 86.53,
+        "tier": 1
+      },
+      "JarvanIV": {
+        "pickRate": 1.39,
+        "score": 73.95,
+        "tier": 1
+      },
+      "Rell": {
+        "pickRate": 1.11,
+        "score": 89.25,
+        "tier": 1
+      },
+      "Sett": {
+        "pickRate": 0.83,
+        "score": 91.98,
+        "tier": 1
+      }
+    }
+  },
+  "1414": {
+    "name": "Droppybara",
+    "canon": "droppybara",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 76.1,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0,
+        "score": 42.5,
+        "tier": 5
+      },
+      "Thresh": {
+        "pickRate": 0,
+        "score": 61.82,
+        "tier": 5
+      },
+      "Morgana": {
+        "pickRate": 0,
+        "score": 119,
+        "tier": 5
+      },
+      "Shaco": {
+        "pickRate": 0,
+        "score": 51,
+        "tier": 5
+      },
+      "Ahri": {
+        "pickRate": 0,
+        "score": 136,
+        "tier": 5
+      }
+    }
+  },
+  "1415": {
+    "name": "Twin Fire",
+    "canon": "twinfire",
+    "tier": 1,
+    "pickRate": 3.26,
+    "score": 84.58,
+    "champions": {
+      "Ezreal": {
+        "pickRate": 6.31,
+        "score": 82.45,
+        "tier": 0
+      },
+      "MissFortune": {
+        "pickRate": 5.24,
+        "score": 86.36,
+        "tier": 0
+      },
+      "Smolder": {
+        "pickRate": 6.42,
+        "score": 82.96,
+        "tier": 0
+      },
+      "Ziggs": {
+        "pickRate": 6.85,
+        "score": 83.13,
+        "tier": 0
+      },
+      "Lucian": {
+        "pickRate": 4.5,
+        "score": 85.17,
+        "tier": 0
+      }
+    }
+  },
+  "1416": {
+    "name": "Hextech Soul",
+    "canon": "hextechsoul",
+    "tier": 2,
+    "pickRate": 0.96,
+    "score": 83.42,
+    "champions": {
+      "Xerath": {
+        "pickRate": 0.85,
+        "score": 85.68,
+        "tier": 1
+      },
+      "Brand": {
+        "pickRate": 0.56,
+        "score": 88.91,
+        "tier": 1
+      },
+      "Lux": {
+        "pickRate": 0.66,
+        "score": 84.67,
+        "tier": 1
+      },
+      "Morgana": {
+        "pickRate": 0.5,
+        "score": 86.69,
+        "tier": 1
+      },
+      "Seraphine": {
+        "pickRate": 0.45,
+        "score": 91.28,
+        "tier": 1
+      }
+    }
+  },
+  "1418": {
+    "name": "Crack Open That Egg",
+    "canon": "crackopenthategg",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 76.19,
+    "champions": {
+      "Yuumi": {
+        "pickRate": 0.01,
+        "score": 80.53,
+        "tier": 5
+      },
+      "Lulu": {
+        "pickRate": 0,
+        "score": 62.33,
+        "tier": 5
+      },
+      "Milio": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      },
+      "Sona": {
+        "pickRate": 0,
+        "score": 51.74,
+        "tier": 5
+      },
+      "Karma": {
+        "pickRate": 0,
+        "score": 73.91,
+        "tier": 5
+      }
+    }
+  },
+  "1420": {
+    "name": "Sonata",
+    "canon": "sonata",
+    "tier": 1,
+    "pickRate": 1.88,
+    "score": 91.26,
+    "champions": {
+      "Yuumi": {
+        "pickRate": 9.01,
+        "score": 94.01,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 4.05,
+        "score": 96.39,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 7.8,
+        "score": 96.9,
+        "tier": 0
+      },
+      "Soraka": {
+        "pickRate": 6.39,
+        "score": 90.27,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 7.52,
+        "score": 92.82,
+        "tier": 0
+      }
+    }
+  },
+  "1421": {
+    "name": "Prom Queen",
+    "canon": "promqueen",
+    "tier": 5,
+    "pickRate": 0.15,
+    "score": 79.53,
+    "champions": {
+      "Pyke": {
+        "pickRate": 0.36,
+        "score": 81.62,
+        "tier": 2
+      },
+      "Singed": {
+        "pickRate": 0.26,
+        "score": 86.16,
+        "tier": 2
+      },
+      "Shen": {
+        "pickRate": 0.18,
+        "score": 88.29,
+        "tier": 3
+      },
+      "Braum": {
+        "pickRate": 0.24,
+        "score": 81.38,
+        "tier": 3
+      },
+      "Rakan": {
+        "pickRate": 0.22,
+        "score": 79.44,
+        "tier": 3
+      }
+    }
+  },
+  "1424": {
+    "name": "???",
+    "canon": "",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 96.65,
+    "champions": {
+      "Morgana": {
+        "pickRate": 0,
+        "score": 133.57,
+        "tier": 5
+      },
+      "Janna": {
+        "pickRate": 0,
+        "score": 108.18,
+        "tier": 5
+      },
+      "Lux": {
+        "pickRate": 0,
+        "score": 77.27,
+        "tier": 5
+      },
+      "Soraka": {
+        "pickRate": 0,
+        "score": 102,
+        "tier": 5
+      },
+      "Jayce": {
+        "pickRate": 0,
+        "score": 113.33,
+        "tier": 5
+      }
+    }
+  },
+  "1996": {
+    "name": "Upgrade Sheen",
+    "canon": "upgradesheen",
+    "tier": 2,
+    "pickRate": 1.51,
+    "score": 84.07,
+    "champions": {
+      "Ezreal": {
+        "pickRate": 3.83,
+        "score": 87.21,
+        "tier": 0
+      },
+      "Jax": {
+        "pickRate": 8.84,
+        "score": 91.97,
+        "tier": 0
+      },
+      "Smolder": {
+        "pickRate": 2.51,
+        "score": 85.51,
+        "tier": 0
+      },
+      "XinZhao": {
+        "pickRate": 5.24,
+        "score": 86.53,
+        "tier": 0
+      },
+      "Gangplank": {
+        "pickRate": 3.4,
+        "score": 83.64,
+        "tier": 0
+      }
+    }
+  },
+  "2001": {
+    "name": "Heads Up Cupcake!",
+    "canon": "headsupcupcake",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 84.34,
+    "champions": {
+      "Jhin": {
+        "pickRate": 0,
+        "score": 82.07,
+        "tier": 5
+      },
+      "Morgana": {
+        "pickRate": 0,
+        "score": 81.3,
+        "tier": 5
+      },
+      "Jayce": {
+        "pickRate": 0,
+        "score": 71.58,
+        "tier": 5
+      },
+      "Senna": {
+        "pickRate": 0,
+        "score": 44.74,
+        "tier": 5
+      },
+      "MissFortune": {
+        "pickRate": 0,
+        "score": 66.11,
+        "tier": 5
+      }
+    }
+  },
+  "2002": {
+    "name": "Void Rift",
+    "canon": "voidrift",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 87.91,
+    "champions": {
+      "Brand": {
+        "pickRate": 0.01,
+        "score": 89.25,
+        "tier": 5
+      },
+      "Malzahar": {
+        "pickRate": 0.01,
+        "score": 87.93,
+        "tier": 5
+      },
+      "AurelionSol": {
+        "pickRate": 0.01,
+        "score": 104.62,
+        "tier": 5
+      },
+      "Mel": {
+        "pickRate": 0.01,
+        "score": 85.64,
+        "tier": 5
+      },
+      "Morgana": {
+        "pickRate": 0.01,
+        "score": 78.25,
+        "tier": 5
+      }
+    }
+  },
+  "2003": {
+    "name": "Bounce of the Poro King",
+    "canon": "bounceoftheporoking",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 84.41,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0,
+        "score": 119.63,
+        "tier": 5
+      },
+      "Malphite": {
+        "pickRate": 0,
+        "score": 98.42,
+        "tier": 5
+      },
+      "Galio": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      },
+      "Garen": {
+        "pickRate": 0,
+        "score": 97.14,
+        "tier": 5
+      },
+      "Sylas": {
+        "pickRate": 0,
+        "score": 97.14,
+        "tier": 5
+      }
+    }
+  },
+  "2004": {
+    "name": "Empowered By The Faithful",
+    "canon": "empoweredbythefaithful",
+    "tier": 2,
+    "pickRate": 0.89,
+    "score": 84.74,
+    "champions": {
+      "Soraka": {
+        "pickRate": 5.33,
+        "score": 83.98,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 4.78,
+        "score": 89.42,
+        "tier": 0
+      },
+      "Yuumi": {
+        "pickRate": 5.08,
+        "score": 89.76,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 2.18,
+        "score": 85.85,
+        "tier": 0
+      },
+      "Milio": {
+        "pickRate": 4.34,
+        "score": 89.42,
+        "tier": 0
+      }
+    }
+  },
+  "2005": {
+    "name": "Triggered Inferno",
+    "canon": "triggeredinferno",
+    "tier": 3,
+    "pickRate": 0.78,
+    "score": 78.88,
+    "champions": {
+      "LeeSin": {
+        "pickRate": 3.4,
+        "score": 73.61,
+        "tier": 0
+      },
+      "Ambessa": {
+        "pickRate": 4.13,
+        "score": 84.66,
+        "tier": 0
+      },
+      "Pantheon": {
+        "pickRate": 2.83,
+        "score": 80.41,
+        "tier": 0
+      },
+      "Kayn": {
+        "pickRate": 2.21,
+        "score": 85.34,
+        "tier": 0
+      },
+      "Zaahen": {
+        "pickRate": 2.44,
+        "score": 91.97,
+        "tier": 0
+      }
+    }
+  },
+  "2006": {
+    "name": "Dropkick",
+    "canon": "dropkick",
+    "tier": 1,
+    "pickRate": 4.71,
+    "score": 84.62,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 8.65,
+        "score": 89.59,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 8.42,
+        "score": 95.37,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 7.05,
+        "score": 84.32,
+        "tier": 0
+      },
+      "Sett": {
+        "pickRate": 7.54,
+        "score": 96.9,
+        "tier": 0
+      },
+      "Leona": {
+        "pickRate": 8.24,
+        "score": 86.02,
+        "tier": 0
+      }
+    }
+  },
+  "2007": {
+    "name": "Devil on Your Shoulder",
+    "canon": "devilonyourshoulder",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 74.19,
+    "champions": {
+      "Teemo": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      },
+      "MissFortune": {
+        "pickRate": 0,
+        "score": 63.75,
+        "tier": 5
+      },
+      "Singed": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      },
+      "Hecarim": {
+        "pickRate": 0,
+        "score": 63.75,
+        "tier": 5
+      },
+      "Karthus": {
+        "pickRate": 0,
+        "score": 97.14,
+        "tier": 5
+      }
+    }
+  },
+  "2008": {
+    "name": "Weighted Popoffs",
+    "canon": "weightedpopoffs",
+    "tier": 5,
+    "pickRate": 0.01,
+    "score": 84.41,
+    "champions": {
+      "Brand": {
+        "pickRate": 0.01,
+        "score": 94.23,
+        "tier": 5
+      },
+      "Mel": {
+        "pickRate": 0.01,
+        "score": 76.81,
+        "tier": 5
+      },
+      "Lux": {
+        "pickRate": 0.01,
+        "score": 77.67,
+        "tier": 5
+      },
+      "Jayce": {
+        "pickRate": 0.01,
+        "score": 81.03,
+        "tier": 5
+      },
+      "Morgana": {
+        "pickRate": 0.01,
+        "score": 84.21,
+        "tier": 5
+      }
+    }
+  },
+  "2009": {
+    "name": "Zealot",
+    "canon": "zealot",
+    "tier": 2,
+    "pickRate": 1.39,
+    "score": 84.02,
+    "champions": {
+      "Kaisa": {
+        "pickRate": 4.71,
+        "score": 83.64,
+        "tier": 0
+      },
+      "Varus": {
+        "pickRate": 3.19,
+        "score": 84.83,
+        "tier": 0
+      },
+      "MissFortune": {
+        "pickRate": 2.46,
+        "score": 83.64,
+        "tier": 0
+      },
+      "TwistedFate": {
+        "pickRate": 3.6,
+        "score": 85.34,
+        "tier": 0
+      },
+      "KogMaw": {
+        "pickRate": 3.76,
+        "score": 86.87,
+        "tier": 0
+      }
+    }
+  },
+  "2010": {
+    "name": "Double Tap",
+    "canon": "doubletap",
+    "tier": 1,
+    "pickRate": 4.63,
+    "score": 88.02,
+    "champions": {
+      "Vayne": {
+        "pickRate": 10.78,
+        "score": 102.51,
+        "tier": 0
+      },
+      "Caitlyn": {
+        "pickRate": 5.84,
+        "score": 88.57,
+        "tier": 0
+      },
+      "Lucian": {
+        "pickRate": 6.16,
+        "score": 82.45,
+        "tier": 0
+      },
+      "Ashe": {
+        "pickRate": 5.14,
+        "score": 93.16,
+        "tier": 0
+      },
+      "Jinx": {
+        "pickRate": 5.28,
+        "score": 94.86,
+        "tier": 0
+      }
+    }
+  },
+  "2016": {
+    "name": "Juiced",
+    "canon": "juiced",
+    "tier": 3,
+    "pickRate": 0.77,
+    "score": 79.86,
+    "champions": {
+      "Ryze": {
+        "pickRate": 1.92,
+        "score": 81.6,
+        "tier": 1
+      },
+      "Teemo": {
+        "pickRate": 0.66,
+        "score": 83.3,
+        "tier": 1
+      },
+      "Lucian": {
+        "pickRate": 0.52,
+        "score": 84.49,
+        "tier": 1
+      },
+      "TwistedFate": {
+        "pickRate": 0.57,
+        "score": 84.66,
+        "tier": 1
+      },
+      "Viktor": {
+        "pickRate": 0.74,
+        "score": 83.99,
+        "tier": 1
+      }
+    }
+  },
+  "2018": {
+    "name": "Purist - Caster",
+    "canon": "puristcaster",
+    "tier": 1,
+    "pickRate": 4.22,
+    "score": 82.55,
+    "champions": {
+      "Karthus": {
+        "pickRate": 6.04,
+        "score": 86.36,
+        "tier": 0
+      },
+      "Brand": {
+        "pickRate": 3.01,
+        "score": 86.02,
+        "tier": 0
+      },
+      "Zilean": {
+        "pickRate": 5.41,
+        "score": 88.57,
+        "tier": 0
+      },
+      "Blitzcrank": {
+        "pickRate": 3.17,
+        "score": 75.82,
+        "tier": 0
+      },
+      "Teemo": {
+        "pickRate": 3.38,
+        "score": 87.89,
+        "tier": 0
+      }
+    }
+  },
+  "2024": {
+    "name": "Crit 'n Cast",
+    "canon": "critncast",
+    "tier": 2,
+    "pickRate": 0.95,
+    "score": 80.37,
+    "champions": {
+      "Smolder": {
+        "pickRate": 2.78,
+        "score": 80.92,
+        "tier": 0
+      },
+      "Gangplank": {
+        "pickRate": 4.07,
+        "score": 84.49,
+        "tier": 0
+      },
+      "Lucian": {
+        "pickRate": 1.71,
+        "score": 82.96,
+        "tier": 1
+      },
+      "Jhin": {
+        "pickRate": 1.23,
+        "score": 80.58,
+        "tier": 1
+      },
+      "MissFortune": {
+        "pickRate": 1.01,
+        "score": 78.37,
+        "tier": 1
+      }
+    }
+  },
+  "2026": {
+    "name": "Kill Secured",
+    "canon": "killsecured",
+    "tier": 3,
+    "pickRate": 0.82,
+    "score": 78.54,
+    "champions": {
+      "Pyke": {
+        "pickRate": 2.83,
+        "score": 75.31,
+        "tier": 0
+      },
+      "Evelynn": {
+        "pickRate": 3.03,
+        "score": 75.67,
+        "tier": 0
+      },
+      "Shaco": {
+        "pickRate": 1.75,
+        "score": 71.57,
+        "tier": 1
+      },
+      "Udyr": {
+        "pickRate": 1.7,
+        "score": 77.85,
+        "tier": 1
+      },
+      "Fizz": {
+        "pickRate": 0.94,
+        "score": 80.59,
+        "tier": 1
+      }
+    }
+  },
+  "2031": {
+    "name": "DropBear",
+    "canon": "dropbear",
+    "tier": 4,
+    "pickRate": 0.26,
+    "score": 91.13,
+    "champions": {
+      "Annie": {
+        "pickRate": 0.56,
+        "score": 98.62,
+        "tier": 1
+      },
+      "Udyr": {
+        "pickRate": 0.28,
+        "score": 96.38,
+        "tier": 1
+      },
+      "Elise": {
+        "pickRate": 0.25,
+        "score": 96.25,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 0.19,
+        "score": 101.17,
+        "tier": 3
+      },
+      "Fiddlesticks": {
+        "pickRate": 0.17,
+        "score": 96.95,
+        "tier": 3
+      }
+    }
+  },
+  "2032": {
+    "name": "Shark Bait",
+    "canon": "sharkbait",
+    "tier": 4,
+    "pickRate": 0.48,
+    "score": 80.34,
+    "champions": {
+      "Fiddlesticks": {
+        "pickRate": 0.31,
+        "score": 90.13,
+        "tier": 1
+      },
+      "Annie": {
+        "pickRate": 0.36,
+        "score": 87.74,
+        "tier": 1
+      },
+      "Blitzcrank": {
+        "pickRate": 0.4,
+        "score": 77.36,
+        "tier": 2
+      },
+      "Malphite": {
+        "pickRate": 0.38,
+        "score": 84.84,
+        "tier": 2
+      },
+      "Pyke": {
+        "pickRate": 0.36,
+        "score": 75.13,
+        "tier": 2
+      }
+    }
+  },
+  "2034": {
+    "name": "Shark Tempest",
+    "canon": "sharktempest",
+    "tier": 4,
+    "pickRate": 0.51,
+    "score": 79.14,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.38,
+        "score": 76.84,
+        "tier": 2
+      },
+      "Malphite": {
+        "pickRate": 0.3,
+        "score": 80.6,
+        "tier": 2
+      },
+      "Pyke": {
+        "pickRate": 0.39,
+        "score": 77,
+        "tier": 2
+      },
+      "Trundle": {
+        "pickRate": 0.33,
+        "score": 77.71,
+        "tier": 2
+      },
+      "Karthus": {
+        "pickRate": 0.23,
+        "score": 84.85,
+        "tier": 2
+      }
+    }
+  },
+  "2042": {
+    "name": "Hide on Bush",
+    "canon": "hideonbush",
+    "tier": 2,
+    "pickRate": 1.08,
+    "score": 75.78,
+    "champions": {
+      "Shaco": {
+        "pickRate": 4.23,
+        "score": 71.91,
+        "tier": 0
+      },
+      "Rengar": {
+        "pickRate": 8.49,
+        "score": 78.03,
+        "tier": 0
+      },
+      "Khazix": {
+        "pickRate": 3.83,
+        "score": 72.93,
+        "tier": 0
+      },
+      "Qiyana": {
+        "pickRate": 4.78,
+        "score": 70.89,
+        "tier": 0
+      },
+      "Nidalee": {
+        "pickRate": 1.81,
+        "score": 75.65,
+        "tier": 1
+      }
+    }
+  },
+  "2043": {
+    "name": "Nature is Healing",
+    "canon": "natureishealing",
+    "tier": 4,
+    "pickRate": 0.59,
+    "score": 80.16,
+    "champions": {
+      "Ivern": {
+        "pickRate": 3.03,
+        "score": 82.96,
+        "tier": 0
+      },
+      "Soraka": {
+        "pickRate": 1.61,
+        "score": 86.02,
+        "tier": 1
+      },
+      "Lillia": {
+        "pickRate": 0.32,
+        "score": 88.76,
+        "tier": 1
+      },
+      "RekSai": {
+        "pickRate": 1.55,
+        "score": 79.75,
+        "tier": 1
+      },
+      "Milio": {
+        "pickRate": 0.38,
+        "score": 90.62,
+        "tier": 1
+      }
+    }
+  },
+  "2046": {
+    "name": "Poro Stampede",
+    "canon": "porostampede",
+    "tier": 5,
+    "pickRate": 0.12,
+    "score": 71.94,
+    "champions": {
+      "Trundle": {
+        "pickRate": 0.09,
+        "score": 71.78,
+        "tier": 4
+      },
+      "Heimerdinger": {
+        "pickRate": 0.05,
+        "score": 86.83,
+        "tier": 4
+      },
+      "Zoe": {
+        "pickRate": 0.06,
+        "score": 76.67,
+        "tier": 4
+      },
+      "Braum": {
+        "pickRate": 0.07,
+        "score": 79.57,
+        "tier": 4
+      },
+      "Renata": {
+        "pickRate": 0.06,
+        "score": 89.05,
+        "tier": 4
+      }
+    }
+  },
+  "2054": {
+    "name": "Tripleshot",
+    "canon": "tripleshot",
+    "tier": 4,
+    "pickRate": 0.35,
+    "score": 79.09,
+    "champions": {
+      "Jhin": {
+        "pickRate": 1.01,
+        "score": 83.13,
+        "tier": 1
+      },
+      "Cassiopeia": {
+        "pickRate": 2.15,
+        "score": 80.74,
+        "tier": 1
+      },
+      "Teemo": {
+        "pickRate": 0.71,
+        "score": 87.71,
+        "tier": 1
+      },
+      "Katarina": {
+        "pickRate": 1.2,
+        "score": 83.48,
+        "tier": 1
+      },
+      "Annie": {
+        "pickRate": 1.41,
+        "score": 79.57,
+        "tier": 1
+      }
+    }
+  },
+  "2055": {
+    "name": "Multishot",
+    "canon": "multishot",
+    "tier": 4,
+    "pickRate": 0.67,
+    "score": 79.34,
+    "champions": {
+      "Velkoz": {
+        "pickRate": 1.8,
+        "score": 90.44,
+        "tier": 0
+      },
+      "Blitzcrank": {
+        "pickRate": 1.13,
+        "score": 76.5,
+        "tier": 1
+      },
+      "Lux": {
+        "pickRate": 1.17,
+        "score": 86.19,
+        "tier": 1
+      },
+      "Mel": {
+        "pickRate": 1.14,
+        "score": 81.09,
+        "tier": 1
+      },
+      "Ezreal": {
+        "pickRate": 0.74,
+        "score": 81.43,
+        "tier": 1
+      }
+    }
+  },
+  "2062": {
+    "name": "Echo Cast",
+    "canon": "echocast",
+    "tier": 4,
+    "pickRate": 0.37,
+    "score": 83.6,
+    "champions": {
+      "TwistedFate": {
+        "pickRate": 0.95,
+        "score": 124.94,
+        "tier": 0
+      },
+      "Fiddlesticks": {
+        "pickRate": 1.2,
+        "score": 86.2,
+        "tier": 1
+      },
+      "Sett": {
+        "pickRate": 0.67,
+        "score": 85.86,
+        "tier": 1
+      },
+      "Amumu": {
+        "pickRate": 0.78,
+        "score": 82.79,
+        "tier": 1
+      },
+      "Hecarim": {
+        "pickRate": 0.77,
+        "score": 83.65,
+        "tier": 1
+      }
+    }
+  },
+  "2063": {
+    "name": "Dimension Shift",
+    "canon": "dimensionshift",
+    "tier": 5,
+    "pickRate": 0.21,
+    "score": 70.55,
+    "champions": {
+      "Pyke": {
+        "pickRate": 0.23,
+        "score": 68.35,
+        "tier": 3
+      },
+      "LeeSin": {
+        "pickRate": 0.26,
+        "score": 63.42,
+        "tier": 3
+      },
+      "Pantheon": {
+        "pickRate": 0.22,
+        "score": 68.52,
+        "tier": 3
+      },
+      "Udyr": {
+        "pickRate": 0.26,
+        "score": 67.18,
+        "tier": 3
+      },
+      "Nunu": {
+        "pickRate": 0.27,
+        "score": 63.27,
+        "tier": 3
+      }
+    }
+  },
+  "2064": {
+    "name": "Quickstep",
+    "canon": "quickstep",
+    "tier": 4,
+    "pickRate": 0.29,
+    "score": 77.41,
+    "champions": {
+      "Hecarim": {
+        "pickRate": 4.1,
+        "score": 79.9,
+        "tier": 0
+      },
+      "Darius": {
+        "pickRate": 3.84,
+        "score": 76.84,
+        "tier": 0
+      },
+      "Ahri": {
+        "pickRate": 1.84,
+        "score": 83.47,
+        "tier": 1
+      },
+      "Garen": {
+        "pickRate": 2.7,
+        "score": 69.53,
+        "tier": 1
+      },
+      "Alistar": {
+        "pickRate": 1.01,
+        "score": 73.6,
+        "tier": 2
+      }
+    }
+  },
+  "2065": {
+    "name": "Terror",
+    "canon": "terror",
+    "tier": 5,
+    "pickRate": 0.14,
+    "score": 81.11,
+    "champions": {
+      "Aatrox": {
+        "pickRate": 1.38,
+        "score": 73.61,
+        "tier": 1
+      },
+      "Renekton": {
+        "pickRate": 1.77,
+        "score": 79.22,
+        "tier": 1
+      },
+      "Jax": {
+        "pickRate": 0.85,
+        "score": 88.23,
+        "tier": 1
+      },
+      "XinZhao": {
+        "pickRate": 0.78,
+        "score": 83.98,
+        "tier": 1
+      },
+      "Olaf": {
+        "pickRate": 1.73,
+        "score": 84.83,
+        "tier": 1
+      }
+    }
+  },
+  "2072": {
+    "name": "Spell Split",
+    "canon": "spellsplit",
+    "tier": 3,
+    "pickRate": 0.88,
+    "score": 82.2,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 2.62,
+        "score": 84.15,
+        "tier": 0
+      },
+      "Nidalee": {
+        "pickRate": 2.06,
+        "score": 99.62,
+        "tier": 0
+      },
+      "Veigar": {
+        "pickRate": 1.59,
+        "score": 96.05,
+        "tier": 0
+      },
+      "Naafiri": {
+        "pickRate": 1.79,
+        "score": 92.82,
+        "tier": 0
+      },
+      "Morgana": {
+        "pickRate": 1.89,
+        "score": 84.83,
+        "tier": 1
+      }
+    }
+  },
+  "2073": {
+    "name": "Siphon",
+    "canon": "siphon",
+    "tier": 4,
+    "pickRate": 0.39,
+    "score": 79.77,
+    "champions": {
+      "AurelionSol": {
+        "pickRate": 0.8,
+        "score": 86.69,
+        "tier": 1
+      },
+      "Yasuo": {
+        "pickRate": 0.89,
+        "score": 88.07,
+        "tier": 1
+      },
+      "Ryze": {
+        "pickRate": 0.65,
+        "score": 85.67,
+        "tier": 1
+      },
+      "Aurora": {
+        "pickRate": 0.66,
+        "score": 87.56,
+        "tier": 1
+      },
+      "Cassiopeia": {
+        "pickRate": 1.02,
+        "score": 78.87,
+        "tier": 1
+      }
+    }
+  },
+  "2076": {
+    "name": "Stay Resolute",
+    "canon": "stayresolute",
+    "tier": 4,
+    "pickRate": 0.21,
+    "score": 86.37,
+    "champions": {
+      "Nautilus": {
+        "pickRate": 0.86,
+        "score": 89.93,
+        "tier": 1
+      },
+      "Alistar": {
+        "pickRate": 0.87,
+        "score": 85.01,
+        "tier": 1
+      },
+      "Leona": {
+        "pickRate": 0.79,
+        "score": 84.66,
+        "tier": 1
+      },
+      "Amumu": {
+        "pickRate": 0.86,
+        "score": 88.56,
+        "tier": 1
+      },
+      "Malphite": {
+        "pickRate": 0.5,
+        "score": 87.2,
+        "tier": 1
+      }
+    }
+  },
+  "2077": {
+    "name": "Ravenous Bind",
+    "canon": "ravenousbind",
+    "tier": 2,
+    "pickRate": 1.82,
+    "score": 81.84,
+    "champions": {
+      "Swain": {
+        "pickRate": 3.03,
+        "score": 83.81,
+        "tier": 0
+      },
+      "Aatrox": {
+        "pickRate": 3.84,
+        "score": 79.05,
+        "tier": 0
+      },
+      "Pantheon": {
+        "pickRate": 2.22,
+        "score": 82.79,
+        "tier": 0
+      },
+      "Syndra": {
+        "pickRate": 1.9,
+        "score": 87.72,
+        "tier": 0
+      },
+      "Lissandra": {
+        "pickRate": 2.46,
+        "score": 80.92,
+        "tier": 0
+      }
+    }
+  },
+  "2078": {
+    "name": "Chain Reaction",
+    "canon": "chainreaction",
+    "tier": 5,
+    "pickRate": 0.19,
+    "score": 71.76,
+    "champions": {
+      "Thresh": {
+        "pickRate": 0.94,
+        "score": 65.8,
+        "tier": 2
+      },
+      "Syndra": {
+        "pickRate": 0.9,
+        "score": 78.54,
+        "tier": 2
+      },
+      "Alistar": {
+        "pickRate": 0.58,
+        "score": 75.82,
+        "tier": 2
+      },
+      "Maokai": {
+        "pickRate": 0.35,
+        "score": 77.02,
+        "tier": 2
+      },
+      "Ziggs": {
+        "pickRate": 0.37,
+        "score": 77.67,
+        "tier": 2
+      }
+    }
+  },
+  "2080": {
+    "name": "Snowblast",
+    "canon": "snowblast",
+    "tier": 4,
+    "pickRate": 0.42,
+    "score": 75.7,
+    "champions": {
+      "Trundle": {
+        "pickRate": 0.3,
+        "score": 75.31,
+        "tier": 2
+      },
+      "Yasuo": {
+        "pickRate": 0.37,
+        "score": 80.77,
+        "tier": 2
+      },
+      "Pyke": {
+        "pickRate": 0.29,
+        "score": 74.63,
+        "tier": 2
+      },
+      "Udyr": {
+        "pickRate": 0.28,
+        "score": 77.14,
+        "tier": 2
+      },
+      "Urgot": {
+        "pickRate": 0.32,
+        "score": 73.57,
+        "tier": 2
+      }
+    }
+  },
+  "2082": {
+    "name": "Our Healing",
+    "canon": "ourhealing",
+    "tier": 3,
+    "pickRate": 0.78,
+    "score": 79.77,
+    "champions": {
+      "Trundle": {
+        "pickRate": 1.21,
+        "score": 78.87,
+        "tier": 1
+      },
+      "Maokai": {
+        "pickRate": 0.96,
+        "score": 82.62,
+        "tier": 1
+      },
+      "TahmKench": {
+        "pickRate": 0.87,
+        "score": 79.39,
+        "tier": 1
+      },
+      "Darius": {
+        "pickRate": 1.48,
+        "score": 77.7,
+        "tier": 1
+      },
+      "Aatrox": {
+        "pickRate": 1.52,
+        "score": 72.76,
+        "tier": 1
+      }
+    }
+  },
+  "2083": {
+    "name": "Tooth Fairy",
+    "canon": "toothfairy",
+    "tier": 1,
+    "pickRate": 3.83,
+    "score": 81.87,
+    "champions": {
+      "Locke": {
+        "pickRate": 5.18,
+        "score": 63.07,
+        "tier": 0
+      },
+      "Shaco": {
+        "pickRate": 3.53,
+        "score": 75.14,
+        "tier": 0
+      },
+      "Pyke": {
+        "pickRate": 4.6,
+        "score": 81.26,
+        "tier": 0
+      },
+      "Karthus": {
+        "pickRate": 3.22,
+        "score": 83.3,
+        "tier": 0
+      },
+      "Zed": {
+        "pickRate": 4.26,
+        "score": 86.36,
+        "tier": 0
+      }
+    }
+  },
+  "2087": {
+    "name": "Archmage",
+    "canon": "archmage",
+    "tier": 1,
+    "pickRate": 5.26,
+    "score": 80.62,
+    "champions": {
+      "Zilean": {
+        "pickRate": 7.46,
+        "score": 96.39,
+        "tier": 0
+      },
+      "Mel": {
+        "pickRate": 4.74,
+        "score": 75.65,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 4.09,
+        "score": 92.48,
+        "tier": 0
+      },
+      "Lux": {
+        "pickRate": 4.04,
+        "score": 81.77,
+        "tier": 0
+      },
+      "Ryze": {
+        "pickRate": 5.22,
+        "score": 83.64,
+        "tier": 0
+      }
+    }
+  },
+  "2088": {
+    "name": "Snowday",
+    "canon": "snowday",
+    "tier": 4,
+    "pickRate": 0.49,
+    "score": 78.24,
+    "champions": {
+      "Rell": {
+        "pickRate": 0.31,
+        "score": 88.41,
+        "tier": 1
+      },
+      "Shen": {
+        "pickRate": 0.34,
+        "score": 87.2,
+        "tier": 1
+      },
+      "Blitzcrank": {
+        "pickRate": 0.39,
+        "score": 72.26,
+        "tier": 2
+      },
+      "Malphite": {
+        "pickRate": 0.33,
+        "score": 77.35,
+        "tier": 2
+      },
+      "Alistar": {
+        "pickRate": 0.36,
+        "score": 80.25,
+        "tier": 2
+      }
+    }
+  },
+  "2089": {
+    "name": "Yowch, My Coins!",
+    "canon": "yowchmycoins",
+    "tier": 4,
+    "pickRate": 0.54,
+    "score": 80.31,
+    "champions": {
+      "Renata": {
+        "pickRate": 0.27,
+        "score": 88.8,
+        "tier": 1
+      },
+      "Pyke": {
+        "pickRate": 0.49,
+        "score": 78.02,
+        "tier": 2
+      },
+      "Blitzcrank": {
+        "pickRate": 0.3,
+        "score": 77,
+        "tier": 2
+      },
+      "Karthus": {
+        "pickRate": 0.27,
+        "score": 82.61,
+        "tier": 2
+      },
+      "Trundle": {
+        "pickRate": 0.32,
+        "score": 78.2,
+        "tier": 2
+      }
+    }
+  },
+  "2091": {
+    "name": "Endless Decimation",
+    "canon": "endlessdecimation",
+    "tier": 2,
+    "pickRate": 1.96,
+    "score": 80.95,
+    "champions": {
+      "Hecarim": {
+        "pickRate": 3.9,
+        "score": 84.15,
+        "tier": 0
+      },
+      "Pantheon": {
+        "pickRate": 3.82,
+        "score": 81.6,
+        "tier": 0
+      },
+      "Ambessa": {
+        "pickRate": 4.39,
+        "score": 80.92,
+        "tier": 0
+      },
+      "Zaahen": {
+        "pickRate": 5.21,
+        "score": 92.82,
+        "tier": 0
+      },
+      "Yasuo": {
+        "pickRate": 2.63,
+        "score": 84.66,
+        "tier": 0
+      }
+    }
+  },
+  "2095": {
+    "name": "High Roller",
+    "canon": "highroller",
+    "tier": 1,
+    "pickRate": 1.02,
+    "score": 93.81,
+    "champions": {
+      "Graves": {
+        "pickRate": 0.33,
+        "score": 109.15,
+        "tier": 0
+      },
+      "Yasuo": {
+        "pickRate": 0.32,
+        "score": 106.6,
+        "tier": 0
+      },
+      "Jhin": {
+        "pickRate": 0.47,
+        "score": 94.19,
+        "tier": 1
+      },
+      "TahmKench": {
+        "pickRate": 0.49,
+        "score": 92.82,
+        "tier": 1
+      },
+      "Mel": {
+        "pickRate": 0.42,
+        "score": 85.52,
+        "tier": 1
+      }
+    }
+  },
+  "2096": {
+    "name": "Lil' Extra Help",
+    "canon": "lilextrahelp",
+    "tier": 2,
+    "pickRate": 1,
+    "score": 84.23,
+    "champions": {
+      "Ashe": {
+        "pickRate": 1.71,
+        "score": 90.27,
+        "tier": 0
+      },
+      "KogMaw": {
+        "pickRate": 3.02,
+        "score": 88.91,
+        "tier": 0
+      },
+      "Tristana": {
+        "pickRate": 2.56,
+        "score": 85.51,
+        "tier": 0
+      },
+      "MasterYi": {
+        "pickRate": 2.98,
+        "score": 92.65,
+        "tier": 0
+      },
+      "Twitch": {
+        "pickRate": 2.25,
+        "score": 82.62,
+        "tier": 0
+      }
+    }
+  },
+  "2097": {
+    "name": "Void Dash",
+    "canon": "voiddash",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 79.69,
+    "champions": {
+      "Kayn": {
+        "pickRate": 0.01,
+        "score": 111.71,
+        "tier": 5
+      },
+      "Sylas": {
+        "pickRate": 0,
+        "score": 80.19,
+        "tier": 5
+      },
+      "Pyke": {
+        "pickRate": 0.01,
+        "score": 78.46,
+        "tier": 5
+      },
+      "Nautilus": {
+        "pickRate": 0,
+        "score": 65.11,
+        "tier": 5
+      },
+      "Fizz": {
+        "pickRate": 0,
+        "score": 77.27,
+        "tier": 5
+      }
+    }
+  },
+  "2098": {
+    "name": "En Passant",
+    "canon": "enpassant",
+    "tier": 2,
+    "pickRate": 1.26,
+    "score": 82.07,
+    "champions": {
+      "Yasuo": {
+        "pickRate": 2.24,
+        "score": 87.55,
+        "tier": 0
+      },
+      "Hecarim": {
+        "pickRate": 1.84,
+        "score": 95.2,
+        "tier": 0
+      },
+      "Lillia": {
+        "pickRate": 1.51,
+        "score": 94.53,
+        "tier": 0
+      },
+      "Fiora": {
+        "pickRate": 3.41,
+        "score": 90.45,
+        "tier": 0
+      },
+      "Gwen": {
+        "pickRate": 1.73,
+        "score": 91.29,
+        "tier": 0
+      }
+    }
+  },
+  "2099": {
+    "name": "Rite of Ascension",
+    "canon": "riteofascension",
+    "tier": 2,
+    "pickRate": 1.52,
+    "score": 77.07,
+    "champions": {
+      "Pyke": {
+        "pickRate": 3.93,
+        "score": 79.22,
+        "tier": 0
+      },
+      "Zed": {
+        "pickRate": 2.65,
+        "score": 80.92,
+        "tier": 0
+      },
+      "Talon": {
+        "pickRate": 3.21,
+        "score": 76.84,
+        "tier": 0
+      },
+      "Khazix": {
+        "pickRate": 3.95,
+        "score": 76.5,
+        "tier": 0
+      },
+      "Rengar": {
+        "pickRate": 2.96,
+        "score": 83.47,
+        "tier": 0
+      }
+    }
+  },
+  "2100": {
+    "name": "Pursuit of Haste",
+    "canon": "pursuitofhaste",
+    "tier": 1,
+    "pickRate": 3.24,
+    "score": 81.53,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 3.08,
+        "score": 77.52,
+        "tier": 0
+      },
+      "Morgana": {
+        "pickRate": 2.09,
+        "score": 87.04,
+        "tier": 0
+      },
+      "Zilean": {
+        "pickRate": 2.63,
+        "score": 89.42,
+        "tier": 0
+      },
+      "Veigar": {
+        "pickRate": 2.04,
+        "score": 85.17,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 1.57,
+        "score": 94.52,
+        "tier": 0
+      }
+    }
+  },
+  "2102": {
+    "name": "Pressure Cooker",
+    "canon": "pressurecooker",
+    "tier": 1,
+    "pickRate": 2.37,
+    "score": 87.36,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 3.07,
+        "score": 90.61,
+        "tier": 0
+      },
+      "Nautilus": {
+        "pickRate": 3.31,
+        "score": 89.42,
+        "tier": 0
+      },
+      "Leona": {
+        "pickRate": 3.72,
+        "score": 92.65,
+        "tier": 0
+      },
+      "Sion": {
+        "pickRate": 3.49,
+        "score": 107.27,
+        "tier": 0
+      },
+      "Alistar": {
+        "pickRate": 3.29,
+        "score": 95.37,
+        "tier": 0
+      }
+    }
+  },
+  "2103": {
+    "name": "From Downtown",
+    "canon": "fromdowntown",
+    "tier": 1,
+    "pickRate": 2.68,
+    "score": 82.27,
+    "champions": {
+      "Xerath": {
+        "pickRate": 4.12,
+        "score": 86.87,
+        "tier": 0
+      },
+      "Karthus": {
+        "pickRate": 3.49,
+        "score": 84.83,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 3.18,
+        "score": 95.71,
+        "tier": 0
+      },
+      "Ziggs": {
+        "pickRate": 3.94,
+        "score": 82.79,
+        "tier": 0
+      },
+      "Lux": {
+        "pickRate": 3.12,
+        "score": 85.34,
+        "tier": 0
+      }
+    }
+  },
+  "2104": {
+    "name": "Spirit Bomb",
+    "canon": "spiritbomb",
+    "tier": 1,
+    "pickRate": 0.96,
+    "score": 92.64,
+    "champions": {
+      "Soraka": {
+        "pickRate": 6.2,
+        "score": 95.03,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 5.19,
+        "score": 100.64,
+        "tier": 0
+      },
+      "Yuumi": {
+        "pickRate": 4.95,
+        "score": 96.9,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 5.1,
+        "score": 91.29,
+        "tier": 0
+      },
+      "Milio": {
+        "pickRate": 4.93,
+        "score": 96.56,
+        "tier": 0
+      }
+    }
+  },
+  "2107": {
+    "name": "Hellbent",
+    "canon": "hellbent",
+    "tier": 3,
+    "pickRate": 0.75,
+    "score": 80.95,
+    "champions": {
+      "Zaahen": {
+        "pickRate": 1.73,
+        "score": 91.97,
+        "tier": 0
+      },
+      "Yone": {
+        "pickRate": 1.32,
+        "score": 85.33,
+        "tier": 1
+      },
+      "Aatrox": {
+        "pickRate": 1.95,
+        "score": 72.92,
+        "tier": 1
+      },
+      "Yasuo": {
+        "pickRate": 1.15,
+        "score": 87.54,
+        "tier": 1
+      },
+      "Pantheon": {
+        "pickRate": 1.2,
+        "score": 79.06,
+        "tier": 1
+      }
+    }
+  },
+  "2108": {
+    "name": "Support Main",
+    "canon": "supportmain",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 97.42,
+    "champions": {
+      "Soraka": {
+        "pickRate": 0,
+        "score": 118.26,
+        "tier": 5
+      },
+      "Nami": {
+        "pickRate": 0,
+        "score": 89.05,
+        "tier": 5
+      },
+      "Milio": {
+        "pickRate": 0,
+        "score": 106.25,
+        "tier": 5
+      },
+      "Seraphine": {
+        "pickRate": 0,
+        "score": 102,
+        "tier": 5
+      },
+      "Sona": {
+        "pickRate": 0,
+        "score": 85,
+        "tier": 5
+      }
+    }
+  },
+  "2111": {
+    "name": "BONK!",
+    "canon": "bonk",
+    "tier": 3,
+    "pickRate": 0.72,
+    "score": 88.43,
+    "champions": {
+      "Vayne": {
+        "pickRate": 3,
+        "score": 98.94,
+        "tier": 0
+      },
+      "Jax": {
+        "pickRate": 4.41,
+        "score": 95.37,
+        "tier": 0
+      },
+      "Nasus": {
+        "pickRate": 4.12,
+        "score": 102.51,
+        "tier": 0
+      },
+      "MonkeyKing": {
+        "pickRate": 4.98,
+        "score": 87.89,
+        "tier": 0
+      },
+      "Trundle": {
+        "pickRate": 2.01,
+        "score": 87.55,
+        "tier": 0
+      }
+    }
+  },
+  "2115": {
+    "name": "Squishy Slappy Grab",
+    "canon": "squishyslappygrab",
+    "tier": 4,
+    "pickRate": 0.36,
+    "score": 76.23,
+    "champions": {
+      "RekSai": {
+        "pickRate": 1.12,
+        "score": 78.84,
+        "tier": 1
+      },
+      "Thresh": {
+        "pickRate": 1.29,
+        "score": 72.76,
+        "tier": 2
+      },
+      "Blitzcrank": {
+        "pickRate": 0.81,
+        "score": 74.11,
+        "tier": 2
+      },
+      "Trundle": {
+        "pickRate": 0.6,
+        "score": 76.66,
+        "tier": 2
+      },
+      "Darius": {
+        "pickRate": 0.72,
+        "score": 75.64,
+        "tier": 2
+      }
+    }
+  },
+  "2116": {
+    "name": "Pursuit of Power",
+    "canon": "pursuitofpower",
+    "tier": 2,
+    "pickRate": 2.41,
+    "score": 80.43,
+    "champions": {
+      "Malzahar": {
+        "pickRate": 1.95,
+        "score": 86.02,
+        "tier": 0
+      },
+      "AurelionSol": {
+        "pickRate": 1.93,
+        "score": 89.76,
+        "tier": 0
+      },
+      "Fiora": {
+        "pickRate": 2.27,
+        "score": 88.73,
+        "tier": 0
+      },
+      "Ezreal": {
+        "pickRate": 1.71,
+        "score": 83.81,
+        "tier": 1
+      },
+      "Varus": {
+        "pickRate": 1.2,
+        "score": 81.43,
+        "tier": 1
+      }
+    }
+  },
+  "2118": {
+    "name": "Ult Bot",
+    "canon": "ultbot",
+    "tier": 4,
+    "pickRate": 0.25,
+    "score": 75.13,
+    "champions": {
+      "Teemo": {
+        "pickRate": 0.38,
+        "score": 92.66,
+        "tier": 1
+      },
+      "Rumble": {
+        "pickRate": 0.31,
+        "score": 77.68,
+        "tier": 2
+      },
+      "Fiddlesticks": {
+        "pickRate": 0.26,
+        "score": 80.76,
+        "tier": 2
+      },
+      "Renata": {
+        "pickRate": 0.26,
+        "score": 78.42,
+        "tier": 2
+      },
+      "Malphite": {
+        "pickRate": 0.24,
+        "score": 78.68,
+        "tier": 3
+      }
+    }
+  },
+  "2119": {
+    "name": "Overextender",
+    "canon": "overextender",
+    "tier": 4,
+    "pickRate": 0.21,
+    "score": 82.39,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.15,
+        "score": 77.33,
+        "tier": 4
+      },
+      "Pyke": {
+        "pickRate": 0.16,
+        "score": 77.91,
+        "tier": 4
+      },
+      "Malphite": {
+        "pickRate": 0.12,
+        "score": 83.61,
+        "tier": 4
+      },
+      "Karthus": {
+        "pickRate": 0.1,
+        "score": 85.56,
+        "tier": 4
+      },
+      "Sion": {
+        "pickRate": 0.14,
+        "score": 91.6,
+        "tier": 4
+      }
+    }
+  },
+  "2123": {
+    "name": "Overloaded",
+    "canon": "overloaded",
+    "tier": 3,
+    "pickRate": 0.89,
+    "score": 78.69,
+    "champions": {
+      "Ryze": {
+        "pickRate": 1.85,
+        "score": 99.11,
+        "tier": 0
+      },
+      "Qiyana": {
+        "pickRate": 2.11,
+        "score": 100.98,
+        "tier": 0
+      },
+      "Seraphine": {
+        "pickRate": 0.54,
+        "score": 87.73,
+        "tier": 1
+      },
+      "Viktor": {
+        "pickRate": 0.92,
+        "score": 88.24,
+        "tier": 1
+      },
+      "Hwei": {
+        "pickRate": 0.75,
+        "score": 85.17,
+        "tier": 1
+      }
+    }
+  },
+  "2125": {
+    "name": "It's Go Time",
+    "canon": "itsgotime",
+    "tier": 5,
+    "pickRate": 0.13,
+    "score": 82.8,
+    "champions": {
+      "Sett": {
+        "pickRate": 0.27,
+        "score": 89.76,
+        "tier": 1
+      },
+      "Olaf": {
+        "pickRate": 0.55,
+        "score": 83.42,
+        "tier": 1
+      },
+      "Blitzcrank": {
+        "pickRate": 0.37,
+        "score": 78.03,
+        "tier": 2
+      },
+      "Ashe": {
+        "pickRate": 0.24,
+        "score": 89.58,
+        "tier": 2
+      },
+      "Jax": {
+        "pickRate": 0.35,
+        "score": 85.31,
+        "tier": 2
+      }
+    }
+  },
+  "2126": {
+    "name": "Reload",
+    "canon": "reload",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 85,
+    "champions": {
+      "Vayne": {
+        "pickRate": 0,
+        "score": 170,
+        "tier": 5
+      },
+      "Kaisa": {
+        "pickRate": 0,
+        "score": 0,
+        "tier": 5
+      },
+      "Jax": {
+        "pickRate": 0,
+        "score": 0,
+        "tier": 5
+      }
+    }
+  },
+  "2127": {
+    "name": "Forged By The Master",
+    "canon": "forgedbythemaster",
+    "tier": 1,
+    "pickRate": 1.54,
+    "score": 87.3,
+    "champions": {
+      "Sion": {
+        "pickRate": 0.76,
+        "score": 107.44,
+        "tier": 0
+      },
+      "Brand": {
+        "pickRate": 1.1,
+        "score": 95.71,
+        "tier": 1
+      },
+      "Malzahar": {
+        "pickRate": 1.01,
+        "score": 91.97,
+        "tier": 1
+      },
+      "Karthus": {
+        "pickRate": 0.77,
+        "score": 93.68,
+        "tier": 1
+      },
+      "Morgana": {
+        "pickRate": 0.65,
+        "score": 87.89,
+        "tier": 1
+      }
+    }
+  },
+  "2128": {
+    "name": "Combusting Interest",
+    "canon": "combustinginterest",
+    "tier": 4,
+    "pickRate": 0.49,
+    "score": 78.83,
+    "champions": {
+      "Trundle": {
+        "pickRate": 2.72,
+        "score": 76.84,
+        "tier": 0
+      },
+      "Udyr": {
+        "pickRate": 3.84,
+        "score": 76.5,
+        "tier": 0
+      },
+      "Brand": {
+        "pickRate": 0.78,
+        "score": 85.34,
+        "tier": 1
+      },
+      "Fizz": {
+        "pickRate": 1.14,
+        "score": 76.49,
+        "tier": 1
+      },
+      "Darius": {
+        "pickRate": 1.92,
+        "score": 74.8,
+        "tier": 1
+      }
+    }
+  },
+  "2129": {
+    "name": "Terrain'd",
+    "canon": "terraind",
+    "tier": 4,
+    "pickRate": 0.32,
+    "score": 85.5,
+    "champions": {
+      "Trundle": {
+        "pickRate": 5.07,
+        "score": 97.07,
+        "tier": 0
+      },
+      "Anivia": {
+        "pickRate": 3.51,
+        "score": 78.2,
+        "tier": 0
+      },
+      "JarvanIV": {
+        "pickRate": 2.57,
+        "score": 69.53,
+        "tier": 1
+      },
+      "Ornn": {
+        "pickRate": 1.17,
+        "score": 82.8,
+        "tier": 1
+      },
+      "Azir": {
+        "pickRate": 0.66,
+        "score": 83.65,
+        "tier": 1
+      }
+    }
+  },
+  "2131": {
+    "name": "Don't Change the Channel",
+    "canon": "dontchangethechannel",
+    "tier": 5,
+    "pickRate": 0.14,
+    "score": 84.67,
+    "champions": {
+      "AurelionSol": {
+        "pickRate": 0.85,
+        "score": 98.43,
+        "tier": 1
+      },
+      "Galio": {
+        "pickRate": 0.37,
+        "score": 86.71,
+        "tier": 1
+      },
+      "Fiddlesticks": {
+        "pickRate": 0.51,
+        "score": 86.52,
+        "tier": 1
+      },
+      "Sion": {
+        "pickRate": 0.27,
+        "score": 94.02,
+        "tier": 1
+      },
+      "Vladimir": {
+        "pickRate": 0.43,
+        "score": 84.64,
+        "tier": 1
+      }
+    }
+  },
+  "2132": {
+    "name": "Warlock Juicebox",
+    "canon": "warlockjuicebox",
+    "tier": 0,
+    "pickRate": 7.57,
+    "score": 86.64,
+    "champions": {
+      "Swain": {
+        "pickRate": 9.63,
+        "score": 77.35,
+        "tier": 0
+      },
+      "Brand": {
+        "pickRate": 5.68,
+        "score": 93.5,
+        "tier": 0
+      },
+      "Sylas": {
+        "pickRate": 7.8,
+        "score": 85,
+        "tier": 0
+      },
+      "Ryze": {
+        "pickRate": 8.62,
+        "score": 92.99,
+        "tier": 0
+      },
+      "AurelionSol": {
+        "pickRate": 8.25,
+        "score": 91.29,
+        "tier": 0
+      }
+    }
+  },
+  "2133": {
+    "name": "Mercy's Strike",
+    "canon": "mercysstrike",
+    "tier": 3,
+    "pickRate": 0.83,
+    "score": 83.43,
+    "champions": {
+      "Senna": {
+        "pickRate": 5.7,
+        "score": 83.64,
+        "tier": 0
+      },
+      "Sona": {
+        "pickRate": 4.68,
+        "score": 91.8,
+        "tier": 0
+      },
+      "Bard": {
+        "pickRate": 6.75,
+        "score": 75.99,
+        "tier": 0
+      },
+      "Nami": {
+        "pickRate": 4.04,
+        "score": 81.77,
+        "tier": 0
+      },
+      "Lulu": {
+        "pickRate": 3.83,
+        "score": 79.56,
+        "tier": 0
+      }
+    }
+  },
+  "2134": {
+    "name": "Surge Field",
+    "canon": "surgefield",
+    "tier": 4,
+    "pickRate": 0.4,
+    "score": 78.03,
+    "champions": {
+      "Kassadin": {
+        "pickRate": 0.62,
+        "score": 82.94,
+        "tier": 1
+      },
+      "Anivia": {
+        "pickRate": 1.11,
+        "score": 73.78,
+        "tier": 2
+      },
+      "Swain": {
+        "pickRate": 0.71,
+        "score": 76.33,
+        "tier": 2
+      },
+      "Fiddlesticks": {
+        "pickRate": 0.73,
+        "score": 79.74,
+        "tier": 2
+      },
+      "Aurora": {
+        "pickRate": 0.52,
+        "score": 83.12,
+        "tier": 2
+      }
+    }
+  },
+  "2135": {
+    "name": "Pin Cushion",
+    "canon": "pincushion",
+    "tier": 5,
+    "pickRate": 0.21,
+    "score": 78.14,
+    "champions": {
+      "Ashe": {
+        "pickRate": 0.55,
+        "score": 86.36,
+        "tier": 1
+      },
+      "Yunara": {
+        "pickRate": 0.63,
+        "score": 84.66,
+        "tier": 1
+      },
+      "Tristana": {
+        "pickRate": 0.86,
+        "score": 78.03,
+        "tier": 2
+      },
+      "Xayah": {
+        "pickRate": 0.89,
+        "score": 75.3,
+        "tier": 2
+      },
+      "Twitch": {
+        "pickRate": 0.69,
+        "score": 77.35,
+        "tier": 2
+      }
+    }
+  },
+  "2136": {
+    "name": "Trusty Weapon",
+    "canon": "trustyweapon",
+    "tier": 5,
+    "pickRate": 0.15,
+    "score": 80.74,
+    "champions": {
+      "Aurora": {
+        "pickRate": 0.37,
+        "score": 87.21,
+        "tier": 1
+      },
+      "Lillia": {
+        "pickRate": 0.29,
+        "score": 92.46,
+        "tier": 1
+      },
+      "Ezreal": {
+        "pickRate": 0.39,
+        "score": 79.23,
+        "tier": 2
+      },
+      "Veigar": {
+        "pickRate": 0.42,
+        "score": 81.95,
+        "tier": 2
+      },
+      "Ziggs": {
+        "pickRate": 0.42,
+        "score": 79.41,
+        "tier": 2
+      }
+    }
+  },
+  "2137": {
+    "name": "Pat On The Back",
+    "canon": "patontheback",
+    "tier": 2,
+    "pickRate": 0.92,
+    "score": 80.42,
+    "champions": {
+      "Singed": {
+        "pickRate": 2.78,
+        "score": 84.83,
+        "tier": 0
+      },
+      "Blitzcrank": {
+        "pickRate": 1.42,
+        "score": 78.2,
+        "tier": 1
+      },
+      "Pyke": {
+        "pickRate": 1.27,
+        "score": 78.03,
+        "tier": 1
+      },
+      "Hecarim": {
+        "pickRate": 1.36,
+        "score": 81.76,
+        "tier": 1
+      },
+      "Lillia": {
+        "pickRate": 0.99,
+        "score": 91.29,
+        "tier": 1
+      }
+    }
+  },
+  "2138": {
+    "name": "Adaptive Ward",
+    "canon": "adaptiveward",
+    "tier": 5,
+    "pickRate": 0.07,
+    "score": 78.36,
+    "champions": {
+      "Zaahen": {
+        "pickRate": 0.3,
+        "score": 89.07,
+        "tier": 1
+      },
+      "Hecarim": {
+        "pickRate": 0.33,
+        "score": 79.4,
+        "tier": 2
+      },
+      "Yone": {
+        "pickRate": 0.28,
+        "score": 76.68,
+        "tier": 2
+      },
+      "Illaoi": {
+        "pickRate": 0.37,
+        "score": 81.61,
+        "tier": 2
+      },
+      "Aatrox": {
+        "pickRate": 0.41,
+        "score": 72.94,
+        "tier": 2
+      }
+    }
+  },
+  "2139": {
+    "name": "Porcupine",
+    "canon": "porcupine",
+    "tier": 4,
+    "pickRate": 0.52,
+    "score": 81.4,
+    "champions": {
+      "DrMundo": {
+        "pickRate": 0.57,
+        "score": 88.73,
+        "tier": 1
+      },
+      "Rammus": {
+        "pickRate": 1.38,
+        "score": 90.09,
+        "tier": 1
+      },
+      "Sion": {
+        "pickRate": 0.63,
+        "score": 96.21,
+        "tier": 1
+      },
+      "Leona": {
+        "pickRate": 0.62,
+        "score": 89.42,
+        "tier": 1
+      },
+      "Nautilus": {
+        "pickRate": 0.5,
+        "score": 84.31,
+        "tier": 1
+      }
+    }
+  },
+  "2144": {
+    "name": "Bolstered",
+    "canon": "bolstered",
+    "tier": 5,
+    "pickRate": 0.13,
+    "score": 84.49,
+    "champions": {
+      "Seraphine": {
+        "pickRate": 0.54,
+        "score": 87.38,
+        "tier": 1
+      },
+      "Yuumi": {
+        "pickRate": 1,
+        "score": 87.21,
+        "tier": 1
+      },
+      "Lulu": {
+        "pickRate": 1.04,
+        "score": 86.19,
+        "tier": 1
+      },
+      "Karma": {
+        "pickRate": 0.62,
+        "score": 84.14,
+        "tier": 1
+      },
+      "Milio": {
+        "pickRate": 0.68,
+        "score": 89.93,
+        "tier": 1
+      }
+    }
+  },
+  "2148": {
+    "name": "Double Strike",
+    "canon": "doublestrike",
+    "tier": 5,
+    "pickRate": 0,
+    "score": 102,
+    "champions": {
+      "Darius": {
+        "pickRate": 0,
+        "score": 170,
+        "tier": 5
+      },
+      "Viego": {
+        "pickRate": 0,
+        "score": 0,
+        "tier": 5
+      },
+      "Sylas": {
+        "pickRate": 0,
+        "score": 0,
+        "tier": 5
+      },
+      "Sett": {
+        "pickRate": 0,
+        "score": 170,
+        "tier": 5
+      },
+      "TwistedFate": {
+        "pickRate": 0,
+        "score": 170,
+        "tier": 5
+      }
+    }
+  },
+  "12317": {
+    "name": "Pandora's Box",
+    "canon": "pandorasbox",
+    "tier": 3,
+    "pickRate": 0.75,
+    "score": 77.28,
+    "champions": {
+      "Blitzcrank": {
+        "pickRate": 0.31,
+        "score": 76.84,
+        "tier": 2
+      },
+      "Mel": {
+        "pickRate": 0.3,
+        "score": 75.16,
+        "tier": 2
+      },
+      "Ahri": {
+        "pickRate": 0.31,
+        "score": 82.13,
+        "tier": 2
+      },
+      "Trundle": {
+        "pickRate": 0.34,
+        "score": 72.59,
+        "tier": 2
+      },
+      "Karthus": {
+        "pickRate": 0.26,
+        "score": 79.58,
+        "tier": 2
+      }
+    }
+  }
+}

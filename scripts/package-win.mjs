@@ -10,7 +10,7 @@
 // --publish uploads to a GitHub Release via electron-builder (needs GH_TOKEN).
 
 import { execSync } from 'node:child_process'
-import { cpSync, rmSync, mkdirSync, existsSync, readFileSync } from 'node:fs'
+import { cpSync, rmSync, mkdirSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -26,11 +26,29 @@ console.log('1/4 building web bundle…')
 run('npm run build')
 
 console.log('2/4 staging to Windows…')
+// OCR language data for the augment-title reader (electron/augment-vision.js):
+// fetched once, bundled so the packaged app never needs tesseract's CDN.
+const TRAINED = join(ROOT, 'electron/eng.traineddata.gz')
+if (!existsSync(TRAINED)) {
+  console.log('  fetching eng.traineddata.gz…')
+  const res = await fetch('https://tessdata.projectnaptha.com/4.0.0/eng.traineddata.gz')
+  if (!res.ok) throw new Error(`traineddata download failed: ${res.status}`)
+  writeFileSync(TRAINED, Buffer.from(await res.arrayBuffer()))
+}
 rmSync(join(ROOT, 'electron/dist'), { recursive: true, force: true })
 cpSync(join(ROOT, 'dist'), join(ROOT, 'electron/dist'), { recursive: true })
 if (existsSync(PKG)) rmSync(PKG, { recursive: true, force: true })
 mkdirSync(PKG, { recursive: true })
-for (const f of ['main.js', 'server.js', 'preload.js', 'app-preload.js', 'package.json']) {
+for (const f of [
+  'main.js',
+  'server.js',
+  'preload.js',
+  'app-preload.js',
+  'augment-vision.js',
+  'ocr-worker.js',
+  'eng.traineddata.gz',
+  'package.json',
+]) {
   cpSync(join(ROOT, 'electron', f), join(PKG, f))
 }
 if (existsSync(join(ROOT, 'electron/icon.ico'))) cpSync(join(ROOT, 'electron/icon.ico'), join(PKG, 'icon.ico'))

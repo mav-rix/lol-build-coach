@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import { importBuildToClient } from '@/lib/lcuImport'
 import type { BuildPath } from '@/types/app'
-import type { DDragonChampion, DDragonRunePath } from '@/types/ddragon'
+import type { DDragonChampion, DDragonItem, DDragonRunePath } from '@/types/ddragon'
 
 interface Props {
   build: BuildPath
   champion: DDragonChampion
   mapId: number
   runes: DDragonRunePath[]
+  items: Record<string, DDragonItem>
   /** LCU bridge reachable and the League client open (champSelect.available). */
   clientOpen: boolean
   /** ARAM Mayhem & other augmented-Abyss events: no rune pages, import items only. */
@@ -26,6 +27,7 @@ export function ImportBuildButton({
   champion,
   mapId,
   runes,
+  items,
   clientOpen,
   skipRunes = false,
 }: Props) {
@@ -46,7 +48,7 @@ export function ImportBuildButton({
 
   const run = async () => {
     setPhase('busy')
-    const result = await importBuildToClient(build, champion, mapId, runes, skipRunes)
+    const result = await importBuildToClient(build, champion, mapId, runes, items, skipRunes)
     setMessage(result.message)
     setPhase(result.ok ? 'done' : 'error')
   }

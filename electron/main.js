@@ -4,18 +4,19 @@
 // Running natively on Windows means the game APIs are directly reachable — no
 // WSL plumbing, no portproxy, no separate bridge.
 //
-// Overlay behavior matches the dev shell: click-through with a draggable grip,
-// Tab-summoned visibility via a PASSIVE key listener (never consumes the key),
-// position persisted. Hotkeys: Ctrl+Shift+O interactive pin, Ctrl+Shift+H
-// visible pin, Ctrl+Shift+L toggle overlay on/off, Ctrl+Shift+Q quit.
+// Overlay behavior matches the dev shell: always visible in-game, click-through
+// with a draggable grip, position persisted. The card itself collapses to a
+// slim strip and expands on grip hover (renderer-side). Hotkeys: Ctrl+Shift+O
+// interactive pin, Ctrl+Shift+H show/hide, Ctrl+Shift+L toggle overlay window
+// on/off, Ctrl+Shift+Q quit.
 
 const { app, BrowserWindow, Menu, Tray, globalShortcut, screen, shell, ipcMain } = require('electron')
 const path = require('node:path')
 const { readFileSync, writeFileSync } = require('node:fs')
 const { startServer } = require('./server')
+const { startVision, stopVision } = require('./augment-vision')
 
 const DIST = path.join(__dirname, 'dist')
-const TAB_MODE = (process.env.OVERLAY_TAB ?? 'hold').toLowerCase() // hold | toggle | off
 
 let baseUrl = null
 let mainWin = null
@@ -32,11 +33,10 @@ let updaterRef = null // electron-updater's autoUpdater once loaded
 let interactivePin = false
 let gripHover = false
 let dragOrigin = null
-let tabVisible = false
-let pinnedVisible = false
-let tabModeActive = false
+let handleRects = [] // renderer-reported [data-drag-handle] rects (window-relative CSS px)
 let loadingLayout = false // renderer-reported: League loading screen is up
 let preLoadingBounds = null // overlay bounds to restore after the loading screen
+let badgeWin = null // dedicated augment-badge window (see augment-vision.js)
 
 const HARDENED = {
   contextIsolation: true,
@@ -78,23 +78,48 @@ const savePos = () => {
   }
 }
 
+// Click-through control. NEVER pass forward:true here: on Windows it installs
+// a system-wide low-level mouse hook that relays every physical mouse move
+// through this process, so any busy spell (a vision scan, a paint) delays the
+// REAL cursor — in-game it feels like mouse lag/smoothing. Hover is instead
+// detected hook-free: main polls the cursor position (a cheap query) against
+// [data-drag-handle] rects the renderer reports, and pushes the result down.
 function applyOverlayIgnore() {
   if (overlayWin && !overlayWin.isDestroyed())
-    overlayWin.setIgnoreMouseEvents(!(interactivePin || gripHover), { forward: true })
+    overlayWin.setIgnoreMouseEvents(!(interactivePin || gripHover || dragOrigin))
 }
 
+function setGripHover(h) {
+  if (h === gripHover) return
+  gripHover = h
+  applyOverlayIgnore()
+  if (overlayWin && !overlayWin.isDestroyed()) overlayWin.webContents.send('overlay:grip-hover', h)
+}
+
+function pollGripHover() {
+  if (!overlayWin || overlayWin.isDestroyed() || !overlayWin.isVisible()) return setGripHover(false)
+  if (dragOrigin) return // stay interactive for the whole drag
+  const p = screen.getCursorScreenPoint()
+  const b = overlayWin.getContentBounds()
+  setGripHover(
+    handleRects.some(
+      (r) => p.x >= b.x + r.x && p.x < b.x + r.x + r.w && p.y >= b.y + r.y && p.y < b.y + r.y + r.h,
+    ),
+  )
+}
+
+// The overlay window is always shown (the renderer collapses the in-game card
+// to a slim strip instead of hiding); this re-shows it if something hid it —
+// e.g. entering the loading screen after a Ctrl+Shift+H hide.
 function applyOverlayVisibility() {
   if (!overlayWin || overlayWin.isDestroyed()) return
-  // The loading-screen panel is always shown (like other companion apps) —
-  // Tab-summoning only governs the in-game card.
-  const visible = !tabModeActive || pinnedVisible || tabVisible || loadingLayout
-  if (visible && !overlayWin.isVisible()) {
+  if (!overlayWin.isVisible()) {
     overlayWin.showInactive()
     // Re-assert topmost on every show — borderless games re-grab z-order on
     // focus changes, and the periodic re-assert below only runs while visible.
     overlayWin.setAlwaysOnTop(true, 'screen-saver', 1)
     overlayWin.moveTop()
-  } else if (!visible && overlayWin.isVisible()) overlayWin.hide()
+  }
 }
 
 // Loading screen: swap the overlay from its side-card bounds to a large
@@ -102,13 +127,14 @@ function applyOverlayVisibility() {
 // phase); position is never persisted from the centered layout (savePos only
 // runs on drag-end, and the loading panel has no drag grip).
 function applyLoadingLayout(active) {
+  // A loading screen means the game flow moved on — stop any augment watch.
+  if (active) {
+    stopVision()
+    hideBadges()
+  }
   loadingLayout = Boolean(active)
   if (overlayWin && !overlayWin.isDestroyed()) {
     if (loadingLayout && !preLoadingBounds) {
-      // New game starting (loading screen just appeared) — re-register the Tab
-      // hook now so it's fresh for the in-game overlay a few seconds later,
-      // even if it went stale earlier in the session.
-      refreshTabListener()
       preLoadingBounds = overlayWin.getBounds()
       const wa = screen.getPrimaryDisplay().workArea
       // Wide and short: each team is a horizontal row of five portraits
@@ -127,6 +153,61 @@ function applyLoadingLayout(active) {
     }
   }
   applyOverlayVisibility()
+}
+
+// Augment badges live in their OWN window covering the primary display —
+// showing/hiding them must never move or resize the strip's window (an early
+// version swapped the overlay's bounds per detection, which made the whole
+// overlay jump around during augment picks). Permanently click-through and
+// unfocusable; created hidden at startup so the page is warm before the first
+// pick screen.
+function ensureBadgeWindow() {
+  if (badgeWin && !badgeWin.isDestroyed()) return badgeWin
+  badgeWin = new BrowserWindow({
+    ...screen.getPrimaryDisplay().bounds,
+    frame: false,
+    transparent: true,
+    resizable: false,
+    movable: false,
+    alwaysOnTop: true,
+    skipTaskbar: true,
+    hasShadow: false,
+    focusable: false,
+    fullscreenable: false,
+    show: false,
+    webPreferences: { ...HARDENED, preload: path.join(__dirname, 'preload.js') },
+  })
+  badgeWin.setAlwaysOnTop(true, 'screen-saver', 1)
+  badgeWin.setIgnoreMouseEvents(true)
+  badgeWin.loadURL(baseUrl + '/overlay?badges=1')
+  badgeWin.on('closed', () => (badgeWin = null))
+  return badgeWin
+}
+
+function showBadges(payload) {
+  if (loadingLayout) return
+  const win = ensureBadgeWindow()
+  const bounds = screen.getPrimaryDisplay().bounds
+  const send = () =>
+    win.webContents.send('overlay:vision-offer', {
+      ...payload,
+      origin: { x: bounds.x, y: bounds.y },
+    })
+  if (win.webContents.isLoading()) win.webContents.once('did-finish-load', send)
+  else send()
+  win.setBounds(bounds)
+  if (!win.isVisible()) {
+    win.showInactive()
+    win.setAlwaysOnTop(true, 'screen-saver', 1)
+    win.moveTop()
+  }
+}
+
+function hideBadges() {
+  if (badgeWin && !badgeWin.isDestroyed()) {
+    badgeWin.webContents.send('overlay:vision-offer', null)
+    badgeWin.hide()
+  }
 }
 
 function createOverlayWindow() {
@@ -152,7 +233,11 @@ function createOverlayWindow() {
   overlayWin.setAlwaysOnTop(true, 'screen-saver', 1)
   applyOverlayIgnore()
   overlayWin.loadURL(baseUrl + '/overlay')
-  overlayWin.on('closed', () => (overlayWin = null))
+  overlayWin.on('closed', () => {
+    stopVision()
+    hideBadges()
+    overlayWin = null
+  })
   // Games grab z-order on focus changes; keep re-asserting topmost.
   setInterval(() => {
     if (overlayWin && !overlayWin.isDestroyed() && overlayWin.isVisible())
@@ -160,72 +245,13 @@ function createOverlayWindow() {
   }, 2000)
 }
 
-// Passive global Tab listener (see overlay/main.js for rationale — a normal
-// globalShortcut would steal Tab from the game's scoreboard).
-// The hook's NATIVE THREAD can block Electron's quit sequence if it's still
-// running (or stopped from inside will-quit), which held the whole app open on
-// quit — and with it, pending updates. It's stopped explicitly in safeQuit
-// BEFORE quitting, with a hard-exit fallback.
-let activeHook = null
-function stopTabListener() {
-  try {
-    // uiohook is a singleton — drop our listeners too so a later re-register
-    // (refreshTabListener) doesn't stack duplicate Tab handlers on it.
-    activeHook?.removeAllListeners?.()
-    activeHook?.stop()
-  } catch {
-    // best effort
-  }
-  activeHook = null
-}
-function startTabListener() {
-  if (TAB_MODE === 'off') return
-  let uio
-  try {
-    uio = require('uiohook-napi')
-  } catch {
-    console.warn('[app] uiohook-napi unavailable — overlay stays always-visible.')
-    return
-  }
-  const { uIOhook, UiohookKey } = uio
-  uIOhook.on('keydown', (e) => {
-    if (e.keycode !== UiohookKey.Tab) return
-    tabVisible = TAB_MODE === 'toggle' ? !tabVisible : true
-    applyOverlayVisibility()
-  })
-  if (TAB_MODE === 'hold') {
-    uIOhook.on('keyup', (e) => {
-      if (e.keycode !== UiohookKey.Tab) return
-      tabVisible = false
-      applyOverlayVisibility()
-    })
-  }
-  uIOhook.start()
-  activeHook = uIOhook
-  tabModeActive = true
-  applyOverlayVisibility()
-}
-
-// The native uiohook thread can silently go stale over a long session (seen
-// after the app ran for hours across an in-place auto-update) and stop
-// delivering Tab events, so the in-game overlay never appears until a manual
-// restart. Re-register it at the start of each game — the moment before Tab is
-// needed — by fully stopping and restarting the hook. No-op if the hook never
-// loaded (uiohook unavailable) or Tab mode is off.
-function refreshTabListener() {
-  if (TAB_MODE === 'off' || !activeHook) return
-  stopTabListener()
-  startTabListener()
-}
-
 /**
- * Quit that can't hang: stop the global hook first, then quit — and if the
- * process is still alive shortly after (something blocked the quit sequence),
- * hard-exit. A pending update's installer is spawned before exit either way
- * (autoInstallOnAppQuit / quitAndInstall), so updates still apply.
+ * Quit that can't hang: if the process is still alive shortly after quitting
+ * (something blocked the quit sequence), hard-exit. A pending update's
+ * installer is spawned before exit either way (autoInstallOnAppQuit /
+ * quitAndInstall), so updates still apply.
  */
 function safeQuit(fn) {
-  stopTabListener()
   try {
     ;(fn ?? (() => app.quit()))()
   } catch {
@@ -301,7 +327,6 @@ function installPendingUpdate() {
   const file = pendingUpdate?.file
   if (file && require('node:fs').existsSync(file)) {
     updaterLog(`installing ${file}`)
-    stopTabListener()
     try {
       const child = require('node:child_process').spawn(file, ['/S', '--force-run'], {
         detached: true,
@@ -413,17 +438,20 @@ app.on('second-instance', () => {
 })
 
 app.whenReady().then(async () => {
-  ;({ baseUrl } = await startServer(DIST))
+  ;({ baseUrl } = await startServer(DIST, app.getPath('userData')))
   createMainWindow()
   createOverlayWindow()
+  ensureBadgeWindow()
   createTray()
-  startTabListener()
 
-  // Overlay drag bridge (see preload.js).
-  ipcMain.on('overlay:hover', (_e, h) => {
-    gripHover = Boolean(h)
-    applyOverlayIgnore()
+  // Overlay drag bridge (see preload.js). Sender-guarded: the badge window
+  // runs the same /overlay page (?badges=1) and would otherwise clobber the
+  // strip's rects with its own (empty) list.
+  ipcMain.on('overlay:handles', (e, rects) => {
+    if (!overlayWin || overlayWin.isDestroyed() || e.sender !== overlayWin.webContents) return
+    handleRects = Array.isArray(rects) ? rects : []
   })
+  setInterval(pollGripHover, 150)
   ipcMain.on('overlay:begin-drag', () => {
     dragOrigin = overlayWin && !overlayWin.isDestroyed() ? overlayWin.getPosition() : null
   })
@@ -437,16 +465,27 @@ app.whenReady().then(async () => {
   })
   ipcMain.on('overlay:loading-layout', (_e, active) => applyLoadingLayout(active))
 
+  // Augment vision (see augment-vision.js): the renderer starts/stops the
+  // screen watch around Mayhem offer windows and supplies the icon manifest.
+  ipcMain.on('overlay:vision-start', (_e, manifest) => {
+    startVision(
+      manifest,
+      (payload) => showBadges(payload),
+      () => hideBadges(),
+    ).catch((e) => console.warn(`[vision] start failed: ${e.message ?? e}`))
+  })
+  ipcMain.on('overlay:vision-stop', () => {
+    stopVision()
+    hideBadges()
+  })
+
   globalShortcut.register('Control+Shift+O', () => {
     interactivePin = !interactivePin
     applyOverlayIgnore()
     if (interactivePin && overlayWin) overlayWin.focus()
   })
   globalShortcut.register('Control+Shift+H', () => {
-    if (tabModeActive) {
-      pinnedVisible = !pinnedVisible
-      applyOverlayVisibility()
-    } else if (overlayWin?.isVisible()) overlayWin.hide()
+    if (overlayWin?.isVisible()) overlayWin.hide()
     else overlayWin?.show()
   })
   globalShortcut.register('Control+Shift+L', () => {

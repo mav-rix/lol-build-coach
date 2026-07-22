@@ -1,5 +1,5 @@
 import type { BuildPath } from '@/types/app'
-import type { DDragonChampion, DDragonRunePath } from '@/types/ddragon'
+import type { DDragonChampion, DDragonItem, DDragonRunePath } from '@/types/ddragon'
 
 // Import the recommended build into the League client through the LCU bridge
 // (/lcu/import-* — electron/server.js in the packaged app, lcu-bridge in dev).
@@ -50,7 +50,12 @@ function runePagePayload(build: BuildPath, champion: DDragonChampion, runes: DDr
   }
 }
 
-function itemSetPayload(build: BuildPath, champion: DDragonChampion, mapId: number) {
+function itemSetPayload(
+  build: BuildPath,
+  champion: DDragonChampion,
+  mapId: number,
+  items: Record<string, DDragonItem>,
+) {
   const toItems = (ids: number[]) => ids.map((id) => ({ id: String(id), count: 1 }))
   const blocks: { type: string; items: { id: string; count: number }[] }[] = []
   if (build.starterItems.length > 0)
@@ -58,6 +63,17 @@ function itemSetPayload(build: BuildPath, champion: DDragonChampion, mapId: numb
   // Mirrors the game plan's path: first boots, then the core items in order.
   const core = [...(build.bootsOptions[0] ? [build.bootsOptions[0]] : []), ...build.coreItems]
   if (core.length > 0) blocks.push({ type: 'Core build order', items: toItems(core) })
+  // One block per core item listing its components in front of the finished
+  // item — the shop's own affordability graying then reads as "buy these
+  // next". Items with fewer than two components (boots tiers, epics bought
+  // whole) don't earn a block; the set can't update mid-game, so this carries
+  // the whole plan's shopping lists up front.
+  core.forEach((id, i) => {
+    const components = (items[String(id)]?.from ?? []).map(Number)
+    if (components.length < 2) return
+    const name = items[String(id)]?.name ?? String(id)
+    blocks.push({ type: `${i + 1}. ${name} — components`, items: toItems([...components, id]) })
+  })
   const situational = [
     ...build.bootsOptions.slice(1),
     ...build.situationalItems.map((s) => s.itemId),
@@ -99,17 +115,21 @@ export async function importBuildToClient(
   champion: DDragonChampion,
   mapId: number,
   runes: DDragonRunePath[],
+  items: Record<string, DDragonItem>,
   skipRunes = false,
 ): Promise<ImportOutcome> {
   if (skipRunes) {
-    const itemsResult = await post('/lcu/import-itemset', itemSetPayload(build, champion, mapId))
+    const itemsResult = await post(
+      '/lcu/import-itemset',
+      itemSetPayload(build, champion, mapId, items),
+    )
     return itemsResult.ok
       ? { ok: true, message: 'Item set imported (no runes — this mode has no rune pages)' }
       : { ok: false, message: `Import failed: ${itemsResult.error}` }
   }
   const runePage = runePagePayload(build, champion, runes)
   const [itemsResult, runesResult] = await Promise.all([
-    post('/lcu/import-itemset', itemSetPayload(build, champion, mapId)),
+    post('/lcu/import-itemset', itemSetPayload(build, champion, mapId, items)),
     runePage ? post('/lcu/import-runes', runePage) : Promise.resolve(null),
   ])
 
