@@ -304,6 +304,64 @@ async function buildLoadingScreen() {
   return { available: true, phase, show: true, windowMode, ...teams }
 }
 
+// --- profile — current summoner, rank, and recent games (read-only) ----------
+function rankedEntry(queue) {
+  if (!queue?.tier || queue.tier === 'NONE' || queue.tier === 'UNRANKED') return null
+  return {
+    tier: queue.tier,
+    division: queue.division && queue.division !== 'NA' ? queue.division : '',
+    lp: queue.leaguePoints ?? 0,
+    wins: queue.wins ?? 0,
+    losses: queue.losses ?? 0,
+  }
+}
+
+async function buildProfile() {
+  const lock = readLockfile()
+  if (!lock) return { clientOpen: false }
+  const summoner = (await lcuGet(lock, '/lol-summoner/v1/current-summoner')).json
+  if (!summoner?.puuid) return { clientOpen: true, summoner: null }
+  const [ranked, hist] = await Promise.all([
+    lcuGet(lock, `/lol-ranked/v1/ranked-stats/${summoner.puuid}`),
+    lcuGet(lock, `/lol-match-history/v1/products/lol/${summoner.puuid}/matches?begIndex=0&endIndex=19`),
+  ])
+  const qm = ranked.json?.queueMap ?? {}
+  const games = (hist.json?.games?.games ?? [])
+    .slice()
+    .sort((a, b) => (b?.gameCreation ?? 0) - (a?.gameCreation ?? 0))
+    .map((g) => {
+      // Product match history returns only this player's participant.
+      const st = g?.participants?.[0]?.stats ?? {}
+      return {
+        gameId: g?.gameId ?? 0,
+        championId: g?.participants?.[0]?.championId ?? 0,
+        win: typeof st.win === 'boolean' ? st.win : null,
+        kills: st.kills ?? 0,
+        deaths: st.deaths ?? 0,
+        assists: st.assists ?? 0,
+        queueId: g?.queueId ?? 0,
+        gameMode: g?.gameMode ?? '',
+        mapId: g?.mapId ?? 0,
+        gameCreation: g?.gameCreation ?? 0,
+        gameDuration: g?.gameDuration ?? 0,
+      }
+    })
+  return {
+    clientOpen: true,
+    summoner: {
+      gameName: summoner.gameName || summoner.displayName || '',
+      tagLine: summoner.tagLine || '',
+      level: summoner.summonerLevel ?? 0,
+      profileIconId: summoner.profileIconId ?? 0,
+    },
+    ranked: {
+      solo: rankedEntry(qm.RANKED_SOLO_5x5),
+      flex: rankedEntry(qm.RANKED_FLEX_SR),
+    },
+    games,
+  }
+}
+
 // --- build import — the only LCU writes this server performs ------------------
 // Imports the recommended build into the client: a rune page and a per-champion
 // item set (what the in-game shop shows). Loadout configuration only. Pages and
@@ -481,6 +539,15 @@ async function handleLcu(req, res) {
   if (req.url === '/lcu/loading-screen') {
     try {
       res.end(JSON.stringify(await buildLoadingScreen()))
+    } catch (e) {
+      res.statusCode = 500
+      res.end(JSON.stringify({ error: String(e) }))
+    }
+    return
+  }
+  if (req.url === '/lcu/profile') {
+    try {
+      res.end(JSON.stringify(await buildProfile()))
     } catch (e) {
       res.statusCode = 500
       res.end(JSON.stringify({ error: String(e) }))

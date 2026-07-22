@@ -61,7 +61,7 @@ export default function Live() {
         {!selectedChampionId && (
           <p className="text-sm text-zinc-500">
             Tip: pick your champion on the{' '}
-            <Link to="/" className="text-sky-400 hover:underline">
+            <Link to="/build" className="text-sky-400 hover:underline">
               Build page
             </Link>{' '}
             first so the tracker knows your build path.

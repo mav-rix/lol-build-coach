@@ -6,13 +6,15 @@ import Augments from '@/pages/Augments'
 import Home from '@/pages/Home'
 import Live from '@/pages/Live'
 import Overlay from '@/pages/Overlay'
+import Profile from '@/pages/Profile'
 import Review from '@/pages/Review'
 import Tiers from '@/pages/Tiers'
 
 const queryClient = new QueryClient()
 
 const NAV = [
-  { to: '/', label: 'Build' },
+  { to: '/', label: 'Profile' },
+  { to: '/build', label: 'Build' },
   { to: '/tiers', label: 'Tier List' },
   { to: '/live', label: 'Live' },
   { to: '/review', label: 'Review' },
@@ -73,7 +75,8 @@ export default function App() {
           {/* Bare route for the transparent in-game overlay window */}
           <Route path="/overlay" element={<Overlay />} />
           <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Profile />} />
+            <Route path="/build" element={<Home />} />
             <Route path="/tiers" element={<Tiers />} />
             <Route path="/live" element={<Live />} />
             <Route path="/review" element={<Review />} />

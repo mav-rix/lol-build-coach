@@ -113,3 +113,6 @@ export const itemIconUrl = (patch: string, itemId: number) =>
 
 export const runeIconUrl = (iconPath: string) =>
   `${DDRAGON}/cdn/img/${iconPath}`
+
+export const profileIconUrl = (patch: string, iconId: number) =>
+  `${DDRAGON}/cdn/${patch}/img/profileicon/${iconId}.png`

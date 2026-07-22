@@ -19,6 +19,10 @@ declare global {
       getPendingUpdate: () => Promise<UpdateInfo | null>
       downloadUpdate: () => void
       installUpdate: () => void
+      checkForUpdates?: () => void
+      onCheckStatus?: (
+        cb: (status: 'checking' | 'uptodate' | 'found' | 'error') => void,
+      ) => () => void
     }
   }
 }
