@@ -7,11 +7,13 @@ interface AppState {
   selectedRole: Role | null
   selectedMode: GameMode
   enemyChampionIds: (string | null)[] // always length 5
+  autoOpenBuild: boolean // jump to /build when champ select begins
   selectChampion: (championId: string | null) => void
   selectRole: (role: Role | null) => void
   selectMode: (mode: GameMode) => void
   setEnemyChampion: (slot: number, championId: string | null) => void
   clearEnemies: () => void
+  setAutoOpenBuild: (on: boolean) => void
 }
 
 const EMPTY_ENEMIES: (string | null)[] = [null, null, null, null, null]
@@ -24,6 +26,7 @@ export const useAppStore = create<AppState>()(
       selectedRole: null,
       selectedMode: 'SR',
       enemyChampionIds: EMPTY_ENEMIES,
+      autoOpenBuild: true,
       selectChampion: (championId) => set({ selectedChampionId: championId }),
       selectRole: (role) => set({ selectedRole: role }),
       selectMode: (mode) => set({ selectedMode: mode }),
@@ -34,6 +37,7 @@ export const useAppStore = create<AppState>()(
           return { enemyChampionIds }
         }),
       clearEnemies: () => set({ enemyChampionIds: EMPTY_ENEMIES }),
+      setAutoOpenBuild: (on) => set({ autoOpenBuild: on }),
     }),
     { name: 'lol-build-coach' },
   ),
