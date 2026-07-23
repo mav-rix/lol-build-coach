@@ -46,6 +46,7 @@ declare global {
       setLoadingLayout: (active: boolean) => void
       visionStart?: (manifest: VisionTemplate[]) => void
       visionStop?: () => void
+      visionSetAlive?: (alive: boolean) => void
       onVisionOffer?: (cb: (payload: VisionPayload | null) => void) => () => void
     }
   }
@@ -166,9 +167,15 @@ function DragGrip({ className = '' }: { className?: string }) {
 // is swapped to cover the display and this hook's payload drives % badges
 // rendered directly over the cards. ?badgemock=1 fabricates a payload for
 // previews/screenshots (1080p geometry, no IPC needed).
-function useAugmentVision(active: boolean): VisionPayload | null {
+function useAugmentVision(active: boolean, isDead: boolean): VisionPayload | null {
   const [payload, setPayload] = useState<VisionPayload | null>(null)
   const [, setDataReady] = useState(false)
+  // Report alive/dead to main so its scan loop can slow down during live play
+  // (the augment pick screen only appears while dead). Cuts screen-capture load
+  // during teamfights.
+  useEffect(() => {
+    if (active) window.overlay?.visionSetAlive?.(!isDead)
+  }, [active, isDead])
   // Load the augment stats cache in whatever renderer shows the badges. The
   // dedicated badge window (?badges=1) renders the pills but runs with
   // active=false — it only receives detections over IPC — so without loading
@@ -267,7 +274,7 @@ function AugmentBadges({ payload, championId }: { payload: VisionPayload; champi
               // icon height clears the frame at any resolution), pill grows up.
               top: card.cy - payload.origin.y - payload.iconSize,
             }}
-            className={`absolute flex w-40 -translate-x-1/2 -translate-y-full flex-col items-center gap-1 rounded-2xl border bg-zinc-950/85 px-3.5 py-2 text-center backdrop-blur-[2px] ${
+            className={`absolute flex w-40 -translate-x-1/2 -translate-y-full flex-col items-center gap-1 rounded-2xl border bg-zinc-950/85 px-3.5 py-2 text-center ${
               RARITY_BADGE[badge.rarity ?? ''] ?? 'border-zinc-600/60 text-zinc-200'
             }`}
           >
@@ -378,7 +385,10 @@ export default function Overlay() {
   // after an unlock (or via the AUGMENTS button whenever a pick is banked), so
   // windowed arming kept missing it. Probes are cheap half-res captures — the
   // expensive full capture + OCR only runs when a probe sees the cards.
-  const visionOffer = useAugmentVision(!badgesOnly && augmentMode && gameStarted)
+  const visionOffer = useAugmentVision(
+    !badgesOnly && augmentMode && gameStarted,
+    self?.isDead ?? false,
+  )
   // ?expand=1 (mock/dev only): force the full card for previews/screenshots,
   // where there's no real pointer to hover the grip with.
   const forceExpand = new URLSearchParams(window.location.search).has('expand')
@@ -454,7 +464,7 @@ export default function Overlay() {
       <div
         data-drag-handle
         title="Hover to expand — press and hold the left mouse button to drag"
-        className="ml-auto flex w-fit cursor-grab items-center gap-2 rounded-md border border-zinc-700/40 bg-zinc-950/45 px-2 py-1 text-zinc-100 backdrop-blur-[2px] active:cursor-grabbing [text-shadow:0_1px_2px_rgb(0_0_0/0.9)]"
+        className="ml-auto flex w-fit cursor-grab items-center gap-2 rounded-md border border-zinc-700/40 bg-zinc-950/45 px-2 py-1 text-zinc-100 active:cursor-grabbing [text-shadow:0_1px_2px_rgb(0_0_0/0.9)]"
       >
         <span className="flex items-center gap-[3px]" aria-hidden>
           <span className="h-[3px] w-[3px] rounded-full bg-zinc-600" />
@@ -490,7 +500,7 @@ export default function Overlay() {
     // Mostly-transparent chrome: the game should read through the card. Text
     // stays legible over bright terrain via an inherited text-shadow; icons and
     // the key numbers (gold, costs) carry the contrast.
-    <div className="ml-auto w-[22rem] overflow-hidden rounded-md border border-zinc-700/40 bg-zinc-950/45 text-zinc-100 backdrop-blur-[2px] [text-shadow:0_1px_2px_rgb(0_0_0/0.9)]">
+    <div className="ml-auto w-[22rem] overflow-hidden rounded-md border border-zinc-700/40 bg-zinc-950/45 text-zinc-100 [text-shadow:0_1px_2px_rgb(0_0_0/0.9)]">
       {/* Grip — press-and-hold left mouse to drag the overlay */}
       <DragGrip className="py-1" />
       {/* Header — identity + live stat line, all tabular */}
