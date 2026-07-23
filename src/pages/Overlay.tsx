@@ -168,6 +168,21 @@ function DragGrip({ className = '' }: { className?: string }) {
 // previews/screenshots (1080p geometry, no IPC needed).
 function useAugmentVision(active: boolean): VisionPayload | null {
   const [payload, setPayload] = useState<VisionPayload | null>(null)
+  const [, setDataReady] = useState(false)
+  // Load the augment stats cache in whatever renderer shows the badges. The
+  // dedicated badge window (?badges=1) renders the pills but runs with
+  // active=false — it only receives detections over IPC — so without loading
+  // here its augmentBadgeFor cache stays null and EVERY pill reads "no stats
+  // yet". Re-render on ready so an already-received payload picks up its stats.
+  useEffect(() => {
+    let cancelled = false
+    void loadAugmentData().then(() => {
+      if (!cancelled) setDataReady(true)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [])
   useEffect(() => window.overlay?.onVisionOffer?.((p) => setPayload(p)), [])
   useEffect(() => {
     const api = window.overlay

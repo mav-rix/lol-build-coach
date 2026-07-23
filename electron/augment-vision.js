@@ -498,6 +498,12 @@ async function readTitle(image, cardCx, s, nameIndex) {
   const raw = text.trim().replace(/\s+/g, ' ')
   const c = nameIndex.canon(raw)
   if (c.length < 4) return null
+  // Stat Anvil offers (Attack Speed Shard, Critical Shard, Armor Shard, …)
+  // reuse the augment pick-screen card layout but are NOT augments — no augment
+  // name contains "shard". Reject them before matching so a shard title can't
+  // false-match a real augment (OCR "Critical Shard" was landing on "It's
+  // Critical") and paint a bogus badge over a stat card.
+  if (/shard$/.test(c)) return { raw, entry: null }
   // Best per-name partial match. On distance ties the LONGER name wins — an
   // OCR of "Infinite Recursion" contains "Recursion" at distance 0 too, and
   // the more specific name is the one actually on the card.
@@ -505,7 +511,10 @@ async function readTitle(image, cardCx, s, nameIndex) {
   let second = null
   for (const [cn, entry] of nameIndex.index) {
     const d = nameDist(c, cn)
-    if (d > Math.max(1, Math.round(cn.length * 0.25))) continue
+    // Tightened from 0.25 → 0.20 of the name length: non-augment text (e.g. a
+    // stat-shard title, or a window overlapping the card) was slipping in at
+    // the looser bound. Real titles OCR at distance 0–1, so this stays safe.
+    if (d > Math.max(1, Math.round(cn.length * 0.2))) continue
     const better = !best || d < best.d || (d === best.d && cn.length > best.len)
     if (better) {
       second = best
