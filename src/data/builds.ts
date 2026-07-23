@@ -1,4 +1,8 @@
-import { PREFER_AGGREGATED_SAMPLE, findAggregatedBuild } from '@/data/aggregatedBuilds'
+import {
+  PREFER_AGGREGATED_SAMPLE,
+  findAggregatedBuild,
+  findAggregatedVariants,
+} from '@/data/aggregatedBuilds'
 import type { BuildPath, GameMode, Role } from '@/types/app'
 
 // MVP seed data — the Week 1 champions from the spec. Item/rune IDs resolve
@@ -347,4 +351,28 @@ export function findBuild(
   if (seed) return seed
 
   return aggregated
+}
+
+/**
+ * The build(s) to show on the Build page, most-played first. When a champion
+ * has a confident aggregated build we return its playstyle variants (AP / Tank
+ * / …, each a coherent path) so the page can offer a selector; otherwise a
+ * single-element list with the seed or scoring-engine fallback (via findBuild).
+ * variants[0] always equals findBuild — the default recommendation.
+ */
+export function findBuildVariants(
+  championId: string,
+  role: Role | null | undefined,
+  mode: GameMode = 'SR',
+): BuildPath[] {
+  const all = findAggregatedVariants(championId, role, mode)
+  const dominant = all[0]
+  const confident =
+    dominant &&
+    (dominant.sampleSize ?? 0) >= PREFER_AGGREGATED_SAMPLE &&
+    dominant.coreItems.length >= 3
+  if (confident) return all.filter((b) => b.coreItems.length >= 3)
+
+  const single = findBuild(championId, role, mode)
+  return single ? [single] : []
 }
