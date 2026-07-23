@@ -70,16 +70,28 @@ export function findAggregatedBuild(
   role: Role | null | undefined,
   mode: GameMode,
 ): BuildPath | null {
+  return findAggregatedVariants(championId, role, mode)[0] ?? null
+}
+
+/**
+ * All aggregated build variants for a champion in a mode/role, most-played
+ * first. A flex champion splits into several playstyle clusters (AP, Tank, …);
+ * this returns each so the Build page can offer them. For SR a role scopes the
+ * list; with no role, every role's variants (most-played first). Empty until
+ * the dataset loads.
+ */
+export function findAggregatedVariants(
+  championId: string,
+  role: Role | null | undefined,
+  mode: GameMode,
+): BuildPath[] {
   const candidates = cache.filter(
     (b) =>
       b.championId === championId &&
       b.mode === mode &&
       (b.sampleSize ?? 0) >= MIN_AGGREGATED_SAMPLE,
   )
-  if (candidates.length === 0) return null
-  const mostPlayed = () =>
-    [...candidates].sort((a, b) => (b.sampleSize ?? 0) - (a.sampleSize ?? 0))[0]
-  if (mode === 'ARAM') return mostPlayed()
-  if (role) return candidates.find((b) => b.role === role) ?? null
-  return mostPlayed()
+  const scoped =
+    mode === 'ARAM' || !role ? candidates : candidates.filter((b) => b.role === role)
+  return [...scoped].sort((a, b) => (b.sampleSize ?? 0) - (a.sampleSize ?? 0))
 }

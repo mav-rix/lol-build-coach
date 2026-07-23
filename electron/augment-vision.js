@@ -54,7 +54,12 @@ const BACKDROP = [40, 40, 50]
 // Glyph-fill ratio templates are normalized to. 0.95 reproduces how the game
 // renders icons inside the card's icon area (fitted on captured live frames).
 const FILL = 0.95
-const SCAN_MS = 400
+// Scan cadence is adaptive: the augment pick screen only appears while you're
+// dead (or via the AUGMENTS button), so scan fast when dead and lazily while
+// alive — the alive case is almost all of a game and every capture there is a
+// desktopCapturer framebuffer read that competes with the game's GPU in fights.
+const SCAN_DEAD_MS = 400
+const SCAN_ALIVE_MS = 1500
 // Icon scores merely gate the OCR: any card whose region resembles ANY known
 // augment art this strongly means the pick screen is up. Correct cards run
 // 0.85+ with fill-normalized templates; non-pick screens stay ≤ ~0.6.
@@ -745,35 +750,59 @@ async function startVision(manifest, onOffer, onGone) {
     frameDumped: false,
     stopAt: Date.now() + WATCH_MAX_MS,
   }
+  watch.alive = pendingAlive // carry the last reported state across the start race
   vlog('watch started')
-  let scanning = false
-  watch.timer = setInterval(async () => {
-    if (!watch) return
-    if (Date.now() > watch.stopAt) {
-      vlog('watch safety-stop')
-      stopVision(true)
-      return
-    }
-    if (scanning) return
+  // First scan immediately (offers usually pop with the player already dead),
+  // then scanTick self-reschedules by the alive/dead cadence.
+  scanTick()
+}
+
+let scanning = false
+// Last alive/dead state the renderer reported. Latched so a report that lands
+// before startVision creates the watch (effect-ordering race) isn't lost.
+let pendingAlive = false
+// Self-rescheduling scan loop. Cadence follows watch.alive: fast while dead (the
+// pick screen can be up), lazy while alive to spare GPU during teamfights.
+async function scanTick() {
+  if (!watch) return
+  if (Date.now() > watch.stopAt) {
+    vlog('watch safety-stop')
+    stopVision(true)
+    return
+  }
+  if (!scanning) {
     scanning = true
     try {
       await scanOnce()
     } finally {
       scanning = false
     }
-  }, SCAN_MS)
-  // First scan immediately — offers usually pop with the player already dead.
-  scanOnce().catch(() => {})
+  }
+  if (watch) watch.timer = setTimeout(scanTick, watch.alive ? SCAN_ALIVE_MS : SCAN_DEAD_MS)
+}
+
+// Renderer reports the active player's alive/dead state. On death (alive→dead)
+// scan promptly instead of waiting out the slow tick, so a pick screen that
+// appears the instant you die is caught right away.
+function setVisionAlive(alive) {
+  pendingAlive = Boolean(alive)
+  if (!watch) return
+  const wasAlive = watch.alive
+  watch.alive = pendingAlive
+  if (wasAlive && !watch.alive) {
+    if (watch.timer) clearTimeout(watch.timer)
+    if (!scanning) scanTick()
+  }
 }
 
 function stopVision(fireGone = false) {
   stopOcr()
   if (!watch) return
-  clearInterval(watch.timer)
+  clearTimeout(watch.timer)
   const { onGone, present } = watch
   watch = null
   vlog('watch stopped')
   if (fireGone && present) onGone()
 }
 
-module.exports = { startVision, stopVision }
+module.exports = { startVision, stopVision, setVisionAlive }

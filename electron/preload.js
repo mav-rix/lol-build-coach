@@ -29,6 +29,8 @@ contextBridge.exposeInMainWorld('overlay', {
   // can be drawn over the actual cards. See electron/augment-vision.js.
   visionStart: (manifest) => ipcRenderer.send('overlay:vision-start', manifest),
   visionStop: () => ipcRenderer.send('overlay:vision-stop'),
+  // Active player's alive/dead state — lets main scan lazily during live play.
+  visionSetAlive: (alive) => ipcRenderer.send('overlay:vision-alive', Boolean(alive)),
   onVisionOffer: (cb) => {
     const listener = (_e, payload) => cb(payload)
     ipcRenderer.on('overlay:vision-offer', listener)

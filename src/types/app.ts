@@ -11,6 +11,10 @@ export interface BuildPath {
   championId: string
   mode: GameMode
   role: Role | null // null for modes without roles (ARAM)
+  // Playstyle cluster this build came from (aggregated builds only): 'ap' | 'ad'
+  // | 'tank' | 'other'. A champ can have several — the Build page offers them as
+  // selectable variants. Absent on hand-authored seeds.
+  archetype?: string
   patch: string
   starterItems: number[]
   coreItems: number[] // ordered — buy in sequence

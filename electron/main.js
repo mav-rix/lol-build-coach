@@ -14,7 +14,7 @@ const { app, BrowserWindow, Menu, Tray, globalShortcut, screen, shell, ipcMain }
 const path = require('node:path')
 const { readFileSync, writeFileSync } = require('node:fs')
 const { startServer } = require('./server')
-const { startVision, stopVision } = require('./augment-vision')
+const { startVision, stopVision, setVisionAlive } = require('./augment-vision')
 
 const DIST = path.join(__dirname, 'dist')
 
@@ -533,6 +533,7 @@ app.whenReady().then(async () => {
     stopVision()
     hideBadges()
   })
+  ipcMain.on('overlay:vision-alive', (_e, alive) => setVisionAlive(alive))
 
   globalShortcut.register('Control+Shift+O', () => {
     interactivePin = !interactivePin

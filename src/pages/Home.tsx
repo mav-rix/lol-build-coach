@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ChampionSelect } from '@/components/ChampionSelect'
 import { BuildPathDisplay } from '@/components/BuildPathDisplay'
@@ -10,7 +10,7 @@ import { useStaticData } from '@/hooks/useStaticData'
 import { useChampSelect } from '@/hooks/useChampSelect'
 import { useRankedStats } from '@/hooks/useRankedStats'
 import { useAppStore } from '@/store/useAppStore'
-import { BUILD_PATHS, findBuild } from '@/data/builds'
+import { BUILD_PATHS, findBuildVariants } from '@/data/builds'
 import { aggregatedChampionIds } from '@/data/aggregatedBuilds'
 import { analyzeEnemyComp } from '@/lib/situational'
 import { suggestCounterPicks } from '@/lib/counterpick'
@@ -34,10 +34,21 @@ function defaultRole(champion: DDragonChampion): Role {
   }
 }
 
+// Aggregated-build archetype → dropdown label.
+const ARCHETYPE_LABEL: Record<string, string> = {
+  ap: 'AP',
+  ad: 'AD',
+  tank: 'Tank',
+  other: 'Standard',
+}
+
 export default function Home() {
   const { data, isLoading, error, retry } = useStaticData()
   // Load the lazy aggregated-builds chunk; re-renders when ready so findBuild picks it up.
   const buildsLoaded = useAggregatedBuilds()
+  // Which build variant (playstyle archetype) the user picked; null = the
+  // most-played one. Reset whenever the champion/role/mode changes.
+  const [variantArchetype, setVariantArchetype] = useState<string | null>(null)
   const {
     selectedChampionId,
     selectedRole,
@@ -49,6 +60,10 @@ export default function Home() {
     setEnemyChampion,
     clearEnemies,
   } = useAppStore()
+
+  useEffect(() => {
+    setVariantArchetype(null)
+  }, [selectedChampionId, selectedRole, selectedMode])
 
   // Auto-fill from the League client's champ select (via the LCU bridge).
   const champSelect = useChampSelect()
@@ -120,9 +135,13 @@ export default function Home() {
     )
   }
 
-  const build = selectedChampion
-    ? findBuild(selectedChampion.id, selectedRole, selectedMode)
-    : null
+  // Playstyle variants (AP / Tank / …), most-played first. variants[0] is the
+  // default recommendation; the dropdown selects among them when there's >1.
+  const variants = selectedChampion
+    ? findBuildVariants(selectedChampion.id, selectedRole, selectedMode)
+    : []
+  const build =
+    variants.find((v) => v.archetype === variantArchetype) ?? variants[0] ?? null
   const modeConfig = MODE_CONFIG[selectedMode]
 
   return (
@@ -318,10 +337,27 @@ export default function Home() {
       {selectedChampion && build && (
         <>
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold text-zinc-100">
-              Recommended Build — {selectedChampion.name}{' '}
-              {build.mode === 'ARAM' ? '(ARAM)' : build.role}
-            </h2>
+            <div className="flex items-center gap-3">
+              <h2 className="text-xl font-bold text-zinc-100">
+                Recommended Build — {selectedChampion.name}{' '}
+                {build.mode === 'ARAM' ? '(ARAM)' : build.role}
+              </h2>
+              {variants.length > 1 && (
+                <select
+                  value={build.archetype ?? ''}
+                  onChange={(e) => setVariantArchetype(e.target.value || null)}
+                  className="rounded-md border border-zinc-700 bg-zinc-800 px-2 py-1 text-sm font-medium text-zinc-200 hover:bg-zinc-700"
+                  title="Popular build variations"
+                >
+                  {variants.map((v) => (
+                    <option key={v.id} value={v.archetype ?? ''}>
+                      {ARCHETYPE_LABEL[v.archetype ?? ''] ?? 'Build'}
+                      {v.winRate != null ? ` · ${v.winRate}% WR` : ''}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </div>
             <div className="flex items-center gap-2">
               <ImportBuildButton
                 build={build}

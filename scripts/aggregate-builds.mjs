@@ -455,16 +455,23 @@ function observationArchetype(o, items) {
   return 'other'
 }
 
-/** The dominant archetype's observations (ties/empties stay in the pool). */
-function dominantCluster(group, items) {
+/** Archetype clusters for a group, largest first: [{ archetype, obs }]. */
+function rankedClusters(group, items) {
   const clusters = {}
   for (const o of group) {
     const k = observationArchetype(o, items)
     ;(clusters[k] ??= []).push(o)
   }
-  const ranked = Object.entries(clusters).sort((a, b) => b[1].length - a[1].length)
-  return ranked[0][1]
+  return Object.entries(clusters)
+    .map(([archetype, obs]) => ({ archetype, obs }))
+    .sort((a, b) => b.obs.length - a.obs.length)
 }
+
+// A secondary archetype is surfaced as a selectable variant only when it's a
+// real alternative — at least this fraction as common as the dominant build,
+// and clearing the sample floor. Keeps fringe/chimera clusters out.
+const VARIANT_MIN_FRACTION = 0.34
+const MAX_VARIANTS = 3
 
 // Comp-conditioned situational items: an item is "situational vs condition C"
 // when it's bought materially more often in games where C is active than
@@ -563,7 +570,7 @@ function modalBy(group, keyFn) {
 }
 
 let idSeq = 20000
-export function toBuildPath(group, items) {
+export function toBuildPath(group, items, archetype = null) {
   const perkRep = modalBy(group, (o) => JSON.stringify(o.perks))
   const skillRep = modalBy(group, (o) => `${o.maxOrder}|${o.start}`)
   const wins = group.filter((o) => o.win).length
@@ -585,6 +592,7 @@ export function toBuildPath(group, items) {
     championId: group[0].championId,
     mode: MODE_CFG.buildMode,
     role: group[0].role,
+    archetype,
     patch: modal(group.map((o) => o.patch)),
     starterItems: aggregateStarters(group),
     coreItems,
@@ -774,10 +782,17 @@ async function main() {
   const minSample = DRY_RUN ? 1 : MIN_SAMPLE
   const builds = []
   for (const group of groups.values()) {
-    // Aggregate only the dominant archetype cluster so flex champions don't
-    // produce tank/AP chimera builds (see observationArchetype).
-    const cluster = dominantCluster(group, statik.items)
-    if (cluster.length >= minSample) builds.push(toBuildPath(cluster, statik.items))
+    // Aggregate each archetype cluster into its own coherent build (flex
+    // champions split into e.g. AP and Tank), so the Build page can offer them
+    // as variants. Cluster-per-build avoids tank/AP chimeras; the dominant one
+    // stays first.
+    const clusters = rankedClusters(group, statik.items)
+    if (!clusters.length || clusters[0].obs.length < minSample) continue
+    const primaryN = clusters[0].obs.length
+    const chosen = clusters
+      .filter((c, i) => c.obs.length >= minSample && (i === 0 || c.obs.length >= primaryN * VARIANT_MIN_FRACTION))
+      .slice(0, MAX_VARIANTS)
+    for (const c of chosen) builds.push(toBuildPath(c.obs, statik.items, c.archetype))
   }
   builds.sort(
     (a, b) => a.championId.localeCompare(b.championId) || (a.role ?? '').localeCompare(b.role ?? ''),
@@ -795,7 +810,7 @@ async function main() {
   // match run quietly halved the SR set on patch 26.14). Keeping each build's
   // own `patch` field, un-refreshed entries stay visibly stale for consumers.
   // --replace opts out for a clean rebuild that prunes anything no longer seen.
-  const key = (b) => `${b.championId}|${b.role ?? ''}`
+  const key = (b) => `${b.championId}|${b.role ?? ''}|${b.archetype ?? ''}`
   const byKey = new Map(builds.map((b) => [key(b), b]))
   let retained = 0
   if (!REPLACE && existsSync(OUT)) {
