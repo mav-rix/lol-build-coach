@@ -1,4 +1,4 @@
-import { BrowserRouter, NavLink, Outlet, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, NavLink, Outlet, Route, Routes } from 'react-router'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ServerStatusBadge } from '@/components/ServerStatusBadge'
 import { UpdateModal } from '@/components/UpdateModal'
