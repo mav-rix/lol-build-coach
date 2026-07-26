@@ -1,5 +1,5 @@
 import { Fragment, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { BuildNext } from '@/components/BuildNext'
 import { EnemyThreats } from '@/components/EnemyThreats'
 import { ItemIcon } from '@/components/ItemIcon'

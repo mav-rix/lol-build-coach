@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router'
 import { useChampSelect } from '@/hooks/useChampSelect'
 import { useAppStore } from '@/store/useAppStore'
 

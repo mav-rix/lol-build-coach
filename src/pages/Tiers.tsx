@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 import { useRankedStats } from '@/hooks/useRankedStats'
 import { useStaticData } from '@/hooks/useStaticData'
 import { useAppStore } from '@/store/useAppStore'
