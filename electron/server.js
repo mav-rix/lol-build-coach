@@ -118,6 +118,84 @@ function lcuRequest(lock, method, apiPath, body) {
 
 const lcuGet = (lock, apiPath) => lcuRequest(lock, 'GET', apiPath)
 
+// --- League server status ------------------------------------------------------
+// Riot's public, unauthenticated status feed — the same one status.riotgames.com
+// itself reads — keyed by platform (na1, euw1, kr, …). No Riot API key involved
+// (the app ships none). Undocumented and occasionally Cloudflare-rate-limited,
+// so failures are swallowed by the /lcu/server-status route below and the badge
+// just hides; cached briefly so a 5-min UI poll doesn't hammer it.
+const STATUS_TTL_MS = 90_000
+const statusCache = new Map() // platform -> { at, data }
+
+function fetchRiotStatus(platform) {
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      {
+        host: 'lol.secure.dyn.riotcdn.net',
+        path: `/channels/public/x/status/${platform}.json`,
+        method: 'GET',
+      },
+      (res) => {
+        let data = ''
+        res.on('data', (c) => (data += c))
+        res.on('end', () => {
+          if (res.statusCode !== 200) return reject(new Error(`status feed ${res.statusCode}`))
+          try {
+            resolve(JSON.parse(data))
+          } catch (e) {
+            reject(e)
+          }
+        })
+      },
+    )
+    req.on('error', reject)
+    req.setTimeout(5000, () => req.destroy(new Error('status feed timeout')))
+    req.end()
+  })
+}
+
+async function getRiotStatus(platform) {
+  const cached = statusCache.get(platform)
+  if (cached && Date.now() - cached.at < STATUS_TTL_MS) return cached.data
+  const data = await fetchRiotStatus(platform)
+  statusCache.set(platform, { at: Date.now(), data })
+  return data
+}
+
+function issueTitle(entry) {
+  const t = (entry.titles ?? []).find((t) => t.locale === 'en_US') ?? entry.titles?.[0]
+  return t?.content ?? 'Ongoing issue'
+}
+
+// Player's own platform, from the LCU (falls back to na1 when the client is
+// closed or the read fails — still shows *a* status rather than none).
+async function detectPlatform() {
+  const lock = readLockfile()
+  if (!lock) return 'na1'
+  const region = (await lcuGet(lock, '/riotclient/region-locale')).json?.region
+  return typeof region === 'string' ? region.toLowerCase() : 'na1'
+}
+
+async function buildServerStatus() {
+  const platform = await detectPlatform()
+  const raw = await getRiotStatus(platform)
+  const incidents = raw.incidents ?? []
+  const maintenances = raw.maintenances ?? []
+  const status = incidents.length > 0 ? 'incident' : maintenances.length > 0 ? 'maintenance' : 'online'
+  return {
+    ok: true,
+    platform,
+    name: raw.name ?? platform.toUpperCase(),
+    status,
+    issues: [...incidents, ...maintenances].map((i) => ({
+      id: i.id,
+      severity: i.incident_severity ?? 'info',
+      title: issueTitle(i),
+      updatedAt: i.updated_at ?? null,
+    })),
+  }
+}
+
 // League's Video setting, from <League dir>/Config/game.cfg next to the
 // lockfile. 0 = Fullscreen (exclusive — an overlay window CANNOT be drawn
 // above it), 1 = Windowed, 2 = Borderless. null when unreadable.
@@ -397,6 +475,9 @@ async function importRunes(payload) {
   const primaryStyleId = payload?.primaryStyleId
   const subStyleId = payload?.subStyleId
   const perks = Array.isArray(payload?.selectedPerkIds) ? payload.selectedPerkIds : []
+  // Set only once the player has confirmed the "rune pages are full" prompt —
+  // authorizes deleting a page we didn't create. See the max-pages branch below.
+  const overwritePageId = Number.isFinite(payload?.overwritePageId) ? payload.overwritePageId : null
   // A full page is exactly 9 perks: keystone + 3 primary + 2 secondary + 3 shards.
   if (
     !name.startsWith(COACH_PREFIX) ||
@@ -414,6 +495,8 @@ async function importRunes(payload) {
       await lcuRequest(lock, 'DELETE', `/lol-perks/v1/pages/${page.id}`)
     }
   }
+  if (overwritePageId) await lcuRequest(lock, 'DELETE', `/lol-perks/v1/pages/${overwritePageId}`)
+
   const created = await lcuRequest(lock, 'POST', '/lol-perks/v1/pages', {
     name,
     primaryStyleId,
@@ -421,21 +504,37 @@ async function importRunes(payload) {
     selectedPerkIds: perks,
     current: true,
   })
-  if (created.status !== 200 && created.status !== 201) {
-    const detail = created.json?.message
-    logImport(`runes: client rejected status=${created.status} detail=${detail ?? ''}`)
-    return {
-      status: 502,
-      body: {
-        ok: false,
-        error: detail
-          ? `Client rejected the rune page: ${detail}`
-          : 'Client rejected the rune page — if your pages are full, delete one and retry.',
-      },
+  if (created.status === 200 || created.status === 201) {
+    logImport(`runes: ok "${name}"${overwritePageId ? ` (overwrote page ${overwritePageId})` : ''}`)
+    return { status: 200, body: { ok: true } }
+  }
+
+  const detail = created.json?.message
+  // No "Coach:" page existed above to free a slot, and every page is the
+  // player's own — offer to overwrite one instead of dead-ending with "delete
+  // a page and try again". "Whatever's there" = the currently active page,
+  // the one the player is about to swap away from anyway.
+  if (!overwritePageId && /max pages/i.test(detail ?? '')) {
+    const current = (await lcuGet(lock, '/lol-perks/v1/currentpage')).json
+    if (current?.id && current?.isDeletable) {
+      logImport(`runes: max pages — offering overwrite of "${current.name}" (${current.id})`)
+      return {
+        status: 200,
+        body: { ok: false, error: 'max_pages', overwrite: { id: current.id, name: current.name } },
+      }
     }
   }
-  logImport(`runes: ok "${name}"`)
-  return { status: 200, body: { ok: true } }
+
+  logImport(`runes: client rejected status=${created.status} detail=${detail ?? ''}`)
+  return {
+    status: 502,
+    body: {
+      ok: false,
+      error: detail
+        ? `Client rejected the rune page: ${detail}`
+        : 'Client rejected the rune page — if your pages are full, delete one and retry.',
+    },
+  }
 }
 
 async function importItemSet(payload) {
@@ -551,6 +650,15 @@ async function handleLcu(req, res) {
     } catch (e) {
       res.statusCode = 500
       res.end(JSON.stringify({ error: String(e) }))
+    }
+    return
+  }
+  if (req.url === '/lcu/server-status') {
+    try {
+      res.end(JSON.stringify(await buildServerStatus()))
+    } catch (e) {
+      res.statusCode = 502
+      res.end(JSON.stringify({ ok: false, error: String(e) }))
     }
     return
   }
