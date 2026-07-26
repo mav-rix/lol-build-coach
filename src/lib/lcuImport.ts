@@ -16,6 +16,8 @@ const RUNE_PAGE_NAME_MAX = 25
 export interface ImportOutcome {
   ok: boolean
   message: string
+  /** Rune pages are full and none of them are ours — offer to overwrite this one. */
+  runeOverwrite?: { id: number; name: string }
 }
 
 const buildLabel = (build: BuildPath) =>
@@ -88,16 +90,24 @@ function itemSetPayload(
   }
 }
 
-async function post(pathname: string, body: unknown): Promise<{ ok: boolean; error?: string }> {
+interface PostResult {
+  ok: boolean
+  error?: string
+  overwrite?: { id: number; name: string }
+}
+
+async function post(pathname: string, body: unknown): Promise<PostResult> {
   try {
     const res = await fetch(pathname, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
     })
-    const json = (await res.json().catch(() => null)) as { ok?: boolean; error?: string } | null
+    const json = (await res.json().catch(() => null)) as
+      | { ok?: boolean; error?: string; overwrite?: { id: number; name: string } }
+      | null
     if (res.ok && json?.ok) return { ok: true }
-    return { ok: false, error: json?.error ?? `bridge responded ${res.status}` }
+    return { ok: false, error: json?.error ?? `bridge responded ${res.status}`, overwrite: json?.overwrite }
   } catch {
     return { ok: false, error: 'LCU bridge unreachable' }
   }
@@ -136,7 +146,34 @@ export async function importBuildToClient(
   if (itemsResult.ok && runesResult?.ok) return { ok: true, message: 'Item set + rune page imported' }
   if (itemsResult.ok && runesResult === null)
     return { ok: true, message: 'Item set imported (runes skipped — outdated rune ids)' }
+  if (itemsResult.ok && runesResult?.error === 'max_pages' && runesResult.overwrite) {
+    return {
+      ok: false,
+      message: `Item set imported. Rune pages are full — overwrite "${runesResult.overwrite.name}"?`,
+      runeOverwrite: runesResult.overwrite,
+    }
+  }
   if (itemsResult.ok) return { ok: false, message: `Item set imported, runes failed: ${runesResult?.error}` }
   if (runesResult?.ok) return { ok: false, message: `Rune page imported, item set failed: ${itemsResult.error}` }
   return { ok: false, message: `Import failed: ${itemsResult.error}` }
+}
+
+/**
+ * Retries just the rune-page half after the player confirms the "pages are
+ * full" prompt from `importBuildToClient` — deletes `pageId` (which isn't
+ * necessarily ours) before creating the coach page. The item set from the
+ * initial call already succeeded, so this only touches runes.
+ */
+export async function overwriteRunePage(
+  build: BuildPath,
+  champion: DDragonChampion,
+  runes: DDragonRunePath[],
+  pageId: number,
+): Promise<ImportOutcome> {
+  const runePage = runePagePayload(build, champion, runes)
+  if (!runePage) return { ok: false, message: 'Rune ids are outdated for this patch.' }
+  const result = await post('/lcu/import-runes', { ...runePage, overwritePageId: pageId })
+  return result.ok
+    ? { ok: true, message: 'Rune page imported' }
+    : { ok: false, message: `Rune import failed: ${result.error}` }
 }

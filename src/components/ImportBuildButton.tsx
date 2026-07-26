@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { importBuildToClient } from '@/lib/lcuImport'
+import { importBuildToClient, overwriteRunePage } from '@/lib/lcuImport'
 import type { BuildPath } from '@/types/app'
 import type { DDragonChampion, DDragonItem, DDragonRunePath } from '@/types/ddragon'
 
@@ -33,11 +33,15 @@ export function ImportBuildButton({
 }: Props) {
   const [phase, setPhase] = useState<Phase>('idle')
   const [message, setMessage] = useState('')
+  // Set when the client's rune pages are all full of the player's own pages —
+  // lets the player opt into overwriting one instead of just failing.
+  const [runeOverwrite, setRuneOverwrite] = useState<{ id: number; name: string } | null>(null)
 
   // A different build invalidates any previous import result.
   useEffect(() => {
     setPhase('idle')
     setMessage('')
+    setRuneOverwrite(null)
   }, [build])
 
   useEffect(() => {
@@ -48,8 +52,19 @@ export function ImportBuildButton({
 
   const run = async () => {
     setPhase('busy')
+    setRuneOverwrite(null)
     const result = await importBuildToClient(build, champion, mapId, runes, items, skipRunes)
     setMessage(result.message)
+    setRuneOverwrite(result.runeOverwrite ?? null)
+    setPhase(result.ok ? 'done' : 'error')
+  }
+
+  const confirmOverwrite = async () => {
+    if (!runeOverwrite) return
+    setPhase('busy')
+    const result = await overwriteRunePage(build, champion, runes, runeOverwrite.id)
+    setMessage(result.message)
+    setRuneOverwrite(null)
     setPhase(result.ok ? 'done' : 'error')
   }
 
@@ -74,6 +89,16 @@ export function ImportBuildButton({
         >
           {message}
         </span>
+      )}
+      {phase === 'error' && runeOverwrite && (
+        <button
+          onClick={confirmOverwrite}
+          disabled={!clientOpen}
+          title={`Delete "${runeOverwrite.name}" and put the coach rune page in its place`}
+          className="rounded-md bg-amber-700 px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-amber-600 disabled:cursor-not-allowed disabled:bg-zinc-800 disabled:text-zinc-500"
+        >
+          Overwrite &quot;{runeOverwrite.name}&quot;
+        </button>
       )}
       <button
         onClick={run}
