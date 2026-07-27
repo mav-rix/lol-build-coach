@@ -11,7 +11,8 @@
 //   everything else   → static files from dist/ (index.html fallback for SPA
 //                       routes)
 //
-// Binds 127.0.0.1 on an ephemeral port — nothing is exposed off-machine.
+// Binds a fixed port on 127.0.0.1 (see PREFERRED_PORT below) — nothing is
+// exposed off-machine.
 
 const fs = require('node:fs')
 const http = require('node:http')
@@ -700,18 +701,33 @@ function serveStatic(distDir, req, res) {
   fs.createReadStream(filePath).pipe(res)
 }
 
+// A fixed port, not an ephemeral one (port 0): the renderer's origin is
+// http://127.0.0.1:PORT, and browser localStorage — which is how zustand
+// persists app settings (see src/store/useAppStore.ts) — is scoped per
+// origin including the port. An ephemeral port meant a fresh origin, and
+// therefore reset settings, on every single launch, not just on updates.
+const PREFERRED_PORT = 58273
+
 /** Start the embedded server; resolves the base URL (http://127.0.0.1:PORT). */
 function startServer(distDir, logDir) {
   if (logDir) IMPORT_LOG = path.join(logDir, 'import.log')
+  const server = http.createServer((req, res) => {
+    if (req.url.startsWith('/liveclientdata/')) return proxyLiveClient(req, res)
+    if (req.url.startsWith('/lcu/')) return handleLcu(req, res)
+    return serveStatic(distDir, req, res)
+  })
   return new Promise((resolve) => {
-    const server = http.createServer((req, res) => {
-      if (req.url.startsWith('/liveclientdata/')) return proxyLiveClient(req, res)
-      if (req.url.startsWith('/lcu/')) return handleLcu(req, res)
-      return serveStatic(distDir, req, res)
-    })
-    server.listen(0, '127.0.0.1', () => {
+    server.once('listening', () => {
       resolve({ server, baseUrl: `http://127.0.0.1:${server.address().port}` })
     })
+    server.once('error', (err) => {
+      if (err.code !== 'EADDRINUSE') throw err
+      // Something else already holds the preferred port (rare) — fall back to
+      // an ephemeral one so the app still starts; settings just won't persist
+      // across this particular restart.
+      server.listen(0, '127.0.0.1')
+    })
+    server.listen(PREFERRED_PORT, '127.0.0.1')
   })
 }
 
