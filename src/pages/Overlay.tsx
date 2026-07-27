@@ -14,6 +14,8 @@ import {
   type VisionTemplate,
 } from '@/lib/augments'
 import { starterOwned } from '@/lib/gameplan'
+import { championIconUrl } from '@/services/ddragon'
+import { useAppStore } from '@/store/useAppStore'
 
 // Compact in-game overlay, rendered inside a transparent always-on-top Electron
 // window. u.gg-style: one flat, near-opaque dark panel, hairline-divided
@@ -356,10 +358,19 @@ export default function Overlay() {
     augmentMode,
   } = useLiveBuildState()
 
+  const overlayEnabled = useAppStore((s) => s.overlayEnabled)
+  const overlayShowBuild = useAppStore((s) => s.overlayShowBuild)
+  const overlayShowEnemies = useAppStore((s) => s.overlayShowEnemies)
+  const overlayShowAugmentBadges = useAppStore((s) => s.overlayShowAugmentBadges)
+
   // ?badges=1: this render is the dedicated badge window (see main.js) — it
   // only ever displays vision payloads pushed to it. Sensing/arming stays with
   // the primary overlay window, which knows the offer/death state.
   const badgesOnly = new URLSearchParams(window.location.search).has('badges')
+  // ?panel=enemies: the dedicated enemy-comp window (see main.js) — positioned
+  // independently of the build window so the two don't stack on top of each
+  // other on screen.
+  const isEnemyPanel = new URLSearchParams(window.location.search).get('panel') === 'enemies'
 
   // Loading screen: centered scouting report instead of the transparent side
   // card. Main resizes/centers the window (and forces it visible) while active.
@@ -373,10 +384,11 @@ export default function Overlay() {
     !gameStarted &&
     ((loading.myTeam?.length ?? 0) > 0 || (loading.enemyTeam?.length ?? 0) > 0)
   useEffect(() => {
-    // The badge window must never drive the loading-layout swap — that's the
-    // primary overlay window's job, and both reporting would fight over it.
-    if (!badgesOnly) window.overlay?.setLoadingLayout(showLoading)
-  }, [showLoading, badgesOnly])
+    // Neither the badge window nor the enemy-comp window may drive the
+    // loading-layout swap — that's the primary build window's job, and more
+    // than one reporter would fight over it.
+    if (!badgesOnly && !isEnemyPanel) window.overlay?.setLoadingLayout(showLoading)
+  }, [showLoading, badgesOnly, isEnemyPanel])
   useEffect(() => () => window.overlay?.setLoadingLayout(false), [])
 
   const gripHover = useOverlayDrag()
@@ -386,7 +398,12 @@ export default function Overlay() {
   // windowed arming kept missing it. Probes are cheap half-res captures — the
   // expensive full capture + OCR only runs when a probe sees the cards.
   const visionOffer = useAugmentVision(
-    !badgesOnly && augmentMode && gameStarted,
+    !badgesOnly &&
+      !isEnemyPanel &&
+      overlayEnabled &&
+      overlayShowAugmentBadges &&
+      augmentMode &&
+      gameStarted,
     self?.isDead ?? false,
   )
   // ?expand=1 (mock/dev only): force the full card for previews/screenshots,
@@ -408,10 +425,77 @@ export default function Overlay() {
     }
   }, [])
 
+  // Master switch — nothing renders in any window (build, enemy, or badges).
+  if (!overlayEnabled) return null
+
   // Dedicated badge window: badges or nothing, no other overlay modes.
   if (badgesOnly) {
     return visionOffer ? <AugmentBadges payload={visionOffer} championId={championId} /> : null
   }
+
+  // Dedicated enemy-comp window: its own collapsed strip / expanded card,
+  // entirely separate from the build window so the two can be dragged to
+  // different corners of the screen independently.
+  if (isEnemyPanel) {
+    if (
+      !overlayShowEnemies ||
+      showLoading ||
+      !isInGame ||
+      !live ||
+      !threats ||
+      !staticData ||
+      threats.enemies.length === 0
+    ) {
+      return null
+    }
+    if (!expanded) {
+      return (
+        <div
+          data-drag-handle
+          title="Hover to expand — press and hold the left mouse button to drag"
+          className="flex w-fit cursor-grab items-center gap-1.5 rounded-md border border-zinc-700/40 bg-zinc-950/45 px-2 py-1 text-zinc-100 active:cursor-grabbing [text-shadow:0_1px_2px_rgb(0_0_0/0.9)]"
+        >
+          <span className="flex items-center gap-[3px]" aria-hidden>
+            <span className="h-[3px] w-[3px] rounded-full bg-zinc-600" />
+            <span className="h-[3px] w-[3px] rounded-full bg-zinc-600" />
+            <span className="h-[3px] w-[3px] rounded-full bg-zinc-600" />
+          </span>
+          {threats.enemies.map((e) => (
+            <img
+              key={e.championId + e.championName}
+              src={championIconUrl(patch, e.championId)}
+              alt={e.championName}
+              title={e.championName}
+              className="h-5 w-5 rounded"
+            />
+          ))}
+          {threats.notes.length > 0 && (
+            <span
+              className="h-1.5 w-1.5 rounded-full bg-red-500"
+              aria-hidden
+              title={threats.notes.join(' · ')}
+            />
+          )}
+        </div>
+      )
+    }
+    return (
+      <div className="w-[20rem] overflow-hidden rounded-md border border-zinc-700/40 bg-zinc-950/45 text-zinc-100 [text-shadow:0_1px_2px_rgb(0_0_0/0.9)]">
+        <DragGrip className="py-1" />
+        <Section label="Enemies">
+          <EnemyThreats
+            compact
+            threats={threats}
+            patch={patch}
+            items={items}
+            championsById={staticData.championsById}
+          />
+        </Section>
+      </div>
+    )
+  }
+
+  if (!overlayShowBuild) return null
 
   if (showLoading) {
     return (
@@ -557,18 +641,6 @@ export default function Overlay() {
               )
             })}
           </div>
-        </Section>
-      )}
-
-      {threats && staticData && threats.enemies.length > 0 && (
-        <Section label="Enemies">
-          <EnemyThreats
-            compact
-            threats={threats}
-            patch={patch}
-            items={items}
-            championsById={staticData.championsById}
-          />
         </Section>
       )}
     </div>

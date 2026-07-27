@@ -30,7 +30,8 @@ let pendingUpdate = null
 let updaterRef = null // electron-updater's autoUpdater once loaded
 let manualCheckState = null // null | 'checking' | 'uptodate' — transient tray feedback
 
-// Overlay state (mirrors the dev shell).
+// Overlay state (mirrors the dev shell). interactivePin is shared: Ctrl+Shift+O
+// pins BOTH overlay windows interactive at once.
 let interactivePin = false
 let gripHover = false
 let dragOrigin = null
@@ -38,6 +39,17 @@ let handleRects = [] // renderer-reported [data-drag-handle] rects (window-relat
 let loadingLayout = false // renderer-reported: League loading screen is up
 let preLoadingBounds = null // overlay bounds to restore after the loading screen
 let badgeWin = null // dedicated augment-badge window (see augment-vision.js)
+
+// Enemy-comp window: a second overlay window, positioned/dragged completely
+// independently of the build window (see createEnemyWindow) so the two panels
+// don't have to share screen space. Its drag/hover state mirrors overlayWin's
+// one-for-one — kept as separate named variables rather than a shared
+// abstraction so the (already-working, hard-to-test-live) primary overlay
+// logic below stays untouched.
+let enemyWin = null
+let enemyGripHover = false
+let enemyDragOrigin = null
+let enemyHandleRects = []
 
 const HARDENED = {
   contextIsolation: true,
@@ -123,6 +135,59 @@ function applyOverlayVisibility() {
   }
 }
 
+// ---- enemy-comp window ----------------------------------------------------------
+// Same drag/hover/persistence dance as the build window above, one-for-one,
+// for the independently-positioned enemy-comp panel.
+const enemyPosFile = () => path.join(app.getPath('userData'), 'overlay-enemy-position.json')
+const loadEnemyPos = () => {
+  try {
+    return JSON.parse(readFileSync(enemyPosFile(), 'utf8'))
+  } catch {
+    return null
+  }
+}
+const saveEnemyPos = () => {
+  try {
+    if (enemyWin && !enemyWin.isDestroyed())
+      writeFileSync(enemyPosFile(), JSON.stringify(enemyWin.getBounds()))
+  } catch {
+    // best-effort
+  }
+}
+
+function applyEnemyIgnore() {
+  if (enemyWin && !enemyWin.isDestroyed())
+    enemyWin.setIgnoreMouseEvents(!(interactivePin || enemyGripHover || enemyDragOrigin))
+}
+
+function setEnemyGripHover(h) {
+  if (h === enemyGripHover) return
+  enemyGripHover = h
+  applyEnemyIgnore()
+  if (enemyWin && !enemyWin.isDestroyed()) enemyWin.webContents.send('overlay:grip-hover', h)
+}
+
+function pollEnemyGripHover() {
+  if (!enemyWin || enemyWin.isDestroyed() || !enemyWin.isVisible()) return setEnemyGripHover(false)
+  if (enemyDragOrigin) return // stay interactive for the whole drag
+  const p = screen.getCursorScreenPoint()
+  const b = enemyWin.getContentBounds()
+  setEnemyGripHover(
+    enemyHandleRects.some(
+      (r) => p.x >= b.x + r.x && p.x < b.x + r.x + r.w && p.y >= b.y + r.y && p.y < b.y + r.y + r.h,
+    ),
+  )
+}
+
+function applyEnemyVisibility() {
+  if (!enemyWin || enemyWin.isDestroyed()) return
+  if (!enemyWin.isVisible()) {
+    enemyWin.showInactive()
+    enemyWin.setAlwaysOnTop(true, 'screen-saver', 1)
+    enemyWin.moveTop()
+  }
+}
+
 // Loading screen: swap the overlay from its side-card bounds to a large
 // centered panel, and back. The renderer drives this (it knows the gameflow
 // phase); position is never persisted from the centered layout (savePos only
@@ -154,6 +219,10 @@ function applyLoadingLayout(active) {
     }
   }
   applyOverlayVisibility()
+  // The enemy panel doesn't resize for the loading screen (it just renders
+  // nothing while loading — see Overlay.tsx) but should come back if a
+  // Ctrl+Shift+H hide happened before the loading screen appeared.
+  applyEnemyVisibility()
 }
 
 // Augment badges live in their OWN window covering the primary display —
@@ -246,6 +315,40 @@ function createOverlayWindow() {
   }, 2000)
 }
 
+// Default top-left, opposite corner from the build window's default
+// top-right — so the two panels don't land on top of each other before the
+// player has dragged either one. Each position persists independently.
+function createEnemyWindow() {
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize
+  const saved = loadEnemyPos()
+  const bounds = {
+    width: saved?.width ?? 340,
+    height: saved?.height ?? Math.min(420, height - 160),
+    x: Math.max(0, Math.min(saved?.x ?? 40, width - 120)),
+    y: Math.max(0, Math.min(saved?.y ?? 40, height - 60)),
+  }
+  enemyWin = new BrowserWindow({
+    ...bounds,
+    frame: false,
+    transparent: true,
+    resizable: true,
+    alwaysOnTop: true,
+    skipTaskbar: true,
+    hasShadow: false,
+    fullscreenable: false,
+    webPreferences: { ...HARDENED, preload: path.join(__dirname, 'preload.js') },
+  })
+  enemyWin.setAlwaysOnTop(true, 'screen-saver', 1)
+  applyEnemyIgnore()
+  enemyWin.loadURL(baseUrl + '/overlay?panel=enemies')
+  enemyWin.on('closed', () => (enemyWin = null))
+  // Games grab z-order on focus changes; keep re-asserting topmost.
+  setInterval(() => {
+    if (enemyWin && !enemyWin.isDestroyed() && enemyWin.isVisible())
+      enemyWin.setAlwaysOnTop(true, 'screen-saver', 1)
+  }, 2000)
+}
+
 /**
  * Quit that can't hang: if the process is still alive shortly after quitting
  * (something blocked the quit sequence), hard-exit. A pending update's
@@ -292,7 +395,14 @@ function refreshTrayMenu() {
         if (overlayWin) {
           overlayWin.destroy()
           overlayWin = null
-        } else createOverlayWindow()
+          if (enemyWin) {
+            enemyWin.destroy()
+            enemyWin = null
+          }
+        } else {
+          createOverlayWindow()
+          createEnemyWindow()
+        }
       },
     },
     { type: 'separator' },
@@ -496,27 +606,49 @@ app.whenReady().then(async () => {
   ;({ baseUrl } = await startServer(DIST, app.getPath('userData')))
   createMainWindow()
   createOverlayWindow()
+  createEnemyWindow()
   ensureBadgeWindow()
   createTray()
 
-  // Overlay drag bridge (see preload.js). Sender-guarded: the badge window
-  // runs the same /overlay page (?badges=1) and would otherwise clobber the
-  // strip's rects with its own (empty) list.
+  // Overlay drag bridge (see preload.js). Sender-guarded: THREE windows load
+  // the same /overlay page (build, enemy-comp, and the badge window at
+  // ?badges=1) and would otherwise clobber each other's rects/drag state.
   ipcMain.on('overlay:handles', (e, rects) => {
-    if (!overlayWin || overlayWin.isDestroyed() || e.sender !== overlayWin.webContents) return
-    handleRects = Array.isArray(rects) ? rects : []
+    if (overlayWin && !overlayWin.isDestroyed() && e.sender === overlayWin.webContents) {
+      handleRects = Array.isArray(rects) ? rects : []
+    } else if (enemyWin && !enemyWin.isDestroyed() && e.sender === enemyWin.webContents) {
+      enemyHandleRects = Array.isArray(rects) ? rects : []
+    }
   })
   setInterval(pollGripHover, 150)
-  ipcMain.on('overlay:begin-drag', () => {
-    dragOrigin = overlayWin && !overlayWin.isDestroyed() ? overlayWin.getPosition() : null
+  setInterval(pollEnemyGripHover, 150)
+  ipcMain.on('overlay:begin-drag', (e) => {
+    if (overlayWin && !overlayWin.isDestroyed() && e.sender === overlayWin.webContents) {
+      dragOrigin = overlayWin.getPosition()
+    } else if (enemyWin && !enemyWin.isDestroyed() && e.sender === enemyWin.webContents) {
+      enemyDragOrigin = enemyWin.getPosition()
+    }
   })
-  ipcMain.on('overlay:drag-to', (_e, dx, dy) => {
-    if (dragOrigin && overlayWin && !overlayWin.isDestroyed())
+  ipcMain.on('overlay:drag-to', (e, dx, dy) => {
+    if (dragOrigin && overlayWin && !overlayWin.isDestroyed() && e.sender === overlayWin.webContents) {
       overlayWin.setPosition(Math.round(dragOrigin[0] + dx), Math.round(dragOrigin[1] + dy))
+    } else if (
+      enemyDragOrigin &&
+      enemyWin &&
+      !enemyWin.isDestroyed() &&
+      e.sender === enemyWin.webContents
+    ) {
+      enemyWin.setPosition(Math.round(enemyDragOrigin[0] + dx), Math.round(enemyDragOrigin[1] + dy))
+    }
   })
-  ipcMain.on('overlay:end-drag', () => {
-    dragOrigin = null
-    savePos()
+  ipcMain.on('overlay:end-drag', (e) => {
+    if (overlayWin && !overlayWin.isDestroyed() && e.sender === overlayWin.webContents) {
+      dragOrigin = null
+      savePos()
+    } else if (enemyWin && !enemyWin.isDestroyed() && e.sender === enemyWin.webContents) {
+      enemyDragOrigin = null
+      saveEnemyPos()
+    }
   })
   ipcMain.on('overlay:loading-layout', (_e, active) => applyLoadingLayout(active))
 
@@ -538,17 +670,27 @@ app.whenReady().then(async () => {
   globalShortcut.register('Control+Shift+O', () => {
     interactivePin = !interactivePin
     applyOverlayIgnore()
+    applyEnemyIgnore()
     if (interactivePin && overlayWin) overlayWin.focus()
   })
   globalShortcut.register('Control+Shift+H', () => {
     if (overlayWin?.isVisible()) overlayWin.hide()
     else overlayWin?.show()
+    if (enemyWin?.isVisible()) enemyWin.hide()
+    else enemyWin?.show()
   })
   globalShortcut.register('Control+Shift+L', () => {
     if (overlayWin) {
       overlayWin.destroy()
       overlayWin = null
-    } else createOverlayWindow()
+      if (enemyWin) {
+        enemyWin.destroy()
+        enemyWin = null
+      }
+    } else {
+      createOverlayWindow()
+      createEnemyWindow()
+    }
   })
   globalShortcut.register('Control+Shift+Q', () => safeQuit())
 

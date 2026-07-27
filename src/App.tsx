@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ServerStatusBadge } from '@/components/ServerStatusBadge'
 import { UpdateModal } from '@/components/UpdateModal'
 import { useAutoOpenBuild } from '@/hooks/useAutoOpenBuild'
+import { useAppStore } from '@/store/useAppStore'
 import patch from '@/data/patch.json'
 import Augments from '@/pages/Augments'
 import Home from '@/pages/Home'
@@ -10,6 +11,7 @@ import Live from '@/pages/Live'
 import Overlay from '@/pages/Overlay'
 import Profile from '@/pages/Profile'
 import Review from '@/pages/Review'
+import Settings from '@/pages/Settings'
 import Tiers from '@/pages/Tiers'
 
 const queryClient = new QueryClient()
@@ -21,11 +23,13 @@ const NAV = [
   { to: '/live', label: 'Live' },
   { to: '/review', label: 'Review' },
   { to: '/augments', label: 'Augments' },
+  { to: '/settings', label: 'Settings' },
 ]
 
 function Layout() {
   // Jump to /build when champ select begins.
   useAutoOpenBuild()
+  const showServerStatus = useAppStore((s) => s.showServerStatus)
   return (
     <div className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100">
       <UpdateModal />
@@ -50,7 +54,7 @@ function Layout() {
             </NavLink>
           ))}
           <div className="ml-auto flex items-center gap-2">
-            <ServerStatusBadge />
+            {showServerStatus && <ServerStatusBadge />}
             {/* League's patch (what the bundled data was generated on) — distinct
                 from the app's own version shown next to the name. */}
             <span className="rounded-full border border-zinc-700/60 bg-zinc-800/60 px-2.5 py-0.5 text-[10px] font-medium text-zinc-400">
@@ -88,6 +92,7 @@ export default function App() {
             <Route path="/live" element={<Live />} />
             <Route path="/review" element={<Review />} />
             <Route path="/augments" element={<Augments />} />
+            <Route path="/settings" element={<Settings />} />
           </Route>
         </Routes>
       </BrowserRouter>
