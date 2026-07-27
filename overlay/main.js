@@ -226,6 +226,11 @@ function createWindow() {
     skipTaskbar: true,
     hasShadow: false,
     fullscreenable: false,
+    // Non-focusable by default: a click on the drag grip flips the window out
+    // of click-through, and without this a real click there would activate
+    // it — stealing OS focus from the game (reads as alt-tabbing away).
+    // Ctrl+Shift+O re-enables focus for its own deliberate interactive mode.
+    focusable: false,
     webPreferences: {
       backgroundThrottling: false,
       preload: path.join(__dirname, 'preload.js'),
@@ -277,6 +282,9 @@ function createEnemyWindow() {
     skipTaskbar: true,
     hasShadow: false,
     fullscreenable: false,
+    // See createWindow — non-focusable so a click on its grip can't steal OS
+    // focus from the game.
+    focusable: false,
     webPreferences: {
       backgroundThrottling: false,
       preload: path.join(__dirname, 'preload.js'),
@@ -349,6 +357,8 @@ app.whenReady().then(() => {
     pinned = !pinned
     applyIgnore()
     applyEnemyIgnore()
+    win?.setFocusable(pinned)
+    enemyWin?.setFocusable(pinned)
     if (pinned && win) win.focus()
   })
   globalShortcut.register('Control+Shift+H', () => {

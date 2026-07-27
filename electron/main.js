@@ -298,6 +298,12 @@ function createOverlayWindow() {
     skipTaskbar: true,
     hasShadow: false,
     fullscreenable: false,
+    // Non-focusable by default: clicking the drag grip flips it out of
+    // click-through, and WITHOUT this a real click there would activate the
+    // window — stealing OS focus from League, which reads as an alt-tab away
+    // from the game. Mouse events (drag) still work fine unfocused; Ctrl+Shift+O
+    // (interactivePin) explicitly re-enables focus for its own deliberate use.
+    focusable: false,
     webPreferences: { ...HARDENED, preload: path.join(__dirname, 'preload.js') },
   })
   overlayWin.setAlwaysOnTop(true, 'screen-saver', 1)
@@ -336,6 +342,9 @@ function createEnemyWindow() {
     skipTaskbar: true,
     hasShadow: false,
     fullscreenable: false,
+    // See createOverlayWindow — non-focusable so a click on its grip can't
+    // steal OS focus from the game.
+    focusable: false,
     webPreferences: { ...HARDENED, preload: path.join(__dirname, 'preload.js') },
   })
   enemyWin.setAlwaysOnTop(true, 'screen-saver', 1)
@@ -671,6 +680,11 @@ app.whenReady().then(async () => {
     interactivePin = !interactivePin
     applyOverlayIgnore()
     applyEnemyIgnore()
+    // Both windows are non-focusable by default (see createOverlayWindow) so
+    // an ordinary drag click can't steal focus from the game; pinning is the
+    // one deliberate case that wants real focus/activation.
+    overlayWin?.setFocusable(interactivePin)
+    enemyWin?.setFocusable(interactivePin)
     if (interactivePin && overlayWin) overlayWin.focus()
   })
   globalShortcut.register('Control+Shift+H', () => {
