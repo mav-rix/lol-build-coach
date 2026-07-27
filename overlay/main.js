@@ -13,6 +13,12 @@
 // slim strip and expands it on grip hover, so the window itself never needs to
 // hide/show around gameplay.
 //
+// A second window renders the enemy-comp panel (?panel=enemies), positioned
+// and dragged completely independently of the build window — see
+// createEnemyWindow. Its drag/hover state mirrors the build window's
+// one-for-one, kept as separate variables rather than a shared abstraction so
+// this already-working logic stays easy to diff against electron/main.js.
+//
 // Hotkeys:
 //   Ctrl+Shift+O — pin interactive mode (click/scroll the whole overlay)
 //   Ctrl+Shift+H — hide/show the overlay window
@@ -35,6 +41,12 @@ let reloadTimer = null
 let loadingLayout = false // renderer-reported: League loading screen is up
 let preLoadingBounds = null // bounds to restore after the loading screen
 
+let enemyWin = null
+let enemyHover = false
+let enemyHandleRects = []
+let enemyDragOrigin = null
+let enemyReloadTimer = null
+
 // The window is always shown; this re-shows it if something hid it (e.g. the
 // loading screen appearing after a Ctrl+Shift+H hide).
 function applyVisibility() {
@@ -48,8 +60,19 @@ function applyVisibility() {
   }
 }
 
+function applyEnemyVisibility() {
+  if (!enemyWin || enemyWin.isDestroyed()) return
+  if (!enemyWin.isVisible()) {
+    enemyWin.showInactive()
+    enemyWin.setAlwaysOnTop(true, 'screen-saver', 1)
+    enemyWin.moveTop()
+  }
+}
+
 // Loading screen: swap the overlay from its side-card bounds to a large
-// centered panel, and back (mirrors electron/main.js).
+// centered panel, and back (mirrors electron/main.js). The enemy panel isn't
+// resized here — it just renders nothing while loading (see Overlay.tsx) —
+// but is re-shown in case a Ctrl+Shift+H hide happened before loading started.
 function applyLoadingLayout(active) {
   loadingLayout = Boolean(active)
   if (win && !win.isDestroyed()) {
@@ -72,6 +95,7 @@ function applyLoadingLayout(active) {
     }
   }
   applyVisibility()
+  applyEnemyVisibility()
 }
 
 const posFile = () => path.join(app.getPath('userData'), 'overlay-position.json')
@@ -90,6 +114,23 @@ function savePos() {
   }
 }
 
+const enemyPosFile = () => path.join(app.getPath('userData'), 'overlay-enemy-position.json')
+function loadEnemyPos() {
+  try {
+    return JSON.parse(readFileSync(enemyPosFile(), 'utf8'))
+  } catch {
+    return null
+  }
+}
+function saveEnemyPos() {
+  try {
+    if (enemyWin && !enemyWin.isDestroyed())
+      writeFileSync(enemyPosFile(), JSON.stringify(enemyWin.getBounds()))
+  } catch {
+    // best-effort
+  }
+}
+
 // The window is click-through unless it's pinned interactive, the pointer is
 // over the grip, or a drag is in progress. NEVER pass forward:true here: on
 // Windows it installs a system-wide low-level mouse hook that relays every
@@ -100,11 +141,23 @@ function applyIgnore() {
   if (win && !win.isDestroyed()) win.setIgnoreMouseEvents(!(pinned || hover || dragOrigin))
 }
 
+function applyEnemyIgnore() {
+  if (enemyWin && !enemyWin.isDestroyed())
+    enemyWin.setIgnoreMouseEvents(!(pinned || enemyHover || enemyDragOrigin))
+}
+
 function setGripHover(h) {
   if (h === hover) return
   hover = h
   applyIgnore()
   if (win && !win.isDestroyed()) win.webContents.send('overlay:grip-hover', h)
+}
+
+function setEnemyGripHover(h) {
+  if (h === enemyHover) return
+  enemyHover = h
+  applyEnemyIgnore()
+  if (enemyWin && !enemyWin.isDestroyed()) enemyWin.webContents.send('overlay:grip-hover', h)
 }
 
 function pollGripHover() {
@@ -119,6 +172,18 @@ function pollGripHover() {
   )
 }
 
+function pollEnemyGripHover() {
+  if (!enemyWin || enemyWin.isDestroyed() || !enemyWin.isVisible()) return setEnemyGripHover(false)
+  if (enemyDragOrigin) return
+  const p = screen.getCursorScreenPoint()
+  const b = enemyWin.getContentBounds()
+  setEnemyGripHover(
+    enemyHandleRects.some(
+      (r) => p.x >= b.x + r.x && p.x < b.x + r.x + r.w && p.y >= b.y + r.y && p.y < b.y + r.y + r.h,
+    ),
+  )
+}
+
 // Keep retrying the load until the dev server answers. Without this, a load that
 // hits the server while it's down (or mid-restart) lands on a blank page — and
 // since the overlay is transparent, a blank page is invisible.
@@ -127,6 +192,15 @@ function scheduleReload() {
   reloadTimer = setTimeout(() => {
     reloadTimer = null
     if (win && !win.isDestroyed()) win.loadURL(OVERLAY_URL).catch(() => scheduleReload())
+  }, RETRY_MS)
+}
+
+function scheduleEnemyReload() {
+  if (enemyReloadTimer) return
+  enemyReloadTimer = setTimeout(() => {
+    enemyReloadTimer = null
+    if (enemyWin && !enemyWin.isDestroyed())
+      enemyWin.loadURL(`${OVERLAY_URL}?panel=enemies`).catch(() => scheduleEnemyReload())
   }, RETRY_MS)
 }
 
@@ -180,36 +254,108 @@ function createWindow() {
   win.on('blur', () => win.setAlwaysOnTop(true, 'screen-saver', 1))
 }
 
+// Default top-left, opposite corner from the build window's default
+// top-right, so the two panels start apart on screen.
+function createEnemyWindow() {
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize
+  const saved = loadEnemyPos()
+  const bounds = {
+    width: saved?.width ?? 340,
+    height: saved?.height ?? Math.min(420, height - 160),
+    x: saved?.x ?? 40,
+    y: saved?.y ?? 40,
+  }
+  bounds.x = Math.max(0, Math.min(bounds.x, width - 120))
+  bounds.y = Math.max(0, Math.min(bounds.y, height - 60))
+
+  enemyWin = new BrowserWindow({
+    ...bounds,
+    frame: false,
+    transparent: true,
+    resizable: true,
+    alwaysOnTop: true,
+    skipTaskbar: true,
+    hasShadow: false,
+    fullscreenable: false,
+    webPreferences: {
+      backgroundThrottling: false,
+      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
+    },
+  })
+  enemyWin.setAlwaysOnTop(true, 'screen-saver', 1)
+  applyEnemyIgnore()
+  enemyWin.loadURL(`${OVERLAY_URL}?panel=enemies`).catch(() => scheduleEnemyReload())
+
+  enemyWin.webContents.on('did-fail-load', (_e, errorCode, _desc, _url, isMainFrame) => {
+    if (isMainFrame && errorCode !== -3) scheduleEnemyReload()
+  })
+  enemyWin.webContents.on('render-process-gone', () => scheduleEnemyReload())
+
+  setInterval(() => {
+    if (enemyWin && !enemyWin.isDestroyed() && enemyWin.isVisible()) {
+      enemyWin.setAlwaysOnTop(true, 'screen-saver', 1)
+    }
+  }, 2000)
+  enemyWin.on('blur', () => enemyWin.setAlwaysOnTop(true, 'screen-saver', 1))
+}
+
 app.whenReady().then(() => {
   createWindow()
+  createEnemyWindow()
 
-  // Drag bridge (see overlay/preload.js).
-  ipcMain.on('overlay:handles', (_e, rects) => {
-    handleRects = Array.isArray(rects) ? rects : []
-  })
-  setInterval(pollGripHover, 150)
-  ipcMain.on('overlay:begin-drag', () => {
-    dragOrigin = win && !win.isDestroyed() ? win.getPosition() : null
-  })
-  ipcMain.on('overlay:drag-to', (_e, dx, dy) => {
-    if (dragOrigin && win && !win.isDestroyed()) {
-      win.setPosition(Math.round(dragOrigin[0] + dx), Math.round(dragOrigin[1] + dy))
+  // Drag bridge (see overlay/preload.js). Sender-guarded: both windows load
+  // the same /overlay page and would otherwise clobber each other's state.
+  ipcMain.on('overlay:handles', (e, rects) => {
+    if (win && !win.isDestroyed() && e.sender === win.webContents) {
+      handleRects = Array.isArray(rects) ? rects : []
+    } else if (enemyWin && !enemyWin.isDestroyed() && e.sender === enemyWin.webContents) {
+      enemyHandleRects = Array.isArray(rects) ? rects : []
     }
   })
-  ipcMain.on('overlay:end-drag', () => {
-    dragOrigin = null
-    savePos()
+  setInterval(pollGripHover, 150)
+  setInterval(pollEnemyGripHover, 150)
+  ipcMain.on('overlay:begin-drag', (e) => {
+    if (win && !win.isDestroyed() && e.sender === win.webContents) {
+      dragOrigin = win.getPosition()
+    } else if (enemyWin && !enemyWin.isDestroyed() && e.sender === enemyWin.webContents) {
+      enemyDragOrigin = enemyWin.getPosition()
+    }
+  })
+  ipcMain.on('overlay:drag-to', (e, dx, dy) => {
+    if (dragOrigin && win && !win.isDestroyed() && e.sender === win.webContents) {
+      win.setPosition(Math.round(dragOrigin[0] + dx), Math.round(dragOrigin[1] + dy))
+    } else if (
+      enemyDragOrigin &&
+      enemyWin &&
+      !enemyWin.isDestroyed() &&
+      e.sender === enemyWin.webContents
+    ) {
+      enemyWin.setPosition(Math.round(enemyDragOrigin[0] + dx), Math.round(enemyDragOrigin[1] + dy))
+    }
+  })
+  ipcMain.on('overlay:end-drag', (e) => {
+    if (win && !win.isDestroyed() && e.sender === win.webContents) {
+      dragOrigin = null
+      savePos()
+    } else if (enemyWin && !enemyWin.isDestroyed() && e.sender === enemyWin.webContents) {
+      enemyDragOrigin = null
+      saveEnemyPos()
+    }
   })
   ipcMain.on('overlay:loading-layout', (_e, active) => applyLoadingLayout(active))
 
   globalShortcut.register('Control+Shift+O', () => {
     pinned = !pinned
     applyIgnore()
+    applyEnemyIgnore()
     if (pinned && win) win.focus()
   })
   globalShortcut.register('Control+Shift+H', () => {
     if (win.isVisible()) win.hide()
     else win.show()
+    if (enemyWin.isVisible()) enemyWin.hide()
+    else enemyWin.show()
   })
   globalShortcut.register('Control+Shift+Q', () => app.quit())
 })

@@ -1,8 +1,6 @@
 import { useMemo } from 'react'
-import { CheckForUpdatesButton } from '@/components/CheckForUpdatesButton'
 import { useProfile, type ProfileGame } from '@/hooks/useProfile'
 import { useStaticData } from '@/hooks/useStaticData'
-import { useAppStore } from '@/store/useAppStore'
 import { championIconUrl, profileIconUrl } from '@/services/ddragon'
 import type { DDragonChampion } from '@/types/ddragon'
 
@@ -32,35 +30,6 @@ const TIER_COLOR: Record<string, string> = {
   MASTER: 'text-fuchsia-300',
   GRANDMASTER: 'text-red-300',
   CHALLENGER: 'text-yellow-200',
-}
-
-function AutoOpenBuildToggle() {
-  const enabled = useAppStore((s) => s.autoOpenBuild)
-  const setEnabled = useAppStore((s) => s.setAutoOpenBuild)
-  return (
-    <label className="mt-3 flex cursor-pointer items-start gap-2.5 rounded-lg border border-zinc-800 bg-zinc-900/40 px-3 py-2.5">
-      <button
-        type="button"
-        role="switch"
-        aria-checked={enabled}
-        onClick={() => setEnabled(!enabled)}
-        className={`relative mt-0.5 h-4 w-7 shrink-0 rounded-full transition-colors ${
-          enabled ? 'bg-sky-600' : 'bg-zinc-700'
-        }`}
-      >
-        <span
-          className={`absolute top-0.5 h-3 w-3 rounded-full bg-white transition-all ${
-            enabled ? 'left-3.5' : 'left-0.5'
-          }`}
-        />
-      </button>
-      <span className="text-xs leading-tight text-zinc-400">
-        <span className="font-medium text-zinc-200">Auto-open build</span>
-        <br />
-        Jump to the build page when champ select starts.
-      </span>
-    </label>
-  )
 }
 
 const titleCase = (s: string) => (s ? s[0] + s.slice(1).toLowerCase() : s)
@@ -178,90 +147,74 @@ export default function Profile() {
     return map
   }, [data])
 
-  const sidebar = (
-    <aside className="shrink-0">
-      <CheckForUpdatesButton />
-      <AutoOpenBuildToggle />
-    </aside>
-  )
-
   if (!profile) {
     return (
-      <div className="flex flex-col gap-6 md:flex-row">
-        <div className="flex-1 rounded-xl border border-zinc-800 bg-zinc-900/40 p-8 text-center text-sm text-zinc-500">
-          Loading your profile…
-        </div>
-        {sidebar}
+      <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-8 text-center text-sm text-zinc-500">
+        Loading your profile…
       </div>
     )
   }
 
   if (!profile.clientOpen || !profile.summoner) {
     return (
-      <div className="flex flex-col gap-6 md:flex-row">
-        <div className="flex-1 rounded-xl border border-zinc-800 bg-zinc-900/40 p-8 text-center">
-          <p className="text-sm font-medium text-zinc-300">Open the League client to see your profile</p>
-          <p className="mt-1 text-xs text-zinc-500">
-            Your summoner info, rank, and recent games are read from the running client.
-          </p>
-        </div>
-        {sidebar}
+      <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-8 text-center">
+        <p className="text-sm font-medium text-zinc-300">Open the League client to see your profile</p>
+        <p className="mt-1 text-xs text-zinc-500">
+          Your summoner info, rank, and recent games are read from the running client.
+        </p>
       </div>
     )
   }
 
   const s = profile.summoner
   return (
-    <div className="flex flex-col gap-6 md:flex-row">
-      <div className="min-w-0 flex-1 space-y-5">
-        {/* Summoner header */}
-        <div className="flex items-center gap-4">
-          {patch && s.profileIconId ? (
-            <img
-              src={profileIconUrl(patch, s.profileIconId)}
-              alt=""
-              className="h-16 w-16 rounded-lg ring-2 ring-zinc-700"
-            />
-          ) : (
-            <div className="h-16 w-16 rounded-lg bg-zinc-800" />
-          )}
-          <div>
-            <div className="text-xl font-bold text-zinc-100">
-              {s.gameName}
-              {s.tagLine && <span className="text-base font-medium text-zinc-500"> #{s.tagLine}</span>}
-            </div>
-            <div className="text-xs text-zinc-500">Level {s.level}</div>
-          </div>
-        </div>
-
-        {/* Ranks */}
-        <div className="grid grid-cols-2 gap-3">
-          <RankBadge label="Ranked Solo/Duo" entry={profile.ranked?.solo ?? null} />
-          <RankBadge label="Ranked Flex" entry={profile.ranked?.flex ?? null} />
-        </div>
-
-        {/* Recent games */}
+    <div className="min-w-0 space-y-5">
+      {/* Summoner header */}
+      <div className="flex items-center gap-4">
+        {patch && s.profileIconId ? (
+          <img
+            src={profileIconUrl(patch, s.profileIconId)}
+            alt=""
+            className="h-16 w-16 rounded-lg ring-2 ring-zinc-700"
+          />
+        ) : (
+          <div className="h-16 w-16 rounded-lg bg-zinc-800" />
+        )}
         <div>
-          <h2 className="mb-2 text-sm font-semibold text-zinc-300">Recent games</h2>
-          {profile.games && profile.games.length > 0 ? (
-            <ul className="space-y-2">
-              {profile.games.map((g) => (
-                <GameRow
-                  key={g.gameId}
-                  game={g}
-                  champ={champByNumeric.get(g.championId) ?? null}
-                  patch={patch}
-                />
-              ))}
-            </ul>
-          ) : (
-            <p className="rounded-lg border border-zinc-800 bg-zinc-900/40 px-3 py-6 text-center text-xs text-zinc-500">
-              No recent games found.
-            </p>
-          )}
+          <div className="text-xl font-bold text-zinc-100">
+            {s.gameName}
+            {s.tagLine && <span className="text-base font-medium text-zinc-500"> #{s.tagLine}</span>}
+          </div>
+          <div className="text-xs text-zinc-500">Level {s.level}</div>
         </div>
       </div>
-      {sidebar}
+
+      {/* Ranks */}
+      <div className="grid grid-cols-2 gap-3">
+        <RankBadge label="Ranked Solo/Duo" entry={profile.ranked?.solo ?? null} />
+        <RankBadge label="Ranked Flex" entry={profile.ranked?.flex ?? null} />
+      </div>
+
+      {/* Recent games */}
+      <div>
+        <h2 className="mb-2 text-sm font-semibold text-zinc-300">Recent games</h2>
+        {profile.games && profile.games.length > 0 ? (
+          <ul className="space-y-2">
+            {profile.games.map((g) => (
+              <GameRow
+                key={g.gameId}
+                game={g}
+                champ={champByNumeric.get(g.championId) ?? null}
+                patch={patch}
+              />
+            ))}
+          </ul>
+        ) : (
+          <p className="rounded-lg border border-zinc-800 bg-zinc-900/40 px-3 py-6 text-center text-xs text-zinc-500">
+            No recent games found.
+          </p>
+        )}
+      </div>
     </div>
   )
 }

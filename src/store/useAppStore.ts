@@ -8,12 +8,22 @@ interface AppState {
   selectedMode: GameMode
   enemyChampionIds: (string | null)[] // always length 5
   autoOpenBuild: boolean // jump to /build when champ select begins
+  showServerStatus: boolean // nav pill for the League server-status badge
+  overlayEnabled: boolean // master on/off for the in-game overlay
+  overlayShowBuild: boolean // build-path/build-next panel
+  overlayShowEnemies: boolean // enemy-comp panel
+  overlayShowAugmentBadges: boolean // Mayhem augment-pick vision badges
   selectChampion: (championId: string | null) => void
   selectRole: (role: Role | null) => void
   selectMode: (mode: GameMode) => void
   setEnemyChampion: (slot: number, championId: string | null) => void
   clearEnemies: () => void
   setAutoOpenBuild: (on: boolean) => void
+  setShowServerStatus: (on: boolean) => void
+  setOverlayEnabled: (on: boolean) => void
+  setOverlayShowBuild: (on: boolean) => void
+  setOverlayShowEnemies: (on: boolean) => void
+  setOverlayShowAugmentBadges: (on: boolean) => void
 }
 
 const EMPTY_ENEMIES: (string | null)[] = [null, null, null, null, null]
@@ -27,6 +37,11 @@ export const useAppStore = create<AppState>()(
       selectedMode: 'SR',
       enemyChampionIds: EMPTY_ENEMIES,
       autoOpenBuild: true,
+      showServerStatus: true,
+      overlayEnabled: true,
+      overlayShowBuild: true,
+      overlayShowEnemies: true,
+      overlayShowAugmentBadges: true,
       selectChampion: (championId) => set({ selectedChampionId: championId }),
       selectRole: (role) => set({ selectedRole: role }),
       selectMode: (mode) => set({ selectedMode: mode }),
@@ -38,6 +53,11 @@ export const useAppStore = create<AppState>()(
         }),
       clearEnemies: () => set({ enemyChampionIds: EMPTY_ENEMIES }),
       setAutoOpenBuild: (on) => set({ autoOpenBuild: on }),
+      setShowServerStatus: (on) => set({ showServerStatus: on }),
+      setOverlayEnabled: (on) => set({ overlayEnabled: on }),
+      setOverlayShowBuild: (on) => set({ overlayShowBuild: on }),
+      setOverlayShowEnemies: (on) => set({ overlayShowEnemies: on }),
+      setOverlayShowAugmentBadges: (on) => set({ overlayShowAugmentBadges: on }),
     }),
     { name: 'lol-build-coach' },
   ),
