@@ -175,6 +175,31 @@ export function augmentBadgeFor(championId: string | null, key: string): Augment
   return { name, rarity, stat, source, mayhem: mayhemStat, mayhemSource }
 }
 
+/**
+ * Ranked augment keys (numeric ids + "x:" extras) most likely for this
+ * champion, for the vision matcher's priority-first OCR pass. Every known
+ * augment gets a score — the champion's own Mayhem row when op.gg has one,
+ * else the augment's global row — so this never invents or excludes
+ * anything, it only reorders. Augments with no Mayhem data at all (never
+ * scraped) are omitted here but remain fully matchable via the full-list
+ * fallback in electron/augment-vision.js.
+ */
+export function championPriorityKeys(championId: string | null, topK = 40): string[] {
+  if (!cache || !championId) return []
+  const scored: { key: string; value: number }[] = []
+  const scoreOf = (m: MayhemStat) => (m.champions[championId] ?? m).score
+  for (const m of cache.metaById.values()) {
+    const mayhem = cache.mayhemByCanon.get(canonName(m.name))
+    if (mayhem) scored.push({ key: String(m.id), value: scoreOf(mayhem) })
+  }
+  for (const e of EXTRA_TEMPLATES) {
+    const mayhem = cache.mayhemByCanon.get(canonName(e.name))
+    if (mayhem) scored.push({ key: e.key, value: scoreOf(mayhem) })
+  }
+  scored.sort((a, b) => b.value - a.value)
+  return scored.slice(0, topK).map((s) => s.key)
+}
+
 export function topAugmentsFor(championId: string | null, count = 6): AugmentGoal[] {
   if (!cache || !championId) return []
   const { metaById, global, byChamp } = cache

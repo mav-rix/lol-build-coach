@@ -25,9 +25,11 @@ contextBridge.exposeInMainWorld('overlay', {
   // bounds and a large centered panel, and forces it visible while loading.
   setLoadingLayout: (active) => ipcRenderer.send('overlay:loading-layout', Boolean(active)),
   // Augment vision: watch the screen for the Mayhem pick screen during an offer
-  // window (renderer supplies the icon manifest), reporting matches so badges
-  // can be drawn over the actual cards. See electron/augment-vision.js.
-  visionStart: (manifest) => ipcRenderer.send('overlay:vision-start', manifest),
+  // window (renderer supplies the icon manifest, plus a per-champion priority
+  // key order for the OCR naming pass), reporting matches so badges can be
+  // drawn over the actual cards. See electron/augment-vision.js.
+  visionStart: (manifest, priorityKeys) =>
+    ipcRenderer.send('overlay:vision-start', manifest, priorityKeys),
   visionStop: () => ipcRenderer.send('overlay:vision-stop'),
   // Active player's alive/dead state — lets main scan lazily during live play.
   visionSetAlive: (alive) => ipcRenderer.send('overlay:vision-alive', Boolean(alive)),
