@@ -9,6 +9,7 @@ import { useLoadingScreen } from '@/hooks/useLoadingScreen'
 import { formatClock } from '@/lib/analysis'
 import {
   augmentBadgeFor,
+  championPriorityKeys,
   loadAugmentData,
   visionManifest,
   type VisionTemplate,
@@ -46,7 +47,7 @@ declare global {
       dragTo: (dx: number, dy: number) => void
       endDrag: () => void
       setLoadingLayout: (active: boolean) => void
-      visionStart?: (manifest: VisionTemplate[]) => void
+      visionStart?: (manifest: VisionTemplate[], priorityKeys: string[]) => void
       visionStop?: () => void
       visionSetAlive?: (alive: boolean) => void
       onVisionOffer?: (cb: (payload: VisionPayload | null) => void) => () => void
@@ -169,7 +170,7 @@ function DragGrip({ className = '' }: { className?: string }) {
 // is swapped to cover the display and this hook's payload drives % badges
 // rendered directly over the cards. ?badgemock=1 fabricates a payload for
 // previews/screenshots (1080p geometry, no IPC needed).
-function useAugmentVision(active: boolean, isDead: boolean): VisionPayload | null {
+function useAugmentVision(active: boolean, isDead: boolean, championId: string | null): VisionPayload | null {
   const [payload, setPayload] = useState<VisionPayload | null>(null)
   const [, setDataReady] = useState(false)
   // Report alive/dead to main so its scan loop can slow down during live play
@@ -198,14 +199,17 @@ function useAugmentVision(active: boolean, isDead: boolean): VisionPayload | nul
     if (!api?.visionStart || !active) return
     let cancelled = false
     loadAugmentData().then(() => {
-      if (!cancelled) api.visionStart!(visionManifest())
+      // Full manifest always goes through — priority keys only reorder the
+      // OCR naming pass (electron/augment-vision.js), they never narrow what
+      // can be detected. See championPriorityKeys in src/lib/augments.ts.
+      if (!cancelled) api.visionStart!(visionManifest(), championPriorityKeys(championId))
     })
     return () => {
       cancelled = true
       api.visionStop?.()
       setPayload(null)
     }
-  }, [active])
+  }, [active, championId])
   const mock = new URLSearchParams(window.location.search).has('badgemock')
   if (mock && active) {
     return {
@@ -405,6 +409,7 @@ export default function Overlay() {
       augmentMode &&
       gameStarted,
     self?.isDead ?? false,
+    championId,
   )
   // ?expand=1 (mock/dev only): force the full card for previews/screenshots,
   // where there's no real pointer to hover the grip with.

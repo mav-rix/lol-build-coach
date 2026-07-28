@@ -16,6 +16,16 @@ const { readFileSync, writeFileSync } = require('node:fs')
 const { startServer } = require('./server')
 const { startVision, stopVision, setVisionAlive } = require('./augment-vision')
 
+// EXPERIMENTAL, unconfirmed: try to get desktopCapturer to use Windows
+// Graphics Capture (WGC) instead of DXGI Desktop Duplication. WGC is what
+// Xbox Game Bar/OBS use for game capture and is reportedly more resilient to
+// GPU contention — DXGI duplication is the API that stalled for 1-2 minutes
+// under a saturated GPU (see augment-vision.js). Not confirmed to apply to
+// full-screen (vs. window) capture on this Electron version — check
+// vision.log capture success/failure patterns during real play; remove this
+// switch if it has no measurable effect or causes problems.
+app.commandLine.appendSwitch('enable-features', 'WebRtcAllowWgcScreenCapturer,WebRtcAllowWgcWindowCapturer')
+
 const DIST = path.join(__dirname, 'dist')
 
 let baseUrl = null
@@ -663,9 +673,10 @@ app.whenReady().then(async () => {
 
   // Augment vision (see augment-vision.js): the renderer starts/stops the
   // screen watch around Mayhem offer windows and supplies the icon manifest.
-  ipcMain.on('overlay:vision-start', (_e, manifest) => {
+  ipcMain.on('overlay:vision-start', (_e, manifest, priorityKeys) => {
     startVision(
       manifest,
+      priorityKeys,
       (payload) => showBadges(payload),
       () => hideBadges(),
     ).catch((e) => console.warn(`[vision] start failed: ${e.message ?? e}`))

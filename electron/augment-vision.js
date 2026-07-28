@@ -37,6 +37,15 @@
 // screen can appear at any death after an unlock, and probes are cheap) and
 // supplies the template manifest {key, name, icon} (augments.json metas + the
 // Mayhem-only extras from augmentExtras.json). Icons cache into userData.
+//
+// The renderer also supplies a per-champion `priorityKeys` order (see
+// championPriorityKeys in src/lib/augments.ts, derived from the op.gg Mayhem
+// scrape already on disk). This ONLY reorders the OCR title-naming search —
+// icon-based screen DETECTION always uses the full manifest, unnarrowed.
+// Mayhem offers aren't champion-restricted, so a narrowed detector could miss
+// a real but rare-for-this-champion offer entirely; a naming miss on the
+// priority subset just falls back to the full name search, same as before
+// this existed.
 
 const { desktopCapturer, screen, app, utilityProcess } = require('electron')
 const path = require('node:path')
@@ -494,27 +503,15 @@ function titleCrop(image, cardCx, s) {
   return PNG.sync.write(out)
 }
 
-/** OCR one title band and resolve it to a known augment, or null. */
-async function readTitle(image, cardCx, s, nameIndex) {
-  const buf = titleCrop(image, cardCx, s)
-  if (!buf) return null
-  const text = await ocrRecognize(buf)
-  if (text == null) return null
-  const raw = text.trim().replace(/\s+/g, ' ')
-  const c = nameIndex.canon(raw)
-  if (c.length < 4) return null
-  // Stat Anvil offers (Attack Speed Shard, Critical Shard, Armor Shard, …)
-  // reuse the augment pick-screen card layout but are NOT augments — no augment
-  // name contains "shard". Reject them before matching so a shard title can't
-  // false-match a real augment (OCR "Critical Shard" was landing on "It's
-  // Critical") and paint a bogus badge over a stat card.
-  if (/shard$/.test(c)) return { raw, entry: null }
-  // Best per-name partial match. On distance ties the LONGER name wins — an
-  // OCR of "Infinite Recursion" contains "Recursion" at distance 0 too, and
-  // the more specific name is the one actually on the card.
+/** Best per-name partial match within one canon-name→entry index, or null if
+ *  nothing clears the distance bound or the top two candidates tie. On
+ *  distance ties the LONGER name wins — an OCR of "Infinite Recursion"
+ *  contains "Recursion" at distance 0 too, and the more specific name is the
+ *  one actually on the card. */
+function matchName(c, indexMap) {
   let best = null
   let second = null
-  for (const [cn, entry] of nameIndex.index) {
+  for (const [cn, entry] of indexMap) {
     const d = nameDist(c, cn)
     // Tightened from 0.25 → 0.20 of the name length: non-augment text (e.g. a
     // stat-shard title, or a window overlapping the card) was slipping in at
@@ -528,11 +525,35 @@ async function readTitle(image, cardCx, s, nameIndex) {
       second = { d, len: cn.length, entry }
     }
   }
-  if (!best) return { raw, entry: null }
+  if (!best) return null
   // Equal-quality match for two different augments → genuinely ambiguous.
-  if (second && second.d === best.d && second.len === best.len && second.entry !== best.entry)
-    return { raw, entry: null }
-  return { raw, entry: best.entry, dist: best.d }
+  if (second && second.d === best.d && second.len === best.len && second.entry !== best.entry) return null
+  return { entry: best.entry, dist: best.d }
+}
+
+/** OCR one title band and resolve it to a known augment, or null. `indexes`
+ *  is {canon, full, priority}: `priority` (this champion's likely augments,
+ *  or null) is searched first — same thresholds, just a smaller candidate
+ *  set, which is where a collision risk (two similarly-named augments) is
+ *  lowest. A miss there falls back to the unabridged `full` search, so
+ *  narrowing can only help naming, never cost a detection. */
+async function readTitle(image, cardCx, s, indexes) {
+  const buf = titleCrop(image, cardCx, s)
+  if (!buf) return null
+  const text = await ocrRecognize(buf)
+  if (text == null) return null
+  const raw = text.trim().replace(/\s+/g, ' ')
+  const c = indexes.canon(raw)
+  if (c.length < 4) return null
+  // Stat Anvil offers (Attack Speed Shard, Critical Shard, Armor Shard, …)
+  // reuse the augment pick-screen card layout but are NOT augments — no augment
+  // name contains "shard". Reject them before matching so a shard title can't
+  // false-match a real augment (OCR "Critical Shard" was landing on "It's
+  // Critical") and paint a bogus badge over a stat card.
+  if (/shard$/.test(c)) return { raw, entry: null }
+  const hit = (indexes.priority && matchName(c, indexes.priority)) || matchName(c, indexes.full)
+  if (!hit) return { raw, entry: null }
+  return { raw, entry: hit.entry, dist: hit.dist }
 }
 
 // --- debug dumps ------------------------------------------------------------------
@@ -584,6 +605,13 @@ let watch = null
 // logs.
 const CAPTURE_TIMEOUT_MS = 8000
 const PROBE_H = 540
+// During a stall like the one above, hammering desktopCapturer every
+// SCAN_*_MS adds load to an already-saturated GPU and gets nothing back for
+// the whole window. Back off exponentially per consecutive capture failure
+// (probe or full-res), capped well below WATCH_MAX_MS, and reset the instant
+// a capture succeeds again so a real pick screen is never missed once the
+// GPU frees up.
+const BACKOFF_MAX_MS = 10_000
 
 async function captureFrame(w, h, tag) {
   const display = screen.getPrimaryDisplay()
@@ -623,7 +651,11 @@ async function scanOnce() {
   const probeH = Math.min(PROBE_H, pxH)
   const probeW = Math.round((pxW * probeH) / pxH)
   const probe = await captureFrame(probeW, probeH, 'probe')
-  if (!watch || !probe) return
+  if (!watch || !probe) {
+    if (watch) watch.failStreak = (watch.failStreak ?? 0) + 1
+    return
+  }
+  watch.failStreak = 0
   const ps = probe.height / REF_H
   const probeIcon = Math.round(REF_ICON_SIZE * ps)
   // Middle card first — it's the least likely to sit under the cursor — and
@@ -658,7 +690,10 @@ async function scanOnce() {
   // Phase 2: full-res frame for OCR. A failed full grab is NOT "screen gone" —
   // badges keep their state and the next probe decides.
   const image = await captureFrame(pxW, pxH, 'full')
-  if (!watch || !image) return
+  if (!watch || !image) {
+    if (watch) watch.failStreak = (watch.failStreak ?? 0) + 1
+    return
+  }
   const { width, height } = image
 
   const s = height / REF_H
@@ -674,7 +709,7 @@ async function scanOnce() {
   let reads
   try {
     // All three titles at once — the sidecar runs parallel OCR workers.
-    reads = await Promise.all(cards.map((c) => readTitle(image, c.cx, s, watch.nameIndex)))
+    reads = await Promise.all(cards.map((c) => readTitle(image, c.cx, s, watch.nameIndexes)))
   } catch (e) {
     vlog(`ocr failed: ${e.message ?? e}`)
     return
@@ -724,11 +759,15 @@ async function scanOnce() {
 
 /**
  * Start watching for the pick screen. `manifest` is [{key, name, icon}] from
- * the renderer. Callbacks: onOffer(payload) when cards are identified or the
- * identified set changes (payload carries keys + card centers in DIP screen
- * coords), onGone() when the screen disappears. No-ops when pngjs is missing.
+ * the renderer — always the FULL known-augment set, used unnarrowed for icon
+ * detection and as the OCR naming fallback. `priorityKeys` (may be null/empty)
+ * is this champion's likely augments (see championPriorityKeys), searched
+ * first during OCR naming only — see the header comment and readTitle.
+ * Callbacks: onOffer(payload) when cards are identified or the identified set
+ * changes (payload carries keys + card centers in DIP screen coords),
+ * onGone() when the screen disappears. No-ops when pngjs is missing.
  */
-async function startVision(manifest, onOffer, onGone) {
+async function startVision(manifest, priorityKeys, onOffer, onGone) {
   if (!PNG || !Array.isArray(manifest) || manifest.length === 0) return
   stopVision()
   const templates = await buildTemplates(manifest)
@@ -738,16 +777,23 @@ async function startVision(manifest, onOffer, onGone) {
     vlog(`trigger templates: ${triggerCache.list.length} of ${templates.length} after dedup`)
   }
   ensureOcrProc() // warm the OCR sidecar off the critical path
+  const fullIndex = buildNameIndex(manifest)
+  const keySet = new Set(Array.isArray(priorityKeys) ? priorityKeys : [])
+  const priorityManifest = keySet.size ? manifest.filter((e) => keySet.has(e.key)) : []
+  const priorityIndex = priorityManifest.length ? buildNameIndex(priorityManifest) : null
+  vlog(`name index: ${fullIndex.index.size} full, ${priorityIndex ? priorityIndex.index.size : 0} priority`)
   watch = {
     templates,
     triggerTemplates: triggerCache.list,
-    nameIndex: buildNameIndex(manifest),
+    nameIndexes: { canon: fullIndex.canon, full: fullIndex.index, priority: priorityIndex?.index ?? null },
     onOffer,
     onGone,
     present: false,
     missStreak: 0,
     lastKeys: null,
     frameDumped: false,
+    failStreak: 0,
+    wasBackingOff: false,
     stopAt: Date.now() + WATCH_MAX_MS,
   }
   watch.alive = pendingAlive // carry the last reported state across the start race
@@ -778,7 +824,16 @@ async function scanTick() {
       scanning = false
     }
   }
-  if (watch) watch.timer = setTimeout(scanTick, watch.alive ? SCAN_ALIVE_MS : SCAN_DEAD_MS)
+  if (watch) {
+    const base = watch.alive ? SCAN_ALIVE_MS : SCAN_DEAD_MS
+    const fails = watch.failStreak ?? 0
+    const delay = fails > 0 ? Math.min(BACKOFF_MAX_MS, base * 2 ** fails) : base
+    const backingOff = fails > 0
+    if (backingOff && !watch.wasBackingOff) vlog(`capture backoff: entering (fails=${fails}, next in ${delay}ms)`)
+    else if (!backingOff && watch.wasBackingOff) vlog('capture backoff: recovered')
+    watch.wasBackingOff = backingOff
+    watch.timer = setTimeout(scanTick, delay)
+  }
 }
 
 // Renderer reports the active player's alive/dead state. On death (alive→dead)
