@@ -613,6 +613,36 @@ const PROBE_H = 540
 // GPU frees up.
 const BACKOFF_MAX_MS = 10_000
 
+// The failStreak backoff above only reacts to a capture that outright times
+// out or comes back empty. In the field, a saturating GPU shows up earlier
+// than that: captures keep succeeding but take progressively longer, and by
+// the time one actually times out the game has already been stuttering for a
+// while. Track a per-tag "healthy" baseline and treat a capture far above it
+// as the same signal as a failure, so backoff engages before the visible
+// stutter, not after.
+const SLOW_MULT = 2.5
+const SLOW_FLOOR_MS = 150 // ignore normal jitter on already-fast captures
+
+/** Update watch's per-tag latency baseline / slow streak from one capture's
+ *  elapsed time. A sample far above baseline bumps slowStreak (same currency
+ *  as failStreak for backoff purposes) without touching the baseline itself
+ *  — a real stall can't drag its own detection threshold upward. A normal
+ *  sample resets the streak and nudges the baseline via EMA. */
+function trackLatency(watch, tag, ms) {
+  const key = `${tag}BaselineMs`
+  const baseline = watch[key]
+  if (baseline == null) {
+    watch[key] = ms
+    return
+  }
+  if (ms > Math.max(baseline * SLOW_MULT, SLOW_FLOOR_MS)) {
+    watch.slowStreak = (watch.slowStreak ?? 0) + 1
+  } else {
+    watch.slowStreak = 0
+    watch[key] = baseline * 0.8 + ms * 0.2
+  }
+}
+
 async function captureFrame(w, h, tag) {
   const display = screen.getPrimaryDisplay()
   let sources
@@ -650,12 +680,14 @@ async function scanOnce() {
   // Phase 1: half-res probe → icon trigger (validated ≥0.87 on live frames).
   const probeH = Math.min(PROBE_H, pxH)
   const probeW = Math.round((pxW * probeH) / pxH)
+  const probeStart = Date.now()
   const probe = await captureFrame(probeW, probeH, 'probe')
   if (!watch || !probe) {
     if (watch) watch.failStreak = (watch.failStreak ?? 0) + 1
     return
   }
   watch.failStreak = 0
+  trackLatency(watch, 'probe', Date.now() - probeStart)
   const ps = probe.height / REF_H
   const probeIcon = Math.round(REF_ICON_SIZE * ps)
   // Middle card first — it's the least likely to sit under the cursor — and
@@ -689,11 +721,13 @@ async function scanOnce() {
 
   // Phase 2: full-res frame for OCR. A failed full grab is NOT "screen gone" —
   // badges keep their state and the next probe decides.
+  const fullStart = Date.now()
   const image = await captureFrame(pxW, pxH, 'full')
   if (!watch || !image) {
     if (watch) watch.failStreak = (watch.failStreak ?? 0) + 1
     return
   }
+  trackLatency(watch, 'full', Date.now() - fullStart)
   const { width, height } = image
 
   const s = height / REF_H
@@ -793,6 +827,7 @@ async function startVision(manifest, priorityKeys, onOffer, onGone) {
     lastKeys: null,
     frameDumped: false,
     failStreak: 0,
+    slowStreak: 0,
     wasBackingOff: false,
     stopAt: Date.now() + WATCH_MAX_MS,
   }
@@ -827,9 +862,15 @@ async function scanTick() {
   if (watch) {
     const base = watch.alive ? SCAN_ALIVE_MS : SCAN_DEAD_MS
     const fails = watch.failStreak ?? 0
-    const delay = fails > 0 ? Math.min(BACKOFF_MAX_MS, base * 2 ** fails) : base
-    const backingOff = fails > 0
-    if (backingOff && !watch.wasBackingOff) vlog(`capture backoff: entering (fails=${fails}, next in ${delay}ms)`)
+    const slow = watch.slowStreak ?? 0
+    // Outright failures and "successful but slow" captures are the same
+    // underlying signal (GPU contention) at different severities — whichever
+    // streak is longer drives the backoff.
+    const pressure = Math.max(fails, slow)
+    const delay = pressure > 0 ? Math.min(BACKOFF_MAX_MS, base * 2 ** pressure) : base
+    const backingOff = pressure > 0
+    if (backingOff && !watch.wasBackingOff)
+      vlog(`capture backoff: entering (fails=${fails} slow=${slow}, next in ${delay}ms)`)
     else if (!backingOff && watch.wasBackingOff) vlog('capture backoff: recovered')
     watch.wasBackingOff = backingOff
     watch.timer = setTimeout(scanTick, delay)
