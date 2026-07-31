@@ -209,7 +209,7 @@ export default function Home() {
             selectedChampion={selectedChampion}
             onSelect={(c) => {
               selectChampion(c?.id ?? null)
-              if (c) selectRole(defaultRole(c))
+              if (c && modeConfig.hasRoles) selectRole(defaultRole(c))
             }}
             clearable
           />

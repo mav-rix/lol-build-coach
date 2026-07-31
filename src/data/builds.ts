@@ -3,6 +3,7 @@ import {
   findAggregatedBuild,
   findAggregatedVariants,
 } from '@/data/aggregatedBuilds'
+import { MODE_CONFIG } from '@/lib/modes'
 import type { BuildPath, GameMode, Role } from '@/types/app'
 
 // MVP seed data — the Week 1 champions from the spec. Item/rune IDs resolve
@@ -344,8 +345,11 @@ export function findBuild(
   const inMode = BUILD_PATHS.filter(
     (b) => b.championId === championId && b.mode === mode,
   )
+  // Trust the mode's hasRoles flag, not just role truthiness — a stale/
+  // default role can linger from a previous roles-having mode (see the same
+  // fix + note in aggregatedBuilds.ts's findAggregatedVariants).
   const seed =
-    role === null || role === undefined
+    !MODE_CONFIG[mode].hasRoles || role == null
       ? (inMode[0] ?? null)
       : (inMode.find((b) => b.role === role) ?? inMode[0] ?? null)
   if (seed) return seed
