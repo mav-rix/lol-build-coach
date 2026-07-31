@@ -84,6 +84,34 @@ function createMainWindow() {
   mainWin.on('closed', () => (mainWin = null))
 }
 
+// ---- app-settings store -----------------------------------------------------
+// Backs the renderer bridge in electron/store-bridge.js: zustand's persisted
+// state (see src/store/useAppStore.ts), moved off origin-scoped localStorage
+// so the embedded server (electron/server.js) can use an ephemeral port. A
+// write from any window is saved here, then broadcast to every OTHER window so
+// they rehydrate and stay in sync — the same effect the browser 'storage'
+// event used to have for free between same-origin windows.
+const storeFile = () => path.join(app.getPath('userData'), 'store.json')
+const loadStore = () => {
+  try {
+    return readFileSync(storeFile(), 'utf8')
+  } catch {
+    return null
+  }
+}
+const saveStore = (value) => {
+  try {
+    writeFileSync(storeFile(), value)
+  } catch {
+    // best-effort
+  }
+}
+const broadcastStoreUpdate = (value, exclude) => {
+  for (const w of [mainWin, overlayWin, enemyWin, badgeWin]) {
+    if (w && !w.isDestroyed() && w.webContents !== exclude) w.webContents.send('store:update', value)
+  }
+}
+
 // ---- overlay window ------------------------------------------------------------
 const posFile = () => path.join(app.getPath('userData'), 'overlay-position.json')
 const loadPos = () => {
@@ -670,6 +698,13 @@ app.whenReady().then(async () => {
     }
   })
   ipcMain.on('overlay:loading-layout', (_e, active) => applyLoadingLayout(active))
+
+  // App-settings store (see electron/store-bridge.js above).
+  ipcMain.handle('store:get', () => loadStore())
+  ipcMain.on('store:set', (e, value) => {
+    saveStore(value)
+    broadcastStoreUpdate(value, e.sender)
+  })
 
   // Augment vision (see augment-vision.js): the renderer starts/stops the
   // screen watch around Mayhem offer windows and supplies the icon manifest.
