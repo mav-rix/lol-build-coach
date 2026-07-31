@@ -2,6 +2,21 @@
 // contextIsolation is on — the page only sees these three calls.
 const { contextBridge, ipcRenderer } = require('electron')
 
+// App-settings store (see electron/main.js). Duplicated identically in
+// preload.js rather than shared via require('./store-bridge') — sandboxed
+// preload scripts can only require('electron'), not local files; that require
+// silently killed this ENTIRE preload script (including the bridge below) the
+// first time this was tried. Keep the two copies in sync by hand.
+contextBridge.exposeInMainWorld('appStore', {
+  get: () => ipcRenderer.invoke('store:get'),
+  set: (value) => ipcRenderer.send('store:set', value),
+  onUpdate: (cb) => {
+    const listener = (_e, value) => cb(value)
+    ipcRenderer.on('store:update', listener)
+    return () => ipcRenderer.removeListener('store:update', listener)
+  },
+})
+
 contextBridge.exposeInMainWorld('appUpdates', {
   /**
    * Fires on every update-state change:

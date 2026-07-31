@@ -11,8 +11,7 @@
 //   everything else   → static files from dist/ (index.html fallback for SPA
 //                       routes)
 //
-// Binds a fixed port on 127.0.0.1 (see PREFERRED_PORT below) — nothing is
-// exposed off-machine.
+// Binds an ephemeral port on 127.0.0.1 — nothing is exposed off-machine.
 
 const fs = require('node:fs')
 const http = require('node:http')
@@ -701,12 +700,14 @@ function serveStatic(distDir, req, res) {
   fs.createReadStream(filePath).pipe(res)
 }
 
-// A fixed port, not an ephemeral one (port 0): the renderer's origin is
-// http://127.0.0.1:PORT, and browser localStorage — which is how zustand
-// persists app settings (see src/store/useAppStore.ts) — is scoped per
-// origin including the port. An ephemeral port meant a fresh origin, and
-// therefore reset settings, on every single launch, not just on updates.
-const PREFERRED_PORT = 58273
+// Port 0 (ephemeral): the OS picks whatever's free. App settings used to ride
+// on browser localStorage, which is scoped per-origin including the port —
+// that's why this used to bind a fixed port. Windows/Hyper-V can reserve TCP
+// port ranges for WSL2's NAT that silently swallow a fixed port (EACCES,
+// confirmed 2026-07-31 — hung the app on launch with no error and no window),
+// so settings persistence moved off localStorage entirely, to a file in
+// userData bridged over IPC (see electron/store-bridge.js and
+// src/store/useAppStore.ts). The origin can now change every launch for free.
 
 /** Start the embedded server; resolves the base URL (http://127.0.0.1:PORT). */
 function startServer(distDir, logDir) {
@@ -720,16 +721,7 @@ function startServer(distDir, logDir) {
     server.once('listening', () => {
       resolve({ server, baseUrl: `http://127.0.0.1:${server.address().port}` })
     })
-    server.once('error', (err) => {
-      // Anything that stops the preferred port from binding — already in use
-      // (EADDRINUSE), or off-limits (EACCES: Windows/Hyper-V reserves TCP port
-      // ranges for WSL2's NAT and 58273 can fall inside one — confirmed
-      // 2026-07-31, this is what silently hung the app on launch) — falls back
-      // to an ephemeral port so the app still starts; settings just won't
-      // persist across this particular restart.
-      server.listen(0, '127.0.0.1')
-    })
-    server.listen(PREFERRED_PORT, '127.0.0.1')
+    server.listen(0, '127.0.0.1')
   })
 }
 

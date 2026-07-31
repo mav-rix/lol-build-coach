@@ -1,6 +1,40 @@
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { createJSONStorage, persist, type StateStorage } from 'zustand/middleware'
 import type { GameMode, Role } from '@/types/app'
+
+declare global {
+  interface Window {
+    // Exposed by electron/preload.js and electron/app-preload.js; absent in a plain browser (npm run
+    // dev), where localStorage is used instead — see `storage` below.
+    appStore?: {
+      get: () => Promise<string | null>
+      set: (value: string) => void
+      onUpdate: (cb: (value: string | null) => void) => () => void
+    }
+  }
+}
+
+// Settings live in a userData file via IPC when packaged (see electron/main.js),
+// not in browser localStorage: localStorage is scoped per-origin including the
+// port, and the embedded server's port is now ephemeral (see electron/server.js
+// for why). Falls back to localStorage outside Electron.
+const storage: StateStorage = {
+  getItem: async (name) => {
+    if (typeof window === 'undefined') return null
+    if (window.appStore) return window.appStore.get()
+    return window.localStorage.getItem(name)
+  },
+  setItem: async (name, value) => {
+    if (typeof window === 'undefined') return
+    if (window.appStore) return window.appStore.set(value)
+    window.localStorage.setItem(name, value)
+  },
+  removeItem: async (name) => {
+    if (typeof window === 'undefined') return
+    if (window.appStore) return window.appStore.set('')
+    window.localStorage.removeItem(name)
+  },
+}
 
 interface AppState {
   selectedChampionId: string | null
@@ -59,20 +93,24 @@ export const useAppStore = create<AppState>()(
       setOverlayShowEnemies: (on) => set({ overlayShowEnemies: on }),
       setOverlayShowAugmentBadges: (on) => set({ overlayShowAugmentBadges: on }),
     }),
-    { name: 'lol-build-coach' },
+    { name: 'lol-build-coach', storage: createJSONStorage(() => storage) },
   ),
 )
 
 // The main window and the overlay are separate renderers, each with its own
-// store instance; persist only reads localStorage once, at store creation. A
-// selection made in one window (champ-select auto-fill, a role/mode change)
-// would never reach the other, so the two could recommend different builds
-// whenever the live API doesn't decide the value itself (no position in blind
-// pick/practice tool, champion/mode fallbacks out of game). The storage event
-// fires in every OTHER same-origin window on each persisted write — rehydrate
-// there to keep all windows on the same selections.
+// store instance; persist only reads on store creation. A selection made in
+// one window (champ-select auto-fill, a role/mode change) would never reach
+// the other, so the two could recommend different builds whenever the live
+// API doesn't decide the value itself (no position in blind pick/practice
+// tool, champion/mode fallbacks out of game). Rehydrate on every OTHER
+// window's write to keep all windows on the same selections: the IPC broadcast
+// in Electron (electron/main.js), or the browser 'storage' event outside it.
 if (typeof window !== 'undefined') {
-  window.addEventListener('storage', (e) => {
-    if (e.key === 'lol-build-coach') void useAppStore.persist.rehydrate()
-  })
+  if (window.appStore) {
+    window.appStore.onUpdate(() => void useAppStore.persist.rehydrate())
+  } else {
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'lol-build-coach') void useAppStore.persist.rehydrate()
+    })
+  }
 }
