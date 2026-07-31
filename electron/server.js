@@ -721,10 +721,12 @@ function startServer(distDir, logDir) {
       resolve({ server, baseUrl: `http://127.0.0.1:${server.address().port}` })
     })
     server.once('error', (err) => {
-      if (err.code !== 'EADDRINUSE') throw err
-      // Something else already holds the preferred port (rare) — fall back to
-      // an ephemeral one so the app still starts; settings just won't persist
-      // across this particular restart.
+      // Anything that stops the preferred port from binding — already in use
+      // (EADDRINUSE), or off-limits (EACCES: Windows/Hyper-V reserves TCP port
+      // ranges for WSL2's NAT and 58273 can fall inside one — confirmed
+      // 2026-07-31, this is what silently hung the app on launch) — falls back
+      // to an ephemeral port so the app still starts; settings just won't
+      // persist across this particular restart.
       server.listen(0, '127.0.0.1')
     })
     server.listen(PREFERRED_PORT, '127.0.0.1')
