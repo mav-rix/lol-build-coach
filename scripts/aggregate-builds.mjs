@@ -313,11 +313,26 @@ export function observeMatch(match, timeline, statik) {
     for (const b of buys) {
       const it = statik.items[String(b.itemId)]
       if (!it) continue
-      if (b.t <= 90000 && !isBoots(it) && !isTrinket(it) && !isConsumable(it)) starters.push(b.itemId)
+      // it.maps guards against stale/rotated item ids whose Data Dragon entry
+      // no longer validates on any map (seen live: a couple of legacy support
+      // items with every map flag false slipping into Arena starters) — the
+      // core-item path already gets this for free via isLegendary/isRealArenaItem.
+      if (
+        b.t <= 90000 &&
+        !isBoots(it) &&
+        !isTrinket(it) &&
+        !isConsumable(it) &&
+        it.maps[String(MODE_CFG.map)] !== false
+      )
+        starters.push(b.itemId)
       // Tier-2 boots now upgrade to tier-3, so they carry an `into` — key off
       // cost, not completion, and keep the first substantive boots (the choice
-      // that matters), skipping basic Boots (300g).
-      if (isBoots(it) && it.gold.total >= 600 && boots == null) boots = b.itemId
+      // that matters), skipping basic Boots (300g). Arena has no basic-boots
+      // step at all — every boots purchase there is already the real choice,
+      // uniformly priced at 500g (below the 600g floor), so the floor only
+      // applies off Arena's map.
+      if (isBoots(it) && (MODE_CFG.map === 30 || it.gold.total >= 600) && boots == null)
+        boots = b.itemId
       if (isLegendary(b.itemId, it, statik.items) && !seen.has(b.itemId)) {
         seen.add(b.itemId)
         core.push(b.itemId)

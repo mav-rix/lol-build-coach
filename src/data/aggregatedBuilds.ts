@@ -1,3 +1,4 @@
+import { MODE_CONFIG } from '@/lib/modes'
 import type { BuildPath, GameMode, Role } from '@/types/app'
 
 // Machine-aggregated builds generated offline from high-elo Match-V5 data by
@@ -93,7 +94,14 @@ export function findAggregatedVariants(
       b.mode === mode &&
       (b.sampleSize ?? 0) >= MIN_AGGREGATED_SAMPLE,
   )
+  // A stale/default role can linger in the store from a previous roles-having
+  // mode — trust the mode's hasRoles flag, not just role truthiness, so a
+  // leftover role (e.g. defaultRole() always sets one on champion pick,
+  // regardless of mode) can't defeat a roleless mode's lookup. Confirmed live
+  // 2026-08-01: Arena builds went missing in the UI until this was fixed.
   const scoped =
-    mode === 'ARAM' || !role ? candidates : candidates.filter((b) => b.role === role)
+    !MODE_CONFIG[mode].hasRoles || !role
+      ? candidates
+      : candidates.filter((b) => b.role === role)
   return [...scoped].sort((a, b) => (b.sampleSize ?? 0) - (a.sampleSize ?? 0))
 }
