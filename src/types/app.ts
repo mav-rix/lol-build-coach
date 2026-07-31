@@ -4,13 +4,13 @@ export type Role = 'TOP' | 'JUNGLE' | 'MID' | 'ADC' | 'SUPPORT'
 
 export const ROLES: Role[] = ['TOP', 'JUNGLE', 'MID', 'ADC', 'SUPPORT']
 
-export type GameMode = 'SR' | 'ARAM'
+export type GameMode = 'SR' | 'ARAM' | 'ARENA'
 
 export interface BuildPath {
   id: number
   championId: string
   mode: GameMode
-  role: Role | null // null for modes without roles (ARAM)
+  role: Role | null // null for modes without roles (ARAM, ARENA)
   // Playstyle cluster this build came from (aggregated builds only): 'ap' | 'ad'
   // | 'tank' | 'other'. A champ can have several — the Build page offers them as
   // selectable variants. Absent on hand-authored seeds.

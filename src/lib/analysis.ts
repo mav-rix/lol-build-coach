@@ -87,7 +87,7 @@ export function analyzeMatch(
     else if (c.deviation > 120) score -= 10
   }
   if (stats.result === 'WIN') score += 10
-  if (csPerMin >= modeConfig.csGoodPerMin) score += 10
+  if (modeConfig.hasCs && csPerMin >= modeConfig.csGoodPerMin) score += 10
   if (damagePerGold < 0.8) score -= 10
   const efficiencyScore = Math.max(0, Math.min(100, score))
 
@@ -166,13 +166,13 @@ export function analyzeMatch(
     }
   }
 
-  if (csPerMin >= modeConfig.csGoodPerMin) {
+  if (modeConfig.hasCs && csPerMin >= modeConfig.csGoodPerMin) {
     tips.push({
       type: 'positive',
       category: 'general',
       message: `Strong farming: ${csPerMin.toFixed(1)} CS/min.`,
     })
-  } else if (csPerMin > 0 && csPerMin < modeConfig.csLowPerMin && minutes >= 12) {
+  } else if (modeConfig.hasCs && csPerMin > 0 && csPerMin < modeConfig.csLowPerMin && minutes >= 12) {
     tips.push({
       type: 'neutral',
       category: 'general',

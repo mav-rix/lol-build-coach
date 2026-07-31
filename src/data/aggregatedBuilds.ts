@@ -28,19 +28,21 @@ let cache: BuildPath[] = []
 let pending: Promise<BuildPath[]> | null = null
 
 /**
- * Lazily fetch the aggregated-builds chunks (memoized). The SR and ARAM datasets
- * are separate files (ARAM is per-champion, roleless) merged into one cache;
- * findAggregatedBuild filters by mode.
+ * Lazily fetch the aggregated-builds chunks (memoized). SR, ARAM, and Arena
+ * datasets are separate files (ARAM/Arena are per-champion, roleless) merged
+ * into one cache; findAggregatedBuild filters by mode.
  */
 export function loadAggregatedBuilds(): Promise<BuildPath[]> {
   if (!pending) {
     pending = Promise.all([
       import('./aggregatedBuilds.json'),
       import('./aggregatedBuildsAram.json'),
-    ]).then(([sr, aram]) => {
+      import('./aggregatedBuildsArena.json'),
+    ]).then(([sr, aram, arena]) => {
       cache = [
         ...(sr.default as unknown as BuildPath[]),
         ...(aram.default as unknown as BuildPath[]),
+        ...(arena.default as unknown as BuildPath[]),
       ]
       return cache
     })

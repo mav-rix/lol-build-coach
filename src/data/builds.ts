@@ -345,7 +345,7 @@ export function findBuild(
     (b) => b.championId === championId && b.mode === mode,
   )
   const seed =
-    mode === 'ARAM'
+    role === null || role === undefined
       ? (inMode[0] ?? null)
       : (inMode.find((b) => b.role === role) ?? inMode[0] ?? null)
   if (seed) return seed

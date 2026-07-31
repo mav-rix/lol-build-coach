@@ -74,11 +74,13 @@ export default function Home() {
     // Mirror my locked pick + assigned role.
     if (champSelect.self.championId) selectChampion(champSelect.self.championId)
     if (champSelect.self.role) selectRole(champSelect.self.role)
-    // Mirror revealed enemy picks into their slots.
+    // Mirror revealed enemy picks into their slots — skipped for modes without
+    // a fixed 5-slot enemy team (Arena).
+    if (!MODE_CONFIG[selectedMode].hasFixedEnemyTeam) return
     champSelect.enemyChampionIds.forEach((id, slot) => {
       if (id && enemyChampionIds[slot] !== id) setEnemyChampion(slot, id)
     })
-  }, [champSelect, enemyChampionIds, selectChampion, selectRole, setEnemyChampion])
+  }, [champSelect, enemyChampionIds, selectChampion, selectRole, setEnemyChampion, selectedMode])
 
   const selectedChampion = selectedChampionId
     ? (data?.championsById[selectedChampionId] ?? null)
@@ -242,48 +244,52 @@ export default function Home() {
           </div>
         ) : (
           <div className="self-end text-sm text-zinc-500">
-            No roles in {modeConfig.label} — builds are per champion. Enemy team is
-            visible from the loading screen, so filling it in below pays off.
+            No roles in {modeConfig.label} — builds are per champion.
+            {modeConfig.hasFixedEnemyTeam
+              ? ' Enemy team is visible from the loading screen, so filling it in below pays off.'
+              : ' Your round opponent rotates live, so there’s no pre-game enemy team to fill in.'}
           </div>
         )}
       </div>
 
-      <div>
-        <div className="mb-2 flex items-center justify-between">
-          <label className="text-sm font-semibold uppercase tracking-wide text-zinc-400">
-            Enemy Team <span className="font-normal normal-case">(optional)</span>
-          </label>
-          {enemies.length > 0 && (
-            <button
-              onClick={clearEnemies}
-              className="text-xs text-zinc-500 hover:text-zinc-300"
-            >
-              Clear all
-            </button>
+      {modeConfig.hasFixedEnemyTeam && (
+        <div>
+          <div className="mb-2 flex items-center justify-between">
+            <label className="text-sm font-semibold uppercase tracking-wide text-zinc-400">
+              Enemy Team <span className="font-normal normal-case">(optional)</span>
+            </label>
+            {enemies.length > 0 && (
+              <button
+                onClick={clearEnemies}
+                className="text-xs text-zinc-500 hover:text-zinc-300"
+              >
+                Clear all
+              </button>
+            )}
+          </div>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+            {enemyChampionIds.map((id, slot) => (
+              <ChampionSelect
+                key={slot}
+                compact
+                clearable
+                champions={data.champions}
+                patch={data.patch}
+                selectedChampion={id ? (data.championsById[id] ?? null) : null}
+                onSelect={(c) => setEnemyChampion(slot, c?.id ?? null)}
+                placeholder={`Enemy ${slot + 1}`}
+              />
+            ))}
+          </div>
+          {comp.summary.length > 0 && (
+            <ul className="mt-3 space-y-1 text-sm text-amber-300/90">
+              {comp.summary.map((s, i) => (
+                <li key={i}>▸ {s}</li>
+              ))}
+            </ul>
           )}
         </div>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
-          {enemyChampionIds.map((id, slot) => (
-            <ChampionSelect
-              key={slot}
-              compact
-              clearable
-              champions={data.champions}
-              patch={data.patch}
-              selectedChampion={id ? (data.championsById[id] ?? null) : null}
-              onSelect={(c) => setEnemyChampion(slot, c?.id ?? null)}
-              placeholder={`Enemy ${slot + 1}`}
-            />
-          ))}
-        </div>
-        {comp.summary.length > 0 && (
-          <ul className="mt-3 space-y-1 text-sm text-amber-300/90">
-            {comp.summary.map((s, i) => (
-              <li key={i}>▸ {s}</li>
-            ))}
-          </ul>
-        )}
-      </div>
+      )}
 
       {modeConfig.hasRoles && hasCounterPicks && counterPicks && (
         <div>
@@ -340,7 +346,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <h2 className="text-xl font-bold text-zinc-100">
                 Recommended Build — {selectedChampion.name}{' '}
-                {build.mode === 'ARAM' ? '(ARAM)' : build.role}
+                {build.role ?? `(${modeConfig.label})`}
               </h2>
               {variants.length > 1 && (
                 <select

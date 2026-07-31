@@ -147,7 +147,7 @@ export function useLiveBuildState() {
     UTILITY: 'SUPPORT',
   }
   const role: Role | null =
-    (self && LIVE_POSITION_ROLE[self.position]) ?? selectedRole
+    mode === 'ARENA' ? null : ((self && LIVE_POSITION_ROLE[self.position]) ?? selectedRole)
   // Augmented Abyss (ARAM Mayhem): drives the overlay's augment goal panel.
   // ?mayhem=1 forces it in mock mode for previews/screenshots.
   const augmentMode = mock

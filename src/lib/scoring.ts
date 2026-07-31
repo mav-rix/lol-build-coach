@@ -10,6 +10,7 @@ import {
   supportArchetype,
 } from '@/lib/support'
 import type { LiveThreatAnalysis } from '@/lib/threats'
+import { isRealArenaItem, toArenaItemId } from '@/lib/arenaItems'
 import type { Role } from '@/types/app'
 import type { DDragonChampion, DDragonItem } from '@/types/ddragon'
 import type { LivePlayer } from '@/types/live'
@@ -139,6 +140,7 @@ export interface ScoreParams {
 
 const SR_MAP_ID = 11
 const SR_MAP_KEY = String(SR_MAP_ID)
+const ARENA_MAP_ID = 30
 
 // Support boots: Mercury's vs AP/CC, otherwise Ionian for ability haste.
 const SUPPORT_BOOTS = { apCc: 3111, default: 3158 }
@@ -269,8 +271,11 @@ export function recommendByScore({
   for (const [idStr, item] of Object.entries(items)) {
     const id = Number(idStr)
     if (ownedIds.has(id) || blocked.has(id)) continue
-    // Special-mode variants (Arena/Swarm) carry inflated ids; real items are low.
-    if (id >= 40000) continue
+    // Special-mode variants (Arena/Swarm) carry inflated ids; real items are
+    // low, EXCEPT on Arena's own map, where the real buildable pool IS the
+    // '22'-prefixed remap (see arenaItems.ts) — everything else in that range
+    // is a synthetic shop-slot placeholder.
+    if (mapId === ARENA_MAP_ID ? !isRealArenaItem(id, items) : id >= 40000) continue
     if (!item.gold.purchasable || item.gold.total < 1800) continue
     if (item.maps[mapKey] === false) continue
     if (item.into && item.into.length > 0) continue // components/boots handled elsewhere
@@ -404,6 +409,7 @@ export function recommendByScore({
       bootId = BOOTS.cdr
       reason = 'Ionian — ability haste'
     }
+    if (mapId === ARENA_MAP_ID) bootId = toArenaItemId(bootId)
     const boot = items[String(bootId)]
     if (boot && !ownedIds.has(bootId) && !blocked.has(bootId)) {
       recs.unshift({
