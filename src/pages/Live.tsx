@@ -37,13 +37,14 @@ export default function Live() {
   const { selectedChampionId, enemyChampionIds, setEnemyChampion } = useAppStore()
 
   // Sync live enemies into the store so the Build page's comp analysis matches.
+  // Skipped for Arena: no fixed 5-slot enemy team (see modeConfig.hasFixedEnemyTeam).
   useEffect(() => {
-    if (!threats || !staticData) return
+    if (!threats || !staticData || !modeConfig.hasFixedEnemyTeam) return
     threats.enemies.slice(0, 5).forEach((e, slot) => {
       const known = staticData.championsById[e.championId] ? e.championId : null
       if (known && enemyChampionIds[slot] !== known) setEnemyChampion(slot, known)
     })
-  }, [threats, staticData, enemyChampionIds, setEnemyChampion])
+  }, [threats, staticData, enemyChampionIds, setEnemyChampion, modeConfig.hasFixedEnemyTeam])
 
   if (!isInGame || !live) {
     return (
@@ -96,7 +97,7 @@ export default function Live() {
         </div>
       )}
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className={`grid gap-4 ${modeConfig.hasCs ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
         <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-4 text-center">
           <div className="text-xs uppercase tracking-wide text-zinc-500">Current Gold</div>
           <div
@@ -113,15 +114,17 @@ export default function Live() {
             {scores ? `${scores.kills}/${scores.deaths}/${scores.assists}` : '—'}
           </div>
         </div>
-        <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-4 text-center">
-          <div className="text-xs uppercase tracking-wide text-zinc-500">CS</div>
-          <div className="mt-1 text-4xl font-bold text-zinc-100">
-            {scores?.creepScore ?? '—'}
-            <span className="ml-2 text-base font-normal text-zinc-500">
-              {csPerMin.toFixed(1)}/min
-            </span>
+        {modeConfig.hasCs && (
+          <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-4 text-center">
+            <div className="text-xs uppercase tracking-wide text-zinc-500">CS</div>
+            <div className="mt-1 text-4xl font-bold text-zinc-100">
+              {scores?.creepScore ?? '—'}
+              <span className="ml-2 text-base font-normal text-zinc-500">
+                {csPerMin.toFixed(1)}/min
+              </span>
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {self && (
@@ -149,7 +152,7 @@ export default function Live() {
         <section>
           <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-zinc-400">
             Build Progress — {build.championId}{' '}
-            {build.mode === 'ARAM' ? '(ARAM)' : build.role}
+            {build.role ?? `(${modeConfig.label})`}
           </h3>
           <div className="flex flex-wrap items-stretch gap-1">
             {plan.map((p, i) => {

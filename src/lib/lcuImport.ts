@@ -20,8 +20,7 @@ export interface ImportOutcome {
   runeOverwrite?: { id: number; name: string }
 }
 
-const buildLabel = (build: BuildPath) =>
-  build.mode === 'ARAM' ? 'ARAM' : (build.role ?? '')
+const buildLabel = (build: BuildPath) => build.role ?? build.mode
 
 /**
  * A rune page is importable only when every style/rune id still exists on the

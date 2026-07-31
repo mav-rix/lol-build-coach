@@ -330,6 +330,31 @@ matter. ARAM is a first-class mode:
   and API surface. Their mutators make builds approximations, but the economy,
   item filtering, and threat reads are correct
 
+Arena (Riot's CHERRY mode, queue 1700, map 30) is also supported:
+
+- Mode toggle on the Build page, same as SR/ARAM — no roles, no pre-game enemy
+  team picker (Arena's opponent is a rotating 1v1 duo, only knowable live,
+  round to round — there's no fixed 5-slot team to fill in)
+- Arena remaps every buildable item to a new id (`'22' + the base SR/ARAM id`,
+  e.g. Infinity Edge `3031` → `223031`), confirmed against live Data Dragon;
+  `src/lib/arenaItems.ts` derives/validates these ids instead of hand-listing
+  them, and correctly excludes the ~13 synthetic shop-slot placeholders Riot
+  ships in the same numeric range (generic class-item slots, stat vouchers,
+  Poro-Snax)
+- The Live tracker detects Arena by map (30) or the `CHERRY` mode string, same
+  pattern as ARAM's map-based detection
+- Rune import works unmodified — Arena uses the same modern Runes Reforged
+  system as SR/ARAM (unlike Riot's separate "League Classic" mode, which uses
+  the old Masteries/Runes system this app doesn't write to)
+- **Deferred, not silently dropped:** situational item suggestions don't yet
+  react to your live round opponent (the 5-slot enemy-team model and
+  team-comp thresholds don't fit Arena's 2-person rotating-opponent shape);
+  item builds aren't yet augment-aware (Arena's existing augment tier list on
+  the Augments page is a separate, Mayhem-pool-filtered reference, not wired
+  into build recommendations); the loading-screen scouting panel stays
+  unsupported for Arena (its 2-team layout can't represent 8 duos — see
+  `loading-screen-arena` project notes)
+
 ## Seeded builds (curated fallback)
 
 Hand-authored builds for Vayne (ADC), Malphite (TOP), Lulu (SUPPORT), Lee Sin
@@ -386,14 +411,17 @@ Add `--dry-run` to preview sample builds from already-cached matches (instant,
 no key, no Riot calls) — or a small live pull if the cache is empty — without
 writing the file. A good first look: `npm run aggregate -- --dry-run`.
 
-**Multiple regions + ARAM.** `--region` takes a comma list (`--region na1,kr,euw1`);
+**Multiple regions + ARAM/Arena.** `--region` takes a comma list (`--region na1,kr,euw1`);
 matches from every region are pooled into one merged dataset (each match is
 routed to its correct regional cluster, so mixed-region pools just work), with
 `--matches` applied per region. `--include-cached` folds already-cached matches
 (e.g. a prior region's run) into the pool without re-fetching. `--mode aram`
 ingests queue 450 into a separate per-champion `aggregatedBuildsAram.json` (ARAM
-has no roles); the loader merges SR + ARAM and `findBuild` serves each by mode,
-so ARAM/Mayhem get real win-rate builds instead of pure heuristics.
+has no roles); `--mode arena` ingests queue 1700 into
+`aggregatedBuildsArena.json` the same way (Arena is also roleless, and its
+items are remapped ids handled by `isRealArenaItem` — see "Game modes" above).
+The loader merges SR + ARAM + Arena and `findBuild` serves each by mode, so
+ARAM/Mayhem/Arena get real win-rate builds instead of pure heuristics.
 
 **Refreshing per patch.** The data is patch-specific, so re-run the aggregator
 when a new patch ships. `--if-stale` makes that cheap: it no-ops if the output

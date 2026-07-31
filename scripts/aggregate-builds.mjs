@@ -19,8 +19,9 @@
 //                         patch; otherwise run — for a per-patch scheduled job
 //   --include-cached      fold every already-cached match into the merged pool,
 //                         so prior regions/runs join without being re-fetched
-//   --mode <sr|aram>      which mode to aggregate (default sr); aram ingests
-//                         queue 450 into a separate per-champion builds file
+//   --mode <sr|aram|arena> which mode to aggregate (default sr); aram/arena
+//                         ingest queue 450/1700 into a separate per-champion
+//                         builds file each (both roleless)
 //   --replace             overwrite the output outright. Default is to MERGE:
 //                         this run's builds refresh the champ/roles it observed
 //                         and any others are carried over from the previous file
@@ -64,9 +65,10 @@ const MODE = (args.mode ?? 'sr').toLowerCase()
 const MODE_CFG = {
   sr: { queue: 420, map: 11, roleless: false, buildMode: 'SR', file: 'src/data/aggregatedBuilds.json' },
   aram: { queue: 450, map: 12, roleless: true, buildMode: 'ARAM', file: 'src/data/aggregatedBuildsAram.json' },
+  arena: { queue: 1700, map: 30, roleless: true, buildMode: 'ARENA', file: 'src/data/aggregatedBuildsArena.json' },
 }[MODE]
 if (!MODE_CFG) {
-  console.error(`Unknown --mode "${MODE}" (expected sr or aram)`)
+  console.error(`Unknown --mode "${MODE}" (expected sr, aram, or arena)`)
   process.exit(1)
 }
 const OUT = args.out ? resolve(args.out) : join(ROOT, MODE_CFG.file)
@@ -192,7 +194,22 @@ const isBoots = (it) => it?.tags?.includes('Boots') ?? false
 const isTrinket = (it) => it?.tags?.includes('Trinket') ?? false
 const isConsumable = (it) => it?.tags?.includes('Consumable') ?? false
 const isCompleted = (it) => Boolean(it?.gold?.purchasable) && (!it.into || it.into.length === 0)
-function isLegendary(it) {
+
+// Arena (mapId 30) remaps every real item to '22' + its base id (e.g. Infinity
+// Edge 3031 → 223031) and also carries ~13 synthetic shop-slot placeholders in
+// the same numeric range (Legendary Fighter/Marksman/Assassin/Mage/Tank/Support
+// "generic slot" items, Stat Bonus, Prismatic Item, reroll/anvil vouchers,
+// Poro-Snax) that would otherwise pass every other isLegendary check and
+// pollute coreItems. Kept in sync with src/lib/arenaItems.ts's isRealArenaItem.
+function isRealArenaItem(id, items) {
+  const str = String(id)
+  if (!str.startsWith('22')) return false
+  const baseId = str.slice(2)
+  return baseId.length > 0 && baseId in items
+}
+
+function isLegendary(itemId, it, items) {
+  if (MODE_CFG.map === 30 && !isRealArenaItem(itemId, items)) return false
   return (
     isCompleted(it) &&
     !isBoots(it) &&
@@ -273,6 +290,12 @@ export function observeMatch(match, timeline, statik) {
   if (info.queueId !== QUEUE || info.mapId !== MODE_CFG.map) return []
   const patch = info.gameVersion.split('.').slice(0, 2).join('.')
   const idOf = (name) => statik.champByLower[name.toLowerCase()] ?? name
+  // Arena is 8 teams of 2 (playerSubteamId, not the 2-team teamId split below),
+  // and each participant only ever faces one rotating round opponent rather
+  // than a fixed 5-man "enemy team" — enemyConditions (a 5-a-side team-comp
+  // read) doesn't have a meaningful equivalent here, so it's skipped entirely
+  // for Arena rather than guessing at a re-derivation. See the "out of scope"
+  // note in the Arena plan for the real opponent-aware follow-up.
   const teams = { 100: [], 200: [] }
   for (const p of info.participants) teams[p.teamId]?.push(idOf(p.championName))
 
@@ -281,7 +304,7 @@ export function observeMatch(match, timeline, statik) {
     // ARAM has no lane assignments — every participant is a per-champion sample.
     const role = MODE_CFG.roleless ? null : ROLE_MAP[p.teamPosition]
     if (!MODE_CFG.roleless && !role) continue
-    const enemies = teams[p.teamId === 100 ? 200 : 100]
+    const enemies = MODE_CFG.map === 30 ? [] : teams[p.teamId === 100 ? 200 : 100]
     const buys = purchasesFor(timeline, p.participantId)
     const starters = []
     const core = []
@@ -295,7 +318,7 @@ export function observeMatch(match, timeline, statik) {
       // cost, not completion, and keep the first substantive boots (the choice
       // that matters), skipping basic Boots (300g).
       if (isBoots(it) && it.gold.total >= 600 && boots == null) boots = b.itemId
-      if (isLegendary(it) && !seen.has(b.itemId)) {
+      if (isLegendary(b.itemId, it, statik.items) && !seen.has(b.itemId)) {
         seen.add(b.itemId)
         core.push(b.itemId)
       }
@@ -396,6 +419,11 @@ function aggregateCore(group) {
 
 const JUNGLE_PETS = [1101, 1102, 1103] // Scorchclaw / Gustwalker / Mosstomper
 
+// The 90s cutoff in observeMatch (below) that feeds this is an SR/ARAM
+// laning-phase assumption — Arena has no laning phase; it's round 1's short
+// shop window instead. The mechanism still runs unchanged for Arena (it just
+// captures "round 1 buys" rather than a true starter concept); left as-is
+// rather than redefining Arena's round structure in this pass.
 function aggregateStarters(group) {
   const key = modal(group.map((o) => [...o.starters].sort((a, b) => a - b).join(',')))
   const starters = key ? key.split(',').filter(Boolean).map(Number) : []
