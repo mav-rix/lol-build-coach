@@ -492,6 +492,16 @@ function observationArchetype(o, items) {
     if (isAd) ad++
     if (isTank) tank++
   }
+  // Genuine bruiser/hybrid builds (Volibear, Sett, Gwen …) mix a damage stat
+  // with real defensive itemization rather than leaning all the way into
+  // either — previously that read as a tie and silently fell through to
+  // "ad" no matter which side actually won, mislabeling e.g. a build with
+  // AP=2/AD=2/Tank=2 as pure AD. Treat "tank within 1 item of the leading
+  // damage stat" as its own bucket instead of a false tie-break.
+  const damage = Math.max(ap, ad)
+  if (tank > 0 && damage > 0 && Math.abs(tank - damage) <= 1) {
+    return ad >= ap ? 'bruiser' : 'hybrid'
+  }
   if (tank > ap && tank > ad) return 'tank'
   if (ap > ad) return 'ap'
   if (ad > 0) return 'ad'

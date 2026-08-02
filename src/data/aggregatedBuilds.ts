@@ -10,10 +10,10 @@ import type { BuildPath, GameMode, Role } from '@/types/app'
 // The dataset is large (hundreds of KB), so it's a **dynamic import** split into
 // its own chunk and pulled in on first use rather than shipped in the initial
 // bundle. loadAggregatedBuilds() populates the module cache that the synchronous
-// findAggregatedBuild() reads; components/hooks that depend on it call the
+// findAggregatedVariants() reads; components/hooks that depend on it call the
 // useAggregatedBuilds() hook so the chunk loads and they re-render when it's
-// ready. Until it resolves, findAggregatedBuild() returns null and callers fall
-// back to a seed or the scoring engine.
+// ready. Until it resolves, findAggregatedVariants() returns [] and callers
+// fall back to a seed or the scoring engine.
 
 // Below this many observations we don't trust an aggregated build at all — it
 // won't even stand in for the scoring engine. Start low for small ingests; raise
@@ -31,7 +31,7 @@ let pending: Promise<BuildPath[]> | null = null
 /**
  * Lazily fetch the aggregated-builds chunks (memoized). SR, ARAM, and Arena
  * datasets are separate files (ARAM/Arena are per-champion, roleless) merged
- * into one cache; findAggregatedBuild filters by mode.
+ * into one cache; findAggregatedVariants filters by mode.
  */
 export function loadAggregatedBuilds(): Promise<BuildPath[]> {
   if (!pending) {
@@ -61,19 +61,6 @@ export function aggregatedChampionIds(mode: GameMode): Set<string> {
     if (b.mode === mode && (b.sampleSize ?? 0) >= MIN_AGGREGATED_SAMPLE) ids.add(b.championId)
   }
   return ids
-}
-
-/**
- * The aggregated build for a champion in a mode, or null if none clears the
- * sample floor (or the dataset hasn't loaded yet). ARAM is roleless — one build
- * per champion. For SR, a role selects; with no role, the most-played build.
- */
-export function findAggregatedBuild(
-  championId: string,
-  role: Role | null | undefined,
-  mode: GameMode,
-): BuildPath | null {
-  return findAggregatedVariants(championId, role, mode)[0] ?? null
 }
 
 /**
