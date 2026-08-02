@@ -4,7 +4,7 @@
   "version": "1.5.1",
   "private": true,
   "description": "Build recommendations, live game overlay, and augment tier lists for League of Legends. Read-only companion — never touches the game process.",
-  "author": "Eric Tameilau",
+  "author": "mav-rix",
   "license": "MIT",
   "main": "main.js",
   "scripts": {
