@@ -3,16 +3,22 @@
 // src/data/augmentStats.json — a global tier list the app shows as reference.
 // The Live Client API doesn't expose which augments are being offered, so this
 // is a static "strongest augments" list, not a live pick helper. Arena is the
-// only queue whose Match-V5 payload carries augments; the metadata file
-// (augments.json, see fetch-augments.mjs) is pre-filtered to the official ARAM
-// Mayhem pool, so the metaIds guard below also scopes these stats to Mayhem.
+// only queue whose Match-V5 payload carries augments; by default the metadata
+// file (augments.json, see fetch-augments.mjs — pre-filtered to the official
+// ARAM Mayhem pool) scopes these stats to Mayhem via the metaIds guard below.
 //
 //   RIOT_API_KEY=... node scripts/aggregate-augments.mjs --region na1 --matches 500
 //
+// Run again with --meta src/data/augmentsArena.json --out
+// src/data/augmentStatsArena.json --champ-out src/data/augmentChampStatsArena.json
+// to tally the SAME cached matches against the full Arena pool instead (no
+// re-fetch needed — pass --cached-only too since the match cache is shared).
+//
 // Flags: --region, --matches, --per-player, --min-games, --champ-min-games,
-// --top-per-champ, --out, --cached-only (re-tally the disk cache, zero API
-// calls — for threshold/ranking changes). Match cache is shared with
-// aggregate-builds.mjs under .cache/riot.
+// --top-per-champ, --meta, --out, --champ-out, --cached-only (re-tally the
+// disk cache, zero API calls — for threshold/ranking changes, or to switch
+// which pool an existing cache gets tallied against). Match cache is shared
+// with aggregate-builds.mjs under .cache/riot.
 //   --replace   overwrite the outputs. Default MERGES with the previous files so
 //               a thin run refreshes what it sampled and carries over augments /
 //               champions it didn't see, instead of silently dropping coverage.
@@ -41,12 +47,18 @@ const MIN_GAMES = Number(args['min-games'] ?? 50)
 const CHAMP_MIN_GAMES = Number(args['champ-min-games'] ?? 8) // per (champion, augment) pair
 const TOP_PER_CHAMP = Number(args['top-per-champ'] ?? 8)
 const OUT = args.out ? resolve(args.out) : join(ROOT, 'src/data/augmentStats.json')
+const CHAMP_OUT = args['champ-out']
+  ? resolve(args['champ-out'])
+  : join(ROOT, 'src/data/augmentChampStats.json')
+const META_PATH = args.meta ? resolve(args.meta) : join(ROOT, 'src/data/augments.json')
 
 // Only keep augments we have metadata for (run `npm run augments:meta` first) —
 // drops stat-anvils/reroll pseudo-augments and anything renamed out of the set.
+// Defaults to the Mayhem-intersected pool; pass --meta augmentsArena.json to
+// scope against the full Arena pool instead.
 let metaIds = null
 try {
-  metaIds = new Set(JSON.parse(readFileSync(join(ROOT, 'src/data/augments.json'), 'utf8')).map((a) => a.id))
+  metaIds = new Set(JSON.parse(readFileSync(META_PATH, 'utf8')).map((a) => a.id))
 } catch {
   // no metadata yet — emit everything and let the UI filter
 }
@@ -229,7 +241,7 @@ async function main() {
   writeFileSync(OUT, JSON.stringify(mergedStats, null, 2) + '\n')
   console.log(
     `\n✓ Wrote ${mergedStats.length} augments (${usedMatches} Arena matches` +
-      `${REPLACE ? ', --replace' : `, ${statsRetained} retained`}) → ${args.out ?? 'src/data/augmentStats.json'}`,
+      `${REPLACE ? ', --replace' : `, ${statsRetained} retained`}) → ${OUT}`,
   )
   if (mergedStats[0]) console.log(`  best avg placement: aug ${mergedStats[0].id} @ ${mergedStats[0].avgPlacement} (${mergedStats[0].firstRate}% firsts)`)
 
@@ -261,7 +273,7 @@ async function main() {
       .slice(0, TOP_PER_CHAMP)
       .map(({ _shrunk, ...row }) => row)
   }
-  const champOut = join(ROOT, 'src/data/augmentChampStats.json')
+  const champOut = CHAMP_OUT
   // Same safety merge, per champion: retain champions this run's sample missed,
   // keeping only their still-valid augment rows. --replace opts out.
   let champRetained = 0
@@ -284,7 +296,7 @@ async function main() {
   const covered = Object.keys(byChamp).length
   const pairs = Object.values(byChamp).reduce((n, l) => n + l.length, 0)
   const retainedNote = REPLACE ? ', --replace' : `, ${champRetained} champions retained`
-  console.log(`✓ Wrote per-champion stats: ${covered} champions, ${pairs} champ-augment pairs (min ${CHAMP_MIN_GAMES} games${retainedNote}) → src/data/augmentChampStats.json`)
+  console.log(`✓ Wrote per-champion stats: ${covered} champions, ${pairs} champ-augment pairs (min ${CHAMP_MIN_GAMES} games${retainedNote}) → ${champOut}`)
 }
 
 function parseArgs(argv) {

@@ -173,12 +173,15 @@ export function useLiveBuildState() {
     }
   }
 
+  // Arena has no fixed 5-man enemy team — the Live Client API's ORDER/CHAOS
+  // split just bisects the 16-player lobby arbitrarily, so "enemy" threat
+  // analysis would be meaningless (and actively misleading) there.
   const threats = useMemo(
     () =>
-      live && staticData
+      live && staticData && mode !== 'ARENA'
         ? analyzeThreats(live, self, staticData.items, staticData.championsById)
         : null,
-    [live, self, staticData],
+    [live, self, staticData, mode],
   )
 
   const gold = live?.activePlayer.currentGold ?? 0

@@ -1,0 +1,1360 @@
+[
+  {
+    "id": 321,
+    "games": 1530,
+    "avgPlacement": 3.69,
+    "firstRate": 18.1,
+    "pickRate": 0.7
+  },
+  {
+    "id": 335,
+    "games": 991,
+    "avgPlacement": 3.72,
+    "firstRate": 20.5,
+    "pickRate": 0.4
+  },
+  {
+    "id": 322,
+    "games": 3763,
+    "avgPlacement": 3.73,
+    "firstRate": 16.4,
+    "pickRate": 1.7
+  },
+  {
+    "id": 316,
+    "games": 1292,
+    "avgPlacement": 3.8,
+    "firstRate": 18.5,
+    "pickRate": 0.6
+  },
+  {
+    "id": 225,
+    "games": 7973,
+    "avgPlacement": 3.81,
+    "firstRate": 18.7,
+    "pickRate": 3.5
+  },
+  {
+    "id": 309,
+    "games": 1101,
+    "avgPlacement": 3.83,
+    "firstRate": 16.4,
+    "pickRate": 0.5
+  },
+  {
+    "id": 193,
+    "games": 3331,
+    "avgPlacement": 3.83,
+    "firstRate": 16.8,
+    "pickRate": 1.5
+  },
+  {
+    "id": 94,
+    "games": 2453,
+    "avgPlacement": 3.84,
+    "firstRate": 18.8,
+    "pickRate": 1.1
+  },
+  {
+    "id": 314,
+    "games": 137,
+    "avgPlacement": 3.85,
+    "firstRate": 20.4,
+    "pickRate": 0.1
+  },
+  {
+    "id": 180,
+    "games": 7126,
+    "avgPlacement": 3.87,
+    "firstRate": 16.3,
+    "pickRate": 3.2
+  },
+  {
+    "id": 120,
+    "games": 4201,
+    "avgPlacement": 3.87,
+    "firstRate": 16.3,
+    "pickRate": 1.9
+  },
+  {
+    "id": 77,
+    "games": 5350,
+    "avgPlacement": 3.89,
+    "firstRate": 16.4,
+    "pickRate": 2.4
+  },
+  {
+    "id": 175,
+    "games": 2572,
+    "avgPlacement": 3.9,
+    "firstRate": 16.1,
+    "pickRate": 1.1
+  },
+  {
+    "id": 98,
+    "games": 4275,
+    "avgPlacement": 3.9,
+    "firstRate": 16.5,
+    "pickRate": 1.9
+  },
+  {
+    "id": 63,
+    "games": 6491,
+    "avgPlacement": 3.9,
+    "firstRate": 16.5,
+    "pickRate": 2.9
+  },
+  {
+    "id": 241,
+    "games": 1548,
+    "avgPlacement": 3.91,
+    "firstRate": 16.7,
+    "pickRate": 0.7
+  },
+  {
+    "id": 20,
+    "games": 2472,
+    "avgPlacement": 3.91,
+    "firstRate": 16.9,
+    "pickRate": 1.1
+  },
+  {
+    "id": 134,
+    "games": 3312,
+    "avgPlacement": 3.91,
+    "firstRate": 16.5,
+    "pickRate": 1.5
+  },
+  {
+    "id": 223,
+    "games": 3519,
+    "avgPlacement": 3.91,
+    "firstRate": 15,
+    "pickRate": 1.6
+  },
+  {
+    "id": 301,
+    "games": 3321,
+    "avgPlacement": 3.91,
+    "firstRate": 17,
+    "pickRate": 1.5
+  },
+  {
+    "id": 310,
+    "games": 6096,
+    "avgPlacement": 3.91,
+    "firstRate": 17.3,
+    "pickRate": 2.7
+  },
+  {
+    "id": 92,
+    "games": 8825,
+    "avgPlacement": 3.92,
+    "firstRate": 16.3,
+    "pickRate": 3.9
+  },
+  {
+    "id": 231,
+    "games": 2823,
+    "avgPlacement": 3.92,
+    "firstRate": 16.5,
+    "pickRate": 1.3
+  },
+  {
+    "id": 49,
+    "games": 2303,
+    "avgPlacement": 3.92,
+    "firstRate": 17.2,
+    "pickRate": 1
+  },
+  {
+    "id": 125,
+    "games": 2754,
+    "avgPlacement": 3.92,
+    "firstRate": 16.9,
+    "pickRate": 1.2
+  },
+  {
+    "id": 80,
+    "games": 4232,
+    "avgPlacement": 3.93,
+    "firstRate": 16.1,
+    "pickRate": 1.9
+  },
+  {
+    "id": 36,
+    "games": 7367,
+    "avgPlacement": 3.94,
+    "firstRate": 15.4,
+    "pickRate": 3.3
+  },
+  {
+    "id": 118,
+    "games": 6146,
+    "avgPlacement": 3.94,
+    "firstRate": 16,
+    "pickRate": 2.7
+  },
+  {
+    "id": 116,
+    "games": 4366,
+    "avgPlacement": 3.94,
+    "firstRate": 15.3,
+    "pickRate": 1.9
+  },
+  {
+    "id": 47,
+    "games": 5224,
+    "avgPlacement": 3.94,
+    "firstRate": 15.3,
+    "pickRate": 2.3
+  },
+  {
+    "id": 311,
+    "games": 3877,
+    "avgPlacement": 3.94,
+    "firstRate": 15.9,
+    "pickRate": 1.7
+  },
+  {
+    "id": 23,
+    "games": 4033,
+    "avgPlacement": 3.94,
+    "firstRate": 16,
+    "pickRate": 1.8
+  },
+  {
+    "id": 312,
+    "games": 3549,
+    "avgPlacement": 3.94,
+    "firstRate": 15.3,
+    "pickRate": 1.6
+  },
+  {
+    "id": 220,
+    "games": 5000,
+    "avgPlacement": 3.95,
+    "firstRate": 17.1,
+    "pickRate": 2.2
+  },
+  {
+    "id": 211,
+    "games": 7599,
+    "avgPlacement": 3.95,
+    "firstRate": 14.8,
+    "pickRate": 3.4
+  },
+  {
+    "id": 33,
+    "games": 2387,
+    "avgPlacement": 3.95,
+    "firstRate": 17.1,
+    "pickRate": 1.1
+  },
+  {
+    "id": 5,
+    "games": 1864,
+    "avgPlacement": 3.96,
+    "firstRate": 17.8,
+    "pickRate": 0.8
+  },
+  {
+    "id": 74,
+    "games": 6486,
+    "avgPlacement": 3.96,
+    "firstRate": 14.5,
+    "pickRate": 2.9
+  },
+  {
+    "id": 35,
+    "games": 2359,
+    "avgPlacement": 3.96,
+    "firstRate": 16.6,
+    "pickRate": 1
+  },
+  {
+    "id": 45,
+    "games": 8622,
+    "avgPlacement": 3.98,
+    "firstRate": 14.2,
+    "pickRate": 3.8
+  },
+  {
+    "id": 200,
+    "games": 308,
+    "avgPlacement": 3.98,
+    "firstRate": 14.6,
+    "pickRate": 0.1
+  },
+  {
+    "id": 215,
+    "games": 4603,
+    "avgPlacement": 3.99,
+    "firstRate": 19.8,
+    "pickRate": 2
+  },
+  {
+    "id": 70,
+    "games": 2399,
+    "avgPlacement": 3.99,
+    "firstRate": 14.3,
+    "pickRate": 1.1
+  },
+  {
+    "id": 56,
+    "games": 4247,
+    "avgPlacement": 3.99,
+    "firstRate": 15.4,
+    "pickRate": 1.9
+  },
+  {
+    "id": 338,
+    "games": 307,
+    "avgPlacement": 3.99,
+    "firstRate": 15,
+    "pickRate": 0.1
+  },
+  {
+    "id": 51,
+    "games": 4084,
+    "avgPlacement": 4,
+    "firstRate": 15.5,
+    "pickRate": 1.8
+  },
+  {
+    "id": 319,
+    "games": 257,
+    "avgPlacement": 4,
+    "firstRate": 23,
+    "pickRate": 0.1
+  },
+  {
+    "id": 53,
+    "games": 2347,
+    "avgPlacement": 4.01,
+    "firstRate": 15.4,
+    "pickRate": 1
+  },
+  {
+    "id": 90,
+    "games": 3006,
+    "avgPlacement": 4.01,
+    "firstRate": 14.8,
+    "pickRate": 1.3
+  },
+  {
+    "id": 102,
+    "games": 2892,
+    "avgPlacement": 4.01,
+    "firstRate": 15.1,
+    "pickRate": 1.3
+  },
+  {
+    "id": 327,
+    "games": 238,
+    "avgPlacement": 4.01,
+    "firstRate": 14.7,
+    "pickRate": 0.1
+  },
+  {
+    "id": 62,
+    "games": 3788,
+    "avgPlacement": 4.02,
+    "firstRate": 16.8,
+    "pickRate": 1.7
+  },
+  {
+    "id": 238,
+    "games": 16381,
+    "avgPlacement": 4.02,
+    "firstRate": 15.7,
+    "pickRate": 7.3
+  },
+  {
+    "id": 21,
+    "games": 1733,
+    "avgPlacement": 4.02,
+    "firstRate": 13.6,
+    "pickRate": 0.8
+  },
+  {
+    "id": 2,
+    "games": 7918,
+    "avgPlacement": 4.02,
+    "firstRate": 16.3,
+    "pickRate": 3.5
+  },
+  {
+    "id": 308,
+    "games": 4218,
+    "avgPlacement": 4.02,
+    "firstRate": 15.8,
+    "pickRate": 1.9
+  },
+  {
+    "id": 239,
+    "games": 1053,
+    "avgPlacement": 4.02,
+    "firstRate": 16.8,
+    "pickRate": 0.5
+  },
+  {
+    "id": 52,
+    "games": 8513,
+    "avgPlacement": 4.03,
+    "firstRate": 15.5,
+    "pickRate": 3.8
+  },
+  {
+    "id": 195,
+    "games": 7882,
+    "avgPlacement": 4.03,
+    "firstRate": 14.3,
+    "pickRate": 3.5
+  },
+  {
+    "id": 67,
+    "games": 5125,
+    "avgPlacement": 4.03,
+    "firstRate": 14.7,
+    "pickRate": 2.3
+  },
+  {
+    "id": 96,
+    "games": 2990,
+    "avgPlacement": 4.03,
+    "firstRate": 18.2,
+    "pickRate": 1.3
+  },
+  {
+    "id": 54,
+    "games": 3414,
+    "avgPlacement": 4.03,
+    "firstRate": 15.3,
+    "pickRate": 1.5
+  },
+  {
+    "id": 218,
+    "games": 6482,
+    "avgPlacement": 4.03,
+    "firstRate": 20.6,
+    "pickRate": 2.9
+  },
+  {
+    "id": 198,
+    "games": 3065,
+    "avgPlacement": 4.03,
+    "firstRate": 13.5,
+    "pickRate": 1.4
+  },
+  {
+    "id": 78,
+    "games": 2996,
+    "avgPlacement": 4.04,
+    "firstRate": 15.3,
+    "pickRate": 1.3
+  },
+  {
+    "id": 84,
+    "games": 9504,
+    "avgPlacement": 4.04,
+    "firstRate": 15.5,
+    "pickRate": 4.2
+  },
+  {
+    "id": 12,
+    "games": 2003,
+    "avgPlacement": 4.04,
+    "firstRate": 15.2,
+    "pickRate": 0.9
+  },
+  {
+    "id": 7,
+    "games": 3499,
+    "avgPlacement": 4.04,
+    "firstRate": 15.1,
+    "pickRate": 1.6
+  },
+  {
+    "id": 76,
+    "games": 1945,
+    "avgPlacement": 4.05,
+    "firstRate": 14.4,
+    "pickRate": 0.9
+  },
+  {
+    "id": 17,
+    "games": 4173,
+    "avgPlacement": 4.05,
+    "firstRate": 19,
+    "pickRate": 1.9
+  },
+  {
+    "id": 28,
+    "games": 3351,
+    "avgPlacement": 4.06,
+    "firstRate": 16.1,
+    "pickRate": 1.5
+  },
+  {
+    "id": 138,
+    "games": 7643,
+    "avgPlacement": 4.06,
+    "firstRate": 15.2,
+    "pickRate": 3.4
+  },
+  {
+    "id": 104,
+    "games": 1081,
+    "avgPlacement": 4.06,
+    "firstRate": 14,
+    "pickRate": 0.5
+  },
+  {
+    "id": 82,
+    "games": 5882,
+    "avgPlacement": 4.07,
+    "firstRate": 14.7,
+    "pickRate": 2.6
+  },
+  {
+    "id": 48,
+    "games": 15424,
+    "avgPlacement": 4.07,
+    "firstRate": 15.3,
+    "pickRate": 6.8
+  },
+  {
+    "id": 194,
+    "games": 1693,
+    "avgPlacement": 4.07,
+    "firstRate": 15.5,
+    "pickRate": 0.8
+  },
+  {
+    "id": 227,
+    "games": 5049,
+    "avgPlacement": 4.07,
+    "firstRate": 17.1,
+    "pickRate": 2.2
+  },
+  {
+    "id": 16,
+    "games": 5792,
+    "avgPlacement": 4.08,
+    "firstRate": 13.8,
+    "pickRate": 2.6
+  },
+  {
+    "id": 129,
+    "games": 9577,
+    "avgPlacement": 4.08,
+    "firstRate": 13.8,
+    "pickRate": 4.3
+  },
+  {
+    "id": 79,
+    "games": 6691,
+    "avgPlacement": 4.08,
+    "firstRate": 13.9,
+    "pickRate": 3
+  },
+  {
+    "id": 75,
+    "games": 3016,
+    "avgPlacement": 4.08,
+    "firstRate": 15,
+    "pickRate": 1.3
+  },
+  {
+    "id": 26,
+    "games": 1734,
+    "avgPlacement": 4.08,
+    "firstRate": 15.5,
+    "pickRate": 0.8
+  },
+  {
+    "id": 29,
+    "games": 3247,
+    "avgPlacement": 4.09,
+    "firstRate": 15.7,
+    "pickRate": 1.4
+  },
+  {
+    "id": 50,
+    "games": 3043,
+    "avgPlacement": 4.09,
+    "firstRate": 13.2,
+    "pickRate": 1.4
+  },
+  {
+    "id": 181,
+    "games": 5907,
+    "avgPlacement": 4.09,
+    "firstRate": 15.5,
+    "pickRate": 2.6
+  },
+  {
+    "id": 34,
+    "games": 3068,
+    "avgPlacement": 4.09,
+    "firstRate": 14.2,
+    "pickRate": 1.4
+  },
+  {
+    "id": 112,
+    "games": 1955,
+    "avgPlacement": 4.09,
+    "firstRate": 14.9,
+    "pickRate": 0.9
+  },
+  {
+    "id": 9,
+    "games": 2723,
+    "avgPlacement": 4.09,
+    "firstRate": 13.9,
+    "pickRate": 1.2
+  },
+  {
+    "id": 345,
+    "games": 806,
+    "avgPlacement": 4.09,
+    "firstRate": 15.3,
+    "pickRate": 0.4
+  },
+  {
+    "id": 133,
+    "games": 8601,
+    "avgPlacement": 4.1,
+    "firstRate": 12.9,
+    "pickRate": 3.8
+  },
+  {
+    "id": 11,
+    "games": 1869,
+    "avgPlacement": 4.1,
+    "firstRate": 14.1,
+    "pickRate": 0.8
+  },
+  {
+    "id": 72,
+    "games": 1959,
+    "avgPlacement": 4.11,
+    "firstRate": 12.7,
+    "pickRate": 0.9
+  },
+  {
+    "id": 141,
+    "games": 2089,
+    "avgPlacement": 4.11,
+    "firstRate": 14.6,
+    "pickRate": 0.9
+  },
+  {
+    "id": 110,
+    "games": 2541,
+    "avgPlacement": 4.11,
+    "firstRate": 14,
+    "pickRate": 1.1
+  },
+  {
+    "id": 243,
+    "games": 3621,
+    "avgPlacement": 4.11,
+    "firstRate": 13.7,
+    "pickRate": 1.6
+  },
+  {
+    "id": 107,
+    "games": 6569,
+    "avgPlacement": 4.12,
+    "firstRate": 14.4,
+    "pickRate": 2.9
+  },
+  {
+    "id": 89,
+    "games": 2403,
+    "avgPlacement": 4.12,
+    "firstRate": 13.7,
+    "pickRate": 1.1
+  },
+  {
+    "id": 4,
+    "games": 1822,
+    "avgPlacement": 4.12,
+    "firstRate": 15.5,
+    "pickRate": 0.8
+  },
+  {
+    "id": 151,
+    "games": 5526,
+    "avgPlacement": 4.13,
+    "firstRate": 13.8,
+    "pickRate": 2.5
+  },
+  {
+    "id": 41,
+    "games": 10363,
+    "avgPlacement": 4.13,
+    "firstRate": 15.2,
+    "pickRate": 4.6
+  },
+  {
+    "id": 24,
+    "games": 1948,
+    "avgPlacement": 4.13,
+    "firstRate": 12.5,
+    "pickRate": 0.9
+  },
+  {
+    "id": 174,
+    "games": 1774,
+    "avgPlacement": 4.13,
+    "firstRate": 13.4,
+    "pickRate": 0.8
+  },
+  {
+    "id": 356,
+    "games": 84,
+    "avgPlacement": 4.13,
+    "firstRate": 19,
+    "pickRate": 0
+  },
+  {
+    "id": 103,
+    "games": 6699,
+    "avgPlacement": 4.14,
+    "firstRate": 13.5,
+    "pickRate": 3
+  },
+  {
+    "id": 60,
+    "games": 4215,
+    "avgPlacement": 4.14,
+    "firstRate": 14.4,
+    "pickRate": 1.9
+  },
+  {
+    "id": 135,
+    "games": 3592,
+    "avgPlacement": 4.14,
+    "firstRate": 12.2,
+    "pickRate": 1.6
+  },
+  {
+    "id": 206,
+    "games": 5552,
+    "avgPlacement": 4.14,
+    "firstRate": 16,
+    "pickRate": 2.5
+  },
+  {
+    "id": 240,
+    "games": 949,
+    "avgPlacement": 4.14,
+    "firstRate": 15.4,
+    "pickRate": 0.4
+  },
+  {
+    "id": 357,
+    "games": 2323,
+    "avgPlacement": 4.14,
+    "firstRate": 14.4,
+    "pickRate": 1
+  },
+  {
+    "id": 109,
+    "games": 1309,
+    "avgPlacement": 4.15,
+    "firstRate": 14,
+    "pickRate": 0.6
+  },
+  {
+    "id": 221,
+    "games": 2011,
+    "avgPlacement": 4.15,
+    "firstRate": 12.9,
+    "pickRate": 0.9
+  },
+  {
+    "id": 68,
+    "games": 4766,
+    "avgPlacement": 4.16,
+    "firstRate": 13.5,
+    "pickRate": 2.1
+  },
+  {
+    "id": 208,
+    "games": 2224,
+    "avgPlacement": 4.16,
+    "firstRate": 12.8,
+    "pickRate": 1
+  },
+  {
+    "id": 177,
+    "games": 1212,
+    "avgPlacement": 4.16,
+    "firstRate": 15,
+    "pickRate": 0.5
+  },
+  {
+    "id": 222,
+    "games": 2930,
+    "avgPlacement": 4.16,
+    "firstRate": 14.4,
+    "pickRate": 1.3
+  },
+  {
+    "id": 27,
+    "games": 2734,
+    "avgPlacement": 4.17,
+    "firstRate": 13.9,
+    "pickRate": 1.2
+  },
+  {
+    "id": 22,
+    "games": 6477,
+    "avgPlacement": 4.17,
+    "firstRate": 14.5,
+    "pickRate": 2.9
+  },
+  {
+    "id": 97,
+    "games": 7943,
+    "avgPlacement": 4.17,
+    "firstRate": 13.1,
+    "pickRate": 3.5
+  },
+  {
+    "id": 85,
+    "games": 2650,
+    "avgPlacement": 4.17,
+    "firstRate": 13.8,
+    "pickRate": 1.2
+  },
+  {
+    "id": 73,
+    "games": 4053,
+    "avgPlacement": 4.17,
+    "firstRate": 13.9,
+    "pickRate": 1.8
+  },
+  {
+    "id": 105,
+    "games": 2339,
+    "avgPlacement": 4.17,
+    "firstRate": 14.2,
+    "pickRate": 1
+  },
+  {
+    "id": 58,
+    "games": 6812,
+    "avgPlacement": 4.18,
+    "firstRate": 14.7,
+    "pickRate": 3
+  },
+  {
+    "id": 234,
+    "games": 6127,
+    "avgPlacement": 4.18,
+    "firstRate": 18,
+    "pickRate": 2.7
+  },
+  {
+    "id": 37,
+    "games": 2977,
+    "avgPlacement": 4.18,
+    "firstRate": 13.1,
+    "pickRate": 1.3
+  },
+  {
+    "id": 251,
+    "games": 3759,
+    "avgPlacement": 4.18,
+    "firstRate": 13.3,
+    "pickRate": 1.7
+  },
+  {
+    "id": 150,
+    "games": 5160,
+    "avgPlacement": 4.19,
+    "firstRate": 13.5,
+    "pickRate": 2.3
+  },
+  {
+    "id": 32,
+    "games": 6257,
+    "avgPlacement": 4.19,
+    "firstRate": 13.2,
+    "pickRate": 2.8
+  },
+  {
+    "id": 64,
+    "games": 5018,
+    "avgPlacement": 4.2,
+    "firstRate": 12.6,
+    "pickRate": 2.2
+  },
+  {
+    "id": 18,
+    "games": 4439,
+    "avgPlacement": 4.2,
+    "firstRate": 14.5,
+    "pickRate": 2
+  },
+  {
+    "id": 172,
+    "games": 2427,
+    "avgPlacement": 4.2,
+    "firstRate": 12.2,
+    "pickRate": 1.1
+  },
+  {
+    "id": 42,
+    "games": 2749,
+    "avgPlacement": 4.2,
+    "firstRate": 13.8,
+    "pickRate": 1.2
+  },
+  {
+    "id": 123,
+    "games": 1849,
+    "avgPlacement": 4.2,
+    "firstRate": 13.3,
+    "pickRate": 0.8
+  },
+  {
+    "id": 61,
+    "games": 2043,
+    "avgPlacement": 4.2,
+    "firstRate": 13.2,
+    "pickRate": 0.9
+  },
+  {
+    "id": 30,
+    "games": 7247,
+    "avgPlacement": 4.21,
+    "firstRate": 14.2,
+    "pickRate": 3.2
+  },
+  {
+    "id": 46,
+    "games": 5826,
+    "avgPlacement": 4.21,
+    "firstRate": 13,
+    "pickRate": 2.6
+  },
+  {
+    "id": 13,
+    "games": 5095,
+    "avgPlacement": 4.21,
+    "firstRate": 14.3,
+    "pickRate": 2.3
+  },
+  {
+    "id": 205,
+    "games": 7752,
+    "avgPlacement": 4.21,
+    "firstRate": 14.2,
+    "pickRate": 3.4
+  },
+  {
+    "id": 214,
+    "games": 1037,
+    "avgPlacement": 4.21,
+    "firstRate": 14,
+    "pickRate": 0.5
+  },
+  {
+    "id": 81,
+    "games": 5792,
+    "avgPlacement": 4.22,
+    "firstRate": 13.4,
+    "pickRate": 2.6
+  },
+  {
+    "id": 149,
+    "games": 3321,
+    "avgPlacement": 4.22,
+    "firstRate": 14.2,
+    "pickRate": 1.5
+  },
+  {
+    "id": 39,
+    "games": 3249,
+    "avgPlacement": 4.22,
+    "firstRate": 13.4,
+    "pickRate": 1.4
+  },
+  {
+    "id": 232,
+    "games": 2468,
+    "avgPlacement": 4.22,
+    "firstRate": 15,
+    "pickRate": 1.1
+  },
+  {
+    "id": 1,
+    "games": 3741,
+    "avgPlacement": 4.23,
+    "firstRate": 12.6,
+    "pickRate": 1.7
+  },
+  {
+    "id": 236,
+    "games": 616,
+    "avgPlacement": 4.23,
+    "firstRate": 11,
+    "pickRate": 0.3
+  },
+  {
+    "id": 305,
+    "games": 5017,
+    "avgPlacement": 4.24,
+    "firstRate": 13.1,
+    "pickRate": 2.2
+  },
+  {
+    "id": 15,
+    "games": 2191,
+    "avgPlacement": 4.25,
+    "firstRate": 13.6,
+    "pickRate": 1
+  },
+  {
+    "id": 6,
+    "games": 2911,
+    "avgPlacement": 4.25,
+    "firstRate": 13.6,
+    "pickRate": 1.3
+  },
+  {
+    "id": 136,
+    "games": 4888,
+    "avgPlacement": 4.25,
+    "firstRate": 12.3,
+    "pickRate": 2.2
+  },
+  {
+    "id": 86,
+    "games": 3550,
+    "avgPlacement": 4.25,
+    "firstRate": 11.3,
+    "pickRate": 1.6
+  },
+  {
+    "id": 69,
+    "games": 1939,
+    "avgPlacement": 4.26,
+    "firstRate": 13.2,
+    "pickRate": 0.9
+  },
+  {
+    "id": 165,
+    "games": 1708,
+    "avgPlacement": 4.27,
+    "firstRate": 13,
+    "pickRate": 0.8
+  },
+  {
+    "id": 313,
+    "games": 6913,
+    "avgPlacement": 4.27,
+    "firstRate": 16.8,
+    "pickRate": 3.1
+  },
+  {
+    "id": 25,
+    "games": 1796,
+    "avgPlacement": 4.28,
+    "firstRate": 13.5,
+    "pickRate": 0.8
+  },
+  {
+    "id": 19,
+    "games": 4637,
+    "avgPlacement": 4.29,
+    "firstRate": 12,
+    "pickRate": 2.1
+  },
+  {
+    "id": 108,
+    "games": 2228,
+    "avgPlacement": 4.29,
+    "firstRate": 13.6,
+    "pickRate": 1
+  },
+  {
+    "id": 66,
+    "games": 2716,
+    "avgPlacement": 4.29,
+    "firstRate": 13.1,
+    "pickRate": 1.2
+  },
+  {
+    "id": 57,
+    "games": 3084,
+    "avgPlacement": 4.29,
+    "firstRate": 14.9,
+    "pickRate": 1.4
+  },
+  {
+    "id": 87,
+    "games": 3991,
+    "avgPlacement": 4.31,
+    "firstRate": 12.4,
+    "pickRate": 1.8
+  },
+  {
+    "id": 44,
+    "games": 3836,
+    "avgPlacement": 4.31,
+    "firstRate": 11.9,
+    "pickRate": 1.7
+  },
+  {
+    "id": 237,
+    "games": 8102,
+    "avgPlacement": 4.32,
+    "firstRate": 12.4,
+    "pickRate": 3.6
+  },
+  {
+    "id": 171,
+    "games": 3910,
+    "avgPlacement": 4.33,
+    "firstRate": 14.9,
+    "pickRate": 1.7
+  },
+  {
+    "id": 10,
+    "games": 556,
+    "avgPlacement": 4.35,
+    "firstRate": 11.3,
+    "pickRate": 0.2
+  },
+  {
+    "id": 207,
+    "games": 1354,
+    "avgPlacement": 4.36,
+    "firstRate": 13.5,
+    "pickRate": 0.6
+  },
+  {
+    "id": 323,
+    "games": 2346,
+    "avgPlacement": 4.36,
+    "firstRate": 11.7,
+    "pickRate": 1
+  },
+  {
+    "id": 88,
+    "games": 2406,
+    "avgPlacement": 4.37,
+    "firstRate": 11.9,
+    "pickRate": 1.1
+  },
+  {
+    "id": 219,
+    "games": 8988,
+    "avgPlacement": 4.37,
+    "firstRate": 15.7,
+    "pickRate": 4
+  },
+  {
+    "id": 156,
+    "games": 5780,
+    "avgPlacement": 4.37,
+    "firstRate": 13.2,
+    "pickRate": 2.6
+  },
+  {
+    "id": 115,
+    "games": 4501,
+    "avgPlacement": 4.38,
+    "firstRate": 11.5,
+    "pickRate": 2
+  },
+  {
+    "id": 343,
+    "games": 1045,
+    "avgPlacement": 4.38,
+    "firstRate": 14,
+    "pickRate": 0.5
+  },
+  {
+    "id": 14,
+    "games": 1494,
+    "avgPlacement": 4.39,
+    "firstRate": 13.6,
+    "pickRate": 0.7
+  },
+  {
+    "id": 38,
+    "games": 4815,
+    "avgPlacement": 4.39,
+    "firstRate": 13.8,
+    "pickRate": 2.1
+  },
+  {
+    "id": 204,
+    "games": 649,
+    "avgPlacement": 4.4,
+    "firstRate": 17.1,
+    "pickRate": 0.3
+  },
+  {
+    "id": 192,
+    "games": 1714,
+    "avgPlacement": 4.41,
+    "firstRate": 12.4,
+    "pickRate": 0.8
+  },
+  {
+    "id": 226,
+    "games": 2984,
+    "avgPlacement": 4.41,
+    "firstRate": 13.8,
+    "pickRate": 1.3
+  },
+  {
+    "id": 217,
+    "games": 6645,
+    "avgPlacement": 4.41,
+    "firstRate": 14.2,
+    "pickRate": 3
+  },
+  {
+    "id": 228,
+    "games": 3009,
+    "avgPlacement": 4.42,
+    "firstRate": 13.6,
+    "pickRate": 1.3
+  },
+  {
+    "id": 93,
+    "games": 1758,
+    "avgPlacement": 4.42,
+    "firstRate": 11.2,
+    "pickRate": 0.8
+  },
+  {
+    "id": 154,
+    "games": 4826,
+    "avgPlacement": 4.46,
+    "firstRate": 14.8,
+    "pickRate": 2.1
+  },
+  {
+    "id": 404,
+    "games": 77,
+    "avgPlacement": 4.48,
+    "firstRate": 13,
+    "pickRate": 0
+  },
+  {
+    "id": 65,
+    "games": 8138,
+    "avgPlacement": 4.49,
+    "firstRate": 12.6,
+    "pickRate": 3.6
+  },
+  {
+    "id": 233,
+    "games": 2217,
+    "avgPlacement": 4.5,
+    "firstRate": 10.3,
+    "pickRate": 1
+  },
+  {
+    "id": 113,
+    "games": 2534,
+    "avgPlacement": 4.5,
+    "firstRate": 10,
+    "pickRate": 1.1
+  },
+  {
+    "id": 216,
+    "games": 7345,
+    "avgPlacement": 4.52,
+    "firstRate": 14.7,
+    "pickRate": 3.3
+  },
+  {
+    "id": 330,
+    "games": 784,
+    "avgPlacement": 4.57,
+    "firstRate": 13.9,
+    "pickRate": 0.3
+  },
+  {
+    "id": 336,
+    "games": 1683,
+    "avgPlacement": 4.58,
+    "firstRate": 8.3,
+    "pickRate": 0.7
+  },
+  {
+    "id": 43,
+    "games": 551,
+    "avgPlacement": 4.6,
+    "firstRate": 8.9,
+    "pickRate": 0.2
+  },
+  {
+    "id": 229,
+    "games": 621,
+    "avgPlacement": 4.61,
+    "firstRate": 11.3,
+    "pickRate": 0.3
+  },
+  {
+    "id": 318,
+    "games": 858,
+    "avgPlacement": 4.62,
+    "firstRate": 15.6,
+    "pickRate": 0.4
+  },
+  {
+    "id": 344,
+    "games": 905,
+    "avgPlacement": 4.63,
+    "firstRate": 8.2,
+    "pickRate": 0.4
+  },
+  {
+    "id": 152,
+    "games": 5905,
+    "avgPlacement": 4.77,
+    "firstRate": 13.6,
+    "pickRate": 2.6
+  },
+  {
+    "id": 333,
+    "games": 1404,
+    "avgPlacement": 4.8,
+    "firstRate": 10.8,
+    "pickRate": 0.6
+  },
+  {
+    "id": 324,
+    "games": 2409,
+    "avgPlacement": 4.94,
+    "firstRate": 10.6,
+    "pickRate": 1.1
+  },
+  {
+    "id": 224,
+    "games": 1642,
+    "avgPlacement": 5,
+    "firstRate": 12.8,
+    "pickRate": 0.7
+  },
+  {
+    "id": 304,
+    "games": 2539,
+    "avgPlacement": 7.48,
+    "firstRate": 0,
+    "pickRate": 1.1
+  }
+]

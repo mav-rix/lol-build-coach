@@ -1,21 +1,31 @@
 #!/usr/bin/env node
-// Build src/data/augments.json — the augment metadata the app bundles — from
-// two sources, intersected:
+// Build the augment metadata the app bundles, from two sources:
 //
 //  1. Community Dragon's arena file (Riot's own data, mirrored): ids, icons,
-//     descriptions. The numeric `id` matches Match-V5's playerAugmentN fields,
-//     so the win-rate aggregator joins to this. Augments aren't in Data Dragon,
-//     so this is the only id/icon source.
+//     descriptions, and Arena's own rarity (0/1/2 = silver/gold/prismatic; 4 =
+//     utility pseudo-augments — stat anvils, rerolls — not a real pick tier).
+//     The numeric `id` matches Match-V5's playerAugmentN fields, so the
+//     win-rate aggregator joins to this. Augments aren't in Data Dragon, so
+//     this is the only id/icon source.
 //  2. The official League wiki's MayhemAugmentData module: the CURRENT ARAM
 //     Mayhem augment pool with Mayhem-specific tiers. Arena and Mayhem pools
 //     diverged in season 2026 — the arena file carries plenty of augments that
 //     aren't offered in Mayhem (and Mayhem-only augments that have no arena
 //     id yet, which we can't show stats for anyway).
 //
-// Keeping only the intersection is what stops retired/Arena-only augments from
-// showing up as Mayhem goals. Tier comes from the wiki (the Mayhem tuning);
-// wiki-disabled augments are dropped. Also writes src/data/patch.json with the
-// League display patch the data was generated on. Re-run each patch.
+// Writes two metadata files from the same CDragon fetch:
+//   - src/data/augments.json      Mayhem pool only (CDragon ∩ wiki, wiki's
+//                                  tier) — what the Mayhem overlay's vision
+//                                  matcher and badges key off. Retired/
+//                                  Arena-only augments must NOT leak in here.
+//   - src/data/augmentsArena.json Full real Arena pool (every CDragon augment
+//                                  with rarity 0/1/2), Arena's own rarity, no
+//                                  wiki dependency. Feeds Arena-scoped features
+//                                  (pre-game Top Augments panel) that want the
+//                                  complete picture, not just Mayhem's subset.
+//
+// Also writes src/data/patch.json with the League display patch the data was
+// generated on. Re-run each patch.
 //
 //   node scripts/fetch-augments.mjs
 
@@ -89,6 +99,24 @@ console.log(`Wrote ${augments.length} augments → src/data/augments.json`, byRa
 console.log(
   `Mayhem pool: ${mayhem.size} on the wiki; ${unmatched.length} have no arena id (Mayhem-only — no Match-V5 stats possible, not bundled)`,
 )
+
+// Full Arena pool: every real pickable augment (rarity 0/1/2), Arena's own
+// rarity — independent of the wiki/Mayhem intersection above.
+const ARENA_RARITY = { 0: 'silver', 1: 'gold', 2: 'prismatic' }
+const arenaAugments = data.augments
+  .filter((a) => a.id && a.name && a.iconLarge && a.name !== 'Null Augment' && a.rarity in ARENA_RARITY)
+  .map((a) => ({
+    id: a.id,
+    name: a.name,
+    rarity: ARENA_RARITY[a.rarity],
+    desc: clean(a.desc),
+    icon: `${CDRAGON}/game/${a.iconLarge.toLowerCase()}`,
+  }))
+  .sort((a, b) => a.id - b.id)
+writeFileSync(join(ROOT, 'src/data/augmentsArena.json'), JSON.stringify(arenaAugments, null, 2) + '\n')
+const arenaByRarity = {}
+for (const a of arenaAugments) arenaByRarity[a.rarity] = (arenaByRarity[a.rarity] ?? 0) + 1
+console.log(`Wrote ${arenaAugments.length} augments → src/data/augmentsArena.json`, arenaByRarity)
 
 // League's displayed patch (e.g. "26.13") for the UI: Community Dragon reports
 // the internal version ("16.13.…"); since the 2025 season renumbering, the

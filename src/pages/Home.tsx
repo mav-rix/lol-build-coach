@@ -4,6 +4,7 @@ import { ChampionSelect } from '@/components/ChampionSelect'
 import { BuildPathDisplay } from '@/components/BuildPathDisplay'
 import { CounterPicks } from '@/components/CounterPicks'
 import { ImportBuildButton } from '@/components/ImportBuildButton'
+import { TopAugments } from '@/components/TopAugments'
 import { RankedDraft } from '@/components/RankedDraft'
 import { useAggregatedBuilds } from '@/hooks/useAggregatedBuilds'
 import { useStaticData } from '@/hooks/useStaticData'
@@ -313,6 +314,10 @@ export default function Home() {
             }}
           />
         </div>
+      )}
+
+      {selectedMode === 'ARENA' && selectedChampion && (
+        <TopAugments championId={selectedChampion.id} championName={selectedChampion.name} />
       )}
 
       <hr className="border-zinc-800" />
