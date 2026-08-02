@@ -1,6 +1,6 @@
 [
   {
-    "id": 20079,
+    "id": 20081,
     "championId": "Aatrox",
     "mode": "SR",
     "role": "JUNGLE",
@@ -95,7 +95,7 @@
     "sampleSize": 159
   },
   {
-    "id": 20516,
+    "id": 20500,
     "championId": "Aatrox",
     "mode": "SR",
     "role": "MID",
@@ -172,7 +172,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20578,
+    "id": 20558,
     "championId": "Aatrox",
     "mode": "SR",
     "role": "SUPPORT",
@@ -222,7 +222,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20162,
+    "id": 20163,
     "championId": "Aatrox",
     "mode": "SR",
     "role": "TOP",
@@ -317,7 +317,7 @@
     "sampleSize": 338
   },
   {
-    "id": 20520,
+    "id": 20504,
     "championId": "Ahri",
     "mode": "SR",
     "role": "ADC",
@@ -407,7 +407,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20123,
+    "id": 20124,
     "championId": "Ahri",
     "mode": "SR",
     "role": "MID",
@@ -497,7 +497,7 @@
     "sampleSize": 577
   },
   {
-    "id": 20554,
+    "id": 20536,
     "championId": "Ahri",
     "mode": "SR",
     "role": "SUPPORT",
@@ -553,7 +553,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20240,
+    "id": 20244,
     "championId": "Ahri",
     "mode": "SR",
     "role": "TOP",
@@ -636,7 +636,7 @@
     "sampleSize": 31
   },
   {
-    "id": 20202,
+    "id": 20205,
     "championId": "Akali",
     "mode": "SR",
     "role": "MID",
@@ -716,7 +716,57 @@
     "sampleSize": 267
   },
   {
-    "id": 20152,
+    "id": 20206,
+    "championId": "Akali",
+    "mode": "SR",
+    "role": "MID",
+    "archetype": "ad",
+    "patch": "16.13",
+    "starterItems": [
+      1054
+    ],
+    "coreItems": [
+      3146
+    ],
+    "coreItemStats": {
+      "3146": {
+        "games": 55,
+        "pickRate": 100,
+        "winRate": 27
+      }
+    },
+    "situationalItems": [],
+    "bootsOptions": [
+      3020,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8112,
+    "primaryRuneIds": [
+      8143,
+      8140,
+      8106
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8451,
+      8444
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 55 challenger/grandmaster/master games on patch 16.13 · 27% win rate."
+    ],
+    "winRate": 27.3,
+    "sampleSize": 55
+  },
+  {
+    "id": 20154,
     "championId": "Akali",
     "mode": "SR",
     "role": "TOP",
@@ -801,7 +851,7 @@
     "sampleSize": 144
   },
   {
-    "id": 20266,
+    "id": 20270,
     "championId": "Akshan",
     "mode": "SR",
     "role": "ADC",
@@ -875,7 +925,7 @@
     "sampleSize": 8
   },
   {
-    "id": 20242,
+    "id": 20246,
     "championId": "Akshan",
     "mode": "SR",
     "role": "MID",
@@ -965,7 +1015,7 @@
     "sampleSize": 222
   },
   {
-    "id": 20389,
+    "id": 20390,
     "championId": "Akshan",
     "mode": "SR",
     "role": "SUPPORT",
@@ -1020,7 +1070,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20320,
+    "id": 20322,
     "championId": "Akshan",
     "mode": "SR",
     "role": "TOP",
@@ -1105,7 +1155,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20142,
+    "id": 20144,
     "championId": "Alistar",
     "mode": "SR",
     "role": "SUPPORT",
@@ -1179,7 +1229,7 @@
     "sampleSize": 358
   },
   {
-    "id": 20272,
+    "id": 20275,
     "championId": "Ambessa",
     "mode": "SR",
     "role": "JUNGLE",
@@ -1274,7 +1324,7 @@
     "sampleSize": 149
   },
   {
-    "id": 20319,
+    "id": 20321,
     "championId": "Ambessa",
     "mode": "SR",
     "role": "MID",
@@ -1367,7 +1417,7 @@
     "sampleSize": 49
   },
   {
-    "id": 20133,
+    "id": 20134,
     "championId": "Ambessa",
     "mode": "SR",
     "role": "TOP",
@@ -1461,7 +1511,7 @@
     "sampleSize": 411
   },
   {
-    "id": 20416,
+    "id": 20413,
     "championId": "Amumu",
     "mode": "SR",
     "role": "JUNGLE",
@@ -1550,7 +1600,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20417,
+    "id": 20414,
     "championId": "Amumu",
     "mode": "SR",
     "role": "JUNGLE",
@@ -1623,7 +1673,7 @@
     "sampleSize": 25
   },
   {
-    "id": 20267,
+    "id": 20271,
     "championId": "Amumu",
     "mode": "SR",
     "role": "SUPPORT",
@@ -1695,81 +1745,7 @@
     "sampleSize": 23
   },
   {
-    "id": 20268,
-    "championId": "Amumu",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3050,
-      4005,
-      3190,
-      8020
-    ],
-    "coreItemStats": {
-      "3050": {
-        "games": 3,
-        "pickRate": 30,
-        "winRate": 67
-      },
-      "3190": {
-        "games": 2,
-        "pickRate": 20,
-        "winRate": 50
-      },
-      "4005": {
-        "games": 6,
-        "pickRate": 60,
-        "winRate": 50
-      },
-      "8020": {
-        "games": 3,
-        "pickRate": 30,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 3157,
-        "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 30% of games)"
-      }
-    ],
-    "bootsOptions": [
-      3158,
-      3111
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8439,
-    "primaryRuneIds": [
-      8463,
-      8473,
-      8242
-    ],
-    "secondaryPathId": 8100,
-    "secondaryRuneIds": [
-      8126,
-      8106
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 10 challenger/grandmaster/master games on patch 16.13 · 50% win rate."
-    ],
-    "winRate": 50,
-    "sampleSize": 10
-  },
-  {
-    "id": 20542,
+    "id": 20524,
     "championId": "Anivia",
     "mode": "SR",
     "role": "ADC",
@@ -1853,7 +1829,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20201,
+    "id": 20204,
     "championId": "Anivia",
     "mode": "SR",
     "role": "MID",
@@ -1938,7 +1914,7 @@
     "sampleSize": 162
   },
   {
-    "id": 20155,
+    "id": 20157,
     "championId": "Anivia",
     "mode": "SR",
     "role": "SUPPORT",
@@ -2018,7 +1994,7 @@
     "sampleSize": 32
   },
   {
-    "id": 20216,
+    "id": 20220,
     "championId": "Anivia",
     "mode": "SR",
     "role": "TOP",
@@ -2092,7 +2068,7 @@
     "sampleSize": 83
   },
   {
-    "id": 20158,
+    "id": 20160,
     "championId": "Annie",
     "mode": "SR",
     "role": "MID",
@@ -2171,7 +2147,7 @@
     "sampleSize": 129
   },
   {
-    "id": 20460,
+    "id": 20451,
     "championId": "Annie",
     "mode": "SR",
     "role": "SUPPORT",
@@ -2244,7 +2220,7 @@
     "sampleSize": 8
   },
   {
-    "id": 20187,
+    "id": 20190,
     "championId": "Annie",
     "mode": "SR",
     "role": "TOP",
@@ -2327,7 +2303,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20227,
+    "id": 20231,
     "championId": "Aphelios",
     "mode": "SR",
     "role": "ADC",
@@ -2507,7 +2483,7 @@
     "sampleSize": 451
   },
   {
-    "id": 20421,
+    "id": 20418,
     "championId": "Ashe",
     "mode": "SR",
     "role": "MID",
@@ -2563,7 +2539,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20469,
+    "id": 20461,
     "championId": "Ashe",
     "mode": "SR",
     "role": "SUPPORT",
@@ -2635,69 +2611,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20470,
-    "championId": "Ashe",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3118,
-      6696,
-      4005
-    ],
-    "coreItemStats": {
-      "3118": {
-        "games": 8,
-        "pickRate": 100,
-        "winRate": 25
-      },
-      "4005": {
-        "games": 5,
-        "pickRate": 63,
-        "winRate": 20
-      },
-      "6696": {
-        "games": 2,
-        "pickRate": 25,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3009
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8229,
-    "primaryRuneIds": [
-      8226,
-      8210,
-      8237
-    ],
-    "secondaryPathId": 8100,
-    "secondaryRuneIds": [
-      8126,
-      8106
-    ],
-    "statRuneIds": [
-      5007,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "W > Q > E",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 8 challenger/grandmaster/master games on patch 16.13 · 25% win rate."
-    ],
-    "winRate": 25,
-    "sampleSize": 8
-  },
-  {
-    "id": 20282,
+    "id": 20284,
     "championId": "AurelionSol",
     "mode": "SR",
     "role": "ADC",
@@ -2771,7 +2685,7 @@
     "sampleSize": 87
   },
   {
-    "id": 20480,
+    "id": 20468,
     "championId": "AurelionSol",
     "mode": "SR",
     "role": "JUNGLE",
@@ -2832,7 +2746,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20198,
+    "id": 20201,
     "championId": "AurelionSol",
     "mode": "SR",
     "role": "MID",
@@ -2912,7 +2826,7 @@
     "sampleSize": 68
   },
   {
-    "id": 20335,
+    "id": 20339,
     "championId": "AurelionSol",
     "mode": "SR",
     "role": "TOP",
@@ -2980,7 +2894,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20294,
+    "id": 20296,
     "championId": "Aurora",
     "mode": "SR",
     "role": "ADC",
@@ -3054,7 +2968,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20218,
+    "id": 20222,
     "championId": "Aurora",
     "mode": "SR",
     "role": "MID",
@@ -3134,7 +3048,7 @@
     "sampleSize": 228
   },
   {
-    "id": 20075,
+    "id": 20077,
     "championId": "Aurora",
     "mode": "SR",
     "role": "TOP",
@@ -3213,7 +3127,7 @@
     "sampleSize": 79
   },
   {
-    "id": 20584,
+    "id": 20564,
     "championId": "Azir",
     "mode": "SR",
     "role": "ADC",
@@ -3275,7 +3189,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20273,
+    "id": 20276,
     "championId": "Azir",
     "mode": "SR",
     "role": "MID",
@@ -3375,7 +3289,7 @@
     "sampleSize": 80
   },
   {
-    "id": 20367,
+    "id": 20369,
     "championId": "Azir",
     "mode": "SR",
     "role": "TOP",
@@ -3459,7 +3373,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20134,
+    "id": 20135,
     "championId": "Bard",
     "mode": "SR",
     "role": "SUPPORT",
@@ -3543,7 +3457,84 @@
     "sampleSize": 473
   },
   {
-    "id": 20338,
+    "id": 20136,
+    "championId": "Bard",
+    "mode": "SR",
+    "role": "SUPPORT",
+    "archetype": "ap",
+    "patch": "16.13",
+    "starterItems": [
+      3865
+    ],
+    "coreItems": [
+      3742,
+      4005
+    ],
+    "coreItemStats": {
+      "3742": {
+        "games": 75,
+        "pickRate": 65,
+        "winRate": 61
+      },
+      "4005": {
+        "games": 43,
+        "pickRate": 37,
+        "winRate": 56
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "general",
+        "description": "Liandry's Torment — popular alternative (built in 35% of games)"
+      },
+      {
+        "itemId": 3107,
+        "condition": "general",
+        "description": "Redemption — popular alternative (built in 22% of games)"
+      },
+      {
+        "itemId": 3190,
+        "condition": "general",
+        "description": "Locket of the Iron Solari — popular alternative (built in 22% of games)"
+      },
+      {
+        "itemId": 3152,
+        "condition": "general",
+        "description": "Hextech Rocketbelt — popular alternative (built in 14% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3009,
+      3111
+    ],
+    "primaryPathId": 8100,
+    "keystoneId": 8112,
+    "primaryRuneIds": [
+      8126,
+      8141,
+      8135
+    ],
+    "secondaryPathId": 8300,
+    "secondaryRuneIds": [
+      8304,
+      8316
+    ],
+    "statRuneIds": [
+      5005,
+      5010,
+      5001
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 116 challenger/grandmaster/master games on patch 16.13 · 57% win rate."
+    ],
+    "winRate": 56.9,
+    "sampleSize": 116
+  },
+  {
+    "id": 20342,
     "championId": "Belveth",
     "mode": "SR",
     "role": "JUNGLE",
@@ -3623,7 +3614,7 @@
     "sampleSize": 217
   },
   {
-    "id": 20462,
+    "id": 20453,
     "championId": "Belveth",
     "mode": "SR",
     "role": "TOP",
@@ -3664,7 +3655,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20092,
+    "id": 20095,
     "championId": "Blitzcrank",
     "mode": "SR",
     "role": "SUPPORT",
@@ -3816,7 +3807,7 @@
     "sampleSize": 149
   },
   {
-    "id": 20432,
+    "id": 20428,
     "championId": "Brand",
     "mode": "SR",
     "role": "JUNGLE",
@@ -3895,7 +3886,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20313,
+    "id": 20314,
     "championId": "Brand",
     "mode": "SR",
     "role": "MID",
@@ -3968,7 +3959,7 @@
     "sampleSize": 34
   },
   {
-    "id": 20169,
+    "id": 20170,
     "championId": "Brand",
     "mode": "SR",
     "role": "SUPPORT",
@@ -4041,7 +4032,7 @@
     "sampleSize": 50
   },
   {
-    "id": 20085,
+    "id": 20087,
     "championId": "Brand",
     "mode": "SR",
     "role": "TOP",
@@ -4120,7 +4111,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20066,
+    "id": 20067,
     "championId": "Braum",
     "mode": "SR",
     "role": "SUPPORT",
@@ -4193,7 +4184,69 @@
     "sampleSize": 225
   },
   {
-    "id": 20182,
+    "id": 20068,
+    "championId": "Braum",
+    "mode": "SR",
+    "role": "SUPPORT",
+    "archetype": "ad",
+    "patch": "16.13",
+    "starterItems": [
+      3865
+    ],
+    "coreItems": [
+      2524,
+      3190
+    ],
+    "coreItemStats": {
+      "2524": {
+        "games": 75,
+        "pickRate": 100,
+        "winRate": 49
+      },
+      "3190": {
+        "games": 33,
+        "pickRate": 44,
+        "winRate": 48
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 3109,
+        "condition": "general",
+        "description": "Knight's Vow — popular alternative (built in 25% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3047,
+      3111
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8465,
+    "primaryRuneIds": [
+      8463,
+      8473,
+      8242
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5005,
+      5001,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 75 challenger/grandmaster/master games on patch 16.13 · 49% win rate."
+    ],
+    "winRate": 49.3,
+    "sampleSize": 75
+  },
+  {
+    "id": 20184,
     "championId": "Briar",
     "mode": "SR",
     "role": "JUNGLE",
@@ -4298,7 +4351,7 @@
     "sampleSize": 126
   },
   {
-    "id": 20437,
+    "id": 20432,
     "championId": "Briar",
     "mode": "SR",
     "role": "MID",
@@ -4440,7 +4493,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20505,
+    "id": 20489,
     "championId": "Briar",
     "mode": "SR",
     "role": "TOP",
@@ -4539,7 +4592,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20086,
+    "id": 20088,
     "championId": "Caitlyn",
     "mode": "SR",
     "role": "ADC",
@@ -4629,7 +4682,7 @@
     "sampleSize": 713
   },
   {
-    "id": 20549,
+    "id": 20531,
     "championId": "Caitlyn",
     "mode": "SR",
     "role": "MID",
@@ -4691,7 +4744,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20559,
+    "id": 20540,
     "championId": "Caitlyn",
     "mode": "SR",
     "role": "TOP",
@@ -4759,7 +4812,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20481,
+    "id": 20469,
     "championId": "Camille",
     "mode": "SR",
     "role": "JUNGLE",
@@ -4849,7 +4902,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20231,
+    "id": 20235,
     "championId": "Camille",
     "mode": "SR",
     "role": "MID",
@@ -4911,7 +4964,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20232,
+    "id": 20236,
     "championId": "Camille",
     "mode": "SR",
     "role": "SUPPORT",
@@ -4973,7 +5026,7 @@
     "sampleSize": 582
   },
   {
-    "id": 20157,
+    "id": 20159,
     "championId": "Camille",
     "mode": "SR",
     "role": "TOP",
@@ -5047,7 +5100,7 @@
     "sampleSize": 201
   },
   {
-    "id": 20318,
+    "id": 20320,
     "championId": "Cassiopeia",
     "mode": "SR",
     "role": "ADC",
@@ -5209,7 +5262,7 @@
     "sampleSize": 173
   },
   {
-    "id": 20063,
+    "id": 20064,
     "championId": "Cassiopeia",
     "mode": "SR",
     "role": "TOP",
@@ -5287,7 +5340,7 @@
     "sampleSize": 66
   },
   {
-    "id": 20524,
+    "id": 20508,
     "championId": "Chogath",
     "mode": "SR",
     "role": "ADC",
@@ -5349,7 +5402,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20483,
+    "id": 20471,
     "championId": "Chogath",
     "mode": "SR",
     "role": "JUNGLE",
@@ -5417,7 +5470,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20484,
+    "id": 20472,
     "championId": "Chogath",
     "mode": "SR",
     "role": "JUNGLE",
@@ -5512,7 +5565,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20344,
+    "id": 20348,
     "championId": "Chogath",
     "mode": "SR",
     "role": "MID",
@@ -5591,7 +5644,7 @@
     "sampleSize": 39
   },
   {
-    "id": 20478,
+    "id": 20467,
     "championId": "Chogath",
     "mode": "SR",
     "role": "SUPPORT",
@@ -5647,57 +5700,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20479,
-    "championId": "Chogath",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3152
-    ],
-    "coreItemStats": {
-      "3152": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3111,
-      3158
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 9923,
-    "primaryRuneIds": [
-      8126,
-      8140,
-      8106
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8224,
-      8234
-    ],
-    "statRuneIds": [
-      5008,
-      5010,
-      5001
-    ],
-    "skillMaxOrder": "E > W > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 3
-  },
-  {
-    "id": 20228,
+    "id": 20232,
     "championId": "Chogath",
     "mode": "SR",
     "role": "TOP",
@@ -5802,7 +5805,7 @@
     "sampleSize": 94
   },
   {
-    "id": 20229,
+    "id": 20233,
     "championId": "Chogath",
     "mode": "SR",
     "role": "TOP",
@@ -5882,7 +5885,7 @@
     "sampleSize": 58
   },
   {
-    "id": 20166,
+    "id": 20167,
     "championId": "Corki",
     "mode": "SR",
     "role": "ADC",
@@ -5972,7 +5975,7 @@
     "sampleSize": 101
   },
   {
-    "id": 20325,
+    "id": 20327,
     "championId": "Corki",
     "mode": "SR",
     "role": "MID",
@@ -6065,7 +6068,7 @@
     "sampleSize": 31
   },
   {
-    "id": 20514,
+    "id": 20498,
     "championId": "Corki",
     "mode": "SR",
     "role": "TOP",
@@ -6139,7 +6142,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20315,
+    "id": 20316,
     "championId": "Darius",
     "mode": "SR",
     "role": "JUNGLE",
@@ -6213,7 +6216,7 @@
     "sampleSize": 46
   },
   {
-    "id": 20538,
+    "id": 20520,
     "championId": "Darius",
     "mode": "SR",
     "role": "MID",
@@ -6275,7 +6278,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20127,
+    "id": 20128,
     "championId": "Darius",
     "mode": "SR",
     "role": "TOP",
@@ -6364,7 +6367,7 @@
     "sampleSize": 315
   },
   {
-    "id": 20561,
+    "id": 20542,
     "championId": "Diana",
     "mode": "SR",
     "role": "ADC",
@@ -6413,7 +6416,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20064,
+    "id": 20065,
     "championId": "Diana",
     "mode": "SR",
     "role": "JUNGLE",
@@ -6577,7 +6580,7 @@
     "sampleSize": 163
   },
   {
-    "id": 20492,
+    "id": 20478,
     "championId": "Diana",
     "mode": "SR",
     "role": "TOP",
@@ -6739,7 +6742,7 @@
     "sampleSize": 348
   },
   {
-    "id": 20577,
+    "id": 20557,
     "championId": "Draven",
     "mode": "SR",
     "role": "JUNGLE",
@@ -6813,7 +6816,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20413,
+    "id": 20410,
     "championId": "Draven",
     "mode": "SR",
     "role": "MID",
@@ -6881,7 +6884,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20498,
+    "id": 20482,
     "championId": "Draven",
     "mode": "SR",
     "role": "TOP",
@@ -6976,7 +6979,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20530,
+    "id": 20514,
     "championId": "DrMundo",
     "mode": "SR",
     "role": "ADC",
@@ -7031,7 +7034,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20196,
+    "id": 20199,
     "championId": "DrMundo",
     "mode": "SR",
     "role": "JUNGLE",
@@ -7109,7 +7112,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20215,
+    "id": 20219,
     "championId": "DrMundo",
     "mode": "SR",
     "role": "MID",
@@ -7177,7 +7180,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20205,
+    "id": 20209,
     "championId": "DrMundo",
     "mode": "SR",
     "role": "TOP",
@@ -7257,7 +7260,7 @@
     "sampleSize": 282
   },
   {
-    "id": 20468,
+    "id": 20460,
     "championId": "Ekko",
     "mode": "SR",
     "role": "ADC",
@@ -7431,7 +7434,7 @@
     "sampleSize": 271
   },
   {
-    "id": 20109,
+    "id": 20111,
     "championId": "Ekko",
     "mode": "SR",
     "role": "MID",
@@ -7516,7 +7519,7 @@
     "sampleSize": 227
   },
   {
-    "id": 20566,
+    "id": 20546,
     "championId": "Ekko",
     "mode": "SR",
     "role": "SUPPORT",
@@ -7578,7 +7581,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20360,
+    "id": 20364,
     "championId": "Ekko",
     "mode": "SR",
     "role": "TOP",
@@ -7656,57 +7659,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20361,
-    "championId": "Ekko",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      2510
-    ],
-    "coreItemStats": {
-      "2510": {
-        "games": 5,
-        "pickRate": 100,
-        "winRate": 40
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3047,
-      3111
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8137,
-      8106
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      8009,
-      9104
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.13 · 40% win rate."
-    ],
-    "winRate": 40,
-    "sampleSize": 5
-  },
-  {
-    "id": 20270,
+    "id": 20273,
     "championId": "Elise",
     "mode": "SR",
     "role": "JUNGLE",
@@ -7780,7 +7733,7 @@
     "sampleSize": 117
   },
   {
-    "id": 20375,
+    "id": 20376,
     "championId": "Elise",
     "mode": "SR",
     "role": "MID",
@@ -7842,7 +7795,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20350,
+    "id": 20354,
     "championId": "Elise",
     "mode": "SR",
     "role": "SUPPORT",
@@ -7904,7 +7857,7 @@
     "sampleSize": 74
   },
   {
-    "id": 20351,
+    "id": 20355,
     "championId": "Elise",
     "mode": "SR",
     "role": "SUPPORT",
@@ -7946,7 +7899,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20560,
+    "id": 20541,
     "championId": "Elise",
     "mode": "SR",
     "role": "TOP",
@@ -8020,7 +7973,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20164,
+    "id": 20165,
     "championId": "Evelynn",
     "mode": "SR",
     "role": "JUNGLE",
@@ -8093,7 +8046,7 @@
     "sampleSize": 133
   },
   {
-    "id": 20073,
+    "id": 20075,
     "championId": "Ezreal",
     "mode": "SR",
     "role": "ADC",
@@ -8167,7 +8120,7 @@
     "sampleSize": 922
   },
   {
-    "id": 20259,
+    "id": 20263,
     "championId": "Ezreal",
     "mode": "SR",
     "role": "JUNGLE",
@@ -8216,7 +8169,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20340,
+    "id": 20344,
     "championId": "Ezreal",
     "mode": "SR",
     "role": "MID",
@@ -8296,7 +8249,7 @@
     "sampleSize": 23
   },
   {
-    "id": 20490,
+    "id": 20476,
     "championId": "Ezreal",
     "mode": "SR",
     "role": "TOP",
@@ -8352,7 +8305,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20247,
+    "id": 20251,
     "championId": "Fiddlesticks",
     "mode": "SR",
     "role": "JUNGLE",
@@ -8442,7 +8395,7 @@
     "sampleSize": 119
   },
   {
-    "id": 20407,
+    "id": 20404,
     "championId": "Fiddlesticks",
     "mode": "SR",
     "role": "MID",
@@ -8498,7 +8451,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20434,
+    "id": 20430,
     "championId": "Fiddlesticks",
     "mode": "SR",
     "role": "SUPPORT",
@@ -8577,81 +8530,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20435,
-    "championId": "Fiddlesticks",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3742,
-      4401,
-      3050,
-      8020,
-      3109
-    ],
-    "coreItemStats": {
-      "3050": {
-        "games": 4,
-        "pickRate": 44,
-        "winRate": 75
-      },
-      "3109": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 50
-      },
-      "3742": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 33
-      },
-      "4401": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 0
-      },
-      "8020": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 100
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3009,
-      3158
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8229,
-    "primaryRuneIds": [
-      8275,
-      8234,
-      8237
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8345,
-      8347
-    ],
-    "statRuneIds": [
-      5007,
-      5010,
-      5013
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.13 · 44% win rate."
-    ],
-    "winRate": 44.4,
-    "sampleSize": 9
-  },
-  {
-    "id": 20547,
+    "id": 20529,
     "championId": "Fiddlesticks",
     "mode": "SR",
     "role": "TOP",
@@ -8724,7 +8603,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20314,
+    "id": 20315,
     "championId": "Fiora",
     "mode": "SR",
     "role": "ADC",
@@ -8814,7 +8693,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20544,
+    "id": 20526,
     "championId": "Fiora",
     "mode": "SR",
     "role": "MID",
@@ -8876,7 +8755,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20512,
+    "id": 20496,
     "championId": "Fiora",
     "mode": "SR",
     "role": "SUPPORT",
@@ -9054,7 +8933,7 @@
     "sampleSize": 277
   },
   {
-    "id": 20466,
+    "id": 20458,
     "championId": "Fizz",
     "mode": "SR",
     "role": "ADC",
@@ -9116,7 +8995,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20390,
+    "id": 20391,
     "championId": "Fizz",
     "mode": "SR",
     "role": "JUNGLE",
@@ -9215,62 +9094,6 @@
     "sampleSize": 25
   },
   {
-    "id": 20391,
-    "championId": "Fizz",
-    "mode": "SR",
-    "role": "JUNGLE",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1101
-    ],
-    "coreItems": [
-      2510,
-      3115
-    ],
-    "coreItemStats": {
-      "2510": {
-        "games": 10,
-        "pickRate": 100,
-        "winRate": 30
-      },
-      "3115": {
-        "games": 5,
-        "pickRate": 50,
-        "winRate": 60
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020,
-      3158
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8005,
-    "primaryRuneIds": [
-      9111,
-      9104,
-      8014
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8304,
-      8347
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 10 challenger/grandmaster/master games on patch 16.13 · 30% win rate."
-    ],
-    "winRate": 30,
-    "sampleSize": 10
-  },
-  {
     "id": 20017,
     "championId": "Fizz",
     "mode": "SR",
@@ -9351,7 +9174,7 @@
     "sampleSize": 229
   },
   {
-    "id": 20552,
+    "id": 20534,
     "championId": "Fizz",
     "mode": "SR",
     "role": "SUPPORT",
@@ -9413,7 +9236,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20420,
+    "id": 20417,
     "championId": "Fizz",
     "mode": "SR",
     "role": "TOP",
@@ -9486,7 +9309,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20111,
+    "id": 20113,
     "championId": "Galio",
     "mode": "SR",
     "role": "MID",
@@ -9565,7 +9388,7 @@
     "sampleSize": 316
   },
   {
-    "id": 20191,
+    "id": 20194,
     "championId": "Galio",
     "mode": "SR",
     "role": "SUPPORT",
@@ -9645,7 +9468,7 @@
     "sampleSize": 53
   },
   {
-    "id": 20192,
+    "id": 20195,
     "championId": "Galio",
     "mode": "SR",
     "role": "SUPPORT",
@@ -9712,7 +9535,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20456,
+    "id": 20448,
     "championId": "Galio",
     "mode": "SR",
     "role": "TOP",
@@ -9797,68 +9620,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20457,
-    "championId": "Galio",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      6664
-    ],
-    "coreItemStats": {
-      "6664": {
-        "games": 7,
-        "pickRate": 70,
-        "winRate": 29
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 3068,
-        "condition": "general",
-        "description": "Sunfire Aegis — popular alternative (built in 20% of games)"
-      },
-      {
-        "itemId": 3075,
-        "condition": "general",
-        "description": "Thornmail — popular alternative (built in 20% of games)"
-      }
-    ],
-    "bootsOptions": [
-      3047,
-      3111
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8439,
-    "primaryRuneIds": [
-      8401,
-      8473,
-      8451
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8275,
-      8210
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 10 challenger/grandmaster/master games on patch 16.13 · 40% win rate."
-    ],
-    "winRate": 40,
-    "sampleSize": 10
-  },
-  {
-    "id": 20298,
+    "id": 20300,
     "championId": "Gangplank",
     "mode": "SR",
     "role": "MID",
@@ -9947,7 +9709,7 @@
     "sampleSize": 32
   },
   {
-    "id": 20090,
+    "id": 20093,
     "championId": "Gangplank",
     "mode": "SR",
     "role": "TOP",
@@ -10036,7 +9798,7 @@
     "sampleSize": 278
   },
   {
-    "id": 20357,
+    "id": 20361,
     "championId": "Garen",
     "mode": "SR",
     "role": "MID",
@@ -10125,7 +9887,7 @@
     "sampleSize": 57
   },
   {
-    "id": 20153,
+    "id": 20155,
     "championId": "Garen",
     "mode": "SR",
     "role": "TOP",
@@ -10214,7 +9976,7 @@
     "sampleSize": 327
   },
   {
-    "id": 20107,
+    "id": 20109,
     "championId": "Gnar",
     "mode": "SR",
     "role": "TOP",
@@ -10299,7 +10061,7 @@
     "sampleSize": 274
   },
   {
-    "id": 20116,
+    "id": 20118,
     "championId": "Gragas",
     "mode": "SR",
     "role": "JUNGLE",
@@ -10373,7 +10135,7 @@
     "sampleSize": 37
   },
   {
-    "id": 20225,
+    "id": 20229,
     "championId": "Gragas",
     "mode": "SR",
     "role": "MID",
@@ -10447,7 +10209,7 @@
     "sampleSize": 61
   },
   {
-    "id": 20493,
+    "id": 20479,
     "championId": "Gragas",
     "mode": "SR",
     "role": "SUPPORT",
@@ -10532,75 +10294,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20494,
-    "championId": "Gragas",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3119,
-      4005,
-      3109,
-      2524
-    ],
-    "coreItemStats": {
-      "2524": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 100
-      },
-      "3109": {
-        "games": 6,
-        "pickRate": 67,
-        "winRate": 67
-      },
-      "3119": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 67
-      },
-      "4005": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3111
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8465,
-    "primaryRuneIds": [
-      8463,
-      8444,
-      8453
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8345,
-      8347
-    ],
-    "statRuneIds": [
-      5005,
-      5001,
-      5011
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 9
-  },
-  {
-    "id": 20194,
+    "id": 20197,
     "championId": "Gragas",
     "mode": "SR",
     "role": "TOP",
@@ -10695,7 +10389,7 @@
     "sampleSize": 191
   },
   {
-    "id": 20059,
+    "id": 20060,
     "championId": "Graves",
     "mode": "SR",
     "role": "JUNGLE",
@@ -10790,7 +10484,7 @@
     "sampleSize": 662
   },
   {
-    "id": 20500,
+    "id": 20484,
     "championId": "Graves",
     "mode": "SR",
     "role": "MID",
@@ -10852,7 +10546,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20491,
+    "id": 20477,
     "championId": "Graves",
     "mode": "SR",
     "role": "TOP",
@@ -10920,7 +10614,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20128,
+    "id": 20129,
     "championId": "Gwen",
     "mode": "SR",
     "role": "JUNGLE",
@@ -11009,7 +10703,7 @@
     "sampleSize": 46
   },
   {
-    "id": 20447,
+    "id": 20441,
     "championId": "Gwen",
     "mode": "SR",
     "role": "MID",
@@ -11093,7 +10787,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20106,
+    "id": 20108,
     "championId": "Gwen",
     "mode": "SR",
     "role": "TOP",
@@ -11272,7 +10966,7 @@
     "sampleSize": 420
   },
   {
-    "id": 20322,
+    "id": 20324,
     "championId": "Heimerdinger",
     "mode": "SR",
     "role": "ADC",
@@ -11352,7 +11046,7 @@
     "sampleSize": 24
   },
   {
-    "id": 20427,
+    "id": 20423,
     "championId": "Heimerdinger",
     "mode": "SR",
     "role": "MID",
@@ -11431,7 +11125,7 @@
     "sampleSize": 28
   },
   {
-    "id": 20463,
+    "id": 20454,
     "championId": "Heimerdinger",
     "mode": "SR",
     "role": "SUPPORT",
@@ -11499,7 +11193,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20312,
+    "id": 20313,
     "championId": "Heimerdinger",
     "mode": "SR",
     "role": "TOP",
@@ -11589,7 +11283,7 @@
     "sampleSize": 77
   },
   {
-    "id": 20200,
+    "id": 20203,
     "championId": "Hwei",
     "mode": "SR",
     "role": "ADC",
@@ -11778,7 +11472,7 @@
     "sampleSize": 335
   },
   {
-    "id": 20113,
+    "id": 20115,
     "championId": "Hwei",
     "mode": "SR",
     "role": "SUPPORT",
@@ -11861,7 +11555,7 @@
     "sampleSize": 31
   },
   {
-    "id": 20145,
+    "id": 20147,
     "championId": "Hwei",
     "mode": "SR",
     "role": "TOP",
@@ -11966,7 +11660,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20383,
+    "id": 20384,
     "championId": "Illaoi",
     "mode": "SR",
     "role": "MID",
@@ -12034,7 +11728,7 @@
     "sampleSize": 8
   },
   {
-    "id": 20139,
+    "id": 20141,
     "championId": "Illaoi",
     "mode": "SR",
     "role": "TOP",
@@ -12118,7 +11812,7 @@
     "sampleSize": 89
   },
   {
-    "id": 20501,
+    "id": 20485,
     "championId": "Irelia",
     "mode": "SR",
     "role": "ADC",
@@ -12266,7 +11960,7 @@
     "sampleSize": 143
   },
   {
-    "id": 20083,
+    "id": 20085,
     "championId": "Irelia",
     "mode": "SR",
     "role": "TOP",
@@ -12346,7 +12040,7 @@
     "sampleSize": 289
   },
   {
-    "id": 20206,
+    "id": 20210,
     "championId": "Ivern",
     "mode": "SR",
     "role": "JUNGLE",
@@ -12441,7 +12135,7 @@
     "sampleSize": 104
   },
   {
-    "id": 20582,
+    "id": 20562,
     "championId": "Ivern",
     "mode": "SR",
     "role": "MID",
@@ -12482,7 +12176,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20502,
+    "id": 20486,
     "championId": "Ivern",
     "mode": "SR",
     "role": "SUPPORT",
@@ -12549,7 +12243,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20571,
+    "id": 20551,
     "championId": "Ivern",
     "mode": "SR",
     "role": "TOP",
@@ -12599,7 +12293,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20135,
+    "id": 20137,
     "championId": "Janna",
     "mode": "SR",
     "role": "SUPPORT",
@@ -12773,7 +12467,7 @@
     "sampleSize": 541
   },
   {
-    "id": 20304,
+    "id": 20305,
     "championId": "JarvanIV",
     "mode": "SR",
     "role": "SUPPORT",
@@ -12867,7 +12561,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20548,
+    "id": 20530,
     "championId": "JarvanIV",
     "mode": "SR",
     "role": "TOP",
@@ -12996,7 +12690,7 @@
     "sampleSize": 48
   },
   {
-    "id": 20508,
+    "id": 20492,
     "championId": "Jax",
     "mode": "SR",
     "role": "MID",
@@ -13081,7 +12775,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20443,
+    "id": 20437,
     "championId": "Jax",
     "mode": "SR",
     "role": "SUPPORT",
@@ -13143,7 +12837,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20180,
+    "id": 20182,
     "championId": "Jax",
     "mode": "SR",
     "role": "TOP",
@@ -13222,7 +12916,7 @@
     "sampleSize": 332
   },
   {
-    "id": 20307,
+    "id": 20308,
     "championId": "Jayce",
     "mode": "SR",
     "role": "ADC",
@@ -13300,7 +12994,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20095,
+    "id": 20098,
     "championId": "Jayce",
     "mode": "SR",
     "role": "JUNGLE",
@@ -13390,7 +13084,7 @@
     "sampleSize": 167
   },
   {
-    "id": 20060,
+    "id": 20061,
     "championId": "Jayce",
     "mode": "SR",
     "role": "MID",
@@ -13480,7 +13174,7 @@
     "sampleSize": 150
   },
   {
-    "id": 20579,
+    "id": 20559,
     "championId": "Jayce",
     "mode": "SR",
     "role": "SUPPORT",
@@ -13530,7 +13224,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20117,
+    "id": 20119,
     "championId": "Jayce",
     "mode": "SR",
     "role": "TOP",
@@ -13615,7 +13309,7 @@
     "sampleSize": 565
   },
   {
-    "id": 20112,
+    "id": 20114,
     "championId": "Jhin",
     "mode": "SR",
     "role": "ADC",
@@ -13784,7 +13478,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20495,
+    "id": 20480,
     "championId": "Jhin",
     "mode": "SR",
     "role": "TOP",
@@ -14031,7 +13725,7 @@
     "sampleSize": 605
   },
   {
-    "id": 20581,
+    "id": 20561,
     "championId": "Kaisa",
     "mode": "SR",
     "role": "JUNGLE",
@@ -14105,7 +13799,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20485,
+    "id": 20473,
     "championId": "Kaisa",
     "mode": "SR",
     "role": "MID",
@@ -14173,81 +13867,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20486,
-    "championId": "Kaisa",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1086
-    ],
-    "coreItems": [
-      3004,
-      6655,
-      4645,
-      4628,
-      3089
-    ],
-    "coreItemStats": {
-      "3004": {
-        "games": 3,
-        "pickRate": 75,
-        "winRate": 33
-      },
-      "3089": {
-        "games": 3,
-        "pickRate": 75,
-        "winRate": 33
-      },
-      "4628": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 50
-      },
-      "4645": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 0
-      },
-      "6655": {
-        "games": 3,
-        "pickRate": 75,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3020
-    ],
-    "primaryPathId": 8300,
-    "keystoneId": 8369,
-    "primaryRuneIds": [
-      8304,
-      8313,
-      8316
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8226,
-      8210
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.13 · 25% win rate."
-    ],
-    "winRate": 25,
-    "sampleSize": 4
-  },
-  {
-    "id": 20425,
+    "id": 20422,
     "championId": "Kaisa",
     "mode": "SR",
     "role": "TOP",
@@ -14321,63 +13941,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20426,
-    "championId": "Kaisa",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1086
-    ],
-    "coreItems": [
-      3004,
-      6655
-    ],
-    "coreItemStats": {
-      "3004": {
-        "games": 3,
-        "pickRate": 60,
-        "winRate": 0
-      },
-      "6655": {
-        "games": 2,
-        "pickRate": 40,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3006,
-      3020
-    ],
-    "primaryPathId": 8300,
-    "keystoneId": 8369,
-    "primaryRuneIds": [
-      8321,
-      8313,
-      8316
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8210,
-      8236
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.13 · 20% win rate."
-    ],
-    "winRate": 20,
-    "sampleSize": 5
-  },
-  {
-    "id": 20236,
+    "id": 20240,
     "championId": "Kalista",
     "mode": "SR",
     "role": "ADC",
@@ -14472,7 +14036,7 @@
     "sampleSize": 199
   },
   {
-    "id": 20510,
+    "id": 20494,
     "championId": "Kalista",
     "mode": "SR",
     "role": "MID",
@@ -14545,7 +14109,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20448,
+    "id": 20442,
     "championId": "Kalista",
     "mode": "SR",
     "role": "TOP",
@@ -14624,7 +14188,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20287,
+    "id": 20289,
     "championId": "Karma",
     "mode": "SR",
     "role": "MID",
@@ -14698,7 +14262,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20069,
+    "id": 20071,
     "championId": "Karma",
     "mode": "SR",
     "role": "SUPPORT",
@@ -14778,7 +14342,7 @@
     "sampleSize": 506
   },
   {
-    "id": 20321,
+    "id": 20323,
     "championId": "Karma",
     "mode": "SR",
     "role": "TOP",
@@ -14852,7 +14416,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20141,
+    "id": 20143,
     "championId": "Karthus",
     "mode": "SR",
     "role": "ADC",
@@ -14931,7 +14495,7 @@
     "sampleSize": 134
   },
   {
-    "id": 20208,
+    "id": 20212,
     "championId": "Karthus",
     "mode": "SR",
     "role": "JUNGLE",
@@ -15011,7 +14575,7 @@
     "sampleSize": 118
   },
   {
-    "id": 20431,
+    "id": 20427,
     "championId": "Karthus",
     "mode": "SR",
     "role": "MID",
@@ -15085,7 +14649,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20408,
+    "id": 20405,
     "championId": "Karthus",
     "mode": "SR",
     "role": "SUPPORT",
@@ -15140,7 +14704,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20513,
+    "id": 20497,
     "championId": "Karthus",
     "mode": "SR",
     "role": "TOP",
@@ -15219,7 +14783,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20529,
+    "id": 20513,
     "championId": "Kassadin",
     "mode": "SR",
     "role": "ADC",
@@ -15269,7 +14833,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20065,
+    "id": 20066,
     "championId": "Kassadin",
     "mode": "SR",
     "role": "MID",
@@ -15349,7 +14913,7 @@
     "sampleSize": 258
   },
   {
-    "id": 20297,
+    "id": 20299,
     "championId": "Kassadin",
     "mode": "SR",
     "role": "TOP",
@@ -15422,7 +14986,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20257,
+    "id": 20261,
     "championId": "Katarina",
     "mode": "SR",
     "role": "ADC",
@@ -15672,7 +15236,7 @@
     "sampleSize": 195
   },
   {
-    "id": 20098,
+    "id": 20101,
     "championId": "Katarina",
     "mode": "SR",
     "role": "SUPPORT",
@@ -15728,56 +15292,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20099,
-    "championId": "Katarina",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3100
-    ],
-    "coreItemStats": {
-      "3100": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8128,
-    "primaryRuneIds": [
-      8143,
-      8141,
-      8135
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      9111,
-      8014
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.13 · 25% win rate."
-    ],
-    "winRate": 25,
-    "sampleSize": 4
-  },
-  {
-    "id": 20120,
+    "id": 20122,
     "championId": "Katarina",
     "mode": "SR",
     "role": "TOP",
@@ -15839,80 +15354,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20121,
-    "championId": "Katarina",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      3100,
-      4645,
-      3157,
-      3089,
-      3102
-    ],
-    "coreItemStats": {
-      "3089": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 100
-      },
-      "3100": {
-        "games": 3,
-        "pickRate": 75,
-        "winRate": 67
-      },
-      "3102": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 100
-      },
-      "3157": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 50
-      },
-      "4645": {
-        "games": 3,
-        "pickRate": 75,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8140,
-      8105
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      9111,
-      8014
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.13 · 50% win rate."
-    ],
-    "winRate": 50,
-    "sampleSize": 4
-  },
-  {
-    "id": 20262,
+    "id": 20266,
     "championId": "Kayle",
     "mode": "SR",
     "role": "MID",
@@ -15992,7 +15434,7 @@
     "sampleSize": 39
   },
   {
-    "id": 20263,
+    "id": 20267,
     "championId": "Kayle",
     "mode": "SR",
     "role": "MID",
@@ -16048,7 +15490,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20221,
+    "id": 20225,
     "championId": "Kayle",
     "mode": "SR",
     "role": "TOP",
@@ -16133,7 +15575,7 @@
     "sampleSize": 87
   },
   {
-    "id": 20222,
+    "id": 20226,
     "championId": "Kayle",
     "mode": "SR",
     "role": "TOP",
@@ -16195,7 +15637,7 @@
     "sampleSize": 59
   },
   {
-    "id": 20125,
+    "id": 20126,
     "championId": "Kayn",
     "mode": "SR",
     "role": "JUNGLE",
@@ -16290,7 +15732,7 @@
     "sampleSize": 315
   },
   {
-    "id": 20296,
+    "id": 20298,
     "championId": "Kayn",
     "mode": "SR",
     "role": "TOP",
@@ -16384,7 +15826,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20511,
+    "id": 20495,
     "championId": "Kennen",
     "mode": "SR",
     "role": "ADC",
@@ -16440,7 +15882,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20509,
+    "id": 20493,
     "championId": "Kennen",
     "mode": "SR",
     "role": "MID",
@@ -16513,7 +15955,7 @@
     "sampleSize": 34
   },
   {
-    "id": 20070,
+    "id": 20072,
     "championId": "Kennen",
     "mode": "SR",
     "role": "TOP",
@@ -16687,7 +16129,7 @@
     "sampleSize": 532
   },
   {
-    "id": 20230,
+    "id": 20234,
     "championId": "Kindred",
     "mode": "SR",
     "role": "JUNGLE",
@@ -16771,7 +16213,7 @@
     "sampleSize": 258
   },
   {
-    "id": 20591,
+    "id": 20571,
     "championId": "Kindred",
     "mode": "SR",
     "role": "MID",
@@ -16827,7 +16269,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20586,
+    "id": 20566,
     "championId": "Kindred",
     "mode": "SR",
     "role": "TOP",
@@ -16895,7 +16337,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20555,
+    "id": 20537,
     "championId": "Kled",
     "mode": "SR",
     "role": "ADC",
@@ -16956,7 +16398,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20518,
+    "id": 20502,
     "championId": "Kled",
     "mode": "SR",
     "role": "MID",
@@ -17040,7 +16482,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20570,
+    "id": 20550,
     "championId": "Kled",
     "mode": "SR",
     "role": "SUPPORT",
@@ -17090,7 +16532,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20179,
+    "id": 20181,
     "championId": "Kled",
     "mode": "SR",
     "role": "TOP",
@@ -17169,7 +16611,7 @@
     "sampleSize": 143
   },
   {
-    "id": 20264,
+    "id": 20268,
     "championId": "KogMaw",
     "mode": "SR",
     "role": "ADC",
@@ -17259,7 +16701,7 @@
     "sampleSize": 87
   },
   {
-    "id": 20265,
+    "id": 20269,
     "championId": "KogMaw",
     "mode": "SR",
     "role": "ADC",
@@ -17354,7 +16796,7 @@
     "sampleSize": 38
   },
   {
-    "id": 20401,
+    "id": 20399,
     "championId": "KogMaw",
     "mode": "SR",
     "role": "MID",
@@ -17438,7 +16880,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20441,
+    "id": 20436,
     "championId": "KogMaw",
     "mode": "SR",
     "role": "TOP",
@@ -17506,68 +16948,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20442,
-    "championId": "KogMaw",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      2510,
-      4645,
-      3135
-    ],
-    "coreItemStats": {
-      "2510": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 100
-      },
-      "3135": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 100
-      },
-      "4645": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 100
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8005,
-    "primaryRuneIds": [
-      8009,
-      9104,
-      8014
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8226,
-      8236
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "W > Q > E",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.13 · 100% win rate."
-    ],
-    "winRate": 100,
-    "sampleSize": 4
-  },
-  {
-    "id": 20556,
+    "id": 20538,
     "championId": "KSante",
     "mode": "SR",
     "role": "ADC",
@@ -17641,7 +17022,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20525,
+    "id": 20509,
     "championId": "KSante",
     "mode": "SR",
     "role": "MID",
@@ -17731,7 +17112,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20269,
+    "id": 20272,
     "championId": "KSante",
     "mode": "SR",
     "role": "SUPPORT",
@@ -17894,7 +17275,7 @@
     "sampleSize": 369
   },
   {
-    "id": 20067,
+    "id": 20069,
     "championId": "Leblanc",
     "mode": "SR",
     "role": "MID",
@@ -17968,7 +17349,7 @@
     "sampleSize": 232
   },
   {
-    "id": 20310,
+    "id": 20311,
     "championId": "Leblanc",
     "mode": "SR",
     "role": "SUPPORT",
@@ -18115,7 +17496,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20118,
+    "id": 20120,
     "championId": "LeeSin",
     "mode": "SR",
     "role": "JUNGLE",
@@ -18200,7 +17581,7 @@
     "sampleSize": 779
   },
   {
-    "id": 20326,
+    "id": 20328,
     "championId": "LeeSin",
     "mode": "SR",
     "role": "MID",
@@ -18289,7 +17670,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20359,
+    "id": 20363,
     "championId": "LeeSin",
     "mode": "SR",
     "role": "SUPPORT",
@@ -18357,7 +17738,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20370,
+    "id": 20372,
     "championId": "LeeSin",
     "mode": "SR",
     "role": "TOP",
@@ -18440,7 +17821,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20144,
+    "id": 20146,
     "championId": "Leona",
     "mode": "SR",
     "role": "SUPPORT",
@@ -18593,7 +17974,7 @@
     "sampleSize": 140
   },
   {
-    "id": 20429,
+    "id": 20425,
     "championId": "Lissandra",
     "mode": "SR",
     "role": "ADC",
@@ -18681,7 +18062,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20119,
+    "id": 20121,
     "championId": "Lissandra",
     "mode": "SR",
     "role": "MID",
@@ -18764,7 +18145,7 @@
     "sampleSize": 268
   },
   {
-    "id": 20302,
+    "id": 20304,
     "championId": "Lissandra",
     "mode": "SR",
     "role": "SUPPORT",
@@ -18819,69 +18200,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20303,
-    "championId": "Lissandra",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      4005,
-      3050,
-      3190
-    ],
-    "coreItemStats": {
-      "3050": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 50
-      },
-      "3190": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 67
-      },
-      "4005": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 100
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3111
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8439,
-    "primaryRuneIds": [
-      8463,
-      8473,
-      8242
-    ],
-    "secondaryPathId": 8100,
-    "secondaryRuneIds": [
-      8126,
-      8106
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "W > Q > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
-  },
-  {
-    "id": 20347,
+    "id": 20351,
     "championId": "Lissandra",
     "mode": "SR",
     "role": "TOP",
@@ -18970,7 +18289,7 @@
     "sampleSize": 55
   },
   {
-    "id": 20371,
+    "id": 20373,
     "championId": "Locke",
     "mode": "SR",
     "role": "ADC",
@@ -19054,7 +18373,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20316,
+    "id": 20317,
     "championId": "Locke",
     "mode": "SR",
     "role": "JUNGLE",
@@ -19139,7 +18458,7 @@
     "sampleSize": 216
   },
   {
-    "id": 20300,
+    "id": 20302,
     "championId": "Locke",
     "mode": "SR",
     "role": "MID",
@@ -19219,7 +18538,7 @@
     "sampleSize": 633
   },
   {
-    "id": 20499,
+    "id": 20483,
     "championId": "Locke",
     "mode": "SR",
     "role": "SUPPORT",
@@ -19292,7 +18611,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20288,
+    "id": 20290,
     "championId": "Locke",
     "mode": "SR",
     "role": "TOP",
@@ -19372,7 +18691,7 @@
     "sampleSize": 80
   },
   {
-    "id": 20077,
+    "id": 20079,
     "championId": "Lucian",
     "mode": "SR",
     "role": "ADC",
@@ -19452,7 +18771,7 @@
     "sampleSize": 469
   },
   {
-    "id": 20256,
+    "id": 20260,
     "championId": "Lucian",
     "mode": "SR",
     "role": "MID",
@@ -19531,7 +18850,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20550,
+    "id": 20532,
     "championId": "Lucian",
     "mode": "SR",
     "role": "TOP",
@@ -19678,7 +18997,63 @@
     "sampleSize": 358
   },
   {
-    "id": 20081,
+    "id": 20058,
+    "championId": "Lulu",
+    "mode": "SR",
+    "role": "SUPPORT",
+    "archetype": "ad",
+    "patch": "16.13",
+    "starterItems": [
+      3865
+    ],
+    "coreItems": [
+      3504,
+      3222
+    ],
+    "coreItemStats": {
+      "3222": {
+        "games": 44,
+        "pickRate": 38,
+        "winRate": 59
+      },
+      "3504": {
+        "games": 115,
+        "pickRate": 99,
+        "winRate": 45
+      }
+    },
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3009
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8237
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8473,
+      8453
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "E",
+    "notes": [
+      "Aggregated from 116 challenger/grandmaster/master games on patch 16.13 · 45% win rate."
+    ],
+    "winRate": 44.8,
+    "sampleSize": 116
+  },
+  {
+    "id": 20083,
     "championId": "Lux",
     "mode": "SR",
     "role": "ADC",
@@ -19757,7 +19132,7 @@
     "sampleSize": 168
   },
   {
-    "id": 20091,
+    "id": 20094,
     "championId": "Lux",
     "mode": "SR",
     "role": "MID",
@@ -19914,7 +19289,7 @@
     "sampleSize": 184
   },
   {
-    "id": 20301,
+    "id": 20303,
     "championId": "Lux",
     "mode": "SR",
     "role": "TOP",
@@ -19992,7 +19367,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20583,
+    "id": 20563,
     "championId": "Malphite",
     "mode": "SR",
     "role": "ADC",
@@ -20153,131 +19528,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20399,
-    "championId": "Malphite",
-    "mode": "SR",
-    "role": "JUNGLE",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1103
-    ],
-    "coreItems": [
-      2510,
-      3050,
-      2524
-    ],
-    "coreItemStats": {
-      "2510": {
-        "games": 6,
-        "pickRate": 100,
-        "winRate": 33
-      },
-      "2524": {
-        "games": 2,
-        "pickRate": 33,
-        "winRate": 50
-      },
-      "3050": {
-        "games": 3,
-        "pickRate": 50,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3111,
-      3047
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8005,
-    "primaryRuneIds": [
-      9111,
-      9104,
-      8017
-    ],
-    "secondaryPathId": 8100,
-    "secondaryRuneIds": [
-      8126,
-      8106
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "W > Q > E",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 6 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 6
-  },
-  {
-    "id": 20400,
-    "championId": "Malphite",
-    "mode": "SR",
-    "role": "JUNGLE",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1102
-    ],
-    "coreItems": [
-      3118,
-      3050,
-      2510
-    ],
-    "coreItemStats": {
-      "2510": {
-        "games": 2,
-        "pickRate": 40,
-        "winRate": 50
-      },
-      "3050": {
-        "games": 2,
-        "pickRate": 40,
-        "winRate": 50
-      },
-      "3118": {
-        "games": 4,
-        "pickRate": 80,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020,
-      3158
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8128,
-    "primaryRuneIds": [
-      8143,
-      8140,
-      8106
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8224,
-      8210
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.13 · 60% win rate."
-    ],
-    "winRate": 60,
-    "sampleSize": 5
-  },
-  {
-    "id": 20405,
+    "id": 20403,
     "championId": "Malphite",
     "mode": "SR",
     "role": "MID",
@@ -20370,63 +19621,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20406,
-    "championId": "Malphite",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      3118
-    ],
-    "coreItemStats": {
-      "3118": {
-        "games": 11,
-        "pickRate": 92,
-        "winRate": 27
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 3050,
-        "condition": "general",
-        "description": "Zeke's Convergence — popular alternative (built in 17% of games)"
-      }
-    ],
-    "bootsOptions": [
-      3047,
-      3020
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8229,
-    "primaryRuneIds": [
-      8226,
-      8210,
-      8237
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8444,
-      8451
-    ],
-    "statRuneIds": [
-      5005,
-      5001,
-      5001
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 12 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 12
-  },
-  {
-    "id": 20372,
+    "id": 20374,
     "championId": "Malphite",
     "mode": "SR",
     "role": "SUPPORT",
@@ -20500,63 +19695,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20373,
-    "championId": "Malphite",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      4005,
-      3118
-    ],
-    "coreItemStats": {
-      "3118": {
-        "games": 5,
-        "pickRate": 100,
-        "winRate": 60
-      },
-      "4005": {
-        "games": 2,
-        "pickRate": 40,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020,
-      3047
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8137,
-      8106
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8237,
-      8224
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.13 · 60% win rate."
-    ],
-    "winRate": 60,
-    "sampleSize": 5
-  },
-  {
-    "id": 20209,
+    "id": 20213,
     "championId": "Malphite",
     "mode": "SR",
     "role": "TOP",
@@ -20651,7 +19790,7 @@
     "sampleSize": 348
   },
   {
-    "id": 20537,
+    "id": 20519,
     "championId": "Malzahar",
     "mode": "SR",
     "role": "ADC",
@@ -20815,7 +19954,7 @@
     "sampleSize": 191
   },
   {
-    "id": 20353,
+    "id": 20357,
     "championId": "Malzahar",
     "mode": "SR",
     "role": "TOP",
@@ -20888,7 +20027,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20430,
+    "id": 20426,
     "championId": "Maokai",
     "mode": "SR",
     "role": "JUNGLE",
@@ -20968,7 +20107,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20305,
+    "id": 20306,
     "championId": "Maokai",
     "mode": "SR",
     "role": "SUPPORT",
@@ -21041,7 +20180,7 @@
     "sampleSize": 74
   },
   {
-    "id": 20306,
+    "id": 20307,
     "championId": "Maokai",
     "mode": "SR",
     "role": "SUPPORT",
@@ -21109,7 +20248,7 @@
     "sampleSize": 31
   },
   {
-    "id": 20433,
+    "id": 20429,
     "championId": "Maokai",
     "mode": "SR",
     "role": "TOP",
@@ -21199,7 +20338,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20523,
+    "id": 20507,
     "championId": "MasterYi",
     "mode": "SR",
     "role": "ADC",
@@ -21373,7 +20512,7 @@
     "sampleSize": 294
   },
   {
-    "id": 20378,
+    "id": 20379,
     "championId": "MasterYi",
     "mode": "SR",
     "role": "MID",
@@ -21447,7 +20586,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20226,
+    "id": 20230,
     "championId": "MasterYi",
     "mode": "SR",
     "role": "TOP",
@@ -21537,7 +20676,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20061,
+    "id": 20062,
     "championId": "Mel",
     "mode": "SR",
     "role": "ADC",
@@ -21622,7 +20761,7 @@
     "sampleSize": 360
   },
   {
-    "id": 20094,
+    "id": 20097,
     "championId": "Mel",
     "mode": "SR",
     "role": "MID",
@@ -21707,7 +20846,7 @@
     "sampleSize": 125
   },
   {
-    "id": 20309,
+    "id": 20310,
     "championId": "Mel",
     "mode": "SR",
     "role": "SUPPORT",
@@ -21785,7 +20924,7 @@
     "sampleSize": 62
   },
   {
-    "id": 20562,
+    "id": 20543,
     "championId": "Milio",
     "mode": "SR",
     "role": "MID",
@@ -21827,7 +20966,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20193,
+    "id": 20196,
     "championId": "Milio",
     "mode": "SR",
     "role": "SUPPORT",
@@ -21895,7 +21034,7 @@
     "sampleSize": 264
   },
   {
-    "id": 20585,
+    "id": 20565,
     "championId": "Milio",
     "mode": "SR",
     "role": "TOP",
@@ -21950,7 +21089,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20068,
+    "id": 20070,
     "championId": "MissFortune",
     "mode": "SR",
     "role": "ADC",
@@ -22035,7 +21174,7 @@
     "sampleSize": 244
   },
   {
-    "id": 20588,
+    "id": 20568,
     "championId": "MissFortune",
     "mode": "SR",
     "role": "MID",
@@ -22091,7 +21230,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20190,
+    "id": 20193,
     "championId": "MonkeyKing",
     "mode": "SR",
     "role": "JUNGLE",
@@ -22165,7 +21304,7 @@
     "sampleSize": 377
   },
   {
-    "id": 20528,
+    "id": 20512,
     "championId": "MonkeyKing",
     "mode": "SR",
     "role": "MID",
@@ -22227,7 +21366,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20181,
+    "id": 20183,
     "championId": "MonkeyKing",
     "mode": "SR",
     "role": "TOP",
@@ -22317,7 +21456,7 @@
     "sampleSize": 69
   },
   {
-    "id": 20455,
+    "id": 20447,
     "championId": "Mordekaiser",
     "mode": "SR",
     "role": "JUNGLE",
@@ -22385,7 +21524,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20323,
+    "id": 20325,
     "championId": "Mordekaiser",
     "mode": "SR",
     "role": "MID",
@@ -22447,7 +21586,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20149,
+    "id": 20151,
     "championId": "Mordekaiser",
     "mode": "SR",
     "role": "TOP",
@@ -22537,7 +21676,7 @@
     "sampleSize": 167
   },
   {
-    "id": 20333,
+    "id": 20337,
     "championId": "Morgana",
     "mode": "SR",
     "role": "ADC",
@@ -22605,7 +21744,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20568,
+    "id": 20548,
     "championId": "Morgana",
     "mode": "SR",
     "role": "JUNGLE",
@@ -22677,7 +21816,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20150,
+    "id": 20152,
     "championId": "Morgana",
     "mode": "SR",
     "role": "MID",
@@ -22760,7 +21899,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20138,
+    "id": 20140,
     "championId": "Morgana",
     "mode": "SR",
     "role": "SUPPORT",
@@ -22833,7 +21972,7 @@
     "sampleSize": 116
   },
   {
-    "id": 20189,
+    "id": 20192,
     "championId": "Morgana",
     "mode": "SR",
     "role": "TOP",
@@ -22883,7 +22022,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20252,
+    "id": 20256,
     "championId": "Naafiri",
     "mode": "SR",
     "role": "ADC",
@@ -22967,7 +22106,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20071,
+    "id": 20073,
     "championId": "Naafiri",
     "mode": "SR",
     "role": "JUNGLE",
@@ -23067,7 +22206,7 @@
     "sampleSize": 400
   },
   {
-    "id": 20271,
+    "id": 20274,
     "championId": "Naafiri",
     "mode": "SR",
     "role": "MID",
@@ -23152,7 +22291,7 @@
     "sampleSize": 120
   },
   {
-    "id": 20446,
+    "id": 20440,
     "championId": "Naafiri",
     "mode": "SR",
     "role": "SUPPORT",
@@ -23487,7 +22626,7 @@
     "sampleSize": 187
   },
   {
-    "id": 20465,
+    "id": 20456,
     "championId": "Nasus",
     "mode": "SR",
     "role": "MID",
@@ -23570,6 +22709,101 @@
     ],
     "winRate": 40,
     "sampleSize": 55
+  },
+  {
+    "id": 20457,
+    "championId": "Nasus",
+    "mode": "SR",
+    "role": "MID",
+    "archetype": "tank",
+    "patch": "16.13",
+    "starterItems": [
+      1054
+    ],
+    "coreItems": [
+      3078,
+      3110,
+      3065,
+      2525,
+      4401
+    ],
+    "coreItemStats": {
+      "2525": {
+        "games": 5,
+        "pickRate": 33,
+        "winRate": 60
+      },
+      "3065": {
+        "games": 8,
+        "pickRate": 53,
+        "winRate": 50
+      },
+      "3078": {
+        "games": 10,
+        "pickRate": 67,
+        "winRate": 50
+      },
+      "3110": {
+        "games": 6,
+        "pickRate": 40,
+        "winRate": 67
+      },
+      "4401": {
+        "games": 2,
+        "pickRate": 13,
+        "winRate": 50
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 6662,
+        "condition": "general",
+        "description": "Iceborn Gauntlet — popular alternative (built in 27% of games)"
+      },
+      {
+        "itemId": 6665,
+        "condition": "general",
+        "description": "Jak'Sho, The Protean — popular alternative (built in 20% of games)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "general",
+        "description": "Thornmail — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 3742,
+        "condition": "general",
+        "description": "Dead Man's Plate — popular alternative (built in 13% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8230,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8236
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8444,
+      8451
+    ],
+    "statRuneIds": [
+      5007,
+      5010,
+      5013
+    ],
+    "skillMaxOrder": "Q > W > E",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 15 challenger/grandmaster/master games on patch 16.13 · 47% win rate."
+    ],
+    "winRate": 46.7,
+    "sampleSize": 15
   },
   {
     "id": 20024,
@@ -23734,7 +22968,7 @@
     "sampleSize": 80
   },
   {
-    "id": 20062,
+    "id": 20063,
     "championId": "Nautilus",
     "mode": "SR",
     "role": "SUPPORT",
@@ -23808,7 +23042,7 @@
     "sampleSize": 797
   },
   {
-    "id": 20527,
+    "id": 20511,
     "championId": "Nautilus",
     "mode": "SR",
     "role": "TOP",
@@ -23869,7 +23103,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20557,
+    "id": 20539,
     "championId": "Neeko",
     "mode": "SR",
     "role": "ADC",
@@ -23937,80 +23171,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20558,
-    "championId": "Neeko",
-    "mode": "SR",
-    "role": "ADC",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1086
-    ],
-    "coreItems": [
-      3124,
-      3153,
-      3091,
-      3302,
-      6672
-    ],
-    "coreItemStats": {
-      "3091": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 67
-      },
-      "3124": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 100
-      },
-      "3153": {
-        "games": 6,
-        "pickRate": 86,
-        "winRate": 67
-      },
-      "3302": {
-        "games": 4,
-        "pickRate": 57,
-        "winRate": 75
-      },
-      "6672": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3006
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8008,
-    "primaryRuneIds": [
-      9111,
-      9104,
-      8017
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8429,
-      8451
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 16.13 · 71% win rate."
-    ],
-    "winRate": 71.4,
-    "sampleSize": 7
-  },
-  {
-    "id": 20410,
+    "id": 20407,
     "championId": "Neeko",
     "mode": "SR",
     "role": "JUNGLE",
@@ -24077,7 +23238,7 @@
     "sampleSize": 8
   },
   {
-    "id": 20402,
+    "id": 20400,
     "championId": "Neeko",
     "mode": "SR",
     "role": "MID",
@@ -24160,7 +23321,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20210,
+    "id": 20214,
     "championId": "Neeko",
     "mode": "SR",
     "role": "SUPPORT",
@@ -24240,7 +23401,7 @@
     "sampleSize": 124
   },
   {
-    "id": 20574,
+    "id": 20554,
     "championId": "Neeko",
     "mode": "SR",
     "role": "TOP",
@@ -24296,7 +23457,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20211,
+    "id": 20215,
     "championId": "Nidalee",
     "mode": "SR",
     "role": "JUNGLE",
@@ -24375,7 +23536,7 @@
     "sampleSize": 301
   },
   {
-    "id": 20349,
+    "id": 20353,
     "championId": "Nidalee",
     "mode": "SR",
     "role": "SUPPORT",
@@ -24454,7 +23615,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20279,
+    "id": 20282,
     "championId": "Nidalee",
     "mode": "SR",
     "role": "TOP",
@@ -24538,78 +23699,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20280,
-    "championId": "Nidalee",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1055
-    ],
-    "coreItems": [
-      3078
-    ],
-    "coreItemStats": {
-      "3078": {
-        "games": 11,
-        "pickRate": 100,
-        "winRate": 55
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 3181,
-        "condition": "general",
-        "description": "Hullbreaker — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 4633,
-        "condition": "general",
-        "description": "Riftmaker — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 3153,
-        "condition": "general",
-        "description": "Blade of The Ruined King — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 6610,
-        "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 18% of games)"
-      }
-    ],
-    "bootsOptions": [
-      3047,
-      3009
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8437,
-    "primaryRuneIds": [
-      8446,
-      8473,
-      8451
-    ],
-    "secondaryPathId": 8100,
-    "secondaryRuneIds": [
-      8143,
-      8140
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 11 challenger/grandmaster/master games on patch 16.13 · 55% win rate."
-    ],
-    "winRate": 54.5,
-    "sampleSize": 11
-  },
-  {
-    "id": 20171,
+    "id": 20172,
     "championId": "Nilah",
     "mode": "SR",
     "role": "ADC",
@@ -24699,7 +23789,7 @@
     "sampleSize": 81
   },
   {
-    "id": 20096,
+    "id": 20099,
     "championId": "Nocturne",
     "mode": "SR",
     "role": "JUNGLE",
@@ -24794,7 +23884,7 @@
     "sampleSize": 273
   },
   {
-    "id": 20575,
+    "id": 20555,
     "championId": "Nocturne",
     "mode": "SR",
     "role": "MID",
@@ -24857,7 +23947,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20572,
+    "id": 20552,
     "championId": "Nocturne",
     "mode": "SR",
     "role": "TOP",
@@ -24947,7 +24037,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20167,
+    "id": 20168,
     "championId": "Nunu",
     "mode": "SR",
     "role": "JUNGLE",
@@ -25015,7 +24105,7 @@
     "sampleSize": 113
   },
   {
-    "id": 20168,
+    "id": 20169,
     "championId": "Nunu",
     "mode": "SR",
     "role": "JUNGLE",
@@ -25108,7 +24198,7 @@
     "sampleSize": 84
   },
   {
-    "id": 20289,
+    "id": 20291,
     "championId": "Nunu",
     "mode": "SR",
     "role": "MID",
@@ -25170,7 +24260,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20539,
+    "id": 20521,
     "championId": "Nunu",
     "mode": "SR",
     "role": "SUPPORT",
@@ -25226,7 +24316,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20368,
+    "id": 20370,
     "championId": "Nunu",
     "mode": "SR",
     "role": "TOP",
@@ -25282,7 +24372,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20354,
+    "id": 20358,
     "championId": "Olaf",
     "mode": "SR",
     "role": "ADC",
@@ -25376,7 +24466,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20244,
+    "id": 20248,
     "championId": "Olaf",
     "mode": "SR",
     "role": "JUNGLE",
@@ -25454,7 +24544,7 @@
     "sampleSize": 65
   },
   {
-    "id": 20376,
+    "id": 20377,
     "championId": "Olaf",
     "mode": "SR",
     "role": "MID",
@@ -25543,7 +24633,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20223,
+    "id": 20227,
     "championId": "Olaf",
     "mode": "SR",
     "role": "TOP",
@@ -25628,7 +24718,7 @@
     "sampleSize": 228
   },
   {
-    "id": 20545,
+    "id": 20527,
     "championId": "Orianna",
     "mode": "SR",
     "role": "ADC",
@@ -25684,7 +24774,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20213,
+    "id": 20217,
     "championId": "Orianna",
     "mode": "SR",
     "role": "MID",
@@ -25772,7 +24862,7 @@
     "sampleSize": 203
   },
   {
-    "id": 20580,
+    "id": 20560,
     "championId": "Orianna",
     "mode": "SR",
     "role": "SUPPORT",
@@ -25814,7 +24904,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20541,
+    "id": 20523,
     "championId": "Orianna",
     "mode": "SR",
     "role": "TOP",
@@ -25882,7 +24972,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20540,
+    "id": 20522,
     "championId": "Ornn",
     "mode": "SR",
     "role": "MID",
@@ -25956,7 +25046,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20504,
+    "id": 20488,
     "championId": "Ornn",
     "mode": "SR",
     "role": "SUPPORT",
@@ -26012,7 +25102,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20143,
+    "id": 20145,
     "championId": "Ornn",
     "mode": "SR",
     "role": "TOP",
@@ -26117,7 +25207,7 @@
     "sampleSize": 317
   },
   {
-    "id": 20551,
+    "id": 20533,
     "championId": "Pantheon",
     "mode": "SR",
     "role": "ADC",
@@ -26179,7 +25269,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20255,
+    "id": 20259,
     "championId": "Pantheon",
     "mode": "SR",
     "role": "JUNGLE",
@@ -26274,7 +25364,7 @@
     "sampleSize": 79
   },
   {
-    "id": 20419,
+    "id": 20416,
     "championId": "Pantheon",
     "mode": "SR",
     "role": "MID",
@@ -26369,7 +25459,7 @@
     "sampleSize": 69
   },
   {
-    "id": 20217,
+    "id": 20221,
     "championId": "Pantheon",
     "mode": "SR",
     "role": "SUPPORT",
@@ -26459,7 +25549,7 @@
     "sampleSize": 200
   },
   {
-    "id": 20163,
+    "id": 20164,
     "championId": "Pantheon",
     "mode": "SR",
     "role": "TOP",
@@ -26544,7 +25634,7 @@
     "sampleSize": 165
   },
   {
-    "id": 20386,
+    "id": 20387,
     "championId": "Poppy",
     "mode": "SR",
     "role": "JUNGLE",
@@ -26624,7 +25714,7 @@
     "sampleSize": 42
   },
   {
-    "id": 20387,
+    "id": 20388,
     "championId": "Poppy",
     "mode": "SR",
     "role": "JUNGLE",
@@ -26937,7 +26027,7 @@
     "sampleSize": 41
   },
   {
-    "id": 20352,
+    "id": 20356,
     "championId": "Pyke",
     "mode": "SR",
     "role": "MID",
@@ -27011,7 +26101,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20132,
+    "id": 20133,
     "championId": "Pyke",
     "mode": "SR",
     "role": "SUPPORT",
@@ -27085,7 +26175,7 @@
     "sampleSize": 494
   },
   {
-    "id": 20154,
+    "id": 20156,
     "championId": "Qiyana",
     "mode": "SR",
     "role": "ADC",
@@ -27159,7 +26249,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20233,
+    "id": 20237,
     "championId": "Qiyana",
     "mode": "SR",
     "role": "JUNGLE",
@@ -27259,7 +26349,7 @@
     "sampleSize": 318
   },
   {
-    "id": 20173,
+    "id": 20174,
     "championId": "Qiyana",
     "mode": "SR",
     "role": "MID",
@@ -27349,7 +26439,7 @@
     "sampleSize": 221
   },
   {
-    "id": 20339,
+    "id": 20343,
     "championId": "Qiyana",
     "mode": "SR",
     "role": "SUPPORT",
@@ -27429,7 +26519,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20330,
+    "id": 20332,
     "championId": "Qiyana",
     "mode": "SR",
     "role": "TOP",
@@ -27519,7 +26609,7 @@
     "sampleSize": 31
   },
   {
-    "id": 20104,
+    "id": 20106,
     "championId": "Quinn",
     "mode": "SR",
     "role": "JUNGLE",
@@ -27688,7 +26778,7 @@
     "sampleSize": 37
   },
   {
-    "id": 20438,
+    "id": 20433,
     "championId": "Quinn",
     "mode": "SR",
     "role": "SUPPORT",
@@ -27738,7 +26828,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20235,
+    "id": 20239,
     "championId": "Quinn",
     "mode": "SR",
     "role": "TOP",
@@ -27823,7 +26913,7 @@
     "sampleSize": 59
   },
   {
-    "id": 20592,
+    "id": 20572,
     "championId": "Rakan",
     "mode": "SR",
     "role": "MID",
@@ -27891,7 +26981,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20089,
+    "id": 20091,
     "championId": "Rakan",
     "mode": "SR",
     "role": "SUPPORT",
@@ -27963,6 +27053,78 @@
     ],
     "winRate": 50,
     "sampleSize": 256
+  },
+  {
+    "id": 20092,
+    "championId": "Rakan",
+    "mode": "SR",
+    "role": "SUPPORT",
+    "archetype": "ap",
+    "patch": "16.13",
+    "starterItems": [
+      3865
+    ],
+    "coreItems": [
+      3050,
+      2065
+    ],
+    "coreItemStats": {
+      "2065": {
+        "games": 29,
+        "pickRate": 45,
+        "winRate": 48
+      },
+      "3050": {
+        "games": 29,
+        "pickRate": 45,
+        "winRate": 48
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 3152,
+        "condition": "general",
+        "description": "Hextech Rocketbelt — popular alternative (built in 31% of games)"
+      },
+      {
+        "itemId": 3190,
+        "condition": "general",
+        "description": "Locket of the Iron Solari — popular alternative (built in 25% of games)"
+      },
+      {
+        "itemId": 4005,
+        "condition": "general",
+        "description": "Imperial Mandate — popular alternative (built in 22% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3020
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8465,
+    "primaryRuneIds": [
+      8463,
+      8473,
+      8242
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8137,
+      8106
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "W",
+    "notes": [
+      "Aggregated from 65 challenger/grandmaster/master games on patch 16.13 · 54% win rate."
+    ],
+    "winRate": 53.8,
+    "sampleSize": 65
   },
   {
     "id": 20026,
@@ -28054,7 +27216,7 @@
     "sampleSize": 92
   },
   {
-    "id": 20546,
+    "id": 20528,
     "championId": "Rammus",
     "mode": "SR",
     "role": "SUPPORT",
@@ -28110,7 +27272,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20093,
+    "id": 20096,
     "championId": "RekSai",
     "mode": "SR",
     "role": "JUNGLE",
@@ -28200,7 +27362,7 @@
     "sampleSize": 247
   },
   {
-    "id": 20576,
+    "id": 20556,
     "championId": "RekSai",
     "mode": "SR",
     "role": "MID",
@@ -28262,7 +27424,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20451,
+    "id": 20444,
     "championId": "RekSai",
     "mode": "SR",
     "role": "TOP",
@@ -28436,7 +27598,7 @@
     "sampleSize": 426
   },
   {
-    "id": 20237,
+    "id": 20241,
     "championId": "Renata",
     "mode": "SR",
     "role": "SUPPORT",
@@ -28504,7 +27666,7 @@
     "sampleSize": 33
   },
   {
-    "id": 20238,
+    "id": 20242,
     "championId": "Renata",
     "mode": "SR",
     "role": "SUPPORT",
@@ -28741,7 +27903,7 @@
     "sampleSize": 385
   },
   {
-    "id": 20076,
+    "id": 20078,
     "championId": "Rengar",
     "mode": "SR",
     "role": "JUNGLE",
@@ -28831,7 +27993,7 @@
     "sampleSize": 369
   },
   {
-    "id": 20564,
+    "id": 20545,
     "championId": "Rengar",
     "mode": "SR",
     "role": "SUPPORT",
@@ -28920,75 +28082,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20565,
-    "championId": "Rengar",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3190,
-      3109,
-      3065
-    ],
-    "coreItemStats": {
-      "3065": {
-        "games": 3,
-        "pickRate": 25,
-        "winRate": 67
-      },
-      "3109": {
-        "games": 9,
-        "pickRate": 75,
-        "winRate": 56
-      },
-      "3190": {
-        "games": 9,
-        "pickRate": 75,
-        "winRate": 56
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 3742,
-        "condition": "general",
-        "description": "Dead Man's Plate — popular alternative (built in 25% of games)"
-      }
-    ],
-    "bootsOptions": [
-      3047,
-      3111
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8229,
-    "primaryRuneIds": [
-      8275,
-      8210,
-      8237
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8463,
-      8444
-    ],
-    "statRuneIds": [
-      5007,
-      5010,
-      5011
-    ],
-    "skillMaxOrder": "E > W > Q",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 12 challenger/grandmaster/master games on patch 16.13 · 58% win rate."
-    ],
-    "winRate": 58.3,
-    "sampleSize": 12
-  },
-  {
-    "id": 20156,
+    "id": 20158,
     "championId": "Rengar",
     "mode": "SR",
     "role": "TOP",
@@ -29088,7 +28182,7 @@
     "sampleSize": 24
   },
   {
-    "id": 20526,
+    "id": 20510,
     "championId": "Riven",
     "mode": "SR",
     "role": "ADC",
@@ -29188,7 +28282,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20475,
+    "id": 20465,
     "championId": "Riven",
     "mode": "SR",
     "role": "JUNGLE",
@@ -29278,7 +28372,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20286,
+    "id": 20288,
     "championId": "Riven",
     "mode": "SR",
     "role": "MID",
@@ -29358,7 +28452,7 @@
     "sampleSize": 182
   },
   {
-    "id": 20329,
+    "id": 20331,
     "championId": "Riven",
     "mode": "SR",
     "role": "TOP",
@@ -29448,7 +28542,7 @@
     "sampleSize": 238
   },
   {
-    "id": 20379,
+    "id": 20380,
     "championId": "Rumble",
     "mode": "SR",
     "role": "JUNGLE",
@@ -29522,7 +28616,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20207,
+    "id": 20211,
     "championId": "Rumble",
     "mode": "SR",
     "role": "MID",
@@ -29596,7 +28690,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20458,
+    "id": 20449,
     "championId": "Rumble",
     "mode": "SR",
     "role": "SUPPORT",
@@ -29652,7 +28746,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20129,
+    "id": 20130,
     "championId": "Rumble",
     "mode": "SR",
     "role": "TOP",
@@ -29737,7 +28831,7 @@
     "sampleSize": 170
   },
   {
-    "id": 20097,
+    "id": 20100,
     "championId": "Ryze",
     "mode": "SR",
     "role": "MID",
@@ -29817,7 +28911,7 @@
     "sampleSize": 237
   },
   {
-    "id": 20341,
+    "id": 20345,
     "championId": "Ryze",
     "mode": "SR",
     "role": "TOP",
@@ -29897,7 +28991,7 @@
     "sampleSize": 58
   },
   {
-    "id": 20159,
+    "id": 20161,
     "championId": "Samira",
     "mode": "SR",
     "role": "ADC",
@@ -29982,7 +29076,7 @@
     "sampleSize": 175
   },
   {
-    "id": 20285,
+    "id": 20287,
     "championId": "Sejuani",
     "mode": "SR",
     "role": "JUNGLE",
@@ -30076,7 +29170,7 @@
     "sampleSize": 74
   },
   {
-    "id": 20436,
+    "id": 20431,
     "championId": "Sejuani",
     "mode": "SR",
     "role": "SUPPORT",
@@ -30138,7 +29232,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20356,
+    "id": 20360,
     "championId": "Sejuani",
     "mode": "SR",
     "role": "TOP",
@@ -30392,7 +29486,7 @@
     "sampleSize": 628
   },
   {
-    "id": 20506,
+    "id": 20490,
     "championId": "Senna",
     "mode": "SR",
     "role": "TOP",
@@ -30454,7 +29548,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20131,
+    "id": 20132,
     "championId": "Seraphine",
     "mode": "SR",
     "role": "ADC",
@@ -30539,7 +29633,7 @@
     "sampleSize": 405
   },
   {
-    "id": 20409,
+    "id": 20406,
     "championId": "Seraphine",
     "mode": "SR",
     "role": "MID",
@@ -30712,7 +29806,7 @@
     "sampleSize": 536
   },
   {
-    "id": 20517,
+    "id": 20501,
     "championId": "Sett",
     "mode": "SR",
     "role": "MID",
@@ -30768,7 +29862,7 @@
     "sampleSize": 8
   },
   {
-    "id": 20553,
+    "id": 20535,
     "championId": "Sett",
     "mode": "SR",
     "role": "SUPPORT",
@@ -30823,7 +29917,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20324,
+    "id": 20326,
     "championId": "Sett",
     "mode": "SR",
     "role": "TOP",
@@ -31082,7 +30176,7 @@
     "sampleSize": 109
   },
   {
-    "id": 20183,
+    "id": 20185,
     "championId": "Shaco",
     "mode": "SR",
     "role": "SUPPORT",
@@ -31156,7 +30250,7 @@
     "sampleSize": 23
   },
   {
-    "id": 20184,
+    "id": 20186,
     "championId": "Shaco",
     "mode": "SR",
     "role": "SUPPORT",
@@ -31235,7 +30329,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20590,
+    "id": 20570,
     "championId": "Shaco",
     "mode": "SR",
     "role": "TOP",
@@ -31308,7 +30402,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20464,
+    "id": 20455,
     "championId": "Shen",
     "mode": "SR",
     "role": "JUNGLE",
@@ -31390,7 +30484,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20496,
+    "id": 20481,
     "championId": "Shen",
     "mode": "SR",
     "role": "MID",
@@ -31452,63 +30546,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20497,
-    "championId": "Shen",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      1054
-    ],
-    "coreItems": [
-      2525,
-      2504
-    ],
-    "coreItemStats": {
-      "2504": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 0
-      },
-      "2525": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3111,
-      3174
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8437,
-    "primaryRuneIds": [
-      8401,
-      8444,
-      8453
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8275,
-      8210
-    ],
-    "statRuneIds": [
-      5008,
-      5010,
-      5001
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.13 · 25% win rate."
-    ],
-    "winRate": 25,
-    "sampleSize": 4
-  },
-  {
-    "id": 20440,
+    "id": 20435,
     "championId": "Shen",
     "mode": "SR",
     "role": "SUPPORT",
@@ -31592,7 +30630,7 @@
     "sampleSize": 95
   },
   {
-    "id": 20245,
+    "id": 20249,
     "championId": "Shen",
     "mode": "SR",
     "role": "TOP",
@@ -31666,7 +30704,7 @@
     "sampleSize": 224
   },
   {
-    "id": 20246,
+    "id": 20250,
     "championId": "Shen",
     "mode": "SR",
     "role": "TOP",
@@ -31771,7 +30809,7 @@
     "sampleSize": 81
   },
   {
-    "id": 20122,
+    "id": 20123,
     "championId": "Shyvana",
     "mode": "SR",
     "role": "JUNGLE",
@@ -31855,7 +30893,7 @@
     "sampleSize": 190
   },
   {
-    "id": 20358,
+    "id": 20362,
     "championId": "Shyvana",
     "mode": "SR",
     "role": "TOP",
@@ -31933,7 +30971,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20253,
+    "id": 20257,
     "championId": "Singed",
     "mode": "SR",
     "role": "ADC",
@@ -32001,7 +31039,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20355,
+    "id": 20359,
     "championId": "Singed",
     "mode": "SR",
     "role": "JUNGLE",
@@ -32063,7 +31101,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20388,
+    "id": 20389,
     "championId": "Singed",
     "mode": "SR",
     "role": "MID",
@@ -32152,7 +31190,7 @@
     "sampleSize": 45
   },
   {
-    "id": 20414,
+    "id": 20411,
     "championId": "Singed",
     "mode": "SR",
     "role": "SUPPORT",
@@ -32314,7 +31352,7 @@
     "sampleSize": 211
   },
   {
-    "id": 20567,
+    "id": 20547,
     "championId": "Sion",
     "mode": "SR",
     "role": "ADC",
@@ -32370,7 +31408,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20476,
+    "id": 20466,
     "championId": "Sion",
     "mode": "SR",
     "role": "JUNGLE",
@@ -32443,63 +31481,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20477,
-    "championId": "Sion",
-    "mode": "SR",
-    "role": "JUNGLE",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      1102
-    ],
-    "coreItems": [
-      3084,
-      6665
-    ],
-    "coreItemStats": {
-      "3084": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 0
-      },
-      "6665": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3009,
-      3047
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8010,
-    "primaryRuneIds": [
-      9111,
-      9105,
-      8299
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8453,
-      8429
-    ],
-    "statRuneIds": [
-      5005,
-      5010,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 3
-  },
-  {
-    "id": 20291,
+    "id": 20293,
     "championId": "Sion",
     "mode": "SR",
     "role": "MID",
@@ -32589,7 +31571,7 @@
     "sampleSize": 56
   },
   {
-    "id": 20535,
+    "id": 20518,
     "championId": "Sion",
     "mode": "SR",
     "role": "SUPPORT",
@@ -32639,56 +31621,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20536,
-    "championId": "Sion",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3142
-    ],
-    "coreItemStats": {
-      "3142": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3009
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8229,
-    "primaryRuneIds": [
-      8226,
-      8233,
-      8237
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8410,
-      8306
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 3
-  },
-  {
-    "id": 20147,
+    "id": 20149,
     "championId": "Sion",
     "mode": "SR",
     "role": "TOP",
@@ -32873,7 +31806,7 @@
     "sampleSize": 324
   },
   {
-    "id": 20573,
+    "id": 20553,
     "championId": "Sivir",
     "mode": "SR",
     "role": "MID",
@@ -33025,7 +31958,7 @@
     "sampleSize": 100
   },
   {
-    "id": 20521,
+    "id": 20505,
     "championId": "Skarner",
     "mode": "SR",
     "role": "SUPPORT",
@@ -33110,7 +32043,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20522,
+    "id": 20506,
     "championId": "Skarner",
     "mode": "SR",
     "role": "SUPPORT",
@@ -33172,7 +32105,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20103,
+    "id": 20105,
     "championId": "Skarner",
     "mode": "SR",
     "role": "TOP",
@@ -33346,7 +32279,7 @@
     "sampleSize": 188
   },
   {
-    "id": 20415,
+    "id": 20412,
     "championId": "Smolder",
     "mode": "SR",
     "role": "MID",
@@ -33435,7 +32368,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20261,
+    "id": 20265,
     "championId": "Smolder",
     "mode": "SR",
     "role": "TOP",
@@ -33509,7 +32442,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20074,
+    "id": 20076,
     "championId": "Sona",
     "mode": "SR",
     "role": "SUPPORT",
@@ -33582,7 +32515,7 @@
     "sampleSize": 381
   },
   {
-    "id": 20126,
+    "id": 20127,
     "championId": "Soraka",
     "mode": "SR",
     "role": "SUPPORT",
@@ -33655,7 +32588,7 @@
     "sampleSize": 277
   },
   {
-    "id": 20382,
+    "id": 20383,
     "championId": "Soraka",
     "mode": "SR",
     "role": "TOP",
@@ -33728,7 +32661,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20174,
+    "id": 20175,
     "championId": "Swain",
     "mode": "SR",
     "role": "ADC",
@@ -33818,7 +32751,7 @@
     "sampleSize": 119
   },
   {
-    "id": 20439,
+    "id": 20434,
     "championId": "Swain",
     "mode": "SR",
     "role": "MID",
@@ -33892,7 +32825,7 @@
     "sampleSize": 44
   },
   {
-    "id": 20212,
+    "id": 20216,
     "championId": "Swain",
     "mode": "SR",
     "role": "SUPPORT",
@@ -33960,7 +32893,7 @@
     "sampleSize": 99
   },
   {
-    "id": 20290,
+    "id": 20292,
     "championId": "Swain",
     "mode": "SR",
     "role": "TOP",
@@ -34038,7 +32971,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20445,
+    "id": 20439,
     "championId": "Sylas",
     "mode": "SR",
     "role": "ADC",
@@ -34128,7 +33061,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20082,
+    "id": 20084,
     "championId": "Sylas",
     "mode": "SR",
     "role": "JUNGLE",
@@ -34202,7 +33135,7 @@
     "sampleSize": 577
   },
   {
-    "id": 20146,
+    "id": 20148,
     "championId": "Sylas",
     "mode": "SR",
     "role": "MID",
@@ -34281,7 +33214,7 @@
     "sampleSize": 539
   },
   {
-    "id": 20243,
+    "id": 20247,
     "championId": "Sylas",
     "mode": "SR",
     "role": "SUPPORT",
@@ -34349,7 +33282,7 @@
     "sampleSize": 93
   },
   {
-    "id": 20172,
+    "id": 20173,
     "championId": "Sylas",
     "mode": "SR",
     "role": "TOP",
@@ -34428,7 +33361,7 @@
     "sampleSize": 80
   },
   {
-    "id": 20342,
+    "id": 20346,
     "championId": "Syndra",
     "mode": "SR",
     "role": "ADC",
@@ -34523,7 +33456,7 @@
     "sampleSize": 350
   },
   {
-    "id": 20080,
+    "id": 20082,
     "championId": "Syndra",
     "mode": "SR",
     "role": "MID",
@@ -34617,7 +33550,7 @@
     "sampleSize": 686
   },
   {
-    "id": 20422,
+    "id": 20419,
     "championId": "Syndra",
     "mode": "SR",
     "role": "SUPPORT",
@@ -34679,7 +33612,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20384,
+    "id": 20385,
     "championId": "Syndra",
     "mode": "SR",
     "role": "TOP",
@@ -34768,7 +33701,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20284,
+    "id": 20286,
     "championId": "TahmKench",
     "mode": "SR",
     "role": "ADC",
@@ -34856,7 +33789,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20336,
+    "id": 20340,
     "championId": "TahmKench",
     "mode": "SR",
     "role": "MID",
@@ -34906,7 +33839,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20381,
+    "id": 20382,
     "championId": "TahmKench",
     "mode": "SR",
     "role": "SUPPORT",
@@ -34984,7 +33917,7 @@
     "sampleSize": 92
   },
   {
-    "id": 20292,
+    "id": 20294,
     "championId": "TahmKench",
     "mode": "SR",
     "role": "TOP",
@@ -35069,7 +34002,7 @@
     "sampleSize": 41
   },
   {
-    "id": 20293,
+    "id": 20295,
     "championId": "TahmKench",
     "mode": "SR",
     "role": "TOP",
@@ -35125,7 +34058,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20452,
+    "id": 20445,
     "championId": "Taliyah",
     "mode": "SR",
     "role": "ADC",
@@ -35225,7 +34158,7 @@
     "sampleSize": 36
   },
   {
-    "id": 20115,
+    "id": 20117,
     "championId": "Taliyah",
     "mode": "SR",
     "role": "JUNGLE",
@@ -35310,7 +34243,7 @@
     "sampleSize": 105
   },
   {
-    "id": 20084,
+    "id": 20086,
     "championId": "Taliyah",
     "mode": "SR",
     "role": "MID",
@@ -35409,7 +34342,7 @@
     "sampleSize": 141
   },
   {
-    "id": 20472,
+    "id": 20463,
     "championId": "Taliyah",
     "mode": "SR",
     "role": "SUPPORT",
@@ -35482,7 +34415,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20299,
+    "id": 20301,
     "championId": "Taliyah",
     "mode": "SR",
     "role": "TOP",
@@ -35567,7 +34500,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20108,
+    "id": 20110,
     "championId": "Talon",
     "mode": "SR",
     "role": "JUNGLE",
@@ -35657,7 +34590,7 @@
     "sampleSize": 517
   },
   {
-    "id": 20140,
+    "id": 20142,
     "championId": "Talon",
     "mode": "SR",
     "role": "MID",
@@ -35762,7 +34695,7 @@
     "sampleSize": 140
   },
   {
-    "id": 20467,
+    "id": 20459,
     "championId": "Talon",
     "mode": "SR",
     "role": "TOP",
@@ -35824,7 +34757,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20239,
+    "id": 20243,
     "championId": "Taric",
     "mode": "SR",
     "role": "SUPPORT",
@@ -35892,7 +34825,7 @@
     "sampleSize": 96
   },
   {
-    "id": 20327,
+    "id": 20329,
     "championId": "Teemo",
     "mode": "SR",
     "role": "ADC",
@@ -35972,7 +34905,7 @@
     "sampleSize": 28
   },
   {
-    "id": 20503,
+    "id": 20487,
     "championId": "Teemo",
     "mode": "SR",
     "role": "JUNGLE",
@@ -36051,7 +34984,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20543,
+    "id": 20525,
     "championId": "Teemo",
     "mode": "SR",
     "role": "SUPPORT",
@@ -36112,7 +35045,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20186,
+    "id": 20188,
     "championId": "Teemo",
     "mode": "SR",
     "role": "TOP",
@@ -36207,7 +35140,86 @@
     "sampleSize": 128
   },
   {
-    "id": 20423,
+    "id": 20189,
+    "championId": "Teemo",
+    "mode": "SR",
+    "role": "TOP",
+    "archetype": "ad",
+    "patch": "16.13",
+    "starterItems": [
+      1056
+    ],
+    "coreItems": [
+      3087,
+      3115,
+      3146,
+      2510
+    ],
+    "coreItemStats": {
+      "2510": {
+        "games": 6,
+        "pickRate": 15,
+        "winRate": 33
+      },
+      "3087": {
+        "games": 19,
+        "pickRate": 46,
+        "winRate": 32
+      },
+      "3115": {
+        "games": 15,
+        "pickRate": 37,
+        "winRate": 40
+      },
+      "3146": {
+        "games": 4,
+        "pickRate": 10,
+        "winRate": 50
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 3153,
+        "condition": "enemy_has_tanks",
+        "description": "Blade of The Ruined King — vs tanks (55% pick vs 24% baseline)"
+      },
+      {
+        "itemId": 3036,
+        "condition": "enemy_heavy_ap",
+        "description": "Lord Dominik's Regards — vs AP (25% pick vs 10% baseline)"
+      }
+    ],
+    "bootsOptions": [
+      3009,
+      3020
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8005,
+    "primaryRuneIds": [
+      9111,
+      9104,
+      8014
+    ],
+    "secondaryPathId": 8200,
+    "secondaryRuneIds": [
+      8275,
+      8234
+    ],
+    "statRuneIds": [
+      5005,
+      5008,
+      5011
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 41 challenger/grandmaster/master games on patch 16.13 · 41% win rate."
+    ],
+    "winRate": 41.5,
+    "sampleSize": 41
+  },
+  {
+    "id": 20420,
     "championId": "Thresh",
     "mode": "SR",
     "role": "MID",
@@ -36324,7 +35336,7 @@
     "sampleSize": 627
   },
   {
-    "id": 20220,
+    "id": 20224,
     "championId": "Tristana",
     "mode": "SR",
     "role": "ADC",
@@ -36419,7 +35431,7 @@
     "sampleSize": 530
   },
   {
-    "id": 20404,
+    "id": 20402,
     "championId": "Tristana",
     "mode": "SR",
     "role": "MID",
@@ -36514,7 +35526,7 @@
     "sampleSize": 98
   },
   {
-    "id": 20311,
+    "id": 20312,
     "championId": "Tristana",
     "mode": "SR",
     "role": "TOP",
@@ -36598,7 +35610,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20453,
+    "id": 20446,
     "championId": "Trundle",
     "mode": "SR",
     "role": "JUNGLE",
@@ -36683,85 +35695,6 @@
     "sampleSize": 16
   },
   {
-    "id": 20454,
-    "championId": "Trundle",
-    "mode": "SR",
-    "role": "JUNGLE",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      1102
-    ],
-    "coreItems": [
-      3078,
-      3742,
-      3109,
-      3065
-    ],
-    "coreItemStats": {
-      "3065": {
-        "games": 7,
-        "pickRate": 50,
-        "winRate": 57
-      },
-      "3078": {
-        "games": 14,
-        "pickRate": 100,
-        "winRate": 50
-      },
-      "3109": {
-        "games": 2,
-        "pickRate": 14,
-        "winRate": 50
-      },
-      "3742": {
-        "games": 13,
-        "pickRate": 93,
-        "winRate": 54
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 2525,
-        "condition": "general",
-        "description": "Protoplasm Harness — popular alternative (built in 21% of games)"
-      },
-      {
-        "itemId": 3075,
-        "condition": "general",
-        "description": "Thornmail — popular alternative (built in 14% of games)"
-      }
-    ],
-    "bootsOptions": [
-      3047,
-      3111
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8005,
-    "primaryRuneIds": [
-      9111,
-      9104,
-      8014
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8410,
-      8304
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.13 · 50% win rate."
-    ],
-    "winRate": 50,
-    "sampleSize": 14
-  },
-  {
     "id": 20396,
     "championId": "Trundle",
     "mode": "SR",
@@ -36818,7 +35751,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20276,
+    "id": 20279,
     "championId": "Trundle",
     "mode": "SR",
     "role": "TOP",
@@ -36892,7 +35825,7 @@
     "sampleSize": 89
   },
   {
-    "id": 20345,
+    "id": 20349,
     "championId": "Tryndamere",
     "mode": "SR",
     "role": "JUNGLE",
@@ -36965,7 +35898,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20444,
+    "id": 20438,
     "championId": "Tryndamere",
     "mode": "SR",
     "role": "MID",
@@ -37065,7 +35998,7 @@
     "sampleSize": 69
   },
   {
-    "id": 20214,
+    "id": 20218,
     "championId": "Tryndamere",
     "mode": "SR",
     "role": "TOP",
@@ -37160,7 +36093,7 @@
     "sampleSize": 181
   },
   {
-    "id": 20488,
+    "id": 20475,
     "championId": "TwistedFate",
     "mode": "SR",
     "role": "ADC",
@@ -37232,79 +36165,6 @@
     ],
     "winRate": 75,
     "sampleSize": 4
-  },
-  {
-    "id": 20489,
-    "championId": "TwistedFate",
-    "mode": "SR",
-    "role": "ADC",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      6657,
-      3100,
-      3157,
-      3152,
-      3089
-    ],
-    "coreItemStats": {
-      "3089": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 100
-      },
-      "3100": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 67
-      },
-      "3152": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 50
-      },
-      "3157": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 100
-      },
-      "6657": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3009
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8229,
-    "primaryRuneIds": [
-      8226,
-      8234,
-      8237
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8451,
-      8473
-    ],
-    "statRuneIds": [
-      5005,
-      5010,
-      5011
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
   },
   {
     "id": 20008,
@@ -37391,7 +36251,7 @@
     "sampleSize": 283
   },
   {
-    "id": 20160,
+    "id": 20162,
     "championId": "TwistedFate",
     "mode": "SR",
     "role": "SUPPORT",
@@ -37458,75 +36318,7 @@
     "sampleSize": 25
   },
   {
-    "id": 20161,
-    "championId": "TwistedFate",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3094,
-      4005,
-      2065,
-      3157
-    ],
-    "coreItemStats": {
-      "2065": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 67
-      },
-      "3094": {
-        "games": 6,
-        "pickRate": 67,
-        "winRate": 50
-      },
-      "3157": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 0
-      },
-      "4005": {
-        "games": 8,
-        "pickRate": 89,
-        "winRate": 63
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3009,
-      3158
-    ],
-    "primaryPathId": 8300,
-    "keystoneId": 8351,
-    "primaryRuneIds": [
-      8306,
-      8345,
-      8347
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8275,
-      8234
-    ],
-    "statRuneIds": [
-      5007,
-      5010,
-      5001
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.13 · 56% win rate."
-    ],
-    "winRate": 55.6,
-    "sampleSize": 9
-  },
-  {
-    "id": 20281,
+    "id": 20283,
     "championId": "TwistedFate",
     "mode": "SR",
     "role": "TOP",
@@ -37685,7 +36477,7 @@
     "sampleSize": 274
   },
   {
-    "id": 20176,
+    "id": 20177,
     "championId": "Twitch",
     "mode": "SR",
     "role": "JUNGLE",
@@ -37803,7 +36595,7 @@
     "sampleSize": 8
   },
   {
-    "id": 20204,
+    "id": 20208,
     "championId": "Twitch",
     "mode": "SR",
     "role": "SUPPORT",
@@ -37859,7 +36651,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20331,
+    "id": 20333,
     "championId": "Udyr",
     "mode": "SR",
     "role": "JUNGLE",
@@ -37933,7 +36725,190 @@
     "sampleSize": 125
   },
   {
-    "id": 20248,
+    "id": 20334,
+    "championId": "Udyr",
+    "mode": "SR",
+    "role": "JUNGLE",
+    "archetype": "ap",
+    "patch": "16.13",
+    "starterItems": [
+      1102
+    ],
+    "coreItems": [
+      6653,
+      3742,
+      4633
+    ],
+    "coreItemStats": {
+      "3742": {
+        "games": 11,
+        "pickRate": 27,
+        "winRate": 55
+      },
+      "4633": {
+        "games": 6,
+        "pickRate": 15,
+        "winRate": 33
+      },
+      "6653": {
+        "games": 33,
+        "pickRate": 80,
+        "winRate": 55
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 3065,
+        "condition": "enemy_heavy_ap",
+        "description": "Spirit Visage — vs AP (31% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 8010,
+        "condition": "general",
+        "description": "Bloodletter's Curse — popular alternative (built in 20% of games)"
+      },
+      {
+        "itemId": 3118,
+        "condition": "general",
+        "description": "Malignance — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "general",
+        "description": "Rabadon's Deathcap — popular alternative (built in 15% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3009
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8230,
+    "primaryRuneIds": [
+      8224,
+      8234,
+      8236
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8126,
+      8106
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 41 challenger/grandmaster/master games on patch 16.13 · 54% win rate."
+    ],
+    "winRate": 53.7,
+    "sampleSize": 41
+  },
+  {
+    "id": 20335,
+    "championId": "Udyr",
+    "mode": "SR",
+    "role": "JUNGLE",
+    "archetype": "tank",
+    "patch": "16.13",
+    "starterItems": [
+      1102
+    ],
+    "coreItems": [
+      6653,
+      3742,
+      4401,
+      3065,
+      2525
+    ],
+    "coreItemStats": {
+      "2525": {
+        "games": 4,
+        "pickRate": 14,
+        "winRate": 25
+      },
+      "3065": {
+        "games": 10,
+        "pickRate": 34,
+        "winRate": 40
+      },
+      "3742": {
+        "games": 23,
+        "pickRate": 79,
+        "winRate": 43
+      },
+      "4401": {
+        "games": 4,
+        "pickRate": 14,
+        "winRate": 50
+      },
+      "6653": {
+        "games": 26,
+        "pickRate": 90,
+        "winRate": 46
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 6665,
+        "condition": "enemy_heavy_ad",
+        "description": "Jak'Sho, The Protean — vs AD (38% pick vs 21% baseline)"
+      },
+      {
+        "itemId": 2504,
+        "condition": "general",
+        "description": "Kaenic Rookern — popular alternative (built in 34% of games)"
+      },
+      {
+        "itemId": 3143,
+        "condition": "general",
+        "description": "Randuin's Omen — popular alternative (built in 24% of games)"
+      },
+      {
+        "itemId": 2502,
+        "condition": "general",
+        "description": "Unending Despair — popular alternative (built in 10% of games)"
+      },
+      {
+        "itemId": 8020,
+        "condition": "general",
+        "description": "Abyssal Mask — popular alternative (built in 10% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3047,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8017
+    ],
+    "secondaryPathId": 8300,
+    "secondaryRuneIds": [
+      8321,
+      8410
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5013
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 29 challenger/grandmaster/master games on patch 16.13 · 45% win rate."
+    ],
+    "winRate": 44.8,
+    "sampleSize": 29
+  },
+  {
+    "id": 20252,
     "championId": "Udyr",
     "mode": "SR",
     "role": "TOP",
@@ -38023,7 +36998,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20249,
+    "id": 20253,
     "championId": "Udyr",
     "mode": "SR",
     "role": "TOP",
@@ -38101,7 +37076,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20250,
+    "id": 20254,
     "championId": "Udyr",
     "mode": "SR",
     "role": "TOP",
@@ -38175,7 +37150,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20102,
+    "id": 20104,
     "championId": "Urgot",
     "mode": "SR",
     "role": "MID",
@@ -38247,7 +37222,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20569,
+    "id": 20549,
     "championId": "Urgot",
     "mode": "SR",
     "role": "SUPPORT",
@@ -38309,7 +37284,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20362,
+    "id": 20365,
     "championId": "Urgot",
     "mode": "SR",
     "role": "TOP",
@@ -38489,7 +37464,7 @@
     "sampleSize": 165
   },
   {
-    "id": 20531,
+    "id": 20515,
     "championId": "Varus",
     "mode": "SR",
     "role": "MID",
@@ -38560,68 +37535,6 @@
       "Aggregated from 5 challenger/grandmaster/master games on patch 16.13 · 60% win rate."
     ],
     "winRate": 60,
-    "sampleSize": 5
-  },
-  {
-    "id": 20532,
-    "championId": "Varus",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1086
-    ],
-    "coreItems": [
-      2510,
-      3087,
-      3124
-    ],
-    "coreItemStats": {
-      "2510": {
-        "games": 2,
-        "pickRate": 40,
-        "winRate": 0
-      },
-      "3087": {
-        "games": 3,
-        "pickRate": 60,
-        "winRate": 33
-      },
-      "3124": {
-        "games": 2,
-        "pickRate": 40,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020,
-      3006
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8005,
-    "primaryRuneIds": [
-      9111,
-      9104,
-      8017
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8275,
-      8210
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "W > Q > E",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.13 · 40% win rate."
-    ],
-    "winRate": 40,
     "sampleSize": 5
   },
   {
@@ -38708,7 +37621,7 @@
     "sampleSize": 46
   },
   {
-    "id": 20124,
+    "id": 20125,
     "championId": "Vayne",
     "mode": "SR",
     "role": "ADC",
@@ -38813,7 +37726,7 @@
     "sampleSize": 206
   },
   {
-    "id": 20254,
+    "id": 20258,
     "championId": "Vayne",
     "mode": "SR",
     "role": "JUNGLE",
@@ -38918,7 +37831,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20348,
+    "id": 20352,
     "championId": "Vayne",
     "mode": "SR",
     "role": "MID",
@@ -39005,7 +37918,7 @@
     "sampleSize": 28
   },
   {
-    "id": 20114,
+    "id": 20116,
     "championId": "Vayne",
     "mode": "SR",
     "role": "TOP",
@@ -39095,7 +38008,7 @@
     "sampleSize": 306
   },
   {
-    "id": 20258,
+    "id": 20262,
     "championId": "Veigar",
     "mode": "SR",
     "role": "ADC",
@@ -39195,7 +38108,7 @@
     "sampleSize": 120
   },
   {
-    "id": 20175,
+    "id": 20176,
     "championId": "Veigar",
     "mode": "SR",
     "role": "MID",
@@ -39290,7 +38203,7 @@
     "sampleSize": 116
   },
   {
-    "id": 20418,
+    "id": 20415,
     "championId": "Veigar",
     "mode": "SR",
     "role": "SUPPORT",
@@ -39373,7 +38286,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20507,
+    "id": 20491,
     "championId": "Veigar",
     "mode": "SR",
     "role": "TOP",
@@ -39468,7 +38381,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20110,
+    "id": 20112,
     "championId": "Velkoz",
     "mode": "SR",
     "role": "ADC",
@@ -39553,7 +38466,7 @@
     "sampleSize": 163
   },
   {
-    "id": 20308,
+    "id": 20309,
     "championId": "Velkoz",
     "mode": "SR",
     "role": "MID",
@@ -39636,7 +38549,7 @@
     "sampleSize": 61
   },
   {
-    "id": 20260,
+    "id": 20264,
     "championId": "Velkoz",
     "mode": "SR",
     "role": "SUPPORT",
@@ -39724,7 +38637,7 @@
     "sampleSize": 166
   },
   {
-    "id": 20482,
+    "id": 20470,
     "championId": "Velkoz",
     "mode": "SR",
     "role": "TOP",
@@ -39812,7 +38725,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20411,
+    "id": 20408,
     "championId": "Vex",
     "mode": "SR",
     "role": "ADC",
@@ -39879,7 +38792,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20337,
+    "id": 20341,
     "championId": "Vex",
     "mode": "SR",
     "role": "MID",
@@ -39953,7 +38866,7 @@
     "sampleSize": 142
   },
   {
-    "id": 20461,
+    "id": 20452,
     "championId": "Vex",
     "mode": "SR",
     "role": "TOP",
@@ -40116,7 +39029,7 @@
     "sampleSize": 270
   },
   {
-    "id": 20241,
+    "id": 20245,
     "championId": "Vi",
     "mode": "SR",
     "role": "MID",
@@ -40178,7 +39091,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20424,
+    "id": 20421,
     "championId": "Vi",
     "mode": "SR",
     "role": "SUPPORT",
@@ -40234,7 +39147,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20251,
+    "id": 20255,
     "championId": "Vi",
     "mode": "SR",
     "role": "TOP",
@@ -40290,7 +39203,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20385,
+    "id": 20386,
     "championId": "Viego",
     "mode": "SR",
     "role": "ADC",
@@ -40346,7 +39259,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20185,
+    "id": 20187,
     "championId": "Viego",
     "mode": "SR",
     "role": "JUNGLE",
@@ -40431,7 +39344,7 @@
     "sampleSize": 582
   },
   {
-    "id": 20515,
+    "id": 20499,
     "championId": "Viego",
     "mode": "SR",
     "role": "MID",
@@ -40584,7 +39497,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20278,
+    "id": 20281,
     "championId": "Viktor",
     "mode": "SR",
     "role": "ADC",
@@ -40684,7 +39597,7 @@
     "sampleSize": 91
   },
   {
-    "id": 20105,
+    "id": 20107,
     "championId": "Viktor",
     "mode": "SR",
     "role": "MID",
@@ -40779,7 +39692,7 @@
     "sampleSize": 511
   },
   {
-    "id": 20377,
+    "id": 20378,
     "championId": "Viktor",
     "mode": "SR",
     "role": "TOP",
@@ -40873,7 +39786,7 @@
     "sampleSize": 31
   },
   {
-    "id": 20277,
+    "id": 20280,
     "championId": "Vladimir",
     "mode": "SR",
     "role": "ADC",
@@ -40952,7 +39865,7 @@
     "sampleSize": 129
   },
   {
-    "id": 20151,
+    "id": 20153,
     "championId": "Vladimir",
     "mode": "SR",
     "role": "MID",
@@ -41110,7 +40023,7 @@
     "sampleSize": 140
   },
   {
-    "id": 20346,
+    "id": 20350,
     "championId": "Volibear",
     "mode": "SR",
     "role": "JUNGLE",
@@ -41194,7 +40107,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20369,
+    "id": 20371,
     "championId": "Volibear",
     "mode": "SR",
     "role": "MID",
@@ -41250,7 +40163,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20100,
+    "id": 20102,
     "championId": "Volibear",
     "mode": "SR",
     "role": "TOP",
@@ -41330,7 +40243,7 @@
     "sampleSize": 65
   },
   {
-    "id": 20101,
+    "id": 20103,
     "championId": "Volibear",
     "mode": "SR",
     "role": "TOP",
@@ -41423,7 +40336,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20374,
+    "id": 20375,
     "championId": "Warwick",
     "mode": "SR",
     "role": "JUNGLE",
@@ -41522,7 +40435,7 @@
     "sampleSize": 82
   },
   {
-    "id": 20587,
+    "id": 20567,
     "championId": "Warwick",
     "mode": "SR",
     "role": "MID",
@@ -41584,7 +40497,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20343,
+    "id": 20347,
     "championId": "Warwick",
     "mode": "SR",
     "role": "TOP",
@@ -41669,7 +40582,7 @@
     "sampleSize": 63
   },
   {
-    "id": 20195,
+    "id": 20198,
     "championId": "Xayah",
     "mode": "SR",
     "role": "ADC",
@@ -41759,7 +40672,7 @@
     "sampleSize": 218
   },
   {
-    "id": 20589,
+    "id": 20569,
     "championId": "Xayah",
     "mode": "SR",
     "role": "MID",
@@ -41821,7 +40734,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20219,
+    "id": 20223,
     "championId": "Xerath",
     "mode": "SR",
     "role": "ADC",
@@ -41906,7 +40819,7 @@
     "sampleSize": 197
   },
   {
-    "id": 20072,
+    "id": 20074,
     "championId": "Xerath",
     "mode": "SR",
     "role": "MID",
@@ -41991,7 +40904,7 @@
     "sampleSize": 208
   },
   {
-    "id": 20087,
+    "id": 20089,
     "championId": "Xerath",
     "mode": "SR",
     "role": "SUPPORT",
@@ -42059,7 +40972,7 @@
     "sampleSize": 72
   },
   {
-    "id": 20473,
+    "id": 20464,
     "championId": "XinZhao",
     "mode": "SR",
     "role": "ADC",
@@ -42127,63 +41040,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20474,
-    "championId": "XinZhao",
-    "mode": "SR",
-    "role": "ADC",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      3087,
-      2510
-    ],
-    "coreItemStats": {
-      "2510": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 33
-      },
-      "3087": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3008,
-      3111
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 9923,
-    "primaryRuneIds": [
-      8139,
-      8137,
-      8105
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8473,
-      8453
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 3
-  },
-  {
-    "id": 20088,
+    "id": 20090,
     "championId": "XinZhao",
     "mode": "SR",
     "role": "JUNGLE",
@@ -42262,7 +41119,7 @@
     "sampleSize": 211
   },
   {
-    "id": 20449,
+    "id": 20443,
     "championId": "XinZhao",
     "mode": "SR",
     "role": "MID",
@@ -42337,80 +41194,6 @@
     ],
     "winRate": 54.5,
     "sampleSize": 11
-  },
-  {
-    "id": 20450,
-    "championId": "XinZhao",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      3100,
-      3115,
-      2510,
-      4633,
-      3157
-    ],
-    "coreItemStats": {
-      "2510": {
-        "games": 3,
-        "pickRate": 50,
-        "winRate": 67
-      },
-      "3100": {
-        "games": 2,
-        "pickRate": 33,
-        "winRate": 50
-      },
-      "3115": {
-        "games": 2,
-        "pickRate": 33,
-        "winRate": 50
-      },
-      "3157": {
-        "games": 3,
-        "pickRate": 50,
-        "winRate": 67
-      },
-      "4633": {
-        "games": 3,
-        "pickRate": 50,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3008,
-      3158
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8230,
-    "primaryRuneIds": [
-      8226,
-      8233,
-      8237
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      9111,
-      8014
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 6 challenger/grandmaster/master games on patch 16.13 · 50% win rate."
-    ],
-    "winRate": 50,
-    "sampleSize": 6
   },
   {
     "id": 20000,
@@ -42574,7 +41357,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20274,
+    "id": 20277,
     "championId": "Yasuo",
     "mode": "SR",
     "role": "ADC",
@@ -42748,7 +41531,7 @@
     "sampleSize": 438
   },
   {
-    "id": 20078,
+    "id": 20080,
     "championId": "Yasuo",
     "mode": "SR",
     "role": "TOP",
@@ -42832,7 +41615,7 @@
     "sampleSize": 202
   },
   {
-    "id": 20295,
+    "id": 20297,
     "championId": "Yone",
     "mode": "SR",
     "role": "ADC",
@@ -42909,7 +41692,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20534,
+    "id": 20517,
     "championId": "Yone",
     "mode": "SR",
     "role": "JUNGLE",
@@ -42964,7 +41747,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20130,
+    "id": 20131,
     "championId": "Yone",
     "mode": "SR",
     "role": "MID",
@@ -43059,7 +41842,7 @@
     "sampleSize": 446
   },
   {
-    "id": 20197,
+    "id": 20200,
     "championId": "Yone",
     "mode": "SR",
     "role": "TOP",
@@ -43144,7 +41927,7 @@
     "sampleSize": 373
   },
   {
-    "id": 20519,
+    "id": 20503,
     "championId": "Yorick",
     "mode": "SR",
     "role": "MID",
@@ -43200,7 +41983,7 @@
     "sampleSize": 3
   },
   {
-    "id": 20170,
+    "id": 20171,
     "championId": "Yorick",
     "mode": "SR",
     "role": "TOP",
@@ -43278,7 +42061,7 @@
     "sampleSize": 155
   },
   {
-    "id": 20234,
+    "id": 20238,
     "championId": "Yunara",
     "mode": "SR",
     "role": "ADC",
@@ -43368,7 +42151,7 @@
     "sampleSize": 328
   },
   {
-    "id": 20199,
+    "id": 20202,
     "championId": "Yuumi",
     "mode": "SR",
     "role": "SUPPORT",
@@ -43455,7 +42238,7 @@
     "sampleSize": 161
   },
   {
-    "id": 20380,
+    "id": 20381,
     "championId": "Zaahen",
     "mode": "SR",
     "role": "JUNGLE",
@@ -43535,7 +42318,7 @@
     "sampleSize": 37
   },
   {
-    "id": 20533,
+    "id": 20516,
     "championId": "Zaahen",
     "mode": "SR",
     "role": "MID",
@@ -43671,7 +42454,7 @@
     "sampleSize": 285
   },
   {
-    "id": 20317,
+    "id": 20318,
     "championId": "Zac",
     "mode": "SR",
     "role": "JUNGLE",
@@ -43756,7 +42539,80 @@
     "sampleSize": 88
   },
   {
-    "id": 20363,
+    "id": 20319,
+    "championId": "Zac",
+    "mode": "SR",
+    "role": "JUNGLE",
+    "archetype": "ap",
+    "patch": "16.13",
+    "starterItems": [
+      1101
+    ],
+    "coreItems": [
+      3152,
+      3068,
+      4633
+    ],
+    "coreItemStats": {
+      "3068": {
+        "games": 15,
+        "pickRate": 56,
+        "winRate": 53
+      },
+      "3152": {
+        "games": 23,
+        "pickRate": 85,
+        "winRate": 57
+      },
+      "4633": {
+        "games": 2,
+        "pickRate": 7,
+        "winRate": 50
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 6653,
+        "condition": "general",
+        "description": "Liandry's Torment — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 3065,
+        "condition": "general",
+        "description": "Spirit Visage — popular alternative (built in 11% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3158,
+      3111
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8300,
+    "secondaryRuneIds": [
+      8347,
+      8304
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > W > Q",
+    "skillStart": "W",
+    "notes": [
+      "Aggregated from 27 challenger/grandmaster/master games on patch 16.13 · 48% win rate."
+    ],
+    "winRate": 48.1,
+    "sampleSize": 27
+  },
+  {
+    "id": 20366,
     "championId": "Zac",
     "mode": "SR",
     "role": "MID",
@@ -43839,75 +42695,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20364,
-    "championId": "Zac",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1054
-    ],
-    "coreItems": [
-      4629,
-      8020,
-      4633,
-      3152
-    ],
-    "coreItemStats": {
-      "3152": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 67
-      },
-      "4629": {
-        "games": 4,
-        "pickRate": 57,
-        "winRate": 0
-      },
-      "4633": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      },
-      "8020": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3047
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8010,
-    "primaryRuneIds": [
-      9111,
-      9105,
-      8299
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8444,
-      8453
-    ],
-    "statRuneIds": [
-      5007,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "E > W > Q",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 16.13 · 29% win rate."
-    ],
-    "winRate": 28.6,
-    "sampleSize": 7
-  },
-  {
-    "id": 20412,
+    "id": 20409,
     "championId": "Zac",
     "mode": "SR",
     "role": "SUPPORT",
@@ -43997,7 +42785,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20058,
+    "id": 20059,
     "championId": "Zac",
     "mode": "SR",
     "role": "TOP",
@@ -44076,7 +42864,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20136,
+    "id": 20138,
     "championId": "Zed",
     "mode": "SR",
     "role": "JUNGLE",
@@ -44271,7 +43059,7 @@
     "sampleSize": 454
   },
   {
-    "id": 20487,
+    "id": 20474,
     "championId": "Zed",
     "mode": "SR",
     "role": "SUPPORT",
@@ -44332,7 +43120,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20332,
+    "id": 20336,
     "championId": "Zed",
     "mode": "SR",
     "role": "TOP",
@@ -44427,7 +43215,7 @@
     "sampleSize": 62
   },
   {
-    "id": 20137,
+    "id": 20139,
     "championId": "Zeri",
     "mode": "SR",
     "role": "ADC",
@@ -44527,7 +43315,7 @@
     "sampleSize": 304
   },
   {
-    "id": 20365,
+    "id": 20367,
     "championId": "Zeri",
     "mode": "SR",
     "role": "MID",
@@ -44595,7 +43383,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20459,
+    "id": 20450,
     "championId": "Zeri",
     "mode": "SR",
     "role": "TOP",
@@ -44657,7 +43445,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20203,
+    "id": 20207,
     "championId": "Ziggs",
     "mode": "SR",
     "role": "ADC",
@@ -44752,7 +43540,7 @@
     "sampleSize": 388
   },
   {
-    "id": 20366,
+    "id": 20368,
     "championId": "Ziggs",
     "mode": "SR",
     "role": "MID",
@@ -44842,7 +43630,7 @@
     "sampleSize": 37
   },
   {
-    "id": 20428,
+    "id": 20424,
     "championId": "Zilean",
     "mode": "SR",
     "role": "ADC",
@@ -44903,7 +43691,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20165,
+    "id": 20166,
     "championId": "Zilean",
     "mode": "SR",
     "role": "MID",
@@ -44982,7 +43770,7 @@
     "sampleSize": 28
   },
   {
-    "id": 20177,
+    "id": 20178,
     "championId": "Zilean",
     "mode": "SR",
     "role": "SUPPORT",
@@ -45072,7 +43860,7 @@
     "sampleSize": 152
   },
   {
-    "id": 20178,
+    "id": 20179,
     "championId": "Zilean",
     "mode": "SR",
     "role": "SUPPORT",
@@ -45151,7 +43939,75 @@
     "sampleSize": 60
   },
   {
-    "id": 20334,
+    "id": 20180,
+    "championId": "Zilean",
+    "mode": "SR",
+    "role": "SUPPORT",
+    "archetype": "ad",
+    "patch": "16.13",
+    "starterItems": [
+      3865
+    ],
+    "coreItems": [
+      2065,
+      2524,
+      3190,
+      3109
+    ],
+    "coreItemStats": {
+      "2065": {
+        "games": 28,
+        "pickRate": 60,
+        "winRate": 43
+      },
+      "2524": {
+        "games": 47,
+        "pickRate": 100,
+        "winRate": 40
+      },
+      "3109": {
+        "games": 2,
+        "pickRate": 4,
+        "winRate": 100
+      },
+      "3190": {
+        "games": 5,
+        "pickRate": 11,
+        "winRate": 80
+      }
+    },
+    "situationalItems": [],
+    "bootsOptions": [
+      3158,
+      3009
+    ],
+    "primaryPathId": 8200,
+    "keystoneId": 8214,
+    "primaryRuneIds": [
+      8226,
+      8210,
+      8232
+    ],
+    "secondaryPathId": 8300,
+    "secondaryRuneIds": [
+      8347,
+      8313
+    ],
+    "statRuneIds": [
+      5007,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "Q > E > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 47 challenger/grandmaster/master games on patch 16.13 · 40% win rate."
+    ],
+    "winRate": 40.4,
+    "sampleSize": 47
+  },
+  {
+    "id": 20338,
     "championId": "Zilean",
     "mode": "SR",
     "role": "TOP",
@@ -45231,7 +44087,7 @@
     "sampleSize": 36
   },
   {
-    "id": 20148,
+    "id": 20150,
     "championId": "Zoe",
     "mode": "SR",
     "role": "ADC",
@@ -45293,7 +44149,7 @@
     "sampleSize": 4
   },
   {
-    "id": 20224,
+    "id": 20228,
     "championId": "Zoe",
     "mode": "SR",
     "role": "MID",
@@ -45376,7 +44232,7 @@
     "sampleSize": 180
   },
   {
-    "id": 20283,
+    "id": 20285,
     "championId": "Zoe",
     "mode": "SR",
     "role": "SUPPORT",
@@ -45461,7 +44317,7 @@
     "sampleSize": 68
   },
   {
-    "id": 20403,
+    "id": 20401,
     "championId": "Zoe",
     "mode": "SR",
     "role": "TOP",
@@ -45566,7 +44422,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20328,
+    "id": 20330,
     "championId": "Zyra",
     "mode": "SR",
     "role": "ADC",
@@ -45640,7 +44496,7 @@
     "sampleSize": 64
   },
   {
-    "id": 20188,
+    "id": 20191,
     "championId": "Zyra",
     "mode": "SR",
     "role": "JUNGLE",
@@ -45720,7 +44576,7 @@
     "sampleSize": 111
   },
   {
-    "id": 20471,
+    "id": 20462,
     "championId": "Zyra",
     "mode": "SR",
     "role": "MID",
@@ -45782,7 +44638,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20275,
+    "id": 20278,
     "championId": "Zyra",
     "mode": "SR",
     "role": "SUPPORT",
@@ -45862,7 +44718,7 @@
     "sampleSize": 72
   },
   {
-    "id": 20563,
+    "id": 20544,
     "championId": "Zyra",
     "mode": "SR",
     "role": "TOP",

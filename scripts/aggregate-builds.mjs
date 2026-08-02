@@ -511,16 +511,30 @@ function rankedClusters(group, items) {
 }
 
 // A secondary archetype is surfaced as a selectable variant only when it's a
-// real alternative — at least this fraction as common as the dominant build,
-// and clearing the sample floor. Keeps fringe/chimera clusters out.
+// real alternative: at least this fraction as common as the dominant build,
+// AND clearing an absolute sample floor of its own. The fraction alone isn't
+// enough — SR's per-role grouping means an off-role group's dominant cluster
+// can itself be tiny (e.g. 3 games), so "34% as common as dominant" let
+// literal 3-game troll picks (Sion SUPPORT, XinZhao ADC, …) through as if
+// they were real build alternatives. VARIANT_MIN_ABSOLUTE closes that gap
+// regardless of the fraction setting.
 //
-// ARAM gets a looser bar deliberately: off-meta picks (AP Blitzcrank, AD
-// Shaco, Tank Malphite, …) are a real, popular part of ARAM in a way they
-// aren't in ranked SR/Arena. Verified against the cached match set
-// (2026-08-02): at 0.20 every newly-surfaced ARAM variant still clears 20+
-// games (up to 183) — looser than that (~0.10 and below) starts admitting
-// single-digit-game flukes as if they were real builds.
-const VARIANT_MIN_FRACTION = MODE === 'aram' ? 0.2 : 0.34
+// ARAM and SR get a looser fraction than Arena deliberately: off-meta picks
+// (AP Blitzcrank, AD Shaco, Katarina AP/AD, …) are a real, popular part of
+// both modes. Arena stays strict — its build data is thin even for primary
+// builds (median ~15 games; only ~250 matches have ever had a timeline
+// fetched for the aggregator), so any secondary cluster there is noise no
+// matter the fraction (verified 2026-08-02: even at 0.20, Arena's largest
+// secondary sample was 14 games).
+//
+// Verified against the cached match set (2026-08-02):
+//   - ARAM at 0.20: every newly-surfaced variant clears 20+ games (up to 183).
+//   - SR at 0.20 + a 15-game absolute floor: 36 clean variants (Katarina
+//     MID ap/ad, Shaco JUNGLE ad/ap, Lulu SUPPORT ap/ad, …), zero noise.
+//   - Looser than ~0.10 (either mode) starts admitting single-digit-game
+//     flukes as if they were real builds.
+const VARIANT_MIN_FRACTION = MODE === 'arena' ? 0.34 : 0.2
+const VARIANT_MIN_ABSOLUTE = 15
 const MAX_VARIANTS = 3
 
 // Comp-conditioned situational items: an item is "situational vs condition C"
@@ -840,7 +854,12 @@ async function main() {
     if (!clusters.length || clusters[0].obs.length < minSample) continue
     const primaryN = clusters[0].obs.length
     const chosen = clusters
-      .filter((c, i) => c.obs.length >= minSample && (i === 0 || c.obs.length >= primaryN * VARIANT_MIN_FRACTION))
+      .filter(
+        (c, i) =>
+          c.obs.length >= minSample &&
+          (i === 0 ||
+            (c.obs.length >= primaryN * VARIANT_MIN_FRACTION && c.obs.length >= VARIANT_MIN_ABSOLUTE)),
+      )
       .slice(0, MAX_VARIANTS)
     for (const c of chosen) builds.push(toBuildPath(c.obs, statik.items, c.archetype))
   }

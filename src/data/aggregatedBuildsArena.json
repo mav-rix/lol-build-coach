@@ -1,6 +1,6 @@
 [
   {
-    "id": 20121,
+    "id": 20094,
     "championId": "Aatrox",
     "mode": "ARENA",
     "role": null,
@@ -88,47 +88,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20122,
-    "championId": "Aatrox",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223005,
-      223111
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 6 challenger/grandmaster/master games on patch 15.5 · 17% win rate."
-    ],
-    "winRate": 16.7,
-    "sampleSize": 6
-  },
-  {
-    "id": 20184,
+    "id": 20149,
     "championId": "Ahri",
     "mode": "ARENA",
     "role": null,
@@ -215,7 +175,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20080,
+    "id": 20064,
     "championId": "Akali",
     "mode": "ARENA",
     "role": null,
@@ -291,7 +251,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20071,
+    "id": 20057,
     "championId": "Akshan",
     "mode": "ARENA",
     "role": null,
@@ -389,7 +349,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20199,
+    "id": 20162,
     "championId": "Alistar",
     "mode": "ARENA",
     "role": null,
@@ -466,7 +426,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20052,
+    "id": 20042,
     "championId": "Ambessa",
     "mode": "ARENA",
     "role": null,
@@ -552,7 +512,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20110,
+    "id": 20086,
     "championId": "Amumu",
     "mode": "ARENA",
     "role": null,
@@ -635,79 +595,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20111,
-    "championId": "Amumu",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      223068,
-      223084,
-      226653,
-      223118,
-      223165
-    ],
-    "coreItemStats": {
-      "223068": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      },
-      "223084": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 33
-      },
-      "223118": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      },
-      "223165": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 100
-      },
-      "226653": {
-        "games": 6,
-        "pickRate": 86,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223020,
-      223111
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 16.9 · 57% win rate."
-    ],
-    "winRate": 57.1,
-    "sampleSize": 7
-  },
-  {
-    "id": 20185,
+    "id": 20150,
     "championId": "Anivia",
     "mode": "ARENA",
     "role": null,
@@ -784,7 +672,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20086,
+    "id": 20068,
     "championId": "Annie",
     "mode": "ARENA",
     "role": null,
@@ -872,7 +760,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20131,
+    "id": 20102,
     "championId": "Aphelios",
     "mode": "ARENA",
     "role": null,
@@ -937,7 +825,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20197,
+    "id": 20161,
     "championId": "Ashe",
     "mode": "ARENA",
     "role": null,
@@ -1028,47 +916,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20198,
-    "championId": "Ashe",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223158,
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "W > Q > E",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 16.9 · 14% win rate."
-    ],
-    "winRate": 14.3,
-    "sampleSize": 7
-  },
-  {
-    "id": 20047,
+    "id": 20038,
     "championId": "AurelionSol",
     "mode": "ARENA",
     "role": null,
@@ -1150,7 +998,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20048,
+    "id": 20039,
     "championId": "Aurora",
     "mode": "ARENA",
     "role": null,
@@ -1238,7 +1086,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20174,
+    "id": 20140,
     "championId": "Azir",
     "mode": "ARENA",
     "role": null,
@@ -1319,61 +1167,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20175,
-    "championId": "Azir",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "16.1",
-    "starterItems": [],
-    "coreItems": [
-      223115,
-      222510
-    ],
-    "coreItemStats": {
-      "222510": {
-        "games": 2,
-        "pickRate": 40,
-        "winRate": 0
-      },
-      "223115": {
-        "games": 5,
-        "pickRate": 100,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223006,
-      223020
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.1 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 5
-  },
-  {
-    "id": 20145,
+    "id": 20115,
     "championId": "Bard",
     "mode": "ARENA",
     "role": null,
@@ -1466,55 +1260,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20146,
-    "championId": "Bard",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      223115
-    ],
-    "coreItemStats": {
-      "223115": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223006,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 16.9 · 14% win rate."
-    ],
-    "winRate": 14.3,
-    "sampleSize": 7
-  },
-  {
-    "id": 20102,
+    "id": 20080,
     "championId": "Belveth",
     "mode": "ARENA",
     "role": null,
@@ -1586,7 +1332,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20164,
+    "id": 20132,
     "championId": "Blitzcrank",
     "mode": "ARENA",
     "role": null,
@@ -1674,73 +1420,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20165,
-    "championId": "Blitzcrank",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      223004,
-      223508,
-      223031,
-      223039
-    ],
-    "coreItemStats": {
-      "223004": {
-        "games": 3,
-        "pickRate": 38,
-        "winRate": 100
-      },
-      "223031": {
-        "games": 3,
-        "pickRate": 38,
-        "winRate": 67
-      },
-      "223039": {
-        "games": 2,
-        "pickRate": 25,
-        "winRate": 100
-      },
-      "223508": {
-        "games": 2,
-        "pickRate": 25,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223158,
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 8 challenger/grandmaster/master games on patch 16.9 · 50% win rate."
-    ],
-    "winRate": 50,
-    "sampleSize": 8
-  },
-  {
-    "id": 20006,
+    "id": 20005,
     "championId": "Brand",
     "mode": "ARENA",
     "role": null,
@@ -1833,7 +1513,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20127,
+    "id": 20098,
     "championId": "Braum",
     "mode": "ARENA",
     "role": null,
@@ -1916,7 +1596,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20129,
+    "id": 20100,
     "championId": "Briar",
     "mode": "ARENA",
     "role": null,
@@ -2013,7 +1693,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20144,
+    "id": 20114,
     "championId": "Caitlyn",
     "mode": "ARENA",
     "role": null,
@@ -2090,7 +1770,7 @@
     "sampleSize": 36
   },
   {
-    "id": 20013,
+    "id": 20011,
     "championId": "Camille",
     "mode": "ARENA",
     "role": null,
@@ -2178,7 +1858,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20203,
+    "id": 20166,
     "championId": "Cassiopeia",
     "mode": "ARENA",
     "role": null,
@@ -2264,7 +1944,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20074,
+    "id": 20060,
     "championId": "Chogath",
     "mode": "ARENA",
     "role": null,
@@ -2342,7 +2022,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20066,
+    "id": 20054,
     "championId": "Corki",
     "mode": "ARENA",
     "role": null,
@@ -2420,7 +2100,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20030,
+    "id": 20024,
     "championId": "Darius",
     "mode": "ARENA",
     "role": null,
@@ -2523,7 +2203,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20045,
+    "id": 20036,
     "championId": "Diana",
     "mode": "ARENA",
     "role": null,
@@ -2606,7 +2286,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20007,
+    "id": 20006,
     "championId": "Draven",
     "mode": "ARENA",
     "role": null,
@@ -2684,7 +2364,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20159,
+    "id": 20128,
     "championId": "DrMundo",
     "mode": "ARENA",
     "role": null,
@@ -2767,7 +2447,7 @@
     "sampleSize": 31
   },
   {
-    "id": 20059,
+    "id": 20049,
     "championId": "Ekko",
     "mode": "ARENA",
     "role": null,
@@ -2854,7 +2534,7 @@
     "sampleSize": 24
   },
   {
-    "id": 20022,
+    "id": 20019,
     "championId": "Elise",
     "mode": "ARENA",
     "role": null,
@@ -2920,47 +2600,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20023,
-    "championId": "Elise",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223020,
-      223111
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.9 · 40% win rate."
-    ],
-    "winRate": 40,
-    "sampleSize": 5
-  },
-  {
-    "id": 20081,
+    "id": 20065,
     "championId": "Evelynn",
     "mode": "ARENA",
     "role": null,
@@ -3025,7 +2665,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20117,
+    "id": 20091,
     "championId": "Ezreal",
     "mode": "ARENA",
     "role": null,
@@ -3112,79 +2752,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20118,
-    "championId": "Ezreal",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      223004,
-      223003,
-      223100,
-      223157,
-      223089
-    ],
-    "coreItemStats": {
-      "223003": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 100
-      },
-      "223004": {
-        "games": 4,
-        "pickRate": 44,
-        "winRate": 75
-      },
-      "223089": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 0
-      },
-      "223100": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 0
-      },
-      "223157": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 100
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223158,
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.9 · 44% win rate."
-    ],
-    "winRate": 44.4,
-    "sampleSize": 9
-  },
-  {
-    "id": 20170,
+    "id": 20137,
     "championId": "Fiddlesticks",
     "mode": "ARENA",
     "role": null,
@@ -3256,7 +2824,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20107,
+    "id": 20084,
     "championId": "Fiora",
     "mode": "ARENA",
     "role": null,
@@ -3338,7 +2906,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20106,
+    "id": 20083,
     "championId": "Fizz",
     "mode": "ARENA",
     "role": null,
@@ -3435,7 +3003,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20021,
+    "id": 20018,
     "championId": "Galio",
     "mode": "ARENA",
     "role": null,
@@ -3528,7 +3096,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20160,
+    "id": 20129,
     "championId": "Gangplank",
     "mode": "ARENA",
     "role": null,
@@ -3604,7 +3172,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20092,
+    "id": 20072,
     "championId": "Garen",
     "mode": "ARENA",
     "role": null,
@@ -3664,7 +3232,7 @@
     "sampleSize": 23
   },
   {
-    "id": 20158,
+    "id": 20127,
     "championId": "Gnar",
     "mode": "ARENA",
     "role": null,
@@ -3747,7 +3315,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20143,
+    "id": 20113,
     "championId": "Gragas",
     "mode": "ARENA",
     "role": null,
@@ -3829,7 +3397,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20067,
+    "id": 20055,
     "championId": "Graves",
     "mode": "ARENA",
     "role": null,
@@ -3905,7 +3473,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20049,
+    "id": 20040,
     "championId": "Gwen",
     "mode": "ARENA",
     "role": null,
@@ -3988,7 +3556,7 @@
     "sampleSize": 23
   },
   {
-    "id": 20167,
+    "id": 20134,
     "championId": "Hecarim",
     "mode": "ARENA",
     "role": null,
@@ -4065,7 +3633,7 @@
     "sampleSize": 23
   },
   {
-    "id": 20087,
+    "id": 20069,
     "championId": "Heimerdinger",
     "mode": "ARENA",
     "role": null,
@@ -4136,7 +3704,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20114,
+    "id": 20089,
     "championId": "Hwei",
     "mode": "ARENA",
     "role": null,
@@ -4208,47 +3776,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20115,
-    "championId": "Hwei",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223020,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.9 · 40% win rate."
-    ],
-    "winRate": 40,
-    "sampleSize": 5
-  },
-  {
-    "id": 20064,
+    "id": 20053,
     "championId": "Illaoi",
     "mode": "ARENA",
     "role": null,
@@ -4323,55 +3851,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20065,
-    "championId": "Illaoi",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "tank",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      223084
-    ],
-    "coreItemStats": {
-      "223084": {
-        "games": 6,
-        "pickRate": 100,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223111,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 6 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 6
-  },
-  {
-    "id": 20206,
+    "id": 20169,
     "championId": "Irelia",
     "mode": "ARENA",
     "role": null,
@@ -4443,7 +3923,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20018,
+    "id": 20015,
     "championId": "Ivern",
     "mode": "ARENA",
     "role": null,
@@ -4509,7 +3989,7 @@
     "sampleSize": 8
   },
   {
-    "id": 20088,
+    "id": 20070,
     "championId": "Janna",
     "mode": "ARENA",
     "role": null,
@@ -4563,95 +4043,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20089,
-    "championId": "Janna",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.13",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223009,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 15.13 · 14% win rate."
-    ],
-    "winRate": 14.3,
-    "sampleSize": 7
-  },
-  {
-    "id": 20090,
-    "championId": "Janna",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "15.13",
-    "starterItems": [],
-    "coreItems": [
-      223115
-    ],
-    "coreItemStats": {
-      "223115": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223009,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 15.13 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 3
-  },
-  {
-    "id": 20017,
+    "id": 20014,
     "championId": "JarvanIV",
     "mode": "ARENA",
     "role": null,
@@ -4744,7 +4136,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20060,
+    "id": 20050,
     "championId": "Jax",
     "mode": "ARENA",
     "role": null,
@@ -4835,7 +4227,7 @@
     "sampleSize": 24
   },
   {
-    "id": 20057,
+    "id": 20047,
     "championId": "Jayce",
     "mode": "ARENA",
     "role": null,
@@ -4922,7 +4314,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20044,
+    "id": 20035,
     "championId": "Jhin",
     "mode": "ARENA",
     "role": null,
@@ -5004,7 +4396,7 @@
     "sampleSize": 34
   },
   {
-    "id": 20010,
+    "id": 20008,
     "championId": "Jinx",
     "mode": "ARENA",
     "role": null,
@@ -5085,7 +4477,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20003,
+    "id": 20002,
     "championId": "Kaisa",
     "mode": "ARENA",
     "role": null,
@@ -5173,7 +4565,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20053,
+    "id": 20043,
     "championId": "Kalista",
     "mode": "ARENA",
     "role": null,
@@ -5264,7 +4656,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20177,
+    "id": 20142,
     "championId": "Karma",
     "mode": "ARENA",
     "role": null,
@@ -5362,7 +4754,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20140,
+    "id": 20110,
     "championId": "Karthus",
     "mode": "ARENA",
     "role": null,
@@ -5460,7 +4852,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20134,
+    "id": 20105,
     "championId": "Kassadin",
     "mode": "ARENA",
     "role": null,
@@ -5536,7 +4928,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20024,
+    "id": 20020,
     "championId": "Katarina",
     "mode": "ARENA",
     "role": null,
@@ -5639,94 +5031,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20025,
-    "championId": "Katarina",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      223146,
-      224645,
-      223089,
-      223087
-    ],
-    "coreItemStats": {
-      "223087": {
-        "games": 2,
-        "pickRate": 14,
-        "winRate": 50
-      },
-      "223089": {
-        "games": 11,
-        "pickRate": 79,
-        "winRate": 55
-      },
-      "223146": {
-        "games": 8,
-        "pickRate": 57,
-        "winRate": 50
-      },
-      "224645": {
-        "games": 6,
-        "pickRate": 43,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 223115,
-        "condition": "general",
-        "description": "Nashor's Tooth — popular alternative (built in 29% of games)"
-      },
-      {
-        "itemId": 223157,
-        "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 21% of games)"
-      },
-      {
-        "itemId": 226653,
-        "condition": "general",
-        "description": "Liandry's Anguish — popular alternative (built in 14% of games)"
-      },
-      {
-        "itemId": 224633,
-        "condition": "general",
-        "description": "Riftmaker — popular alternative (built in 14% of games)"
-      }
-    ],
-    "bootsOptions": [
-      223020,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.9 · 50% win rate."
-    ],
-    "winRate": 50,
-    "sampleSize": 14
-  },
-  {
-    "id": 20128,
+    "id": 20099,
     "championId": "Kayle",
     "mode": "ARENA",
     "role": null,
@@ -5829,7 +5134,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20189,
+    "id": 20153,
     "championId": "Kayn",
     "mode": "ARENA",
     "role": null,
@@ -5922,7 +5227,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20008,
+    "id": 20007,
     "championId": "Kennen",
     "mode": "ARENA",
     "role": null,
@@ -6002,46 +5307,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20009,
-    "championId": "Kennen",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.1",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223020
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.1 · 50% win rate."
-    ],
-    "winRate": 50,
-    "sampleSize": 4
-  },
-  {
-    "id": 20182,
+    "id": 20147,
     "championId": "Khazix",
     "mode": "ARENA",
     "role": null,
@@ -6119,7 +5385,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20124,
+    "id": 20096,
     "championId": "Kindred",
     "mode": "ARENA",
     "role": null,
@@ -6191,46 +5457,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20125,
-    "championId": "Kindred",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 15.5 · 25% win rate."
-    ],
-    "winRate": 25,
-    "sampleSize": 4
-  },
-  {
-    "id": 20061,
+    "id": 20051,
     "championId": "Kled",
     "mode": "ARENA",
     "role": null,
@@ -6323,7 +5550,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20157,
+    "id": 20126,
     "championId": "KogMaw",
     "mode": "ARENA",
     "role": null,
@@ -6415,7 +5642,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20100,
+    "id": 20078,
     "championId": "KSante",
     "mode": "ARENA",
     "role": null,
@@ -6513,7 +5740,7 @@
     "sampleSize": 24
   },
   {
-    "id": 20091,
+    "id": 20071,
     "championId": "Leblanc",
     "mode": "ARENA",
     "role": null,
@@ -6585,7 +5812,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20027,
+    "id": 20022,
     "championId": "LeeSin",
     "mode": "ARENA",
     "role": null,
@@ -6625,85 +5852,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20028,
-    "championId": "LeeSin",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      226692,
-      223071,
-      226610,
-      223031,
-      223748
-    ],
-    "coreItemStats": {
-      "223031": {
-        "games": 4,
-        "pickRate": 33,
-        "winRate": 75
-      },
-      "223071": {
-        "games": 3,
-        "pickRate": 25,
-        "winRate": 33
-      },
-      "223748": {
-        "games": 2,
-        "pickRate": 17,
-        "winRate": 100
-      },
-      "226610": {
-        "games": 5,
-        "pickRate": 42,
-        "winRate": 60
-      },
-      "226692": {
-        "games": 4,
-        "pickRate": 33,
-        "winRate": 100
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 226696,
-        "condition": "general",
-        "description": "Axiom Arc — popular alternative (built in 17% of games)"
-      }
-    ],
-    "bootsOptions": [
-      223047,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 12 challenger/grandmaster/master games on patch 16.9 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 12
-  },
-  {
-    "id": 20042,
+    "id": 20033,
     "championId": "Leona",
     "mode": "ARENA",
     "role": null,
@@ -6775,7 +5924,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20072,
+    "id": 20058,
     "championId": "Lillia",
     "mode": "ARENA",
     "role": null,
@@ -6860,7 +6009,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20097,
+    "id": 20075,
     "championId": "Lissandra",
     "mode": "ARENA",
     "role": null,
@@ -6940,7 +6089,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20112,
+    "id": 20087,
     "championId": "Lucian",
     "mode": "ARENA",
     "role": null,
@@ -7028,7 +6177,7 @@
     "sampleSize": 31
   },
   {
-    "id": 20068,
+    "id": 20056,
     "championId": "Lulu",
     "mode": "ARENA",
     "role": null,
@@ -7105,106 +6254,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20069,
-    "championId": "Lulu",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      223504,
-      223153,
-      223124
-    ],
-    "coreItemStats": {
-      "223124": {
-        "games": 4,
-        "pickRate": 57,
-        "winRate": 75
-      },
-      "223153": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 100
-      },
-      "223504": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223006,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "E > W > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 16.9 · 57% win rate."
-    ],
-    "winRate": 57.1,
-    "sampleSize": 7
-  },
-  {
-    "id": 20070,
-    "championId": "Lulu",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "E > W > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 6 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 6
-  },
-  {
-    "id": 20135,
+    "id": 20106,
     "championId": "Lux",
     "mode": "ARENA",
     "role": null,
@@ -7302,7 +6352,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20187,
+    "id": 20152,
     "championId": "Malphite",
     "mode": "ARENA",
     "role": null,
@@ -7380,73 +6430,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20188,
-    "championId": "Malphite",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "16.1",
-    "starterItems": [],
-    "coreItems": [
-      223118,
-      223089,
-      223135,
-      226655
-    ],
-    "coreItemStats": {
-      "223089": {
-        "games": 6,
-        "pickRate": 67,
-        "winRate": 50
-      },
-      "223118": {
-        "games": 4,
-        "pickRate": 44,
-        "winRate": 75
-      },
-      "223135": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 50
-      },
-      "226655": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223020,
-      223111
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.1 · 56% win rate."
-    ],
-    "winRate": 55.6,
-    "sampleSize": 9
-  },
-  {
-    "id": 20014,
+    "id": 20012,
     "championId": "Malzahar",
     "mode": "ARENA",
     "role": null,
@@ -7518,7 +6502,7 @@
     "sampleSize": 32
   },
   {
-    "id": 20058,
+    "id": 20048,
     "championId": "Maokai",
     "mode": "ARENA",
     "role": null,
@@ -7611,7 +6595,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20043,
+    "id": 20034,
     "championId": "MasterYi",
     "mode": "ARENA",
     "role": null,
@@ -7704,7 +6688,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20029,
+    "id": 20023,
     "championId": "Mel",
     "mode": "ARENA",
     "role": null,
@@ -7792,7 +6776,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20201,
+    "id": 20164,
     "championId": "Milio",
     "mode": "ARENA",
     "role": null,
@@ -7889,7 +6873,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20181,
+    "id": 20146,
     "championId": "MissFortune",
     "mode": "ARENA",
     "role": null,
@@ -7972,7 +6956,7 @@
     "sampleSize": 24
   },
   {
-    "id": 20136,
+    "id": 20107,
     "championId": "MonkeyKing",
     "mode": "ARENA",
     "role": null,
@@ -8065,7 +7049,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20020,
+    "id": 20017,
     "championId": "Mordekaiser",
     "mode": "ARENA",
     "role": null,
@@ -8147,7 +7131,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20147,
+    "id": 20116,
     "championId": "Morgana",
     "mode": "ARENA",
     "role": null,
@@ -8234,7 +7218,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20099,
+    "id": 20077,
     "championId": "Naafiri",
     "mode": "ARENA",
     "role": null,
@@ -8315,7 +7299,7 @@
     "sampleSize": 24
   },
   {
-    "id": 20076,
+    "id": 20062,
     "championId": "Nami",
     "mode": "ARENA",
     "role": null,
@@ -8418,47 +7402,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20077,
-    "championId": "Nami",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.13",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223158,
-      223009
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 15.13 · 29% win rate."
-    ],
-    "winRate": 28.6,
-    "sampleSize": 7
-  },
-  {
-    "id": 20186,
+    "id": 20151,
     "championId": "Nasus",
     "mode": "ARENA",
     "role": null,
@@ -8536,7 +7480,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20040,
+    "id": 20032,
     "championId": "Nautilus",
     "mode": "ARENA",
     "role": null,
@@ -8617,79 +7561,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20041,
-    "championId": "Nautilus",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [
-      223100,
-      223084,
-      223089,
-      223107,
-      223165
-    ],
-    "coreItemStats": {
-      "223084": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 0
-      },
-      "223089": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      },
-      "223100": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 100
-      },
-      "223107": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 67
-      },
-      "223165": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223158,
-      223020
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 15.5 · 57% win rate."
-    ],
-    "winRate": 57.1,
-    "sampleSize": 7
-  },
-  {
-    "id": 20015,
+    "id": 20013,
     "championId": "Neeko",
     "mode": "ARENA",
     "role": null,
@@ -8754,46 +7626,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20016,
-    "championId": "Neeko",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.13",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223020
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 15.13 · 25% win rate."
-    ],
-    "winRate": 25,
-    "sampleSize": 4
-  },
-  {
-    "id": 20123,
+    "id": 20095,
     "championId": "Nidalee",
     "mode": "ARENA",
     "role": null,
@@ -8871,7 +7704,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20163,
+    "id": 20131,
     "championId": "Nilah",
     "mode": "ARENA",
     "role": null,
@@ -8943,7 +7776,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20150,
+    "id": 20119,
     "championId": "Nocturne",
     "mode": "ARENA",
     "role": null,
@@ -9036,7 +7869,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20172,
+    "id": 20139,
     "championId": "Nunu",
     "mode": "ARENA",
     "role": null,
@@ -9113,67 +7946,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20173,
-    "championId": "Nunu",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "15.13",
-    "starterItems": [],
-    "coreItems": [
-      223084,
-      223089,
-      223157
-    ],
-    "coreItemStats": {
-      "223084": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 67
-      },
-      "223089": {
-        "games": 5,
-        "pickRate": 71,
-        "winRate": 40
-      },
-      "223157": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223111,
-      223047
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 15.13 · 57% win rate."
-    ],
-    "winRate": 57.1,
-    "sampleSize": 7
-  },
-  {
-    "id": 20178,
+    "id": 20143,
     "championId": "Olaf",
     "mode": "ARENA",
     "role": null,
@@ -9271,7 +8044,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20126,
+    "id": 20097,
     "championId": "Orianna",
     "mode": "ARENA",
     "role": null,
@@ -9348,7 +8121,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20161,
+    "id": 20130,
     "championId": "Ornn",
     "mode": "ARENA",
     "role": null,
@@ -9425,47 +8198,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20162,
-    "championId": "Ornn",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223158,
-      223047
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 10 challenger/grandmaster/master games on patch 16.9 · 20% win rate."
-    ],
-    "winRate": 20,
-    "sampleSize": 10
-  },
-  {
-    "id": 20168,
+    "id": 20135,
     "championId": "Pantheon",
     "mode": "ARENA",
     "role": null,
@@ -9568,7 +8301,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20195,
+    "id": 20159,
     "championId": "Poppy",
     "mode": "ARENA",
     "role": null,
@@ -9716,47 +8449,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20002,
-    "championId": "Pyke",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223158,
-      223005
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 12 challenger/grandmaster/master games on patch 15.5 · 17% win rate."
-    ],
-    "winRate": 16.7,
-    "sampleSize": 12
-  },
-  {
-    "id": 20105,
+    "id": 20082,
     "championId": "Qiyana",
     "mode": "ARENA",
     "role": null,
@@ -9844,7 +8537,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20192,
+    "id": 20156,
     "championId": "Quinn",
     "mode": "ARENA",
     "role": null,
@@ -9920,7 +8613,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20103,
+    "id": 20081,
     "championId": "Rakan",
     "mode": "ARENA",
     "role": null,
@@ -9992,61 +8685,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20104,
-    "championId": "Rakan",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "16.1",
-    "starterItems": [],
-    "coreItems": [
-      223089,
-      224645
-    ],
-    "coreItemStats": {
-      "223089": {
-        "games": 3,
-        "pickRate": 60,
-        "winRate": 0
-      },
-      "224645": {
-        "games": 2,
-        "pickRate": 40,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223020,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "W > Q > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.1 · 20% win rate."
-    ],
-    "winRate": 20,
-    "sampleSize": 5
-  },
-  {
-    "id": 20183,
+    "id": 20148,
     "championId": "Rammus",
     "mode": "ARENA",
     "role": null,
@@ -10144,7 +8783,7 @@
     "sampleSize": 20
   },
   {
-    "id": 20193,
+    "id": 20157,
     "championId": "RekSai",
     "mode": "ARENA",
     "role": null,
@@ -10184,7 +8823,7 @@
     "sampleSize": 5
   },
   {
-    "id": 20133,
+    "id": 20104,
     "championId": "Rell",
     "mode": "ARENA",
     "role": null,
@@ -10262,7 +8901,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20196,
+    "id": 20160,
     "championId": "Renata",
     "mode": "ARENA",
     "role": null,
@@ -10322,7 +8961,7 @@
     "sampleSize": 9
   },
   {
-    "id": 20152,
+    "id": 20121,
     "championId": "Renekton",
     "mode": "ARENA",
     "role": null,
@@ -10408,7 +9047,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20120,
+    "id": 20093,
     "championId": "Rengar",
     "mode": "ARENA",
     "role": null,
@@ -10484,7 +9123,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20130,
+    "id": 20101,
     "championId": "Riven",
     "mode": "ARENA",
     "role": null,
@@ -10569,7 +9208,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20180,
+    "id": 20145,
     "championId": "Rumble",
     "mode": "ARENA",
     "role": null,
@@ -10657,7 +9296,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20149,
+    "id": 20118,
     "championId": "Ryze",
     "mode": "ARENA",
     "role": null,
@@ -10740,7 +9379,7 @@
     "sampleSize": 33
   },
   {
-    "id": 20113,
+    "id": 20088,
     "championId": "Samira",
     "mode": "ARENA",
     "role": null,
@@ -10811,7 +9450,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20132,
+    "id": 20103,
     "championId": "Sejuani",
     "mode": "ARENA",
     "role": null,
@@ -10893,7 +9532,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20171,
+    "id": 20138,
     "championId": "Senna",
     "mode": "ARENA",
     "role": null,
@@ -10985,7 +9624,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20011,
+    "id": 20009,
     "championId": "Seraphine",
     "mode": "ARENA",
     "role": null,
@@ -11072,7 +9711,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20082,
+    "id": 20066,
     "championId": "Sett",
     "mode": "ARENA",
     "role": null,
@@ -11160,95 +9799,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20083,
-    "championId": "Sett",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "tank",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      223084
-    ],
-    "coreItemStats": {
-      "223084": {
-        "games": 14,
-        "pickRate": 100,
-        "winRate": 29
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223111,
-      223047
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.9 · 29% win rate."
-    ],
-    "winRate": 28.6,
-    "sampleSize": 14
-  },
-  {
-    "id": 20084,
-    "championId": "Sett",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223111,
-      223047
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 11 challenger/grandmaster/master games on patch 16.9 · 73% win rate."
-    ],
-    "winRate": 72.7,
-    "sampleSize": 11
-  },
-  {
-    "id": 20137,
+    "id": 20108,
     "championId": "Shaco",
     "mode": "ARENA",
     "role": null,
@@ -11331,73 +9882,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20138,
-    "championId": "Shaco",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      226699,
-      223031,
-      226676,
-      223033
-    ],
-    "coreItemStats": {
-      "223031": {
-        "games": 7,
-        "pickRate": 78,
-        "winRate": 71
-      },
-      "223033": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 50
-      },
-      "226676": {
-        "games": 5,
-        "pickRate": 56,
-        "winRate": 80
-      },
-      "226699": {
-        "games": 3,
-        "pickRate": 33,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223158,
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.9 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 9
-  },
-  {
-    "id": 20035,
+    "id": 20028,
     "championId": "Shen",
     "mode": "ARENA",
     "role": null,
@@ -11478,7 +9963,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20207,
+    "id": 20170,
     "championId": "Shyvana",
     "mode": "ARENA",
     "role": null,
@@ -11571,79 +10056,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20208,
-    "championId": "Shyvana",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [
-      222510,
-      223084,
-      223089,
-      223115,
-      224633
-    ],
-    "coreItemStats": {
-      "222510": {
-        "games": 5,
-        "pickRate": 71,
-        "winRate": 80
-      },
-      "223084": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      },
-      "223089": {
-        "games": 4,
-        "pickRate": 57,
-        "winRate": 100
-      },
-      "223115": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 100
-      },
-      "224633": {
-        "games": 4,
-        "pickRate": 57,
-        "winRate": 75
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223008,
-      223111
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 16.9 · 86% win rate."
-    ],
-    "winRate": 85.7,
-    "sampleSize": 7
-  },
-  {
-    "id": 20005,
+    "id": 20004,
     "championId": "Singed",
     "mode": "ARENA",
     "role": null,
@@ -11741,7 +10154,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20032,
+    "id": 20026,
     "championId": "Sion",
     "mode": "ARENA",
     "role": null,
@@ -11806,7 +10219,7 @@
     "sampleSize": 23
   },
   {
-    "id": 20108,
+    "id": 20085,
     "championId": "Sivir",
     "mode": "ARENA",
     "role": null,
@@ -11899,46 +10312,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20109,
-    "championId": "Sivir",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.2",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 16.2 · 20% win rate."
-    ],
-    "winRate": 20,
-    "sampleSize": 5
-  },
-  {
-    "id": 20169,
+    "id": 20136,
     "championId": "Skarner",
     "mode": "ARENA",
     "role": null,
@@ -11998,7 +10372,7 @@
     "sampleSize": 8
   },
   {
-    "id": 20179,
+    "id": 20144,
     "championId": "Smolder",
     "mode": "ARENA",
     "role": null,
@@ -12073,7 +10447,7 @@
     "sampleSize": 28
   },
   {
-    "id": 20141,
+    "id": 20111,
     "championId": "Sona",
     "mode": "ARENA",
     "role": null,
@@ -12159,7 +10533,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20200,
+    "id": 20163,
     "championId": "Soraka",
     "mode": "ARENA",
     "role": null,
@@ -12250,7 +10624,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20056,
+    "id": 20046,
     "championId": "Swain",
     "mode": "ARENA",
     "role": null,
@@ -12343,7 +10717,7 @@
     "sampleSize": 23
   },
   {
-    "id": 20073,
+    "id": 20059,
     "championId": "Sylas",
     "mode": "ARENA",
     "role": null,
@@ -12435,7 +10809,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20142,
+    "id": 20112,
     "championId": "Syndra",
     "mode": "ARENA",
     "role": null,
@@ -12507,7 +10881,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20062,
+    "id": 20052,
     "championId": "TahmKench",
     "mode": "ARENA",
     "role": null,
@@ -12573,73 +10947,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20063,
-    "championId": "TahmKench",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "16.7",
-    "starterItems": [],
-    "coreItems": [
-      223084,
-      222510,
-      224633,
-      223089
-    ],
-    "coreItemStats": {
-      "222510": {
-        "games": 5,
-        "pickRate": 56,
-        "winRate": 60
-      },
-      "223084": {
-        "games": 5,
-        "pickRate": 56,
-        "winRate": 80
-      },
-      "223089": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 100
-      },
-      "224633": {
-        "games": 7,
-        "pickRate": 78,
-        "winRate": 57
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223047,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.7 · 56% win rate."
-    ],
-    "winRate": 55.6,
-    "sampleSize": 9
-  },
-  {
-    "id": 20194,
+    "id": 20158,
     "championId": "Taliyah",
     "mode": "ARENA",
     "role": null,
@@ -12732,7 +11040,7 @@
     "sampleSize": 12
   },
   {
-    "id": 20166,
+    "id": 20133,
     "championId": "Talon",
     "mode": "ARENA",
     "role": null,
@@ -12887,7 +11195,7 @@
     "sampleSize": 7
   },
   {
-    "id": 20176,
+    "id": 20141,
     "championId": "Teemo",
     "mode": "ARENA",
     "role": null,
@@ -12973,7 +11281,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20054,
+    "id": 20044,
     "championId": "Thresh",
     "mode": "ARENA",
     "role": null,
@@ -13049,7 +11357,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20050,
+    "id": 20041,
     "championId": "Tristana",
     "mode": "ARENA",
     "role": null,
@@ -13152,46 +11460,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20051,
-    "championId": "Tristana",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 8 challenger/grandmaster/master games on patch 15.5 · 50% win rate."
-    ],
-    "winRate": 50,
-    "sampleSize": 8
-  },
-  {
-    "id": 20139,
+    "id": 20109,
     "championId": "Trundle",
     "mode": "ARENA",
     "role": null,
@@ -13279,7 +11548,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20151,
+    "id": 20120,
     "championId": "Tryndamere",
     "mode": "ARENA",
     "role": null,
@@ -13355,7 +11624,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20093,
+    "id": 20073,
     "championId": "TwistedFate",
     "mode": "ARENA",
     "role": null,
@@ -13433,119 +11702,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20094,
-    "championId": "TwistedFate",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223006,
-      223020
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 10 challenger/grandmaster/master games on patch 15.5 · 30% win rate."
-    ],
-    "winRate": 30,
-    "sampleSize": 10
-  },
-  {
-    "id": 20095,
-    "championId": "TwistedFate",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [
-      223094,
-      223124,
-      223153,
-      223031,
-      223087
-    ],
-    "coreItemStats": {
-      "223031": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 67
-      },
-      "223087": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 0
-      },
-      "223094": {
-        "games": 3,
-        "pickRate": 43,
-        "winRate": 33
-      },
-      "223124": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 100
-      },
-      "223153": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223006,
-      223158
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "E > W > Q",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 15.5 · 57% win rate."
-    ],
-    "winRate": 57.1,
-    "sampleSize": 7
-  },
-  {
-    "id": 20075,
+    "id": 20061,
     "championId": "Twitch",
     "mode": "ARENA",
     "role": null,
@@ -13648,7 +11805,7 @@
     "sampleSize": 28
   },
   {
-    "id": 20033,
+    "id": 20027,
     "championId": "Udyr",
     "mode": "ARENA",
     "role": null,
@@ -13741,79 +11898,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20034,
-    "championId": "Udyr",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ap",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [
-      223118,
-      223089,
-      223157,
-      224645,
-      223135
-    ],
-    "coreItemStats": {
-      "223089": {
-        "games": 4,
-        "pickRate": 67,
-        "winRate": 100
-      },
-      "223118": {
-        "games": 3,
-        "pickRate": 50,
-        "winRate": 100
-      },
-      "223135": {
-        "games": 2,
-        "pickRate": 33,
-        "winRate": 100
-      },
-      "223157": {
-        "games": 2,
-        "pickRate": 33,
-        "winRate": 100
-      },
-      "224645": {
-        "games": 4,
-        "pickRate": 67,
-        "winRate": 100
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223111,
-      223020
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 6 challenger/grandmaster/master games on patch 15.5 · 83% win rate."
-    ],
-    "winRate": 83.3,
-    "sampleSize": 6
-  },
-  {
-    "id": 20036,
+    "id": 20029,
     "championId": "Urgot",
     "mode": "ARENA",
     "role": null,
@@ -13911,7 +11996,7 @@
     "sampleSize": 15
   },
   {
-    "id": 20019,
+    "id": 20016,
     "championId": "Varus",
     "mode": "ARENA",
     "role": null,
@@ -13987,7 +12072,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20202,
+    "id": 20165,
     "championId": "Vayne",
     "mode": "ARENA",
     "role": null,
@@ -14079,7 +12164,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20153,
+    "id": 20122,
     "championId": "Veigar",
     "mode": "ARENA",
     "role": null,
@@ -14160,7 +12245,7 @@
     "sampleSize": 19
   },
   {
-    "id": 20012,
+    "id": 20010,
     "championId": "Velkoz",
     "mode": "ARENA",
     "role": null,
@@ -14242,7 +12327,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20190,
+    "id": 20154,
     "championId": "Vex",
     "mode": "ARENA",
     "role": null,
@@ -14314,7 +12399,7 @@
     "sampleSize": 10
   },
   {
-    "id": 20004,
+    "id": 20003,
     "championId": "Vi",
     "mode": "ARENA",
     "role": null,
@@ -14411,7 +12496,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20156,
+    "id": 20125,
     "championId": "Viego",
     "mode": "ARENA",
     "role": null,
@@ -14496,7 +12581,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20096,
+    "id": 20074,
     "championId": "Viktor",
     "mode": "ARENA",
     "role": null,
@@ -14583,7 +12668,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20037,
+    "id": 20030,
     "championId": "Vladimir",
     "mode": "ARENA",
     "role": null,
@@ -14655,7 +12740,7 @@
     "sampleSize": 24
   },
   {
-    "id": 20031,
+    "id": 20025,
     "championId": "Volibear",
     "mode": "ARENA",
     "role": null,
@@ -14743,7 +12828,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20026,
+    "id": 20021,
     "championId": "Warwick",
     "mode": "ARENA",
     "role": null,
@@ -14821,7 +12906,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20148,
+    "id": 20117,
     "championId": "Xayah",
     "mode": "ARENA",
     "role": null,
@@ -14902,7 +12987,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20119,
+    "id": 20092,
     "championId": "Xerath",
     "mode": "ARENA",
     "role": null,
@@ -15005,7 +13090,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20038,
+    "id": 20031,
     "championId": "XinZhao",
     "mode": "ARENA",
     "role": null,
@@ -15108,47 +13193,7 @@
     "sampleSize": 30
   },
   {
-    "id": 20039,
-    "championId": "XinZhao",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223111,
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 12 challenger/grandmaster/master games on patch 16.9 · 25% win rate."
-    ],
-    "winRate": 25,
-    "sampleSize": 12
-  },
-  {
-    "id": 20055,
+    "id": 20045,
     "championId": "Yasuo",
     "mode": "ARENA",
     "role": null,
@@ -15226,7 +13271,7 @@
     "sampleSize": 35
   },
   {
-    "id": 20191,
+    "id": 20155,
     "championId": "Yone",
     "mode": "ARENA",
     "role": null,
@@ -15292,7 +13337,7 @@
     "sampleSize": 22
   },
   {
-    "id": 20078,
+    "id": 20063,
     "championId": "Yorick",
     "mode": "ARENA",
     "role": null,
@@ -15346,55 +13391,7 @@
     "sampleSize": 6
   },
   {
-    "id": 20079,
-    "championId": "Yorick",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "tank",
-    "patch": "16.1",
-    "starterItems": [],
-    "coreItems": [
-      223084
-    ],
-    "coreItemStats": {
-      "223084": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      223009,
-      223047
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.1 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
-  },
-  {
-    "id": 20205,
+    "id": 20168,
     "championId": "Yunara",
     "mode": "ARENA",
     "role": null,
@@ -15479,7 +13476,7 @@
     "sampleSize": 17
   },
   {
-    "id": 20155,
+    "id": 20124,
     "championId": "Yuumi",
     "mode": "ARENA",
     "role": null,
@@ -15581,7 +13578,7 @@
     "sampleSize": 16
   },
   {
-    "id": 20209,
+    "id": 20171,
     "championId": "Zaahen",
     "mode": "ARENA",
     "role": null,
@@ -15662,7 +13659,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20116,
+    "id": 20090,
     "championId": "Zac",
     "mode": "ARENA",
     "role": null,
@@ -15745,7 +13742,7 @@
     "sampleSize": 21
   },
   {
-    "id": 20085,
+    "id": 20067,
     "championId": "Zed",
     "mode": "ARENA",
     "role": null,
@@ -15848,7 +13845,7 @@
     "sampleSize": 34
   },
   {
-    "id": 20101,
+    "id": 20079,
     "championId": "Zeri",
     "mode": "ARENA",
     "role": null,
@@ -15923,7 +13920,7 @@
     "sampleSize": 14
   },
   {
-    "id": 20046,
+    "id": 20037,
     "championId": "Ziggs",
     "mode": "ARENA",
     "role": null,
@@ -16005,7 +14002,7 @@
     "sampleSize": 18
   },
   {
-    "id": 20154,
+    "id": 20123,
     "championId": "Zilean",
     "mode": "ARENA",
     "role": null,
@@ -16096,7 +14093,7 @@
     "sampleSize": 13
   },
   {
-    "id": 20204,
+    "id": 20167,
     "championId": "Zoe",
     "mode": "ARENA",
     "role": null,
@@ -16176,7 +14173,7 @@
     "sampleSize": 11
   },
   {
-    "id": 20098,
+    "id": 20076,
     "championId": "Zyra",
     "mode": "ARENA",
     "role": null,
