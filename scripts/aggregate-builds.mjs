@@ -513,7 +513,14 @@ function rankedClusters(group, items) {
 // A secondary archetype is surfaced as a selectable variant only when it's a
 // real alternative — at least this fraction as common as the dominant build,
 // and clearing the sample floor. Keeps fringe/chimera clusters out.
-const VARIANT_MIN_FRACTION = 0.34
+//
+// ARAM gets a looser bar deliberately: off-meta picks (AP Blitzcrank, AD
+// Shaco, Tank Malphite, …) are a real, popular part of ARAM in a way they
+// aren't in ranked SR/Arena. Verified against the cached match set
+// (2026-08-02): at 0.20 every newly-surfaced ARAM variant still clears 20+
+// games (up to 183) — looser than that (~0.10 and below) starts admitting
+// single-digit-game flukes as if they were real builds.
+const VARIANT_MIN_FRACTION = MODE === 'aram' ? 0.2 : 0.34
 const MAX_VARIANTS = 3
 
 // Comp-conditioned situational items: an item is "situational vs condition C"
