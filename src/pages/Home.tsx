@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { ChampionSelect } from '@/components/ChampionSelect'
 import { BuildPathDisplay } from '@/components/BuildPathDisplay'
@@ -76,11 +76,20 @@ export default function Home() {
   const [hydrated, setHydrated] = useState(() => useAppStore.persist.hasHydrated())
   useEffect(() => useAppStore.persist.onFinishHydration(() => setHydrated(true)), [])
 
+  // …and the same is true of the first run of the reset effect itself: it fires
+  // on mount, not just on a real change, so a restored archetype was still
+  // being cleared on every page load (and with it the variant the Live
+  // tracker/overlay would follow). Remember the selection the effect last ran
+  // for and only reset when it actually changes.
+  const lastSelection = useRef<string | null>(null)
   useEffect(() => {
     if (!hydrated) return
-    selectArchetype(null)
+    const selection = `${selectedChampionId}|${selectedRole}|${selectedMode}`
+    const previous = lastSelection.current
+    lastSelection.current = selection
+    if (previous !== null && previous !== selection) selectArchetype(null)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedChampionId, selectedRole, selectedMode])
+  }, [hydrated, selectedChampionId, selectedRole, selectedMode])
 
   // Auto-fill from the League client's champ select (via the LCU bridge).
   const champSelect = useChampSelect()

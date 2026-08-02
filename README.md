@@ -423,6 +423,22 @@ items are remapped ids handled by `isRealArenaItem` — see "Game modes" above).
 The loader merges SR + ARAM + Arena and `findBuild` serves each by mode, so
 ARAM/Mayhem/Arena get real win-rate builds instead of pure heuristics.
 
+**Playstyle variants.** Flex champions don't have one build, so each
+champion+role group is split by what its core items actually are — `ap`, `ad`,
+`tank`, plus `bruiser` (AD + real defensive items) and `hybrid` (AP + the same)
+— and every cluster that clears the gates is emitted as its own coherent
+`BuildPath`. The Build page offers them in one dropdown ("Katarina MID · AP ·
+52.4% WR") and the choice carries into the Live tracker and overlay. A
+secondary cluster has to be a real alternative to show up: at least
+`VARIANT_MIN_FRACTION` as common as the dominant build **and** clearing
+`VARIANT_MIN_ABSOLUTE` games, or `VARIANT_MIN_STANDALONE` games outright (the
+fraction bar scales with the main build's popularity, so a real off-meta build
+would otherwise disappear as the meta build got *more* played). Two things keep
+the finer buckets from costing coverage: a cluster whose item path duplicates
+one already kept is dropped as the same build under another label, and the
+refined split is only used at all when it still covers every archetype the
+plain ap/ad/tank read surfaces — otherwise the group falls back to that read.
+
 **Refreshing per patch.** The data is patch-specific, so re-run the aggregator
 when a new patch ships. `--if-stale` makes that cheap: it no-ops if the output
 was already built for the current patch, otherwise runs — so
