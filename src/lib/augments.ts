@@ -4,8 +4,22 @@
 // YOUR CHAMPION as goals: when the offer appears, take one of these, otherwise
 // reroll. Champion-specific rows (from Arena Match-V5, where augments live in
 // the API) are blended with the global ranking so thin samples degrade
-// gracefully. All three data files are lazy-imported, mirroring
-// aggregatedBuilds.ts, so they stay out of the initial bundle.
+// gracefully.
+//
+// Two pools are bundled, both aggregated from the same Arena Match-V5 data
+// (see aggregate-augments.mjs) but scoped by different metadata files (see
+// fetch-augments.mjs):
+//   - augments.json / augmentStats.json / augmentChampStats.json — intersected
+//     with the CURRENT Mayhem pool. What the Mayhem overlay's vision matcher
+//     and badges use (augmentBadgeFor, championPriorityKeys, visionManifest) —
+//     it must never show an augment that can't actually appear in Mayhem.
+//   - augmentsArena.json / augmentStatsArena.json / augmentChampStatsArena.json
+//     — the FULL real Arena pool, Arena's own rarity. What Arena-facing
+//     features use (topAugmentsFor, the Build page's pre-game panel) — Mayhem's
+//     pool is roughly half the size of Arena's, so using the intersected set
+//     there would silently hide real Arena augments.
+// All data files are lazy-imported, mirroring aggregatedBuilds.ts, so they
+// stay out of the initial bundle.
 
 export interface AugmentMeta {
   id: number
@@ -53,6 +67,12 @@ interface AugmentData {
   global: AugmentStat[]
   byChamp: Record<string, AugmentStat[]>
   mayhemByCanon: Map<string, MayhemStat>
+  // Full Arena pool (not intersected with Mayhem) — see fetch-augments.mjs.
+  // Used by Arena-facing features that want the complete picture; the fields
+  // above stay Mayhem-scoped for the overlay's vision/badge system.
+  arenaMetaById: Map<number, AugmentMeta>
+  arenaGlobal: AugmentStat[]
+  arenaByChamp: Record<string, AugmentStat[]>
 }
 
 let cache: AugmentData | null = null
@@ -66,7 +86,10 @@ export function loadAugmentData(): Promise<AugmentData> {
       import('@/data/augmentStats.json'),
       import('@/data/augmentChampStats.json'),
       import('@/data/mayhemAugmentStats.json'),
-    ]).then(([meta, global, byChamp, mayhem]) => {
+      import('@/data/augmentsArena.json'),
+      import('@/data/augmentStatsArena.json'),
+      import('@/data/augmentChampStatsArena.json'),
+    ]).then(([meta, global, byChamp, mayhem, arenaMeta, arenaGlobal, arenaByChamp]) => {
       const mayhemById = mayhem.default as unknown as Record<string, MayhemStat>
       cache = {
         metaById: new Map(
@@ -75,6 +98,11 @@ export function loadAugmentData(): Promise<AugmentData> {
         global: global.default as unknown as AugmentStat[],
         byChamp: byChamp.default as unknown as Record<string, AugmentStat[]>,
         mayhemByCanon: new Map(Object.values(mayhemById).map((s) => [s.canon, s])),
+        arenaMetaById: new Map(
+          (arenaMeta.default as unknown as AugmentMeta[]).map((a) => [a.id, a]),
+        ),
+        arenaGlobal: arenaGlobal.default as unknown as AugmentStat[],
+        arenaByChamp: arenaByChamp.default as unknown as Record<string, AugmentStat[]>,
       }
       return cache
     })
@@ -200,26 +228,27 @@ export function championPriorityKeys(championId: string | null, topK = 40): stri
   return scored.slice(0, topK).map((s) => s.key)
 }
 
+/** Top Arena augments for a champion — the FULL Arena pool (not intersected
+ *  with Mayhem's smaller one), for the pre-game Build page. */
 export function topAugmentsFor(championId: string | null, count = 6): AugmentGoal[] {
   if (!cache || !championId) return []
-  const { metaById, global, byChamp } = cache
+  const { arenaMetaById, arenaGlobal, arenaByChamp } = cache
   const out: AugmentGoal[] = []
   const seen = new Set<number>()
   const push = (s: AugmentStat, source: AugmentGoal['source']) => {
-    const meta = metaById.get(s.id)
-    // Meta guard: augments.json is filtered to the official current Mayhem
-    // pool, so stats rows without metadata (Arena-only or retired augments,
-    // utility pseudo-augments, stat anvils) never surface as goals — even when
-    // the stats files were aggregated against older metadata.
+    const meta = arenaMetaById.get(s.id)
+    // Meta guard: augmentsArena.json is filtered to real pickable rarities, so
+    // stats rows without metadata (utility pseudo-augments, stat anvils, or
+    // anything retired since the stats were aggregated) never surface as goals.
     if (!meta || seen.has(s.id) || !(meta.rarity in RARITY_RANK)) return
     seen.add(s.id)
     out.push({ ...s, meta, source })
   }
-  for (const s of byChamp[championId] ?? []) {
+  for (const s of arenaByChamp[championId] ?? []) {
     if (out.length >= count) break
     push(s, 'champion')
   }
-  for (const s of global) {
+  for (const s of arenaGlobal) {
     if (out.length >= count) break
     push(s, 'global')
   }

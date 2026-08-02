@@ -12,6 +12,7 @@
     "aggregate:ranked": "node scripts/aggregate-ranked-stats.mjs",
     "augments:meta": "node scripts/fetch-augments.mjs",
     "aggregate:augments": "node scripts/aggregate-augments.mjs",
+    "aggregate:augments:arena": "node scripts/aggregate-augments.mjs --meta src/data/augmentsArena.json --out src/data/augmentStatsArena.json --champ-out src/data/augmentChampStatsArena.json",
     "mayhem:stats": "node scripts/fetch-mayhem-stats.mjs",
     "build": "tsc -b && vite build",
     "lint": "oxlint",

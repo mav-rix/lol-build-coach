@@ -21,7 +21,6 @@ const NAV = [
   { to: '/build', label: 'Build' },
   { to: '/tiers', label: 'Tier List' },
   { to: '/live', label: 'Live' },
-  { to: '/review', label: 'Review' },
   { to: '/augments', label: 'Augments' },
   { to: '/settings', label: 'Settings' },
 ]
