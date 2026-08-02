@@ -3,7 +3,7 @@ import { useAggregatedBuilds } from '@/hooks/useAggregatedBuilds'
 import { useLiveGameData } from '@/hooks/useLiveGameData'
 import { useStaticData } from '@/hooks/useStaticData'
 import { useAppStore } from '@/store/useAppStore'
-import { findBuild } from '@/data/builds'
+import { findBuildVariants } from '@/data/builds'
 import { MOCK_LIVE, mockLiveFor } from '@/data/mockLive'
 import { MODE_CONFIG, gameModeFromLive, isAugmentedAbyss } from '@/lib/modes'
 import { analyzeThreats, championIdFromRaw } from '@/lib/threats'
@@ -118,10 +118,10 @@ export function useLiveBuildState() {
   const mockChamp = params?.get('champ') ?? null
   const { data: staticData } = useStaticData()
   // Ensures the lazy aggregated-builds chunk loads and re-renders when ready, so
-  // findBuild below can return an aggregated build once it's available.
+  // findBuildVariants below can return an aggregated build once it's available.
   useAggregatedBuilds()
   const poll = useLiveGameData()
-  const { selectedChampionId, selectedRole, selectedMode } = useAppStore()
+  const { selectedChampionId, selectedRole, selectedMode, selectedArchetype } = useAppStore()
   const purchaseTimes = useRef(new Map<number, number>())
 
   const live = mock ? (mockChamp ? mockLiveFor(mockChamp) : MOCK_LIVE) : poll.data
@@ -155,7 +155,12 @@ export function useLiveBuildState() {
     : live
       ? isAugmentedAbyss(live.gameData.gameMode, live.gameData.mapNumber)
       : false
-  const build = championId ? findBuild(championId, role, mode) : null
+  // Respect the playstyle variant chosen on the Build page (e.g. AD Kaisa vs
+  // AP) if one was picked and it still exists for this champion/role/mode;
+  // otherwise the highest-sample default, same as findBuild.
+  const buildVariants = championId ? findBuildVariants(championId, role, mode) : []
+  const build =
+    buildVariants.find((v) => v.archetype === selectedArchetype) ?? buildVariants[0] ?? null
   const items = staticData?.items ?? EMPTY_ITEMS
   const patch = staticData?.patch ?? ''
 

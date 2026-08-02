@@ -40,6 +40,10 @@ interface AppState {
   selectedChampionId: string | null
   selectedRole: Role | null
   selectedMode: GameMode
+  // Playstyle variant (AP/AD/Tank/…) chosen on the Build page. Carried into
+  // the Live tracker/overlay so the archetype you picked pre-game is the one
+  // actually tracked in-game, instead of always the highest-sample default.
+  selectedArchetype: string | null
   enemyChampionIds: (string | null)[] // always length 5
   autoOpenBuild: boolean // jump to /build when champ select begins
   showServerStatus: boolean // nav pill for the League server-status badge
@@ -50,6 +54,7 @@ interface AppState {
   selectChampion: (championId: string | null) => void
   selectRole: (role: Role | null) => void
   selectMode: (mode: GameMode) => void
+  selectArchetype: (archetype: string | null) => void
   setEnemyChampion: (slot: number, championId: string | null) => void
   clearEnemies: () => void
   setAutoOpenBuild: (on: boolean) => void
@@ -69,6 +74,7 @@ export const useAppStore = create<AppState>()(
       selectedChampionId: null,
       selectedRole: null,
       selectedMode: 'SR',
+      selectedArchetype: null,
       enemyChampionIds: EMPTY_ENEMIES,
       autoOpenBuild: true,
       showServerStatus: true,
@@ -79,6 +85,7 @@ export const useAppStore = create<AppState>()(
       selectChampion: (championId) => set({ selectedChampionId: championId }),
       selectRole: (role) => set({ selectedRole: role }),
       selectMode: (mode) => set({ selectedMode: mode }),
+      selectArchetype: (archetype) => set({ selectedArchetype: archetype }),
       setEnemyChampion: (slot, championId) =>
         set((s) => {
           const enemyChampionIds = [...s.enemyChampionIds]
