@@ -3908,15 +3908,29 @@
     "championId": "Janna",
     "mode": "ARENA",
     "role": null,
-    "archetype": "other",
-    "patch": "15.13",
+    "archetype": "ap",
+    "patch": "15.21",
     "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
+    "coreItems": [
+      224005,
+      226617
+    ],
+    "coreItemStats": {
+      "224005": {
+        "games": 2,
+        "pickRate": 29,
+        "winRate": 0
+      },
+      "226617": {
+        "games": 2,
+        "pickRate": 29,
+        "winRate": 50
+      }
+    },
     "situationalItems": [],
     "bootsOptions": [
-      223009,
-      223158
+      223158,
+      223009
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -3938,9 +3952,9 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 15.13 · 14% win rate."
+      "Aggregated from 7 challenger/grandmaster/master games on patch 15.21 · 43% win rate."
     ],
-    "winRate": 14.3,
+    "winRate": 42.9,
     "sampleSize": 7
   },
   {

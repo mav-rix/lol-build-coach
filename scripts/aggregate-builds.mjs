@@ -476,7 +476,7 @@ function aggregateStarters(group) {
 // Classify each observation by its core items' tags and aggregate only the
 // dominant cluster, so the emitted build is one coherent archetype.
 
-function observationArchetype(o, items) {
+function archetypeCounts(o, items) {
   let ap = 0
   let ad = 0
   let tank = 0
@@ -492,27 +492,38 @@ function observationArchetype(o, items) {
     if (isAd) ad++
     if (isTank) tank++
   }
-  // Genuine bruiser/hybrid builds (Volibear, Sett, Gwen …) mix a damage stat
-  // with real defensive itemization rather than leaning all the way into
-  // either — previously that read as a tie and silently fell through to
-  // "ad" no matter which side actually won, mislabeling e.g. a build with
-  // AP=2/AD=2/Tank=2 as pure AD. Treat "tank within 1 item of the leading
-  // damage stat" as its own bucket instead of a false tie-break.
-  const damage = Math.max(ap, ad)
-  if (tank > 0 && damage > 0 && Math.abs(tank - damage) <= 1) {
-    return ad >= ap ? 'bruiser' : 'hybrid'
-  }
+  return { ap, ad, tank }
+}
+
+// The "pure" three-way read (ap/ad/tank/other) — both the tail of the refined
+// classifier and the coverage-guard baseline in chooseClusters below.
+function pureArchetype({ ap, ad, tank }) {
   if (tank > ap && tank > ad) return 'tank'
   if (ap > ad) return 'ap'
   if (ad > 0) return 'ad'
   return 'other'
 }
 
+// Genuine bruiser/hybrid builds (Volibear, Sett, Gwen …) mix a damage stat
+// with real defensive itemization rather than leaning all the way into
+// either — a pure three-way read saw that as a tie and silently fell through
+// to "ad" no matter which side actually won, mislabeling e.g. a build with
+// AP=2/AD=2/Tank=2 as pure AD. Treat "tank within 1 item of the leading
+// damage stat" as its own bucket instead of a false tie-break.
+function refinedArchetype(counts) {
+  const { ap, ad, tank } = counts
+  const damage = Math.max(ap, ad)
+  if (tank > 0 && damage > 0 && Math.abs(tank - damage) <= 1) {
+    return ad >= ap ? 'bruiser' : 'hybrid'
+  }
+  return pureArchetype(counts)
+}
+
 /** Archetype clusters for a group, largest first: [{ archetype, obs }]. */
-function rankedClusters(group, items) {
+function rankedClusters(group, items, classify = refinedArchetype) {
   const clusters = {}
   for (const o of group) {
-    const k = observationArchetype(o, items)
+    const k = classify(archetypeCounts(o, items))
     ;(clusters[k] ??= []).push(o)
   }
   return Object.entries(clusters)
@@ -545,7 +556,80 @@ function rankedClusters(group, items) {
 //     flukes as if they were real builds.
 const VARIANT_MIN_FRACTION = MODE === 'arena' ? 0.34 : 0.2
 const VARIANT_MIN_ABSOLUTE = 15
+// The fraction bar has a blind spot: it scales with the dominant build's
+// popularity, so the same 26-game AP Rakan cluster that surfaced when tank
+// Rakan had 129 games silently vanished once tank reached 156 — an alt build
+// disappearing because the MAIN build got more played. Above this many games
+// a distinct archetype is a real build in its own right no matter how popular
+// the primary is, so it passes on the absolute count alone. 'other' (cores
+// that resolve no ap/ad/tank tags at all) is excluded — those clusters are
+// degenerate games, not a build (measured 2026-08-03: the override without
+// the exclusion admitted 'other' rows for Caitlyn/Jhin/Pyke/Locke/…; with it,
+// every admitted variant is a recognizable off-meta build: AP Ashe/MF/Twitch/
+// Varus in ARAM, AP Kaisa / AD Ekko / AP Senna in SR, and AP Rakan is back).
+const VARIANT_MIN_STANDALONE = 25
 const MAX_VARIANTS = 3
+
+/** The clusters that clear the surfacing gates, dominant first. */
+function gateClusters(clusters, minSample) {
+  if (!clusters.length || clusters[0].obs.length < minSample) return []
+  const primaryN = clusters[0].obs.length
+  return clusters
+    .filter(
+      (c, i) =>
+        c.obs.length >= minSample &&
+        (i === 0 ||
+          (c.obs.length >= primaryN * VARIANT_MIN_FRACTION && c.obs.length >= VARIANT_MIN_ABSOLUTE) ||
+          (c.archetype !== 'other' && c.obs.length >= VARIANT_MIN_STANDALONE)),
+    )
+    .slice(0, MAX_VARIANTS)
+}
+
+// Two clusters that aggregate to the same opening are one build wearing two
+// labels — offering both as a choice ("Bruiser" and "Tank", identical first
+// three items) is noise, and it means the refinement cut through a build
+// rather than between two. The pure read never produced such a pair (0 of 33
+// multi-variant SR groups pre-1.6); refinement introduced 4 (Amumu JUNGLE,
+// Poppy TOP, Shen TOP, Urgot TOP).
+function dropDuplicatePaths(clusters) {
+  const seen = new Set()
+  return clusters.filter((c) => {
+    const sig = aggregateCore(c.obs).slice(0, 3).join(',')
+    if (seen.has(sig)) return false
+    seen.add(sig)
+    return true
+  })
+}
+
+// The bruiser/hybrid buckets are a refinement, and refining a blended cluster
+// mechanically shrinks each piece — against the variant gates that can DELETE
+// a build instead of relabeling it (v1.6.0 shipped exactly that: ARAM Amumu's
+// 49-game AP cluster split into ap+hybrid fragments that each failed the
+// gates, so "AP Amumu" vanished from a dataset that had carried it for months;
+// SR lost Udyr TOP's tank and ap, Nidalee TOP's ap, and every ~3-game niche
+// group whose primary fell under min-sample). So gate BOTH clusterings and
+// keep the refined one only when it's an actual improvement on the pure
+// ap/ad/tank read — otherwise this group falls back to that read, which is
+// exactly what shipped before the buckets existed.
+function chooseClusters(group, items, minSample) {
+  const pure = gateClusters(rankedClusters(group, items, pureArchetype), minSample)
+  const refinedAll = gateClusters(rankedClusters(group, items, refinedArchetype), minSample)
+  const refined = dropDuplicatePaths(refinedAll)
+  // Every archetype the pure read surfaces must still be there, as itself or
+  // as the mixed bucket it would have been folded into.
+  const have = new Set(refined.map((c) => c.archetype))
+  const covered = (a) =>
+    have.has(a) ||
+    (a === 'ap' && have.has('hybrid')) ||
+    (a === 'ad' && have.has('bruiser')) ||
+    (a === 'tank' && (have.has('hybrid') || have.has('bruiser')))
+  if (!pure.every((c) => covered(c.archetype))) return pure
+  // More distinct builds than the pure read found is a real gain. An equal
+  // count is only a gain when nothing was deduped — if it was, the refinement
+  // split one build in two and pure describes that build off the full sample.
+  if (refined.length > pure.length) return refined
+  return refined.length === pure.length && refined.length === refinedAll.length ? refined : pure
+}
 
 // Comp-conditioned situational items: an item is "situational vs condition C"
 // when it's bought materially more often in games where C is active than
@@ -859,19 +943,10 @@ async function main() {
     // Aggregate each archetype cluster into its own coherent build (flex
     // champions split into e.g. AP and Tank), so the Build page can offer them
     // as variants. Cluster-per-build avoids tank/AP chimeras; the dominant one
-    // stays first.
-    const clusters = rankedClusters(group, statik.items)
-    if (!clusters.length || clusters[0].obs.length < minSample) continue
-    const primaryN = clusters[0].obs.length
-    const chosen = clusters
-      .filter(
-        (c, i) =>
-          c.obs.length >= minSample &&
-          (i === 0 ||
-            (c.obs.length >= primaryN * VARIANT_MIN_FRACTION && c.obs.length >= VARIANT_MIN_ABSOLUTE)),
-      )
-      .slice(0, MAX_VARIANTS)
-    for (const c of chosen) builds.push(toBuildPath(c.obs, statik.items, c.archetype))
+    // stays first. chooseClusters applies the surfacing gates and the
+    // refinement coverage guard (see its comment).
+    for (const c of chooseClusters(group, statik.items, minSample))
+      builds.push(toBuildPath(c.obs, statik.items, c.archetype))
   }
   builds.sort(
     (a, b) => a.championId.localeCompare(b.championId) || (a.role ?? '').localeCompare(b.role ?? ''),
