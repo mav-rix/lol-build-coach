@@ -1,8 +1,4 @@
-import {
-  PREFER_AGGREGATED_SAMPLE,
-  findAggregatedBuild,
-  findAggregatedVariants,
-} from '@/data/aggregatedBuilds'
+import { PREFER_AGGREGATED_SAMPLE, findAggregatedVariants } from '@/data/aggregatedBuilds'
 import { MODE_CONFIG } from '@/lib/modes'
 import type { BuildPath, GameMode, Role } from '@/types/app'
 
@@ -321,6 +317,23 @@ export const BUILD_PATHS: BuildPath[] = [
   },
 ]
 
+/**
+ * When a champion+role splits into multiple archetype clusters (AP/AD/Tank/
+ * Bruiser/…), prefer whichever ones actually have a real (3+ item) core
+ * path over ones that don't, instead of blindly trusting whichever cluster
+ * happens to have the most games. A fine three-way split can leave even the
+ * most-played cluster's item consensus thin — e.g. two of three roughly
+ * equal-sized clusters agree strongly on their first two items but diverge
+ * after that — even though the split itself is a legitimate, aggregator-
+ * verified read (see VARIANT_MIN_ABSOLUTE/VARIANT_MIN_FRACTION in
+ * aggregate-builds.mjs). Leaves a single-cluster result untouched either way.
+ */
+function preferUsableVariants(variants: BuildPath[]): BuildPath[] {
+  if (variants.length <= 1) return variants
+  const usable = variants.filter((v) => v.coreItems.length >= 3)
+  return usable.length > 0 ? usable : variants
+}
+
 export function findBuild(
   championId: string,
   role: Role | null | undefined,
@@ -331,7 +344,7 @@ export function findBuild(
   // when this returns null). A confident aggregated build (Phase 2: real
   // current-patch data + comp-conditioned situationals) supersedes a seed;
   // below the confidence bar the seed's hand-tuned situationals win.
-  const aggregated = findAggregatedBuild(championId, role, mode)
+  const aggregated = preferUsableVariants(findAggregatedVariants(championId, role, mode))[0] ?? null
   // A high-sample aggregated build supersedes a seed only when it's an actual
   // build path — an aggregation that fell apart into 1–2 core items reads as
   // broken next to a hand-tuned six-slot seed, however many games back it.
@@ -369,13 +382,8 @@ export function findBuildVariants(
   role: Role | null | undefined,
   mode: GameMode = 'SR',
 ): BuildPath[] {
-  const all = findAggregatedVariants(championId, role, mode)
-  const dominant = all[0]
-  const confident =
-    dominant &&
-    (dominant.sampleSize ?? 0) >= PREFER_AGGREGATED_SAMPLE &&
-    dominant.coreItems.length >= 3
-  if (confident) return all.filter((b) => b.coreItems.length >= 3)
+  const usable = preferUsableVariants(findAggregatedVariants(championId, role, mode))
+  if (usable.length > 1) return usable
 
   const single = findBuild(championId, role, mode)
   return single ? [single] : []

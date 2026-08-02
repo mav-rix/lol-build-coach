@@ -17,45 +17,45 @@
     "coreItemStats": {
       "223053": {
         "games": 2,
-        "pickRate": 14,
+        "pickRate": 15,
         "winRate": 50
       },
       "223074": {
         "games": 4,
-        "pickRate": 29,
+        "pickRate": 31,
         "winRate": 75
       },
       "223161": {
         "games": 2,
-        "pickRate": 14,
+        "pickRate": 15,
         "winRate": 0
       },
       "226610": {
         "games": 9,
-        "pickRate": 64,
+        "pickRate": 69,
         "winRate": 33
       },
       "226692": {
         "games": 2,
-        "pickRate": 14,
+        "pickRate": 15,
         "winRate": 50
       }
     },
     "situationalItems": [
       {
-        "itemId": 223072,
-        "condition": "general",
-        "description": "Bloodthirster — popular alternative (built in 21% of games)"
-      },
-      {
         "itemId": 223031,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 14% of games)"
+        "description": "Infinity Edge — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 223072,
+        "condition": "general",
+        "description": "Bloodthirster — popular alternative (built in 15% of games)"
       },
       {
         "itemId": 223071,
         "condition": "general",
-        "description": "Black Cleaver — popular alternative (built in 14% of games)"
+        "description": "Black Cleaver — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -82,10 +82,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.1 · 43% win rate."
+      "Aggregated from 13 challenger/grandmaster/master games on patch 16.1 · 38% win rate."
     ],
-    "winRate": 42.9,
-    "sampleSize": 14
+    "winRate": 38.5,
+    "sampleSize": 13
   },
   {
     "id": 20149,
@@ -191,37 +191,26 @@
     "coreItemStats": {
       "223089": {
         "games": 3,
-        "pickRate": 30,
+        "pickRate": 33,
         "winRate": 0
       },
       "223146": {
         "games": 6,
-        "pickRate": 60,
+        "pickRate": 67,
         "winRate": 33
       },
       "223157": {
         "games": 2,
-        "pickRate": 20,
+        "pickRate": 22,
         "winRate": 50
       },
       "224645": {
         "games": 5,
-        "pickRate": 50,
+        "pickRate": 56,
         "winRate": 40
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 226653,
-        "condition": "general",
-        "description": "Liandry's Anguish — popular alternative (built in 20% of games)"
-      },
-      {
-        "itemId": 223165,
-        "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 20% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       223020
     ],
@@ -245,10 +234,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 10 challenger/grandmaster/master games on patch 16.9 · 30% win rate."
+      "Aggregated from 9 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
     ],
-    "winRate": 30,
-    "sampleSize": 10
+    "winRate": 33.3,
+    "sampleSize": 9
   },
   {
     "id": 20057,
@@ -365,22 +354,22 @@
     "coreItemStats": {
       "223068": {
         "games": 9,
-        "pickRate": 41,
+        "pickRate": 45,
         "winRate": 22
       },
       "223075": {
         "games": 5,
-        "pickRate": 23,
+        "pickRate": 25,
         "winRate": 40
       },
       "223084": {
         "games": 12,
-        "pickRate": 55,
+        "pickRate": 60,
         "winRate": 8
       },
       "226665": {
         "games": 6,
-        "pickRate": 27,
+        "pickRate": 30,
         "winRate": 33
       }
     },
@@ -388,12 +377,17 @@
       {
         "itemId": 223050,
         "condition": "general",
-        "description": "Zeke's Convergence — popular alternative (built in 14% of games)"
+        "description": "Zeke's Convergence — popular alternative (built in 10% of games)"
+      },
+      {
+        "itemId": 226662,
+        "condition": "general",
+        "description": "Iceborn Gauntlet — popular alternative (built in 10% of games)"
       },
       {
         "itemId": 223190,
         "condition": "general",
-        "description": "Locket of the Iron Solari — popular alternative (built in 14% of games)"
+        "description": "Locket of the Iron Solari — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -420,10 +414,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 22 challenger/grandmaster/master games on patch 16.9 · 41% win rate."
+      "Aggregated from 20 challenger/grandmaster/master games on patch 16.9 · 35% win rate."
     ],
-    "winRate": 40.9,
-    "sampleSize": 22
+    "winRate": 35,
+    "sampleSize": 20
   },
   {
     "id": 20042,
@@ -441,17 +435,17 @@
     "coreItemStats": {
       "223031": {
         "games": 9,
-        "pickRate": 33,
+        "pickRate": 35,
         "winRate": 78
       },
       "223033": {
         "games": 9,
-        "pickRate": 33,
+        "pickRate": 35,
         "winRate": 67
       },
       "226676": {
         "games": 9,
-        "pickRate": 33,
+        "pickRate": 35,
         "winRate": 67
       }
     },
@@ -459,12 +453,12 @@
       {
         "itemId": 226692,
         "condition": "general",
-        "description": "Eclipse — popular alternative (built in 30% of games)"
+        "description": "Eclipse — popular alternative (built in 31% of games)"
       },
       {
         "itemId": 223074,
         "condition": "general",
-        "description": "Ravenous Hydra — popular alternative (built in 22% of games)"
+        "description": "Ravenous Hydra — popular alternative (built in 23% of games)"
       },
       {
         "itemId": 226699,
@@ -479,7 +473,7 @@
       {
         "itemId": 223161,
         "condition": "general",
-        "description": "Spear of Shojin — popular alternative (built in 11% of games)"
+        "description": "Spear of Shojin — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -506,10 +500,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 27 challenger/grandmaster/master games on patch 16.9 · 59% win rate."
+      "Aggregated from 26 challenger/grandmaster/master games on patch 16.9 · 62% win rate."
     ],
-    "winRate": 59.3,
-    "sampleSize": 27
+    "winRate": 61.5,
+    "sampleSize": 26
   },
   {
     "id": 20086,
@@ -517,57 +511,40 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "tank",
-    "patch": "16.1",
+    "patch": "16.8",
     "starterItems": [],
     "coreItems": [
       223084,
       223068,
-      226653,
       223065,
       226665
     ],
     "coreItemStats": {
       "223065": {
         "games": 3,
-        "pickRate": 23,
+        "pickRate": 27,
         "winRate": 67
       },
       "223068": {
-        "games": 6,
-        "pickRate": 46,
-        "winRate": 67
+        "games": 4,
+        "pickRate": 36,
+        "winRate": 75
       },
       "223084": {
-        "games": 10,
-        "pickRate": 77,
-        "winRate": 70
-      },
-      "226653": {
-        "games": 2,
-        "pickRate": 15,
-        "winRate": 100
+        "games": 9,
+        "pickRate": 82,
+        "winRate": 67
       },
       "226665": {
-        "games": 3,
-        "pickRate": 23,
+        "games": 2,
+        "pickRate": 18,
         "winRate": 100
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 228020,
-        "condition": "general",
-        "description": "Abyssal Mask — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 223075,
-        "condition": "general",
-        "description": "Thornmail — popular alternative (built in 15% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
-      223111,
-      223047
+      223047,
+      223111
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -589,10 +566,10 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 13 challenger/grandmaster/master games on patch 16.1 · 62% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 16.8 · 64% win rate."
     ],
-    "winRate": 61.5,
-    "sampleSize": 13
+    "winRate": 63.6,
+    "sampleSize": 11
   },
   {
     "id": 20150,
@@ -921,7 +898,7 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ap",
-    "patch": "16.7",
+    "patch": "15.13",
     "starterItems": [],
     "coreItems": [
       226653,
@@ -931,41 +908,31 @@
     ],
     "coreItemStats": {
       "222503": {
-        "games": 3,
-        "pickRate": 21,
-        "winRate": 67
+        "games": 2,
+        "pickRate": 18,
+        "winRate": 50
       },
       "223089": {
         "games": 3,
-        "pickRate": 21,
+        "pickRate": 27,
         "winRate": 67
       },
       "223116": {
         "games": 5,
-        "pickRate": 36,
+        "pickRate": 45,
         "winRate": 60
       },
       "226653": {
-        "games": 9,
-        "pickRate": 64,
-        "winRate": 67
+        "games": 8,
+        "pickRate": 73,
+        "winRate": 63
       }
     },
     "situationalItems": [
       {
-        "itemId": 226657,
-        "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 29% of games)"
-      },
-      {
-        "itemId": 226665,
-        "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 21% of games)"
-      },
-      {
         "itemId": 223135,
         "condition": "general",
-        "description": "Void Staff — popular alternative (built in 14% of games)"
+        "description": "Void Staff — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -992,10 +959,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.7 · 57% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 15.13 · 45% win rate."
     ],
-    "winRate": 57.1,
-    "sampleSize": 14
+    "winRate": 45.5,
+    "sampleSize": 11
   },
   {
     "id": 20039,
@@ -1176,58 +1143,36 @@
     "starterItems": [],
     "coreItems": [
       223115,
-      223003,
-      226620,
       223089,
       223100
     ],
     "coreItemStats": {
-      "223003": {
-        "games": 2,
-        "pickRate": 13,
-        "winRate": 50
-      },
       "223089": {
         "games": 5,
-        "pickRate": 33,
+        "pickRate": 45,
         "winRate": 40
       },
       "223100": {
         "games": 3,
-        "pickRate": 20,
+        "pickRate": 27,
         "winRate": 33
       },
       "223115": {
-        "games": 3,
-        "pickRate": 20,
-        "winRate": 67
-      },
-      "226620": {
         "games": 2,
-        "pickRate": 13,
-        "winRate": 100
+        "pickRate": 18,
+        "winRate": 50
       }
     },
     "situationalItems": [
       {
-        "itemId": 223157,
+        "itemId": 226620,
         "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 13% of games)"
+        "description": "Echoes of Helia — popular alternative (built in 18% of games)"
       },
       {
         "itemId": 226617,
         "condition": "general",
-        "description": "Moonstone Renewer — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 223107,
-        "condition": "general",
-        "description": "Redemption — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 223109,
-        "condition": "general",
-        "description": "Knight's Vow — popular alternative (built in 13% of games)"
+        "description": "Moonstone Renewer — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -1254,10 +1199,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 15 challenger/grandmaster/master games on patch 16.8 · 53% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 16.8 · 55% win rate."
     ],
-    "winRate": 53.3,
-    "sampleSize": 15
+    "winRate": 54.5,
+    "sampleSize": 11
   },
   {
     "id": 20080,
@@ -1342,52 +1287,62 @@
     "coreItems": [
       223100,
       223118,
-      223157,
       223089,
-      224645
+      224645,
+      223135
     ],
     "coreItemStats": {
       "223089": {
-        "games": 14,
-        "pickRate": 64,
-        "winRate": 57
+        "games": 13,
+        "pickRate": 68,
+        "winRate": 54
       },
       "223100": {
-        "games": 7,
+        "games": 6,
         "pickRate": 32,
-        "winRate": 71
+        "winRate": 67
       },
       "223118": {
-        "games": 8,
-        "pickRate": 36,
-        "winRate": 75
+        "games": 7,
+        "pickRate": 37,
+        "winRate": 71
       },
-      "223157": {
-        "games": 3,
-        "pickRate": 14,
-        "winRate": 67
+      "223135": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 100
       },
       "224645": {
-        "games": 3,
-        "pickRate": 14,
-        "winRate": 67
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 50
       }
     },
     "situationalItems": [
       {
         "itemId": 223165,
         "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 18% of games)"
+        "description": "Morellonomicon — popular alternative (built in 21% of games)"
       },
       {
         "itemId": 223003,
         "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 18% of games)"
+        "description": "Archangel's Staff — popular alternative (built in 21% of games)"
+      },
+      {
+        "itemId": 223157,
+        "condition": "general",
+        "description": "Zhonya's Hourglass — popular alternative (built in 16% of games)"
       },
       {
         "itemId": 226657,
         "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 14% of games)"
+        "description": "Rod of Ages — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 226655,
+        "condition": "general",
+        "description": "Luden's Echo — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -1414,10 +1369,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 22 challenger/grandmaster/master games on patch 16.6 · 55% win rate."
+      "Aggregated from 19 challenger/grandmaster/master games on patch 16.6 · 47% win rate."
     ],
-    "winRate": 54.5,
-    "sampleSize": 22
+    "winRate": 47.4,
+    "sampleSize": 19
   },
   {
     "id": 20005,
@@ -1605,62 +1560,51 @@
     "starterItems": [],
     "coreItems": [
       223153,
-      223124,
       223071,
       226333
     ],
     "coreItemStats": {
       "223071": {
         "games": 6,
-        "pickRate": 23,
+        "pickRate": 30,
         "winRate": 33
-      },
-      "223124": {
-        "games": 3,
-        "pickRate": 12,
-        "winRate": 67
       },
       "223153": {
         "games": 9,
-        "pickRate": 35,
+        "pickRate": 45,
         "winRate": 56
       },
       "226333": {
-        "games": 7,
-        "pickRate": 27,
-        "winRate": 57
+        "games": 6,
+        "pickRate": 30,
+        "winRate": 50
       }
     },
     "situationalItems": [
       {
-        "itemId": 226675,
-        "condition": "general",
-        "description": "Navori Flickerblades — popular alternative (built in 15% of games)"
-      },
-      {
         "itemId": 223074,
         "condition": "general",
-        "description": "Ravenous Hydra — popular alternative (built in 12% of games)"
+        "description": "Ravenous Hydra — popular alternative (built in 15% of games)"
       },
       {
-        "itemId": 223143,
+        "itemId": 223124,
         "condition": "general",
-        "description": "Randuin's Omen — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 223748,
-        "condition": "general",
-        "description": "Titanic Hydra — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 223146,
-        "condition": "general",
-        "description": "Hextech Gunblade — popular alternative (built in 12% of games)"
+        "description": "Guinsoo's Rageblade — popular alternative (built in 15% of games)"
       },
       {
         "itemId": 226676,
         "condition": "general",
-        "description": "The Collector — popular alternative (built in 12% of games)"
+        "description": "The Collector — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 223031,
+        "condition": "general",
+        "description": "Infinity Edge — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 226675,
+        "condition": "general",
+        "description": "Navori Flickerblades — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -1687,10 +1631,10 @@
     "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 26 challenger/grandmaster/master games on patch 16.9 · 50% win rate."
+      "Aggregated from 20 challenger/grandmaster/master games on patch 16.9 · 40% win rate."
     ],
-    "winRate": 50,
-    "sampleSize": 26
+    "winRate": 40,
+    "sampleSize": 20
   },
   {
     "id": 20114,
@@ -1775,7 +1719,7 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ad",
-    "patch": "16.9",
+    "patch": "16.1",
     "starterItems": [],
     "coreItems": [
       223078,
@@ -1787,27 +1731,27 @@
     "coreItemStats": {
       "222517": {
         "games": 2,
-        "pickRate": 15,
+        "pickRate": 18,
         "winRate": 50
       },
       "223078": {
-        "games": 9,
-        "pickRate": 69,
-        "winRate": 56
+        "games": 8,
+        "pickRate": 73,
+        "winRate": 50
       },
       "223161": {
         "games": 2,
-        "pickRate": 15,
+        "pickRate": 18,
         "winRate": 50
       },
       "226333": {
         "games": 3,
-        "pickRate": 23,
+        "pickRate": 27,
         "winRate": 100
       },
       "226610": {
         "games": 4,
-        "pickRate": 31,
+        "pickRate": 36,
         "winRate": 75
       }
     },
@@ -1815,17 +1759,12 @@
       {
         "itemId": 223053,
         "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 23% of games)"
+        "description": "Sterak's Gage — popular alternative (built in 27% of games)"
       },
       {
         "itemId": 223074,
         "condition": "general",
-        "description": "Ravenous Hydra — popular alternative (built in 23% of games)"
-      },
-      {
-        "itemId": 226692,
-        "condition": "general",
-        "description": "Eclipse — popular alternative (built in 15% of games)"
+        "description": "Ravenous Hydra — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -1852,10 +1791,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 13 challenger/grandmaster/master games on patch 16.9 · 62% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 16.1 · 64% win rate."
     ],
-    "winRate": 61.5,
-    "sampleSize": 13
+    "winRate": 63.6,
+    "sampleSize": 11
   },
   {
     "id": 20166,
@@ -1954,42 +1893,56 @@
     "coreItems": [
       223084,
       223068,
-      224633,
       222502,
       223075
     ],
     "coreItemStats": {
       "222502": {
         "games": 5,
-        "pickRate": 24,
+        "pickRate": 26,
         "winRate": 100
       },
       "223068": {
-        "games": 15,
-        "pickRate": 71,
-        "winRate": 60
+        "games": 13,
+        "pickRate": 68,
+        "winRate": 69
       },
       "223075": {
         "games": 8,
-        "pickRate": 38,
+        "pickRate": 42,
         "winRate": 100
       },
       "223084": {
-        "games": 20,
+        "games": 18,
         "pickRate": 95,
-        "winRate": 60
-      },
-      "224633": {
-        "games": 4,
-        "pickRate": 19,
-        "winRate": 50
+        "winRate": 67
       }
     },
     "situationalItems": [
       {
         "itemId": 226665,
         "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 24% of games)"
+        "description": "Jak'Sho, The Protean — popular alternative (built in 26% of games)"
+      },
+      {
+        "itemId": 224633,
+        "condition": "general",
+        "description": "Riftmaker — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 223143,
+        "condition": "general",
+        "description": "Randuin's Omen — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 223065,
+        "condition": "general",
+        "description": "Spirit Visage — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 226664,
+        "condition": "general",
+        "description": "Hollow Radiance — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -2016,10 +1969,10 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 21 challenger/grandmaster/master games on patch 15.13 · 62% win rate."
+      "Aggregated from 19 challenger/grandmaster/master games on patch 15.13 · 68% win rate."
     ],
-    "winRate": 61.9,
-    "sampleSize": 21
+    "winRate": 68.4,
+    "sampleSize": 19
   },
   {
     "id": 20054,
@@ -2027,7 +1980,7 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ad",
-    "patch": "16.9",
+    "patch": "16.8",
     "starterItems": [],
     "coreItems": [
       223031,
@@ -2039,27 +1992,27 @@
     "coreItemStats": {
       "223031": {
         "games": 9,
-        "pickRate": 69,
+        "pickRate": 75,
         "winRate": 56
       },
       "223033": {
-        "games": 4,
-        "pickRate": 31,
-        "winRate": 75
+        "games": 3,
+        "pickRate": 25,
+        "winRate": 67
       },
       "223036": {
         "games": 2,
-        "pickRate": 15,
+        "pickRate": 17,
         "winRate": 100
       },
       "223072": {
         "games": 2,
-        "pickRate": 15,
+        "pickRate": 17,
         "winRate": 100
       },
       "226676": {
         "games": 4,
-        "pickRate": 31,
+        "pickRate": 33,
         "winRate": 75
       }
     },
@@ -2067,7 +2020,7 @@
       {
         "itemId": 223078,
         "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 23% of games)"
+        "description": "Trinity Force — popular alternative (built in 17% of games)"
       }
     ],
     "bootsOptions": [
@@ -2094,10 +2047,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 13 challenger/grandmaster/master games on patch 16.9 · 54% win rate."
+      "Aggregated from 12 challenger/grandmaster/master games on patch 16.8 · 50% win rate."
     ],
-    "winRate": 53.8,
-    "sampleSize": 13
+    "winRate": 50,
+    "sampleSize": 12
   },
   {
     "id": 20024,
@@ -2108,74 +2061,64 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      226631,
       223072,
-      223071,
-      223039,
-      223026,
-      226609
+      226610,
+      223031,
+      223026
     ],
     "coreItemStats": {
       "223026": {
         "games": 2,
-        "pickRate": 11,
+        "pickRate": 13,
         "winRate": 50
       },
-      "223039": {
-        "games": 2,
-        "pickRate": 11,
-        "winRate": 50
-      },
-      "223071": {
-        "games": 6,
-        "pickRate": 32,
-        "winRate": 33
+      "223031": {
+        "games": 5,
+        "pickRate": 33,
+        "winRate": 40
       },
       "223072": {
         "games": 2,
-        "pickRate": 11,
+        "pickRate": 13,
         "winRate": 100
       },
-      "226609": {
+      "226610": {
+        "games": 3,
+        "pickRate": 20,
+        "winRate": 33
+      },
+      "226631": {
         "games": 2,
-        "pickRate": 11,
+        "pickRate": 13,
         "winRate": 100
       }
     },
     "situationalItems": [
       {
-        "itemId": 223031,
+        "itemId": 223071,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 26% of games)"
+        "description": "Black Cleaver — popular alternative (built in 27% of games)"
       },
       {
         "itemId": 223053,
         "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 21% of games)"
-      },
-      {
-        "itemId": 226631,
-        "condition": "general",
-        "description": "Stridebreaker — popular alternative (built in 16% of games)"
-      },
-      {
-        "itemId": 226610,
-        "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 16% of games)"
-      },
-      {
-        "itemId": 223078,
-        "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 16% of games)"
+        "description": "Sterak's Gage — popular alternative (built in 20% of games)"
       },
       {
         "itemId": 226676,
         "condition": "general",
-        "description": "The Collector — popular alternative (built in 11% of games)"
+        "description": "The Collector — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 223033,
+        "condition": "general",
+        "description": "Mortal Reminder — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
       223111,
-      223047
+      223009
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -2197,10 +2140,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 19 challenger/grandmaster/master games on patch 16.9 · 58% win rate."
+      "Aggregated from 15 challenger/grandmaster/master games on patch 16.9 · 53% win rate."
     ],
-    "winRate": 57.9,
-    "sampleSize": 19
+    "winRate": 53.3,
+    "sampleSize": 15
   },
   {
     "id": 20036,
@@ -2297,33 +2240,27 @@
       223031,
       223072,
       223036,
-      223033,
       223139
     ],
     "coreItemStats": {
       "223031": {
-        "games": 15,
-        "pickRate": 68,
-        "winRate": 73
-      },
-      "223033": {
-        "games": 3,
-        "pickRate": 14,
-        "winRate": 100
+        "games": 14,
+        "pickRate": 70,
+        "winRate": 79
       },
       "223036": {
         "games": 8,
-        "pickRate": 36,
+        "pickRate": 40,
         "winRate": 88
       },
       "223072": {
-        "games": 5,
-        "pickRate": 23,
+        "games": 4,
+        "pickRate": 20,
         "winRate": 100
       },
       "223139": {
         "games": 2,
-        "pickRate": 9,
+        "pickRate": 10,
         "winRate": 100
       }
     },
@@ -2331,7 +2268,22 @@
       {
         "itemId": 226676,
         "condition": "general",
-        "description": "The Collector — popular alternative (built in 14% of games)"
+        "description": "The Collector — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 223033,
+        "condition": "general",
+        "description": "Mortal Reminder — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 223156,
+        "condition": "general",
+        "description": "Maw of Malmortius — popular alternative (built in 10% of games)"
+      },
+      {
+        "itemId": 226673,
+        "condition": "general",
+        "description": "Immortal Shieldbow — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -2358,10 +2310,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 22 challenger/grandmaster/master games on patch 16.9 · 64% win rate."
+      "Aggregated from 20 challenger/grandmaster/master games on patch 16.9 · 65% win rate."
     ],
-    "winRate": 63.6,
-    "sampleSize": 22
+    "winRate": 65,
+    "sampleSize": 20
   },
   {
     "id": 20128,
@@ -2380,28 +2332,28 @@
     ],
     "coreItemStats": {
       "223068": {
-        "games": 14,
-        "pickRate": 45,
-        "winRate": 43
+        "games": 12,
+        "pickRate": 43,
+        "winRate": 50
       },
       "223075": {
-        "games": 11,
-        "pickRate": 35,
-        "winRate": 73
+        "games": 10,
+        "pickRate": 36,
+        "winRate": 70
       },
       "223084": {
-        "games": 31,
+        "games": 28,
         "pickRate": 100,
-        "winRate": 55
+        "winRate": 57
       },
       "226664": {
         "games": 3,
-        "pickRate": 10,
+        "pickRate": 11,
         "winRate": 100
       },
       "226665": {
         "games": 4,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 100
       }
     },
@@ -2409,12 +2361,17 @@
       {
         "itemId": 223065,
         "condition": "general",
-        "description": "Spirit Visage — popular alternative (built in 26% of games)"
+        "description": "Spirit Visage — popular alternative (built in 29% of games)"
       },
       {
         "itemId": 223748,
         "condition": "general",
-        "description": "Titanic Hydra — popular alternative (built in 16% of games)"
+        "description": "Titanic Hydra — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 228001,
+        "condition": "general",
+        "description": "Anathema's Chains — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -2441,10 +2398,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 31 challenger/grandmaster/master games on patch 16.9 · 55% win rate."
+      "Aggregated from 28 challenger/grandmaster/master games on patch 16.9 · 57% win rate."
     ],
-    "winRate": 54.8,
-    "sampleSize": 31
+    "winRate": 57.1,
+    "sampleSize": 28
   },
   {
     "id": 20049,
@@ -2463,22 +2420,22 @@
     "coreItemStats": {
       "223004": {
         "games": 2,
-        "pickRate": 8,
+        "pickRate": 9,
         "winRate": 100
       },
       "223089": {
         "games": 16,
-        "pickRate": 67,
+        "pickRate": 70,
         "winRate": 69
       },
       "223100": {
         "games": 6,
-        "pickRate": 25,
+        "pickRate": 26,
         "winRate": 50
       },
       "223165": {
         "games": 2,
-        "pickRate": 8,
+        "pickRate": 9,
         "winRate": 50
       }
     },
@@ -2486,12 +2443,12 @@
       {
         "itemId": 222510,
         "condition": "general",
-        "description": "Dusk and Dawn — popular alternative (built in 33% of games)"
+        "description": "Dusk and Dawn — popular alternative (built in 35% of games)"
       },
       {
         "itemId": 223135,
         "condition": "general",
-        "description": "Void Staff — popular alternative (built in 25% of games)"
+        "description": "Void Staff — popular alternative (built in 26% of games)"
       },
       {
         "itemId": 224645,
@@ -2528,10 +2485,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 24 challenger/grandmaster/master games on patch 16.9 · 58% win rate."
+      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 61% win rate."
     ],
-    "winRate": 58.3,
-    "sampleSize": 24
+    "winRate": 60.9,
+    "sampleSize": 23
   },
   {
     "id": 20019,
@@ -2840,22 +2797,22 @@
     "coreItemStats": {
       "223053": {
         "games": 2,
-        "pickRate": 11,
+        "pickRate": 12,
         "winRate": 100
       },
       "223074": {
         "games": 11,
-        "pickRate": 61,
+        "pickRate": 65,
         "winRate": 18
       },
       "223078": {
         "games": 6,
-        "pickRate": 33,
+        "pickRate": 35,
         "winRate": 0
       },
       "226333": {
         "games": 5,
-        "pickRate": 28,
+        "pickRate": 29,
         "winRate": 20
       }
     },
@@ -2863,17 +2820,17 @@
       {
         "itemId": 226610,
         "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 22% of games)"
+        "description": "Sundered Sky — popular alternative (built in 18% of games)"
       },
       {
         "itemId": 223033,
         "condition": "general",
-        "description": "Mortal Reminder — popular alternative (built in 11% of games)"
+        "description": "Mortal Reminder — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 226699,
         "condition": "general",
-        "description": "Voltaic Cyclosword — popular alternative (built in 11% of games)"
+        "description": "Voltaic Cyclosword — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -2900,10 +2857,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 18 challenger/grandmaster/master games on patch 16.9 · 39% win rate."
+      "Aggregated from 17 challenger/grandmaster/master games on patch 16.9 · 35% win rate."
     ],
-    "winRate": 38.9,
-    "sampleSize": 18
+    "winRate": 35.3,
+    "sampleSize": 17
   },
   {
     "id": 20083,
@@ -2921,56 +2878,51 @@
     ],
     "coreItemStats": {
       "223089": {
-        "games": 10,
-        "pickRate": 63,
-        "winRate": 80
+        "games": 8,
+        "pickRate": 57,
+        "winRate": 75
       },
       "223100": {
-        "games": 10,
-        "pickRate": 63,
-        "winRate": 70
+        "games": 9,
+        "pickRate": 64,
+        "winRate": 67
       },
       "224645": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 50
       },
       "226655": {
         "games": 3,
-        "pickRate": 19,
+        "pickRate": 21,
         "winRate": 67
       }
     },
     "situationalItems": [
       {
-        "itemId": 223157,
-        "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 13% of games)"
-      },
-      {
         "itemId": 223165,
         "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 13% of games)"
+        "description": "Morellonomicon — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 223003,
         "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 13% of games)"
+        "description": "Archangel's Staff — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 222503,
         "condition": "general",
-        "description": "Blackfire Torch — popular alternative (built in 13% of games)"
+        "description": "Blackfire Torch — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 226653,
         "condition": "general",
-        "description": "Liandry's Anguish — popular alternative (built in 13% of games)"
+        "description": "Liandry's Anguish — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 223146,
         "condition": "general",
-        "description": "Hextech Gunblade — popular alternative (built in 13% of games)"
+        "description": "Hextech Gunblade — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [
@@ -2997,10 +2949,10 @@
     "skillMaxOrder": "E > W > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 16 challenger/grandmaster/master games on patch 16.1 · 69% win rate."
+      "Aggregated from 14 challenger/grandmaster/master games on patch 16.1 · 64% win rate."
     ],
-    "winRate": 68.8,
-    "sampleSize": 16
+    "winRate": 64.3,
+    "sampleSize": 14
   },
   {
     "id": 20018,
@@ -3011,63 +2963,48 @@
     "patch": "15.5",
     "starterItems": [],
     "coreItems": [
-      223084,
-      226657,
+      226653,
       223089,
+      223165,
       224633,
-      223075
+      223157
     ],
     "coreItemStats": {
-      "223075": {
-        "games": 3,
-        "pickRate": 17,
-        "winRate": 100
-      },
-      "223084": {
-        "games": 6,
-        "pickRate": 33,
-        "winRate": 83
-      },
       "223089": {
-        "games": 7,
-        "pickRate": 39,
-        "winRate": 71
+        "games": 4,
+        "pickRate": 36,
+        "winRate": 50
+      },
+      "223157": {
+        "games": 3,
+        "pickRate": 27,
+        "winRate": 67
+      },
+      "223165": {
+        "games": 2,
+        "pickRate": 18,
+        "winRate": 0
       },
       "224633": {
-        "games": 8,
-        "pickRate": 44,
-        "winRate": 88
-      },
-      "226657": {
-        "games": 2,
-        "pickRate": 11,
+        "games": 3,
+        "pickRate": 27,
         "winRate": 100
+      },
+      "226653": {
+        "games": 3,
+        "pickRate": 27,
+        "winRate": 33
       }
     },
     "situationalItems": [
       {
-        "itemId": 226653,
-        "condition": "general",
-        "description": "Liandry's Anguish — popular alternative (built in 22% of games)"
-      },
-      {
-        "itemId": 223157,
-        "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 223165,
-        "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 11% of games)"
-      },
-      {
         "itemId": 223003,
         "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 11% of games)"
+        "description": "Archangel's Staff — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
-      223158,
+      223020,
       223111
     ],
     "primaryPathId": 0,
@@ -3090,10 +3027,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 18 challenger/grandmaster/master games on patch 15.5 · 61% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 15.5 · 55% win rate."
     ],
-    "winRate": 61.1,
-    "sampleSize": 18
+    "winRate": 54.5,
+    "sampleSize": 11
   },
   {
     "id": 20129,
@@ -3110,18 +3047,18 @@
     ],
     "coreItemStats": {
       "223031": {
-        "games": 19,
+        "games": 18,
         "pickRate": 86,
-        "winRate": 42
+        "winRate": 44
       },
       "223033": {
         "games": 5,
-        "pickRate": 23,
+        "pickRate": 24,
         "winRate": 60
       },
       "226676": {
         "games": 13,
-        "pickRate": 59,
+        "pickRate": 62,
         "winRate": 31
       }
     },
@@ -3129,12 +3066,12 @@
       {
         "itemId": 223036,
         "condition": "general",
-        "description": "Lord Dominik's Regards — popular alternative (built in 27% of games)"
+        "description": "Lord Dominik's Regards — popular alternative (built in 29% of games)"
       },
       {
         "itemId": 223078,
         "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 18% of games)"
+        "description": "Trinity Force — popular alternative (built in 19% of games)"
       },
       {
         "itemId": 223508,
@@ -3166,10 +3103,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 22 challenger/grandmaster/master games on patch 15.24 · 36% win rate."
+      "Aggregated from 21 challenger/grandmaster/master games on patch 15.24 · 38% win rate."
     ],
-    "winRate": 36.4,
-    "sampleSize": 22
+    "winRate": 38.1,
+    "sampleSize": 21
   },
   {
     "id": 20072,
@@ -3187,17 +3124,17 @@
     "coreItemStats": {
       "223031": {
         "games": 13,
-        "pickRate": 57,
+        "pickRate": 59,
         "winRate": 54
       },
       "223033": {
         "games": 7,
-        "pickRate": 30,
+        "pickRate": 32,
         "winRate": 29
       },
       "223046": {
         "games": 7,
-        "pickRate": 30,
+        "pickRate": 32,
         "winRate": 14
       }
     },
@@ -3226,10 +3163,10 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 43% win rate."
+      "Aggregated from 22 challenger/grandmaster/master games on patch 16.9 · 45% win rate."
     ],
-    "winRate": 43.5,
-    "sampleSize": 23
+    "winRate": 45.5,
+    "sampleSize": 22
   },
   {
     "id": 20127,
@@ -3240,7 +3177,6 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
-      226676,
       223071,
       223078,
       223153,
@@ -3248,41 +3184,36 @@
     ],
     "coreItemStats": {
       "223053": {
-        "games": 3,
-        "pickRate": 21,
-        "winRate": 67
+        "games": 2,
+        "pickRate": 15,
+        "winRate": 50
       },
       "223071": {
         "games": 5,
-        "pickRate": 36,
+        "pickRate": 38,
         "winRate": 40
       },
       "223078": {
         "games": 8,
-        "pickRate": 57,
+        "pickRate": 62,
         "winRate": 25
       },
       "223153": {
         "games": 4,
-        "pickRate": 29,
+        "pickRate": 31,
         "winRate": 0
-      },
-      "226676": {
-        "games": 2,
-        "pickRate": 14,
-        "winRate": 50
       }
     },
     "situationalItems": [
       {
-        "itemId": 223143,
-        "condition": "general",
-        "description": "Randuin's Omen — popular alternative (built in 14% of games)"
-      },
-      {
         "itemId": 223302,
         "condition": "general",
-        "description": "Terminus — popular alternative (built in 14% of games)"
+        "description": "Terminus — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 226676,
+        "condition": "general",
+        "description": "The Collector — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -3309,10 +3240,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.9 · 29% win rate."
+      "Aggregated from 13 challenger/grandmaster/master games on patch 16.9 · 23% win rate."
     ],
-    "winRate": 28.6,
-    "sampleSize": 14
+    "winRate": 23.1,
+    "sampleSize": 13
   },
   {
     "id": 20113,
@@ -3331,22 +3262,22 @@
     "coreItemStats": {
       "223089": {
         "games": 8,
-        "pickRate": 57,
+        "pickRate": 67,
         "winRate": 38
       },
       "223100": {
         "games": 7,
-        "pickRate": 50,
+        "pickRate": 58,
         "winRate": 14
       },
       "224633": {
-        "games": 4,
-        "pickRate": 29,
-        "winRate": 50
+        "games": 3,
+        "pickRate": 25,
+        "winRate": 67
       },
       "224645": {
         "games": 4,
-        "pickRate": 29,
+        "pickRate": 33,
         "winRate": 25
       }
     },
@@ -3354,17 +3285,12 @@
       {
         "itemId": 224629,
         "condition": "general",
-        "description": "Cosmic Drive — popular alternative (built in 21% of games)"
-      },
-      {
-        "itemId": 223165,
-        "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 14% of games)"
+        "description": "Cosmic Drive — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 226655,
         "condition": "general",
-        "description": "Luden's Echo — popular alternative (built in 14% of games)"
+        "description": "Luden's Echo — popular alternative (built in 17% of games)"
       }
     ],
     "bootsOptions": [
@@ -3391,10 +3317,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.9 · 29% win rate."
+      "Aggregated from 12 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
     ],
-    "winRate": 28.6,
-    "sampleSize": 14
+    "winRate": 33.3,
+    "sampleSize": 12
   },
   {
     "id": 20055,
@@ -3490,27 +3416,27 @@
     "coreItemStats": {
       "223089": {
         "games": 6,
-        "pickRate": 26,
+        "pickRate": 27,
         "winRate": 67
       },
       "223115": {
-        "games": 18,
-        "pickRate": 78,
-        "winRate": 78
+        "games": 17,
+        "pickRate": 77,
+        "winRate": 76
       },
       "223157": {
         "games": 3,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 100
       },
       "224633": {
-        "games": 18,
-        "pickRate": 78,
-        "winRate": 72
+        "games": 17,
+        "pickRate": 77,
+        "winRate": 71
       },
       "224645": {
         "games": 3,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 100
       }
     },
@@ -3518,17 +3444,17 @@
       {
         "itemId": 222510,
         "condition": "general",
-        "description": "Dusk and Dawn — popular alternative (built in 22% of games)"
+        "description": "Dusk and Dawn — popular alternative (built in 23% of games)"
       },
       {
         "itemId": 223135,
         "condition": "general",
-        "description": "Void Staff — popular alternative (built in 13% of games)"
+        "description": "Void Staff — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [
       223020,
-      223006
+      223008
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -3550,10 +3476,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 74% win rate."
+      "Aggregated from 22 challenger/grandmaster/master games on patch 16.9 · 73% win rate."
     ],
-    "winRate": 73.9,
-    "sampleSize": 23
+    "winRate": 72.7,
+    "sampleSize": 22
   },
   {
     "id": 20134,
@@ -3565,42 +3491,58 @@
     "starterItems": [],
     "coreItems": [
       223078,
-      223084,
       223161,
-      223071
+      223071,
+      223142,
+      226692
     ],
     "coreItemStats": {
       "223071": {
-        "games": 6,
-        "pickRate": 26,
-        "winRate": 67
+        "games": 4,
+        "pickRate": 24,
+        "winRate": 75
       },
       "223078": {
         "games": 3,
-        "pickRate": 13,
+        "pickRate": 18,
         "winRate": 67
       },
-      "223084": {
+      "223142": {
         "games": 2,
-        "pickRate": 9,
-        "winRate": 50
+        "pickRate": 12,
+        "winRate": 100
       },
       "223161": {
-        "games": 11,
-        "pickRate": 48,
-        "winRate": 64
+        "games": 7,
+        "pickRate": 41,
+        "winRate": 71
+      },
+      "226692": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 50
       }
     },
     "situationalItems": [
       {
-        "itemId": 226692,
+        "itemId": 223033,
         "condition": "general",
-        "description": "Eclipse — popular alternative (built in 13% of games)"
+        "description": "Mortal Reminder — popular alternative (built in 12% of games)"
+      },
+      {
+        "itemId": 223031,
+        "condition": "general",
+        "description": "Infinity Edge — popular alternative (built in 12% of games)"
+      },
+      {
+        "itemId": 226699,
+        "condition": "general",
+        "description": "Voltaic Cyclosword — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 223004,
         "condition": "general",
-        "description": "Manamune — popular alternative (built in 13% of games)"
+        "description": "Manamune — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -3627,10 +3569,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 61% win rate."
+      "Aggregated from 17 challenger/grandmaster/master games on patch 16.9 · 59% win rate."
     ],
-    "winRate": 60.9,
-    "sampleSize": 23
+    "winRate": 58.8,
+    "sampleSize": 17
   },
   {
     "id": 20069,
@@ -3784,43 +3726,28 @@
     "patch": "16.7",
     "starterItems": [],
     "coreItems": [
-      223084,
-      223071
+      223078,
+      223071,
+      223053
     ],
     "coreItemStats": {
-      "223071": {
-        "games": 5,
-        "pickRate": 38,
-        "winRate": 40
-      },
-      "223084": {
-        "games": 6,
-        "pickRate": 46,
+      "223053": {
+        "games": 2,
+        "pickRate": 29,
         "winRate": 50
+      },
+      "223071": {
+        "games": 3,
+        "pickRate": 43,
+        "winRate": 33
+      },
+      "223078": {
+        "games": 3,
+        "pickRate": 43,
+        "winRate": 0
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 223078,
-        "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 31% of games)"
-      },
-      {
-        "itemId": 226610,
-        "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 223053,
-        "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 223074,
-        "condition": "general",
-        "description": "Ravenous Hydra — popular alternative (built in 15% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       223111,
       223158
@@ -3845,10 +3772,10 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 13 challenger/grandmaster/master games on patch 16.7 · 38% win rate."
+      "Aggregated from 7 challenger/grandmaster/master games on patch 16.7 · 29% win rate."
     ],
-    "winRate": 38.5,
-    "sampleSize": 13
+    "winRate": 28.6,
+    "sampleSize": 7
   },
   {
     "id": 20169,
@@ -3931,31 +3858,19 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
-      222526,
       226617,
-      223504,
-      223089
+      223504
     ],
     "coreItemStats": {
-      "222526": {
-        "games": 2,
-        "pickRate": 25,
-        "winRate": 50
-      },
-      "223089": {
-        "games": 2,
-        "pickRate": 25,
-        "winRate": 100
-      },
       "223504": {
         "games": 2,
-        "pickRate": 25,
+        "pickRate": 40,
         "winRate": 50
       },
       "226617": {
-        "games": 4,
-        "pickRate": 50,
-        "winRate": 25
+        "games": 3,
+        "pickRate": 60,
+        "winRate": 33
       }
     },
     "situationalItems": [],
@@ -3983,39 +3898,25 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 8 challenger/grandmaster/master games on patch 16.9 · 63% win rate."
+      "Aggregated from 5 challenger/grandmaster/master games on patch 16.9 · 60% win rate."
     ],
-    "winRate": 62.5,
-    "sampleSize": 8
+    "winRate": 60,
+    "sampleSize": 5
   },
   {
     "id": 20070,
     "championId": "Janna",
     "mode": "ARENA",
     "role": null,
-    "archetype": "ap",
-    "patch": "15.21",
+    "archetype": "other",
+    "patch": "15.13",
     "starterItems": [],
-    "coreItems": [
-      224005,
-      226617
-    ],
-    "coreItemStats": {
-      "224005": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 0
-      },
-      "226617": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      }
-    },
+    "coreItems": [],
+    "coreItemStats": {},
     "situationalItems": [],
     "bootsOptions": [
-      223158,
-      223009
+      223009,
+      223158
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -4037,9 +3938,9 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 15.21 · 43% win rate."
+      "Aggregated from 7 challenger/grandmaster/master games on patch 15.13 · 14% win rate."
     ],
-    "winRate": 42.9,
+    "winRate": 14.3,
     "sampleSize": 7
   },
   {
@@ -4051,61 +3952,34 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      223071,
       226692,
-      226610,
       226698,
-      223078,
-      223084
+      226610
     ],
     "coreItemStats": {
-      "223078": {
+      "223071": {
         "games": 2,
-        "pickRate": 10,
+        "pickRate": 17,
         "winRate": 100
       },
-      "223084": {
-        "games": 5,
-        "pickRate": 25,
-        "winRate": 40
-      },
       "226610": {
-        "games": 6,
-        "pickRate": 30,
+        "games": 3,
+        "pickRate": 25,
         "winRate": 33
       },
       "226692": {
-        "games": 4,
-        "pickRate": 20,
-        "winRate": 50
+        "games": 3,
+        "pickRate": 25,
+        "winRate": 33
       },
       "226698": {
         "games": 2,
-        "pickRate": 10,
+        "pickRate": 17,
         "winRate": 50
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 226609,
-        "condition": "general",
-        "description": "Chempunk Chainsword — popular alternative (built in 10% of games)"
-      },
-      {
-        "itemId": 223748,
-        "condition": "general",
-        "description": "Titanic Hydra — popular alternative (built in 10% of games)"
-      },
-      {
-        "itemId": 226676,
-        "condition": "general",
-        "description": "The Collector — popular alternative (built in 10% of games)"
-      },
-      {
-        "itemId": 223071,
-        "condition": "general",
-        "description": "Black Cleaver — popular alternative (built in 10% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       223047,
       223111
@@ -4130,10 +4004,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "E",
     "notes": [
-      "Aggregated from 20 challenger/grandmaster/master games on patch 16.9 · 50% win rate."
+      "Aggregated from 12 challenger/grandmaster/master games on patch 16.9 · 50% win rate."
     ],
     "winRate": 50,
-    "sampleSize": 20
+    "sampleSize": 12
   },
   {
     "id": 20050,
@@ -4330,22 +4204,22 @@
     "coreItemStats": {
       "223031": {
         "games": 31,
-        "pickRate": 91,
+        "pickRate": 94,
         "winRate": 52
       },
       "223033": {
-        "games": 11,
-        "pickRate": 32,
-        "winRate": 73
+        "games": 10,
+        "pickRate": 30,
+        "winRate": 70
       },
       "223094": {
         "games": 11,
-        "pickRate": 32,
+        "pickRate": 33,
         "winRate": 36
       },
       "226676": {
         "games": 13,
-        "pickRate": 38,
+        "pickRate": 39,
         "winRate": 46
       }
     },
@@ -4353,7 +4227,7 @@
       {
         "itemId": 223036,
         "condition": "general",
-        "description": "Lord Dominik's Regards — popular alternative (built in 26% of games)"
+        "description": "Lord Dominik's Regards — popular alternative (built in 27% of games)"
       },
       {
         "itemId": 223072,
@@ -4390,10 +4264,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 34 challenger/grandmaster/master games on patch 16.9 · 56% win rate."
+      "Aggregated from 33 challenger/grandmaster/master games on patch 16.9 · 55% win rate."
     ],
-    "winRate": 55.9,
-    "sampleSize": 34
+    "winRate": 54.5,
+    "sampleSize": 33
   },
   {
     "id": 20008,
@@ -4570,7 +4444,7 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ad",
-    "patch": "16.1",
+    "patch": "16.9",
     "starterItems": [],
     "coreItems": [
       223153,
@@ -4580,23 +4454,23 @@
     ],
     "coreItemStats": {
       "223124": {
-        "games": 10,
-        "pickRate": 67,
-        "winRate": 50
+        "games": 9,
+        "pickRate": 69,
+        "winRate": 56
       },
       "223139": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 15,
         "winRate": 100
       },
       "223153": {
-        "games": 9,
-        "pickRate": 60,
-        "winRate": 67
+        "games": 7,
+        "pickRate": 54,
+        "winRate": 71
       },
       "223302": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 15,
         "winRate": 100
       }
     },
@@ -4604,27 +4478,22 @@
       {
         "itemId": 223091,
         "condition": "general",
-        "description": "Wit's End — popular alternative (built in 13% of games)"
+        "description": "Wit's End — popular alternative (built in 15% of games)"
       },
       {
         "itemId": 226333,
         "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 223087,
-        "condition": "general",
-        "description": "Statikk Shiv — popular alternative (built in 13% of games)"
+        "description": "Death's Dance — popular alternative (built in 15% of games)"
       },
       {
         "itemId": 223085,
         "condition": "general",
-        "description": "Runaan's Hurricane — popular alternative (built in 13% of games)"
+        "description": "Runaan's Hurricane — popular alternative (built in 15% of games)"
       },
       {
         "itemId": 223031,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 13% of games)"
+        "description": "Infinity Edge — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -4650,10 +4519,10 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 15 challenger/grandmaster/master games on patch 16.1 · 40% win rate."
+      "Aggregated from 13 challenger/grandmaster/master games on patch 16.9 · 38% win rate."
     ],
-    "winRate": 40,
-    "sampleSize": 15
+    "winRate": 38.5,
+    "sampleSize": 13
   },
   {
     "id": 20142,
@@ -4665,63 +4534,53 @@
     "starterItems": [],
     "coreItems": [
       226657,
+      223118,
       223504,
       226617,
-      223089,
-      223065
+      223089
     ],
     "coreItemStats": {
-      "223065": {
-        "games": 3,
-        "pickRate": 16,
-        "winRate": 33
-      },
       "223089": {
         "games": 5,
-        "pickRate": 26,
+        "pickRate": 31,
         "winRate": 100
+      },
+      "223118": {
+        "games": 5,
+        "pickRate": 31,
+        "winRate": 80
       },
       "223504": {
         "games": 4,
-        "pickRate": 21,
+        "pickRate": 25,
         "winRate": 100
       },
       "226617": {
-        "games": 10,
-        "pickRate": 53,
-        "winRate": 60
+        "games": 9,
+        "pickRate": 56,
+        "winRate": 67
       },
       "226657": {
         "games": 2,
-        "pickRate": 11,
+        "pickRate": 13,
         "winRate": 50
       }
     },
     "situationalItems": [
       {
-        "itemId": 223118,
-        "condition": "general",
-        "description": "Malignance — popular alternative (built in 26% of games)"
-      },
-      {
         "itemId": 226621,
         "condition": "general",
-        "description": "Dawncore — popular alternative (built in 21% of games)"
+        "description": "Dawncore — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 223003,
         "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 16% of games)"
+        "description": "Archangel's Staff — popular alternative (built in 19% of games)"
       },
       {
         "itemId": 226653,
         "condition": "general",
-        "description": "Liandry's Anguish — popular alternative (built in 11% of games)"
-      },
-      {
-        "itemId": 226616,
-        "condition": "general",
-        "description": "Staff of Flowing Water — popular alternative (built in 11% of games)"
+        "description": "Liandry's Anguish — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -4748,10 +4607,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 19 challenger/grandmaster/master games on patch 16.9 · 47% win rate."
+      "Aggregated from 16 challenger/grandmaster/master games on patch 16.9 · 56% win rate."
     ],
-    "winRate": 47.4,
-    "sampleSize": 19
+    "winRate": 56.3,
+    "sampleSize": 16
   },
   {
     "id": 20110,
@@ -4950,22 +4809,22 @@
       },
       "223073": {
         "games": 4,
-        "pickRate": 21,
+        "pickRate": 22,
         "winRate": 50
       },
       "223087": {
         "games": 10,
-        "pickRate": 53,
+        "pickRate": 56,
         "winRate": 50
       },
       "223153": {
         "games": 7,
-        "pickRate": 37,
+        "pickRate": 39,
         "winRate": 43
       },
       "226672": {
         "games": 5,
-        "pickRate": 26,
+        "pickRate": 28,
         "winRate": 20
       }
     },
@@ -4973,32 +4832,27 @@
       {
         "itemId": 223146,
         "condition": "general",
-        "description": "Hextech Gunblade — popular alternative (built in 26% of games)"
-      },
-      {
-        "itemId": 223115,
-        "condition": "general",
-        "description": "Nashor's Tooth — popular alternative (built in 21% of games)"
+        "description": "Hextech Gunblade — popular alternative (built in 28% of games)"
       },
       {
         "itemId": 223302,
         "condition": "general",
-        "description": "Terminus — popular alternative (built in 21% of games)"
+        "description": "Terminus — popular alternative (built in 22% of games)"
+      },
+      {
+        "itemId": 223115,
+        "condition": "general",
+        "description": "Nashor's Tooth — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 223124,
         "condition": "general",
-        "description": "Guinsoo's Rageblade — popular alternative (built in 16% of games)"
+        "description": "Guinsoo's Rageblade — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 223181,
         "condition": "general",
         "description": "Hullbreaker — popular alternative (built in 11% of games)"
-      },
-      {
-        "itemId": 223748,
-        "condition": "general",
-        "description": "Titanic Hydra — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -5025,10 +4879,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 19 challenger/grandmaster/master games on patch 16.9 · 42% win rate."
+      "Aggregated from 18 challenger/grandmaster/master games on patch 16.9 · 39% win rate."
     ],
-    "winRate": 42.1,
-    "sampleSize": 19
+    "winRate": 38.9,
+    "sampleSize": 18
   },
   {
     "id": 20099,
@@ -5462,62 +5316,52 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ad",
-    "patch": "16.7",
+    "patch": "15.7",
     "starterItems": [],
     "coreItems": [
-      226676,
-      226692,
       223153,
+      226692,
+      223031,
       223036,
-      223033
+      226699
     ],
     "coreItemStats": {
-      "223033": {
-        "games": 2,
-        "pickRate": 13,
-        "winRate": 100
+      "223031": {
+        "games": 3,
+        "pickRate": 25,
+        "winRate": 67
       },
       "223036": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 17,
         "winRate": 100
       },
       "223153": {
-        "games": 6,
-        "pickRate": 38,
-        "winRate": 83
-      },
-      "226676": {
-        "games": 2,
-        "pickRate": 13,
-        "winRate": 50
+        "games": 4,
+        "pickRate": 33,
+        "winRate": 100
       },
       "226692": {
         "games": 5,
-        "pickRate": 31,
+        "pickRate": 42,
         "winRate": 80
+      },
+      "226699": {
+        "games": 3,
+        "pickRate": 25,
+        "winRate": 67
       }
     },
     "situationalItems": [
       {
-        "itemId": 223031,
+        "itemId": 226676,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 19% of games)"
+        "description": "The Collector — popular alternative (built in 17% of games)"
       },
       {
-        "itemId": 226699,
+        "itemId": 223033,
         "condition": "general",
-        "description": "Voltaic Cyclosword — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 223084,
-        "condition": "general",
-        "description": "Heartsteel — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 223748,
-        "condition": "general",
-        "description": "Titanic Hydra — popular alternative (built in 13% of games)"
+        "description": "Mortal Reminder — popular alternative (built in 17% of games)"
       }
     ],
     "bootsOptions": [
@@ -5544,10 +5388,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 16 challenger/grandmaster/master games on patch 16.7 · 63% win rate."
+      "Aggregated from 12 challenger/grandmaster/master games on patch 15.7 · 67% win rate."
     ],
-    "winRate": 62.5,
-    "sampleSize": 16
+    "winRate": 66.7,
+    "sampleSize": 12
   },
   {
     "id": 20126,
@@ -5663,9 +5507,9 @@
         "winRate": 100
       },
       "223075": {
-        "games": 8,
-        "pickRate": 33,
-        "winRate": 75
+        "games": 7,
+        "pickRate": 30,
+        "winRate": 86
       },
       "223110": {
         "games": 3,
@@ -5679,7 +5523,7 @@
       },
       "226665": {
         "games": 17,
-        "pickRate": 71,
+        "pickRate": 74,
         "winRate": 76
       }
     },
@@ -5687,22 +5531,22 @@
       {
         "itemId": 223084,
         "condition": "general",
-        "description": "Heartsteel — popular alternative (built in 29% of games)"
+        "description": "Heartsteel — popular alternative (built in 30% of games)"
       },
       {
         "itemId": 226662,
         "condition": "general",
-        "description": "Iceborn Gauntlet — popular alternative (built in 21% of games)"
+        "description": "Iceborn Gauntlet — popular alternative (built in 22% of games)"
       },
       {
         "itemId": 223143,
         "condition": "general",
-        "description": "Randuin's Omen — popular alternative (built in 21% of games)"
+        "description": "Randuin's Omen — popular alternative (built in 22% of games)"
       },
       {
         "itemId": 223065,
         "condition": "general",
-        "description": "Spirit Visage — popular alternative (built in 17% of games)"
+        "description": "Spirit Visage — popular alternative (built in 13% of games)"
       },
       {
         "itemId": 222502,
@@ -5734,10 +5578,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 24 challenger/grandmaster/master games on patch 16.9 · 54% win rate."
+      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 57% win rate."
     ],
-    "winRate": 54.2,
-    "sampleSize": 24
+    "winRate": 56.5,
+    "sampleSize": 23
   },
   {
     "id": 20071,
@@ -5938,45 +5782,45 @@
     "coreItemStats": {
       "222503": {
         "games": 8,
-        "pickRate": 28,
+        "pickRate": 29,
         "winRate": 50
       },
       "226653": {
-        "games": 23,
+        "games": 22,
         "pickRate": 79,
-        "winRate": 43
+        "winRate": 45
       }
     },
     "situationalItems": [
       {
         "itemId": 223089,
         "condition": "general",
-        "description": "Rabadon's Deathcap — popular alternative (built in 28% of games)"
+        "description": "Rabadon's Deathcap — popular alternative (built in 29% of games)"
       },
       {
         "itemId": 223116,
         "condition": "general",
-        "description": "Rylai's Crystal Scepter — popular alternative (built in 24% of games)"
+        "description": "Rylai's Crystal Scepter — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 224633,
         "condition": "general",
-        "description": "Riftmaker — popular alternative (built in 24% of games)"
+        "description": "Riftmaker — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 226657,
         "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 10% of games)"
+        "description": "Rod of Ages — popular alternative (built in 11% of games)"
       },
       {
         "itemId": 223118,
         "condition": "general",
-        "description": "Malignance — popular alternative (built in 10% of games)"
+        "description": "Malignance — popular alternative (built in 11% of games)"
       },
       {
         "itemId": 224629,
         "condition": "general",
-        "description": "Cosmic Drive — popular alternative (built in 10% of games)"
+        "description": "Cosmic Drive — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -6003,10 +5847,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 29 challenger/grandmaster/master games on patch 16.9 · 48% win rate."
+      "Aggregated from 28 challenger/grandmaster/master games on patch 16.9 · 50% win rate."
     ],
-    "winRate": 48.3,
-    "sampleSize": 29
+    "winRate": 50,
+    "sampleSize": 28
   },
   {
     "id": 20075,
@@ -6182,51 +6026,45 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ap",
-    "patch": "16.9",
+    "patch": "16.1",
     "starterItems": [],
     "coreItems": [
+      226620,
+      226621,
       223107,
       223504,
-      226617,
-      223190
+      226617
     ],
     "coreItemStats": {
       "223107": {
-        "games": 5,
-        "pickRate": 45,
-        "winRate": 60
-      },
-      "223190": {
-        "games": 2,
-        "pickRate": 18,
-        "winRate": 50
+        "games": 4,
+        "pickRate": 44,
+        "winRate": 75
       },
       "223504": {
-        "games": 7,
-        "pickRate": 64,
-        "winRate": 43
+        "games": 5,
+        "pickRate": 56,
+        "winRate": 40
       },
       "226617": {
-        "games": 5,
-        "pickRate": 45,
-        "winRate": 60
+        "games": 4,
+        "pickRate": 44,
+        "winRate": 50
+      },
+      "226620": {
+        "games": 2,
+        "pickRate": 22,
+        "winRate": 100
+      },
+      "226621": {
+        "games": 2,
+        "pickRate": 22,
+        "winRate": 100
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 226620,
-        "condition": "general",
-        "description": "Echoes of Helia — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 226621,
-        "condition": "general",
-        "description": "Dawncore — popular alternative (built in 18% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
-      223158,
-      223005
+      223158
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -6248,10 +6086,10 @@
     "skillMaxOrder": "E > W > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 11 challenger/grandmaster/master games on patch 16.9 · 64% win rate."
+      "Aggregated from 9 challenger/grandmaster/master games on patch 16.1 · 67% win rate."
     ],
-    "winRate": 63.6,
-    "sampleSize": 11
+    "winRate": 66.7,
+    "sampleSize": 9
   },
   {
     "id": 20106,
@@ -6369,27 +6207,27 @@
     "coreItemStats": {
       "222502": {
         "games": 5,
-        "pickRate": 42,
+        "pickRate": 45,
         "winRate": 80
       },
       "223068": {
         "games": 4,
-        "pickRate": 33,
+        "pickRate": 36,
         "winRate": 75
       },
       "223075": {
         "games": 6,
-        "pickRate": 50,
+        "pickRate": 55,
         "winRate": 83
       },
       "223084": {
-        "games": 10,
-        "pickRate": 83,
-        "winRate": 60
+        "games": 9,
+        "pickRate": 82,
+        "winRate": 67
       },
       "226665": {
         "games": 4,
-        "pickRate": 33,
+        "pickRate": 36,
         "winRate": 100
       }
     },
@@ -6397,7 +6235,7 @@
       {
         "itemId": 224633,
         "condition": "general",
-        "description": "Riftmaker — popular alternative (built in 17% of games)"
+        "description": "Riftmaker — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -6424,10 +6262,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 12 challenger/grandmaster/master games on patch 15.8 · 67% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 15.8 · 73% win rate."
     ],
-    "winRate": 66.7,
-    "sampleSize": 12
+    "winRate": 72.7,
+    "sampleSize": 11
   },
   {
     "id": 20012,
@@ -6705,27 +6543,27 @@
     "coreItemStats": {
       "222503": {
         "games": 6,
-        "pickRate": 40,
+        "pickRate": 43,
         "winRate": 50
       },
       "223089": {
-        "games": 7,
-        "pickRate": 47,
-        "winRate": 71
+        "games": 6,
+        "pickRate": 43,
+        "winRate": 67
       },
       "224645": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 50
       },
       "226653": {
         "games": 7,
-        "pickRate": 47,
+        "pickRate": 50,
         "winRate": 57
       },
       "226655": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 50
       }
     },
@@ -6733,22 +6571,22 @@
       {
         "itemId": 223003,
         "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 33% of games)"
-      },
-      {
-        "itemId": 223157,
-        "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 27% of games)"
+        "description": "Archangel's Staff — popular alternative (built in 36% of games)"
       },
       {
         "itemId": 223135,
         "condition": "general",
-        "description": "Void Staff — popular alternative (built in 20% of games)"
+        "description": "Void Staff — popular alternative (built in 21% of games)"
+      },
+      {
+        "itemId": 223157,
+        "condition": "general",
+        "description": "Zhonya's Hourglass — popular alternative (built in 21% of games)"
       }
     ],
     "bootsOptions": [
       223020,
-      223158
+      223005
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -6770,10 +6608,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 15 challenger/grandmaster/master games on patch 15.24 · 47% win rate."
+      "Aggregated from 14 challenger/grandmaster/master games on patch 15.24 · 43% win rate."
     ],
-    "winRate": 46.7,
-    "sampleSize": 15
+    "winRate": 42.9,
+    "sampleSize": 14
   },
   {
     "id": 20164,
@@ -6781,7 +6619,7 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ap",
-    "patch": "16.9",
+    "patch": "16.8",
     "starterItems": [],
     "coreItems": [
       223504,
@@ -6791,23 +6629,23 @@
     ],
     "coreItemStats": {
       "223504": {
-        "games": 8,
-        "pickRate": 42,
-        "winRate": 88
+        "games": 7,
+        "pickRate": 44,
+        "winRate": 100
       },
       "226617": {
-        "games": 12,
+        "games": 10,
         "pickRate": 63,
-        "winRate": 83
+        "winRate": 90
       },
       "226620": {
         "games": 5,
-        "pickRate": 26,
+        "pickRate": 31,
         "winRate": 80
       },
       "226621": {
         "games": 4,
-        "pickRate": 21,
+        "pickRate": 25,
         "winRate": 100
       }
     },
@@ -6815,32 +6653,32 @@
       {
         "itemId": 226616,
         "condition": "general",
-        "description": "Staff of Flowing Water — popular alternative (built in 26% of games)"
-      },
-      {
-        "itemId": 223107,
-        "condition": "general",
-        "description": "Redemption — popular alternative (built in 21% of games)"
+        "description": "Staff of Flowing Water — popular alternative (built in 31% of games)"
       },
       {
         "itemId": 223089,
         "condition": "general",
-        "description": "Rabadon's Deathcap — popular alternative (built in 16% of games)"
+        "description": "Rabadon's Deathcap — popular alternative (built in 19% of games)"
       },
       {
-        "itemId": 223190,
+        "itemId": 223107,
         "condition": "general",
-        "description": "Locket of the Iron Solari — popular alternative (built in 16% of games)"
-      },
-      {
-        "itemId": 222526,
-        "condition": "general",
-        "description": "Whispering Circlet — popular alternative (built in 11% of games)"
+        "description": "Redemption — popular alternative (built in 13% of games)"
       },
       {
         "itemId": 226655,
         "condition": "general",
-        "description": "Luden's Echo — popular alternative (built in 11% of games)"
+        "description": "Luden's Echo — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 226653,
+        "condition": "general",
+        "description": "Liandry's Anguish — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 222503,
+        "condition": "general",
+        "description": "Blackfire Torch — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -6864,13 +6702,13 @@
       0,
       0
     ],
-    "skillMaxOrder": "E > W > Q",
+    "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 19 challenger/grandmaster/master games on patch 16.9 · 68% win rate."
+      "Aggregated from 16 challenger/grandmaster/master games on patch 16.8 · 75% win rate."
     ],
-    "winRate": 68.4,
-    "sampleSize": 19
+    "winRate": 75,
+    "sampleSize": 16
   },
   {
     "id": 20146,
@@ -6890,27 +6728,27 @@
     "coreItemStats": {
       "223031": {
         "games": 20,
-        "pickRate": 83,
+        "pickRate": 87,
         "winRate": 70
       },
       "223036": {
         "games": 6,
-        "pickRate": 25,
+        "pickRate": 26,
         "winRate": 83
       },
       "226673": {
         "games": 2,
-        "pickRate": 8,
+        "pickRate": 9,
         "winRate": 100
       },
       "226676": {
         "games": 9,
-        "pickRate": 38,
+        "pickRate": 39,
         "winRate": 78
       },
       "226696": {
         "games": 2,
-        "pickRate": 8,
+        "pickRate": 9,
         "winRate": 50
       }
     },
@@ -6918,7 +6756,7 @@
       {
         "itemId": 223033,
         "condition": "general",
-        "description": "Mortal Reminder — popular alternative (built in 21% of games)"
+        "description": "Mortal Reminder — popular alternative (built in 22% of games)"
       },
       {
         "itemId": 223072,
@@ -6950,10 +6788,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 24 challenger/grandmaster/master games on patch 16.9 · 67% win rate."
+      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 65% win rate."
     ],
-    "winRate": 66.7,
-    "sampleSize": 24
+    "winRate": 65.2,
+    "sampleSize": 23
   },
   {
     "id": 20107,
@@ -6964,36 +6802,24 @@
     "patch": "16.8",
     "starterItems": [],
     "coreItems": [
-      223084,
       223071,
       226610,
-      223153,
       226333
     ],
     "coreItemStats": {
       "223071": {
         "games": 7,
-        "pickRate": 39,
+        "pickRate": 44,
         "winRate": 43
-      },
-      "223084": {
-        "games": 2,
-        "pickRate": 11,
-        "winRate": 50
-      },
-      "223153": {
-        "games": 2,
-        "pickRate": 11,
-        "winRate": 100
       },
       "226333": {
         "games": 2,
-        "pickRate": 11,
+        "pickRate": 13,
         "winRate": 100
       },
       "226610": {
         "games": 5,
-        "pickRate": 28,
+        "pickRate": 31,
         "winRate": 20
       }
     },
@@ -7001,27 +6827,22 @@
       {
         "itemId": 223031,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 22% of games)"
+        "description": "Infinity Edge — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 223078,
         "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 223033,
-        "condition": "general",
-        "description": "Mortal Reminder — popular alternative (built in 17% of games)"
+        "description": "Trinity Force — popular alternative (built in 19% of games)"
       },
       {
         "itemId": 222517,
         "condition": "general",
-        "description": "Endless Hunger — popular alternative (built in 17% of games)"
+        "description": "Endless Hunger — popular alternative (built in 19% of games)"
       }
     ],
     "bootsOptions": [
       223047,
-      223111
+      223158
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -7043,10 +6864,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 18 challenger/grandmaster/master games on patch 16.8 · 33% win rate."
+      "Aggregated from 16 challenger/grandmaster/master games on patch 16.8 · 31% win rate."
     ],
-    "winRate": 33.3,
-    "sampleSize": 18
+    "winRate": 31.3,
+    "sampleSize": 16
   },
   {
     "id": 20017,
@@ -7054,7 +6875,7 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ap",
-    "patch": "16.9",
+    "patch": "15.5",
     "starterItems": [],
     "coreItems": [
       224633,
@@ -7065,40 +6886,30 @@
     "coreItemStats": {
       "223089": {
         "games": 10,
-        "pickRate": 38,
+        "pickRate": 43,
         "winRate": 40
       },
       "223116": {
         "games": 14,
-        "pickRate": 54,
+        "pickRate": 61,
         "winRate": 43
       },
       "224633": {
-        "games": 16,
-        "pickRate": 62,
-        "winRate": 50
+        "games": 13,
+        "pickRate": 57,
+        "winRate": 46
       },
       "226653": {
-        "games": 12,
-        "pickRate": 46,
-        "winRate": 42
+        "games": 11,
+        "pickRate": 48,
+        "winRate": 36
       }
     },
     "situationalItems": [
       {
         "itemId": 223157,
         "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 226665,
-        "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 223146,
-        "condition": "general",
-        "description": "Hextech Gunblade — popular alternative (built in 12% of games)"
+        "description": "Zhonya's Hourglass — popular alternative (built in 22% of games)"
       }
     ],
     "bootsOptions": [
@@ -7125,10 +6936,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 26 challenger/grandmaster/master games on patch 16.9 · 46% win rate."
+      "Aggregated from 23 challenger/grandmaster/master games on patch 15.5 · 43% win rate."
     ],
-    "winRate": 46.2,
-    "sampleSize": 26
+    "winRate": 43.5,
+    "sampleSize": 23
   },
   {
     "id": 20116,
@@ -7152,17 +6963,17 @@
       },
       "223089": {
         "games": 11,
-        "pickRate": 42,
+        "pickRate": 44,
         "winRate": 73
       },
       "223157": {
         "games": 12,
-        "pickRate": 46,
+        "pickRate": 48,
         "winRate": 75
       },
       "226653": {
         "games": 16,
-        "pickRate": 62,
+        "pickRate": 64,
         "winRate": 69
       }
     },
@@ -7170,12 +6981,12 @@
       {
         "itemId": 222503,
         "condition": "general",
-        "description": "Blackfire Torch — popular alternative (built in 19% of games)"
+        "description": "Blackfire Torch — popular alternative (built in 20% of games)"
       },
       {
         "itemId": 223118,
         "condition": "general",
-        "description": "Malignance — popular alternative (built in 19% of games)"
+        "description": "Malignance — popular alternative (built in 20% of games)"
       },
       {
         "itemId": 223135,
@@ -7212,10 +7023,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 26 challenger/grandmaster/master games on patch 16.9 · 65% win rate."
+      "Aggregated from 25 challenger/grandmaster/master games on patch 16.9 · 68% win rate."
     ],
-    "winRate": 65.4,
-    "sampleSize": 26
+    "winRate": 68,
+    "sampleSize": 25
   },
   {
     "id": 20077,
@@ -7233,17 +7044,17 @@
     "coreItemStats": {
       "226694": {
         "games": 8,
-        "pickRate": 33,
+        "pickRate": 35,
         "winRate": 63
       },
       "226695": {
         "games": 6,
-        "pickRate": 25,
+        "pickRate": 26,
         "winRate": 83
       },
       "226699": {
         "games": 5,
-        "pickRate": 21,
+        "pickRate": 22,
         "winRate": 40
       }
     },
@@ -7251,7 +7062,7 @@
       {
         "itemId": 226692,
         "condition": "general",
-        "description": "Eclipse — popular alternative (built in 21% of games)"
+        "description": "Eclipse — popular alternative (built in 22% of games)"
       },
       {
         "itemId": 226609,
@@ -7293,10 +7104,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 24 challenger/grandmaster/master games on patch 16.9 · 42% win rate."
+      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 43% win rate."
     ],
-    "winRate": 41.7,
-    "sampleSize": 24
+    "winRate": 43.5,
+    "sampleSize": 23
   },
   {
     "id": 20062,
@@ -7307,69 +7118,69 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      223504,
       223003,
       223089,
-      223157,
       223165,
       223135
     ],
     "coreItemStats": {
       "223003": {
-        "games": 5,
-        "pickRate": 26,
+        "games": 4,
+        "pickRate": 24,
         "winRate": 100
       },
       "223089": {
         "games": 9,
-        "pickRate": 47,
+        "pickRate": 53,
         "winRate": 67
       },
       "223135": {
         "games": 2,
-        "pickRate": 11,
+        "pickRate": 12,
         "winRate": 100
       },
-      "223157": {
-        "games": 3,
-        "pickRate": 16,
-        "winRate": 67
-      },
       "223165": {
-        "games": 5,
-        "pickRate": 26,
-        "winRate": 80
+        "games": 4,
+        "pickRate": 24,
+        "winRate": 100
+      },
+      "223504": {
+        "games": 7,
+        "pickRate": 41,
+        "winRate": 57
       }
     },
     "situationalItems": [
       {
-        "itemId": 223504,
-        "condition": "general",
-        "description": "Ardent Censer — popular alternative (built in 37% of games)"
-      },
-      {
         "itemId": 226617,
         "condition": "general",
-        "description": "Moonstone Renewer — popular alternative (built in 26% of games)"
+        "description": "Moonstone Renewer — popular alternative (built in 29% of games)"
       },
       {
         "itemId": 224005,
         "condition": "general",
-        "description": "Imperial Mandate — popular alternative (built in 21% of games)"
+        "description": "Imperial Mandate — popular alternative (built in 24% of games)"
       },
       {
         "itemId": 223107,
         "condition": "general",
-        "description": "Redemption — popular alternative (built in 21% of games)"
+        "description": "Redemption — popular alternative (built in 18% of games)"
       },
       {
         "itemId": 226621,
         "condition": "general",
-        "description": "Dawncore — popular alternative (built in 16% of games)"
+        "description": "Dawncore — popular alternative (built in 18% of games)"
       },
       {
-        "itemId": 222526,
+        "itemId": 223157,
         "condition": "general",
-        "description": "Whispering Circlet — popular alternative (built in 16% of games)"
+        "description": "Zhonya's Hourglass — popular alternative (built in 18% of games)"
+      },
+      {
+        "itemId": 226616,
+        "condition": "general",
+        "description": "Staff of Flowing Water — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -7396,10 +7207,10 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 19 challenger/grandmaster/master games on patch 16.9 · 53% win rate."
+      "Aggregated from 17 challenger/grandmaster/master games on patch 16.9 · 53% win rate."
     ],
-    "winRate": 52.6,
-    "sampleSize": 19
+    "winRate": 52.9,
+    "sampleSize": 17
   },
   {
     "id": 20151,
@@ -7410,46 +7221,40 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      223031,
       223508,
       223078,
-      223031,
       222512,
       223033
     ],
     "coreItemStats": {
       "222512": {
         "games": 2,
-        "pickRate": 18,
+        "pickRate": 29,
         "winRate": 50
       },
       "223031": {
-        "games": 3,
-        "pickRate": 27,
+        "games": 2,
+        "pickRate": 29,
         "winRate": 0
       },
       "223033": {
         "games": 2,
-        "pickRate": 18,
+        "pickRate": 29,
         "winRate": 50
       },
       "223078": {
-        "games": 4,
-        "pickRate": 36,
+        "games": 2,
+        "pickRate": 29,
         "winRate": 50
       },
       "223508": {
         "games": 2,
-        "pickRate": 18,
+        "pickRate": 29,
         "winRate": 50
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 223084,
-        "condition": "general",
-        "description": "Heartsteel — popular alternative (built in 18% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       223111,
       223158
@@ -7474,10 +7279,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 11 challenger/grandmaster/master games on patch 16.9 · 36% win rate."
+      "Aggregated from 7 challenger/grandmaster/master games on patch 16.9 · 43% win rate."
     ],
-    "winRate": 36.4,
-    "sampleSize": 11
+    "winRate": 42.9,
+    "sampleSize": 7
   },
   {
     "id": 20032,
@@ -7642,28 +7447,28 @@
     ],
     "coreItemStats": {
       "223089": {
-        "games": 14,
-        "pickRate": 64,
-        "winRate": 50
+        "games": 13,
+        "pickRate": 68,
+        "winRate": 46
       },
       "223100": {
         "games": 8,
-        "pickRate": 36,
+        "pickRate": 42,
         "winRate": 25
       },
       "223102": {
         "games": 2,
-        "pickRate": 9,
+        "pickRate": 11,
         "winRate": 100
       },
       "223135": {
         "games": 2,
-        "pickRate": 9,
+        "pickRate": 11,
         "winRate": 100
       },
       "224645": {
         "games": 4,
-        "pickRate": 18,
+        "pickRate": 21,
         "winRate": 75
       }
     },
@@ -7671,12 +7476,27 @@
       {
         "itemId": 223157,
         "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 23% of games)"
+        "description": "Zhonya's Hourglass — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 224633,
+        "condition": "general",
+        "description": "Riftmaker — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 226653,
+        "condition": "general",
+        "description": "Liandry's Anguish — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 223003,
+        "condition": "general",
+        "description": "Archangel's Staff — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
-      223158,
-      223020
+      223020,
+      223158
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -7698,10 +7518,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 22 challenger/grandmaster/master games on patch 16.9 · 55% win rate."
+      "Aggregated from 19 challenger/grandmaster/master games on patch 16.9 · 47% win rate."
     ],
-    "winRate": 54.5,
-    "sampleSize": 22
+    "winRate": 47.4,
+    "sampleSize": 19
   },
   {
     "id": 20131,
@@ -7713,35 +7533,29 @@
     "starterItems": [],
     "coreItems": [
       226676,
-      223031,
       226675,
-      223033,
+      223031,
       223026
     ],
     "coreItemStats": {
       "223026": {
         "games": 2,
-        "pickRate": 22,
+        "pickRate": 25,
         "winRate": 50
       },
       "223031": {
-        "games": 8,
-        "pickRate": 89,
-        "winRate": 38
-      },
-      "223033": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 50
+        "games": 7,
+        "pickRate": 88,
+        "winRate": 29
       },
       "226675": {
         "games": 2,
-        "pickRate": 22,
+        "pickRate": 25,
         "winRate": 0
       },
       "226676": {
         "games": 3,
-        "pickRate": 33,
+        "pickRate": 38,
         "winRate": 33
       }
     },
@@ -7770,10 +7584,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
+      "Aggregated from 8 challenger/grandmaster/master games on patch 16.9 · 25% win rate."
     ],
-    "winRate": 33.3,
-    "sampleSize": 9
+    "winRate": 25,
+    "sampleSize": 8
   },
   {
     "id": 20119,
@@ -7786,34 +7600,34 @@
     "coreItems": [
       223153,
       223124,
-      223091,
       226631,
+      223091,
       223026
     ],
     "coreItemStats": {
       "223026": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 100
       },
       "223091": {
-        "games": 4,
-        "pickRate": 27,
-        "winRate": 50
+        "games": 3,
+        "pickRate": 21,
+        "winRate": 33
       },
       "223124": {
         "games": 4,
-        "pickRate": 27,
+        "pickRate": 29,
         "winRate": 50
       },
       "223153": {
-        "games": 10,
-        "pickRate": 67,
-        "winRate": 60
+        "games": 9,
+        "pickRate": 64,
+        "winRate": 56
       },
       "226631": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 100
       }
     },
@@ -7821,22 +7635,22 @@
       {
         "itemId": 223031,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 20% of games)"
+        "description": "Infinity Edge — popular alternative (built in 21% of games)"
       },
       {
         "itemId": 223302,
         "condition": "general",
-        "description": "Terminus — popular alternative (built in 13% of games)"
+        "description": "Terminus — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 223073,
         "condition": "general",
-        "description": "Experimental Hexplate — popular alternative (built in 13% of games)"
+        "description": "Experimental Hexplate — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 226695,
         "condition": "general",
-        "description": "Serpent's Fang — popular alternative (built in 13% of games)"
+        "description": "Serpent's Fang — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [
@@ -7863,10 +7677,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 15 challenger/grandmaster/master games on patch 16.9 · 47% win rate."
+      "Aggregated from 14 challenger/grandmaster/master games on patch 16.9 · 43% win rate."
     ],
-    "winRate": 46.7,
-    "sampleSize": 15
+    "winRate": 42.9,
+    "sampleSize": 14
   },
   {
     "id": 20139,
@@ -7879,46 +7693,35 @@
     "coreItems": [
       223084,
       223068,
-      223065,
-      223143
+      223065
     ],
     "coreItemStats": {
       "223065": {
-        "games": 8,
+        "games": 7,
         "pickRate": 44,
-        "winRate": 50
+        "winRate": 57
       },
       "223068": {
         "games": 9,
-        "pickRate": 50,
+        "pickRate": 56,
         "winRate": 33
       },
       "223084": {
-        "games": 11,
-        "pickRate": 61,
-        "winRate": 36
-      },
-      "223143": {
-        "games": 2,
-        "pickRate": 11,
-        "winRate": 50
+        "games": 10,
+        "pickRate": 63,
+        "winRate": 30
       }
     },
     "situationalItems": [
       {
         "itemId": 223075,
         "condition": "general",
-        "description": "Thornmail — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 226664,
-        "condition": "general",
-        "description": "Hollow Radiance — popular alternative (built in 11% of games)"
+        "description": "Thornmail — popular alternative (built in 19% of games)"
       }
     ],
     "bootsOptions": [
       223111,
-      223158
+      223047
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -7940,10 +7743,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 18 challenger/grandmaster/master games on patch 15.13 · 44% win rate."
+      "Aggregated from 16 challenger/grandmaster/master games on patch 15.13 · 44% win rate."
     ],
-    "winRate": 44.4,
-    "sampleSize": 18
+    "winRate": 43.8,
+    "sampleSize": 16
   },
   {
     "id": 20143,
@@ -7951,72 +7754,55 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ad",
-    "patch": "16.9",
+    "patch": "16.8",
     "starterItems": [],
     "coreItems": [
-      226631,
-      223072,
-      223073,
       223074,
+      223073,
       223153
     ],
     "coreItemStats": {
-      "223072": {
-        "games": 2,
-        "pickRate": 13,
-        "winRate": 0
-      },
       "223073": {
-        "games": 5,
-        "pickRate": 33,
-        "winRate": 60
+        "games": 3,
+        "pickRate": 27,
+        "winRate": 33
       },
       "223074": {
         "games": 3,
-        "pickRate": 20,
+        "pickRate": 27,
         "winRate": 0
       },
       "223153": {
         "games": 7,
-        "pickRate": 47,
+        "pickRate": 64,
         "winRate": 29
-      },
-      "226631": {
-        "games": 2,
-        "pickRate": 13,
-        "winRate": 100
       }
     },
     "situationalItems": [
       {
-        "itemId": 226333,
+        "itemId": 223072,
         "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 20% of games)"
+        "description": "Bloodthirster — popular alternative (built in 18% of games)"
       },
       {
-        "itemId": 223065,
+        "itemId": 226333,
         "condition": "general",
-        "description": "Spirit Visage — popular alternative (built in 20% of games)"
+        "description": "Death's Dance — popular alternative (built in 18% of games)"
       },
       {
         "itemId": 223031,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 223084,
-        "condition": "general",
-        "description": "Heartsteel — popular alternative (built in 13% of games)"
+        "description": "Infinity Edge — popular alternative (built in 18% of games)"
       },
       {
         "itemId": 223172,
         "condition": "general",
-        "description": "Zephyr — popular alternative (built in 13% of games)"
+        "description": "Zephyr — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
       223047,
-      223111
+      223006
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -8038,10 +7824,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 15 challenger/grandmaster/master games on patch 16.9 · 53% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 16.8 · 36% win rate."
     ],
-    "winRate": 53.3,
-    "sampleSize": 15
+    "winRate": 36.4,
+    "sampleSize": 11
   },
   {
     "id": 20097,
@@ -8060,22 +7846,22 @@
     "coreItemStats": {
       "223089": {
         "games": 6,
-        "pickRate": 46,
+        "pickRate": 50,
         "winRate": 50
       },
       "223135": {
         "games": 5,
-        "pickRate": 38,
+        "pickRate": 42,
         "winRate": 60
       },
       "224645": {
         "games": 2,
-        "pickRate": 15,
+        "pickRate": 17,
         "winRate": 50
       },
       "226653": {
         "games": 4,
-        "pickRate": 31,
+        "pickRate": 33,
         "winRate": 75
       }
     },
@@ -8083,12 +7869,7 @@
       {
         "itemId": 223003,
         "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 38% of games)"
-      },
-      {
-        "itemId": 222503,
-        "condition": "general",
-        "description": "Blackfire Torch — popular alternative (built in 15% of games)"
+        "description": "Archangel's Staff — popular alternative (built in 42% of games)"
       }
     ],
     "bootsOptions": [
@@ -8115,10 +7896,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 13 challenger/grandmaster/master games on patch 15.21 · 54% win rate."
+      "Aggregated from 12 challenger/grandmaster/master games on patch 15.21 · 58% win rate."
     ],
-    "winRate": 53.8,
-    "sampleSize": 13
+    "winRate": 58.3,
+    "sampleSize": 12
   },
   {
     "id": 20130,
@@ -8208,34 +7989,34 @@
     "coreItems": [
       226692,
       223071,
-      223153,
       223748,
+      223156,
       226609
     ],
     "coreItemStats": {
       "223071": {
         "games": 9,
-        "pickRate": 33,
+        "pickRate": 35,
         "winRate": 67
       },
-      "223153": {
-        "games": 4,
-        "pickRate": 15,
+      "223156": {
+        "games": 2,
+        "pickRate": 8,
         "winRate": 100
       },
       "223748": {
         "games": 2,
-        "pickRate": 7,
+        "pickRate": 8,
         "winRate": 50
       },
       "226609": {
         "games": 3,
-        "pickRate": 11,
+        "pickRate": 12,
         "winRate": 100
       },
       "226692": {
         "games": 13,
-        "pickRate": 48,
+        "pickRate": 50,
         "winRate": 62
       }
     },
@@ -8243,12 +8024,12 @@
       {
         "itemId": 226610,
         "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 26% of games)"
+        "description": "Sundered Sky — popular alternative (built in 23% of games)"
       },
       {
         "itemId": 223031,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 22% of games)"
+        "description": "Infinity Edge — popular alternative (built in 23% of games)"
       },
       {
         "itemId": 226676,
@@ -8256,19 +8037,19 @@
         "description": "The Collector — popular alternative (built in 19% of games)"
       },
       {
-        "itemId": 223156,
+        "itemId": 223153,
         "condition": "general",
-        "description": "Maw of Malmortius — popular alternative (built in 11% of games)"
+        "description": "Blade of The Ruined King — popular alternative (built in 15% of games)"
       },
       {
         "itemId": 226333,
         "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 11% of games)"
+        "description": "Death's Dance — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 226697,
         "condition": "general",
-        "description": "Hubris — popular alternative (built in 11% of games)"
+        "description": "Hubris — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -8295,10 +8076,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 27 challenger/grandmaster/master games on patch 16.9 · 59% win rate."
+      "Aggregated from 26 challenger/grandmaster/master games on patch 16.9 · 58% win rate."
     ],
-    "winRate": 59.3,
-    "sampleSize": 27
+    "winRate": 57.7,
+    "sampleSize": 26
   },
   {
     "id": 20159,
@@ -8314,26 +8095,26 @@
     ],
     "coreItemStats": {
       "223068": {
-        "games": 5,
-        "pickRate": 42,
-        "winRate": 60
+        "games": 4,
+        "pickRate": 36,
+        "winRate": 75
       },
       "223084": {
-        "games": 9,
-        "pickRate": 75,
-        "winRate": 56
+        "games": 8,
+        "pickRate": 73,
+        "winRate": 63
       }
     },
     "situationalItems": [
       {
         "itemId": 226665,
         "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 17% of games)"
+        "description": "Jak'Sho, The Protean — popular alternative (built in 18% of games)"
       },
       {
         "itemId": 224401,
         "condition": "general",
-        "description": "Force of Nature — popular alternative (built in 17% of games)"
+        "description": "Force of Nature — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -8360,10 +8141,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 12 challenger/grandmaster/master games on patch 16.8 · 42% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 16.8 · 45% win rate."
     ],
-    "winRate": 41.7,
-    "sampleSize": 12
+    "winRate": 45.5,
+    "sampleSize": 11
   },
   {
     "id": 20001,
@@ -8466,27 +8247,27 @@
     "coreItemStats": {
       "223004": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 100
       },
       "223031": {
         "games": 3,
-        "pickRate": 20,
+        "pickRate": 21,
         "winRate": 33
       },
       "226694": {
         "games": 3,
-        "pickRate": 20,
+        "pickRate": 21,
         "winRate": 100
       },
       "226695": {
         "games": 5,
-        "pickRate": 33,
+        "pickRate": 36,
         "winRate": 60
       },
       "226699": {
         "games": 4,
-        "pickRate": 27,
+        "pickRate": 29,
         "winRate": 75
       }
     },
@@ -8494,17 +8275,17 @@
       {
         "itemId": 226696,
         "condition": "general",
-        "description": "Axiom Arc — popular alternative (built in 20% of games)"
-      },
-      {
-        "itemId": 226676,
-        "condition": "general",
-        "description": "The Collector — popular alternative (built in 20% of games)"
+        "description": "Axiom Arc — popular alternative (built in 21% of games)"
       },
       {
         "itemId": 223033,
         "condition": "general",
-        "description": "Mortal Reminder — popular alternative (built in 13% of games)"
+        "description": "Mortal Reminder — popular alternative (built in 14% of games)"
+      },
+      {
+        "itemId": 226676,
+        "condition": "general",
+        "description": "The Collector — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [
@@ -8531,10 +8312,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 15 challenger/grandmaster/master games on patch 16.9 · 60% win rate."
+      "Aggregated from 14 challenger/grandmaster/master games on patch 16.9 · 64% win rate."
     ],
-    "winRate": 60,
-    "sampleSize": 15
+    "winRate": 64.3,
+    "sampleSize": 14
   },
   {
     "id": 20156,
@@ -8621,36 +8402,18 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
-      223084,
-      223107,
-      223050,
       223068,
-      226653
+      223050
     ],
     "coreItemStats": {
       "223050": {
         "games": 2,
-        "pickRate": 22,
+        "pickRate": 40,
         "winRate": 50
       },
       "223068": {
-        "games": 4,
-        "pickRate": 44,
-        "winRate": 0
-      },
-      "223084": {
-        "games": 4,
-        "pickRate": 44,
-        "winRate": 0
-      },
-      "223107": {
         "games": 2,
-        "pickRate": 22,
-        "winRate": 50
-      },
-      "226653": {
-        "games": 2,
-        "pickRate": 22,
+        "pickRate": 40,
         "winRate": 0
       }
     },
@@ -8679,10 +8442,10 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
+      "Aggregated from 5 challenger/grandmaster/master games on patch 16.9 · 40% win rate."
     ],
-    "winRate": 33.3,
-    "sampleSize": 9
+    "winRate": 40,
+    "sampleSize": 5
   },
   {
     "id": 20148,
@@ -8702,27 +8465,27 @@
     "coreItemStats": {
       "222502": {
         "games": 2,
-        "pickRate": 10,
+        "pickRate": 11,
         "winRate": 100
       },
       "223075": {
-        "games": 13,
-        "pickRate": 65,
-        "winRate": 62
+        "games": 12,
+        "pickRate": 63,
+        "winRate": 58
       },
       "223084": {
         "games": 13,
-        "pickRate": 65,
+        "pickRate": 68,
         "winRate": 46
       },
       "223143": {
         "games": 2,
-        "pickRate": 10,
+        "pickRate": 11,
         "winRate": 50
       },
       "224401": {
         "games": 2,
-        "pickRate": 10,
+        "pickRate": 11,
         "winRate": 50
       }
     },
@@ -8730,27 +8493,27 @@
       {
         "itemId": 226665,
         "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 40% of games)"
+        "description": "Jak'Sho, The Protean — popular alternative (built in 37% of games)"
       },
       {
         "itemId": 223068,
         "condition": "general",
-        "description": "Sunfire Aegis — popular alternative (built in 25% of games)"
+        "description": "Sunfire Aegis — popular alternative (built in 26% of games)"
       },
       {
         "itemId": 223065,
         "condition": "general",
-        "description": "Spirit Visage — popular alternative (built in 15% of games)"
+        "description": "Spirit Visage — popular alternative (built in 16% of games)"
       },
       {
         "itemId": 223110,
         "condition": "general",
-        "description": "Frozen Heart — popular alternative (built in 15% of games)"
+        "description": "Frozen Heart — popular alternative (built in 16% of games)"
       },
       {
         "itemId": 226664,
         "condition": "general",
-        "description": "Hollow Radiance — popular alternative (built in 10% of games)"
+        "description": "Hollow Radiance — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -8777,10 +8540,10 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 20 challenger/grandmaster/master games on patch 16.9 · 60% win rate."
+      "Aggregated from 19 challenger/grandmaster/master games on patch 16.9 · 58% win rate."
     ],
-    "winRate": 60,
-    "sampleSize": 20
+    "winRate": 57.9,
+    "sampleSize": 19
   },
   {
     "id": 20157,
@@ -8910,24 +8673,18 @@
     "starterItems": [],
     "coreItems": [
       226617,
-      223089,
-      226620
+      223089
     ],
     "coreItemStats": {
       "223089": {
         "games": 3,
-        "pickRate": 33,
+        "pickRate": 38,
         "winRate": 67
       },
       "226617": {
         "games": 4,
-        "pickRate": 44,
+        "pickRate": 50,
         "winRate": 50
-      },
-      "226620": {
-        "games": 2,
-        "pickRate": 22,
-        "winRate": 100
       }
     },
     "situationalItems": [],
@@ -8955,10 +8712,10 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 9 challenger/grandmaster/master games on patch 16.9 · 56% win rate."
+      "Aggregated from 8 challenger/grandmaster/master games on patch 16.9 · 50% win rate."
     ],
-    "winRate": 55.6,
-    "sampleSize": 9
+    "winRate": 50,
+    "sampleSize": 8
   },
   {
     "id": 20121,
@@ -8966,55 +8723,57 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ad",
-    "patch": "16.8",
+    "patch": "16.9",
     "starterItems": [],
     "coreItems": [
       226692,
+      226699,
       223071,
+      223053,
       223161
     ],
     "coreItemStats": {
+      "223053": {
+        "games": 3,
+        "pickRate": 18,
+        "winRate": 100
+      },
       "223071": {
-        "games": 8,
-        "pickRate": 44,
-        "winRate": 38
+        "games": 7,
+        "pickRate": 41,
+        "winRate": 29
       },
       "223161": {
         "games": 4,
-        "pickRate": 22,
+        "pickRate": 24,
         "winRate": 50
       },
       "226692": {
-        "games": 6,
-        "pickRate": 33,
-        "winRate": 67
+        "games": 5,
+        "pickRate": 29,
+        "winRate": 60
+      },
+      "226699": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 100
       }
     },
     "situationalItems": [
       {
-        "itemId": 223053,
-        "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 226699,
-        "condition": "general",
-        "description": "Voltaic Cyclosword — popular alternative (built in 11% of games)"
-      },
-      {
         "itemId": 226610,
         "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 11% of games)"
+        "description": "Sundered Sky — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 223073,
         "condition": "general",
-        "description": "Experimental Hexplate — popular alternative (built in 11% of games)"
+        "description": "Experimental Hexplate — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 222517,
         "condition": "general",
-        "description": "Endless Hunger — popular alternative (built in 11% of games)"
+        "description": "Endless Hunger — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -9041,10 +8800,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 18 challenger/grandmaster/master games on patch 16.8 · 61% win rate."
+      "Aggregated from 17 challenger/grandmaster/master games on patch 16.9 · 59% win rate."
     ],
-    "winRate": 61.1,
-    "sampleSize": 18
+    "winRate": 58.8,
+    "sampleSize": 17
   },
   {
     "id": 20093,
@@ -9062,17 +8821,17 @@
     "coreItemStats": {
       "223031": {
         "games": 8,
-        "pickRate": 67,
+        "pickRate": 73,
         "winRate": 50
       },
       "223033": {
         "games": 4,
-        "pickRate": 33,
+        "pickRate": 36,
         "winRate": 25
       },
       "226676": {
         "games": 6,
-        "pickRate": 50,
+        "pickRate": 55,
         "winRate": 33
       }
     },
@@ -9080,17 +8839,17 @@
       {
         "itemId": 223036,
         "condition": "general",
-        "description": "Lord Dominik's Regards — popular alternative (built in 25% of games)"
+        "description": "Lord Dominik's Regards — popular alternative (built in 27% of games)"
       },
       {
         "itemId": 226699,
         "condition": "general",
-        "description": "Voltaic Cyclosword — popular alternative (built in 25% of games)"
+        "description": "Voltaic Cyclosword — popular alternative (built in 27% of games)"
       },
       {
         "itemId": 226695,
         "condition": "general",
-        "description": "Serpent's Fang — popular alternative (built in 17% of games)"
+        "description": "Serpent's Fang — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -9117,10 +8876,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 12 challenger/grandmaster/master games on patch 16.1 · 50% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 16.1 · 55% win rate."
     ],
-    "winRate": 50,
-    "sampleSize": 12
+    "winRate": 54.5,
+    "sampleSize": 11
   },
   {
     "id": 20101,
@@ -9132,50 +8891,58 @@
     "starterItems": [],
     "coreItems": [
       223161,
-      226692
+      226692,
+      223074,
+      226610,
+      226333
     ],
     "coreItemStats": {
+      "223074": {
+        "games": 4,
+        "pickRate": 27,
+        "winRate": 50
+      },
       "223161": {
-        "games": 5,
-        "pickRate": 28,
-        "winRate": 20
+        "games": 4,
+        "pickRate": 27,
+        "winRate": 25
+      },
+      "226333": {
+        "games": 2,
+        "pickRate": 13,
+        "winRate": 0
+      },
+      "226610": {
+        "games": 3,
+        "pickRate": 20,
+        "winRate": 0
       },
       "226692": {
-        "games": 8,
-        "pickRate": 44,
-        "winRate": 13
+        "games": 7,
+        "pickRate": 47,
+        "winRate": 14
       }
     },
     "situationalItems": [
       {
         "itemId": 223031,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 28% of games)"
-      },
-      {
-        "itemId": 223074,
-        "condition": "general",
-        "description": "Ravenous Hydra — popular alternative (built in 22% of games)"
-      },
-      {
-        "itemId": 226610,
-        "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 226676,
-        "condition": "general",
-        "description": "The Collector — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 226333,
-        "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 11% of games)"
+        "description": "Infinity Edge — popular alternative (built in 27% of games)"
       },
       {
         "itemId": 223071,
         "condition": "general",
-        "description": "Black Cleaver — popular alternative (built in 11% of games)"
+        "description": "Black Cleaver — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 222517,
+        "condition": "general",
+        "description": "Endless Hunger — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 226676,
+        "condition": "general",
+        "description": "The Collector — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -9202,10 +8969,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 18 challenger/grandmaster/master games on patch 16.9 · 44% win rate."
+      "Aggregated from 15 challenger/grandmaster/master games on patch 16.9 · 47% win rate."
     ],
-    "winRate": 44.4,
-    "sampleSize": 18
+    "winRate": 46.7,
+    "sampleSize": 15
   },
   {
     "id": 20145,
@@ -9306,47 +9073,52 @@
     "coreItems": [
       223003,
       226657,
-      223119,
       223089,
-      223157
+      223157,
+      224633
     ],
     "coreItemStats": {
       "223003": {
-        "games": 30,
-        "pickRate": 91,
-        "winRate": 50
+        "games": 23,
+        "pickRate": 88,
+        "winRate": 48
       },
       "223089": {
-        "games": 18,
-        "pickRate": 55,
-        "winRate": 56
-      },
-      "223119": {
-        "games": 13,
-        "pickRate": 39,
-        "winRate": 77
+        "games": 16,
+        "pickRate": 62,
+        "winRate": 50
       },
       "223157": {
         "games": 3,
-        "pickRate": 9,
+        "pickRate": 12,
         "winRate": 67
       },
+      "224633": {
+        "games": 3,
+        "pickRate": 12,
+        "winRate": 100
+      },
       "226657": {
-        "games": 15,
-        "pickRate": 45,
-        "winRate": 47
+        "games": 13,
+        "pickRate": 50,
+        "winRate": 46
       }
     },
     "situationalItems": [
       {
-        "itemId": 223004,
+        "itemId": 223119,
         "condition": "general",
-        "description": "Manamune — popular alternative (built in 18% of games)"
+        "description": "Winter's Approach — popular alternative (built in 23% of games)"
       },
       {
         "itemId": 222522,
         "condition": "general",
         "description": "Actualizer — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 223004,
+        "condition": "general",
+        "description": "Manamune — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -9373,10 +9145,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 33 challenger/grandmaster/master games on patch 16.1 · 48% win rate."
+      "Aggregated from 26 challenger/grandmaster/master games on patch 16.1 · 46% win rate."
     ],
-    "winRate": 48.5,
-    "sampleSize": 33
+    "winRate": 46.2,
+    "sampleSize": 26
   },
   {
     "id": 20088,
@@ -9460,46 +9232,35 @@
     "coreItems": [
       223084,
       223068,
-      222502,
       223075
     ],
     "coreItemStats": {
-      "222502": {
-        "games": 2,
-        "pickRate": 14,
-        "winRate": 50
-      },
       "223068": {
-        "games": 8,
-        "pickRate": 57,
-        "winRate": 75
+        "games": 7,
+        "pickRate": 64,
+        "winRate": 71
       },
       "223075": {
         "games": 4,
-        "pickRate": 29,
+        "pickRate": 36,
         "winRate": 100
       },
       "223084": {
-        "games": 10,
-        "pickRate": 71,
-        "winRate": 70
+        "games": 7,
+        "pickRate": 64,
+        "winRate": 86
       }
     },
     "situationalItems": [
       {
         "itemId": 226665,
         "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 29% of games)"
+        "description": "Jak'Sho, The Protean — popular alternative (built in 27% of games)"
       },
       {
         "itemId": 223065,
         "condition": "general",
-        "description": "Spirit Visage — popular alternative (built in 14% of games)"
-      },
-      {
-        "itemId": 223039,
-        "condition": "general",
-        "description": "Atma's Reckoning — popular alternative (built in 14% of games)"
+        "description": "Spirit Visage — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -9526,10 +9287,10 @@
     "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.9 · 64% win rate."
+      "Aggregated from 11 challenger/grandmaster/master games on patch 16.9 · 73% win rate."
     ],
-    "winRate": 64.3,
-    "sampleSize": 14
+    "winRate": 72.7,
+    "sampleSize": 11
   },
   {
     "id": 20138,
@@ -9640,22 +9401,22 @@
     "coreItemStats": {
       "223003": {
         "games": 7,
-        "pickRate": 41,
+        "pickRate": 44,
         "winRate": 29
       },
       "223116": {
-        "games": 7,
-        "pickRate": 41,
-        "winRate": 43
+        "games": 6,
+        "pickRate": 38,
+        "winRate": 33
       },
       "223165": {
         "games": 4,
-        "pickRate": 24,
+        "pickRate": 25,
         "winRate": 50
       },
       "226653": {
         "games": 8,
-        "pickRate": 47,
+        "pickRate": 50,
         "winRate": 38
       }
     },
@@ -9663,22 +9424,22 @@
       {
         "itemId": 223089,
         "condition": "general",
-        "description": "Rabadon's Deathcap — popular alternative (built in 24% of games)"
+        "description": "Rabadon's Deathcap — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 223157,
         "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 24% of games)"
+        "description": "Zhonya's Hourglass — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 222503,
         "condition": "general",
-        "description": "Blackfire Torch — popular alternative (built in 18% of games)"
+        "description": "Blackfire Torch — popular alternative (built in 19% of games)"
       },
       {
         "itemId": 224645,
         "condition": "general",
-        "description": "Shadowflame — popular alternative (built in 12% of games)"
+        "description": "Shadowflame — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -9702,53 +9463,47 @@
       0,
       0
     ],
-    "skillMaxOrder": "Q > E > W",
+    "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 17 challenger/grandmaster/master games on patch 16.6 · 41% win rate."
+      "Aggregated from 16 challenger/grandmaster/master games on patch 16.6 · 38% win rate."
     ],
-    "winRate": 41.2,
-    "sampleSize": 17
+    "winRate": 37.5,
+    "sampleSize": 16
   },
   {
     "id": 20066,
     "championId": "Sett",
     "mode": "ARENA",
     "role": null,
-    "archetype": "ad",
-    "patch": "16.9",
+    "archetype": "bruiser",
+    "patch": "15.13",
     "starterItems": [],
     "coreItems": [
       223084,
-      223031,
       223053,
-      223748,
-      223039
+      223039,
+      223748
     ],
     "coreItemStats": {
-      "223031": {
-        "games": 4,
-        "pickRate": 13,
-        "winRate": 100
-      },
       "223039": {
-        "games": 6,
-        "pickRate": 20,
-        "winRate": 83
+        "games": 5,
+        "pickRate": 29,
+        "winRate": 80
       },
       "223053": {
-        "games": 12,
-        "pickRate": 40,
-        "winRate": 83
+        "games": 7,
+        "pickRate": 41,
+        "winRate": 71
       },
       "223084": {
-        "games": 16,
-        "pickRate": 53,
-        "winRate": 81
+        "games": 15,
+        "pickRate": 88,
+        "winRate": 80
       },
       "223748": {
-        "games": 7,
-        "pickRate": 23,
+        "games": 4,
+        "pickRate": 24,
         "winRate": 100
       }
     },
@@ -9756,17 +9511,7 @@
       {
         "itemId": 226610,
         "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 223153,
-        "condition": "general",
-        "description": "Blade of The Ruined King — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 223071,
-        "condition": "general",
-        "description": "Black Cleaver — popular alternative (built in 10% of games)"
+        "description": "Sundered Sky — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -9791,12 +9536,12 @@
       0
     ],
     "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
+    "skillStart": "E",
     "notes": [
-      "Aggregated from 30 challenger/grandmaster/master games on patch 16.9 · 80% win rate."
+      "Aggregated from 17 challenger/grandmaster/master games on patch 15.13 · 76% win rate."
     ],
-    "winRate": 80,
-    "sampleSize": 30
+    "winRate": 76.5,
+    "sampleSize": 17
   },
   {
     "id": 20108,
@@ -9897,40 +9642,30 @@
     "coreItemStats": {
       "223068": {
         "games": 8,
-        "pickRate": 62,
+        "pickRate": 67,
         "winRate": 50
       },
       "223075": {
         "games": 8,
-        "pickRate": 62,
+        "pickRate": 67,
         "winRate": 50
       },
       "223084": {
-        "games": 9,
-        "pickRate": 69,
-        "winRate": 44
+        "games": 8,
+        "pickRate": 67,
+        "winRate": 38
       }
     },
     "situationalItems": [
       {
         "itemId": 226665,
         "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 224401,
-        "condition": "general",
-        "description": "Force of Nature — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 223748,
-        "condition": "general",
-        "description": "Titanic Hydra — popular alternative (built in 15% of games)"
+        "description": "Jak'Sho, The Protean — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 222504,
         "condition": "general",
-        "description": "Kaenic Rookern — popular alternative (built in 15% of games)"
+        "description": "Kaenic Rookern — popular alternative (built in 17% of games)"
       }
     ],
     "bootsOptions": [
@@ -9957,10 +9692,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 13 challenger/grandmaster/master games on patch 15.13 · 46% win rate."
+      "Aggregated from 12 challenger/grandmaster/master games on patch 15.13 · 42% win rate."
     ],
-    "winRate": 46.2,
-    "sampleSize": 13
+    "winRate": 41.7,
+    "sampleSize": 12
   },
   {
     "id": 20170,
@@ -9971,64 +9706,54 @@
     "patch": "16.8",
     "starterItems": [],
     "coreItems": [
-      223084,
       223153,
+      226610,
+      226675,
       223031,
-      222510,
       226333
     ],
     "coreItemStats": {
-      "222510": {
-        "games": 4,
-        "pickRate": 29,
-        "winRate": 50
-      },
       "223031": {
         "games": 3,
-        "pickRate": 21,
+        "pickRate": 30,
         "winRate": 100
       },
-      "223084": {
-        "games": 4,
-        "pickRate": 29,
-        "winRate": 25
-      },
       "223153": {
-        "games": 4,
-        "pickRate": 29,
+        "games": 3,
+        "pickRate": 30,
         "winRate": 100
       },
       "226333": {
         "games": 3,
-        "pickRate": 21,
+        "pickRate": 30,
+        "winRate": 100
+      },
+      "226610": {
+        "games": 2,
+        "pickRate": 20,
+        "winRate": 100
+      },
+      "226675": {
+        "games": 2,
+        "pickRate": 20,
         "winRate": 100
       }
     },
     "situationalItems": [
       {
-        "itemId": 223161,
-        "condition": "general",
-        "description": "Spear of Shojin — popular alternative (built in 14% of games)"
-      },
-      {
-        "itemId": 226675,
-        "condition": "general",
-        "description": "Navori Flickerblades — popular alternative (built in 14% of games)"
-      },
-      {
-        "itemId": 226610,
-        "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 14% of games)"
-      },
-      {
         "itemId": 223146,
         "condition": "general",
-        "description": "Hextech Gunblade — popular alternative (built in 14% of games)"
+        "description": "Hextech Gunblade — popular alternative (built in 20% of games)"
+      },
+      {
+        "itemId": 222510,
+        "condition": "general",
+        "description": "Dusk and Dawn — popular alternative (built in 20% of games)"
       }
     ],
     "bootsOptions": [
       223111,
-      223047
+      223006
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -10050,10 +9775,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 16.8 · 71% win rate."
+      "Aggregated from 10 challenger/grandmaster/master games on patch 16.8 · 90% win rate."
     ],
-    "winRate": 71.4,
-    "sampleSize": 14
+    "winRate": 90,
+    "sampleSize": 10
   },
   {
     "id": 20004,
@@ -10061,67 +9786,57 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ap",
-    "patch": "16.9",
+    "patch": "16.6",
     "starterItems": [],
     "coreItems": [
       226653,
       223116,
       224633,
       224629,
-      223742
+      222503
     ],
     "coreItemStats": {
-      "223116": {
-        "games": 14,
-        "pickRate": 47,
-        "winRate": 64
-      },
-      "223742": {
+      "222503": {
         "games": 2,
-        "pickRate": 7,
+        "pickRate": 8,
         "winRate": 100
+      },
+      "223116": {
+        "games": 13,
+        "pickRate": 52,
+        "winRate": 62
       },
       "224629": {
         "games": 2,
-        "pickRate": 7,
+        "pickRate": 8,
         "winRate": 100
       },
       "224633": {
         "games": 7,
-        "pickRate": 23,
+        "pickRate": 28,
         "winRate": 71
       },
       "226653": {
-        "games": 22,
-        "pickRate": 73,
-        "winRate": 50
+        "games": 19,
+        "pickRate": 76,
+        "winRate": 53
       }
     },
     "situationalItems": [
       {
         "itemId": 223165,
         "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 20% of games)"
-      },
-      {
-        "itemId": 226665,
-        "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 10% of games)"
-      },
-      {
-        "itemId": 223068,
-        "condition": "general",
-        "description": "Sunfire Aegis — popular alternative (built in 10% of games)"
+        "description": "Morellonomicon — popular alternative (built in 16% of games)"
       },
       {
         "itemId": 226657,
         "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 10% of games)"
+        "description": "Rod of Ages — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 223157,
         "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 10% of games)"
+        "description": "Zhonya's Hourglass — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -10148,10 +9863,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 30 challenger/grandmaster/master games on patch 16.9 · 47% win rate."
+      "Aggregated from 25 challenger/grandmaster/master games on patch 16.6 · 48% win rate."
     ],
-    "winRate": 46.7,
-    "sampleSize": 30
+    "winRate": 48,
+    "sampleSize": 25
   },
   {
     "id": 20026,
@@ -10163,30 +9878,31 @@
     "starterItems": [],
     "coreItems": [
       223084,
-      223068
+      223068,
+      222502
     ],
     "coreItemStats": {
+      "222502": {
+        "games": 4,
+        "pickRate": 19,
+        "winRate": 100
+      },
       "223068": {
         "games": 11,
-        "pickRate": 48,
+        "pickRate": 52,
         "winRate": 55
       },
       "223084": {
-        "games": 21,
-        "pickRate": 91,
-        "winRate": 43
+        "games": 19,
+        "pickRate": 90,
+        "winRate": 42
       }
     },
     "situationalItems": [
       {
         "itemId": 223075,
         "condition": "general",
-        "description": "Thornmail — popular alternative (built in 26% of games)"
-      },
-      {
-        "itemId": 222502,
-        "condition": "general",
-        "description": "Unending Despair — popular alternative (built in 17% of games)"
+        "description": "Thornmail — popular alternative (built in 24% of games)"
       }
     ],
     "bootsOptions": [
@@ -10213,10 +9929,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 23 challenger/grandmaster/master games on patch 15.13 · 48% win rate."
+      "Aggregated from 21 challenger/grandmaster/master games on patch 15.13 · 48% win rate."
     ],
-    "winRate": 47.8,
-    "sampleSize": 23
+    "winRate": 47.6,
+    "sampleSize": 21
   },
   {
     "id": 20085,
@@ -10385,13 +10101,13 @@
     ],
     "coreItemStats": {
       "223031": {
-        "games": 20,
-        "pickRate": 71,
-        "winRate": 55
+        "games": 19,
+        "pickRate": 70,
+        "winRate": 58
       },
       "223033": {
         "games": 9,
-        "pickRate": 32,
+        "pickRate": 33,
         "winRate": 78
       }
     },
@@ -10399,22 +10115,22 @@
       {
         "itemId": 223072,
         "condition": "general",
-        "description": "Bloodthirster — popular alternative (built in 25% of games)"
+        "description": "Bloodthirster — popular alternative (built in 26% of games)"
       },
       {
         "itemId": 226676,
         "condition": "general",
-        "description": "The Collector — popular alternative (built in 21% of games)"
+        "description": "The Collector — popular alternative (built in 22% of games)"
       },
       {
         "itemId": 223036,
         "condition": "general",
-        "description": "Lord Dominik's Regards — popular alternative (built in 18% of games)"
+        "description": "Lord Dominik's Regards — popular alternative (built in 19% of games)"
       },
       {
         "itemId": 223094,
         "condition": "general",
-        "description": "Rapid Firecannon — popular alternative (built in 14% of games)"
+        "description": "Rapid Firecannon — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -10441,10 +10157,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 28 challenger/grandmaster/master games on patch 16.9 · 46% win rate."
+      "Aggregated from 27 challenger/grandmaster/master games on patch 16.9 · 48% win rate."
     ],
-    "winRate": 46.4,
-    "sampleSize": 28
+    "winRate": 48.1,
+    "sampleSize": 27
   },
   {
     "id": 20111,
@@ -10457,22 +10173,28 @@
     "coreItems": [
       223003,
       223100,
-      223089
+      223089,
+      223157
     ],
     "coreItemStats": {
       "223003": {
-        "games": 11,
-        "pickRate": 50,
-        "winRate": 73
+        "games": 10,
+        "pickRate": 53,
+        "winRate": 70
       },
       "223089": {
         "games": 10,
-        "pickRate": 45,
+        "pickRate": 53,
         "winRate": 70
       },
       "223100": {
         "games": 5,
-        "pickRate": 23,
+        "pickRate": 26,
+        "winRate": 80
+      },
+      "223157": {
+        "games": 5,
+        "pickRate": 26,
         "winRate": 80
       }
     },
@@ -10480,27 +10202,32 @@
       {
         "itemId": 226617,
         "condition": "general",
-        "description": "Moonstone Renewer — popular alternative (built in 45% of games)"
-      },
-      {
-        "itemId": 223157,
-        "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 23% of games)"
+        "description": "Moonstone Renewer — popular alternative (built in 37% of games)"
       },
       {
         "itemId": 226621,
         "condition": "general",
-        "description": "Dawncore — popular alternative (built in 18% of games)"
+        "description": "Dawncore — popular alternative (built in 21% of games)"
       },
       {
         "itemId": 223107,
         "condition": "general",
-        "description": "Redemption — popular alternative (built in 14% of games)"
+        "description": "Redemption — popular alternative (built in 16% of games)"
       },
       {
-        "itemId": 222526,
+        "itemId": 226620,
         "condition": "general",
-        "description": "Whispering Circlet — popular alternative (built in 14% of games)"
+        "description": "Echoes of Helia — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 226657,
+        "condition": "general",
+        "description": "Rod of Ages — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 223504,
+        "condition": "general",
+        "description": "Ardent Censer — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -10524,13 +10251,13 @@
       0,
       0
     ],
-    "skillMaxOrder": "W > Q > E",
+    "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 22 challenger/grandmaster/master games on patch 16.1 · 73% win rate."
+      "Aggregated from 19 challenger/grandmaster/master games on patch 16.1 · 74% win rate."
     ],
-    "winRate": 72.7,
-    "sampleSize": 22
+    "winRate": 73.7,
+    "sampleSize": 19
   },
   {
     "id": 20163,
@@ -10543,60 +10270,34 @@
     "coreItems": [
       223107,
       226617,
-      226620
+      226620,
+      226621
     ],
     "coreItemStats": {
       "223107": {
-        "games": 4,
-        "pickRate": 36,
+        "games": 2,
+        "pickRate": 22,
         "winRate": 50
       },
       "226617": {
-        "games": 6,
-        "pickRate": 55,
-        "winRate": 17
+        "games": 5,
+        "pickRate": 56,
+        "winRate": 20
       },
       "226620": {
         "games": 2,
-        "pickRate": 18,
+        "pickRate": 22,
         "winRate": 50
+      },
+      "226621": {
+        "games": 3,
+        "pickRate": 33,
+        "winRate": 67
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 226621,
-        "condition": "general",
-        "description": "Dawncore — popular alternative (built in 27% of games)"
-      },
-      {
-        "itemId": 223003,
-        "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 27% of games)"
-      },
-      {
-        "itemId": 223504,
-        "condition": "general",
-        "description": "Ardent Censer — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 223165,
-        "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 223065,
-        "condition": "general",
-        "description": "Spirit Visage — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 223089,
-        "condition": "general",
-        "description": "Rabadon's Deathcap — popular alternative (built in 18% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
-      223158,
-      223005
+      223158
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -10618,10 +10319,10 @@
     "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 11 challenger/grandmaster/master games on patch 15.13 · 45% win rate."
+      "Aggregated from 9 challenger/grandmaster/master games on patch 15.13 · 44% win rate."
     ],
-    "winRate": 45.5,
-    "sampleSize": 11
+    "winRate": 44.4,
+    "sampleSize": 9
   },
   {
     "id": 20046,
@@ -10632,59 +10333,53 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
-      226657,
-      223118,
       226653,
-      224633,
-      223165
+      223118,
+      222503,
+      224633
     ],
     "coreItemStats": {
+      "222503": {
+        "games": 4,
+        "pickRate": 22,
+        "winRate": 25
+      },
       "223118": {
         "games": 8,
-        "pickRate": 35,
+        "pickRate": 44,
         "winRate": 38
       },
-      "223165": {
-        "games": 3,
-        "pickRate": 13,
-        "winRate": 100
-      },
       "224633": {
-        "games": 9,
+        "games": 7,
         "pickRate": 39,
-        "winRate": 44
-      },
-      "226653": {
-        "games": 14,
-        "pickRate": 61,
         "winRate": 43
       },
-      "226657": {
-        "games": 3,
-        "pickRate": 13,
-        "winRate": 67
+      "226653": {
+        "games": 11,
+        "pickRate": 61,
+        "winRate": 45
       }
     },
     "situationalItems": [
       {
         "itemId": 223116,
         "condition": "general",
-        "description": "Rylai's Crystal Scepter — popular alternative (built in 35% of games)"
+        "description": "Rylai's Crystal Scepter — popular alternative (built in 39% of games)"
       },
       {
-        "itemId": 222503,
+        "itemId": 223165,
         "condition": "general",
-        "description": "Blackfire Torch — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 223065,
-        "condition": "general",
-        "description": "Spirit Visage — popular alternative (built in 17% of games)"
+        "description": "Morellonomicon — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 223089,
         "condition": "general",
-        "description": "Rabadon's Deathcap — popular alternative (built in 13% of games)"
+        "description": "Rabadon's Deathcap — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 226657,
+        "condition": "general",
+        "description": "Rod of Ages — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -10711,10 +10406,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 35% win rate."
+      "Aggregated from 18 challenger/grandmaster/master games on patch 16.9 · 39% win rate."
     ],
-    "winRate": 34.8,
-    "sampleSize": 23
+    "winRate": 38.9,
+    "sampleSize": 18
   },
   {
     "id": 20059,
@@ -10725,58 +10420,49 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      223003,
       226657,
       223089,
-      223100,
+      224633,
       223157
     ],
     "coreItemStats": {
-      "223089": {
-        "games": 16,
-        "pickRate": 62,
-        "winRate": 69
-      },
-      "223100": {
-        "games": 2,
-        "pickRate": 8,
+      "223003": {
+        "games": 4,
+        "pickRate": 16,
         "winRate": 100
+      },
+      "223089": {
+        "games": 15,
+        "pickRate": 60,
+        "winRate": 67
       },
       "223157": {
         "games": 5,
-        "pickRate": 19,
+        "pickRate": 20,
         "winRate": 100
+      },
+      "224633": {
+        "games": 7,
+        "pickRate": 28,
+        "winRate": 43
       },
       "226657": {
         "games": 9,
-        "pickRate": 35,
+        "pickRate": 36,
         "winRate": 56
       }
     },
     "situationalItems": [
       {
-        "itemId": 224633,
-        "condition": "general",
-        "description": "Riftmaker — popular alternative (built in 27% of games)"
-      },
-      {
         "itemId": 224645,
         "condition": "general",
-        "description": "Shadowflame — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 223003,
-        "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 15% of games)"
+        "description": "Shadowflame — popular alternative (built in 16% of games)"
       },
       {
         "itemId": 226655,
         "condition": "general",
         "description": "Luden's Echo — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 223165,
-        "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -10803,10 +10489,10 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 26 challenger/grandmaster/master games on patch 16.9 · 65% win rate."
+      "Aggregated from 25 challenger/grandmaster/master games on patch 16.9 · 64% win rate."
     ],
-    "winRate": 65.4,
-    "sampleSize": 26
+    "winRate": 64,
+    "sampleSize": 25
   },
   {
     "id": 20112,
@@ -11128,39 +10814,21 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "tank",
-    "patch": "15.5",
+    "patch": "16.6",
     "starterItems": [],
     "coreItems": [
-      223119,
-      223075,
-      223065,
-      224401,
+      223084,
       226665
     ],
     "coreItemStats": {
-      "223065": {
+      "223084": {
         "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      },
-      "223075": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 50
-      },
-      "223119": {
-        "games": 2,
-        "pickRate": 29,
-        "winRate": 100
-      },
-      "224401": {
-        "games": 2,
-        "pickRate": 29,
+        "pickRate": 40,
         "winRate": 100
       },
       "226665": {
         "games": 2,
-        "pickRate": 29,
+        "pickRate": 40,
         "winRate": 100
       }
     },
@@ -11189,10 +10857,10 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "E",
     "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 15.5 · 86% win rate."
+      "Aggregated from 5 challenger/grandmaster/master games on patch 16.6 · 100% win rate."
     ],
-    "winRate": 85.7,
-    "sampleSize": 7
+    "winRate": 100,
+    "sampleSize": 5
   },
   {
     "id": 20141,
@@ -11469,53 +11137,53 @@
     "starterItems": [],
     "coreItems": [
       223078,
+      223074,
       223153,
       223071,
-      226333,
-      223073
+      226333
     ],
     "coreItemStats": {
       "223071": {
         "games": 2,
-        "pickRate": 13,
+        "pickRate": 14,
         "winRate": 0
       },
-      "223073": {
-        "games": 2,
-        "pickRate": 13,
-        "winRate": 50
+      "223074": {
+        "games": 3,
+        "pickRate": 21,
+        "winRate": 0
       },
       "223078": {
-        "games": 5,
-        "pickRate": 33,
-        "winRate": 40
+        "games": 4,
+        "pickRate": 29,
+        "winRate": 25
       },
       "223153": {
-        "games": 12,
-        "pickRate": 80,
-        "winRate": 33
+        "games": 11,
+        "pickRate": 79,
+        "winRate": 27
       },
       "226333": {
         "games": 4,
-        "pickRate": 27,
+        "pickRate": 29,
         "winRate": 50
       }
     },
     "situationalItems": [
       {
-        "itemId": 223074,
+        "itemId": 223073,
         "condition": "general",
-        "description": "Ravenous Hydra — popular alternative (built in 20% of games)"
+        "description": "Experimental Hexplate — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 223031,
         "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 13% of games)"
+        "description": "Infinity Edge — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 223039,
         "condition": "general",
-        "description": "Atma's Reckoning — popular alternative (built in 13% of games)"
+        "description": "Atma's Reckoning — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [
@@ -11542,10 +11210,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 15 challenger/grandmaster/master games on patch 16.9 · 27% win rate."
+      "Aggregated from 14 challenger/grandmaster/master games on patch 16.9 · 21% win rate."
     ],
-    "winRate": 26.7,
-    "sampleSize": 15
+    "winRate": 21.4,
+    "sampleSize": 14
   },
   {
     "id": 20120,
@@ -11822,27 +11490,27 @@
     "coreItemStats": {
       "223031": {
         "games": 4,
-        "pickRate": 24,
+        "pickRate": 25,
         "winRate": 50
       },
       "223033": {
         "games": 3,
-        "pickRate": 18,
+        "pickRate": 19,
         "winRate": 100
       },
       "223153": {
         "games": 4,
-        "pickRate": 24,
+        "pickRate": 25,
         "winRate": 75
       },
       "226333": {
         "games": 4,
-        "pickRate": 24,
+        "pickRate": 25,
         "winRate": 75
       },
       "226676": {
         "games": 4,
-        "pickRate": 24,
+        "pickRate": 25,
         "winRate": 50
       }
     },
@@ -11850,22 +11518,17 @@
       {
         "itemId": 223078,
         "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 12% of games)"
+        "description": "Trinity Force — popular alternative (built in 13% of games)"
       },
       {
         "itemId": 223071,
         "condition": "general",
-        "description": "Black Cleaver — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 223053,
-        "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 12% of games)"
+        "description": "Black Cleaver — popular alternative (built in 13% of games)"
       },
       {
         "itemId": 223026,
         "condition": "general",
-        "description": "Guardian Angel — popular alternative (built in 12% of games)"
+        "description": "Guardian Angel — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -11892,10 +11555,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 17 challenger/grandmaster/master games on patch 15.24 · 53% win rate."
+      "Aggregated from 16 challenger/grandmaster/master games on patch 15.24 · 50% win rate."
     ],
-    "winRate": 52.9,
-    "sampleSize": 17
+    "winRate": 50,
+    "sampleSize": 16
   },
   {
     "id": 20029,
@@ -11908,67 +11571,52 @@
     "coreItems": [
       223071,
       223153,
-      223072,
-      226609,
-      223156
+      223053,
+      226695,
+      226609
     ],
     "coreItemStats": {
-      "223071": {
-        "games": 7,
-        "pickRate": 47,
-        "winRate": 43
+      "223053": {
+        "games": 3,
+        "pickRate": 30,
+        "winRate": 33
       },
-      "223072": {
-        "games": 2,
-        "pickRate": 13,
+      "223071": {
+        "games": 4,
+        "pickRate": 40,
         "winRate": 50
       },
       "223153": {
         "games": 2,
-        "pickRate": 13,
-        "winRate": 100
-      },
-      "223156": {
-        "games": 2,
-        "pickRate": 13,
+        "pickRate": 20,
         "winRate": 100
       },
       "226609": {
-        "games": 5,
-        "pickRate": 33,
-        "winRate": 60
+        "games": 3,
+        "pickRate": 30,
+        "winRate": 100
+      },
+      "226695": {
+        "games": 3,
+        "pickRate": 30,
+        "winRate": 100
       }
     },
     "situationalItems": [
       {
-        "itemId": 226695,
+        "itemId": 223156,
         "condition": "general",
-        "description": "Serpent's Fang — popular alternative (built in 27% of games)"
-      },
-      {
-        "itemId": 223084,
-        "condition": "general",
-        "description": "Heartsteel — popular alternative (built in 20% of games)"
-      },
-      {
-        "itemId": 223748,
-        "condition": "general",
-        "description": "Titanic Hydra — popular alternative (built in 20% of games)"
-      },
-      {
-        "itemId": 223053,
-        "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 20% of games)"
+        "description": "Maw of Malmortius — popular alternative (built in 20% of games)"
       },
       {
         "itemId": 223033,
         "condition": "general",
-        "description": "Mortal Reminder — popular alternative (built in 13% of games)"
+        "description": "Mortal Reminder — popular alternative (built in 20% of games)"
       }
     ],
     "bootsOptions": [
       223111,
-      223005
+      223047
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -11990,10 +11638,10 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 15 challenger/grandmaster/master games on patch 16.6 · 53% win rate."
+      "Aggregated from 10 challenger/grandmaster/master games on patch 16.6 · 70% win rate."
     ],
-    "winRate": 53.3,
-    "sampleSize": 15
+    "winRate": 70,
+    "sampleSize": 10
   },
   {
     "id": 20016,
@@ -12174,45 +11822,47 @@
     "coreItems": [
       223089,
       224645,
-      223135
+      226653,
+      223135,
+      223165
     ],
     "coreItemStats": {
       "223089": {
-        "games": 16,
-        "pickRate": 84,
-        "winRate": 56
+        "games": 15,
+        "pickRate": 83,
+        "winRate": 53
       },
       "223135": {
         "games": 6,
-        "pickRate": 32,
+        "pickRate": 33,
         "winRate": 67
+      },
+      "223165": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 100
       },
       "224645": {
         "games": 7,
-        "pickRate": 37,
+        "pickRate": 39,
         "winRate": 43
+      },
+      "226653": {
+        "games": 4,
+        "pickRate": 22,
+        "winRate": 50
       }
     },
     "situationalItems": [
       {
         "itemId": 223157,
         "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 26% of games)"
-      },
-      {
-        "itemId": 226653,
-        "condition": "general",
-        "description": "Liandry's Anguish — popular alternative (built in 21% of games)"
-      },
-      {
-        "itemId": 223165,
-        "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 16% of games)"
+        "description": "Zhonya's Hourglass — popular alternative (built in 22% of games)"
       },
       {
         "itemId": 223003,
         "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 16% of games)"
+        "description": "Archangel's Staff — popular alternative (built in 17% of games)"
       }
     ],
     "bootsOptions": [
@@ -12239,10 +11889,10 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 19 challenger/grandmaster/master games on patch 16.1 · 53% win rate."
+      "Aggregated from 18 challenger/grandmaster/master games on patch 16.1 · 50% win rate."
     ],
-    "winRate": 52.6,
-    "sampleSize": 19
+    "winRate": 50,
+    "sampleSize": 18
   },
   {
     "id": 20010,
@@ -12415,55 +12065,45 @@
     "coreItemStats": {
       "223031": {
         "games": 11,
-        "pickRate": 38,
+        "pickRate": 48,
         "winRate": 73
       },
       "223036": {
         "games": 4,
-        "pickRate": 14,
+        "pickRate": 17,
         "winRate": 100
       },
       "223039": {
         "games": 3,
-        "pickRate": 10,
+        "pickRate": 13,
         "winRate": 100
       },
       "226676": {
-        "games": 9,
-        "pickRate": 31,
-        "winRate": 44
+        "games": 8,
+        "pickRate": 35,
+        "winRate": 50
       }
     },
     "situationalItems": [
       {
+        "itemId": 226333,
+        "condition": "general",
+        "description": "Death's Dance — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 226610,
+        "condition": "general",
+        "description": "Sundered Sky — popular alternative (built in 17% of games)"
+      },
+      {
         "itemId": 223078,
         "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 21% of games)"
+        "description": "Trinity Force — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 223033,
         "condition": "general",
         "description": "Mortal Reminder — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 226333,
-        "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 14% of games)"
-      },
-      {
-        "itemId": 226610,
-        "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 14% of games)"
-      },
-      {
-        "itemId": 223053,
-        "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 10% of games)"
-      },
-      {
-        "itemId": 226692,
-        "condition": "general",
-        "description": "Eclipse — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -12490,10 +12130,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 29 challenger/grandmaster/master games on patch 16.9 · 62% win rate."
+      "Aggregated from 23 challenger/grandmaster/master games on patch 16.9 · 74% win rate."
     ],
-    "winRate": 62.1,
-    "sampleSize": 29
+    "winRate": 73.9,
+    "sampleSize": 23
   },
   {
     "id": 20125,
@@ -12683,23 +12323,23 @@
     ],
     "coreItemStats": {
       "223089": {
-        "games": 20,
-        "pickRate": 83,
-        "winRate": 45
+        "games": 19,
+        "pickRate": 86,
+        "winRate": 47
       },
       "223157": {
         "games": 6,
-        "pickRate": 25,
+        "pickRate": 27,
         "winRate": 83
       },
       "224633": {
-        "games": 19,
-        "pickRate": 79,
-        "winRate": 42
+        "games": 17,
+        "pickRate": 77,
+        "winRate": 47
       },
       "226653": {
         "games": 8,
-        "pickRate": 33,
+        "pickRate": 36,
         "winRate": 50
       }
     },
@@ -12707,7 +12347,7 @@
       {
         "itemId": 223165,
         "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 17% of games)"
+        "description": "Morellonomicon — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -12734,68 +12374,68 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 24 challenger/grandmaster/master games on patch 16.9 · 42% win rate."
+      "Aggregated from 22 challenger/grandmaster/master games on patch 16.9 · 45% win rate."
     ],
-    "winRate": 41.7,
-    "sampleSize": 24
+    "winRate": 45.5,
+    "sampleSize": 22
   },
   {
     "id": 20025,
     "championId": "Volibear",
     "mode": "ARENA",
     "role": null,
-    "archetype": "ad",
+    "archetype": "bruiser",
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      223084,
       226675,
-      223115,
+      223065,
       222510,
-      224633,
-      223065
+      224633
     ],
     "coreItemStats": {
       "222510": {
-        "games": 5,
-        "pickRate": 24,
-        "winRate": 40
+        "games": 4,
+        "pickRate": 33,
+        "winRate": 50
       },
       "223065": {
-        "games": 4,
-        "pickRate": 19,
-        "winRate": 25
+        "games": 5,
+        "pickRate": 42,
+        "winRate": 40
       },
-      "223115": {
-        "games": 3,
-        "pickRate": 14,
-        "winRate": 0
+      "223084": {
+        "games": 5,
+        "pickRate": 42,
+        "winRate": 60
       },
       "224633": {
-        "games": 3,
-        "pickRate": 14,
-        "winRate": 67
+        "games": 2,
+        "pickRate": 17,
+        "winRate": 100
       },
       "226675": {
-        "games": 11,
-        "pickRate": 52,
-        "winRate": 27
+        "games": 7,
+        "pickRate": 58,
+        "winRate": 43
       }
     },
     "situationalItems": [
       {
-        "itemId": 223084,
+        "itemId": 223053,
         "condition": "general",
-        "description": "Heartsteel — popular alternative (built in 19% of games)"
+        "description": "Sterak's Gage — popular alternative (built in 17% of games)"
       },
       {
-        "itemId": 223078,
+        "itemId": 223115,
         "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 14% of games)"
+        "description": "Nashor's Tooth — popular alternative (built in 17% of games)"
       },
       {
-        "itemId": 226333,
+        "itemId": 223075,
         "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 14% of games)"
+        "description": "Thornmail — popular alternative (built in 17% of games)"
       }
     ],
     "bootsOptions": [
@@ -12822,10 +12462,10 @@
     "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 21 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
+      "Aggregated from 12 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
     ],
     "winRate": 33.3,
-    "sampleSize": 21
+    "sampleSize": 12
   },
   {
     "id": 20021,
@@ -12838,47 +12478,40 @@
     "coreItems": [
       223153,
       223124,
-      223078,
-      223065,
       226333
     ],
     "coreItemStats": {
-      "223065": {
-        "games": 4,
-        "pickRate": 25,
-        "winRate": 75
-      },
-      "223078": {
-        "games": 2,
-        "pickRate": 13,
-        "winRate": 50
-      },
       "223124": {
         "games": 5,
-        "pickRate": 31,
+        "pickRate": 38,
         "winRate": 80
       },
       "223153": {
-        "games": 8,
-        "pickRate": 50,
-        "winRate": 63
+        "games": 5,
+        "pickRate": 38,
+        "winRate": 60
       },
       "226333": {
-        "games": 3,
-        "pickRate": 19,
-        "winRate": 67
+        "games": 2,
+        "pickRate": 15,
+        "winRate": 100
       }
     },
     "situationalItems": [
       {
+        "itemId": 223078,
+        "condition": "general",
+        "description": "Trinity Force — popular alternative (built in 15% of games)"
+      },
+      {
         "itemId": 223091,
         "condition": "general",
-        "description": "Wit's End — popular alternative (built in 19% of games)"
+        "description": "Wit's End — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
-      223111,
-      223047
+      223047,
+      223008
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -12900,10 +12533,10 @@
     "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 16 challenger/grandmaster/master games on patch 16.9 · 56% win rate."
+      "Aggregated from 13 challenger/grandmaster/master games on patch 16.9 · 54% win rate."
     ],
-    "winRate": 56.3,
-    "sampleSize": 16
+    "winRate": 53.8,
+    "sampleSize": 13
   },
   {
     "id": 20117,
@@ -13099,35 +12732,35 @@
     "starterItems": [],
     "coreItems": [
       223153,
-      226610,
       223124,
+      223115,
       226675,
       223091
     ],
     "coreItemStats": {
       "223091": {
-        "games": 4,
+        "games": 3,
         "pickRate": 13,
-        "winRate": 75
+        "winRate": 100
+      },
+      "223115": {
+        "games": 7,
+        "pickRate": 29,
+        "winRate": 57
       },
       "223124": {
-        "games": 11,
-        "pickRate": 37,
-        "winRate": 82
+        "games": 9,
+        "pickRate": 38,
+        "winRate": 89
       },
       "223153": {
-        "games": 14,
-        "pickRate": 47,
-        "winRate": 71
-      },
-      "226610": {
-        "games": 4,
-        "pickRate": 13,
-        "winRate": 75
+        "games": 12,
+        "pickRate": 50,
+        "winRate": 83
       },
       "226675": {
         "games": 3,
-        "pickRate": 10,
+        "pickRate": 13,
         "winRate": 100
       }
     },
@@ -13135,32 +12768,32 @@
       {
         "itemId": 222510,
         "condition": "general",
-        "description": "Dusk and Dawn — popular alternative (built in 33% of games)"
-      },
-      {
-        "itemId": 223115,
-        "condition": "general",
-        "description": "Nashor's Tooth — popular alternative (built in 23% of games)"
+        "description": "Dusk and Dawn — popular alternative (built in 29% of games)"
       },
       {
         "itemId": 223078,
         "condition": "general",
-        "description": "Trinity Force — popular alternative (built in 17% of games)"
+        "description": "Trinity Force — popular alternative (built in 21% of games)"
+      },
+      {
+        "itemId": 226610,
+        "condition": "general",
+        "description": "Sundered Sky — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 226333,
         "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 223065,
-        "condition": "general",
-        "description": "Spirit Visage — popular alternative (built in 13% of games)"
+        "description": "Death's Dance — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 223074,
         "condition": "general",
-        "description": "Ravenous Hydra — popular alternative (built in 10% of games)"
+        "description": "Ravenous Hydra — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 223031,
+        "condition": "general",
+        "description": "Infinity Edge — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -13187,10 +12820,10 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 30 challenger/grandmaster/master games on patch 16.9 · 73% win rate."
+      "Aggregated from 24 challenger/grandmaster/master games on patch 16.9 · 79% win rate."
     ],
-    "winRate": 73.3,
-    "sampleSize": 30
+    "winRate": 79.2,
+    "sampleSize": 24
   },
   {
     "id": 20045,
@@ -13209,23 +12842,23 @@
     ],
     "coreItemStats": {
       "223031": {
-        "games": 32,
-        "pickRate": 91,
-        "winRate": 72
+        "games": 30,
+        "pickRate": 94,
+        "winRate": 73
       },
       "223033": {
-        "games": 10,
-        "pickRate": 29,
+        "games": 9,
+        "pickRate": 28,
         "winRate": 100
       },
       "223036": {
-        "games": 3,
-        "pickRate": 9,
-        "winRate": 67
+        "games": 2,
+        "pickRate": 6,
+        "winRate": 100
       },
       "223153": {
         "games": 16,
-        "pickRate": 46,
+        "pickRate": 50,
         "winRate": 94
       },
       "226665": {
@@ -13238,7 +12871,7 @@
       {
         "itemId": 223072,
         "condition": "general",
-        "description": "Bloodthirster — popular alternative (built in 20% of games)"
+        "description": "Bloodthirster — popular alternative (built in 22% of games)"
       }
     ],
     "bootsOptions": [
@@ -13265,10 +12898,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 35 challenger/grandmaster/master games on patch 16.9 · 69% win rate."
+      "Aggregated from 32 challenger/grandmaster/master games on patch 16.9 · 69% win rate."
     ],
-    "winRate": 68.6,
-    "sampleSize": 35
+    "winRate": 68.8,
+    "sampleSize": 32
   },
   {
     "id": 20155,
@@ -13344,26 +12977,12 @@
     "archetype": "ad",
     "patch": "16.9",
     "starterItems": [],
-    "coreItems": [
-      226610,
-      223071
-    ],
-    "coreItemStats": {
-      "223071": {
-        "games": 2,
-        "pickRate": 33,
-        "winRate": 100
-      },
-      "226610": {
-        "games": 3,
-        "pickRate": 50,
-        "winRate": 33
-      }
-    },
+    "coreItems": [],
+    "coreItemStats": {},
     "situationalItems": [],
     "bootsOptions": [
-      223111,
-      223008
+      223008,
+      223111
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -13385,10 +13004,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 6 challenger/grandmaster/master games on patch 16.9 · 67% win rate."
+      "Aggregated from 4 challenger/grandmaster/master games on patch 16.9 · 75% win rate."
     ],
-    "winRate": 66.7,
-    "sampleSize": 6
+    "winRate": 75,
+    "sampleSize": 4
   },
   {
     "id": 20168,
@@ -13480,75 +13099,44 @@
     "championId": "Yuumi",
     "mode": "ARENA",
     "role": null,
-    "archetype": "ap",
+    "archetype": "hybrid",
     "patch": "16.1",
     "starterItems": [],
     "coreItems": [
       223107,
       226617,
-      223222,
       223504,
+      223222,
       223190
     ],
     "coreItemStats": {
       "223107": {
-        "games": 8,
-        "pickRate": 50,
-        "winRate": 50
+        "games": 5,
+        "pickRate": 63,
+        "winRate": 60
       },
       "223190": {
         "games": 5,
-        "pickRate": 31,
+        "pickRate": 63,
         "winRate": 80
       },
       "223222": {
-        "games": 5,
-        "pickRate": 31,
+        "games": 4,
+        "pickRate": 50,
         "winRate": 100
       },
       "223504": {
-        "games": 9,
-        "pickRate": 56,
-        "winRate": 56
+        "games": 4,
+        "pickRate": 50,
+        "winRate": 100
       },
       "226617": {
-        "games": 7,
-        "pickRate": 44,
-        "winRate": 57
+        "games": 4,
+        "pickRate": 50,
+        "winRate": 75
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 226621,
-        "condition": "general",
-        "description": "Dawncore — popular alternative (built in 38% of games)"
-      },
-      {
-        "itemId": 223109,
-        "condition": "general",
-        "description": "Knight's Vow — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 222526,
-        "condition": "general",
-        "description": "Whispering Circlet — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 223003,
-        "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 223089,
-        "condition": "general",
-        "description": "Rabadon's Deathcap — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 226616,
-        "condition": "general",
-        "description": "Staff of Flowing Water — popular alternative (built in 13% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       223158
     ],
@@ -13570,12 +13158,12 @@
       0
     ],
     "skillMaxOrder": "E > Q > W",
-    "skillStart": "E",
+    "skillStart": "Q",
     "notes": [
-      "Aggregated from 16 challenger/grandmaster/master games on patch 16.1 · 50% win rate."
+      "Aggregated from 8 challenger/grandmaster/master games on patch 16.1 · 75% win rate."
     ],
-    "winRate": 50,
-    "sampleSize": 16
+    "winRate": 75,
+    "sampleSize": 8
   },
   {
     "id": 20171,
@@ -13587,23 +13175,17 @@
     "starterItems": [],
     "coreItems": [
       223078,
-      226610,
-      223074
+      226610
     ],
     "coreItemStats": {
-      "223074": {
-        "games": 3,
-        "pickRate": 14,
-        "winRate": 33
-      },
       "223078": {
         "games": 13,
-        "pickRate": 62,
+        "pickRate": 65,
         "winRate": 54
       },
       "226610": {
         "games": 12,
-        "pickRate": 57,
+        "pickRate": 60,
         "winRate": 58
       }
     },
@@ -13611,22 +13193,32 @@
       {
         "itemId": 223071,
         "condition": "general",
-        "description": "Black Cleaver — popular alternative (built in 24% of games)"
+        "description": "Black Cleaver — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 226333,
         "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 19% of games)"
+        "description": "Death's Dance — popular alternative (built in 20% of games)"
       },
       {
         "itemId": 222517,
         "condition": "general",
-        "description": "Endless Hunger — popular alternative (built in 19% of games)"
+        "description": "Endless Hunger — popular alternative (built in 20% of games)"
       },
       {
         "itemId": 226609,
         "condition": "general",
-        "description": "Chempunk Chainsword — popular alternative (built in 19% of games)"
+        "description": "Chempunk Chainsword — popular alternative (built in 20% of games)"
+      },
+      {
+        "itemId": 223074,
+        "condition": "general",
+        "description": "Ravenous Hydra — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 223153,
+        "condition": "general",
+        "description": "Blade of The Ruined King — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -13653,10 +13245,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 21 challenger/grandmaster/master games on patch 16.9 · 67% win rate."
+      "Aggregated from 20 challenger/grandmaster/master games on patch 16.9 · 65% win rate."
     ],
-    "winRate": 66.7,
-    "sampleSize": 21
+    "winRate": 65,
+    "sampleSize": 20
   },
   {
     "id": 20090,
@@ -13669,52 +13261,50 @@
     "coreItems": [
       223084,
       223075,
-      222502,
-      223065,
-      226665
+      223065
     ],
     "coreItemStats": {
-      "222502": {
-        "games": 3,
-        "pickRate": 14,
-        "winRate": 67
-      },
       "223065": {
-        "games": 10,
-        "pickRate": 48,
-        "winRate": 90
+        "games": 8,
+        "pickRate": 42,
+        "winRate": 100
       },
       "223075": {
         "games": 6,
-        "pickRate": 29,
+        "pickRate": 32,
         "winRate": 67
       },
       "223084": {
-        "games": 17,
-        "pickRate": 81,
-        "winRate": 53
-      },
-      "226665": {
-        "games": 3,
-        "pickRate": 14,
-        "winRate": 33
+        "games": 16,
+        "pickRate": 84,
+        "winRate": 56
       }
     },
     "situationalItems": [
       {
         "itemId": 223068,
         "condition": "general",
-        "description": "Sunfire Aegis — popular alternative (built in 33% of games)"
+        "description": "Sunfire Aegis — popular alternative (built in 32% of games)"
       },
       {
         "itemId": 226664,
         "condition": "general",
-        "description": "Hollow Radiance — popular alternative (built in 14% of games)"
+        "description": "Hollow Radiance — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 226665,
+        "condition": "general",
+        "description": "Jak'Sho, The Protean — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 222502,
+        "condition": "general",
+        "description": "Unending Despair — popular alternative (built in 16% of games)"
       }
     ],
     "bootsOptions": [
-      223111,
-      223047
+      223047,
+      223158
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -13736,10 +13326,10 @@
     "skillMaxOrder": "E > W > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 21 challenger/grandmaster/master games on patch 16.9 · 62% win rate."
+      "Aggregated from 19 challenger/grandmaster/master games on patch 16.9 · 63% win rate."
     ],
-    "winRate": 61.9,
-    "sampleSize": 21
+    "winRate": 63.2,
+    "sampleSize": 19
   },
   {
     "id": 20067,
@@ -13769,12 +13359,12 @@
       },
       "226692": {
         "games": 9,
-        "pickRate": 26,
+        "pickRate": 27,
         "winRate": 67
       },
       "226694": {
         "games": 13,
-        "pickRate": 38,
+        "pickRate": 39,
         "winRate": 69
       },
       "226695": {
@@ -13787,22 +13377,17 @@
       {
         "itemId": 226699,
         "condition": "general",
-        "description": "Voltaic Cyclosword — popular alternative (built in 29% of games)"
+        "description": "Voltaic Cyclosword — popular alternative (built in 30% of games)"
       },
       {
         "itemId": 226696,
         "condition": "general",
-        "description": "Axiom Arc — popular alternative (built in 29% of games)"
+        "description": "Axiom Arc — popular alternative (built in 30% of games)"
       },
       {
         "itemId": 223026,
         "condition": "general",
         "description": "Guardian Angel — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 226697,
-        "condition": "general",
-        "description": "Hubris — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 223031,
@@ -13817,7 +13402,7 @@
     ],
     "bootsOptions": [
       223158,
-      223008
+      223005
     ],
     "primaryPathId": 0,
     "keystoneId": 0,
@@ -13839,10 +13424,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 34 challenger/grandmaster/master games on patch 16.9 · 56% win rate."
+      "Aggregated from 33 challenger/grandmaster/master games on patch 16.9 · 55% win rate."
     ],
-    "winRate": 55.9,
-    "sampleSize": 34
+    "winRate": 54.5,
+    "sampleSize": 33
   },
   {
     "id": 20079,
@@ -14007,7 +13592,7 @@
     "mode": "ARENA",
     "role": null,
     "archetype": "ap",
-    "patch": "16.9",
+    "patch": "15.5",
     "starterItems": [],
     "coreItems": [
       223003,
@@ -14017,17 +13602,17 @@
     "coreItemStats": {
       "223003": {
         "games": 7,
-        "pickRate": 54,
+        "pickRate": 58,
         "winRate": 57
       },
       "223089": {
-        "games": 7,
-        "pickRate": 54,
-        "winRate": 57
+        "games": 6,
+        "pickRate": 50,
+        "winRate": 50
       },
       "223135": {
         "games": 3,
-        "pickRate": 23,
+        "pickRate": 25,
         "winRate": 67
       }
     },
@@ -14035,32 +13620,32 @@
       {
         "itemId": 224645,
         "condition": "general",
-        "description": "Shadowflame — popular alternative (built in 31% of games)"
+        "description": "Shadowflame — popular alternative (built in 33% of games)"
       },
       {
         "itemId": 226653,
         "condition": "general",
-        "description": "Liandry's Anguish — popular alternative (built in 23% of games)"
-      },
-      {
-        "itemId": 223157,
-        "condition": "general",
-        "description": "Zhonya's Hourglass — popular alternative (built in 23% of games)"
+        "description": "Liandry's Anguish — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 226657,
         "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 23% of games)"
+        "description": "Rod of Ages — popular alternative (built in 25% of games)"
       },
       {
         "itemId": 224629,
         "condition": "general",
-        "description": "Cosmic Drive — popular alternative (built in 15% of games)"
+        "description": "Cosmic Drive — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 223157,
+        "condition": "general",
+        "description": "Zhonya's Hourglass — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 226655,
         "condition": "general",
-        "description": "Luden's Echo — popular alternative (built in 15% of games)"
+        "description": "Luden's Echo — popular alternative (built in 17% of games)"
       }
     ],
     "bootsOptions": [
@@ -14087,10 +13672,10 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 13 challenger/grandmaster/master games on patch 16.9 · 62% win rate."
+      "Aggregated from 12 challenger/grandmaster/master games on patch 15.5 · 58% win rate."
     ],
-    "winRate": 61.5,
-    "sampleSize": 13
+    "winRate": 58.3,
+    "sampleSize": 12
   },
   {
     "id": 20167,

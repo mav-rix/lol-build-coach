@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router'
 import { ChampionSelect } from '@/components/ChampionSelect'
 import { BuildPathDisplay } from '@/components/BuildPathDisplay'
@@ -40,6 +40,8 @@ const ARCHETYPE_LABEL: Record<string, string> = {
   ap: 'AP',
   ad: 'AD',
   tank: 'Tank',
+  bruiser: 'Bruiser',
+  hybrid: 'AP/Tank',
   other: 'Standard',
 }
 
@@ -65,7 +67,17 @@ export default function Home() {
     clearEnemies,
   } = useAppStore()
 
+  // The store's persist middleware rehydrates asynchronously (its storage
+  // adapter is always async, even for plain localStorage — see
+  // useAppStore.ts), so on first mount selectedChampionId/etc. briefly hold
+  // their hard-coded defaults before the real persisted values land a tick
+  // later. Without this guard that landing reads as a "champion changed" and
+  // wipes the just-restored selectedArchetype right back to null.
+  const [hydrated, setHydrated] = useState(() => useAppStore.persist.hasHydrated())
+  useEffect(() => useAppStore.persist.onFinishHydration(() => setHydrated(true)), [])
+
   useEffect(() => {
+    if (!hydrated) return
     selectArchetype(null)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedChampionId, selectedRole, selectedMode])
@@ -353,38 +365,36 @@ export default function Home() {
         <>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              {variants.length > 1 ? (
-                <div className="relative">
-                  <select
-                    value={build.archetype ?? ''}
-                    onChange={(e) => selectArchetype(e.target.value || null)}
-                    className="cursor-pointer appearance-none rounded-lg border border-zinc-700 bg-zinc-900 py-1.5 pl-3 pr-10 text-xl font-bold text-zinc-100 hover:border-sky-600 hover:bg-zinc-800"
-                    title="Choose a build variant"
-                  >
-                    {variants.map((v) => (
-                      <option key={v.id} value={v.archetype ?? ''}>
-                        {selectedChampion.name} {v.role ?? `(${modeConfig.label})`} ·{' '}
-                        {ARCHETYPE_LABEL[v.archetype ?? ''] ?? 'Build'}
-                        {v.winRate != null ? ` · ${v.winRate}% WR` : ''}
-                      </option>
-                    ))}
-                  </select>
-                  <svg
-                    className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              ) : (
-                <h2 className="text-xl font-bold text-zinc-100">
-                  Recommended Build — {selectedChampion.name}{' '}
-                  {build.role ?? `(${modeConfig.label})`}
-                </h2>
-              )}
+              {/* Always a dropdown, even with one option — a champion with a
+                  single build today shouldn't look categorically different
+                  from one with three; it's the same control everywhere, so
+                  players learn "this is a place to check for alternatives"
+                  regardless of what happens to be available right now. */}
+              <div className="relative">
+                <select
+                  value={build.archetype ?? ''}
+                  onChange={(e) => selectArchetype(e.target.value || null)}
+                  className="cursor-pointer appearance-none rounded-lg border border-zinc-700 bg-zinc-900 py-1.5 pl-3 pr-10 text-xl font-bold text-zinc-100 hover:border-sky-600 hover:bg-zinc-800"
+                  title={variants.length > 1 ? 'Choose a build variant' : 'Only one build variant available for now'}
+                >
+                  {variants.map((v) => (
+                    <option key={v.id} value={v.archetype ?? ''}>
+                      {selectedChampion.name} {v.role ?? `(${modeConfig.label})`} ·{' '}
+                      {ARCHETYPE_LABEL[v.archetype ?? ''] ?? 'Build'}
+                      {v.winRate != null ? ` · ${v.winRate}% WR` : ''}
+                    </option>
+                  ))}
+                </select>
+                <svg
+                  className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
             </div>
             <div className="flex items-center gap-2">
               <ImportBuildButton
