@@ -439,6 +439,27 @@ one already kept is dropped as the same build under another label, and the
 refined split is only used at all when it still covers every archetype the
 plain ap/ad/tank read surfaces — otherwise the group falls back to that read.
 
+**Which games get sampled.** `--tiers` takes the three apex ladders by default;
+`diamond`, `emerald`, `platinum`, `gold`, `silver`, `bronze` and `iron` are also
+accepted and come from the paged division-II entries endpoint (`--entry-pages`,
+200 players each). Sampling wider is how off-meta builds surface — apex players
+essentially never build them, so no amount of Challenger data will produce an
+AP Xin Zhao.
+
+`--since <days>` is the one that controls **freshness**, and it's easy to
+mistake for an elo problem. Riot's match-id endpoint returns "this player's
+last N games in this queue" with no date bound, so a queue someone plays
+rarely hands back year-old games no matter their rank — which is how the ARAM
+pool came to span 50 patches with only ~5% of it recent (a test pull from
+Emerald came back on patch 15.4). `--since 21` passes `startTime` so only the
+last three weeks count; measured, that put 72 of 75 builds on the live patch.
+It costs breadth, since players idle in the queue return nothing, so a windowed
+run needs many more players to fill `--matches`.
+
+Each build records the elo mix behind it (`sampleTiers`: `Master+`, `Emerald`,
+`Emerald/Master+`) from a manifest in the match cache, and the Build page shows
+it — so a mixed-elo pool can't quietly present itself as high-elo data.
+
 **Refreshing per patch.** The data is patch-specific, so re-run the aggregator
 when a new patch ships. `--if-stale` makes that cheap: it no-ops if the output
 was already built for the current patch, otherwise runs — so

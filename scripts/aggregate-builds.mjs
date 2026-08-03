@@ -8,7 +8,16 @@
 //
 // Flags (all optional):
 //   --region <platform>   na1|euw1|kr|...      (default na1)
-//   --tiers  <list>       challenger,grandmaster,master (default all three)
+//   --tiers  <list>       challenger,grandmaster,master (default all three);
+//                         diamond|emerald|platinum|gold|silver|bronze|iron are
+//                         sampled from the paged division-II entries endpoint
+//   --entry-pages <n>     pages of a division tier's ladder to sample, 200
+//                         players each (default 2; apex tiers ignore this)
+//   --since <days>        only count games played in the last <days>. Match ids
+//                         are "this player's last N games in this queue" with no
+//                         date bound, so a rarely-played queue returns year-old
+//                         games — this is what holds a run to the current patch.
+//                         Costs breadth: players idle in the queue return none.
 //   --matches <n>         max matches to ingest           (default 300)
 //   --per-player <n>      match ids pulled per player      (default 15)
 //   --min-sample <n>      min games to emit a build        (default 3)
