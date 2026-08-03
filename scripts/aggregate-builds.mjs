@@ -73,10 +73,14 @@ const ENTRY_PAGES = Number(args['entry-pages'] ?? 2)
 // games from that window count, which is the only way to hold the data to the
 // current patch. Costs breadth: players who haven't touched the queue lately
 // return nothing, so a windowed run needs far more players to fill its quota.
+// Seed players from cached matches of this queue rather than the ranked
+// ladder — see snowballSeeds. Essential for casual queues; pointless for
+// ranked SR, where the ladder players are the population.
+const SNOWBALL = Boolean(args.snowball)
+const SNOWBALL_SEEDS = Number(args['snowball-seeds'] ?? 600)
 const SINCE_DAYS = Number(args.since ?? 0)
-const SINCE_PARAM = SINCE_DAYS
-  ? `&startTime=${Math.floor((Date.now() - SINCE_DAYS * 86400_000) / 1000)}`
-  : ''
+const SINCE_MS = SINCE_DAYS ? Date.now() - SINCE_DAYS * 86400_000 : 0
+const SINCE_PARAM = SINCE_MS ? `&startTime=${Math.floor(SINCE_MS / 1000)}` : ''
 const MATCH_LIMIT = Number(args.matches ?? 300)
 const PER_PLAYER = Number(args['per-player'] ?? 15)
 const MIN_SAMPLE = Number(args['min-sample'] ?? 3)
@@ -315,6 +319,11 @@ function skillOrder(timeline, pid) {
 export function observeMatch(match, timeline, statik) {
   const info = match.info
   if (info.queueId !== QUEUE || info.mapId !== MODE_CFG.map) return []
+  // --since bounds what gets AGGREGATED as well as what gets fetched, so a
+  // --cached-only rerun can rebuild from just the recent slice of a cache that
+  // spans years. Without this the only way to drop stale matches would be to
+  // delete them.
+  if (SINCE_MS && (info.gameEndTimestamp ?? info.gameCreation ?? 0) < SINCE_MS) return []
   const patch = info.gameVersion.split('.').slice(0, 2).join('.')
   const idOf = (name) => statik.champByLower[name.toLowerCase()] ?? name
   // Arena is 8 teams of 2 (playerSubteamId, not the 2-team teamId split below),
@@ -853,6 +862,42 @@ const TIER_BUCKET = {
   iron: 'Iron',
 }
 
+/**
+ * Players proven to play THIS queue: the participants of the most recent
+ * cached matches of it. The ranked ladder is the wrong population for a
+ * casual queue — measured 2026-08-04, 1 of 50 ranked-ladder players had
+ * played ARAM in the previous 21 days (0.02 match ids per call, ~50 hours to
+ * gather 3,000). Seeding from ARAM matches instead returned 22 of 22 players
+ * active, at 16–38 ids per call. Same rate limit, ~1000x the yield.
+ *
+ * Every match id carries its platform prefix and a puuid is only queryable on
+ * its own regional cluster, so seeds are filtered to the ones this platform
+ * can actually ask about.
+ */
+function snowballSeeds(platform) {
+  const cluster = regionalCluster(platform)
+  const matches = []
+  for (const id of cachedMatchIds()) {
+    if (regionalCluster(id.split('_')[0].toLowerCase()) !== cluster) continue
+    try {
+      const m = JSON.parse(readFileSync(join(CACHE, `${id}.match.json`), 'utf8'))
+      if (m?.info?.queueId !== QUEUE) continue
+      matches.push({ t: m.info.gameEndTimestamp ?? m.info.gameCreation ?? 0, players: m.metadata?.participants ?? [] })
+    } catch {
+      // unreadable cache entry — skip
+    }
+  }
+  matches.sort((a, b) => b.t - a.t)
+  const seeds = new Map()
+  for (const m of matches) {
+    for (const p of m.players) if (!seeds.has(p)) seeds.set(p, 'All ranks')
+    if (seeds.size >= SNOWBALL_SEEDS) break
+  }
+  const newest = matches[0]?.t ? new Date(matches[0].t).toISOString().slice(0, 10) : 'none'
+  console.log(`  ${seeds.size} seed players from cached ${MODE_CFG.buildMode} matches (newest ${newest})`)
+  return seeds
+}
+
 /** puuid → elo bucket it was sampled from (first tier to claim it wins). */
 async function gatherPuuids(platform) {
   const puuids = new Map()
@@ -1050,7 +1095,7 @@ async function main() {
     const pooled = new Set()
     for (const platform of REGIONS) {
       console.log(`Gathering ${platform.toUpperCase()} players…`)
-      const puuids = await gatherPuuids(platform)
+      const puuids = SNOWBALL ? snowballSeeds(platform) : await gatherPuuids(platform)
       console.log(`  ${puuids.size} unique players`)
       console.log(`Gathering ${platform.toUpperCase()} match ids…`)
       const ids = await gatherMatchIds(puuids, platform)
