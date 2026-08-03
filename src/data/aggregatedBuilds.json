@@ -172,56 +172,6 @@
     "sampleSize": 12
   },
   {
-    "id": 20617,
-    "championId": "Aatrox",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      6610
-    ],
-    "coreItemStats": {
-      "6610": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3111,
-      3047
-    ],
-    "primaryPathId": 8300,
-    "keystoneId": 8351,
-    "primaryRuneIds": [
-      8304,
-      8345,
-      8410
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8473,
-      8242
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 3
-  },
-  {
     "id": 20202,
     "championId": "Aatrox",
     "mode": "SR",
@@ -718,56 +668,6 @@
     "sampleSize": 267
   },
   {
-    "id": 20252,
-    "championId": "Akali",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1054
-    ],
-    "coreItems": [
-      3146
-    ],
-    "coreItemStats": {
-      "3146": {
-        "games": 55,
-        "pickRate": 100,
-        "winRate": 27
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020,
-      3111
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8140,
-      8106
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8451,
-      8444
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 55 challenger/grandmaster/master games on patch 16.13 · 27% win rate."
-    ],
-    "winRate": 27.3,
-    "sampleSize": 55
-  },
-  {
     "id": 20191,
     "championId": "Akali",
     "mode": "SR",
@@ -851,56 +751,6 @@
     ],
     "winRate": 51.4,
     "sampleSize": 144
-  },
-  {
-    "id": 20192,
-    "championId": "Akali",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      3146
-    ],
-    "coreItemStats": {
-      "3146": {
-        "games": 28,
-        "pickRate": 100,
-        "winRate": 57
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020,
-      3111
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8140,
-      8106
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8451,
-      8444
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 28 challenger/grandmaster/master games on patch 16.13 · 57% win rate."
-    ],
-    "winRate": 57.1,
-    "sampleSize": 28
   },
   {
     "id": 20324,
@@ -3845,47 +3695,6 @@
     "sampleSize": 212
   },
   {
-    "id": 20512,
-    "championId": "Belveth",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1055
-    ],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      3047
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8010,
-    "primaryRuneIds": [
-      9111,
-      9103,
-      8299
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8444,
-      8451
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
-  },
-  {
     "id": 20116,
     "championId": "Blitzcrank",
     "mode": "SR",
@@ -5885,55 +5694,6 @@
     "sampleSize": 63
   },
   {
-    "id": 20567,
-    "championId": "Chogath",
-    "mode": "SR",
-    "role": "ADC",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      3152
-    ],
-    "coreItemStats": {
-      "3152": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 9923,
-    "primaryRuneIds": [
-      8126,
-      8137,
-      8106
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8444,
-      8446
-    ],
-    "statRuneIds": [
-      5008,
-      5010,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
-  },
-  {
     "id": 20530,
     "championId": "Chogath",
     "mode": "SR",
@@ -7268,55 +7028,6 @@
     ],
     "winRate": 49.7,
     "sampleSize": 147
-  },
-  {
-    "id": 20601,
-    "championId": "Diana",
-    "mode": "SR",
-    "role": "ADC",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      4645
-    ],
-    "coreItemStats": {
-      "4645": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3020
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8140,
-      8135
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8401,
-      8473
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 3
   },
   {
     "id": 20083,
@@ -8991,48 +8702,6 @@
     "sampleSize": 70
   },
   {
-    "id": 20411,
-    "championId": "Elise",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "other",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      3020,
-      3158
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8141,
-      8105
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      9111,
-      8014
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 29 challenger/grandmaster/master games on patch 16.13 · 55% win rate."
-    ],
-    "winRate": 55.2,
-    "sampleSize": 29
-  },
-  {
     "id": 20600,
     "championId": "Elise",
     "mode": "SR",
@@ -9264,55 +8933,6 @@
     ],
     "winRate": 50.8,
     "sampleSize": 916
-  },
-  {
-    "id": 20317,
-    "championId": "Ezreal",
-    "mode": "SR",
-    "role": "JUNGLE",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1101
-    ],
-    "coreItems": [
-      3078
-    ],
-    "coreItemStats": {
-      "3078": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8008,
-    "primaryRuneIds": [
-      8009,
-      9105,
-      8017
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8304,
-      8347
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
   },
   {
     "id": 20399,
@@ -13677,47 +13297,6 @@
     "sampleSize": 101
   },
   {
-    "id": 20621,
-    "championId": "Ivern",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      3158
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8214,
-    "primaryRuneIds": [
-      8226,
-      8210,
-      8236
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8321,
-      8347
-    ],
-    "statRuneIds": [
-      5007,
-      5010,
-      5011
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 3
-  },
-  {
     "id": 20545,
     "championId": "Ivern",
     "mode": "SR",
@@ -13783,56 +13362,6 @@
     ],
     "winRate": 16.7,
     "sampleSize": 6
-  },
-  {
-    "id": 20610,
-    "championId": "Ivern",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      3118
-    ],
-    "coreItemStats": {
-      "3118": {
-        "games": 7,
-        "pickRate": 100,
-        "winRate": 29
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3020
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8005,
-    "primaryRuneIds": [
-      9111,
-      9105,
-      8017
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8401,
-      8473
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 7 challenger/grandmaster/master games on patch 16.13 · 29% win rate."
-    ],
-    "winRate": 28.6,
-    "sampleSize": 7
   },
   {
     "id": 20168,
@@ -14240,56 +13769,6 @@
     ],
     "winRate": 46.2,
     "sampleSize": 13
-  },
-  {
-    "id": 20589,
-    "championId": "JarvanIV",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      1120
-    ],
-    "coreItems": [
-      3119
-    ],
-    "coreItemStats": {
-      "3119": {
-        "games": 2,
-        "pickRate": 50,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3111,
-      3158
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8010,
-    "primaryRuneIds": [
-      8009,
-      9104,
-      8014
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8401,
-      8473
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.13 · 25% win rate."
-    ],
-    "winRate": 25,
-    "sampleSize": 4
   },
   {
     "id": 20009,
@@ -14928,56 +14407,6 @@
     ],
     "winRate": 42,
     "sampleSize": 150
-  },
-  {
-    "id": 20618,
-    "championId": "Jayce",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3142
-    ],
-    "coreItemStats": {
-      "3142": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3047
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8140,
-      8135
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8316,
-      8304
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 3
   },
   {
     "id": 20146,
@@ -16615,56 +16044,6 @@
     ],
     "winRate": 50,
     "sampleSize": 12
-  },
-  {
-    "id": 20572,
-    "championId": "Kassadin",
-    "mode": "SR",
-    "role": "ADC",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      6657
-    ],
-    "coreItemStats": {
-      "6657": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 100
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3111,
-      3020
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8140,
-      8106
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8226,
-      8237
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "E > W > Q",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 100% win rate."
-    ],
-    "winRate": 100,
-    "sampleSize": 3
   },
   {
     "id": 20084,
@@ -18415,56 +17794,6 @@
     ],
     "winRate": 50,
     "sampleSize": 12
-  },
-  {
-    "id": 20609,
-    "championId": "Kled",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3748
-    ],
-    "coreItemStats": {
-      "3748": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3009,
-      3047
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8010,
-    "primaryRuneIds": [
-      9111,
-      9104,
-      8299
-    ],
-    "secondaryPathId": 8100,
-    "secondaryRuneIds": [
-      8143,
-      8135
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 3
   },
   {
     "id": 20223,
@@ -23236,48 +22565,6 @@
     "sampleSize": 61
   },
   {
-    "id": 20602,
-    "championId": "Milio",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3020
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8214,
-    "primaryRuneIds": [
-      8226,
-      8210,
-      8237
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      9105,
-      8017
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
-  },
-  {
     "id": 20239,
     "championId": "Milio",
     "mode": "SR",
@@ -24477,56 +23764,6 @@
     ],
     "winRate": 46.2,
     "sampleSize": 106
-  },
-  {
-    "id": 20235,
-    "championId": "Morgana",
-    "mode": "SR",
-    "role": "TOP",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      1056
-    ],
-    "coreItems": [
-      2503
-    ],
-    "coreItemStats": {
-      "2503": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 33
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3009
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8992,
-    "primaryRuneIds": [
-      8226,
-      8210,
-      8237
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      8017,
-      8009
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "W > E > Q",
-    "skillStart": "W",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 3
   },
   {
     "id": 20310,
@@ -27916,48 +27153,6 @@
     "sampleSize": 203
   },
   {
-    "id": 20619,
-    "championId": "Orianna",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ap",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      3020,
-      3158
-    ],
-    "primaryPathId": 8200,
-    "keystoneId": 8214,
-    "primaryRuneIds": [
-      8226,
-      8210,
-      8237
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      8009,
-      8014
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 33% win rate."
-    ],
-    "winRate": 33.3,
-    "sampleSize": 3
-  },
-  {
     "id": 20582,
     "championId": "Orianna",
     "mode": "SR",
@@ -30037,56 +29232,6 @@
     ],
     "winRate": 62.2,
     "sampleSize": 37
-  },
-  {
-    "id": 20492,
-    "championId": "Quinn",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3142
-    ],
-    "coreItemStats": {
-      "3142": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 50
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3008,
-      3006
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 8112,
-    "primaryRuneIds": [
-      8143,
-      8140,
-      8135
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8233,
-      8236
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
   },
   {
     "id": 20292,
@@ -35421,56 +34566,6 @@
     "sampleSize": 47
   },
   {
-    "id": 20577,
-    "championId": "Sion",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      3190
-    ],
-    "coreItemStats": {
-      "3190": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3009,
-      3111
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8437,
-    "primaryRuneIds": [
-      8446,
-      8444,
-      8451
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8345,
-      8410
-    ],
-    "statRuneIds": [
-      5008,
-      5001,
-      5001
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 3
-  },
-  {
     "id": 20184,
     "championId": "Sion",
     "mode": "SR",
@@ -38239,56 +37334,6 @@
     "sampleSize": 14
   },
   {
-    "id": 20395,
-    "championId": "TahmKench",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      1054
-    ],
-    "coreItems": [
-      3084
-    ],
-    "coreItemStats": {
-      "3084": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3111,
-      3047
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8437,
-    "primaryRuneIds": [
-      8401,
-      8429,
-      8453
-    ],
-    "secondaryPathId": 8000,
-    "secondaryRuneIds": [
-      9111,
-      9104
-    ],
-    "statRuneIds": [
-      5005,
-      5001,
-      5013
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 67% win rate."
-    ],
-    "winRate": 66.7,
-    "sampleSize": 3
-  },
-  {
     "id": 20440,
     "championId": "TahmKench",
     "mode": "SR",
@@ -39735,55 +38780,6 @@
     "sampleSize": 35
   },
   {
-    "id": 20479,
-    "championId": "Thresh",
-    "mode": "SR",
-    "role": "MID",
-    "archetype": "tank",
-    "patch": "16.13",
-    "starterItems": [
-      1054
-    ],
-    "coreItems": [
-      6664
-    ],
-    "coreItemStats": {
-      "6664": {
-        "games": 3,
-        "pickRate": 100,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3111
-    ],
-    "primaryPathId": 8400,
-    "keystoneId": 8439,
-    "primaryRuneIds": [
-      8401,
-      8444,
-      8242
-    ],
-    "secondaryPathId": 8300,
-    "secondaryRuneIds": [
-      8345,
-      8347
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 3
-  },
-  {
     "id": 20057,
     "championId": "Thresh",
     "mode": "SR",
@@ -41222,56 +40218,6 @@
     ],
     "winRate": 30.6,
     "sampleSize": 36
-  },
-  {
-    "id": 20219,
-    "championId": "Twitch",
-    "mode": "SR",
-    "role": "JUNGLE",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      1103
-    ],
-    "coreItems": [
-      6676
-    ],
-    "coreItemStats": {
-      "6676": {
-        "games": 2,
-        "pickRate": 67,
-        "winRate": 0
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3006,
-      3158
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8008,
-    "primaryRuneIds": [
-      9111,
-      9104,
-      8017
-    ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8224,
-      8236
-    ],
-    "statRuneIds": [
-      5005,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "E",
-    "notes": [
-      "Aggregated from 3 challenger/grandmaster/master games on patch 16.13 · 0% win rate."
-    ],
-    "winRate": 0,
-    "sampleSize": 3
   },
   {
     "id": 20452,
@@ -43941,56 +42887,6 @@
     ],
     "winRate": 60,
     "sampleSize": 5
-  },
-  {
-    "id": 20480,
-    "championId": "Vi",
-    "mode": "SR",
-    "role": "SUPPORT",
-    "archetype": "ad",
-    "patch": "16.13",
-    "starterItems": [
-      3865
-    ],
-    "coreItems": [
-      6610
-    ],
-    "coreItemStats": {
-      "6610": {
-        "games": 3,
-        "pickRate": 75,
-        "winRate": 67
-      }
-    },
-    "situationalItems": [],
-    "bootsOptions": [
-      3158,
-      3111
-    ],
-    "primaryPathId": 8100,
-    "keystoneId": 9923,
-    "primaryRuneIds": [
-      8143,
-      8141,
-      8106
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8401,
-      8473
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5011
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.13 · 75% win rate."
-    ],
-    "winRate": 75,
-    "sampleSize": 4
   },
   {
     "id": 20309,

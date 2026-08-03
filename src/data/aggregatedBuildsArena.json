@@ -5745,46 +5745,6 @@
     "sampleSize": 12
   },
   {
-    "id": 20022,
-    "championId": "LeeSin",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223111,
-      223047
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 15.5 · 57% win rate."
-    ],
-    "winRate": 57.1,
-    "sampleSize": 14
-  },
-  {
     "id": 20033,
     "championId": "Leona",
     "mode": "ARENA",
@@ -8664,46 +8624,6 @@
     ],
     "winRate": 57.9,
     "sampleSize": 19
-  },
-  {
-    "id": 20157,
-    "championId": "RekSai",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.8",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223047,
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 15.8 · 40% win rate."
-    ],
-    "winRate": 40,
-    "sampleSize": 5
   },
   {
     "id": 20104,
@@ -13152,46 +13072,6 @@
     ],
     "winRate": 54.5,
     "sampleSize": 22
-  },
-  {
-    "id": 20063,
-    "championId": "Yorick",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223008,
-      223111
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.9 · 75% win rate."
-    ],
-    "winRate": 75,
-    "sampleSize": 4
   },
   {
     "id": 20168,

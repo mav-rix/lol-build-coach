@@ -959,8 +959,18 @@ async function main() {
     // as variants. Cluster-per-build avoids tank/AP chimeras; the dominant one
     // stays first. chooseClusters applies the surfacing gates and the
     // refinement coverage guard (see its comment).
-    for (const c of chooseClusters(group, statik.items, minSample))
-      builds.push(toBuildPath(c.obs, statik.items, c.archetype))
+    for (const c of chooseClusters(group, statik.items, minSample)) {
+      const path = toBuildPath(c.obs, statik.items, c.archetype)
+      // A cluster whose games can't agree on two core items isn't a build.
+      // Arena Lee Sin and Rek'Sai shipped rows with an empty coreItems and no
+      // starters — the Build page rendered a "CORE BUILD PATH" heading over
+      // nothing. Emitting no row instead lets the app fall through to its
+      // honest "too few high-elo games this patch" message, which also points
+      // at the Live tracker's scoring engine. Thinner-but-real 2-item rows
+      // stay: they still carry runes, skill order, starters and boots.
+      if (path.coreItems.length < 2) continue
+      builds.push(path)
+    }
   }
   builds.sort(
     (a, b) => a.championId.localeCompare(b.championId) || (a.role ?? '').localeCompare(b.role ?? ''),
