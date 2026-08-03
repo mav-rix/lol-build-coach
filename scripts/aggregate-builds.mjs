@@ -606,11 +606,26 @@ function gateClusters(clusters, minSample) {
 // multi-variant SR groups pre-1.6); refinement introduced 4 (Amumu JUNGLE,
 // Poppy TOP, Shen TOP, Urgot TOP).
 function dropDuplicatePaths(clusters) {
-  const seen = new Set()
+  const kept = []
   return clusters.filter((c) => {
-    const sig = aggregateCore(c.obs).slice(0, 3).join(',')
-    if (seen.has(sig)) return false
-    seen.add(sig)
+    const path = aggregateCore(c.obs)
+    // Two labels are the same build only when neither path ever diverges from
+    // the other: identical, or one a prefix of the other (what a truncated
+    // cluster looks like). A cluster that picks a different item at ANY slot
+    // is a real alternative and stays.
+    //
+    // This started as a first-three-items match, back when truncation left
+    // lots of two- and three-item paths. Now that widening runs paths out to
+    // five, that test threw away real choices: ARAM Illaoi's AD and Tank both
+    // open Sundered Sky → Iceborn → Spirit Visage and then part ways (Death's
+    // Dance vs Thornmail), which is exactly the kind of decision the picker
+    // exists to offer. More viable playstyles beats a tidier list.
+    const twin = kept.some((k) => {
+      const n = Math.min(k.length, path.length)
+      return n > 0 && k.slice(0, n).join(',') === path.slice(0, n).join(',')
+    })
+    if (twin) return false
+    kept.push(path)
     return true
   })
 }
