@@ -1,6 +1,6 @@
 [
   {
-    "id": 20218,
+    "id": 20089,
     "championId": "Aatrox",
     "mode": "ARAM",
     "role": null,
@@ -85,7 +85,7 @@
     "sampleSize": 580
   },
   {
-    "id": 20219,
+    "id": 20090,
     "championId": "Aatrox",
     "mode": "ARAM",
     "role": null,
@@ -95,7 +95,7 @@
       3133
     ],
     "coreItems": [
-      3084,
+      126697,
       6610,
       6692,
       3156,
@@ -106,11 +106,6 @@
         "games": 56,
         "pickRate": 82,
         "winRate": 50
-      },
-      "3084": {
-        "games": 6,
-        "pickRate": 9,
-        "winRate": 67
       },
       "3156": {
         "games": 8,
@@ -126,6 +121,11 @@
         "games": 23,
         "pickRate": 34,
         "winRate": 43
+      },
+      "126697": {
+        "games": 6,
+        "pickRate": 9,
+        "winRate": 33
       }
     },
     "situationalItems": [
@@ -175,7 +175,7 @@
     "sampleSize": 68
   },
   {
-    "id": 20083,
+    "id": 20014,
     "championId": "Ahri",
     "mode": "ARAM",
     "role": null,
@@ -270,7 +270,7 @@
     "sampleSize": 1135
   },
   {
-    "id": 20043,
+    "id": 20272,
     "championId": "Akali",
     "mode": "ARAM",
     "role": null,
@@ -365,7 +365,7 @@
     "sampleSize": 467
   },
   {
-    "id": 20044,
+    "id": 20273,
     "championId": "Akali",
     "mode": "ARAM",
     "role": null,
@@ -451,7 +451,7 @@
     "sampleSize": 109
   },
   {
-    "id": 20045,
+    "id": 20274,
     "championId": "Akali",
     "mode": "ARAM",
     "role": null,
@@ -542,7 +542,7 @@
     "sampleSize": 37
   },
   {
-    "id": 20217,
+    "id": 20013,
     "championId": "Akshan",
     "mode": "ARAM",
     "role": null,
@@ -638,7 +638,7 @@
     "sampleSize": 530
   },
   {
-    "id": 20101,
+    "id": 20138,
     "championId": "Alistar",
     "mode": "ARAM",
     "role": null,
@@ -689,14 +689,14 @@
         "description": "Spirit Visage — popular alternative (built in 13% of games)"
       },
       {
-        "itemId": 2504,
-        "condition": "general",
-        "description": "Kaenic Rookern — popular alternative (built in 12% of games)"
-      },
-      {
         "itemId": 6665,
         "condition": "general",
         "description": "Jak'Sho, The Protean — popular alternative (built in 12% of games)"
+      },
+      {
+        "itemId": 2504,
+        "condition": "general",
+        "description": "Kaenic Rookern — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -729,7 +729,7 @@
     "sampleSize": 467
   },
   {
-    "id": 20102,
+    "id": 20139,
     "championId": "Alistar",
     "mode": "ARAM",
     "role": null,
@@ -784,14 +784,14 @@
         "description": "Cosmic Drive — popular alternative (built in 16% of games)"
       },
       {
-        "itemId": 3084,
-        "condition": "general",
-        "description": "Heartsteel — popular alternative (built in 13% of games)"
-      },
-      {
         "itemId": 3100,
         "condition": "general",
         "description": "Lich Bane — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 3084,
+        "condition": "general",
+        "description": "Heartsteel — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -824,7 +824,7 @@
     "sampleSize": 32
   },
   {
-    "id": 20000,
+    "id": 20293,
     "championId": "Ambessa",
     "mode": "ARAM",
     "role": null,
@@ -920,7 +920,7 @@
     "sampleSize": 413
   },
   {
-    "id": 20225,
+    "id": 20075,
     "championId": "Amumu",
     "mode": "ARAM",
     "role": null,
@@ -1016,7 +1016,7 @@
     "sampleSize": 417
   },
   {
-    "id": 20226,
+    "id": 20076,
     "championId": "Amumu",
     "mode": "ARAM",
     "role": null,
@@ -1096,7 +1096,7 @@
     "sampleSize": 82
   },
   {
-    "id": 20227,
+    "id": 20077,
     "championId": "Amumu",
     "mode": "ARAM",
     "role": null,
@@ -1192,7 +1192,7 @@
     "sampleSize": 63
   },
   {
-    "id": 20019,
+    "id": 20189,
     "championId": "Anivia",
     "mode": "ARAM",
     "role": null,
@@ -1283,7 +1283,7 @@
     "sampleSize": 648
   },
   {
-    "id": 20024,
+    "id": 20255,
     "championId": "Annie",
     "mode": "ARAM",
     "role": null,
@@ -1373,7 +1373,7 @@
     "sampleSize": 574
   },
   {
-    "id": 20089,
+    "id": 20130,
     "championId": "Aphelios",
     "mode": "ARAM",
     "role": null,
@@ -1458,7 +1458,7 @@
     "sampleSize": 654
   },
   {
-    "id": 20027,
+    "id": 20155,
     "championId": "Ashe",
     "mode": "ARAM",
     "role": null,
@@ -1558,7 +1558,7 @@
     "sampleSize": 1105
   },
   {
-    "id": 20028,
+    "id": 20156,
     "championId": "Ashe",
     "mode": "ARAM",
     "role": null,
@@ -1643,7 +1643,7 @@
     "sampleSize": 113
   },
   {
-    "id": 20180,
+    "id": 20010,
     "championId": "AurelionSol",
     "mode": "ARAM",
     "role": null,
@@ -1733,7 +1733,7 @@
     "sampleSize": 715
   },
   {
-    "id": 20250,
+    "id": 20060,
     "championId": "Aurora",
     "mode": "ARAM",
     "role": null,
@@ -1818,7 +1818,7 @@
     "sampleSize": 695
   },
   {
-    "id": 20166,
+    "id": 20141,
     "championId": "Azir",
     "mode": "ARAM",
     "role": null,
@@ -1914,7 +1914,7 @@
     "sampleSize": 541
   },
   {
-    "id": 20257,
+    "id": 20068,
     "championId": "Bard",
     "mode": "ARAM",
     "role": null,
@@ -1999,7 +1999,7 @@
     "sampleSize": 323
   },
   {
-    "id": 20258,
+    "id": 20069,
     "championId": "Bard",
     "mode": "ARAM",
     "role": null,
@@ -2100,7 +2100,7 @@
     "sampleSize": 142
   },
   {
-    "id": 20259,
+    "id": 20070,
     "championId": "Bard",
     "mode": "ARAM",
     "role": null,
@@ -2196,7 +2196,7 @@
     "sampleSize": 40
   },
   {
-    "id": 20271,
+    "id": 20235,
     "championId": "Belveth",
     "mode": "ARAM",
     "role": null,
@@ -2286,7 +2286,7 @@
     "sampleSize": 236
   },
   {
-    "id": 20272,
+    "id": 20236,
     "championId": "Belveth",
     "mode": "ARAM",
     "role": null,
@@ -2337,14 +2337,14 @@
         "description": "Jak'Sho, The Protean — vs tanks (33% pick vs 17% baseline)"
       },
       {
-        "itemId": 2502,
-        "condition": "enemy_has_healing",
-        "description": "Unending Despair — vs healing (25% pick vs 10% baseline)"
-      },
-      {
         "itemId": 3065,
         "condition": "enemy_heavy_ad",
         "description": "Spirit Visage — vs AD (25% pick vs 10% baseline)"
+      },
+      {
+        "itemId": 2502,
+        "condition": "enemy_has_healing",
+        "description": "Unending Despair — vs healing (25% pick vs 10% baseline)"
       },
       {
         "itemId": 6672,
@@ -2392,7 +2392,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20073,
+    "id": 20041,
     "championId": "Blitzcrank",
     "mode": "ARAM",
     "role": null,
@@ -2443,14 +2443,14 @@
         "description": "Kaenic Rookern — popular alternative (built in 30% of games)"
       },
       {
-        "itemId": 2502,
-        "condition": "general",
-        "description": "Unending Despair — popular alternative (built in 16% of games)"
-      },
-      {
         "itemId": 3110,
         "condition": "general",
         "description": "Frozen Heart — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 2502,
+        "condition": "general",
+        "description": "Unending Despair — popular alternative (built in 16% of games)"
       }
     ],
     "bootsOptions": [
@@ -2483,7 +2483,7 @@
     "sampleSize": 687
   },
   {
-    "id": 20074,
+    "id": 20042,
     "championId": "Blitzcrank",
     "mode": "ARAM",
     "role": null,
@@ -2557,7 +2557,7 @@
     "sampleSize": 244
   },
   {
-    "id": 20075,
+    "id": 20043,
     "championId": "Blitzcrank",
     "mode": "ARAM",
     "role": null,
@@ -2642,7 +2642,7 @@
     "sampleSize": 107
   },
   {
-    "id": 20254,
+    "id": 20020,
     "championId": "Brand",
     "mode": "ARAM",
     "role": null,
@@ -2737,7 +2737,7 @@
     "sampleSize": 1225
   },
   {
-    "id": 20240,
+    "id": 20011,
     "championId": "Braum",
     "mode": "ARAM",
     "role": null,
@@ -2828,7 +2828,7 @@
     "sampleSize": 464
   },
   {
-    "id": 20097,
+    "id": 20288,
     "championId": "Briar",
     "mode": "ARAM",
     "role": null,
@@ -2924,15 +2924,15 @@
     "sampleSize": 176
   },
   {
-    "id": 20098,
+    "id": 20289,
     "championId": "Briar",
     "mode": "ARAM",
     "role": null,
     "archetype": "bruiser",
     "patch": "15.18",
     "starterItems": [
-      1011,
-      1028
+      2021,
+      2022
     ],
     "coreItems": [
       3084,
@@ -3010,7 +3010,7 @@
     "sampleSize": 92
   },
   {
-    "id": 20038,
+    "id": 20019,
     "championId": "Caitlyn",
     "mode": "ARAM",
     "role": null,
@@ -3095,7 +3095,7 @@
     "sampleSize": 1270
   },
   {
-    "id": 20011,
+    "id": 20006,
     "championId": "Camille",
     "mode": "ARAM",
     "role": null,
@@ -3176,12 +3176,12 @@
     "sampleSize": 226
   },
   {
-    "id": 20012,
+    "id": 20007,
     "championId": "Camille",
     "mode": "ARAM",
     "role": null,
     "archetype": "bruiser",
-    "patch": "14.24",
+    "patch": "14.22",
     "starterItems": [
       1036,
       3057
@@ -3266,13 +3266,13 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 33 challenger/grandmaster/master games on patch 14.24 · 61% win rate."
+      "Aggregated from 33 challenger/grandmaster/master games on patch 14.22 · 61% win rate."
     ],
     "winRate": 60.6,
     "sampleSize": 33
   },
   {
-    "id": 20076,
+    "id": 20224,
     "championId": "Cassiopeia",
     "mode": "ARAM",
     "role": null,
@@ -3363,7 +3363,7 @@
     "sampleSize": 363
   },
   {
-    "id": 20065,
+    "id": 20078,
     "championId": "Chogath",
     "mode": "ARAM",
     "role": null,
@@ -3454,7 +3454,7 @@
     "sampleSize": 716
   },
   {
-    "id": 20066,
+    "id": 20079,
     "championId": "Chogath",
     "mode": "ARAM",
     "role": null,
@@ -3559,7 +3559,7 @@
     "sampleSize": 79
   },
   {
-    "id": 20067,
+    "id": 20080,
     "championId": "Chogath",
     "mode": "ARAM",
     "role": null,
@@ -3619,14 +3619,14 @@
         "description": "Horizon Focus — popular alternative (built in 14% of games)"
       },
       {
-        "itemId": 6657,
-        "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 11% of games)"
-      },
-      {
         "itemId": 6653,
         "condition": "general",
         "description": "Liandry's Torment — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 6657,
+        "condition": "general",
+        "description": "Rod of Ages — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -3659,7 +3659,7 @@
     "sampleSize": 73
   },
   {
-    "id": 20200,
+    "id": 20244,
     "championId": "Corki",
     "mode": "ARAM",
     "role": null,
@@ -3755,7 +3755,7 @@
     "sampleSize": 622
   },
   {
-    "id": 20103,
+    "id": 20177,
     "championId": "Darius",
     "mode": "ARAM",
     "role": null,
@@ -3845,7 +3845,7 @@
     "sampleSize": 326
   },
   {
-    "id": 20104,
+    "id": 20178,
     "championId": "Darius",
     "mode": "ARAM",
     "role": null,
@@ -3940,12 +3940,12 @@
     "sampleSize": 266
   },
   {
-    "id": 20105,
+    "id": 20179,
     "championId": "Darius",
     "mode": "ARAM",
     "role": null,
     "archetype": "tank",
-    "patch": "15.22",
+    "patch": "15.14",
     "starterItems": [
       3044
     ],
@@ -4039,23 +4039,23 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 34 challenger/grandmaster/master games on patch 15.22 · 71% win rate."
+      "Aggregated from 34 challenger/grandmaster/master games on patch 15.14 · 71% win rate."
     ],
     "winRate": 70.6,
     "sampleSize": 34
   },
   {
-    "id": 20268,
+    "id": 20061,
     "championId": "Diana",
     "mode": "ARAM",
     "role": null,
     "archetype": "ap",
-    "patch": "15.17",
+    "patch": "15.20",
     "starterItems": [
       3145
     ],
     "coreItems": [
-      3152,
+      6655,
       6653,
       4645,
       3157,
@@ -4066,11 +4066,6 @@
         "games": 108,
         "pickRate": 37,
         "winRate": 50
-      },
-      "3152": {
-        "games": 113,
-        "pickRate": 39,
-        "winRate": 46
       },
       "3157": {
         "games": 159,
@@ -4086,13 +4081,18 @@
         "games": 41,
         "pickRate": 14,
         "winRate": 63
+      },
+      "6655": {
+        "games": 36,
+        "pickRate": 12,
+        "winRate": 42
       }
     },
     "situationalItems": [
       {
-        "itemId": 6655,
-        "condition": "enemy_heavy_cc",
-        "description": "Luden's Echo — vs CC (25% pick vs 12% baseline)"
+        "itemId": 3152,
+        "condition": "general",
+        "description": "Hextech Rocketbelt — popular alternative (built in 39% of games)"
       },
       {
         "itemId": 4633,
@@ -4129,13 +4129,13 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 289 challenger/grandmaster/master games on patch 15.17 · 45% win rate."
+      "Aggregated from 289 challenger/grandmaster/master games on patch 15.20 · 45% win rate."
     ],
     "winRate": 45.3,
     "sampleSize": 289
   },
   {
-    "id": 20269,
+    "id": 20062,
     "championId": "Diana",
     "mode": "ARAM",
     "role": null,
@@ -4150,7 +4150,7 @@
       2510,
       4633,
       2502,
-      4645
+      3115
     ],
     "coreItemStats": {
       "2502": {
@@ -4168,15 +4168,15 @@
         "pickRate": 70,
         "winRate": 57
       },
+      "3115": {
+        "games": 9,
+        "pickRate": 11,
+        "winRate": 56
+      },
       "4633": {
         "games": 59,
         "pickRate": 74,
         "winRate": 58
-      },
-      "4645": {
-        "games": 7,
-        "pickRate": 9,
-        "winRate": 43
       }
     },
     "situationalItems": [
@@ -4189,11 +4189,6 @@
         "itemId": 6653,
         "condition": "general",
         "description": "Liandry's Torment — popular alternative (built in 28% of games)"
-      },
-      {
-        "itemId": 3115,
-        "condition": "general",
-        "description": "Nashor's Tooth — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -4226,7 +4221,7 @@
     "sampleSize": 80
   },
   {
-    "id": 20270,
+    "id": 20063,
     "championId": "Diana",
     "mode": "ARAM",
     "role": null,
@@ -4240,19 +4235,14 @@
       3084,
       2502,
       6664,
-      3075,
-      3065
+      3115,
+      3075
     ],
     "coreItemStats": {
       "2502": {
         "games": 45,
         "pickRate": 74,
         "winRate": 53
-      },
-      "3065": {
-        "games": 7,
-        "pickRate": 11,
-        "winRate": 57
       },
       "3075": {
         "games": 18,
@@ -4263,6 +4253,11 @@
         "games": 56,
         "pickRate": 92,
         "winRate": 54
+      },
+      "3115": {
+        "games": 5,
+        "pickRate": 8,
+        "winRate": 20
       },
       "6664": {
         "games": 20,
@@ -4297,9 +4292,9 @@
         "description": "Randuin's Omen — popular alternative (built in 13% of games)"
       },
       {
-        "itemId": 3110,
+        "itemId": 3119,
         "condition": "general",
-        "description": "Frozen Heart — popular alternative (built in 11% of games)"
+        "description": "Winter's Approach — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -4332,7 +4327,7 @@
     "sampleSize": 61
   },
   {
-    "id": 20070,
+    "id": 20052,
     "championId": "Draven",
     "mode": "ARAM",
     "role": null,
@@ -4422,7 +4417,7 @@
     "sampleSize": 674
   },
   {
-    "id": 20085,
+    "id": 20233,
     "championId": "DrMundo",
     "mode": "ARAM",
     "role": null,
@@ -4503,7 +4498,7 @@
     "sampleSize": 449
   },
   {
-    "id": 20086,
+    "id": 20234,
     "championId": "DrMundo",
     "mode": "ARAM",
     "role": null,
@@ -4578,7 +4573,7 @@
     "sampleSize": 62
   },
   {
-    "id": 20087,
+    "id": 20145,
     "championId": "Ekko",
     "mode": "ARAM",
     "role": null,
@@ -4668,7 +4663,7 @@
     "sampleSize": 555
   },
   {
-    "id": 20088,
+    "id": 20146,
     "championId": "Ekko",
     "mode": "ARAM",
     "role": null,
@@ -4754,7 +4749,7 @@
     "sampleSize": 25
   },
   {
-    "id": 20253,
+    "id": 20086,
     "championId": "Elise",
     "mode": "ARAM",
     "role": null,
@@ -4844,7 +4839,7 @@
     "sampleSize": 275
   },
   {
-    "id": 20275,
+    "id": 20082,
     "championId": "Evelynn",
     "mode": "ARAM",
     "role": null,
@@ -4929,7 +4924,7 @@
     "sampleSize": 189
   },
   {
-    "id": 20243,
+    "id": 20003,
     "championId": "Ezreal",
     "mode": "ARAM",
     "role": null,
@@ -5015,12 +5010,12 @@
     "sampleSize": 1333
   },
   {
-    "id": 20244,
+    "id": 20004,
     "championId": "Ezreal",
     "mode": "ARAM",
     "role": null,
     "archetype": "ap",
-    "patch": "16.9",
+    "patch": "15.22",
     "starterItems": [
       3057,
       3070
@@ -5105,13 +5100,13 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 45 challenger/grandmaster/master games on patch 16.9 · 33% win rate."
+      "Aggregated from 45 challenger/grandmaster/master games on patch 15.22 · 33% win rate."
     ],
     "winRate": 33.3,
     "sampleSize": 45
   },
   {
-    "id": 20245,
+    "id": 20005,
     "championId": "Ezreal",
     "mode": "ARAM",
     "role": null,
@@ -5192,7 +5187,7 @@
     "sampleSize": 34
   },
   {
-    "id": 20216,
+    "id": 20064,
     "championId": "Fiddlesticks",
     "mode": "ARAM",
     "role": null,
@@ -5282,7 +5277,7 @@
     "sampleSize": 567
   },
   {
-    "id": 20283,
+    "id": 20290,
     "championId": "Fiora",
     "mode": "ARAM",
     "role": null,
@@ -5296,14 +5291,9 @@
       3078,
       6610,
       6333,
-      3065
+      3156
     ],
     "coreItemStats": {
-      "3065": {
-        "games": 15,
-        "pickRate": 7,
-        "winRate": 47
-      },
       "3074": {
         "games": 135,
         "pickRate": 67,
@@ -5313,6 +5303,11 @@
         "games": 131,
         "pickRate": 65,
         "winRate": 50
+      },
+      "3156": {
+        "games": 20,
+        "pickRate": 10,
+        "winRate": 65
       },
       "6333": {
         "games": 111,
@@ -5367,7 +5362,7 @@
     "sampleSize": 203
   },
   {
-    "id": 20035,
+    "id": 20116,
     "championId": "Fizz",
     "mode": "ARAM",
     "role": null,
@@ -5447,7 +5442,7 @@
     "sampleSize": 438
   },
   {
-    "id": 20036,
+    "id": 20117,
     "championId": "Fizz",
     "mode": "ARAM",
     "role": null,
@@ -5462,13 +5457,18 @@
       2502,
       6664,
       3083,
-      6665
+      3075
     ],
     "coreItemStats": {
       "2502": {
         "games": 66,
         "pickRate": 71,
         "winRate": 48
+      },
+      "3075": {
+        "games": 13,
+        "pickRate": 14,
+        "winRate": 38
       },
       "3083": {
         "games": 27,
@@ -5484,11 +5484,6 @@
         "games": 24,
         "pickRate": 26,
         "winRate": 54
-      },
-      "6665": {
-        "games": 5,
-        "pickRate": 5,
-        "winRate": 20
       }
     },
     "situationalItems": [
@@ -5496,11 +5491,6 @@
         "itemId": 6662,
         "condition": "general",
         "description": "Iceborn Gauntlet — popular alternative (built in 31% of games)"
-      },
-      {
-        "itemId": 3075,
-        "condition": "general",
-        "description": "Thornmail — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 3119,
@@ -5538,12 +5528,12 @@
     "sampleSize": 93
   },
   {
-    "id": 20037,
+    "id": 20118,
     "championId": "Fizz",
     "mode": "ARAM",
     "role": null,
     "archetype": "hybrid",
-    "patch": "15.19",
+    "patch": "15.1",
     "starterItems": [
       1011,
       1028
@@ -5594,14 +5584,14 @@
         "description": "Lich Bane — vs AD (54% pick vs 39% baseline)"
       },
       {
-        "itemId": 3089,
-        "condition": "general",
-        "description": "Rabadon's Deathcap — popular alternative (built in 18% of games)"
-      },
-      {
         "itemId": 6655,
         "condition": "general",
         "description": "Luden's Echo — popular alternative (built in 18% of games)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "general",
+        "description": "Rabadon's Deathcap — popular alternative (built in 18% of games)"
       },
       {
         "itemId": 3083,
@@ -5633,13 +5623,13 @@
     "skillMaxOrder": "E > W > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 38 challenger/grandmaster/master games on patch 15.19 · 42% win rate."
+      "Aggregated from 38 challenger/grandmaster/master games on patch 15.1 · 42% win rate."
     ],
     "winRate": 42.1,
     "sampleSize": 38
   },
   {
-    "id": 20053,
+    "id": 20172,
     "championId": "Galio",
     "mode": "ARAM",
     "role": null,
@@ -5735,7 +5725,7 @@
     "sampleSize": 458
   },
   {
-    "id": 20054,
+    "id": 20173,
     "championId": "Galio",
     "mode": "ARAM",
     "role": null,
@@ -5781,14 +5771,14 @@
     },
     "situationalItems": [
       {
-        "itemId": 6657,
-        "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 21% of games)"
-      },
-      {
         "itemId": 2502,
         "condition": "general",
         "description": "Unending Despair — popular alternative (built in 21% of games)"
+      },
+      {
+        "itemId": 6657,
+        "condition": "general",
+        "description": "Rod of Ages — popular alternative (built in 21% of games)"
       },
       {
         "itemId": 3084,
@@ -5826,7 +5816,7 @@
     "sampleSize": 71
   },
   {
-    "id": 20055,
+    "id": 20174,
     "championId": "Galio",
     "mode": "ARAM",
     "role": null,
@@ -5876,14 +5866,14 @@
         "description": "Luden's Echo — vs AD (33% pick vs 21% baseline)"
       },
       {
-        "itemId": 4645,
-        "condition": "general",
-        "description": "Shadowflame — popular alternative (built in 38% of games)"
-      },
-      {
         "itemId": 3089,
         "condition": "general",
         "description": "Rabadon's Deathcap — popular alternative (built in 38% of games)"
+      },
+      {
+        "itemId": 4645,
+        "condition": "general",
+        "description": "Shadowflame — popular alternative (built in 38% of games)"
       },
       {
         "itemId": 3152,
@@ -5926,7 +5916,7 @@
     "sampleSize": 58
   },
   {
-    "id": 20125,
+    "id": 20253,
     "championId": "Gangplank",
     "mode": "ARAM",
     "role": null,
@@ -6022,7 +6012,7 @@
     "sampleSize": 684
   },
   {
-    "id": 20126,
+    "id": 20254,
     "championId": "Gangplank",
     "mode": "ARAM",
     "role": null,
@@ -6122,12 +6112,12 @@
     "sampleSize": 47
   },
   {
-    "id": 20201,
+    "id": 20190,
     "championId": "Garen",
     "mode": "ARAM",
     "role": null,
     "archetype": "ad",
-    "patch": "15.20",
+    "patch": "15.24",
     "starterItems": [
       3044
     ],
@@ -6201,13 +6191,13 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 285 challenger/grandmaster/master games on patch 15.20 · 58% win rate."
+      "Aggregated from 285 challenger/grandmaster/master games on patch 15.24 · 58% win rate."
     ],
     "winRate": 57.9,
     "sampleSize": 285
   },
   {
-    "id": 20202,
+    "id": 20191,
     "championId": "Garen",
     "mode": "ARAM",
     "role": null,
@@ -6302,7 +6292,7 @@
     "sampleSize": 174
   },
   {
-    "id": 20203,
+    "id": 20192,
     "championId": "Garen",
     "mode": "ARAM",
     "role": null,
@@ -6315,8 +6305,8 @@
     "coreItems": [
       3084,
       3075,
+      4401,
       3065,
-      3143,
       6665
     ],
     "coreItemStats": {
@@ -6335,10 +6325,10 @@
         "pickRate": 86,
         "winRate": 44
       },
-      "3143": {
-        "games": 9,
-        "pickRate": 10,
-        "winRate": 22
+      "4401": {
+        "games": 30,
+        "pickRate": 33,
+        "winRate": 53
       },
       "6665": {
         "games": 5,
@@ -6351,11 +6341,6 @@
         "itemId": 2502,
         "condition": "enemy_heavy_cc",
         "description": "Unending Despair — vs CC (38% pick vs 24% baseline)"
-      },
-      {
-        "itemId": 4401,
-        "condition": "general",
-        "description": "Force of Nature — popular alternative (built in 33% of games)"
       },
       {
         "itemId": 6631,
@@ -6408,7 +6393,7 @@
     "sampleSize": 92
   },
   {
-    "id": 20136,
+    "id": 20111,
     "championId": "Gnar",
     "mode": "ARAM",
     "role": null,
@@ -6503,7 +6488,7 @@
     "sampleSize": 260
   },
   {
-    "id": 20137,
+    "id": 20112,
     "championId": "Gnar",
     "mode": "ARAM",
     "role": null,
@@ -6604,7 +6589,7 @@
     "sampleSize": 153
   },
   {
-    "id": 20138,
+    "id": 20113,
     "championId": "Gnar",
     "mode": "ARAM",
     "role": null,
@@ -6705,7 +6690,7 @@
     "sampleSize": 53
   },
   {
-    "id": 20110,
+    "id": 20044,
     "championId": "Gragas",
     "mode": "ARAM",
     "role": null,
@@ -6790,7 +6775,7 @@
     "sampleSize": 428
   },
   {
-    "id": 20111,
+    "id": 20045,
     "championId": "Gragas",
     "mode": "ARAM",
     "role": null,
@@ -6880,7 +6865,7 @@
     "sampleSize": 128
   },
   {
-    "id": 20112,
+    "id": 20046,
     "championId": "Gragas",
     "mode": "ARAM",
     "role": null,
@@ -6895,7 +6880,7 @@
       3119,
       3065,
       2502,
-      6662
+      6665
     ],
     "coreItemStats": {
       "2502": {
@@ -6918,10 +6903,10 @@
         "pickRate": 21,
         "winRate": 57
       },
-      "6662": {
+      "6665": {
         "games": 8,
         "pickRate": 8,
-        "winRate": 38
+        "winRate": 50
       }
     },
     "situationalItems": [
@@ -6966,7 +6951,7 @@
     "sampleSize": 98
   },
   {
-    "id": 20082,
+    "id": 20119,
     "championId": "Graves",
     "mode": "ARAM",
     "role": null,
@@ -7056,7 +7041,7 @@
     "sampleSize": 737
   },
   {
-    "id": 20238,
+    "id": 20270,
     "championId": "Gwen",
     "mode": "ARAM",
     "role": null,
@@ -7106,14 +7091,14 @@
         "description": "Rabadon's Deathcap — popular alternative (built in 23% of games)"
       },
       {
-        "itemId": 2510,
-        "condition": "general",
-        "description": "Dusk and Dawn — popular alternative (built in 20% of games)"
-      },
-      {
         "itemId": 4629,
         "condition": "general",
         "description": "Cosmic Drive — popular alternative (built in 20% of games)"
+      },
+      {
+        "itemId": 2510,
+        "condition": "general",
+        "description": "Dusk and Dawn — popular alternative (built in 20% of games)"
       },
       {
         "itemId": 3157,
@@ -7151,7 +7136,7 @@
     "sampleSize": 249
   },
   {
-    "id": 20239,
+    "id": 20271,
     "championId": "Gwen",
     "mode": "ARAM",
     "role": null,
@@ -7236,7 +7221,7 @@
     "sampleSize": 50
   },
   {
-    "id": 20284,
+    "id": 20291,
     "championId": "Hecarim",
     "mode": "ARAM",
     "role": null,
@@ -7323,7 +7308,7 @@
     "sampleSize": 170
   },
   {
-    "id": 20285,
+    "id": 20292,
     "championId": "Hecarim",
     "mode": "ARAM",
     "role": null,
@@ -7338,18 +7323,13 @@
       3084,
       3004,
       3065,
-      3053
+      3742
     ],
     "coreItemStats": {
       "3004": {
         "games": 14,
         "pickRate": 41,
         "winRate": 36
-      },
-      "3053": {
-        "games": 4,
-        "pickRate": 12,
-        "winRate": 50
       },
       "3065": {
         "games": 24,
@@ -7360,6 +7340,11 @@
         "games": 5,
         "pickRate": 15,
         "winRate": 80
+      },
+      "3742": {
+        "games": 4,
+        "pickRate": 12,
+        "winRate": 25
       },
       "6610": {
         "games": 17,
@@ -7379,14 +7364,14 @@
         "description": "Death's Dance — popular alternative (built in 32% of games)"
       },
       {
-        "itemId": 2502,
-        "condition": "general",
-        "description": "Unending Despair — popular alternative (built in 21% of games)"
-      },
-      {
         "itemId": 3161,
         "condition": "general",
         "description": "Spear of Shojin — popular alternative (built in 21% of games)"
+      },
+      {
+        "itemId": 2502,
+        "condition": "general",
+        "description": "Unending Despair — popular alternative (built in 21% of games)"
       },
       {
         "itemId": 4401,
@@ -7394,9 +7379,9 @@
         "description": "Force of Nature — popular alternative (built in 12% of games)"
       },
       {
-        "itemId": 3742,
+        "itemId": 3053,
         "condition": "general",
-        "description": "Dead Man's Plate — popular alternative (built in 12% of games)"
+        "description": "Sterak's Gage — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -7429,7 +7414,7 @@
     "sampleSize": 34
   },
   {
-    "id": 20215,
+    "id": 20245,
     "championId": "Heimerdinger",
     "mode": "ARAM",
     "role": null,
@@ -7524,7 +7509,7 @@
     "sampleSize": 622
   },
   {
-    "id": 20071,
+    "id": 20115,
     "championId": "Hwei",
     "mode": "ARAM",
     "role": null,
@@ -7614,92 +7599,11 @@
     "sampleSize": 769
   },
   {
-    "id": 20099,
+    "id": 20210,
     "championId": "Illaoi",
     "mode": "ARAM",
     "role": null,
-    "archetype": "ad",
-    "patch": "15.19",
-    "starterItems": [
-      2021,
-      2022
-    ],
-    "coreItems": [
-      6610,
-      6662,
-      3065,
-      6333,
-      3053
-    ],
-    "coreItemStats": {
-      "3053": {
-        "games": 99,
-        "pickRate": 39,
-        "winRate": 54
-      },
-      "3065": {
-        "games": 108,
-        "pickRate": 42,
-        "winRate": 46
-      },
-      "6333": {
-        "games": 94,
-        "pickRate": 37,
-        "winRate": 45
-      },
-      "6610": {
-        "games": 231,
-        "pickRate": 90,
-        "winRate": 48
-      },
-      "6662": {
-        "games": 85,
-        "pickRate": 33,
-        "winRate": 42
-      }
-    },
-    "situationalItems": [
-      {
-        "itemId": 3071,
-        "condition": "enemy_has_tanks",
-        "description": "Black Cleaver — vs tanks (42% pick vs 23% baseline)"
-      }
-    ],
-    "bootsOptions": [
-      3111,
-      3047
-    ],
-    "primaryPathId": 8000,
-    "keystoneId": 8010,
-    "primaryRuneIds": [
-      8009,
-      9105,
-      8299
-    ],
-    "secondaryPathId": 8400,
-    "secondaryRuneIds": [
-      8429,
-      8453
-    ],
-    "statRuneIds": [
-      5008,
-      5008,
-      5001
-    ],
-    "skillMaxOrder": "E > Q > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 257 challenger/grandmaster/master games on patch 15.19 · 46% win rate."
-    ],
-    "winRate": 46.3,
-    "sampleSize": 257
-  },
-  {
-    "id": 20100,
-    "championId": "Illaoi",
-    "mode": "ARAM",
-    "role": null,
-    "archetype": "tank",
+    "archetype": "bruiser",
     "patch": "15.19",
     "starterItems": [
       2021,
@@ -7714,41 +7618,46 @@
     ],
     "coreItemStats": {
       "3053": {
-        "games": 13,
-        "pickRate": 9,
-        "winRate": 54
+        "games": 75,
+        "pickRate": 29,
+        "winRate": 56
       },
       "3065": {
-        "games": 119,
-        "pickRate": 78,
-        "winRate": 46
+        "games": 158,
+        "pickRate": 61,
+        "winRate": 47
       },
       "3075": {
-        "games": 39,
-        "pickRate": 26,
-        "winRate": 49
+        "games": 34,
+        "pickRate": 13,
+        "winRate": 38
       },
       "6610": {
-        "games": 89,
-        "pickRate": 59,
-        "winRate": 52
+        "games": 223,
+        "pickRate": 86,
+        "winRate": 50
       },
       "6662": {
-        "games": 98,
-        "pickRate": 64,
-        "winRate": 48
+        "games": 133,
+        "pickRate": 52,
+        "winRate": 47
       }
     },
     "situationalItems": [
       {
         "itemId": 3084,
         "condition": "enemy_heavy_cc",
-        "description": "Heartsteel — vs CC (57% pick vs 33% baseline)"
+        "description": "Heartsteel — vs CC (42% pick vs 17% baseline)"
       },
       {
-        "itemId": 3119,
+        "itemId": 3071,
+        "condition": "enemy_has_tanks",
+        "description": "Black Cleaver — vs tanks (32% pick vs 17% baseline)"
+      },
+      {
+        "itemId": 6333,
         "condition": "general",
-        "description": "Winter's Approach — popular alternative (built in 11% of games)"
+        "description": "Death's Dance — popular alternative (built in 26% of games)"
       }
     ],
     "bootsOptions": [
@@ -7775,13 +7684,184 @@
     "skillMaxOrder": "E > Q > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 152 challenger/grandmaster/master games on patch 15.19 · 48% win rate."
+      "Aggregated from 258 challenger/grandmaster/master games on patch 15.19 · 49% win rate."
     ],
-    "winRate": 48,
-    "sampleSize": 152
+    "winRate": 49.2,
+    "sampleSize": 258
   },
   {
-    "id": 20060,
+    "id": 20211,
+    "championId": "Illaoi",
+    "mode": "ARAM",
+    "role": null,
+    "archetype": "ad",
+    "patch": "15.24",
+    "starterItems": [
+      2021,
+      2022
+    ],
+    "coreItems": [
+      6610,
+      3065,
+      3071,
+      6333,
+      3053
+    ],
+    "coreItemStats": {
+      "3053": {
+        "games": 36,
+        "pickRate": 46,
+        "winRate": 47
+      },
+      "3065": {
+        "games": 17,
+        "pickRate": 22,
+        "winRate": 47
+      },
+      "3071": {
+        "games": 22,
+        "pickRate": 28,
+        "winRate": 50
+      },
+      "6333": {
+        "games": 32,
+        "pickRate": 41,
+        "winRate": 56
+      },
+      "6610": {
+        "games": 69,
+        "pickRate": 87,
+        "winRate": 42
+      }
+    },
+    "situationalItems": [],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      8009,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8453
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 79 challenger/grandmaster/master games on patch 15.24 · 41% win rate."
+    ],
+    "winRate": 40.5,
+    "sampleSize": 79
+  },
+  {
+    "id": 20212,
+    "championId": "Illaoi",
+    "mode": "ARAM",
+    "role": null,
+    "archetype": "tank",
+    "patch": "15.19",
+    "starterItems": [
+      2051,
+      3070
+    ],
+    "coreItems": [
+      6610,
+      6662,
+      3065,
+      3083,
+      3075
+    ],
+    "coreItemStats": {
+      "3065": {
+        "games": 52,
+        "pickRate": 72,
+        "winRate": 42
+      },
+      "3075": {
+        "games": 26,
+        "pickRate": 36,
+        "winRate": 46
+      },
+      "3083": {
+        "games": 8,
+        "pickRate": 11,
+        "winRate": 63
+      },
+      "6610": {
+        "games": 28,
+        "pickRate": 39,
+        "winRate": 54
+      },
+      "6662": {
+        "games": 47,
+        "pickRate": 65,
+        "winRate": 45
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 3084,
+        "condition": "enemy_has_tanks",
+        "description": "Heartsteel — vs tanks (70% pick vs 38% baseline)"
+      },
+      {
+        "itemId": 2504,
+        "condition": "enemy_has_tanks",
+        "description": "Kaenic Rookern — vs tanks (30% pick vs 8% baseline)"
+      },
+      {
+        "itemId": 3143,
+        "condition": "enemy_has_tanks",
+        "description": "Randuin's Omen — vs tanks (30% pick vs 10% baseline)"
+      },
+      {
+        "itemId": 3119,
+        "condition": "general",
+        "description": "Winter's Approach — popular alternative (built in 19% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8400,
+    "keystoneId": 8437,
+    "primaryRuneIds": [
+      8446,
+      8429,
+      8451
+    ],
+    "secondaryPathId": 8000,
+    "secondaryRuneIds": [
+      9105,
+      9111
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "E > Q > W",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 72 challenger/grandmaster/master games on patch 15.19 · 46% win rate."
+    ],
+    "winRate": 45.8,
+    "sampleSize": 72
+  },
+  {
+    "id": 20160,
     "championId": "Irelia",
     "mode": "ARAM",
     "role": null,
@@ -7866,7 +7946,7 @@
     "sampleSize": 369
   },
   {
-    "id": 20061,
+    "id": 20161,
     "championId": "Irelia",
     "mode": "ARAM",
     "role": null,
@@ -7961,7 +8041,7 @@
     "sampleSize": 42
   },
   {
-    "id": 20092,
+    "id": 20262,
     "championId": "Ivern",
     "mode": "ARAM",
     "role": null,
@@ -8012,14 +8092,14 @@
         "description": "Malignance — popular alternative (built in 25% of games)"
       },
       {
-        "itemId": 3116,
-        "condition": "general",
-        "description": "Rylai's Crystal Scepter — popular alternative (built in 16% of games)"
-      },
-      {
         "itemId": 3003,
         "condition": "general",
         "description": "Archangel's Staff — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 3116,
+        "condition": "general",
+        "description": "Rylai's Crystal Scepter — popular alternative (built in 16% of games)"
       },
       {
         "itemId": 4005,
@@ -8062,7 +8142,7 @@
     "sampleSize": 320
   },
   {
-    "id": 20156,
+    "id": 20268,
     "championId": "Janna",
     "mode": "ARAM",
     "role": null,
@@ -8158,7 +8238,7 @@
     "sampleSize": 596
   },
   {
-    "id": 20157,
+    "id": 20269,
     "championId": "Janna",
     "mode": "ARAM",
     "role": null,
@@ -8244,7 +8324,7 @@
     "sampleSize": 29
   },
   {
-    "id": 20228,
+    "id": 20124,
     "championId": "JarvanIV",
     "mode": "ARAM",
     "role": null,
@@ -8345,7 +8425,7 @@
     "sampleSize": 523
   },
   {
-    "id": 20229,
+    "id": 20125,
     "championId": "JarvanIV",
     "mode": "ARAM",
     "role": null,
@@ -8416,9 +8496,9 @@
         "description": "Eclipse — popular alternative (built in 33% of games)"
       },
       {
-        "itemId": 6333,
+        "itemId": 3075,
         "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 24% of games)"
+        "description": "Thornmail — popular alternative (built in 24% of games)"
       }
     ],
     "bootsOptions": [
@@ -8451,7 +8531,7 @@
     "sampleSize": 117
   },
   {
-    "id": 20230,
+    "id": 20126,
     "championId": "JarvanIV",
     "mode": "ARAM",
     "role": null,
@@ -8542,7 +8622,7 @@
     "sampleSize": 34
   },
   {
-    "id": 20160,
+    "id": 20180,
     "championId": "Jax",
     "mode": "ARAM",
     "role": null,
@@ -8627,7 +8707,7 @@
     "sampleSize": 398
   },
   {
-    "id": 20161,
+    "id": 20181,
     "championId": "Jax",
     "mode": "ARAM",
     "role": null,
@@ -8642,13 +8722,18 @@
       3078,
       6610,
       3065,
-      3143
+      3075
     ],
     "coreItemStats": {
       "3065": {
         "games": 8,
         "pickRate": 13,
         "winRate": 50
+      },
+      "3075": {
+        "games": 5,
+        "pickRate": 8,
+        "winRate": 80
       },
       "3078": {
         "games": 35,
@@ -8659,11 +8744,6 @@
         "games": 28,
         "pickRate": 44,
         "winRate": 64
-      },
-      "3143": {
-        "games": 4,
-        "pickRate": 6,
-        "winRate": 50
       },
       "6610": {
         "games": 37,
@@ -8733,7 +8813,7 @@
     "sampleSize": 64
   },
   {
-    "id": 20162,
+    "id": 20182,
     "championId": "Jax",
     "mode": "ARAM",
     "role": null,
@@ -8829,7 +8909,7 @@
     "sampleSize": 53
   },
   {
-    "id": 20242,
+    "id": 20053,
     "championId": "Jayce",
     "mode": "ARAM",
     "role": null,
@@ -8920,7 +9000,7 @@
     "sampleSize": 894
   },
   {
-    "id": 20006,
+    "id": 20151,
     "championId": "Jhin",
     "mode": "ARAM",
     "role": null,
@@ -9015,7 +9095,7 @@
     "sampleSize": 1316
   },
   {
-    "id": 20062,
+    "id": 20207,
     "championId": "Jinx",
     "mode": "ARAM",
     "role": null,
@@ -9105,7 +9185,7 @@
     "sampleSize": 1218
   },
   {
-    "id": 20090,
+    "id": 20015,
     "championId": "Kaisa",
     "mode": "ARAM",
     "role": null,
@@ -9195,7 +9275,7 @@
     "sampleSize": 736
   },
   {
-    "id": 20091,
+    "id": 20016,
     "championId": "Kaisa",
     "mode": "ARAM",
     "role": null,
@@ -9285,7 +9365,7 @@
     "sampleSize": 467
   },
   {
-    "id": 20139,
+    "id": 20012,
     "championId": "Kalista",
     "mode": "ARAM",
     "role": null,
@@ -9375,7 +9455,7 @@
     "sampleSize": 499
   },
   {
-    "id": 20140,
+    "id": 20039,
     "championId": "Karma",
     "mode": "ARAM",
     "role": null,
@@ -9460,7 +9540,7 @@
     "sampleSize": 890
   },
   {
-    "id": 20141,
+    "id": 20040,
     "championId": "Karma",
     "mode": "ARAM",
     "role": null,
@@ -9520,14 +9600,14 @@
         "description": "Moonstone Renewer — popular alternative (built in 26% of games)"
       },
       {
-        "itemId": 6657,
-        "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 12% of games)"
-      },
-      {
         "itemId": 3504,
         "condition": "general",
         "description": "Ardent Censer — popular alternative (built in 12% of games)"
+      },
+      {
+        "itemId": 6657,
+        "condition": "general",
+        "description": "Rod of Ages — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -9560,7 +9640,7 @@
     "sampleSize": 34
   },
   {
-    "id": 20025,
+    "id": 20104,
     "championId": "Karthus",
     "mode": "ARAM",
     "role": null,
@@ -9645,7 +9725,7 @@
     "sampleSize": 614
   },
   {
-    "id": 20151,
+    "id": 20149,
     "championId": "Kassadin",
     "mode": "ARAM",
     "role": null,
@@ -9726,7 +9806,7 @@
     "sampleSize": 229
   },
   {
-    "id": 20127,
+    "id": 20047,
     "championId": "Katarina",
     "mode": "ARAM",
     "role": null,
@@ -9811,7 +9891,7 @@
     "sampleSize": 349
   },
   {
-    "id": 20128,
+    "id": 20048,
     "championId": "Katarina",
     "mode": "ARAM",
     "role": null,
@@ -9897,12 +9977,12 @@
     "sampleSize": 164
   },
   {
-    "id": 20129,
+    "id": 20049,
     "championId": "Katarina",
     "mode": "ARAM",
     "role": null,
     "archetype": "bruiser",
-    "patch": "15.19",
+    "patch": "14.22",
     "starterItems": [
       1011,
       1028
@@ -9972,13 +10052,13 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 110 challenger/grandmaster/master games on patch 15.19 · 41% win rate."
+      "Aggregated from 110 challenger/grandmaster/master games on patch 14.22 · 41% win rate."
     ],
     "winRate": 40.9,
     "sampleSize": 110
   },
   {
-    "id": 20068,
+    "id": 20093,
     "championId": "Kayle",
     "mode": "ARAM",
     "role": null,
@@ -10063,7 +10143,7 @@
     "sampleSize": 498
   },
   {
-    "id": 20069,
+    "id": 20094,
     "championId": "Kayle",
     "mode": "ARAM",
     "role": null,
@@ -10163,7 +10243,7 @@
     "sampleSize": 196
   },
   {
-    "id": 20007,
+    "id": 20097,
     "championId": "Kayn",
     "mode": "ARAM",
     "role": null,
@@ -10269,7 +10349,7 @@
     "sampleSize": 342
   },
   {
-    "id": 20008,
+    "id": 20098,
     "championId": "Kayn",
     "mode": "ARAM",
     "role": null,
@@ -10370,7 +10450,7 @@
     "sampleSize": 32
   },
   {
-    "id": 20279,
+    "id": 20164,
     "championId": "Kennen",
     "mode": "ARAM",
     "role": null,
@@ -10455,7 +10535,7 @@
     "sampleSize": 527
   },
   {
-    "id": 20234,
+    "id": 20083,
     "championId": "Khazix",
     "mode": "ARAM",
     "role": null,
@@ -10541,7 +10621,7 @@
     "sampleSize": 534
   },
   {
-    "id": 20080,
+    "id": 20027,
     "championId": "Kindred",
     "mode": "ARAM",
     "role": null,
@@ -10646,7 +10726,7 @@
     "sampleSize": 537
   },
   {
-    "id": 20198,
+    "id": 20237,
     "championId": "Kled",
     "mode": "ARAM",
     "role": null,
@@ -10751,7 +10831,7 @@
     "sampleSize": 98
   },
   {
-    "id": 20199,
+    "id": 20238,
     "championId": "Kled",
     "mode": "ARAM",
     "role": null,
@@ -10832,7 +10912,7 @@
     "sampleSize": 48
   },
   {
-    "id": 20058,
+    "id": 20162,
     "championId": "KogMaw",
     "mode": "ARAM",
     "role": null,
@@ -10917,7 +10997,7 @@
     "sampleSize": 499
   },
   {
-    "id": 20059,
+    "id": 20163,
     "championId": "KogMaw",
     "mode": "ARAM",
     "role": null,
@@ -11012,7 +11092,7 @@
     "sampleSize": 296
   },
   {
-    "id": 20237,
+    "id": 20058,
     "championId": "KSante",
     "mode": "ARAM",
     "role": null,
@@ -11113,7 +11193,7 @@
     "sampleSize": 288
   },
   {
-    "id": 20194,
+    "id": 20030,
     "championId": "Leblanc",
     "mode": "ARAM",
     "role": null,
@@ -11198,7 +11278,7 @@
     "sampleSize": 800
   },
   {
-    "id": 20118,
+    "id": 20050,
     "championId": "LeeSin",
     "mode": "ARAM",
     "role": null,
@@ -11294,28 +11374,28 @@
     "sampleSize": 793
   },
   {
-    "id": 20119,
+    "id": 20051,
     "championId": "LeeSin",
     "mode": "ARAM",
     "role": null,
     "archetype": "bruiser",
-    "patch": "14.24",
+    "patch": "15.10",
     "starterItems": [
-      2021,
-      2022
+      1036,
+      3133
     ],
     "coreItems": [
       6692,
       6610,
       3071,
-      3065,
-      3053
+      2502,
+      3065
     ],
     "coreItemStats": {
-      "3053": {
+      "2502": {
         "games": 4,
         "pickRate": 13,
-        "winRate": 50
+        "winRate": 75
       },
       "3065": {
         "games": 14,
@@ -11345,9 +11425,9 @@
         "description": "Death's Dance — vs AD (50% pick vs 23% baseline)"
       },
       {
-        "itemId": 2502,
-        "condition": "enemy_heavy_ad",
-        "description": "Unending Despair — vs AD (33% pick vs 13% baseline)"
+        "itemId": 2504,
+        "condition": "enemy_heavy_ap",
+        "description": "Kaenic Rookern — vs AP (31% pick vs 17% baseline)"
       },
       {
         "itemId": 3074,
@@ -11355,9 +11435,9 @@
         "description": "Ravenous Hydra — vs AP (31% pick vs 17% baseline)"
       },
       {
-        "itemId": 2504,
-        "condition": "enemy_heavy_ap",
-        "description": "Kaenic Rookern — vs AP (31% pick vs 17% baseline)"
+        "itemId": 3053,
+        "condition": "enemy_has_healing",
+        "description": "Sterak's Gage — vs healing (27% pick vs 13% baseline)"
       },
       {
         "itemId": 3075,
@@ -11394,13 +11474,13 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 30 challenger/grandmaster/master games on patch 14.24 · 50% win rate."
+      "Aggregated from 30 challenger/grandmaster/master games on patch 15.10 · 50% win rate."
     ],
     "winRate": 50,
     "sampleSize": 30
   },
   {
-    "id": 20084,
+    "id": 20209,
     "championId": "Leona",
     "mode": "ARAM",
     "role": null,
@@ -11496,7 +11576,7 @@
     "sampleSize": 558
   },
   {
-    "id": 20081,
+    "id": 20017,
     "championId": "Lillia",
     "mode": "ARAM",
     "role": null,
@@ -11581,7 +11661,7 @@
     "sampleSize": 478
   },
   {
-    "id": 20246,
+    "id": 20286,
     "championId": "Lissandra",
     "mode": "ARAM",
     "role": null,
@@ -11671,15 +11751,14 @@
     "sampleSize": 599
   },
   {
-    "id": 20293,
+    "id": 20295,
     "championId": "Locke",
     "mode": "ARAM",
     "role": null,
     "archetype": "ap",
     "patch": "16.13",
     "starterItems": [
-      1026,
-      1052
+      3802
     ],
     "coreItems": [
       3100,
@@ -11762,7 +11841,7 @@
     "sampleSize": 50
   },
   {
-    "id": 20155,
+    "id": 20031,
     "championId": "Lucian",
     "mode": "ARAM",
     "role": null,
@@ -11858,7 +11937,7 @@
     "sampleSize": 1131
   },
   {
-    "id": 20205,
+    "id": 20219,
     "championId": "Lulu",
     "mode": "ARAM",
     "role": null,
@@ -11954,12 +12033,12 @@
     "sampleSize": 519
   },
   {
-    "id": 20206,
+    "id": 20220,
     "championId": "Lulu",
     "mode": "ARAM",
     "role": null,
     "archetype": "hybrid",
-    "patch": "16.13",
+    "patch": "15.18",
     "starterItems": [
       3070,
       4642
@@ -12034,13 +12113,13 @@
     "skillMaxOrder": "E > W > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 70 challenger/grandmaster/master games on patch 16.13 · 63% win rate."
+      "Aggregated from 70 challenger/grandmaster/master games on patch 15.18 · 63% win rate."
     ],
     "winRate": 62.9,
     "sampleSize": 70
   },
   {
-    "id": 20207,
+    "id": 20221,
     "championId": "Lulu",
     "mode": "ARAM",
     "role": null,
@@ -12130,7 +12209,7 @@
     "sampleSize": 44
   },
   {
-    "id": 20039,
+    "id": 20009,
     "championId": "Lux",
     "mode": "ARAM",
     "role": null,
@@ -12215,7 +12294,7 @@
     "sampleSize": 1166
   },
   {
-    "id": 20048,
+    "id": 20131,
     "championId": "Malphite",
     "mode": "ARAM",
     "role": null,
@@ -12300,7 +12379,7 @@
     "sampleSize": 490
   },
   {
-    "id": 20049,
+    "id": 20132,
     "championId": "Malphite",
     "mode": "ARAM",
     "role": null,
@@ -12401,7 +12480,7 @@
     "sampleSize": 311
   },
   {
-    "id": 20050,
+    "id": 20133,
     "championId": "Malphite",
     "mode": "ARAM",
     "role": null,
@@ -12411,10 +12490,10 @@
       3802
     ],
     "coreItems": [
-      3119,
       3118,
       3084,
       3075,
+      3083,
       3089
     ],
     "coreItemStats": {
@@ -12422,6 +12501,11 @@
         "games": 21,
         "pickRate": 34,
         "winRate": 48
+      },
+      "3083": {
+        "games": 5,
+        "pickRate": 8,
+        "winRate": 20
       },
       "3084": {
         "games": 24,
@@ -12437,11 +12521,6 @@
         "games": 49,
         "pickRate": 80,
         "winRate": 43
-      },
-      "3119": {
-        "games": 5,
-        "pickRate": 8,
-        "winRate": 40
       }
     },
     "situationalItems": [
@@ -12496,7 +12575,7 @@
     "sampleSize": 61
   },
   {
-    "id": 20181,
+    "id": 20208,
     "championId": "Malzahar",
     "mode": "ARAM",
     "role": null,
@@ -12591,7 +12670,7 @@
     "sampleSize": 796
   },
   {
-    "id": 20177,
+    "id": 20229,
     "championId": "Maokai",
     "mode": "ARAM",
     "role": null,
@@ -12672,7 +12751,7 @@
     "sampleSize": 507
   },
   {
-    "id": 20178,
+    "id": 20230,
     "championId": "Maokai",
     "mode": "ARAM",
     "role": null,
@@ -12727,14 +12806,14 @@
         "description": "Unending Despair — popular alternative (built in 21% of games)"
       },
       {
-        "itemId": 2503,
-        "condition": "general",
-        "description": "Blackfire Torch — popular alternative (built in 17% of games)"
-      },
-      {
         "itemId": 3075,
         "condition": "general",
         "description": "Thornmail — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 2503,
+        "condition": "general",
+        "description": "Blackfire Torch — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 3118,
@@ -12772,7 +12851,7 @@
     "sampleSize": 75
   },
   {
-    "id": 20179,
+    "id": 20231,
     "championId": "Maokai",
     "mode": "ARAM",
     "role": null,
@@ -12862,7 +12941,7 @@
     "sampleSize": 69
   },
   {
-    "id": 20123,
+    "id": 20184,
     "championId": "MasterYi",
     "mode": "ARAM",
     "role": null,
@@ -12957,7 +13036,7 @@
     "sampleSize": 441
   },
   {
-    "id": 20021,
+    "id": 20134,
     "championId": "Mel",
     "mode": "ARAM",
     "role": null,
@@ -13047,7 +13126,7 @@
     "sampleSize": 988
   },
   {
-    "id": 20241,
+    "id": 20081,
     "championId": "Milio",
     "mode": "ARAM",
     "role": null,
@@ -13138,7 +13217,7 @@
     "sampleSize": 461
   },
   {
-    "id": 20132,
+    "id": 20022,
     "championId": "MissFortune",
     "mode": "ARAM",
     "role": null,
@@ -13233,7 +13312,7 @@
     "sampleSize": 1189
   },
   {
-    "id": 20133,
+    "id": 20023,
     "championId": "MissFortune",
     "mode": "ARAM",
     "role": null,
@@ -13328,7 +13407,7 @@
     "sampleSize": 161
   },
   {
-    "id": 20095,
+    "id": 20248,
     "championId": "MonkeyKing",
     "mode": "ARAM",
     "role": null,
@@ -13414,7 +13493,7 @@
     "sampleSize": 472
   },
   {
-    "id": 20096,
+    "id": 20249,
     "championId": "MonkeyKing",
     "mode": "ARAM",
     "role": null,
@@ -13485,9 +13564,9 @@
         "description": "Death's Dance — popular alternative (built in 15% of games)"
       },
       {
-        "itemId": 3156,
+        "itemId": 4401,
         "condition": "general",
-        "description": "Maw of Malmortius — popular alternative (built in 10% of games)"
+        "description": "Force of Nature — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -13520,7 +13599,7 @@
     "sampleSize": 48
   },
   {
-    "id": 20208,
+    "id": 20165,
     "championId": "Mordekaiser",
     "mode": "ARAM",
     "role": null,
@@ -13605,7 +13684,7 @@
     "sampleSize": 609
   },
   {
-    "id": 20209,
+    "id": 20166,
     "championId": "Mordekaiser",
     "mode": "ARAM",
     "role": null,
@@ -13700,23 +13779,28 @@
     "sampleSize": 99
   },
   {
-    "id": 20210,
+    "id": 20167,
     "championId": "Mordekaiser",
     "mode": "ARAM",
     "role": null,
     "archetype": "ad",
-    "patch": "15.24",
+    "patch": "15.20",
     "starterItems": [
       3147
     ],
     "coreItems": [
       3084,
-      6653,
       4633,
       3073,
-      3065
+      3065,
+      2502
     ],
     "coreItemStats": {
+      "2502": {
+        "games": 2,
+        "pickRate": 8,
+        "winRate": 50
+      },
       "3065": {
         "games": 3,
         "pickRate": 12,
@@ -13736,11 +13820,6 @@
         "games": 16,
         "pickRate": 64,
         "winRate": 25
-      },
-      "6653": {
-        "games": 2,
-        "pickRate": 8,
-        "winRate": 50
       }
     },
     "situationalItems": [
@@ -13779,13 +13858,13 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 25 challenger/grandmaster/master games on patch 15.24 · 28% win rate."
+      "Aggregated from 25 challenger/grandmaster/master games on patch 15.20 · 28% win rate."
     ],
     "winRate": 28,
     "sampleSize": 25
   },
   {
-    "id": 20204,
+    "id": 20129,
     "championId": "Morgana",
     "mode": "ARAM",
     "role": null,
@@ -13875,7 +13954,7 @@
     "sampleSize": 1204
   },
   {
-    "id": 20018,
+    "id": 20264,
     "championId": "Naafiri",
     "mode": "ARAM",
     "role": null,
@@ -13976,7 +14055,7 @@
     "sampleSize": 322
   },
   {
-    "id": 20134,
+    "id": 20157,
     "championId": "Nami",
     "mode": "ARAM",
     "role": null,
@@ -14067,12 +14146,12 @@
     "sampleSize": 633
   },
   {
-    "id": 20135,
+    "id": 20158,
     "championId": "Nami",
     "mode": "ARAM",
     "role": null,
     "archetype": "hybrid",
-    "patch": "16.12",
+    "patch": "16.3",
     "starterItems": [
       3070,
       4642
@@ -14082,13 +14161,13 @@
       6617,
       6616,
       6621,
-      3190
+      3222
     ],
     "coreItemStats": {
-      "3190": {
-        "games": 9,
-        "pickRate": 36,
-        "winRate": 67
+      "3222": {
+        "games": 13,
+        "pickRate": 52,
+        "winRate": 62
       },
       "4005": {
         "games": 10,
@@ -14113,19 +14192,9 @@
     },
     "situationalItems": [
       {
-        "itemId": 3222,
-        "condition": "enemy_heavy_ap",
-        "description": "Mikael's Blessing — vs AP (75% pick vs 52% baseline)"
-      },
-      {
-        "itemId": 3003,
-        "condition": "general",
-        "description": "Archangel's Staff — popular alternative (built in 16% of games)"
-      },
-      {
-        "itemId": 3107,
-        "condition": "general",
-        "description": "Redemption — popular alternative (built in 16% of games)"
+        "itemId": 3190,
+        "condition": "enemy_heavy_ad",
+        "description": "Locket of the Iron Solari — vs AD (70% pick vs 36% baseline)"
       },
       {
         "itemId": 3504,
@@ -14133,9 +14202,19 @@
         "description": "Ardent Censer — popular alternative (built in 16% of games)"
       },
       {
+        "itemId": 3107,
+        "condition": "general",
+        "description": "Redemption — popular alternative (built in 16% of games)"
+      },
+      {
         "itemId": 3109,
         "condition": "general",
         "description": "Knight's Vow — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 3003,
+        "condition": "general",
+        "description": "Archangel's Staff — popular alternative (built in 16% of games)"
       }
     ],
     "bootsOptions": [
@@ -14162,13 +14241,13 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 25 challenger/grandmaster/master games on patch 16.12 · 60% win rate."
+      "Aggregated from 25 challenger/grandmaster/master games on patch 16.3 · 60% win rate."
     ],
     "winRate": 60,
     "sampleSize": 25
   },
   {
-    "id": 20145,
+    "id": 20135,
     "championId": "Nasus",
     "mode": "ARAM",
     "role": null,
@@ -14264,7 +14343,7 @@
     "sampleSize": 138
   },
   {
-    "id": 20146,
+    "id": 20136,
     "championId": "Nasus",
     "mode": "ARAM",
     "role": null,
@@ -14279,7 +14358,7 @@
       3110,
       6610,
       3065,
-      4401
+      6665
     ],
     "coreItemStats": {
       "3065": {
@@ -14297,15 +14376,15 @@
         "pickRate": 55,
         "winRate": 43
       },
-      "4401": {
-        "games": 19,
-        "pickRate": 15,
-        "winRate": 74
-      },
       "6610": {
         "games": 51,
         "pickRate": 39,
         "winRate": 41
+      },
+      "6665": {
+        "games": 13,
+        "pickRate": 10,
+        "winRate": 31
       }
     },
     "situationalItems": [
@@ -14318,6 +14397,11 @@
         "itemId": 6662,
         "condition": "general",
         "description": "Iceborn Gauntlet — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 4401,
+        "condition": "general",
+        "description": "Force of Nature — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -14350,7 +14434,7 @@
     "sampleSize": 131
   },
   {
-    "id": 20147,
+    "id": 20137,
     "championId": "Nasus",
     "mode": "ARAM",
     "role": null,
@@ -14435,7 +14519,7 @@
     "sampleSize": 42
   },
   {
-    "id": 20005,
+    "id": 20159,
     "championId": "Nautilus",
     "mode": "ARAM",
     "role": null,
@@ -14616,7 +14700,7 @@
     "sampleSize": 742
   },
   {
-    "id": 20017,
+    "id": 20057,
     "championId": "Nidalee",
     "mode": "ARAM",
     "role": null,
@@ -14706,7 +14790,7 @@
     "sampleSize": 992
   },
   {
-    "id": 20020,
+    "id": 20278,
     "championId": "Nilah",
     "mode": "ARAM",
     "role": null,
@@ -14791,7 +14875,7 @@
     "sampleSize": 272
   },
   {
-    "id": 20276,
+    "id": 20284,
     "championId": "Nocturne",
     "mode": "ARAM",
     "role": null,
@@ -14806,14 +14890,9 @@
       6676,
       6696,
       3073,
-      3004
+      6694
     ],
     "coreItemStats": {
-      "3004": {
-        "games": 57,
-        "pickRate": 22,
-        "winRate": 49
-      },
       "3073": {
         "games": 126,
         "pickRate": 49,
@@ -14823,6 +14902,11 @@
         "games": 95,
         "pickRate": 37,
         "winRate": 47
+      },
+      "6694": {
+        "games": 30,
+        "pickRate": 12,
+        "winRate": 53
       },
       "6696": {
         "games": 154,
@@ -14842,6 +14926,11 @@
         "description": "Stridebreaker — popular alternative (built in 29% of games)"
       },
       {
+        "itemId": 3004,
+        "condition": "general",
+        "description": "Manamune — popular alternative (built in 22% of games)"
+      },
+      {
         "itemId": 6698,
         "condition": "general",
         "description": "Profane Hydra — popular alternative (built in 18% of games)"
@@ -14855,11 +14944,6 @@
         "itemId": 6610,
         "condition": "general",
         "description": "Sundered Sky — popular alternative (built in 14% of games)"
-      },
-      {
-        "itemId": 6694,
-        "condition": "general",
-        "description": "Serylda's Grudge — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -14892,7 +14976,7 @@
     "sampleSize": 255
   },
   {
-    "id": 20220,
+    "id": 20193,
     "championId": "Nunu",
     "mode": "ARAM",
     "role": null,
@@ -14982,7 +15066,7 @@
     "sampleSize": 275
   },
   {
-    "id": 20221,
+    "id": 20194,
     "championId": "Nunu",
     "mode": "ARAM",
     "role": null,
@@ -15068,7 +15152,7 @@
     "sampleSize": 71
   },
   {
-    "id": 20222,
+    "id": 20195,
     "championId": "Nunu",
     "mode": "ARAM",
     "role": null,
@@ -15079,12 +15163,17 @@
     ],
     "coreItems": [
       6655,
-      3089,
       3065,
       3075,
+      2502,
       2504
     ],
     "coreItemStats": {
+      "2502": {
+        "games": 5,
+        "pickRate": 9,
+        "winRate": 60
+      },
       "2504": {
         "games": 4,
         "pickRate": 7,
@@ -15099,11 +15188,6 @@
         "games": 14,
         "pickRate": 25,
         "winRate": 43
-      },
-      "3089": {
-        "games": 8,
-        "pickRate": 15,
-        "winRate": 38
       },
       "6655": {
         "games": 26,
@@ -15126,6 +15210,11 @@
         "itemId": 3119,
         "condition": "general",
         "description": "Winter's Approach — popular alternative (built in 15% of games)"
+      },
+      {
+        "itemId": 3089,
+        "condition": "general",
+        "description": "Rabadon's Deathcap — popular alternative (built in 15% of games)"
       },
       {
         "itemId": 4645,
@@ -15163,7 +15252,7 @@
     "sampleSize": 55
   },
   {
-    "id": 20291,
+    "id": 20281,
     "championId": "Olaf",
     "mode": "ARAM",
     "role": null,
@@ -15224,8 +15313,8 @@
       }
     ],
     "bootsOptions": [
-      3111,
-      3047
+      3047,
+      3111
     ],
     "primaryPathId": 8000,
     "keystoneId": 8010,
@@ -15253,18 +15342,18 @@
     "sampleSize": 191
   },
   {
-    "id": 20292,
+    "id": 20282,
     "championId": "Olaf",
     "mode": "ARAM",
     "role": null,
     "archetype": "bruiser",
-    "patch": "16.12",
+    "patch": "15.15",
     "starterItems": [
       3077
     ],
     "coreItems": [
       6631,
-      6610,
+      6333,
       3065,
       3053,
       4401
@@ -15285,10 +15374,10 @@
         "pickRate": 13,
         "winRate": 50
       },
-      "6610": {
+      "6333": {
         "games": 11,
         "pickRate": 35,
-        "winRate": 64
+        "winRate": 73
       },
       "6631": {
         "games": 16,
@@ -15298,14 +15387,14 @@
     },
     "situationalItems": [
       {
+        "itemId": 6610,
+        "condition": "enemy_has_tanks",
+        "description": "Sundered Sky — vs tanks (71% pick vs 35% baseline)"
+      },
+      {
         "itemId": 3075,
         "condition": "enemy_heavy_ad",
         "description": "Thornmail — vs AD (45% pick vs 19% baseline)"
-      },
-      {
-        "itemId": 6333,
-        "condition": "enemy_heavy_ad",
-        "description": "Death's Dance — vs AD (55% pick vs 35% baseline)"
       },
       {
         "itemId": 3074,
@@ -15347,13 +15436,13 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 31 challenger/grandmaster/master games on patch 16.12 · 65% win rate."
+      "Aggregated from 31 challenger/grandmaster/master games on patch 15.15 · 65% win rate."
     ],
     "winRate": 64.5,
     "sampleSize": 31
   },
   {
-    "id": 20032,
+    "id": 20258,
     "championId": "Orianna",
     "mode": "ARAM",
     "role": null,
@@ -15443,7 +15532,7 @@
     "sampleSize": 932
   },
   {
-    "id": 20010,
+    "id": 20171,
     "championId": "Ornn",
     "mode": "ARAM",
     "role": null,
@@ -15539,7 +15628,7 @@
     "sampleSize": 455
   },
   {
-    "id": 20113,
+    "id": 20187,
     "championId": "Pantheon",
     "mode": "ARAM",
     "role": null,
@@ -15634,7 +15723,7 @@
     "sampleSize": 644
   },
   {
-    "id": 20114,
+    "id": 20188,
     "championId": "Pantheon",
     "mode": "ARAM",
     "role": null,
@@ -15725,7 +15814,7 @@
     "sampleSize": 32
   },
   {
-    "id": 20286,
+    "id": 20256,
     "championId": "Poppy",
     "mode": "ARAM",
     "role": null,
@@ -15821,7 +15910,7 @@
     "sampleSize": 345
   },
   {
-    "id": 20287,
+    "id": 20257,
     "championId": "Poppy",
     "mode": "ARAM",
     "role": null,
@@ -15902,7 +15991,7 @@
     "sampleSize": 47
   },
   {
-    "id": 20150,
+    "id": 20018,
     "championId": "Pyke",
     "mode": "ARAM",
     "role": null,
@@ -15987,7 +16076,7 @@
     "sampleSize": 833
   },
   {
-    "id": 20267,
+    "id": 20123,
     "championId": "Qiyana",
     "mode": "ARAM",
     "role": null,
@@ -16078,7 +16167,7 @@
     "sampleSize": 441
   },
   {
-    "id": 20174,
+    "id": 20285,
     "championId": "Quinn",
     "mode": "ARAM",
     "role": null,
@@ -16178,7 +16267,7 @@
     "sampleSize": 489
   },
   {
-    "id": 20120,
+    "id": 20241,
     "championId": "Rakan",
     "mode": "ARAM",
     "role": null,
@@ -16274,7 +16363,7 @@
     "sampleSize": 318
   },
   {
-    "id": 20121,
+    "id": 20242,
     "championId": "Rakan",
     "mode": "ARAM",
     "role": null,
@@ -16286,12 +16375,17 @@
     ],
     "coreItems": [
       3084,
-      4005,
       3119,
       3190,
-      3107
+      3107,
+      2502
     ],
     "coreItemStats": {
+      "2502": {
+        "games": 7,
+        "pickRate": 12,
+        "winRate": 29
+      },
       "3084": {
         "games": 8,
         "pickRate": 13,
@@ -16311,11 +16405,6 @@
         "games": 31,
         "pickRate": 52,
         "winRate": 65
-      },
-      "4005": {
-        "games": 5,
-        "pickRate": 8,
-        "winRate": 40
       }
     },
     "situationalItems": [
@@ -16333,11 +16422,6 @@
         "itemId": 3118,
         "condition": "general",
         "description": "Malignance — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 2502,
-        "condition": "general",
-        "description": "Unending Despair — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -16370,20 +16454,20 @@
     "sampleSize": 60
   },
   {
-    "id": 20122,
+    "id": 20243,
     "championId": "Rakan",
     "mode": "ARAM",
     "role": null,
     "archetype": "ap",
-    "patch": "15.20",
+    "patch": "15.19",
     "starterItems": [
       3802
     ],
     "coreItems": [
       3118,
+      3152,
       3100,
       3157,
-      3102,
       3089
     ],
     "coreItemStats": {
@@ -16397,15 +16481,15 @@
         "pickRate": 18,
         "winRate": 67
       },
-      "3102": {
-        "games": 3,
-        "pickRate": 9,
-        "winRate": 100
-      },
       "3118": {
         "games": 17,
         "pickRate": 52,
         "winRate": 59
+      },
+      "3152": {
+        "games": 4,
+        "pickRate": 12,
+        "winRate": 50
       },
       "3157": {
         "games": 2,
@@ -16415,14 +16499,14 @@
     },
     "situationalItems": [
       {
-        "itemId": 6620,
-        "condition": "enemy_has_tanks",
-        "description": "Echoes of Helia — vs tanks (25% pick vs 12% baseline)"
-      },
-      {
         "itemId": 6617,
         "condition": "enemy_has_tanks",
         "description": "Moonstone Renewer — vs tanks (25% pick vs 12% baseline)"
+      },
+      {
+        "itemId": 6620,
+        "condition": "enemy_has_tanks",
+        "description": "Echoes of Helia — vs tanks (25% pick vs 12% baseline)"
       },
       {
         "itemId": 3107,
@@ -16440,9 +16524,9 @@
         "description": "Shadowflame — popular alternative (built in 15% of games)"
       },
       {
-        "itemId": 3152,
+        "itemId": 2065,
         "condition": "general",
-        "description": "Hextech Rocketbelt — popular alternative (built in 12% of games)"
+        "description": "Shurelya's Battlesong — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -16469,13 +16553,13 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 33 challenger/grandmaster/master games on patch 15.20 · 48% win rate."
+      "Aggregated from 33 challenger/grandmaster/master games on patch 15.19 · 48% win rate."
     ],
     "winRate": 48.5,
     "sampleSize": 33
   },
   {
-    "id": 20214,
+    "id": 20228,
     "championId": "Rammus",
     "mode": "ARAM",
     "role": null,
@@ -16571,7 +16655,7 @@
     "sampleSize": 196
   },
   {
-    "id": 20029,
+    "id": 20225,
     "championId": "RekSai",
     "mode": "ARAM",
     "role": null,
@@ -16646,7 +16730,7 @@
     "sampleSize": 64
   },
   {
-    "id": 20030,
+    "id": 20226,
     "championId": "RekSai",
     "mode": "ARAM",
     "role": null,
@@ -16702,14 +16786,14 @@
         "description": "Spirit Visage — popular alternative (built in 17% of games)"
       },
       {
-        "itemId": 3075,
-        "condition": "general",
-        "description": "Thornmail — popular alternative (built in 17% of games)"
-      },
-      {
         "itemId": 3143,
         "condition": "general",
         "description": "Randuin's Omen — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "general",
+        "description": "Thornmail — popular alternative (built in 17% of games)"
       }
     ],
     "bootsOptions": [
@@ -16742,7 +16826,7 @@
     "sampleSize": 52
   },
   {
-    "id": 20031,
+    "id": 20227,
     "championId": "RekSai",
     "mode": "ARAM",
     "role": null,
@@ -16843,7 +16927,7 @@
     "sampleSize": 42
   },
   {
-    "id": 20235,
+    "id": 20263,
     "championId": "Rell",
     "mode": "ARAM",
     "role": null,
@@ -16939,7 +17023,7 @@
     "sampleSize": 349
   },
   {
-    "id": 20273,
+    "id": 20095,
     "championId": "Renata",
     "mode": "ARAM",
     "role": null,
@@ -17030,12 +17114,12 @@
     "sampleSize": 421
   },
   {
-    "id": 20274,
+    "id": 20096,
     "championId": "Renata",
     "mode": "ARAM",
     "role": null,
     "archetype": "hybrid",
-    "patch": "16.13",
+    "patch": "15.18",
     "starterItems": [
       3070,
       4642
@@ -17120,13 +17204,13 @@
     "skillMaxOrder": "E > W > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 116 challenger/grandmaster/master games on patch 16.13 · 48% win rate."
+      "Aggregated from 116 challenger/grandmaster/master games on patch 15.18 · 48% win rate."
     ],
     "winRate": 48.3,
     "sampleSize": 116
   },
   {
-    "id": 20163,
+    "id": 20275,
     "championId": "Renekton",
     "mode": "ARAM",
     "role": null,
@@ -17211,7 +17295,7 @@
     "sampleSize": 391
   },
   {
-    "id": 20164,
+    "id": 20276,
     "championId": "Renekton",
     "mode": "ARAM",
     "role": null,
@@ -17301,7 +17385,7 @@
     "sampleSize": 83
   },
   {
-    "id": 20266,
+    "id": 20232,
     "championId": "Rengar",
     "mode": "ARAM",
     "role": null,
@@ -17392,7 +17476,7 @@
     "sampleSize": 268
   },
   {
-    "id": 20004,
+    "id": 20240,
     "championId": "Riven",
     "mode": "ARAM",
     "role": null,
@@ -17482,7 +17566,7 @@
     "sampleSize": 417
   },
   {
-    "id": 20046,
+    "id": 20140,
     "championId": "Rumble",
     "mode": "ARAM",
     "role": null,
@@ -17495,7 +17579,7 @@
       6653,
       3118,
       4645,
-      8010,
+      3135,
       3089
     ],
     "coreItemStats": {
@@ -17509,6 +17593,11 @@
         "pickRate": 42,
         "winRate": 44
       },
+      "3135": {
+        "games": 41,
+        "pickRate": 8,
+        "winRate": 54
+      },
       "4645": {
         "games": 261,
         "pickRate": 51,
@@ -17518,14 +17607,14 @@
         "games": 482,
         "pickRate": 93,
         "winRate": 48
-      },
-      "8010": {
-        "games": 160,
-        "pickRate": 31,
-        "winRate": 53
       }
     },
     "situationalItems": [
+      {
+        "itemId": 8010,
+        "condition": "general",
+        "description": "Bloodletter's Curse — popular alternative (built in 31% of games)"
+      },
       {
         "itemId": 4633,
         "condition": "general",
@@ -17572,7 +17661,7 @@
     "sampleSize": 516
   },
   {
-    "id": 20056,
+    "id": 20024,
     "championId": "Ryze",
     "mode": "ARAM",
     "role": null,
@@ -17663,7 +17752,7 @@
     "sampleSize": 496
   },
   {
-    "id": 20057,
+    "id": 20025,
     "championId": "Ryze",
     "mode": "ARAM",
     "role": null,
@@ -17738,7 +17827,7 @@
     "sampleSize": 98
   },
   {
-    "id": 20184,
+    "id": 20110,
     "championId": "Samira",
     "mode": "ARAM",
     "role": null,
@@ -17818,7 +17907,7 @@
     "sampleSize": 716
   },
   {
-    "id": 20124,
+    "id": 20287,
     "championId": "Sejuani",
     "mode": "ARAM",
     "role": null,
@@ -17832,8 +17921,8 @@
       3084,
       3119,
       2502,
-      3075,
-      6664
+      3083,
+      3075
     ],
     "coreItemStats": {
       "2502": {
@@ -17846,6 +17935,11 @@
         "pickRate": 36,
         "winRate": 48
       },
+      "3083": {
+        "games": 97,
+        "pickRate": 37,
+        "winRate": 55
+      },
       "3084": {
         "games": 187,
         "pickRate": 72,
@@ -17855,23 +17949,18 @@
         "games": 134,
         "pickRate": 51,
         "winRate": 49
-      },
-      "6664": {
-        "games": 35,
-        "pickRate": 13,
-        "winRate": 51
       }
     },
     "situationalItems": [
       {
-        "itemId": 3083,
-        "condition": "general",
-        "description": "Warmog's Armor — popular alternative (built in 37% of games)"
-      },
-      {
         "itemId": 2504,
         "condition": "general",
         "description": "Kaenic Rookern — popular alternative (built in 20% of games)"
+      },
+      {
+        "itemId": 6664,
+        "condition": "general",
+        "description": "Hollow Radiance — popular alternative (built in 13% of games)"
       },
       {
         "itemId": 6665,
@@ -17909,7 +17998,7 @@
     "sampleSize": 261
   },
   {
-    "id": 20022,
+    "id": 20037,
     "championId": "Senna",
     "mode": "ARAM",
     "role": null,
@@ -18015,7 +18104,7 @@
     "sampleSize": 1050
   },
   {
-    "id": 20023,
+    "id": 20038,
     "championId": "Senna",
     "mode": "ARAM",
     "role": null,
@@ -18101,7 +18190,7 @@
     "sampleSize": 40
   },
   {
-    "id": 20003,
+    "id": 20002,
     "championId": "Seraphine",
     "mode": "ARAM",
     "role": null,
@@ -18206,7 +18295,7 @@
     "sampleSize": 889
   },
   {
-    "id": 20231,
+    "id": 20032,
     "championId": "Sett",
     "mode": "ARAM",
     "role": null,
@@ -18287,7 +18376,7 @@
     "sampleSize": 354
   },
   {
-    "id": 20232,
+    "id": 20033,
     "championId": "Sett",
     "mode": "ARAM",
     "role": null,
@@ -18382,7 +18471,7 @@
     "sampleSize": 204
   },
   {
-    "id": 20233,
+    "id": 20034,
     "championId": "Sett",
     "mode": "ARAM",
     "role": null,
@@ -18463,7 +18552,7 @@
     "sampleSize": 112
   },
   {
-    "id": 20051,
+    "id": 20196,
     "championId": "Shaco",
     "mode": "ARAM",
     "role": null,
@@ -18474,10 +18563,10 @@
     ],
     "coreItems": [
       2503,
-      3118,
       6653,
       4645,
-      3089
+      3089,
+      3165
     ],
     "coreItemStats": {
       "2503": {
@@ -18490,10 +18579,10 @@
         "pickRate": 32,
         "winRate": 52
       },
-      "3118": {
-        "games": 203,
-        "pickRate": 36,
-        "winRate": 46
+      "3165": {
+        "games": 70,
+        "pickRate": 12,
+        "winRate": 53
       },
       "4645": {
         "games": 314,
@@ -18513,14 +18602,14 @@
         "description": "Luden's Echo — popular alternative (built in 42% of games)"
       },
       {
+        "itemId": 3118,
+        "condition": "general",
+        "description": "Malignance — popular alternative (built in 36% of games)"
+      },
+      {
         "itemId": 3135,
         "condition": "general",
         "description": "Void Staff — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 3165,
-        "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -18553,7 +18642,7 @@
     "sampleSize": 571
   },
   {
-    "id": 20052,
+    "id": 20197,
     "championId": "Shaco",
     "mode": "ARAM",
     "role": null,
@@ -18566,7 +18655,7 @@
       6676,
       6699,
       3031,
-      6695,
+      3508,
       3036
     ],
     "coreItemStats": {
@@ -18580,15 +18669,15 @@
         "pickRate": 26,
         "winRate": 41
       },
+      "3508": {
+        "games": 12,
+        "pickRate": 7,
+        "winRate": 33
+      },
       "6676": {
         "games": 141,
         "pickRate": 82,
         "winRate": 38
-      },
-      "6695": {
-        "games": 11,
-        "pickRate": 6,
-        "winRate": 55
       },
       "6699": {
         "games": 122,
@@ -18643,7 +18732,7 @@
     "sampleSize": 171
   },
   {
-    "id": 20255,
+    "id": 20055,
     "championId": "Shen",
     "mode": "ARAM",
     "role": null,
@@ -18694,14 +18783,14 @@
         "description": "Hollow Radiance — popular alternative (built in 15% of games)"
       },
       {
-        "itemId": 2504,
-        "condition": "general",
-        "description": "Kaenic Rookern — popular alternative (built in 13% of games)"
-      },
-      {
         "itemId": 6665,
         "condition": "general",
         "description": "Jak'Sho, The Protean — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 2504,
+        "condition": "general",
+        "description": "Kaenic Rookern — popular alternative (built in 13% of games)"
       },
       {
         "itemId": 3065,
@@ -18744,7 +18833,7 @@
     "sampleSize": 418
   },
   {
-    "id": 20256,
+    "id": 20056,
     "championId": "Shen",
     "mode": "ARAM",
     "role": null,
@@ -18757,11 +18846,16 @@
     "coreItems": [
       3084,
       3748,
-      3083,
       2502,
-      2510
+      2510,
+      2501
     ],
     "coreItemStats": {
+      "2501": {
+        "games": 9,
+        "pickRate": 13,
+        "winRate": 44
+      },
       "2502": {
         "games": 24,
         "pickRate": 35,
@@ -18771,11 +18865,6 @@
         "games": 7,
         "pickRate": 10,
         "winRate": 57
-      },
-      "3083": {
-        "games": 9,
-        "pickRate": 13,
-        "winRate": 33
       },
       "3084": {
         "games": 52,
@@ -18790,14 +18879,14 @@
     },
     "situationalItems": [
       {
-        "itemId": 2501,
-        "condition": "enemy_has_healing",
-        "description": "Overlord's Bloodmail — vs healing (29% pick vs 13% baseline)"
-      },
-      {
         "itemId": 3075,
         "condition": "general",
         "description": "Thornmail — popular alternative (built in 16% of games)"
+      },
+      {
+        "itemId": 3083,
+        "condition": "general",
+        "description": "Warmog's Armor — popular alternative (built in 13% of games)"
       },
       {
         "itemId": 2504,
@@ -18835,7 +18924,7 @@
     "sampleSize": 68
   },
   {
-    "id": 20288,
+    "id": 20213,
     "championId": "Shyvana",
     "mode": "ARAM",
     "role": null,
@@ -18925,7 +19014,7 @@
     "sampleSize": 152
   },
   {
-    "id": 20289,
+    "id": 20214,
     "championId": "Shyvana",
     "mode": "ARAM",
     "role": null,
@@ -19026,7 +19115,7 @@
     "sampleSize": 54
   },
   {
-    "id": 20290,
+    "id": 20215,
     "championId": "Shyvana",
     "mode": "ARAM",
     "role": null,
@@ -19077,14 +19166,14 @@
         "description": "Death's Dance — vs tanks (33% pick vs 11% baseline)"
       },
       {
-        "itemId": 6653,
-        "condition": "enemy_has_healing",
-        "description": "Liandry's Torment — vs healing (33% pick vs 19% baseline)"
-      },
-      {
         "itemId": 3161,
         "condition": "enemy_has_tanks",
         "description": "Spear of Shojin — vs tanks (44% pick vs 30% baseline)"
+      },
+      {
+        "itemId": 6653,
+        "condition": "enemy_has_healing",
+        "description": "Liandry's Torment — vs healing (33% pick vs 19% baseline)"
       },
       {
         "itemId": 6665,
@@ -19132,7 +19221,7 @@
     "sampleSize": 27
   },
   {
-    "id": 20116,
+    "id": 20203,
     "championId": "Singed",
     "mode": "ARAM",
     "role": null,
@@ -19227,7 +19316,7 @@
     "sampleSize": 214
   },
   {
-    "id": 20117,
+    "id": 20204,
     "championId": "Singed",
     "mode": "ARAM",
     "role": null,
@@ -19312,7 +19401,7 @@
     "sampleSize": 176
   },
   {
-    "id": 20280,
+    "id": 20101,
     "championId": "Sion",
     "mode": "ARAM",
     "role": null,
@@ -19413,7 +19502,7 @@
     "sampleSize": 443
   },
   {
-    "id": 20281,
+    "id": 20102,
     "championId": "Sion",
     "mode": "ARAM",
     "role": null,
@@ -19494,7 +19583,7 @@
     "sampleSize": 76
   },
   {
-    "id": 20282,
+    "id": 20103,
     "championId": "Sion",
     "mode": "ARAM",
     "role": null,
@@ -19585,7 +19674,7 @@
     "sampleSize": 43
   },
   {
-    "id": 20191,
+    "id": 20099,
     "championId": "Sivir",
     "mode": "ARAM",
     "role": null,
@@ -19685,7 +19774,7 @@
     "sampleSize": 916
   },
   {
-    "id": 20224,
+    "id": 20283,
     "championId": "Skarner",
     "mode": "ARAM",
     "role": null,
@@ -19786,7 +19875,7 @@
     "sampleSize": 229
   },
   {
-    "id": 20115,
+    "id": 20067,
     "championId": "Smolder",
     "mode": "ARAM",
     "role": null,
@@ -19877,7 +19966,7 @@
     "sampleSize": 1050
   },
   {
-    "id": 20195,
+    "id": 20222,
     "championId": "Sona",
     "mode": "ARAM",
     "role": null,
@@ -19973,7 +20062,7 @@
     "sampleSize": 600
   },
   {
-    "id": 20196,
+    "id": 20223,
     "championId": "Sona",
     "mode": "ARAM",
     "role": null,
@@ -19985,9 +20074,9 @@
     ],
     "coreItems": [
       6617,
-      6621,
-      3119,
+      3190,
       3222,
+      3109,
       3065
     ],
     "coreItemStats": {
@@ -19996,10 +20085,15 @@
         "pickRate": 12,
         "winRate": 33
       },
-      "3119": {
+      "3109": {
         "games": 3,
         "pickRate": 12,
         "winRate": 67
+      },
+      "3190": {
+        "games": 8,
+        "pickRate": 31,
+        "winRate": 75
       },
       "3222": {
         "games": 9,
@@ -20010,23 +20104,23 @@
         "games": 21,
         "pickRate": 81,
         "winRate": 62
-      },
-      "6621": {
-        "games": 6,
-        "pickRate": 23,
-        "winRate": 50
       }
     },
     "situationalItems": [
       {
+        "itemId": 6621,
+        "condition": "enemy_has_tanks",
+        "description": "Dawncore — vs tanks (38% pick vs 23% baseline)"
+      },
+      {
+        "itemId": 3119,
+        "condition": "enemy_has_tanks",
+        "description": "Winter's Approach — vs tanks (25% pick vs 12% baseline)"
+      },
+      {
         "itemId": 3084,
         "condition": "enemy_has_tanks",
         "description": "Heartsteel — vs tanks (25% pick vs 12% baseline)"
-      },
-      {
-        "itemId": 3190,
-        "condition": "general",
-        "description": "Locket of the Iron Solari — popular alternative (built in 31% of games)"
       },
       {
         "itemId": 3003,
@@ -20034,19 +20128,14 @@
         "description": "Archangel's Staff — popular alternative (built in 27% of games)"
       },
       {
-        "itemId": 3504,
-        "condition": "general",
-        "description": "Ardent Censer — popular alternative (built in 15% of games)"
-      },
-      {
         "itemId": 3107,
         "condition": "general",
         "description": "Redemption — popular alternative (built in 15% of games)"
       },
       {
-        "itemId": 3109,
+        "itemId": 3504,
         "condition": "general",
-        "description": "Knight's Vow — popular alternative (built in 12% of games)"
+        "description": "Ardent Censer — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -20070,7 +20159,7 @@
       5008,
       5001
     ],
-    "skillMaxOrder": "Q > W > E",
+    "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
       "Aggregated from 26 challenger/grandmaster/master games on patch 16.4 · 58% win rate."
@@ -20079,7 +20168,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20158,
+    "id": 20073,
     "championId": "Soraka",
     "mode": "ARAM",
     "role": null,
@@ -20165,7 +20254,7 @@
     "sampleSize": 350
   },
   {
-    "id": 20159,
+    "id": 20074,
     "championId": "Soraka",
     "mode": "ARAM",
     "role": null,
@@ -20256,7 +20345,7 @@
     "sampleSize": 258
   },
   {
-    "id": 20077,
+    "id": 20216,
     "championId": "Swain",
     "mode": "ARAM",
     "role": null,
@@ -20341,7 +20430,7 @@
     "sampleSize": 431
   },
   {
-    "id": 20078,
+    "id": 20217,
     "championId": "Swain",
     "mode": "ARAM",
     "role": null,
@@ -20436,21 +20525,21 @@
     "sampleSize": 294
   },
   {
-    "id": 20079,
+    "id": 20218,
     "championId": "Swain",
     "mode": "ARAM",
     "role": null,
     "archetype": "tank",
-    "patch": "15.19",
+    "patch": "16.13",
     "starterItems": [
       3803
     ],
     "coreItems": [
-      3118,
       6657,
       3065,
       2502,
-      3075
+      3075,
+      4633
     ],
     "coreItemStats": {
       "2502": {
@@ -20468,10 +20557,10 @@
         "pickRate": 46,
         "winRate": 28
       },
-      "3118": {
-        "games": 4,
-        "pickRate": 10,
-        "winRate": 25
+      "4633": {
+        "games": 5,
+        "pickRate": 13,
+        "winRate": 40
       },
       "6657": {
         "games": 13,
@@ -20501,14 +20590,14 @@
         "description": "Randuin's Omen — popular alternative (built in 15% of games)"
       },
       {
-        "itemId": 4401,
-        "condition": "general",
-        "description": "Force of Nature — popular alternative (built in 13% of games)"
-      },
-      {
         "itemId": 3116,
         "condition": "general",
         "description": "Rylai's Crystal Scepter — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 4401,
+        "condition": "general",
+        "description": "Force of Nature — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -20535,13 +20624,13 @@
     "skillMaxOrder": "Q > W > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 39 challenger/grandmaster/master games on patch 15.19 · 36% win rate."
+      "Aggregated from 39 challenger/grandmaster/master games on patch 16.13 · 36% win rate."
     ],
     "winRate": 35.9,
     "sampleSize": 39
   },
   {
-    "id": 20169,
+    "id": 20120,
     "championId": "Sylas",
     "mode": "ARAM",
     "role": null,
@@ -20636,7 +20725,7 @@
     "sampleSize": 707
   },
   {
-    "id": 20170,
+    "id": 20121,
     "championId": "Sylas",
     "mode": "ARAM",
     "role": null,
@@ -20682,14 +20771,14 @@
     },
     "situationalItems": [
       {
-        "itemId": 3075,
-        "condition": "enemy_has_tanks",
-        "description": "Thornmail — vs tanks (43% pick vs 30% baseline)"
-      },
-      {
         "itemId": 6657,
         "condition": "enemy_has_tanks",
         "description": "Rod of Ages — vs tanks (43% pick vs 30% baseline)"
+      },
+      {
+        "itemId": 3075,
+        "condition": "enemy_has_tanks",
+        "description": "Thornmail — vs tanks (43% pick vs 30% baseline)"
       },
       {
         "itemId": 6665,
@@ -20727,7 +20816,7 @@
     "sampleSize": 40
   },
   {
-    "id": 20171,
+    "id": 20122,
     "championId": "Sylas",
     "mode": "ARAM",
     "role": null,
@@ -20823,7 +20912,7 @@
     "sampleSize": 26
   },
   {
-    "id": 20026,
+    "id": 20109,
     "championId": "Syndra",
     "mode": "ARAM",
     "role": null,
@@ -20903,7 +20992,7 @@
     "sampleSize": 745
   },
   {
-    "id": 20094,
+    "id": 20239,
     "championId": "TahmKench",
     "mode": "ARAM",
     "role": null,
@@ -20994,7 +21083,7 @@
     "sampleSize": 501
   },
   {
-    "id": 20142,
+    "id": 20026,
     "championId": "Taliyah",
     "mode": "ARAM",
     "role": null,
@@ -21089,12 +21178,12 @@
     "sampleSize": 582
   },
   {
-    "id": 20252,
+    "id": 20206,
     "championId": "Talon",
     "mode": "ARAM",
     "role": null,
     "archetype": "ad",
-    "patch": "15.20",
+    "patch": "15.19",
     "starterItems": [
       1036,
       3134
@@ -21184,13 +21273,13 @@
     "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 365 challenger/grandmaster/master games on patch 15.20 · 50% win rate."
+      "Aggregated from 365 challenger/grandmaster/master games on patch 15.19 · 50% win rate."
     ],
     "winRate": 50.4,
     "sampleSize": 365
   },
   {
-    "id": 20262,
+    "id": 20008,
     "championId": "Taric",
     "mode": "ARAM",
     "role": null,
@@ -21276,7 +21365,7 @@
     "sampleSize": 215
   },
   {
-    "id": 20072,
+    "id": 20054,
     "championId": "Teemo",
     "mode": "ARAM",
     "role": null,
@@ -21366,7 +21455,7 @@
     "sampleSize": 777
   },
   {
-    "id": 20015,
+    "id": 20065,
     "championId": "Thresh",
     "mode": "ARAM",
     "role": null,
@@ -21452,7 +21541,7 @@
     "sampleSize": 1048
   },
   {
-    "id": 20016,
+    "id": 20066,
     "championId": "Thresh",
     "mode": "ARAM",
     "role": null,
@@ -21502,14 +21591,14 @@
         "description": "Winter's Approach — vs healing (25% pick vs 12% baseline)"
       },
       {
-        "itemId": 3087,
-        "condition": "general",
-        "description": "Statikk Shiv — popular alternative (built in 18% of games)"
-      },
-      {
         "itemId": 3084,
         "condition": "general",
         "description": "Heartsteel — popular alternative (built in 18% of games)"
+      },
+      {
+        "itemId": 3087,
+        "condition": "general",
+        "description": "Statikk Shiv — popular alternative (built in 18% of games)"
       }
     ],
     "bootsOptions": [
@@ -21542,7 +21631,7 @@
     "sampleSize": 33
   },
   {
-    "id": 20176,
+    "id": 20059,
     "championId": "Tristana",
     "mode": "ARAM",
     "role": null,
@@ -21642,7 +21731,7 @@
     "sampleSize": 897
   },
   {
-    "id": 20211,
+    "id": 20259,
     "championId": "Trundle",
     "mode": "ARAM",
     "role": null,
@@ -21748,7 +21837,7 @@
     "sampleSize": 151
   },
   {
-    "id": 20212,
+    "id": 20260,
     "championId": "Trundle",
     "mode": "ARAM",
     "role": null,
@@ -21849,7 +21938,7 @@
     "sampleSize": 79
   },
   {
-    "id": 20213,
+    "id": 20261,
     "championId": "Trundle",
     "mode": "ARAM",
     "role": null,
@@ -21935,7 +22024,7 @@
     "sampleSize": 66
   },
   {
-    "id": 20263,
+    "id": 20250,
     "championId": "Tryndamere",
     "mode": "ARAM",
     "role": null,
@@ -22025,7 +22114,7 @@
     "sampleSize": 186
   },
   {
-    "id": 20264,
+    "id": 20251,
     "championId": "Tryndamere",
     "mode": "ARAM",
     "role": null,
@@ -22121,12 +22210,12 @@
     "sampleSize": 86
   },
   {
-    "id": 20265,
+    "id": 20252,
     "championId": "Tryndamere",
     "mode": "ARAM",
     "role": null,
     "archetype": "tank",
-    "patch": "16.3",
+    "patch": "15.4",
     "starterItems": [
       1011,
       1028
@@ -22177,19 +22266,19 @@
         "description": "Thornmail — popular alternative (built in 17% of games)"
       },
       {
-        "itemId": 3083,
-        "condition": "general",
-        "description": "Warmog's Armor — popular alternative (built in 10% of games)"
-      },
-      {
         "itemId": 3143,
         "condition": "general",
         "description": "Randuin's Omen — popular alternative (built in 10% of games)"
+      },
+      {
+        "itemId": 3083,
+        "condition": "general",
+        "description": "Warmog's Armor — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
       3111,
-      3009
+      3047
     ],
     "primaryPathId": 8400,
     "keystoneId": 8437,
@@ -22211,13 +22300,13 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 30 challenger/grandmaster/master games on patch 16.3 · 33% win rate."
+      "Aggregated from 30 challenger/grandmaster/master games on patch 15.4 · 33% win rate."
     ],
     "winRate": 33.3,
     "sampleSize": 30
   },
   {
-    "id": 20185,
+    "id": 20175,
     "championId": "TwistedFate",
     "mode": "ARAM",
     "role": null,
@@ -22307,7 +22396,7 @@
     "sampleSize": 612
   },
   {
-    "id": 20186,
+    "id": 20176,
     "championId": "TwistedFate",
     "mode": "ARAM",
     "role": null,
@@ -22398,7 +22487,7 @@
     "sampleSize": 208
   },
   {
-    "id": 20013,
+    "id": 20107,
     "championId": "Twitch",
     "mode": "ARAM",
     "role": null,
@@ -22448,14 +22537,14 @@
         "description": "The Collector — popular alternative (built in 33% of games)"
       },
       {
-        "itemId": 2512,
-        "condition": "general",
-        "description": "Fiendhunter Bolts — popular alternative (built in 12% of games)"
-      },
-      {
         "itemId": 3033,
         "condition": "general",
         "description": "Mortal Reminder — popular alternative (built in 12% of games)"
+      },
+      {
+        "itemId": 2512,
+        "condition": "general",
+        "description": "Fiendhunter Bolts — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 3072,
@@ -22493,7 +22582,7 @@
     "sampleSize": 928
   },
   {
-    "id": 20014,
+    "id": 20108,
     "championId": "Twitch",
     "mode": "ARAM",
     "role": null,
@@ -22508,7 +22597,7 @@
       4645,
       3089,
       4633,
-      3152
+      3135
     ],
     "coreItemStats": {
       "3089": {
@@ -22521,10 +22610,10 @@
         "pickRate": 96,
         "winRate": 48
       },
-      "3152": {
-        "games": 4,
-        "pickRate": 3,
-        "winRate": 50
+      "3135": {
+        "games": 10,
+        "pickRate": 7,
+        "winRate": 30
       },
       "4633": {
         "games": 17,
@@ -22539,14 +22628,14 @@
     },
     "situationalItems": [
       {
-        "itemId": 3102,
-        "condition": "general",
-        "description": "Banshee's Veil — popular alternative (built in 17% of games)"
-      },
-      {
         "itemId": 3157,
         "condition": "general",
         "description": "Zhonya's Hourglass — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 3102,
+        "condition": "general",
+        "description": "Banshee's Veil — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 6653,
@@ -22584,7 +22673,7 @@
     "sampleSize": 138
   },
   {
-    "id": 20247,
+    "id": 20142,
     "championId": "Udyr",
     "mode": "ARAM",
     "role": null,
@@ -22675,7 +22764,7 @@
     "sampleSize": 86
   },
   {
-    "id": 20248,
+    "id": 20143,
     "championId": "Udyr",
     "mode": "ARAM",
     "role": null,
@@ -22760,7 +22849,7 @@
     "sampleSize": 85
   },
   {
-    "id": 20249,
+    "id": 20144,
     "championId": "Udyr",
     "mode": "ARAM",
     "role": null,
@@ -22846,11 +22935,11 @@
     "sampleSize": 83
   },
   {
-    "id": 20108,
+    "id": 20168,
     "championId": "Urgot",
     "mode": "ARAM",
     "role": null,
-    "archetype": "ad",
+    "archetype": "bruiser",
     "patch": "15.19",
     "starterItems": [
       1011,
@@ -22860,51 +22949,51 @@
       3084,
       3748,
       3071,
-      3075,
-      2501
+      6333,
+      3075
     ],
     "coreItemStats": {
-      "2501": {
-        "games": 69,
-        "pickRate": 28,
-        "winRate": 51
-      },
       "3071": {
-        "games": 158,
-        "pickRate": 63,
-        "winRate": 56
+        "games": 110,
+        "pickRate": 53,
+        "winRate": 49
       },
       "3075": {
-        "games": 36,
-        "pickRate": 14,
-        "winRate": 47
+        "games": 61,
+        "pickRate": 29,
+        "winRate": 43
       },
       "3084": {
-        "games": 140,
-        "pickRate": 56,
-        "winRate": 54
+        "games": 161,
+        "pickRate": 77,
+        "winRate": 48
       },
       "3748": {
-        "games": 169,
-        "pickRate": 68,
-        "winRate": 51
+        "games": 137,
+        "pickRate": 66,
+        "winRate": 47
+      },
+      "6333": {
+        "games": 13,
+        "pickRate": 6,
+        "winRate": 46
       }
     },
     "situationalItems": [
       {
-        "itemId": 3053,
-        "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 25% of games)"
-      },
-      {
         "itemId": 6665,
         "condition": "general",
-        "description": "Jak'Sho, The Protean — popular alternative (built in 12% of games)"
+        "description": "Jak'Sho, The Protean — popular alternative (built in 20% of games)"
       },
       {
-        "itemId": 6333,
+        "itemId": 2501,
         "condition": "general",
-        "description": "Death's Dance — popular alternative (built in 11% of games)"
+        "description": "Overlord's Bloodmail — popular alternative (built in 19% of games)"
+      },
+      {
+        "itemId": 3053,
+        "condition": "general",
+        "description": "Sterak's Gage — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -22931,18 +23020,98 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 250 challenger/grandmaster/master games on patch 15.19 · 53% win rate."
+      "Aggregated from 208 challenger/grandmaster/master games on patch 15.19 · 49% win rate."
     ],
-    "winRate": 53.2,
-    "sampleSize": 250
+    "winRate": 49,
+    "sampleSize": 208
   },
   {
-    "id": 20109,
+    "id": 20169,
+    "championId": "Urgot",
+    "mode": "ARAM",
+    "role": null,
+    "archetype": "ad",
+    "patch": "15.19",
+    "starterItems": [
+      3077
+    ],
+    "coreItems": [
+      3084,
+      3748,
+      3071,
+      3053,
+      2501
+    ],
+    "coreItemStats": {
+      "2501": {
+        "games": 36,
+        "pickRate": 38,
+        "winRate": 58
+      },
+      "3053": {
+        "games": 36,
+        "pickRate": 38,
+        "winRate": 56
+      },
+      "3071": {
+        "games": 69,
+        "pickRate": 73,
+        "winRate": 57
+      },
+      "3084": {
+        "games": 23,
+        "pickRate": 24,
+        "winRate": 61
+      },
+      "3748": {
+        "games": 62,
+        "pickRate": 66,
+        "winRate": 58
+      }
+    },
+    "situationalItems": [
+      {
+        "itemId": 6333,
+        "condition": "general",
+        "description": "Death's Dance — popular alternative (built in 18% of games)"
+      }
+    ],
+    "bootsOptions": [
+      3111,
+      3047
+    ],
+    "primaryPathId": 8000,
+    "keystoneId": 8010,
+    "primaryRuneIds": [
+      9111,
+      9105,
+      8299
+    ],
+    "secondaryPathId": 8400,
+    "secondaryRuneIds": [
+      8429,
+      8451
+    ],
+    "statRuneIds": [
+      5008,
+      5008,
+      5001
+    ],
+    "skillMaxOrder": "W > E > Q",
+    "skillStart": "Q",
+    "notes": [
+      "Aggregated from 94 challenger/grandmaster/master games on patch 15.19 · 55% win rate."
+    ],
+    "winRate": 55.3,
+    "sampleSize": 94
+  },
+  {
+    "id": 20170,
     "championId": "Urgot",
     "mode": "ARAM",
     "role": null,
     "archetype": "tank",
-    "patch": "15.17",
+    "patch": "14.24",
     "starterItems": [
       1011,
       1028
@@ -22956,51 +23125,56 @@
     ],
     "coreItemStats": {
       "2504": {
-        "games": 27,
-        "pickRate": 25,
-        "winRate": 44
+        "games": 19,
+        "pickRate": 33,
+        "winRate": 47
       },
       "3075": {
-        "games": 55,
-        "pickRate": 50,
-        "winRate": 44
+        "games": 27,
+        "pickRate": 47,
+        "winRate": 48
       },
       "3084": {
-        "games": 94,
-        "pickRate": 85,
-        "winRate": 41
+        "games": 50,
+        "pickRate": 86,
+        "winRate": 46
       },
       "3748": {
-        "games": 46,
-        "pickRate": 42,
-        "winRate": 50
+        "games": 16,
+        "pickRate": 28,
+        "winRate": 56
       },
       "6665": {
-        "games": 31,
-        "pickRate": 28,
-        "winRate": 58
+        "games": 15,
+        "pickRate": 26,
+        "winRate": 60
       }
     },
     "situationalItems": [
       {
-        "itemId": 3071,
-        "condition": "general",
-        "description": "Black Cleaver — popular alternative (built in 28% of games)"
-      },
-      {
         "itemId": 3083,
         "condition": "general",
-        "description": "Warmog's Armor — popular alternative (built in 22% of games)"
+        "description": "Warmog's Armor — popular alternative (built in 24% of games)"
       },
       {
-        "itemId": 2502,
+        "itemId": 3071,
         "condition": "general",
-        "description": "Unending Despair — popular alternative (built in 15% of games)"
+        "description": "Black Cleaver — popular alternative (built in 17% of games)"
       },
       {
         "itemId": 4401,
         "condition": "general",
-        "description": "Force of Nature — popular alternative (built in 12% of games)"
+        "description": "Force of Nature — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 2502,
+        "condition": "general",
+        "description": "Unending Despair — popular alternative (built in 17% of games)"
+      },
+      {
+        "itemId": 3143,
+        "condition": "general",
+        "description": "Randuin's Omen — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [
@@ -23027,13 +23201,13 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 110 challenger/grandmaster/master games on patch 15.17 · 42% win rate."
+      "Aggregated from 58 challenger/grandmaster/master games on patch 14.24 · 43% win rate."
     ],
-    "winRate": 41.8,
-    "sampleSize": 110
+    "winRate": 43.1,
+    "sampleSize": 58
   },
   {
-    "id": 20033,
+    "id": 20091,
     "championId": "Varus",
     "mode": "ARAM",
     "role": null,
@@ -23134,21 +23308,21 @@
     "sampleSize": 1100
   },
   {
-    "id": 20034,
+    "id": 20092,
     "championId": "Varus",
     "mode": "ARAM",
     "role": null,
     "archetype": "ap",
-    "patch": "15.24",
+    "patch": "15.19",
     "starterItems": [
       3802
     ],
     "coreItems": [
       3115,
+      3118,
       4645,
       3089,
-      3157,
-      3102
+      3157
     ],
     "coreItemStats": {
       "3089": {
@@ -23156,15 +23330,15 @@
         "pickRate": 49,
         "winRate": 48
       },
-      "3102": {
-        "games": 5,
-        "pickRate": 6,
-        "winRate": 40
-      },
       "3115": {
         "games": 73,
         "pickRate": 82,
         "winRate": 45
+      },
+      "3118": {
+        "games": 38,
+        "pickRate": 43,
+        "winRate": 32
       },
       "3157": {
         "games": 11,
@@ -23178,11 +23352,6 @@
       }
     },
     "situationalItems": [
-      {
-        "itemId": 3118,
-        "condition": "general",
-        "description": "Malignance — popular alternative (built in 43% of games)"
-      },
       {
         "itemId": 4633,
         "condition": "general",
@@ -23218,13 +23387,13 @@
     "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 89 challenger/grandmaster/master games on patch 15.24 · 40% win rate."
+      "Aggregated from 89 challenger/grandmaster/master games on patch 15.19 · 40% win rate."
     ],
     "winRate": 40.4,
     "sampleSize": 89
   },
   {
-    "id": 20187,
+    "id": 20035,
     "championId": "Vayne",
     "mode": "ARAM",
     "role": null,
@@ -23314,7 +23483,7 @@
     "sampleSize": 869
   },
   {
-    "id": 20188,
+    "id": 20036,
     "championId": "Vayne",
     "mode": "ARAM",
     "role": null,
@@ -23419,7 +23588,7 @@
     "sampleSize": 50
   },
   {
-    "id": 20167,
+    "id": 20071,
     "championId": "Veigar",
     "mode": "ARAM",
     "role": null,
@@ -23509,7 +23678,7 @@
     "sampleSize": 927
   },
   {
-    "id": 20168,
+    "id": 20072,
     "championId": "Veigar",
     "mode": "ARAM",
     "role": null,
@@ -23519,11 +23688,11 @@
       3803
     ],
     "coreItems": [
-      6655,
       6657,
       3119,
       3003,
-      3083
+      3083,
+      3742
     ],
     "coreItemStats": {
       "3003": {
@@ -23541,7 +23710,7 @@
         "pickRate": 10,
         "winRate": 89
       },
-      "6655": {
+      "3742": {
         "games": 8,
         "pickRate": 9,
         "winRate": 25
@@ -23594,7 +23763,7 @@
     "sampleSize": 87
   },
   {
-    "id": 20223,
+    "id": 20021,
     "championId": "Velkoz",
     "mode": "ARAM",
     "role": null,
@@ -23689,7 +23858,7 @@
     "sampleSize": 967
   },
   {
-    "id": 20009,
+    "id": 20114,
     "championId": "Vex",
     "mode": "ARAM",
     "role": null,
@@ -23784,7 +23953,7 @@
     "sampleSize": 530
   },
   {
-    "id": 20172,
+    "id": 20185,
     "championId": "Vi",
     "mode": "ARAM",
     "role": null,
@@ -23885,7 +24054,7 @@
     "sampleSize": 428
   },
   {
-    "id": 20173,
+    "id": 20186,
     "championId": "Vi",
     "mode": "ARAM",
     "role": null,
@@ -23951,14 +24120,14 @@
         "description": "Spirit Visage — popular alternative (built in 20% of games)"
       },
       {
-        "itemId": 6676,
-        "condition": "general",
-        "description": "The Collector — popular alternative (built in 12% of games)"
-      },
-      {
         "itemId": 2504,
         "condition": "general",
         "description": "Kaenic Rookern — popular alternative (built in 12% of games)"
+      },
+      {
+        "itemId": 6676,
+        "condition": "general",
+        "description": "The Collector — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -23991,12 +24160,12 @@
     "sampleSize": 50
   },
   {
-    "id": 20277,
+    "id": 20267,
     "championId": "Viego",
     "mode": "ARAM",
     "role": null,
     "archetype": "ad",
-    "patch": "15.20",
+    "patch": "15.19",
     "starterItems": [
       2021,
       2022
@@ -24005,14 +24174,14 @@
       6610,
       3153,
       6333,
-      3091,
-      3065
+      3053,
+      3091
     ],
     "coreItemStats": {
-      "3065": {
-        "games": 14,
-        "pickRate": 2,
-        "winRate": 43
+      "3053": {
+        "games": 82,
+        "pickRate": 14,
+        "winRate": 49
       },
       "3091": {
         "games": 74,
@@ -24057,14 +24226,14 @@
         "description": "Infinity Edge — popular alternative (built in 18% of games)"
       },
       {
-        "itemId": 3053,
-        "condition": "general",
-        "description": "Sterak's Gage — popular alternative (built in 14% of games)"
-      },
-      {
         "itemId": 3036,
         "condition": "general",
         "description": "Lord Dominik's Regards — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 6672,
+        "condition": "general",
+        "description": "Kraken Slayer — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -24091,13 +24260,13 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 573 challenger/grandmaster/master games on patch 15.20 · 52% win rate."
+      "Aggregated from 573 challenger/grandmaster/master games on patch 15.19 · 52% win rate."
     ],
     "winRate": 51.8,
     "sampleSize": 573
   },
   {
-    "id": 20251,
+    "id": 20100,
     "championId": "Viktor",
     "mode": "ARAM",
     "role": null,
@@ -24192,7 +24361,7 @@
     "sampleSize": 797
   },
   {
-    "id": 20001,
+    "id": 20147,
     "championId": "Vladimir",
     "mode": "ARAM",
     "role": null,
@@ -24287,12 +24456,12 @@
     "sampleSize": 450
   },
   {
-    "id": 20002,
+    "id": 20148,
     "championId": "Vladimir",
     "mode": "ARAM",
     "role": null,
     "archetype": "hybrid",
-    "patch": "15.19",
+    "patch": "15.24",
     "starterItems": [
       3147
     ],
@@ -24366,13 +24535,13 @@
     "skillMaxOrder": "Q > E > W",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 62 challenger/grandmaster/master games on patch 15.19 · 55% win rate."
+      "Aggregated from 62 challenger/grandmaster/master games on patch 15.24 · 55% win rate."
     ],
     "winRate": 54.8,
     "sampleSize": 62
   },
   {
-    "id": 20152,
+    "id": 20200,
     "championId": "Volibear",
     "mode": "ARAM",
     "role": null,
@@ -24384,9 +24553,9 @@
     ],
     "coreItems": [
       3084,
+      6657,
       2502,
       3065,
-      3083,
       3075
     ],
     "coreItemStats": {
@@ -24405,15 +24574,15 @@
         "pickRate": 42,
         "winRate": 49
       },
-      "3083": {
-        "games": 37,
-        "pickRate": 15,
-        "winRate": 57
-      },
       "3084": {
         "games": 217,
         "pickRate": 86,
         "winRate": 51
+      },
+      "6657": {
+        "games": 13,
+        "pickRate": 5,
+        "winRate": 54
       }
     },
     "situationalItems": [
@@ -24421,6 +24590,11 @@
         "itemId": 3110,
         "condition": "enemy_heavy_cc",
         "description": "Frozen Heart — vs CC (33% pick vs 7% baseline)"
+      },
+      {
+        "itemId": 3083,
+        "condition": "general",
+        "description": "Warmog's Armor — popular alternative (built in 15% of games)"
       },
       {
         "itemId": 3119,
@@ -24463,12 +24637,12 @@
     "sampleSize": 252
   },
   {
-    "id": 20153,
+    "id": 20201,
     "championId": "Volibear",
     "mode": "ARAM",
     "role": null,
     "archetype": "bruiser",
-    "patch": "16.9",
+    "patch": "15.16",
     "starterItems": [
       3803
     ],
@@ -24557,13 +24731,13 @@
     "skillMaxOrder": "W > Q > E",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 50 challenger/grandmaster/master games on patch 16.9 · 50% win rate."
+      "Aggregated from 50 challenger/grandmaster/master games on patch 15.16 · 50% win rate."
     ],
     "winRate": 50,
     "sampleSize": 50
   },
   {
-    "id": 20154,
+    "id": 20202,
     "championId": "Volibear",
     "mode": "ARAM",
     "role": null,
@@ -24618,14 +24792,14 @@
         "description": "Heartsteel — popular alternative (built in 20% of games)"
       },
       {
-        "itemId": 2510,
-        "condition": "general",
-        "description": "Dusk and Dawn — popular alternative (built in 14% of games)"
-      },
-      {
         "itemId": 3152,
         "condition": "general",
         "description": "Hextech Rocketbelt — popular alternative (built in 14% of games)"
+      },
+      {
+        "itemId": 2510,
+        "condition": "general",
+        "description": "Dusk and Dawn — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [
@@ -24658,7 +24832,7 @@
     "sampleSize": 35
   },
   {
-    "id": 20189,
+    "id": 20246,
     "championId": "Warwick",
     "mode": "ARAM",
     "role": null,
@@ -24714,14 +24888,14 @@
         "description": "Titanic Hydra — popular alternative (built in 14% of games)"
       },
       {
-        "itemId": 3091,
-        "condition": "general",
-        "description": "Wit's End — popular alternative (built in 11% of games)"
-      },
-      {
         "itemId": 3074,
         "condition": "general",
         "description": "Ravenous Hydra — popular alternative (built in 11% of games)"
+      },
+      {
+        "itemId": 3091,
+        "condition": "general",
+        "description": "Wit's End — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -24754,7 +24928,7 @@
     "sampleSize": 188
   },
   {
-    "id": 20190,
+    "id": 20247,
     "championId": "Warwick",
     "mode": "ARAM",
     "role": null,
@@ -24767,8 +24941,8 @@
     "coreItems": [
       3084,
       3065,
+      3153,
       3748,
-      3110,
       3075
     ],
     "coreItemStats": {
@@ -24787,10 +24961,10 @@
         "pickRate": 66,
         "winRate": 41
       },
-      "3110": {
-        "games": 6,
-        "pickRate": 9,
-        "winRate": 33
+      "3153": {
+        "games": 8,
+        "pickRate": 12,
+        "winRate": 38
       },
       "3748": {
         "games": 7,
@@ -24799,6 +24973,11 @@
       }
     },
     "situationalItems": [
+      {
+        "itemId": 3110,
+        "condition": "enemy_has_tanks",
+        "description": "Frozen Heart — vs tanks (27% pick vs 9% baseline)"
+      },
       {
         "itemId": 6610,
         "condition": "general",
@@ -24818,11 +24997,6 @@
         "itemId": 3143,
         "condition": "general",
         "description": "Randuin's Omen — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 3153,
-        "condition": "general",
-        "description": "Blade of The Ruined King — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -24855,7 +25029,7 @@
     "sampleSize": 67
   },
   {
-    "id": 20197,
+    "id": 20029,
     "championId": "Xayah",
     "mode": "ARAM",
     "role": null,
@@ -24950,7 +25124,7 @@
     "sampleSize": 933
   },
   {
-    "id": 20093,
+    "id": 20028,
     "championId": "Xerath",
     "mode": "ARAM",
     "role": null,
@@ -25050,7 +25224,7 @@
     "sampleSize": 872
   },
   {
-    "id": 20148,
+    "id": 20279,
     "championId": "XinZhao",
     "mode": "ARAM",
     "role": null,
@@ -25141,12 +25315,12 @@
     "sampleSize": 329
   },
   {
-    "id": 20149,
+    "id": 20280,
     "championId": "XinZhao",
     "mode": "ARAM",
     "role": null,
     "archetype": "bruiser",
-    "patch": "16.3",
+    "patch": "15.17",
     "starterItems": [
       2021,
       2022
@@ -25231,13 +25405,13 @@
     "skillMaxOrder": "W > E > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 45 challenger/grandmaster/master games on patch 16.3 · 56% win rate."
+      "Aggregated from 45 challenger/grandmaster/master games on patch 15.17 · 56% win rate."
     ],
     "winRate": 55.6,
     "sampleSize": 45
   },
   {
-    "id": 20063,
+    "id": 20105,
     "championId": "Yasuo",
     "mode": "ARAM",
     "role": null,
@@ -25327,7 +25501,7 @@
     "sampleSize": 714
   },
   {
-    "id": 20064,
+    "id": 20106,
     "championId": "Yasuo",
     "mode": "ARAM",
     "role": null,
@@ -25422,7 +25596,7 @@
     "sampleSize": 69
   },
   {
-    "id": 20106,
+    "id": 20265,
     "championId": "Yone",
     "mode": "ARAM",
     "role": null,
@@ -25517,7 +25691,7 @@
     "sampleSize": 746
   },
   {
-    "id": 20107,
+    "id": 20266,
     "championId": "Yone",
     "mode": "ARAM",
     "role": null,
@@ -25567,14 +25741,14 @@
         "description": "Stridebreaker — vs CC (29% pick vs 6% baseline)"
       },
       {
-        "itemId": 3031,
-        "condition": "general",
-        "description": "Infinity Edge — popular alternative (built in 29% of games)"
-      },
-      {
         "itemId": 6662,
         "condition": "general",
         "description": "Iceborn Gauntlet — popular alternative (built in 29% of games)"
+      },
+      {
+        "itemId": 3031,
+        "condition": "general",
+        "description": "Infinity Edge — popular alternative (built in 29% of games)"
       },
       {
         "itemId": 3084,
@@ -25622,7 +25796,7 @@
     "sampleSize": 65
   },
   {
-    "id": 20040,
+    "id": 20152,
     "championId": "Yorick",
     "mode": "ARAM",
     "role": null,
@@ -25713,7 +25887,7 @@
     "sampleSize": 113
   },
   {
-    "id": 20041,
+    "id": 20153,
     "championId": "Yorick",
     "mode": "ARAM",
     "role": null,
@@ -25769,14 +25943,14 @@
         "description": "Serylda's Grudge — popular alternative (built in 26% of games)"
       },
       {
-        "itemId": 3004,
-        "condition": "general",
-        "description": "Manamune — popular alternative (built in 14% of games)"
-      },
-      {
         "itemId": 3161,
         "condition": "general",
         "description": "Spear of Shojin — popular alternative (built in 14% of games)"
+      },
+      {
+        "itemId": 3004,
+        "condition": "general",
+        "description": "Manamune — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 126697,
@@ -25814,7 +25988,7 @@
     "sampleSize": 58
   },
   {
-    "id": 20042,
+    "id": 20154,
     "championId": "Yorick",
     "mode": "ARAM",
     "role": null,
@@ -25900,7 +26074,7 @@
     "sampleSize": 47
   },
   {
-    "id": 20182,
+    "id": 20088,
     "championId": "Yunara",
     "mode": "ARAM",
     "role": null,
@@ -25972,7 +26146,7 @@
     ],
     "bootsOptions": [
       3006,
-      3008
+      3111
     ],
     "primaryPathId": 8000,
     "keystoneId": 8008,
@@ -26000,7 +26174,7 @@
     "sampleSize": 607
   },
   {
-    "id": 20260,
+    "id": 20084,
     "championId": "Yuumi",
     "mode": "ARAM",
     "role": null,
@@ -26106,7 +26280,7 @@
     "sampleSize": 435
   },
   {
-    "id": 20261,
+    "id": 20085,
     "championId": "Yuumi",
     "mode": "ARAM",
     "role": null,
@@ -26192,7 +26366,7 @@
     "sampleSize": 76
   },
   {
-    "id": 20165,
+    "id": 20294,
     "championId": "Zaahen",
     "mode": "ARAM",
     "role": null,
@@ -26283,7 +26457,7 @@
     "sampleSize": 197
   },
   {
-    "id": 20192,
+    "id": 20000,
     "championId": "Zac",
     "mode": "ARAM",
     "role": null,
@@ -26374,21 +26548,21 @@
     "sampleSize": 339
   },
   {
-    "id": 20193,
+    "id": 20001,
     "championId": "Zac",
     "mode": "ARAM",
     "role": null,
     "archetype": "hybrid",
-    "patch": "15.20",
+    "patch": "15.16",
     "starterItems": [
       3147
     ],
     "coreItems": [
+      8010,
       6653,
       3065,
       6665,
-      2502,
-      8020
+      2502
     ],
     "coreItemStats": {
       "2502": {
@@ -26411,10 +26585,10 @@
         "pickRate": 13,
         "winRate": 25
       },
-      "8020": {
+      "8010": {
         "games": 3,
         "pickRate": 10,
-        "winRate": 0
+        "winRate": 33
       }
     },
     "situationalItems": [
@@ -26439,14 +26613,14 @@
         "description": "Heartsteel — popular alternative (built in 17% of games)"
       },
       {
-        "itemId": 8010,
-        "condition": "general",
-        "description": "Bloodletter's Curse — popular alternative (built in 10% of games)"
-      },
-      {
         "itemId": 3075,
         "condition": "general",
         "description": "Thornmail — popular alternative (built in 10% of games)"
+      },
+      {
+        "itemId": 8020,
+        "condition": "general",
+        "description": "Abyssal Mask — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -26473,13 +26647,13 @@
     "skillMaxOrder": "E > W > Q",
     "skillStart": "Q",
     "notes": [
-      "Aggregated from 30 challenger/grandmaster/master games on patch 15.20 · 53% win rate."
+      "Aggregated from 30 challenger/grandmaster/master games on patch 15.16 · 53% win rate."
     ],
     "winRate": 53.3,
     "sampleSize": 30
   },
   {
-    "id": 20236,
+    "id": 20277,
     "championId": "Zed",
     "mode": "ARAM",
     "role": null,
@@ -26570,7 +26744,7 @@
     "sampleSize": 857
   },
   {
-    "id": 20130,
+    "id": 20127,
     "championId": "Zeri",
     "mode": "ARAM",
     "role": null,
@@ -26660,7 +26834,7 @@
     "sampleSize": 554
   },
   {
-    "id": 20131,
+    "id": 20128,
     "championId": "Zeri",
     "mode": "ARAM",
     "role": null,
@@ -26714,20 +26888,20 @@
       3020,
       3006
     ],
-    "primaryPathId": 8100,
-    "keystoneId": 8128,
+    "primaryPathId": 8000,
+    "keystoneId": 8008,
     "primaryRuneIds": [
-      8143,
-      8140,
+      8009,
+      9104,
+      8017
+    ],
+    "secondaryPathId": 8100,
+    "secondaryRuneIds": [
+      8139,
       8106
     ],
-    "secondaryPathId": 8200,
-    "secondaryRuneIds": [
-      8224,
-      8210
-    ],
     "statRuneIds": [
-      5007,
+      5005,
       5008,
       5001
     ],
@@ -26740,7 +26914,7 @@
     "sampleSize": 25
   },
   {
-    "id": 20047,
+    "id": 20205,
     "championId": "Ziggs",
     "mode": "ARAM",
     "role": null,
@@ -26840,7 +27014,7 @@
     "sampleSize": 821
   },
   {
-    "id": 20143,
+    "id": 20198,
     "championId": "Zilean",
     "mode": "ARAM",
     "role": null,
@@ -26852,9 +27026,9 @@
     "coreItems": [
       6655,
       4645,
-      4628,
       3089,
-      3135
+      3137,
+      3157
     ],
     "coreItemStats": {
       "3089": {
@@ -26862,15 +27036,15 @@
         "pickRate": 29,
         "winRate": 50
       },
-      "3135": {
-        "games": 27,
-        "pickRate": 4,
-        "winRate": 52
+      "3137": {
+        "games": 74,
+        "pickRate": 12,
+        "winRate": 51
       },
-      "4628": {
-        "games": 92,
-        "pickRate": 15,
-        "winRate": 38
+      "3157": {
+        "games": 35,
+        "pickRate": 6,
+        "winRate": 46
       },
       "4645": {
         "games": 191,
@@ -26900,9 +27074,9 @@
         "description": "Malignance — popular alternative (built in 16% of games)"
       },
       {
-        "itemId": 3137,
+        "itemId": 4628,
         "condition": "general",
-        "description": "Cryptbloom — popular alternative (built in 12% of games)"
+        "description": "Horizon Focus — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -26935,7 +27109,7 @@
     "sampleSize": 619
   },
   {
-    "id": 20144,
+    "id": 20199,
     "championId": "Zilean",
     "mode": "ARAM",
     "role": null,
@@ -27035,7 +27209,7 @@
     "sampleSize": 25
   },
   {
-    "id": 20175,
+    "id": 20087,
     "championId": "Zoe",
     "mode": "ARAM",
     "role": null,
@@ -27109,7 +27283,7 @@
     "sampleSize": 714
   },
   {
-    "id": 20278,
+    "id": 20150,
     "championId": "Zyra",
     "mode": "ARAM",
     "role": null,
