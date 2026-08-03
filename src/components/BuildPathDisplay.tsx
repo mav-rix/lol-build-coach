@@ -193,7 +193,7 @@ export function BuildPathDisplay({
           {build.sampleSize && ` · ${build.sampleSize.toLocaleString()} games`} ·{' '}
           {build.patch === 'seed'
             ? 'hand-tuned seed build'
-            : `high-elo data from patch ${build.patch}`}
+            : `${build.sampleTiers ?? 'high-elo'} data from patch ${build.patch}`}
         </p>
       )}
     </div>
