@@ -97,6 +97,7 @@
     "starterItems": [],
     "coreItems": [
       223003,
+      226657,
       223165,
       223089,
       226655
@@ -121,6 +122,11 @@
         "games": 6,
         "pickRate": 29,
         "winRate": 83
+      },
+      "226657": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 0
       }
     },
     "situationalItems": [
@@ -348,10 +354,16 @@
     "coreItems": [
       223084,
       223068,
+      223050,
       226665,
       223075
     ],
     "coreItemStats": {
+      "223050": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 100
+      },
       "223068": {
         "games": 9,
         "pickRate": 45,
@@ -374,11 +386,6 @@
       }
     },
     "situationalItems": [
-      {
-        "itemId": 223050,
-        "condition": "general",
-        "description": "Zeke's Convergence — popular alternative (built in 10% of games)"
-      },
       {
         "itemId": 226662,
         "condition": "general",
@@ -429,8 +436,10 @@
     "starterItems": [],
     "coreItems": [
       226676,
+      223161,
       223033,
-      223031
+      223031,
+      226333
     ],
     "coreItemStats": {
       "223031": {
@@ -442,6 +451,16 @@
         "games": 9,
         "pickRate": 35,
         "winRate": 67
+      },
+      "223161": {
+        "games": 3,
+        "pickRate": 12,
+        "winRate": 33
+      },
+      "226333": {
+        "games": 2,
+        "pickRate": 8,
+        "winRate": 50
       },
       "226676": {
         "games": 9,
@@ -469,11 +488,6 @@
         "itemId": 222517,
         "condition": "general",
         "description": "Endless Hunger — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 223161,
-        "condition": "general",
-        "description": "Spear of Shojin — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -812,7 +826,9 @@
     "coreItems": [
       223031,
       223033,
-      226672
+      223124,
+      226672,
+      223072
     ],
     "coreItemStats": {
       "223031": {
@@ -824,6 +840,16 @@
         "games": 4,
         "pickRate": 20,
         "winRate": 25
+      },
+      "223072": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 50
+      },
+      "223124": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 0
       },
       "226672": {
         "games": 7,
@@ -848,19 +874,14 @@
         "description": "Yun Tal Wildarrows — popular alternative (built in 15% of games)"
       },
       {
-        "itemId": 223124,
-        "condition": "general",
-        "description": "Guinsoo's Rageblade — popular alternative (built in 10% of games)"
-      },
-      {
-        "itemId": 223072,
-        "condition": "general",
-        "description": "Bloodthirster — popular alternative (built in 10% of games)"
-      },
-      {
         "itemId": 223091,
         "condition": "general",
         "description": "Wit's End — popular alternative (built in 10% of games)"
+      },
+      {
+        "itemId": 226676,
+        "condition": "general",
+        "description": "The Collector — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -1559,6 +1580,7 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      226675,
       223153,
       223071,
       226333
@@ -1578,6 +1600,11 @@
         "games": 6,
         "pickRate": 30,
         "winRate": 50
+      },
+      "226675": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 0
       }
     },
     "situationalItems": [
@@ -1600,11 +1627,6 @@
         "itemId": 223031,
         "condition": "general",
         "description": "Infinity Edge — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 226675,
-        "condition": "general",
-        "description": "Navori Flickerblades — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -1647,6 +1669,7 @@
     "coreItems": [
       226676,
       223031,
+      223153,
       223033,
       223072
     ],
@@ -1666,6 +1689,11 @@
         "pickRate": 14,
         "winRate": 60
       },
+      "223153": {
+        "games": 4,
+        "pickRate": 11,
+        "winRate": 50
+      },
       "226676": {
         "games": 14,
         "pickRate": 39,
@@ -1677,11 +1705,6 @@
         "itemId": 223036,
         "condition": "general",
         "description": "Lord Dominik's Regards — popular alternative (built in 22% of games)"
-      },
-      {
-        "itemId": 223153,
-        "condition": "general",
-        "description": "Blade of The Ruined King — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -1893,6 +1916,7 @@
     "coreItems": [
       223084,
       223068,
+      224633,
       222502,
       223075
     ],
@@ -1916,6 +1940,11 @@
         "games": 18,
         "pickRate": 95,
         "winRate": 67
+      },
+      "224633": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 100
       }
     },
     "situationalItems": [
@@ -1923,11 +1952,6 @@
         "itemId": 226665,
         "condition": "general",
         "description": "Jak'Sho, The Protean — popular alternative (built in 26% of games)"
-      },
-      {
-        "itemId": 224633,
-        "condition": "general",
-        "description": "Riftmaker — popular alternative (built in 11% of games)"
       },
       {
         "itemId": 223143,
@@ -2237,6 +2261,7 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      223156,
       223031,
       223072,
       223036,
@@ -2262,6 +2287,11 @@
         "games": 2,
         "pickRate": 10,
         "winRate": 100
+      },
+      "223156": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 50
       }
     },
     "situationalItems": [
@@ -2274,11 +2304,6 @@
         "itemId": 223033,
         "condition": "general",
         "description": "Mortal Reminder — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 223156,
-        "condition": "general",
-        "description": "Maw of Malmortius — popular alternative (built in 10% of games)"
       },
       {
         "itemId": 226673,
@@ -2412,6 +2437,7 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      223146,
       223100,
       223004,
       223089,
@@ -2432,6 +2458,11 @@
         "games": 6,
         "pickRate": 26,
         "winRate": 50
+      },
+      "223146": {
+        "games": 2,
+        "pickRate": 9,
+        "winRate": 100
       },
       "223165": {
         "games": 2,
@@ -2633,6 +2664,7 @@
       223004,
       223078,
       223003,
+      223161,
       223072
     ],
     "coreItemStats": {
@@ -2655,6 +2687,11 @@
         "games": 10,
         "pickRate": 53,
         "winRate": 50
+      },
+      "223161": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 0
       }
     },
     "situationalItems": [
@@ -2672,11 +2709,6 @@
         "itemId": 223146,
         "condition": "general",
         "description": "Hextech Gunblade — popular alternative (built in 16% of games)"
-      },
-      {
-        "itemId": 223161,
-        "condition": "general",
-        "description": "Spear of Shojin — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -2792,9 +2824,15 @@
       223074,
       223078,
       223053,
+      223033,
       226333
     ],
     "coreItemStats": {
+      "223033": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 100
+      },
       "223053": {
         "games": 2,
         "pickRate": 12,
@@ -2821,11 +2859,6 @@
         "itemId": 226610,
         "condition": "general",
         "description": "Sundered Sky — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 223033,
-        "condition": "general",
-        "description": "Mortal Reminder — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 226699,
@@ -2874,7 +2907,8 @@
       223100,
       223089,
       224645,
-      226655
+      226655,
+      223165
     ],
     "coreItemStats": {
       "223089": {
@@ -2886,6 +2920,11 @@
         "games": 9,
         "pickRate": 64,
         "winRate": 67
+      },
+      "223165": {
+        "games": 2,
+        "pickRate": 14,
+        "winRate": 100
       },
       "224645": {
         "games": 2,
@@ -2899,11 +2938,6 @@
       }
     },
     "situationalItems": [
-      {
-        "itemId": 223165,
-        "condition": "general",
-        "description": "Morellonomicon — popular alternative (built in 14% of games)"
-      },
       {
         "itemId": 223003,
         "condition": "general",
@@ -3041,8 +3075,10 @@
     "patch": "15.24",
     "starterItems": [],
     "coreItems": [
+      223508,
       226676,
       223031,
+      226697,
       223033
     ],
     "coreItemStats": {
@@ -3056,10 +3092,20 @@
         "pickRate": 24,
         "winRate": 60
       },
+      "223508": {
+        "games": 3,
+        "pickRate": 14,
+        "winRate": 0
+      },
       "226676": {
         "games": 13,
         "pickRate": 62,
         "winRate": 31
+      },
+      "226697": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 50
       }
     },
     "situationalItems": [
@@ -3072,11 +3118,6 @@
         "itemId": 223078,
         "condition": "general",
         "description": "Trinity Force — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 223508,
-        "condition": "general",
-        "description": "Essence Reaver — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [
@@ -3119,7 +3160,9 @@
     "coreItems": [
       223031,
       223046,
-      223033
+      223039,
+      223033,
+      226333
     ],
     "coreItemStats": {
       "223031": {
@@ -3132,10 +3175,20 @@
         "pickRate": 32,
         "winRate": 29
       },
+      "223039": {
+        "games": 2,
+        "pickRate": 9,
+        "winRate": 50
+      },
       "223046": {
         "games": 7,
         "pickRate": 32,
         "winRate": 14
+      },
+      "226333": {
+        "games": 2,
+        "pickRate": 9,
+        "winRate": 50
       }
     },
     "situationalItems": [],
@@ -3333,7 +3386,9 @@
     "coreItems": [
       226676,
       223031,
-      223036
+      223036,
+      226673,
+      226695
     ],
     "coreItemStats": {
       "223031": {
@@ -3346,10 +3401,20 @@
         "pickRate": 27,
         "winRate": 100
       },
+      "226673": {
+        "games": 3,
+        "pickRate": 12,
+        "winRate": 100
+      },
       "226676": {
         "games": 16,
         "pickRate": 62,
         "winRate": 69
+      },
+      "226695": {
+        "games": 2,
+        "pickRate": 8,
+        "winRate": 100
       }
     },
     "situationalItems": [
@@ -3362,11 +3427,6 @@
         "itemId": 223072,
         "condition": "general",
         "description": "Bloodthirster — popular alternative (built in 23% of games)"
-      },
-      {
-        "itemId": 226673,
-        "condition": "general",
-        "description": "Immortal Shieldbow — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -4034,6 +4094,8 @@
     "coreItems": [
       223078,
       223153,
+      226610,
+      223157,
       223091
     ],
     "coreItemStats": {
@@ -4051,6 +4113,16 @@
         "games": 11,
         "pickRate": 46,
         "winRate": 91
+      },
+      "223157": {
+        "games": 3,
+        "pickRate": 13,
+        "winRate": 100
+      },
+      "226610": {
+        "games": 3,
+        "pickRate": 13,
+        "winRate": 100
       }
     },
     "situationalItems": [
@@ -4078,11 +4150,6 @@
         "itemId": 223053,
         "condition": "general",
         "description": "Sterak's Gage — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 226610,
-        "condition": "general",
-        "description": "Sundered Sky — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -4212,6 +4279,7 @@
     "coreItems": [
       226676,
       223031,
+      223087,
       223094,
       223033
     ],
@@ -4225,6 +4293,11 @@
         "games": 10,
         "pickRate": 30,
         "winRate": 70
+      },
+      "223087": {
+        "games": 3,
+        "pickRate": 9,
+        "winRate": 67
       },
       "223094": {
         "games": 11,
@@ -4294,7 +4367,9 @@
     "coreItems": [
       223032,
       223031,
-      223033
+      226672,
+      223033,
+      223172
     ],
     "coreItemStats": {
       "223031": {
@@ -4311,6 +4386,16 @@
         "games": 7,
         "pickRate": 41,
         "winRate": 43
+      },
+      "223172": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 100
+      },
+      "226672": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 0
       }
     },
     "situationalItems": [
@@ -4323,16 +4408,6 @@
         "itemId": 226694,
         "condition": "general",
         "description": "Serylda's Grudge — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 223172,
-        "condition": "general",
-        "description": "Zephyr — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 226672,
-        "condition": "general",
-        "description": "Kraken Slayer — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -5670,46 +5745,6 @@
     "sampleSize": 12
   },
   {
-    "id": 20022,
-    "championId": "LeeSin",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.5",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223111,
-      223047
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > W > E",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 14 challenger/grandmaster/master games on patch 15.5 · 57% win rate."
-    ],
-    "winRate": 57.1,
-    "sampleSize": 14
-  },
-  {
     "id": 20033,
     "championId": "Leona",
     "mode": "ARENA",
@@ -5791,7 +5826,10 @@
     "starterItems": [],
     "coreItems": [
       226653,
-      222503
+      226657,
+      222503,
+      223118,
+      224629
     ],
     "coreItemStats": {
       "222503": {
@@ -5799,10 +5837,25 @@
         "pickRate": 29,
         "winRate": 50
       },
+      "223118": {
+        "games": 3,
+        "pickRate": 11,
+        "winRate": 33
+      },
+      "224629": {
+        "games": 3,
+        "pickRate": 11,
+        "winRate": 67
+      },
       "226653": {
         "games": 22,
         "pickRate": 79,
         "winRate": 45
+      },
+      "226657": {
+        "games": 3,
+        "pickRate": 11,
+        "winRate": 100
       }
     },
     "situationalItems": [
@@ -5822,19 +5875,9 @@
         "description": "Riftmaker — popular alternative (built in 25% of games)"
       },
       {
-        "itemId": 226657,
+        "itemId": 223165,
         "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 11% of games)"
-      },
-      {
-        "itemId": 223118,
-        "condition": "general",
-        "description": "Malignance — popular alternative (built in 11% of games)"
-      },
-      {
-        "itemId": 224629,
-        "condition": "general",
-        "description": "Cosmic Drive — popular alternative (built in 11% of games)"
+        "description": "Morellonomicon — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -6292,6 +6335,7 @@
     "coreItems": [
       226653,
       222503,
+      223165,
       223118,
       223089
     ],
@@ -6310,6 +6354,11 @@
         "games": 13,
         "pickRate": 41,
         "winRate": 69
+      },
+      "223165": {
+        "games": 3,
+        "pickRate": 9,
+        "winRate": 67
       },
       "226653": {
         "games": 24,
@@ -6636,12 +6685,18 @@
     "patch": "16.8",
     "starterItems": [],
     "coreItems": [
+      223107,
       223504,
       226617,
       226620,
       226621
     ],
     "coreItemStats": {
+      "223107": {
+        "games": 2,
+        "pickRate": 13,
+        "winRate": 100
+      },
       "223504": {
         "games": 7,
         "pickRate": 44,
@@ -6675,11 +6730,6 @@
         "description": "Rabadon's Deathcap — popular alternative (built in 19% of games)"
       },
       {
-        "itemId": 223107,
-        "condition": "general",
-        "description": "Redemption — popular alternative (built in 13% of games)"
-      },
-      {
         "itemId": 226655,
         "condition": "general",
         "description": "Luden's Echo — popular alternative (built in 13% of games)"
@@ -6693,6 +6743,11 @@
         "itemId": 222503,
         "condition": "general",
         "description": "Blackfire Torch — popular alternative (built in 13% of games)"
+      },
+      {
+        "itemId": 223118,
+        "condition": "general",
+        "description": "Malignance — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -6895,7 +6950,8 @@
       224633,
       226653,
       223116,
-      223089
+      223089,
+      223165
     ],
     "coreItemStats": {
       "223089": {
@@ -6907,6 +6963,11 @@
         "games": 14,
         "pickRate": 61,
         "winRate": 43
+      },
+      "223165": {
+        "games": 2,
+        "pickRate": 9,
+        "winRate": 100
       },
       "224633": {
         "games": 13,
@@ -6967,7 +7028,8 @@
       226653,
       223089,
       223003,
-      223157
+      223157,
+      223135
     ],
     "coreItemStats": {
       "223003": {
@@ -6979,6 +7041,11 @@
         "games": 11,
         "pickRate": 44,
         "winRate": 73
+      },
+      "223135": {
+        "games": 3,
+        "pickRate": 12,
+        "winRate": 100
       },
       "223157": {
         "games": 12,
@@ -7001,11 +7068,6 @@
         "itemId": 223118,
         "condition": "general",
         "description": "Malignance — popular alternative (built in 20% of games)"
-      },
-      {
-        "itemId": 223135,
-        "condition": "general",
-        "description": "Void Staff — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 226655,
@@ -7053,9 +7115,21 @@
     "coreItems": [
       226699,
       226694,
-      226695
+      226609,
+      226695,
+      223033
     ],
     "coreItemStats": {
+      "223033": {
+        "games": 3,
+        "pickRate": 13,
+        "winRate": 67
+      },
+      "226609": {
+        "games": 3,
+        "pickRate": 13,
+        "winRate": 67
+      },
       "226694": {
         "games": 8,
         "pickRate": 35,
@@ -7077,16 +7151,6 @@
         "itemId": 226692,
         "condition": "general",
         "description": "Eclipse — popular alternative (built in 22% of games)"
-      },
-      {
-        "itemId": 226609,
-        "condition": "general",
-        "description": "Chempunk Chainsword — popular alternative (built in 13% of games)"
-      },
-      {
-        "itemId": 223033,
-        "condition": "general",
-        "description": "Mortal Reminder — popular alternative (built in 13% of games)"
       },
       {
         "itemId": 226676,
@@ -7308,7 +7372,9 @@
     "starterItems": [],
     "coreItems": [
       223084,
+      226664,
       223068,
+      223109,
       223065
     ],
     "coreItemStats": {
@@ -7326,6 +7392,16 @@
         "games": 18,
         "pickRate": 95,
         "winRate": 39
+      },
+      "223109": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 50
+      },
+      "226664": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 50
       }
     },
     "situationalItems": [
@@ -7338,16 +7414,6 @@
         "itemId": 226665,
         "condition": "general",
         "description": "Jak'Sho, The Protean — popular alternative (built in 16% of games)"
-      },
-      {
-        "itemId": 223109,
-        "condition": "general",
-        "description": "Knight's Vow — popular alternative (built in 11% of games)"
-      },
-      {
-        "itemId": 226664,
-        "condition": "general",
-        "description": "Hollow Radiance — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -8560,46 +8626,6 @@
     "sampleSize": 19
   },
   {
-    "id": 20157,
-    "championId": "RekSai",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "other",
-    "patch": "15.8",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223047,
-      223006
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 5 challenger/grandmaster/master games on patch 15.8 · 40% win rate."
-    ],
-    "winRate": 40,
-    "sampleSize": 5
-  },
-  {
     "id": 20104,
     "championId": "Rell",
     "mode": "ARENA",
@@ -9318,6 +9344,7 @@
       223031,
       223033,
       223153,
+      223072,
       222523
     ],
     "coreItemStats": {
@@ -9335,6 +9362,11 @@
         "games": 12,
         "pickRate": 44,
         "winRate": 50
+      },
+      "223072": {
+        "games": 3,
+        "pickRate": 11,
+        "winRate": 67
       },
       "223153": {
         "games": 3,
@@ -9357,11 +9389,6 @@
         "itemId": 226676,
         "condition": "general",
         "description": "The Collector — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 223072,
-        "condition": "general",
-        "description": "Bloodthirster — popular alternative (built in 11% of games)"
       },
       {
         "itemId": 223071,
@@ -9410,7 +9437,8 @@
       223003,
       223116,
       226653,
-      223165
+      223165,
+      224645
     ],
     "coreItemStats": {
       "223003": {
@@ -9427,6 +9455,11 @@
         "games": 4,
         "pickRate": 25,
         "winRate": 50
+      },
+      "224645": {
+        "games": 2,
+        "pickRate": 13,
+        "winRate": 100
       },
       "226653": {
         "games": 8,
@@ -9449,11 +9482,6 @@
         "itemId": 222503,
         "condition": "general",
         "description": "Blackfire Torch — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 224645,
-        "condition": "general",
-        "description": "Shadowflame — popular alternative (built in 13% of games)"
       }
     ],
     "bootsOptions": [
@@ -9893,12 +9921,18 @@
     "coreItems": [
       223084,
       223068,
-      222502
+      222502,
+      222504
     ],
     "coreItemStats": {
       "222502": {
         "games": 4,
         "pickRate": 19,
+        "winRate": 100
+      },
+      "222504": {
+        "games": 2,
+        "pickRate": 10,
         "winRate": 100
       },
       "223068": {
@@ -10111,7 +10145,10 @@
     "starterItems": [],
     "coreItems": [
       223031,
-      223033
+      223033,
+      226673,
+      223094,
+      223156
     ],
     "coreItemStats": {
       "223031": {
@@ -10123,6 +10160,21 @@
         "games": 9,
         "pickRate": 33,
         "winRate": 78
+      },
+      "223094": {
+        "games": 4,
+        "pickRate": 15,
+        "winRate": 50
+      },
+      "223156": {
+        "games": 2,
+        "pickRate": 7,
+        "winRate": 100
+      },
+      "226673": {
+        "games": 2,
+        "pickRate": 7,
+        "winRate": 0
       }
     },
     "situationalItems": [
@@ -10140,11 +10192,6 @@
         "itemId": 223036,
         "condition": "general",
         "description": "Lord Dominik's Regards — popular alternative (built in 19% of games)"
-      },
-      {
-        "itemId": 223094,
-        "condition": "general",
-        "description": "Rapid Firecannon — popular alternative (built in 15% of games)"
       }
     ],
     "bootsOptions": [
@@ -10185,6 +10232,7 @@
     "patch": "16.1",
     "starterItems": [],
     "coreItems": [
+      226620,
       223003,
       223100,
       223089,
@@ -10210,6 +10258,11 @@
         "games": 5,
         "pickRate": 26,
         "winRate": 80
+      },
+      "226620": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 50
       }
     },
     "situationalItems": [
@@ -10227,11 +10280,6 @@
         "itemId": 223107,
         "condition": "general",
         "description": "Redemption — popular alternative (built in 16% of games)"
-      },
-      {
-        "itemId": 226620,
-        "condition": "general",
-        "description": "Echoes of Helia — popular alternative (built in 11% of games)"
       },
       {
         "itemId": 226657,
@@ -10349,6 +10397,7 @@
     "coreItems": [
       226653,
       223118,
+      226657,
       222503,
       224633
     ],
@@ -10372,6 +10421,11 @@
         "games": 11,
         "pickRate": 61,
         "winRate": 45
+      },
+      "226657": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 50
       }
     },
     "situationalItems": [
@@ -10389,11 +10443,6 @@
         "itemId": 223089,
         "condition": "general",
         "description": "Rabadon's Deathcap — popular alternative (built in 17% of games)"
-      },
-      {
-        "itemId": 226657,
-        "condition": "general",
-        "description": "Rod of Ages — popular alternative (built in 11% of games)"
       }
     ],
     "bootsOptions": [
@@ -10887,6 +10936,8 @@
     "coreItems": [
       226653,
       223118,
+      223115,
+      223116,
       223089
     ],
     "coreItemStats": {
@@ -10894,6 +10945,16 @@
         "games": 14,
         "pickRate": 74,
         "winRate": 50
+      },
+      "223115": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 50
+      },
+      "223116": {
+        "games": 2,
+        "pickRate": 11,
+        "winRate": 0
       },
       "223118": {
         "games": 11,
@@ -10911,16 +10972,6 @@
         "itemId": 222503,
         "condition": "general",
         "description": "Blackfire Torch — popular alternative (built in 16% of games)"
-      },
-      {
-        "itemId": 223115,
-        "condition": "general",
-        "description": "Nashor's Tooth — popular alternative (built in 11% of games)"
-      },
-      {
-        "itemId": 223116,
-        "condition": "general",
-        "description": "Rylai's Crystal Scepter — popular alternative (built in 11% of games)"
       },
       {
         "itemId": 223165,
@@ -11238,8 +11289,10 @@
     "patch": "16.7",
     "starterItems": [],
     "coreItems": [
+      223074,
       223031,
       223153,
+      223046,
       223033
     ],
     "coreItemStats": {
@@ -11252,6 +11305,16 @@
         "games": 6,
         "pickRate": 29,
         "winRate": 67
+      },
+      "223046": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 50
+      },
+      "223074": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 50
       },
       "223153": {
         "games": 11,
@@ -12073,6 +12136,7 @@
     "coreItems": [
       223039,
       226676,
+      226692,
       223031,
       223036
     ],
@@ -12096,6 +12160,11 @@
         "games": 8,
         "pickRate": 35,
         "winRate": 50
+      },
+      "226692": {
+        "games": 2,
+        "pickRate": 9,
+        "winRate": 100
       }
     },
     "situationalItems": [
@@ -12158,8 +12227,11 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      226692,
       226676,
-      223031
+      223031,
+      223302,
+      223091
     ],
     "coreItemStats": {
       "223031": {
@@ -12167,9 +12239,24 @@
         "pickRate": 53,
         "winRate": 44
       },
+      "223091": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 50
+      },
+      "223302": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 50
+      },
       "226676": {
         "games": 6,
         "pickRate": 35,
+        "winRate": 50
+      },
+      "226692": {
+        "games": 2,
+        "pickRate": 12,
         "winRate": 50
       }
     },
@@ -12193,16 +12280,6 @@
         "itemId": 226333,
         "condition": "general",
         "description": "Death's Dance — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 226692,
-        "condition": "general",
-        "description": "Eclipse — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 223302,
-        "condition": "general",
-        "description": "Terminus — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -12244,11 +12321,17 @@
     "starterItems": [],
     "coreItems": [
       226655,
+      222503,
       226653,
       223089,
       223135
     ],
     "coreItemStats": {
+      "222503": {
+        "games": 2,
+        "pickRate": 14,
+        "winRate": 100
+      },
       "223089": {
         "games": 10,
         "pickRate": 71,
@@ -12280,11 +12363,6 @@
         "itemId": 223157,
         "condition": "general",
         "description": "Zhonya's Hourglass — popular alternative (built in 21% of games)"
-      },
-      {
-        "itemId": 222503,
-        "condition": "general",
-        "description": "Blackfire Torch — popular alternative (built in 14% of games)"
       },
       {
         "itemId": 224645,
@@ -12333,13 +12411,19 @@
       224633,
       223089,
       223157,
-      226653
+      226653,
+      223135
     ],
     "coreItemStats": {
       "223089": {
         "games": 19,
         "pickRate": 86,
         "winRate": 47
+      },
+      "223135": {
+        "games": 2,
+        "pickRate": 9,
+        "winRate": 100
       },
       "223157": {
         "games": 6,
@@ -12928,7 +13012,9 @@
     "coreItems": [
       223031,
       223153,
-      223033
+      223033,
+      226676,
+      223036
     ],
     "coreItemStats": {
       "223031": {
@@ -12941,19 +13027,23 @@
         "pickRate": 27,
         "winRate": 33
       },
+      "223036": {
+        "games": 3,
+        "pickRate": 14,
+        "winRate": 100
+      },
       "223153": {
         "games": 10,
         "pickRate": 45,
         "winRate": 40
+      },
+      "226676": {
+        "games": 2,
+        "pickRate": 9,
+        "winRate": 50
       }
     },
-    "situationalItems": [
-      {
-        "itemId": 223036,
-        "condition": "general",
-        "description": "Lord Dominik's Regards — popular alternative (built in 14% of games)"
-      }
-    ],
+    "situationalItems": [],
     "bootsOptions": [
       223006,
       223008
@@ -12984,46 +13074,6 @@
     "sampleSize": 22
   },
   {
-    "id": 20063,
-    "championId": "Yorick",
-    "mode": "ARENA",
-    "role": null,
-    "archetype": "ad",
-    "patch": "16.9",
-    "starterItems": [],
-    "coreItems": [],
-    "coreItemStats": {},
-    "situationalItems": [],
-    "bootsOptions": [
-      223008,
-      223111
-    ],
-    "primaryPathId": 0,
-    "keystoneId": 0,
-    "primaryRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "secondaryPathId": 0,
-    "secondaryRuneIds": [
-      0,
-      0
-    ],
-    "statRuneIds": [
-      0,
-      0,
-      0
-    ],
-    "skillMaxOrder": "Q > E > W",
-    "skillStart": "Q",
-    "notes": [
-      "Aggregated from 4 challenger/grandmaster/master games on patch 16.9 · 75% win rate."
-    ],
-    "winRate": 75,
-    "sampleSize": 4
-  },
-  {
     "id": 20168,
     "championId": "Yunara",
     "mode": "ARENA",
@@ -13033,7 +13083,10 @@
     "starterItems": [],
     "coreItems": [
       223146,
-      223031
+      223031,
+      223046,
+      223036,
+      226673
     ],
     "coreItemStats": {
       "223031": {
@@ -13041,10 +13094,25 @@
         "pickRate": 94,
         "winRate": 63
       },
+      "223036": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 50
+      },
+      "223046": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 100
+      },
       "223146": {
         "games": 9,
         "pickRate": 53,
         "winRate": 67
+      },
+      "226673": {
+        "games": 2,
+        "pickRate": 12,
+        "winRate": 100
       }
     },
     "situationalItems": [
@@ -13052,21 +13120,6 @@
         "itemId": 223153,
         "condition": "general",
         "description": "Blade of The Ruined King — popular alternative (built in 18% of games)"
-      },
-      {
-        "itemId": 226673,
-        "condition": "general",
-        "description": "Immortal Shieldbow — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 223046,
-        "condition": "general",
-        "description": "Phantom Dancer — popular alternative (built in 12% of games)"
-      },
-      {
-        "itemId": 223036,
-        "condition": "general",
-        "description": "Lord Dominik's Regards — popular alternative (built in 12% of games)"
       },
       {
         "itemId": 222512,
@@ -13077,6 +13130,11 @@
         "itemId": 223087,
         "condition": "general",
         "description": "Statikk Shiv — popular alternative (built in 12% of games)"
+      },
+      {
+        "itemId": 223072,
+        "condition": "general",
+        "description": "Bloodthirster — popular alternative (built in 12% of games)"
       }
     ],
     "bootsOptions": [
@@ -13188,6 +13246,7 @@
     "patch": "16.9",
     "starterItems": [],
     "coreItems": [
+      223153,
       223078,
       226610
     ],
@@ -13196,6 +13255,11 @@
         "games": 13,
         "pickRate": 65,
         "winRate": 54
+      },
+      "223153": {
+        "games": 2,
+        "pickRate": 10,
+        "winRate": 50
       },
       "226610": {
         "games": 12,
@@ -13228,11 +13292,6 @@
         "itemId": 223074,
         "condition": "general",
         "description": "Ravenous Hydra — popular alternative (built in 15% of games)"
-      },
-      {
-        "itemId": 223153,
-        "condition": "general",
-        "description": "Blade of The Ruined King — popular alternative (built in 10% of games)"
       }
     ],
     "bootsOptions": [
@@ -13452,6 +13511,7 @@
     "patch": "16.8",
     "starterItems": [],
     "coreItems": [
+      226699,
       223031,
       223033,
       223072
@@ -13471,6 +13531,11 @@
         "games": 5,
         "pickRate": 36,
         "winRate": 60
+      },
+      "226699": {
+        "games": 2,
+        "pickRate": 14,
+        "winRate": 0
       }
     },
     "situationalItems": [
@@ -13483,11 +13548,6 @@
         "itemId": 223087,
         "condition": "general",
         "description": "Statikk Shiv — popular alternative (built in 21% of games)"
-      },
-      {
-        "itemId": 226699,
-        "condition": "general",
-        "description": "Voltaic Cyclosword — popular alternative (built in 14% of games)"
       }
     ],
     "bootsOptions": [

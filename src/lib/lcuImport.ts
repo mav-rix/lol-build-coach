@@ -152,7 +152,14 @@ export async function importBuildToClient(
       runeOverwrite: runesResult.overwrite,
     }
   }
-  if (itemsResult.ok) return { ok: false, message: `Item set imported, runes failed: ${runesResult?.error}` }
+  // The item set is the build. A rune page that didn't take is worth saying
+  // out loud, but it isn't a failed import and must not flip the button to a
+  // red "Retry import" — retrying would only re-write the item set that
+  // already landed. The common case is a mode with no rune pages at all (ARAM
+  // Mayhem), where `skipRunes` above normally spares us the attempt, but only
+  // when the client bridge was connected to tell us so.
+  if (itemsResult.ok)
+    return { ok: true, message: `Item set imported (no rune page — ${runesResult?.error ?? 'unavailable'})` }
   if (runesResult?.ok) return { ok: false, message: `Rune page imported, item set failed: ${itemsResult.error}` }
   return { ok: false, message: `Import failed: ${itemsResult.error}` }
 }
