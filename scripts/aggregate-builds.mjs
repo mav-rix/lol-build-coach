@@ -400,7 +400,21 @@ function aggregateCore(group) {
     // item "builds". Every remaining slot takes the best signal available
     // (players expect a full 5-item path + boots), never below 2 observations.
     const floor = chosen.length === 0 ? Math.max(2, pool.length * 0.15) : 2
-    if (best === null || bestN < floor) break
+    if (best === null || bestN < floor) {
+      // The conditioned sub-route ran dry rather than the build being over.
+      // Narrowing compounds: 43-game AD Volibear went 43 → 36 (Dusk and Dawn)
+      // → 12 (Navori), and among 12 games every third item was a singleton, so
+      // the path stopped at two items — which then reads as a broken build and
+      // gets hidden from the variant picker entirely. Widen back to the whole
+      // cluster and keep filling slots; bans stay in force, so genuinely
+      // exclusive alternative routes can't leak back in. Terminates: after
+      // widening `pool === group`, so a second dry slot breaks.
+      if (pool !== group) {
+        pool = group
+        continue
+      }
+      break
+    }
     chosen.push(best)
     // Ban alternatives to the pick: items popular in the group overall but
     // rarely built ALONGSIDE it (e.g. Mortal Reminder once Lord Dominik's is
