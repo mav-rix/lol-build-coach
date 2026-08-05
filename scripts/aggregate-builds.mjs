@@ -1020,6 +1020,7 @@ function printSampleBuilds(builds, items) {
 async function gatherMatchIds(puuids, platform) {
   const ids = new Set()
   const shuffled = [...puuids.keys()].sort(() => Math.random() - 0.5)
+  let sinceFlush = 0
   for (const puuid of shuffled) {
     if (ids.size >= MATCH_LIMIT) break
     const list = await riotGet(
@@ -1035,7 +1036,16 @@ async function gatherMatchIds(puuids, platform) {
       if (!tierManifest.has(id)) tierManifest.set(id, puuids.get(puuid))
       if (ids.size >= MATCH_LIMIT) break
     }
+    // Flush periodically. A run that dies here — expired key, Ctrl-C — has
+    // already written matches to the cache, and without this the manifest never
+    // learns about them: they fall through to the Master+ seed default and the
+    // Build page then claims apex provenance for lower-elo games.
+    if (++sinceFlush >= 25) {
+      saveTierManifest()
+      sinceFlush = 0
+    }
   }
+  saveTierManifest()
   return [...ids]
 }
 
