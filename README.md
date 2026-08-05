@@ -456,9 +456,29 @@ last three weeks count; measured, that put 72 of 75 builds on the live patch.
 It costs breadth, since players idle in the queue return nothing, so a windowed
 run needs many more players to fill `--matches`.
 
+`--snowball` fixes **who** gets sampled in casual queues. The ranked ladder is
+the wrong population for ARAM and Arena — roughly one player in fifty from an
+apex ladder has played ARAM recently, so a laddered run burns its whole request
+budget on empty replies. Snowballing seeds instead from players already seen in
+cached matches of that queue (`--snowball-seeds`, default 600), which is about
+three orders of magnitude more efficient. Note that PUUIDs are routed by
+regional cluster: seeds are filtered to the cluster being queried, or the calls
+silently return nothing.
+
+Because a windowed run trades breadth for freshness, the cheapest way back to
+full variant coverage is **two passes**: fetch with `--since`, then re-aggregate
+the disk cache with `--cached-only --since <days> --replace`, which sweeps every
+fresh match ever cached instead of only the ids this run gathered, and costs no
+API calls. Combining two ~4.5k/8k ARAM legs that way recovered every variant
+picker the year-old pool had while keeping the whole set on the live patch.
+
 Each build records the elo mix behind it (`sampleTiers`: `Master+`, `Emerald`,
-`Emerald/Master+`) from a manifest in the match cache, and the Build page shows
-it — so a mixed-elo pool can't quietly present itself as high-elo data.
+`Emerald/Master+`, `All ranks` for snowballed queues) from a manifest in the
+match cache, and the Build page shows it — so a mixed-elo pool can't quietly
+present itself as high-elo data. The manifest is flushed as ids are gathered:
+an interrupted run has already written matches to the cache, and if their
+provenance were lost they'd fall back to the Master+ seed default and claim an
+elo they never came from.
 
 **Refreshing per patch.** The data is patch-specific, so re-run the aggregator
 when a new patch ships. `--if-stale` makes that cheap: it no-ops if the output
