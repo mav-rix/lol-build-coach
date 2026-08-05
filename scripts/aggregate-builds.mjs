@@ -8,7 +8,16 @@
 //
 // Flags (all optional):
 //   --region <platform>   na1|euw1|kr|...      (default na1)
-//   --tiers  <list>       challenger,grandmaster,master (default all three)
+//   --tiers  <list>       challenger,grandmaster,master (default all three);
+//                         diamond|emerald|platinum|gold|silver|bronze|iron are
+//                         sampled from the paged division-II entries endpoint
+//   --entry-pages <n>     pages of a division tier's ladder to sample, 200
+//                         players each (default 2; apex tiers ignore this)
+//   --since <days>        only count games played in the last <days>. Match ids
+//                         are "this player's last N games in this queue" with no
+//                         date bound, so a rarely-played queue returns year-old
+//                         games — this is what holds a run to the current patch.
+//                         Costs breadth: players idle in the queue return none.
 //   --matches <n>         max matches to ingest           (default 300)
 //   --per-player <n>      match ids pulled per player      (default 15)
 //   --min-sample <n>      min games to emit a build        (default 3)
@@ -49,7 +58,29 @@ const REGIONS = (args.region ?? 'na1')
   .split(',')
   .map((s) => s.trim().toLowerCase())
   .filter(Boolean)
-const TIERS = (args.tiers ?? 'challenger,grandmaster,master').split(',')
+const TIERS = (args.tiers ?? 'challenger,grandmaster,master')
+  .split(',')
+  .map((t) => t.trim().toLowerCase())
+  .filter(Boolean)
+// Pages of a division tier's ladder to sample (200 players each). Only applies
+// to the sub-Master tiers, which have no single-call ladder endpoint.
+const ENTRY_PAGES = Number(args['entry-pages'] ?? 2)
+// Match ids come back as "this player's last N games in this queue", with no
+// regard for when they were played — so a queue someone plays rarely returns
+// year-old games. That is why the ARAM pool ended up spanning 50 patches with
+// only ~5% of it recent, and it is not an elo problem: a test pull from
+// Emerald came back on patch 15.4. --since <days> passes startTime so only
+// games from that window count, which is the only way to hold the data to the
+// current patch. Costs breadth: players who haven't touched the queue lately
+// return nothing, so a windowed run needs far more players to fill its quota.
+// Seed players from cached matches of this queue rather than the ranked
+// ladder — see snowballSeeds. Essential for casual queues; pointless for
+// ranked SR, where the ladder players are the population.
+const SNOWBALL = Boolean(args.snowball)
+const SNOWBALL_SEEDS = Number(args['snowball-seeds'] ?? 600)
+const SINCE_DAYS = Number(args.since ?? 0)
+const SINCE_MS = SINCE_DAYS ? Date.now() - SINCE_DAYS * 86400_000 : 0
+const SINCE_PARAM = SINCE_MS ? `&startTime=${Math.floor(SINCE_MS / 1000)}` : ''
 const MATCH_LIMIT = Number(args.matches ?? 300)
 const PER_PLAYER = Number(args['per-player'] ?? 15)
 const MIN_SAMPLE = Number(args['min-sample'] ?? 3)
@@ -288,6 +319,11 @@ function skillOrder(timeline, pid) {
 export function observeMatch(match, timeline, statik) {
   const info = match.info
   if (info.queueId !== QUEUE || info.mapId !== MODE_CFG.map) return []
+  // --since bounds what gets AGGREGATED as well as what gets fetched, so a
+  // --cached-only rerun can rebuild from just the recent slice of a cache that
+  // spans years. Without this the only way to drop stale matches would be to
+  // delete them.
+  if (SINCE_MS && (info.gameEndTimestamp ?? info.gameCreation ?? 0) < SINCE_MS) return []
   const patch = info.gameVersion.split('.').slice(0, 2).join('.')
   const idOf = (name) => statik.champByLower[name.toLowerCase()] ?? name
   // Arena is 8 teams of 2 (playerSubteamId, not the 2-team teamId split below),
@@ -348,6 +384,7 @@ export function observeMatch(match, timeline, statik) {
       championId: idOf(p.championName),
       role,
       patch,
+      matchId: match.metadata?.matchId ?? null, // for the elo-provenance label
       win: Boolean(p.win),
       starters: starters.slice(0, 3),
       core, // full ordered legendary list — situational aggregation reads this
@@ -789,8 +826,9 @@ export function toBuildPath(group, items, archetype = null) {
     ...perkRep.perks,
     skillMaxOrder: skillRep.maxOrder,
     skillStart: skillRep.start,
+    sampleTiers: tierLabel(group),
     notes: [
-      `Aggregated from ${group.length} ${TIERS.join('/')} games on patch ${modal(
+      `Aggregated from ${group.length} ${tierLabel(group)} games on patch ${modal(
         group.map((o) => o.patch),
       )} · ${Math.round((100 * wins) / group.length)}% win rate.`,
     ],
@@ -800,22 +838,144 @@ export function toBuildPath(group, items, archetype = null) {
 }
 
 // ---- pipeline -------------------------------------------------------------
-async function gatherPuuids(platform) {
-  const eps = {
-    challenger: '/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5',
-    grandmaster: '/lol/league/v4/grandmasterleagues/by-queue/RANKED_SOLO_5x5',
-    master: '/lol/league/v4/masterleagues/by-queue/RANKED_SOLO_5x5',
+const APEX_LADDERS = {
+  challenger: '/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5',
+  grandmaster: '/lol/league/v4/grandmasterleagues/by-queue/RANKED_SOLO_5x5',
+  master: '/lol/league/v4/masterleagues/by-queue/RANKED_SOLO_5x5',
+}
+// Everything below Master has no single-call ladder — sample the paged entries
+// endpoint instead. Division II is the middle of a tier, so it represents the
+// tier better than I (its top) or IV (where demoted and new accounts pile up).
+const DIVISION_TIERS = new Set(['diamond', 'emerald', 'platinum', 'gold', 'silver', 'bronze', 'iron'])
+
+/** Which elo a build's games came from, for honest provenance in the UI. */
+const TIER_BUCKET = {
+  challenger: 'Master+',
+  grandmaster: 'Master+',
+  master: 'Master+',
+  diamond: 'Diamond',
+  emerald: 'Emerald',
+  platinum: 'Platinum',
+  gold: 'Gold',
+  silver: 'Silver',
+  bronze: 'Bronze',
+  iron: 'Iron',
+}
+
+/**
+ * Players proven to play THIS queue: the participants of the most recent
+ * cached matches of it. The ranked ladder is the wrong population for a
+ * casual queue — measured 2026-08-04, 1 of 50 ranked-ladder players had
+ * played ARAM in the previous 21 days (0.02 match ids per call, ~50 hours to
+ * gather 3,000). Seeding from ARAM matches instead returned 22 of 22 players
+ * active, at 16–38 ids per call. Same rate limit, ~1000x the yield.
+ *
+ * Every match id carries its platform prefix and a puuid is only queryable on
+ * its own regional cluster, so seeds are filtered to the ones this platform
+ * can actually ask about.
+ */
+function snowballSeeds(platform) {
+  const cluster = regionalCluster(platform)
+  const matches = []
+  for (const id of cachedMatchIds()) {
+    if (regionalCluster(id.split('_')[0].toLowerCase()) !== cluster) continue
+    try {
+      const m = JSON.parse(readFileSync(join(CACHE, `${id}.match.json`), 'utf8'))
+      if (m?.info?.queueId !== QUEUE) continue
+      matches.push({ t: m.info.gameEndTimestamp ?? m.info.gameCreation ?? 0, players: m.metadata?.participants ?? [] })
+    } catch {
+      // unreadable cache entry — skip
+    }
   }
-  const puuids = new Set()
+  matches.sort((a, b) => b.t - a.t)
+  const seeds = new Map()
+  for (const m of matches) {
+    for (const p of m.players) if (!seeds.has(p)) seeds.set(p, 'All ranks')
+    if (seeds.size >= SNOWBALL_SEEDS) break
+  }
+  const newest = matches[0]?.t ? new Date(matches[0].t).toISOString().slice(0, 10) : 'none'
+  console.log(`  ${seeds.size} seed players from cached ${MODE_CFG.buildMode} matches (newest ${newest})`)
+  return seeds
+}
+
+/** puuid → elo bucket it was sampled from (first tier to claim it wins). */
+async function gatherPuuids(platform) {
+  const puuids = new Map()
+  const add = (list, tier) => {
+    let n = 0
+    for (const e of list ?? []) {
+      if (!e.puuid) continue
+      n++
+      if (!puuids.has(e.puuid)) puuids.set(e.puuid, TIER_BUCKET[tier])
+    }
+    return n
+  }
   for (const tier of TIERS) {
-    if (!eps[tier]) continue
-    const list = await riotGet(platformHost(platform), eps[tier])
-    for (const e of list?.entries ?? []) if (e.puuid) puuids.add(e.puuid)
-    console.log(`  ${tier}: ${list?.entries?.length ?? 0} entries`)
+    if (APEX_LADDERS[tier]) {
+      const list = await riotGet(platformHost(platform), APEX_LADDERS[tier])
+      console.log(`  ${tier}: ${add(list?.entries, tier)} entries`)
+    } else if (DIVISION_TIERS.has(tier)) {
+      let got = 0
+      for (let page = 1; page <= ENTRY_PAGES; page++) {
+        const list = await riotGet(
+          platformHost(platform),
+          `/lol/league/v4/entries/RANKED_SOLO_5x5/${tier.toUpperCase()}/II?page=${page}`,
+        )
+        if (!list?.length) break
+        got += add(list, tier)
+      }
+      console.log(`  ${tier} II: ${got} entries (${ENTRY_PAGES} page${ENTRY_PAGES > 1 ? 's' : ''})`)
+    } else {
+      console.warn(`  ⚠ unknown tier "${tier}" — expected ${Object.keys(TIER_BUCKET).join(', ')}`)
+    }
   }
   if (puuids.size === 0)
     console.warn('  ⚠ no puuids found — the league entries lacked a puuid field for this key/region.')
-  return [...puuids]
+  return puuids
+}
+
+// Which elo each cached match was sampled through, so a build can say where
+// its games came from instead of the UI assuming "high-elo". Every match
+// cached before this manifest existed came from the apex ladders — that was
+// the only sampling the aggregator could do — so seeding them as Master+ is
+// accurate, not a guess.
+const TIER_MANIFEST_FILE = join(CACHE, 'build-tier-manifest.json')
+const tierManifest = new Map()
+
+function loadTierManifest() {
+  if (existsSync(TIER_MANIFEST_FILE)) {
+    try {
+      for (const [id, tier] of Object.entries(JSON.parse(readFileSync(TIER_MANIFEST_FILE, 'utf8'))))
+        tierManifest.set(id, tier)
+      return
+    } catch {
+      // unreadable — fall through and reseed
+    }
+  }
+  for (const id of cachedMatchIds()) tierManifest.set(id, 'Master+')
+  console.log(`  seeded tier manifest with ${tierManifest.size} previously-cached matches (Master+)`)
+}
+
+function saveTierManifest() {
+  writeFileSync(TIER_MANIFEST_FILE, JSON.stringify(Object.fromEntries(tierManifest)))
+}
+
+/**
+ * The elo mix behind a set of observations, commonest first — e.g. "Master+"
+ * or "Emerald/Master+". Buckets under a tenth of the sample are dropped so a
+ * handful of stray games can't muddy the label.
+ */
+function tierLabel(group) {
+  const counts = new Map()
+  for (const o of group) {
+    const t = tierManifest.get(o.matchId) ?? 'Master+'
+    counts.set(t, (counts.get(t) ?? 0) + 1)
+  }
+  return [...counts.entries()]
+    .filter(([, n]) => n / group.length >= 0.1)
+    .sort((a, b) => b[1] - a[1])
+    .map(([t]) => t)
+    .join('/')
 }
 
 // Match ids already fully cached on disk (both match + timeline present).
@@ -856,20 +1016,36 @@ function printSampleBuilds(builds, items) {
   }
 }
 
+/** Match ids for these players, recording the elo each id was reached through. */
 async function gatherMatchIds(puuids, platform) {
   const ids = new Set()
-  const shuffled = puuids.sort(() => Math.random() - 0.5)
+  const shuffled = [...puuids.keys()].sort(() => Math.random() - 0.5)
+  let sinceFlush = 0
   for (const puuid of shuffled) {
     if (ids.size >= MATCH_LIMIT) break
     const list = await riotGet(
       regionHost(platform),
-      `/lol/match/v5/matches/by-puuid/${puuid}/ids?queue=${QUEUE}&count=${PER_PLAYER}`,
+      `/lol/match/v5/matches/by-puuid/${puuid}/ids?queue=${QUEUE}&count=${PER_PLAYER}${SINCE_PARAM}`,
     )
     for (const id of list ?? []) {
       ids.add(id)
+      // A match reached through several players keeps the first elo that found
+      // it. Rough by nature — a game has ten players and they aren't all the
+      // same rank — but it's the only provenance signal available, and it's
+      // enough to keep a Master+ build from being labelled Emerald.
+      if (!tierManifest.has(id)) tierManifest.set(id, puuids.get(puuid))
       if (ids.size >= MATCH_LIMIT) break
     }
+    // Flush periodically. A run that dies here — expired key, Ctrl-C — has
+    // already written matches to the cache, and without this the manifest never
+    // learns about them: they fall through to the Master+ seed default and the
+    // Build page then claims apex provenance for lower-elo games.
+    if (++sinceFlush >= 25) {
+      saveTierManifest()
+      sinceFlush = 0
+    }
   }
+  saveTierManifest()
   return [...ids]
 }
 
@@ -882,6 +1058,7 @@ async function main() {
   console.log('Loading Data Dragon…')
   const statik = await loadStatic()
   console.log(`  patch ${statik.patch}\n`)
+  loadTierManifest()
 
   // Per-patch gate: skip the whole run if the output was already built for the
   // current patch, so a scheduled job is a cheap no-op until a new patch drops.
@@ -928,8 +1105,8 @@ async function main() {
     const pooled = new Set()
     for (const platform of REGIONS) {
       console.log(`Gathering ${platform.toUpperCase()} players…`)
-      const puuids = await gatherPuuids(platform)
-      console.log(`  ${puuids.length} unique players`)
+      const puuids = SNOWBALL ? snowballSeeds(platform) : await gatherPuuids(platform)
+      console.log(`  ${puuids.size} unique players`)
       console.log(`Gathering ${platform.toUpperCase()} match ids…`)
       const ids = await gatherMatchIds(puuids, platform)
       for (const id of ids) pooled.add(id)
@@ -1024,6 +1201,7 @@ async function main() {
   const merged = [...byKey.values()].sort(
     (a, b) => a.championId.localeCompare(b.championId) || (a.role ?? '').localeCompare(b.role ?? ''),
   )
+  saveTierManifest()
   writeFileSync(OUT, JSON.stringify(merged, null, 2) + '\n')
   console.log(
     `\n✓ Wrote ${merged.length} builds (${builds.length} refreshed from ${groups.size} groups this run` +

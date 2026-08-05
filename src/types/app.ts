@@ -33,6 +33,10 @@ export interface BuildPath {
   notes: string[]
   winRate?: number
   sampleSize?: number
+  // Elo the games behind this build came from, commonest first — "Master+",
+  // "Emerald", "Emerald/Master+". Absent on seeds and on builds aggregated
+  // before the tier manifest existed, which were all Master+ by construction.
+  sampleTiers?: string
 }
 
 export type SituationalCondition =
