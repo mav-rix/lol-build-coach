@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useStaticData } from '@/hooks/useStaticData'
 import { MOCK_CHAMP_SELECT } from '@/data/mockChampSelect'
-import { isAugmentedAbyss } from '@/lib/modes'
+import { isAugmentedAbyss, unsupportedLiveMode } from '@/lib/modes'
 import type { Role } from '@/types/app'
 
 // Shape returned by the LCU bridge (/lcu/champ-select).
@@ -36,6 +36,9 @@ export interface ChampSelectState {
   phase: string
   isRanked: boolean // queue 420/440
   augmentedAbyss: boolean // ARAM Mayhem & friends — no rune pages, item import only
+  // Display name when this game is on a map with its own item/rune system
+  // (League Classic, Swarm), else null — nothing here is importable there.
+  unsupportedMode: string | null
   selfRank: { tier: string; division: string } | null // solo queue, else highest
   self: { championId: string | null; role: Role | null }
   allyChampionIds: string[] // teammates' hovered/locked picks (self excluded)
@@ -91,6 +94,7 @@ export function useChampSelect(): ChampSelectState {
       phase: bridge?.phase ?? 'None',
       isRanked: false,
       augmentedAbyss: false,
+      unsupportedMode: null,
       selfRank: null,
       self: { championId: null, role: null },
       allyChampionIds: [],
@@ -117,6 +121,7 @@ export function useChampSelect(): ChampSelectState {
       phase: bridge.phase,
       isRanked: RANKED_QUEUES.has(bridge.queueId ?? -1),
       augmentedAbyss: isAugmentedAbyss(bridge.gameMode ?? '', bridge.mapId),
+      unsupportedMode: unsupportedLiveMode(bridge.mapId),
       selfRank: bridge.selfRank ?? null,
       self: {
         championId: bridge.self ? mapKey(bridge.self.championId) : null,

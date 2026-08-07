@@ -17,6 +17,7 @@ export default function Live() {
     self,
     championId,
     modeConfig,
+    unsupportedMode,
     build,
     plan,
     ownedIds,
@@ -39,12 +40,12 @@ export default function Live() {
   // Sync live enemies into the store so the Build page's comp analysis matches.
   // Skipped for Arena: no fixed 5-slot enemy team (see modeConfig.hasFixedEnemyTeam).
   useEffect(() => {
-    if (!threats || !staticData || !modeConfig.hasFixedEnemyTeam) return
+    if (!threats || !staticData || !modeConfig.hasFixedEnemyTeam || unsupportedMode) return
     threats.enemies.slice(0, 5).forEach((e, slot) => {
       const known = staticData.championsById[e.championId] ? e.championId : null
       if (known && enemyChampionIds[slot] !== known) setEnemyChampion(slot, known)
     })
-  }, [threats, staticData, enemyChampionIds, setEnemyChampion, modeConfig.hasFixedEnemyTeam])
+  }, [threats, staticData, enemyChampionIds, setEnemyChampion, modeConfig.hasFixedEnemyTeam, unsupportedMode])
 
   if (!isInGame || !live) {
     return (
@@ -68,6 +69,28 @@ export default function Live() {
             first so the tracker knows your build path.
           </p>
         )}
+      </div>
+    )
+  }
+
+  // League Classic and Swarm run their own item and rune systems — every build
+  // this app knows is from the live game and would be unbuildable there.
+  if (unsupportedMode) {
+    return (
+      <div className="mx-auto max-w-lg py-16 text-center">
+        <div className="mb-6 text-6xl">🚧</div>
+        <h2 className="mb-3 text-xl font-bold text-zinc-100">
+          {unsupportedMode} isn't supported
+        </h2>
+        <p className="mb-2 text-zinc-400">
+          {unsupportedMode} uses its own item shop and rune system, so the build
+          paths here — all built from live-game match data — wouldn't be buyable
+          in your match. Rather than show you a build you can't follow, the
+          tracker sits this one out.
+        </p>
+        <p className="text-sm text-zinc-500">
+          Summoner's Rift, ARAM (including Mayhem) and Arena all work as normal.
+        </p>
       </div>
     )
   }

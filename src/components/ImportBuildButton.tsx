@@ -13,6 +13,12 @@ interface Props {
   clientOpen: boolean
   /** ARAM Mayhem & other augmented-Abyss events: no rune pages, import items only. */
   skipRunes?: boolean
+  /**
+   * Display name when the queued game is on a map with its own item and rune
+   * system (League Classic, Swarm), else null. Importing there would push item
+   * ids that mode's shop doesn't stock, so the button is disabled and says why.
+   */
+  unsupportedMode?: string | null
 }
 
 type Phase = 'idle' | 'busy' | 'done' | 'error'
@@ -30,6 +36,7 @@ export function ImportBuildButton({
   items,
   clientOpen,
   skipRunes = false,
+  unsupportedMode = null,
 }: Props) {
   const [phase, setPhase] = useState<Phase>('idle')
   const [message, setMessage] = useState('')
@@ -102,13 +109,15 @@ export function ImportBuildButton({
       )}
       <button
         onClick={run}
-        disabled={!clientOpen || phase === 'busy'}
+        disabled={!clientOpen || phase === 'busy' || unsupportedMode !== null}
         title={
-          clientOpen
-            ? skipRunes
-              ? 'Create the item set in your League client (this mode has no rune pages)'
-              : 'Create the rune page and item set in your League client'
-            : 'Open the League client (and the bridge, in dev) to enable importing'
+          unsupportedMode
+            ? `${unsupportedMode} has its own item shop and runes — these wouldn't be buyable in that mode`
+            : clientOpen
+              ? skipRunes
+                ? 'Create the item set in your League client (this mode has no rune pages)'
+                : 'Create the rune page and item set in your League client'
+              : 'Open the League client (and the bridge, in dev) to enable importing'
         }
         className={`rounded-md px-3 py-1.5 text-sm font-medium text-white transition-colors ${
           phase === 'done'

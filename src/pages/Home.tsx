@@ -414,6 +414,7 @@ export default function Home() {
                 items={data.items}
                 clientOpen={champSelect.available}
                 skipRunes={champSelect.augmentedAbyss}
+                unsupportedMode={champSelect.unsupportedMode}
               />
               <Link
                 to="/live"

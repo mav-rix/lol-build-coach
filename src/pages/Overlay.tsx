@@ -360,6 +360,7 @@ export default function Overlay() {
     gameTime,
     csPerMin,
     augmentMode,
+    unsupportedMode,
   } = useLiveBuildState()
 
   const overlayEnabled = useAppStore((s) => s.overlayEnabled)
@@ -524,6 +525,17 @@ export default function Overlay() {
             Mode to Borderless (in-game Settings → Video).
           </span>
         )}
+      </div>
+    )
+  }
+
+  // League Classic / Swarm run their own item shop — showing a live-game build
+  // path over one would be advice you cannot buy. Say so once, in the strip's
+  // footprint, instead of rendering the card.
+  if (unsupportedMode) {
+    return (
+      <div className="ml-auto flex w-fit items-center gap-2 rounded-md border border-amber-700/50 bg-zinc-950/70 px-2.5 py-1 text-[11px] text-amber-300 [text-shadow:0_1px_2px_rgb(0_0_0/0.9)]">
+        {unsupportedMode} uses its own items — no build recommendations here.
       </div>
     )
   }

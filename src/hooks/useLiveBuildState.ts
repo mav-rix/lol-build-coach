@@ -5,7 +5,7 @@ import { useStaticData } from '@/hooks/useStaticData'
 import { useAppStore } from '@/store/useAppStore'
 import { findBuildVariants } from '@/data/builds'
 import { MOCK_LIVE, mockLiveFor } from '@/data/mockLive'
-import { MODE_CONFIG, gameModeFromLive, isAugmentedAbyss } from '@/lib/modes'
+import { MODE_CONFIG, gameModeFromLive, isAugmentedAbyss, unsupportedLiveMode } from '@/lib/modes'
 import { analyzeThreats, championIdFromRaw } from '@/lib/threats'
 import { buildGamePlan, type GamePlan } from '@/lib/gameplan'
 import { JUNGLE_PET_IDS, ownsJunglePet, pickJunglePet } from '@/lib/jungle'
@@ -136,6 +136,18 @@ export function useLiveBuildState() {
     ? gameModeFromLive(live.gameData.gameMode, live.gameData.mapNumber)
     : selectedMode
   const modeConfig = MODE_CONFIG[mode]
+  // Modes running a different item/rune system entirely (League Classic,
+  // Swarm). `mode` above is a meaningless SR fallback for these — surfaces
+  // must show the refusal instead of the build. See unsupportedLiveMode.
+  // ?map=453 forces it in mock mode, since these modes can't be reached from
+  // the mock fixture (which is always Summoner's Rift) and reproducing one
+  // otherwise means actually queueing for League Classic.
+  const mockMap = mock ? Number(params?.get('map')) : NaN
+  const unsupportedMode = mock
+    ? unsupportedLiveMode(Number.isNaN(mockMap) ? undefined : mockMap)
+    : live
+      ? unsupportedLiveMode(live.gameData.mapNumber)
+      : null
   // In a live SR game, the player's ACTUAL position beats whatever role the
   // Build page last had selected (which may be stale or never set). ARAM
   // reports "NONE" and is roleless anyway.
@@ -314,6 +326,7 @@ export function useLiveBuildState() {
     championId,
     mode,
     modeConfig,
+    unsupportedMode,
     augmentMode,
     build,
     plan,

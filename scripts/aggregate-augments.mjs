@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Aggregate Arena augment win-rates from Match-V5 (queue 1700) into
+// Aggregate Arena augment win-rates from Match-V5 (queue 1750) into
 // src/data/augmentStats.json — a global tier list the app shows as reference.
 // The Live Client API doesn't expose which augments are being offered, so this
 // is a static "strongest augments" list, not a live pick helper. Arena is the
@@ -62,7 +62,13 @@ try {
 } catch {
   // no metadata yet — emit everything and let the UI filter
 }
-const QUEUE = 1700 // Arena (Cherry)
+// Arena (Cherry). QUEUE is what new match ids are fetched under; QUEUES is
+// every id that still counts when reading cached matches, so the games already
+// on disk under the retired id aren't orphaned. Arena moved 1700 → 1750 and the
+// fetch returned zero ids for months without erroring — an empty list from a
+// valid key looks exactly like "nobody played". Same fix as aggregate-builds.mjs.
+const QUEUE = 1750
+const QUEUES = new Set([1750, 1700])
 const MIN_INTERVAL = Number(process.env.RIOT_MIN_INTERVAL_MS ?? 1300)
 
 const platformHost = `${PLATFORM}.api.riotgames.com`
@@ -177,7 +183,7 @@ async function main() {
   let usedMatches = 0
   for (const id of ids) {
     const match = await cachedMatch(id)
-    if (match?.info?.queueId !== QUEUE) continue
+    if (!QUEUES.has(match?.info?.queueId)) continue
     usedMatches++
     for (const p of match.info.participants) {
       const placement = p.subteamPlacement || p.placement
