@@ -29,7 +29,7 @@
 //   --include-cached      fold every already-cached match into the merged pool,
 //                         so prior regions/runs join without being re-fetched
 //   --mode <sr|aram|arena> which mode to aggregate (default sr); aram/arena
-//                         ingest queue 450/1700 into a separate per-champion
+//                         ingest queue 450/1750 into a separate per-champion
 //                         builds file each (both roleless)
 //   --replace             overwrite the output outright. Default is to MERGE:
 //                         this run's builds refresh the champ/roles it observed
@@ -93,10 +93,20 @@ const DRY_LIMIT = Number(args.matches ?? 50)
 // --mode sr (ranked Summoner's Rift) or aram (ARAM). ARAM has no roles, so its
 // builds are per-champion and written to a separate file the loader merges.
 const MODE = (args.mode ?? 'sr').toLowerCase()
+// `queue` is the id NEW matches are fetched under; `queues` is every id whose
+// matches still count when aggregating, so a queue-id change doesn't orphan
+// the games already on disk.
+//
+// Arena is the cautionary tale: it moved 1700 → 1750 and the fetch silently
+// returned zero ids for months while the mode was live and popular — an empty
+// result from a valid key is indistinguishable from "nobody played". Riot's
+// public queues.json still doesn't list 1750, so it can't be trusted to catch
+// this; verify against a real recent match (map 30 games showing queueId 1750)
+// whenever a mode's yield drops to nothing.
 const MODE_CFG = {
-  sr: { queue: 420, map: 11, roleless: false, buildMode: 'SR', file: 'src/data/aggregatedBuilds.json' },
-  aram: { queue: 450, map: 12, roleless: true, buildMode: 'ARAM', file: 'src/data/aggregatedBuildsAram.json' },
-  arena: { queue: 1700, map: 30, roleless: true, buildMode: 'ARENA', file: 'src/data/aggregatedBuildsArena.json' },
+  sr: { queue: 420, queues: [420], map: 11, roleless: false, buildMode: 'SR', file: 'src/data/aggregatedBuilds.json' },
+  aram: { queue: 450, queues: [450], map: 12, roleless: true, buildMode: 'ARAM', file: 'src/data/aggregatedBuildsAram.json' },
+  arena: { queue: 1750, queues: [1750, 1700], map: 30, roleless: true, buildMode: 'ARENA', file: 'src/data/aggregatedBuildsArena.json' },
 }[MODE]
 if (!MODE_CFG) {
   console.error(`Unknown --mode "${MODE}" (expected sr, aram, or arena)`)
@@ -104,6 +114,8 @@ if (!MODE_CFG) {
 }
 const OUT = args.out ? resolve(args.out) : join(ROOT, MODE_CFG.file)
 const QUEUE = MODE_CFG.queue
+// Every queue id that counts as this mode when reading cached matches.
+const QUEUES = new Set(MODE_CFG.queues)
 // Dev key allows 100 req / 2 min ≈ one per 1.2s; hold a floor so we never 429.
 const MIN_INTERVAL = Number(process.env.RIOT_MIN_INTERVAL_MS ?? 1300)
 
@@ -318,7 +330,7 @@ function skillOrder(timeline, pid) {
 
 export function observeMatch(match, timeline, statik) {
   const info = match.info
-  if (info.queueId !== QUEUE || info.mapId !== MODE_CFG.map) return []
+  if (!QUEUES.has(info.queueId) || info.mapId !== MODE_CFG.map) return []
   // --since bounds what gets AGGREGATED as well as what gets fetched, so a
   // --cached-only rerun can rebuild from just the recent slice of a cache that
   // spans years. Without this the only way to drop stale matches would be to
@@ -881,7 +893,7 @@ function snowballSeeds(platform) {
     if (regionalCluster(id.split('_')[0].toLowerCase()) !== cluster) continue
     try {
       const m = JSON.parse(readFileSync(join(CACHE, `${id}.match.json`), 'utf8'))
-      if (m?.info?.queueId !== QUEUE) continue
+      if (!QUEUES.has(m?.info?.queueId)) continue
       matches.push({ t: m.info.gameEndTimestamp ?? m.info.gameCreation ?? 0, players: m.metadata?.participants ?? [] })
     } catch {
       // unreadable cache entry — skip
@@ -1120,6 +1132,28 @@ async function main() {
       console.log(`Including ${cached.length} cached matches → ${pooled.size} total\n`)
     }
     matchIds = [...pooled]
+    // A live run that pooled nothing is never a real result — it means the
+    // ids are being requested under a queue that no longer serves them. Riot
+    // answers a retired queue id with an empty list and HTTP 200, so this is
+    // indistinguishable from "nobody played" unless we refuse it. Arena went
+    // undetected this way from 1700 → 1750 for months, quietly merging no-ops
+    // over data that kept aging. Fail loudly instead of writing that merge.
+    if (matchIds.length === 0) {
+      console.error(
+        `\n  ✗ 0 matches pooled for --mode ${MODE} (queue ${QUEUE}).\n` +
+          `    Nothing was written — the previous ${MODE_CFG.file} is untouched.\n\n` +
+          `    Most likely the queue id changed. Riot returns an empty list, not\n` +
+          `    an error, so verify against a real recent game rather than the\n` +
+          `    public queues.json (it lags new modes by weeks):\n\n` +
+          `      curl "https://<cluster>.api.riotgames.com/lol/match/v5/matches/\\\n` +
+          `        by-puuid/<puuid>/ids?count=5&api_key=..."\n\n` +
+          `    then read queueId off one of those matches and check it against\n` +
+          `    MODE_CFG (map should still be ${MODE_CFG.map}). Add the new id as\n` +
+          `    \`queue\` and keep the old one in \`queues\`.\n\n` +
+          `    If the mode really is out of rotation, re-run with --cached-only.`,
+      )
+      process.exit(1)
+    }
   }
 
   console.log('Fetching matches + timelines…')
@@ -1132,6 +1166,21 @@ async function main() {
     if (++done % 25 === 0) console.log(`  ${done}/${matchIds.length} (${observations.length} observations)`)
   }
   console.log(`  ${observations.length} participant observations\n`)
+
+  // Matches were fetched but none survived observeMatch's queue/map filter —
+  // the other half of the same trap: the fetch id can be right while the
+  // accepted-queue set is stale, or --since can exclude everything. Either way
+  // the only possible output is a no-op merge, so don't write one.
+  if (observations.length === 0 && !DRY_RUN) {
+    console.error(
+      `  ✗ 0 observations from ${matchIds.length} matches for --mode ${MODE}.\n` +
+        `    Nothing was written — the previous ${MODE_CFG.file} is untouched.\n` +
+        `    observeMatch keeps queue ∈ {${[...QUEUES].join(', ')}} on map ${MODE_CFG.map}` +
+        (SINCE_DAYS ? `, played in the last ${SINCE_DAYS}d` : '') +
+        `.\n    Check a cached match's queueId/mapId against those before widening --since.`,
+    )
+    process.exit(1)
+  }
 
   console.log('Aggregating…')
   const groups = new Map()

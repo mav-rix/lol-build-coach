@@ -330,7 +330,7 @@ matter. ARAM is a first-class mode:
   and API surface. Their mutators make builds approximations, but the economy,
   item filtering, and threat reads are correct
 
-Arena (Riot's CHERRY mode, queue 1700, map 30) is also supported:
+Arena (Riot's CHERRY mode, **queue 1750**, map 30) is also supported:
 
 - Mode toggle on the Build page, same as SR/ARAM — no roles, no pre-game enemy
   team picker (Arena's opponent is a rotating 1v1 duo, only knowable live,
@@ -354,6 +354,35 @@ Arena (Riot's CHERRY mode, queue 1700, map 30) is also supported:
   into build recommendations); the loading-screen scouting panel stays
   unsupported for Arena (its 2-team layout can't represent 8 duos — see
   `loading-screen-arena` project notes)
+
+### Modes the app deliberately refuses
+
+Some modes ship their own item shop and rune system, so every build here — all
+derived from live-game match data — would be unbuildable in them. Rather than
+show advice you can't follow, the Live page, overlay, champ-select and the
+import button all refuse by name. `UNSUPPORTED_MAPS` in `src/lib/modes.ts`:
+
+| Map | Mode | Why |
+| --- | --- | --- |
+| 453 | League Classic | Legacy item set + the pre-reforged Runes/Masteries system (patch 26.15, codename "Jade") |
+| 33 | Swarm | PvE horde survival with an entirely bespoke item set |
+
+**League Classic cannot be detected by the `gameMode` string** — modern
+Summoner's Rift already reports `"CLASSIC"`. The map number is the only
+reliable discriminator, which is why `gameModeFromLive`'s old "unknown map ⇒
+SR" fallback silently produced confident, unbuyable recommendations there.
+
+Nexus Blitz (21) and Brawl / The Bandlewood (35) are deliberately *not* listed:
+they run the live item and rune systems, so the SR fallback is imperfect but
+useful. Unknown maps keep falling through to SR for the same reason.
+
+To reproduce without queueing for the mode, `?map=453` is a mock-only override:
+`/live?mock=1&map=453` and `/overlay?mock=1&map=453`.
+
+New map ids come from CommunityDragon
+(`plugins/rcp-be-lol-game-data/global/default/v1/maps.json`) — Data Dragon's
+`map.json` lists new ids with an **empty** name, and Riot's public
+`queues.json` lags new modes by weeks.
 
 ## Seeded builds (curated fallback)
 
@@ -417,7 +446,7 @@ routed to its correct regional cluster, so mixed-region pools just work), with
 `--matches` applied per region. `--include-cached` folds already-cached matches
 (e.g. a prior region's run) into the pool without re-fetching. `--mode aram`
 ingests queue 450 into a separate per-champion `aggregatedBuildsAram.json` (ARAM
-has no roles); `--mode arena` ingests queue 1700 into
+has no roles); `--mode arena` ingests queue 1750 into
 `aggregatedBuildsArena.json` the same way (Arena is also roleless, and its
 items are remapped ids handled by `isRealArenaItem` — see "Game modes" above).
 The loader merges SR + ARAM + Arena and `findBuild` serves each by mode, so
@@ -532,7 +561,7 @@ npm run aggregate:augments -- --region na1 --matches 500 # win-rates (dev key)
 
 - `augments:meta` pulls augment names/icons/rarity from Community Dragon (augments
   aren't in Data Dragon) → `src/data/augments.json`.
-- `aggregate:augments` tallies augment strength from Arena (queue 1700) matches by
+- `aggregate:augments` tallies augment strength from Arena (queue 1750) matches by
   **average team placement** (1–8, lower is better) and first-place rate →
   `src/data/augmentStats.json` (global) and `src/data/augmentChampStats.json`
   (per-champion pairs that clear `--champ-min-games`, default 8). It ranks by

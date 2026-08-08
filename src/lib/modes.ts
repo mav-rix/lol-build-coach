@@ -65,6 +65,38 @@ const HOWLING_ABYSS_MAP = 12
 const ARENA_MAP = 30
 
 /**
+ * Maps whose item and rune systems are NOT the live game's, so every
+ * recommendation this app makes would be wrong there. `gameModeFromLive`
+ * otherwise falls through to SR for any unknown map, which is silently
+ * confident nonsense in these — so they get named and refused instead.
+ *
+ * League Classic (map 453, "Classic Rift", internal codename "Jade") shipped
+ * in patch 26.15. It runs an early-League snapshot: a legacy item set and the
+ * pre-reforged Runes/Masteries pages. Critically, it CANNOT be told apart by
+ * the gameMode string — modern Summoner's Rift already reports "CLASSIC" —
+ * so the map number is the only reliable discriminator.
+ *
+ * Swarm (map 33) is PvE horde survival with an entirely bespoke item set.
+ *
+ * Deliberately absent: Nexus Blitz (21) and Brawl / The Bandlewood (35) both
+ * run the live item and rune systems, so treating them as SR is imperfect but
+ * useful. Unknown maps keep falling through to SR for the same reason.
+ */
+const UNSUPPORTED_MAPS: Record<number, string> = {
+  453: 'League Classic',
+  33: 'Swarm',
+}
+
+/**
+ * Display name of the unsupported mode this game is in, or null when the mode
+ * is one we can actually advise on. Callers should check this BEFORE using
+ * `gameModeFromLive`, whose SR fallback is meaningless for these maps.
+ */
+export function unsupportedLiveMode(mapNumber?: number): string | null {
+  return mapNumber === undefined ? null : (UNSUPPORTED_MAPS[mapNumber] ?? null)
+}
+
+/**
  * Map a Live Client API game to our GameMode. Detect by map first: every
  * ARAM-family mode — normal ARAM, ARAM Mayhem, ARAM Clash, and future Abyss
  * events — runs on map 12, regardless of the gameMode string (which varies by
