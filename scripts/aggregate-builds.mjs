@@ -1132,6 +1132,28 @@ async function main() {
       console.log(`Including ${cached.length} cached matches → ${pooled.size} total\n`)
     }
     matchIds = [...pooled]
+    // A live run that pooled nothing is never a real result — it means the
+    // ids are being requested under a queue that no longer serves them. Riot
+    // answers a retired queue id with an empty list and HTTP 200, so this is
+    // indistinguishable from "nobody played" unless we refuse it. Arena went
+    // undetected this way from 1700 → 1750 for months, quietly merging no-ops
+    // over data that kept aging. Fail loudly instead of writing that merge.
+    if (matchIds.length === 0) {
+      console.error(
+        `\n  ✗ 0 matches pooled for --mode ${MODE} (queue ${QUEUE}).\n` +
+          `    Nothing was written — the previous ${MODE_CFG.file} is untouched.\n\n` +
+          `    Most likely the queue id changed. Riot returns an empty list, not\n` +
+          `    an error, so verify against a real recent game rather than the\n` +
+          `    public queues.json (it lags new modes by weeks):\n\n` +
+          `      curl "https://<cluster>.api.riotgames.com/lol/match/v5/matches/\\\n` +
+          `        by-puuid/<puuid>/ids?count=5&api_key=..."\n\n` +
+          `    then read queueId off one of those matches and check it against\n` +
+          `    MODE_CFG (map should still be ${MODE_CFG.map}). Add the new id as\n` +
+          `    \`queue\` and keep the old one in \`queues\`.\n\n` +
+          `    If the mode really is out of rotation, re-run with --cached-only.`,
+      )
+      process.exit(1)
+    }
   }
 
   console.log('Fetching matches + timelines…')
@@ -1144,6 +1166,21 @@ async function main() {
     if (++done % 25 === 0) console.log(`  ${done}/${matchIds.length} (${observations.length} observations)`)
   }
   console.log(`  ${observations.length} participant observations\n`)
+
+  // Matches were fetched but none survived observeMatch's queue/map filter —
+  // the other half of the same trap: the fetch id can be right while the
+  // accepted-queue set is stale, or --since can exclude everything. Either way
+  // the only possible output is a no-op merge, so don't write one.
+  if (observations.length === 0 && !DRY_RUN) {
+    console.error(
+      `  ✗ 0 observations from ${matchIds.length} matches for --mode ${MODE}.\n` +
+        `    Nothing was written — the previous ${MODE_CFG.file} is untouched.\n` +
+        `    observeMatch keeps queue ∈ {${[...QUEUES].join(', ')}} on map ${MODE_CFG.map}` +
+        (SINCE_DAYS ? `, played in the last ${SINCE_DAYS}d` : '') +
+        `.\n    Check a cached match's queueId/mapId against those before widening --since.`,
+    )
+    process.exit(1)
+  }
 
   console.log('Aggregating…')
   const groups = new Map()

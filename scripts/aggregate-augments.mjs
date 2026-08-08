@@ -158,6 +158,19 @@ async function main() {
       }
     }
     console.log(`  ${ids.size} Arena matches\n`)
+    // Riot answers a retired queue id with an empty list and HTTP 200, so a
+    // zero here looks exactly like "nobody played Arena". That is how the
+    // 1700 → 1750 move went unnoticed for months while this script merged
+    // no-ops over aging data. Refuse rather than write one. See QUEUE above.
+    if (ids.size === 0) {
+      console.error(
+        `  ✗ 0 Arena matches found under queue ${QUEUE}. Nothing was written.\n` +
+          `    Most likely the queue id changed again — read queueId off a real\n` +
+          `    recent map-30 game, then set it as QUEUE and keep the old id in\n` +
+          `    QUEUES. Re-run with --cached-only to re-tally the existing cache.`,
+      )
+      process.exit(1)
+    }
   }
 
   // Champion-name normalizer (Match-V5 championName → DDragon id, e.g. FiddleSticks quirks).
@@ -208,6 +221,17 @@ async function main() {
       }
     }
     if (++done % 50 === 0) console.log(`  ${done}/${ids.size} (${tally.size} augments seen)`)
+  }
+
+  // Matches were read but none passed the QUEUES filter — the cached-only
+  // counterpart of the guard above, and the case that would silently blank the
+  // tier list if the accepted-queue set ever went stale.
+  if (usedMatches === 0) {
+    console.error(
+      `\n  ✗ 0 of ${ids.size} matches matched queue ∈ {${[...QUEUES].join(', ')}}. Nothing was written.\n` +
+        `    Check a cached match's queueId against QUEUES before assuming the cache is empty.`,
+    )
+    process.exit(1)
   }
 
   const stats = [...tally.entries()]
