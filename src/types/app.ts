@@ -36,8 +36,21 @@ export interface BuildPath {
   // Elo the games behind this build came from, commonest first — "Master+",
   // "Emerald", "Emerald/Master+". Absent on seeds and on builds aggregated
   // before the tier manifest existed, which were all Master+ by construction.
+  // DISPLAY ONLY — it's a joined string, so never filter on it.
   sampleTiers?: string
+  // Coarse elo bucket this build belongs to, and the stable key the rank filter
+  // selects on. Absent on seeds and on anything aggregated before the buckets
+  // existed; treat absent as MASTER_PLUS, which is what those builds were.
+  eloBucket?: EloBucket
 }
+
+/**
+ * Coarse elo buckets for build data. Deliberately only three: a build's median
+ * sample is ~34 games at a single elo, so a finer split buys more options at
+ * the cost of every one of them being noise. Keep in sync with ELO_BUCKETS in
+ * scripts/aggregate-builds.mjs, which stamps the field.
+ */
+export type EloBucket = 'MASTER_PLUS' | 'PLAT_EMERALD' | 'GOLD_BELOW'
 
 export type SituationalCondition =
   | 'enemy_has_healing'

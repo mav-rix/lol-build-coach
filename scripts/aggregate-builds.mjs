@@ -28,6 +28,13 @@
 //                         patch; otherwise run — for a per-patch scheduled job
 //   --include-cached      fold every already-cached match into the merged pool,
 //                         so prior regions/runs join without being re-fetched
+//   --elo <bucket>        master_plus|plat_emerald|gold_below — keep only games
+//                         from that coarse elo bucket. Applied AFTER observing,
+//                         so one mixed cache yields one clean file per bucket
+//                         via repeated --cached-only --elo runs. Pair it with
+//                         --out: writing two buckets to the same file would
+//                         have the second run's merge overwrite the first's
+//                         champ/roles.
 //   --mode <sr|aram|arena> which mode to aggregate (default sr); aram/arena
 //                         ingest queue 450/1750 into a separate per-champion
 //                         builds file each (both roleless)
@@ -86,6 +93,7 @@ const PER_PLAYER = Number(args['per-player'] ?? 15)
 const MIN_SAMPLE = Number(args['min-sample'] ?? 3)
 const IF_STALE = Boolean(args['if-stale'])
 const INCLUDE_CACHED = Boolean(args['include-cached'])
+const ELO = args.elo ? String(args.elo).toUpperCase() : null
 const REPLACE = Boolean(args['replace']) // overwrite instead of merging with the previous output
 const CACHED_ONLY = Boolean(args['cached-only']) // re-aggregate the disk cache, zero API calls
 const DRY_RUN = Boolean(args['dry-run'])
@@ -839,6 +847,7 @@ export function toBuildPath(group, items, archetype = null) {
     skillMaxOrder: skillRep.maxOrder,
     skillStart: skillRep.start,
     sampleTiers: tierLabel(group),
+    eloBucket: bucketLabelOf(group),
     notes: [
       `Aggregated from ${group.length} ${tierLabel(group)} games on patch ${modal(
         group.map((o) => o.patch),
@@ -872,6 +881,51 @@ const TIER_BUCKET = {
   silver: 'Silver',
   bronze: 'Bronze',
   iron: 'Iron',
+}
+
+/**
+ * Coarse elo buckets the Build page's rank filter selects between.
+ *
+ * The manifest deliberately records the FINE tier ('Emerald', 'Gold', …) so no
+ * information is thrown away at fetch time; bucketing happens here, which means
+ * the split can be redrawn later over the same cache with --cached-only.
+ *
+ * Buckets are coarse on purpose. A build already has a median sample of ~34
+ * games at a single elo, so slicing the ladder into five would produce five
+ * noisy answers instead of two usable ones. `key` is the stable machine id the
+ * frontend filters on — never filter on `sampleTiers`, which is a display
+ * string that reads "Emerald/Gold" for a mixed group.
+ */
+const ELO_BUCKETS = {
+  MASTER_PLUS: { label: 'Master+', tiers: ['Master+'] },
+  PLAT_EMERALD: { label: 'Platinum–Emerald', tiers: ['Diamond', 'Emerald', 'Platinum'] },
+  GOLD_BELOW: { label: 'Gold & below', tiers: ['Gold', 'Silver', 'Bronze', 'Iron'] },
+}
+
+const TIER_TO_BUCKET = Object.fromEntries(
+  Object.entries(ELO_BUCKETS).flatMap(([key, b]) => b.tiers.map((t) => [t, key])),
+)
+
+// Validated here rather than beside the other flags: ELO_BUCKETS is declared in
+// this section, and a const isn't readable before then.
+if (ELO && !ELO_BUCKETS[ELO]) {
+  console.error(
+    `Unknown --elo "${ELO}" (expected ${Object.keys(ELO_BUCKETS).join(', ').toLowerCase()})`,
+  )
+  process.exit(1)
+}
+
+/** Coarse bucket for one match id, via its recorded fine tier. */
+const bucketOfMatch = (matchId) => TIER_TO_BUCKET[tierManifest.get(matchId) ?? 'Master+'] ?? null
+
+/** The bucket a group of observations belongs to — its commonest, by count. */
+function bucketLabelOf(group) {
+  const counts = new Map()
+  for (const o of group) {
+    const b = bucketOfMatch(o.matchId)
+    if (b) counts.set(b, (counts.get(b) ?? 0) + 1)
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null
 }
 
 /**
@@ -1151,6 +1205,25 @@ async function main() {
           `    MODE_CFG (map should still be ${MODE_CFG.map}). Add the new id as\n` +
           `    \`queue\` and keep the old one in \`queues\`.\n\n` +
           `    If the mode really is out of rotation, re-run with --cached-only.`,
+      )
+      process.exit(1)
+    }
+  }
+
+  // Scope to one elo bucket. Done on match ids rather than on observations
+  // because a match's bucket is a property of the match — filtering here is
+  // identical in result but skips reading every other bucket's match AND
+  // timeline off disk, which on a 60k-match cache is the whole runtime.
+  if (ELO) {
+    const before = matchIds.length
+    matchIds = matchIds.filter((id) => bucketOfMatch(id) === ELO)
+    console.log(`--elo ${ELO}: ${matchIds.length} of ${before} matches in bucket\n`)
+    if (matchIds.length === 0 && !DRY_RUN) {
+      const tiers = (ELO_BUCKETS[ELO]?.tiers ?? []).join('/').toLowerCase()
+      console.error(
+        `  ✗ no cached matches are in elo bucket ${ELO}.\n` +
+          `    Nothing was written — the previous ${OUT} is untouched.\n` +
+          `    Fetch it first: --tiers ${tiers || '<tiers>'} (and give it its own --out).`,
       )
       process.exit(1)
     }
