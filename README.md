@@ -1,5 +1,19 @@
 # LoL Build Coach
 
+> ## 🛑 No longer maintained
+>
+> Development stopped on **9 August 2026**. The final release is **v1.7.0**, and
+> its bundled build data is frozen at League patch **26.15**.
+>
+> The app still runs, and it will tell you how far behind the live patch its
+> data has fallen — but that gap only grows. Items and runes change every patch,
+> so treat anything it recommends as a starting point and check it against a
+> maintained site.
+>
+> Releases are staying up so existing installs keep working; **don't delete
+> them**, the in-app updater resolves against them. The repo is archived and
+> read-only. Thanks to everyone who used it.
+
 A Riot-compliant build optimization tool for League of Legends: pre-game build
 recommendations, lightweight live economic tracking, and post-game build analysis.
 

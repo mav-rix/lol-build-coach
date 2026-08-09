@@ -1,6 +1,7 @@
 import { BrowserRouter, NavLink, Outlet, Route, Routes } from 'react-router'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ServerStatusBadge } from '@/components/ServerStatusBadge'
+import { ShutdownNotice } from '@/components/ShutdownNotice'
 import { UpdateModal } from '@/components/UpdateModal'
 import { useAutoOpenBuild } from '@/hooks/useAutoOpenBuild'
 import { useAppStore } from '@/store/useAppStore'
@@ -32,6 +33,7 @@ function Layout() {
   return (
     <div className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100">
       <UpdateModal />
+      <ShutdownNotice />
       <nav className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center gap-6 px-4 py-3">
           <span className="font-bold tracking-tight text-sky-400">
