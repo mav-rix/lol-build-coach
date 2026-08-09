@@ -509,6 +509,44 @@ an interrupted run has already written matches to the cache, and if their
 provenance were lost they'd fall back to the Master+ seed default and claim an
 elo they never came from.
 
+### Per-rank builds (`--elo`)
+
+`sampleTiers` is a **display string** — it reads `Emerald/Gold` for a mixed
+group, so it can't be filtered on. Builds therefore also carry `eloBucket`, a
+stable key from one of three coarse buckets:
+
+| bucket | tiers |
+|---|---|
+| `MASTER_PLUS` | Challenger, Grandmaster, Master |
+| `PLAT_EMERALD` | Diamond, Emerald, Platinum |
+| `GOLD_BELOW` | Gold, Silver, Bronze, Iron |
+
+Three, not five, on purpose: a build's median sample is ~34 games at a *single*
+elo, so a finer split just yields more options that are each noise. The manifest
+still records the **fine** tier per match, so the buckets can be redrawn later
+over the same cache without re-fetching.
+
+`--elo <bucket>` scopes a run to one bucket, filtering **match ids before
+fetching** (a match's bucket is a property of the match), so it skips reading
+every other bucket's match and timeline off disk.
+
+**Always pair `--elo` with `--out`.** The aggregator merges by default: two
+buckets written to the same file would have the second run's merge overwrite the
+first's champions and roles. One file per bucket:
+
+```bash
+# fetch a bucket (needs a key) — give it its own output file
+RIOT_API_KEY=... npm run aggregate -- --tiers emerald,platinum,diamond \
+  --entry-pages 6 --since 14 --matches 20000 \
+  --elo plat_emerald --out src/data/aggregatedBuildsPlatEmerald.json
+
+# re-aggregate any bucket from the cache later, free
+npm run aggregate -- --cached-only --elo master_plus
+```
+
+A bucket with no matches in the cache **fails fast and writes nothing** rather
+than merging an empty result over a good file.
+
 **Refreshing per patch.** The data is patch-specific, so re-run the aggregator
 when a new patch ships. `--if-stale` makes that cheap: it no-ops if the output
 was already built for the current patch, otherwise runs — so
