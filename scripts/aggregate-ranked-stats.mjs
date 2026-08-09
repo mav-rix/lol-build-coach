@@ -14,6 +14,13 @@
 //   --matches <n>         max matches per bucket   (default 400)
 //   --per-player <n>      match ids pulled per player (default 10)
 //   --patches <n>         keep only the N newest patches seen (default 3)
+//   --pages <n>           ladder pages sampled per non-apex tier (default 1,
+//                         ~200 players each) — raise it when --since filters
+//                         most seeds out
+//   --since <days>        only count games newer than this, at BOTH ends: sent
+//                         as startTime when pulling match ids, and re-checked
+//                         against gameCreation when aggregating (so it also
+//                         cleans up a stale --cached-only pool)
 //   --out <path>          output json (default src/data/rankedChampStats.json)
 //   --cached-only         re-aggregate the disk cache, zero API calls. The
 //                         pre-existing aggregate-builds cache (sampled from
@@ -21,8 +28,25 @@
 //
 // Buckets already in the output are preserved when a run only refreshes some of
 // them, as long as they're from the same patch window.
+//
+// WHY --since MATTERS: the match-ids endpoint has no implicit date bound, so a
+// seed player's "last 10 ranked games" can be months old. The paged entries
+// ladder (every bucket below Master) is full of abandoned accounts, so without
+// --since the low buckets fill up with last-season games and the patch window
+// then happily keeps them: IRON_BRONZE once reported "16.15" off 58% patch-16.13
+// data. Apex buckets hide the problem because those players are always active.
 
-import { writeFileSync, readFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs'
+import {
+  writeFileSync,
+  readFileSync,
+  readdirSync,
+  mkdirSync,
+  existsSync,
+  openSync,
+  readSync,
+  closeSync,
+  fstatSync,
+} from 'node:fs'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -45,6 +69,9 @@ const MATCH_LIMIT = Number(args.matches ?? 400)
 const PER_PLAYER = Number(args['per-player'] ?? 10)
 const PATCH_WINDOW = Number(args.patches ?? 3)
 const CACHED_ONLY = Boolean(args['cached-only'])
+const SEED_PAGES = Number(args.pages ?? 1)
+const SINCE_DAYS = args.since ? Number(args.since) : 0
+const SINCE_MS = SINCE_DAYS ? Date.now() - SINCE_DAYS * 86_400_000 : 0
 const OUT = args.out ? resolve(args.out) : join(ROOT, 'src/data/rankedChampStats.json')
 const QUEUE = 420 // ranked solo/duo
 
@@ -119,14 +146,71 @@ async function riotGet(host, path) {
   }
 }
 
+const matchFile = (id) => join(CACHE, `${id}.match.json`)
+
 // Matches are immutable — cache to disk so reruns never refetch. Shares the
 // aggregate-builds cache (same file naming), so pools cross-pollinate for free.
 async function cachedMatch(id) {
-  const file = join(CACHE, `${id}.match.json`)
+  const file = matchFile(id)
   if (existsSync(file)) return JSON.parse(readFileSync(file, 'utf8'))
   const data = await riotGet(regionalHostForMatch(id), `/lol/match/v5/matches/${id}`)
   if (data) writeFileSync(file, JSON.stringify(data))
   return data
+}
+
+/**
+ * Patch / date / queue of one match, without keeping the match itself. Reads
+ * the cached file as text and picks the three fields off it, because a full
+ * JSON.parse of every pooled match is what used to exhaust the heap — the
+ * MASTER_PLUS pool is ~30k matches averaging most of a megabyte each.
+ * Falls back to a real parse if the fast path misses anything, and fetches the
+ * match first when it isn't cached yet.
+ */
+async function matchMeta(id) {
+  const file = matchFile(id)
+  if (existsSync(file)) {
+    // Riot serialises info's keys in roughly alphabetical order, which puts
+    // gameCreation/gameVersion in the first ~2% of the file and queueId in the
+    // last ~1% (participants[] fills everything between). Grabbing 4K off each
+    // end beats reading all ~73KB, and the pool is ~49k files.
+    for (const raw of [headTail(file), null]) {
+      const text = raw ?? readFileSync(file, 'utf8') // full read only if that missed
+      const ver = text.match(/"gameVersion":"(\d+)\.(\d+)/)
+      const created = text.match(/"gameCreation":(\d+)/)
+      const queue = text.match(/"queueId":(\d+)/)
+      if (ver && created && queue) {
+        return {
+          patch: `${ver[1]}.${ver[2]}`,
+          created: Number(created[1]),
+          queueId: Number(queue[1]),
+        }
+      }
+    }
+  }
+  const match = await cachedMatch(id)
+  if (!match?.info) return null
+  return {
+    patch: gamePatch(match),
+    created: match.info.gameCreation,
+    queueId: match.info.queueId,
+  }
+}
+
+/** First and last `bytes` of a file, concatenated. */
+function headTail(file, bytes = 4096) {
+  const fd = openSync(file, 'r')
+  try {
+    const size = fstatSync(fd).size
+    const head = Buffer.alloc(Math.min(bytes, size))
+    readSync(fd, head, 0, head.length, 0)
+    if (size <= bytes) return head.toString('utf8')
+    const tail = Buffer.alloc(bytes)
+    readSync(fd, tail, 0, bytes, size - bytes)
+    // Joined with a newline so a key can't be forged across the seam.
+    return `${head.toString('utf8')}\n${tail.toString('utf8')}`
+  } finally {
+    closeSync(fd)
+  }
 }
 
 // ---- Data Dragon (numeric key ↔ champion id) -------------------------------
@@ -154,13 +238,20 @@ async function gatherPuuids(platform, tiers) {
       for (const e of list?.entries ?? []) if (e.puuid) puuids.add(e.puuid)
       console.log(`  ${tier}: ${list?.entries?.length ?? 0} entries`)
     } else {
-      // One page of division II is ~200 players — plenty of seeds per tier.
-      const list = await riotGet(
-        platformHost(platform),
-        `/lol/league/v4/entries/RANKED_SOLO_5x5/${tier}/II?page=1`,
-      )
-      for (const e of list ?? []) if (e.puuid) puuids.add(e.puuid)
-      console.log(`  ${tier} II: ${list?.length ?? 0} entries`)
+      // One page of division II is ~200 players. That's plenty when every seed
+      // yields matches, but --since discards inactive accounts entirely, so
+      // --pages buys the extra seeds needed to still hit --matches.
+      let got = 0
+      for (let page = 1; page <= SEED_PAGES; page++) {
+        const list = await riotGet(
+          platformHost(platform),
+          `/lol/league/v4/entries/RANKED_SOLO_5x5/${tier}/II?page=${page}`,
+        )
+        if (!list?.length) break // ran off the end of the ladder
+        for (const e of list) if (e.puuid) puuids.add(e.puuid)
+        got += list.length
+      }
+      console.log(`  ${tier} II: ${got} entries over ${SEED_PAGES} page(s)`)
     }
   }
   return [...puuids]
@@ -169,11 +260,13 @@ async function gatherPuuids(platform, tiers) {
 async function gatherMatchIds(puuids, platform, limit) {
   const ids = new Set()
   const shuffled = puuids.sort(() => Math.random() - 0.5)
+  // startTime is epoch SECONDS here, unlike gameCreation's milliseconds.
+  const since = SINCE_MS ? `&startTime=${Math.floor(SINCE_MS / 1000)}` : ''
   for (const puuid of shuffled) {
     if (ids.size >= limit) break
     const list = await riotGet(
       regionHost(platform),
-      `/lol/match/v5/matches/by-puuid/${puuid}/ids?queue=${QUEUE}&count=${PER_PLAYER}`,
+      `/lol/match/v5/matches/by-puuid/${puuid}/ids?queue=${QUEUE}&count=${PER_PLAYER}${since}`,
     )
     for (const id of list ?? []) {
       ids.add(id)
@@ -290,17 +383,34 @@ async function main() {
   const buckets = {}
   for (const key of BUCKET_KEYS) {
     console.log(`Aggregating ${key} (${pools[key].length} matches)…`)
-    const matches = []
+
+    // Pass 1 — metadata only, so nothing but {id, patch} is ever held at once.
+    const meta = []
     let done = 0
+    let stale = 0
     for (const id of pools[key]) {
-      const match = await cachedMatch(id)
-      if (match?.info?.queueId === QUEUE) matches.push(match)
-      if (++done % 200 === 0) console.log(`  ${done}/${pools[key].length}`)
+      const m = await matchMeta(id)
+      if (++done % 500 === 0) console.log(`  scanned ${done}/${pools[key].length}`)
+      if (!m || m.queueId !== QUEUE) continue
+      if (SINCE_MS && m.created < SINCE_MS) {
+        stale++
+        continue
+      }
+      meta.push({ id, patch: m.patch })
     }
-    const patches = [...new Set(matches.map(gamePatch))].sort((a, b) => patchNum(b) - patchNum(a))
+    if (stale) console.log(`  ${stale} pooled matches older than ${SINCE_DAYS}d — excluded`)
+
+    const patches = [...new Set(meta.map((m) => m.patch))].sort((a, b) => patchNum(b) - patchNum(a))
     const keep = new Set(patches.slice(0, PATCH_WINDOW))
+
+    // Pass 2 — parse only what survived the filters, one match at a time.
     const tally = { matches: 0, champions: {} }
-    for (const m of matches) if (keep.has(gamePatch(m))) observe(m, tally, statik)
+    for (const m of meta) {
+      if (!keep.has(m.patch)) continue
+      const file = matchFile(m.id)
+      if (!existsSync(file)) continue
+      observe(JSON.parse(readFileSync(file, 'utf8')), tally, statik)
+    }
     if (tally.matches < 50) {
       console.warn(`  ⚠ only ${tally.matches} usable matches — skipping ${key} (need ≥ 50)`)
       continue

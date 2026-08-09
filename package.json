@@ -10,6 +10,7 @@
     "electron:dev": "node scripts/electron-dev.mjs",
     "aggregate": "node scripts/aggregate-builds.mjs",
     "aggregate:ranked": "node scripts/aggregate-ranked-stats.mjs",
+    "aggregate:ranked:lowelo": "node scripts/aggregate-ranked-stats.mjs --buckets iron_bronze,silver_gold,plat_emerald,diamond --since 14 --pages 8 --per-player 15 --matches 1500",
     "augments:meta": "node scripts/fetch-augments.mjs",
     "aggregate:augments": "node scripts/aggregate-augments.mjs",
     "aggregate:augments:arena": "node scripts/aggregate-augments.mjs --meta src/data/augmentsArena.json --out src/data/augmentStatsArena.json --champ-out src/data/augmentChampStatsArena.json",
