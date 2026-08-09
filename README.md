@@ -540,6 +540,7 @@ the master/GM/challenger leagues (the same pool the build aggregator samples).
 ```bash
 npm run aggregate:ranked -- --cached-only --buckets master_plus   # free: reuse the build cache
 RIOT_API_KEY=... npm run aggregate:ranked -- --region na1 --buckets silver_gold --matches 400
+RIOT_API_KEY=... npm run aggregate:ranked:lowelo                  # the four sub-Master buckets, fresh
 ```
 
 Matches share the `.cache/riot` disk cache with the build aggregator; a manifest
@@ -547,6 +548,37 @@ records which bucket sampled which match so Silver games never pollute the
 Master+ pool. Only the newest `--patches` (default 3) patch versions in the
 sample are counted, and buckets not refreshed by a run are carried over from the
 previous output. Re-run each patch alongside `npm run aggregate`.
+
+### Always pass `--since` below Master
+
+The match-ids endpoint has **no implicit date bound**, so a seed player's "last
+10 ranked games" can be months old. The sub-Master buckets sample the paged
+division-II ladder, which is full of abandoned accounts — so without a date
+bound they fill with last-season games, and the `--patches` window then keeps
+them, because those stale patches *are* the newest ones present in that pool.
+This is not hypothetical: on 2026-08-09 `IRON_BRONZE` was published as patch
+16.15 off 58% patch-16.13 data (274 of 1,058 matches were actually on 16.15).
+`MASTER_PLUS` never shows it — apex players are always active.
+
+`--since <days>` applies at both ends: sent as `startTime` when pulling match
+ids, and re-checked against `gameCreation` when aggregating, so it also cleans a
+pool that was gathered without it. `--pages <n>` widens the seed sample, which
+`--since` makes necessary — inactive seeds now return nothing.
+
+`npm run aggregate:ranked:lowelo` bundles the settled values (`--since 14
+--pages 8 --per-player 15 --matches 1500`). Budget **~3–4 h** for all four
+buckets: a dev key allows ~1 request/1.3 s and every match is one request.
+Filtering the *existing* pool without re-fetching is not a fix — it leaves
+~325 matches per bucket (~19 games per champion), which is too thin to ship.
+
+### Memory
+
+Aggregation streams: one pass reads 4 KB off each end of the cached match files
+for patch/date/queue (Riot's key order puts `gameCreation`/`gameVersion` in the
+first ~2% and `queueId` in the last ~1%), then a second pass parses only the
+matches that survived, one at a time. Peak RSS is ~160 MB against a ~49k-match
+pool. The earlier version accumulated every parsed match in an array and needed
+`--max-old-space-size=5120` to survive; **that flag is no longer required.**
 
 ## Augment tier list (`/augments`)
 
